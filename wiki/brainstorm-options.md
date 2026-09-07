@@ -1,5 +1,7 @@
 # Brainstorm: How AI Agents Could Live in RimWorld (and How We Watch Them)
 
+> **Decision recorded:** see `project-direction.md`. The project is Option 1 + Option 3 + Option 5, plus a user-driven player pawn.
+
 Date: 2026-09-07. Draws on the three reports in `resources/`. Nothing here is decided yet.
 
 ## Framing: two axes

@@ -11,3 +11,6 @@ Tasks, ideas, and work items for the AI in Rimworld project.
 - Evaluate RIMAPI and RimBridgeServer as alternatives to writing our own bridge.
 - Verify Harmony hook method names against current 1.6 `Assembly-CSharp.dll`.
 - Cost model: estimate tokens per pawn per in-game day under each option.
+- Design the conversation system: agent↔agent, agent↔player, group discussion, all on one machinery.
+- Design the user-driven player pawn: how it's created, how the user talks through it, what overseer powers remain.
+- Design visitor agents: goals, allowed actions beyond vanilla, lifecycle.
