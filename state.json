@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 1003750,
+  "t": 1005750,
   "type": "world_snapshot",
-  "date": "2nd of Jugust, 5500",
+  "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 26372,
+  "wealth": 25327,
   "colonists": 4,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788889430645
+  "rx": 1788889463980
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1003750,
+   "t": 1005750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    62,
+    38,
     0,
-    177
+    192
    ],
    "job": "fleeing.",
    "needs": {
-    "food": 0.384,
-    "rest": 0.791,
-    "joy": 0.868
+    "food": 0.293,
+    "rest": 0.76,
+    "joy": 0.848
    },
-   "mood": 0.786,
+   "mood": 0.724,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -53,19 +53,19 @@
      "mood": 24
     },
     {
-     "label": "Recreation fully satisfied",
-     "mood": 10
-    },
-    {
-     "label": "Serious pain",
-     "mood": -10
+     "label": "Intense pain",
+     "mood": -15
     },
     {
      "label": "Darkness",
      "mood": -5
     },
     {
-     "label": "No Thinker",
+     "label": "Recreation satisfied",
+     "mood": 5
+    },
+    {
+     "label": "Unsightly environment",
      "mood": -5
     }
    ],
@@ -89,28 +89,28 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889430645
+   "rx": 1788889463980
   },
   {
    "v": 0,
-   "t": 1003750,
+   "t": 1005750,
    "type": "pawn_snapshot",
    "id": 84427,
    "name": "Jacobson",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    97,
     0,
-    118
+    103
    ],
-   "job": "wandering.",
+   "job": "cleaning dirt.",
    "needs": {
-    "food": 0.648,
-    "rest": 0.791,
-    "joy": 0.973
+    "food": 0.596,
+    "rest": 0.76,
+    "joy": 0.953
    },
-   "mood": 0.473,
+   "mood": 0.441,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -159,28 +159,28 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889430645
+   "rx": 1788889463980
   },
   {
    "v": 0,
-   "t": 1003750,
+   "t": 1005750,
    "type": "pawn_snapshot",
    "id": 84431,
    "name": "Martin",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    116
+    106
    ],
-   "job": "resting.",
+   "job": "sleeping.",
    "needs": {
-    "food": 0.448,
-    "rest": 0.724,
-    "joy": 0.937
+    "food": 0.396,
+    "rest": 0.787,
+    "joy": 0.934
    },
-   "mood": 0.54,
+   "mood": 0.554,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -199,12 +199,12 @@
      "mood": -5
     },
     {
-     "label": "Spacious interior",
-     "mood": 5
-    },
-    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
+    },
+    {
+     "label": "Comfortable",
+     "mood": 4
     }
    ],
    "health": "Injured",
@@ -226,11 +226,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889430645
+   "rx": 1788889463980
   },
   {
    "v": 0,
-   "t": 1003750,
+   "t": 1005750,
    "type": "pawn_snapshot",
    "id": 84435,
    "name": "Fu",
@@ -243,9 +243,9 @@
    ],
    "job": "researching.",
    "needs": {
-    "food": 0.452,
-    "rest": 0.765,
-    "joy": 0.41
+    "food": 0.4,
+    "rest": 0.735,
+    "joy": 0.39
    },
    "mood": 0.46,
    "thoughts": [
@@ -296,7 +296,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889430645
+   "rx": 1788889463981
   }
  ],
  "recent": [
@@ -3248,6 +3248,188 @@
    "target": "(48, 0, 187)",
    "source": "JobGiver_ConfigurableHostilityResponse",
    "rx": 1788889426777
+  },
+  {
+   "v": 0,
+   "t": 1003870,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "left leg",
+   "severity": 2.319,
+   "rx": 1788889432647
+  },
+  {
+   "v": 0,
+   "t": 1003870,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "left foot",
+   "severity": 2.319,
+   "rx": 1788889432647
+  },
+  {
+   "v": 0,
+   "t": 1004000,
+   "type": "job_noise",
+   "total": 11,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "Wait_Wander": 2,
+    "GotoWander": 2
+   },
+   "rx": 1788889434817
+  },
+  {
+   "v": 0,
+   "t": 1004050,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "right arm",
+   "severity": 2.31,
+   "rx": 1788889435639
+  },
+  {
+   "v": 0,
+   "t": 1004050,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "right shoulder",
+   "severity": 2.31,
+   "rx": 1788889435639
+  },
+  {
+   "v": 0,
+   "t": 1004215,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "right leg",
+   "severity": 3.1,
+   "rx": 1788889438396
+  },
+  {
+   "v": 0,
+   "t": 1004215,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "torso",
+   "severity": 3.1,
+   "rx": 1788889438397
+  },
+  {
+   "v": 0,
+   "t": 1004380,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Bruise",
+   "part": "torso",
+   "severity": 1.34,
+   "rx": 1788889441146
+  },
+  {
+   "v": 0,
+   "t": 1004380,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Bruise",
+   "part": "right leg",
+   "severity": 1.34,
+   "rx": 1788889441146
+  },
+  {
+   "v": 0,
+   "t": 1004702,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "FleeAndCower",
+   "target": "(31, 0, 199)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889446516
+  },
+  {
+   "v": 0,
+   "t": 1004875,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "left arm",
+   "severity": 3.146,
+   "rx": 1788889449396
+  },
+  {
+   "v": 0,
+   "t": 1004875,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "left shoulder",
+   "severity": 3.146,
+   "rx": 1788889449397
+  },
+  {
+   "v": 0,
+   "t": 1005115,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "torso",
+   "severity": 3.077,
+   "rx": 1788889453389
+  },
+  {
+   "v": 0,
+   "t": 1005115,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "left shoulder",
+   "severity": 3.077,
+   "rx": 1788889453389
+  },
+  {
+   "v": 0,
+   "t": 1005393,
+   "type": "job_start",
+   "pawn": 84427,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84682",
+   "source": "JobGiver_Work",
+   "rx": 1788889458034
+  },
+  {
+   "v": 0,
+   "t": 1005460,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Bruise",
+   "part": "torso",
+   "severity": 2,
+   "rx": 1788889459147
+  },
+  {
+   "v": 0,
+   "t": 1005595,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Bruise",
+   "part": "left arm",
+   "severity": 1.34,
+   "rx": 1788889461389
+  },
+  {
+   "v": 0,
+   "t": 1005595,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Bruise",
+   "part": "left hand",
+   "severity": 1.34,
+   "rx": 1788889461389
   }
  ],
  "counts": {
@@ -3255,15 +3437,15 @@
   "mod_disconnected": 2,
   "command_result": 27,
   "hello": 2,
-  "world_snapshot": 66,
-  "pawn_snapshot": 228,
-  "job_start": 28,
+  "world_snapshot": 74,
+  "pawn_snapshot": 260,
+  "job_start": 30,
   "job_end": 12,
-  "job_noise": 7,
+  "job_noise": 8,
   "letter": 3,
   "interaction": 6,
   "incident": 2,
-  "hediff": 13
+  "hediff": 28
  },
- "last_event_at": 1788889430.645748
+ "last_event_at": 1788889463.981088
 }
