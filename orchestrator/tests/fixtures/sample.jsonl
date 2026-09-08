@@ -1,0 +1,15 @@
+{"v":0,"t":0,"type":"hello","mod_version":"0.1.0","game_version":"1.6.4871","map_id":0}
+{"v":0,"t":0,"type":"world_snapshot","date":"5th of Aprimay, 5500","season":"Spring","weather":"Clear","wealth":12400,"colonists":3,"visitors":0,"hostiles":0}
+{"v":0,"t":0,"type":"pawn_snapshot","id":101,"name":"Ada","faction":"Colony","kind":"colonist","pos":[52,0,48],"job":"Hauling steel","needs":{"food":0.8,"rest":0.6,"joy":0.5},"mood":0.72,"thoughts":[{"label":"Ate fine meal","mood":5},{"label":"Slept outside","mood":-4}],"health":"Healthy","skills":{"Shooting":6,"Medicine":9},"traits":["Kind","Night owl"],"relations":[{"other":"Bram","kind":"Friend","opinion":34}]}
+{"v":0,"t":0,"type":"pawn_snapshot","id":102,"name":"Bram","faction":"Colony","kind":"colonist","pos":[40,0,44],"job":"Sowing rice","needs":{"food":0.3,"rest":0.9,"joy":0.2},"mood":0.41,"thoughts":[{"label":"Hungry","mood":-6}],"health":"Healthy","skills":{"Plants":11},"traits":["Industrious"],"relations":[{"other":"Ada","kind":"Friend","opinion":30}]}
+{"v":0,"t":0,"type":"pawn_snapshot","id":103,"name":"Cyn","faction":"Colony","kind":"colonist","pos":[60,0,50],"job":"Researching","needs":{"food":0.7,"rest":0.2,"joy":0.6},"mood":0.55,"thoughts":[],"health":"Scar (left leg)","skills":{"Intellectual":13},"traits":["Too smart","Abrasive"],"relations":[]}
+{"v":0,"t":120,"type":"job_start","pawn":102,"job":"Ingest","target":"Simple meal","source":"JobGiver_GetFood"}
+{"v":0,"t":300,"type":"interaction","initiator":103,"recipient":101,"def":"Insult","text":"Cyn insulted Ada's haircut."}
+{"v":0,"t":320,"type":"job_end","pawn":102,"job":"Ingest","condition":"Succeeded"}
+{"v":0,"t":900,"type":"letter","label":"Trade caravan arrived","text":"A caravan from the Outlander Union has arrived.","def":"PositiveEvent"}
+{"v":0,"t":950,"type":"pawn_snapshot","id":201,"name":"Merchant Oda","faction":"Outlander Union","kind":"visitor","pos":[10,0,10],"job":"Trading","needs":{"food":0.9,"rest":0.9,"joy":0.5},"mood":0.6,"thoughts":[],"health":"Healthy","skills":{"Social":8},"traits":[],"relations":[]}
+{"v":0,"t":1500,"type":"mental_state","pawn":103,"state":"Sad wander","reason":"Exhaustion"}
+{"v":0,"t":1600,"type":"incident","def":"RaidEnemy","label":"Raid: pirates"}
+{"v":0,"t":1700,"type":"hediff","pawn":101,"def":"Gunshot","part":"Torso","severity":8}
+{"v":0,"t":1800,"type":"death","pawn":101,"cause":"Gunshot","killer":"Pirate"}
+{"v":0,"t":2000,"type":"world_snapshot","date":"6th of Aprimay, 5500","season":"Spring","weather":"Rain","wealth":11800,"colonists":2,"visitors":1,"hostiles":4}

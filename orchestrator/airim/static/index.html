@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI in RimWorld — Observation</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root { --bg:#14161a; --panel:#1e2229; --line:#2c323c; --fg:#e6e6e6; --dim:#8b93a1; --ok:#6cc070; --warn:#e0b04a; --bad:#e06060; --accent:#6ea8fe; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:13px/1.4 system-ui, sans-serif; }
+  header { display:flex; gap:24px; align-items:center; padding:8px 14px; border-bottom:1px solid var(--line); background:var(--panel); }
+  header b { color:var(--accent); }
+  header .dot { width:9px; height:9px; border-radius:50%; background:var(--bad); display:inline-block; margin-right:6px; }
+  header .dot.on { background:var(--ok); }
+  main { display:grid; grid-template-columns: 1fr 380px; height:calc(100vh - 38px); }
+  #pawns { padding:12px; overflow:auto; display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; align-content:start; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:10px; cursor:pointer; }
+  .card:hover { border-color:var(--accent); }
+  .card.dead { opacity:.45; }
+  .card h3 { margin:0 0 4px; font-size:14px; display:flex; justify-content:space-between; }
+  .card .kind { color:var(--dim); font-weight:normal; font-size:11px; }
+  .card .job { color:var(--dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .bars { display:grid; grid-template-columns:auto 1fr; gap:2px 6px; margin-top:6px; font-size:11px; color:var(--dim); }
+  .bar { height:8px; background:var(--line); border-radius:3px; overflow:hidden; align-self:center; }
+  .bar i { display:block; height:100%; background:var(--ok); }
+  .bar.low i { background:var(--warn); } .bar.crit i { background:var(--bad); }
+  aside { border-left:1px solid var(--line); display:flex; flex-direction:column; min-height:0; }
+  aside h2 { margin:0; padding:8px 12px; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--dim); border-bottom:1px solid var(--line); }
+  #ticker { flex:1; overflow:auto; padding:6px 0; }
+  .ev { padding:4px 12px; border-bottom:1px solid #1a1e24; display:grid; grid-template-columns:52px 1fr; gap:8px; }
+  .ev .t { color:var(--dim); font-variant-numeric:tabular-nums; }
+  .ev.interaction { color:#d9c6ff; } .ev.death, .ev.mental_state { color:var(--bad); } .ev.letter, .ev.incident { color:var(--warn); }
+  #drawer { position:fixed; right:-460px; top:38px; bottom:0; width:460px; background:var(--panel); border-left:1px solid var(--line); transition:right .15s; overflow:auto; padding:14px; }
+  #drawer.open { right:0; }
+  #drawer h2 { margin:0 0 8px; }
+  #drawer .close { float:right; cursor:pointer; color:var(--dim); }
+  dl { display:grid; grid-template-columns:110px 1fr; gap:3px 8px; margin:8px 0; }
+  dt { color:var(--dim); } dd { margin:0; }
+  .tag { display:inline-block; background:var(--line); border-radius:3px; padding:1px 6px; margin:1px 3px 1px 0; font-size:11px; }
+  .hist .ev { grid-template-columns:52px 1fr; }
+</style>
+</head>
+<body>
+<header>
+  <span><span class="dot" id="dot"></span><b>AI in RimWorld</b> observation</span>
+  <span id="date">—</span>
+  <span id="tick">tick —</span>
+  <span id="counts" style="color:var(--dim)"></span>
+</header>
+<main>
+  <section id="pawns"></section>
+  <aside>
+    <h2>Events</h2>
+    <div id="ticker"></div>
+  </aside>
+</main>
+<div id="drawer"><span class="close" onclick="closeDrawer()">✕</span><div id="drawerBody"></div></div>
+<script>
+const pawns = new Map();
+let world = {}, counts = {}, ticker = [];
+const $ = id => document.getElementById(id);
+
+function fmtTick(t){ if(t==null) return '—'; const d = Math.floor(t/60000), h = Math.floor((t%60000)/2500); return `d${d} ${String(h).padStart(2,'0')}h`; }
+function pct(v){ return v==null ? 0 : Math.max(0,Math.min(100,Math.round(v*100))); }
+function barCls(v){ return v==null ? '' : v<0.2 ? 'crit' : v<0.4 ? 'low' : ''; }
+function esc(s){ return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+function renderHeader(){
+  $('date').textContent = world.date || '—';
+  $('tick').textContent = 'tick ' + (world.t ?? '—');
+  $('counts').textContent = Object.entries(counts).filter(([k])=>!k.endsWith('snapshot')).map(([k,v])=>`${k} ${v}`).join(' · ');
+}
+function renderPawns(){
+  const order = {colonist:0, prisoner:1, visitor:2, hostile:3, animal:4};
+  const list = [...pawns.values()].sort((a,b)=>(order[a.kind]??9)-(order[b.kind]??9) || (a.name||'').localeCompare(b.name||''));
+  $('pawns').innerHTML = list.map(p=>`
+    <div class="card ${p.dead?'dead':''}" onclick="openDrawer(${p.id})">
+      <h3><span>${esc(p.name)}</span><span class="kind">${esc(p.kind)}</span></h3>
+      <div class="job">${esc(p.job||'idle')}</div>
+      <div class="bars">
+        <span>mood</span><div class="bar ${barCls(p.mood)}"><i style="width:${pct(p.mood)}%"></i></div>
+        ${['food','rest','joy'].map(n=>`<span>${n}</span><div class="bar ${barCls(p.needs?.[n])}"><i style="width:${pct(p.needs?.[n])}%"></i></div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+function evLine(ev){
+  const who = id => pawns.get(id)?.name ?? (id==null?'':'#'+id);
+  let text;
+  switch(ev.type){
+    case 'job_start': text = `${who(ev.pawn)} → ${ev.job}${ev.target?' ('+ev.target+')':''}`; break;
+    case 'job_end': text = `${who(ev.pawn)} finished ${ev.job} [${ev.condition}]`; break;
+    case 'interaction': text = `${who(ev.initiator)} ↔ ${who(ev.recipient)}: ${ev.text||ev.def}`; break;
+    case 'mental_state': text = `${who(ev.pawn)} — ${ev.state}${ev.reason?': '+ev.reason:''}`; break;
+    case 'hediff': text = `${who(ev.pawn)} — ${ev.def}${ev.part?' ('+ev.part+')':''}`; break;
+    case 'death': text = `${who(ev.pawn)} died${ev.cause?' — '+ev.cause:''}`; break;
+    case 'letter': text = `✉ ${ev.label}`; break;
+    case 'incident': text = `⚡ ${ev.label||ev.def}`; break;
+    default: text = ev.type + (ev.peer?' '+ev.peer:'');
+  }
+  return `<div class="ev ${ev.type}"><span class="t">${fmtTick(ev.t)}</span><span>${esc(text)}</span></div>`;
+}
+function renderTicker(){ $('ticker').innerHTML = ticker.slice(-300).reverse().map(evLine).join(''); }
+
+function apply(ev){
+  if(ev.type==='hello'){ pawns.clear(); }
+  else if(ev.type==='world_snapshot'){ world = ev; }
+  else if(ev.type==='pawn_snapshot'){ pawns.set(ev.id, ev); }
+  else if(ev.type==='death' && pawns.has(ev.pawn)){ pawns.get(ev.pawn).dead = true; }
+  if(ev.type==='mod_connected') $('dot').classList.add('on');
+  if(ev.type==='mod_disconnected') $('dot').classList.remove('on');
+  counts[ev.type] = (counts[ev.type]||0)+1;
+  if(!ev.type.endsWith('snapshot')) { ticker.push(ev); if(ticker.length>1000) ticker.shift(); }
+}
+function loadState(s){
+  pawns.clear(); (s.pawns||[]).forEach(p=>pawns.set(p.id,p));
+  world = s.world||{}; counts = s.counts||{}; ticker = s.recent||[];
+  if(s.hello && s.hello.type) $('dot').classList.add('on');
+  renderAll();
+}
+let dirty=false;
+function renderAll(){ renderHeader(); renderPawns(); renderTicker(); dirty=false; }
+function scheduleRender(){ if(!dirty){ dirty=true; requestAnimationFrame(renderAll); } }
+
+async function openDrawer(id){
+  const r = await fetch('/api/pawn/'+id); if(!r.ok) return;
+  const {pawn:p, history} = await r.json();
+  $('drawerBody').innerHTML = `
+    <h2>${esc(p.name)} <span class="kind" style="color:var(--dim);font-size:12px">${esc(p.kind)} · ${esc(p.faction||'')}</span></h2>
+    <dl>
+      <dt>job</dt><dd>${esc(p.job||'idle')}</dd>
+      <dt>mood</dt><dd>${pct(p.mood)}%</dd>
+      <dt>health</dt><dd>${esc(p.health||'')}</dd>
+      <dt>position</dt><dd>${p.pos?p.pos.join(','):''}</dd>
+      <dt>traits</dt><dd>${(p.traits||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</dd>
+      <dt>skills</dt><dd>${Object.entries(p.skills||{}).map(([k,v])=>`<span class="tag">${esc(k)} ${v}</span>`).join('')}</dd>
+      <dt>thoughts</dt><dd>${(p.thoughts||[]).map(t=>`<div>${esc(t.label)} <span style="color:${t.mood>=0?'var(--ok)':'var(--bad)'}">${t.mood>0?'+':''}${t.mood}</span></div>`).join('')}</dd>
+      <dt>relations</dt><dd>${(p.relations||[]).map(r=>`<div>${esc(r.other)} — ${esc(r.kind)} (${r.opinion})</div>`).join('')}</dd>
+    </dl>
+    <h3 style="margin:14px 0 4px">Recent history</h3>
+    <div class="hist">${history.slice().reverse().map(evLine).join('')}</div>`;
+  $('drawer').classList.add('open');
+}
+function closeDrawer(){ $('drawer').classList.remove('open'); }
+
+function connect(){
+  const ws = new WebSocket((location.protocol==='https:'?'wss':'ws')+'://'+location.host+'/ws');
+  ws.onmessage = m => { const ev = JSON.parse(m.data); if(ev.type==='state') loadState(ev.state); else { apply(ev); scheduleRender(); } };
+  ws.onclose = () => { $('dot').classList.remove('on'); setTimeout(connect, 1500); };
+}
+connect();
+</script>
+</body>
+</html>
