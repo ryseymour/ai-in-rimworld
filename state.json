@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 724750,
+  "t": 726000,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,45 +20,41 @@
   "visitors": 9,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788830183280
+  "rx": 1788830213031
  },
  "pawns": [
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    96,
     0,
-    108
+    105
    ],
-   "job": "cleaning dirt.",
+   "job": "wandering.",
    "needs": {
-    "food": 0.132,
-    "rest": 0.754,
+    "food": 0.111,
+    "rest": 0.735,
     "joy": 0.038
    },
-   "mood": 0.267,
+   "mood": 0.257,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
+     "label": "Ravenously hungry",
+     "mood": -12
+    },
+    {
      "label": "Recreation-deprived",
      "mood": -10
-    },
-    {
-     "label": "Quite comfortable",
-     "mood": 6
-    },
-    {
-     "label": "Hungry",
-     "mood": -6
     },
     {
      "label": "Initial hope",
@@ -66,6 +62,10 @@
     },
     {
      "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "No Thinker",
      "mood": -5
     }
    ],
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183281
+   "rx": 1788830213032
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.34,
-    "rest": 0.826,
+    "food": 0.222,
+    "rest": 0.86,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -129,12 +129,12 @@
      "mood": -6
     },
     {
-     "label": "Initial hope",
-     "mood": 5
+     "label": "Hungry",
+     "mood": -6
     },
     {
-     "label": "Rebuffed by Zeke",
-     "mood": -5
+     "label": "Initial hope",
+     "mood": 5
     }
    ],
    "health": "Unconscious",
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183281
+   "rx": 1788830213032
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -176,8 +176,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.756,
-    "rest": 0.947
+    "food": 0.724,
+    "rest": 0.983
    },
    "mood": 0.153,
    "thoughts": [
@@ -226,25 +226,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183282
+   "rx": 1788830213032
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73039,
    "name": "Lala",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    112,
+    92,
     0,
-    101
+    110
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.808,
-    "rest": 0.837
+    "food": 0.776,
+    "rest": 0.818
    },
    "mood": 0.57,
    "thoughts": [
@@ -279,25 +279,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183282
+   "rx": 1788830213033
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73093,
    "name": "Adrian",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    114,
+    92,
     0,
-    104
+    109
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.846,
-    "rest": 0.788
+    "food": 0.821,
+    "rest": 0.769
    },
    "mood": 0.62,
    "thoughts": [
@@ -329,25 +329,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183282
+   "rx": 1788830213033
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73102,
    "name": "AJ",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    112,
+    94,
     0,
-    124
+    118
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.812,
-    "rest": 0.882
+    "food": 0.776,
+    "rest": 0.861
    },
    "mood": 0.57,
    "thoughts": [
@@ -380,25 +380,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183283
+   "rx": 1788830213033
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73108,
    "name": "Loner",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    112,
+    90,
     0,
-    123
+    118
    ],
-   "job": "moving.",
+   "job": "wandering.",
    "needs": {
-    "food": 0.812,
-    "rest": 0.805
+    "food": 0.78,
+    "rest": 0.786
    },
    "mood": 0.62,
    "thoughts": [
@@ -425,25 +425,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183283
+   "rx": 1788830213033
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73117,
    "name": "Ellie",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    117,
+    94,
     0,
-    118
+    123
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.812,
-    "rest": 0.87
+    "food": 0.78,
+    "rest": 0.851
    },
    "mood": 0.82,
    "thoughts": [
@@ -478,25 +478,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183283
+   "rx": 1788830213033
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73122,
    "name": "Deccy",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    112,
+    93,
     0,
-    122
+    117
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.812,
-    "rest": 0.88
+    "food": 0.78,
+    "rest": 0.861
    },
    "mood": 0.62,
    "thoughts": [
@@ -529,25 +529,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788830183283
+   "rx": 1788830213034
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73128,
    "name": "Dan",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    113,
+    96,
     0,
-    121
+    118
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.808,
-    "rest": 0.869
+    "food": 0.776,
+    "rest": 0.85
    },
    "mood": 0.62,
    "thoughts": [
@@ -575,25 +575,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183284
+   "rx": 1788830213034
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73134,
    "name": "Kaia",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    112,
+    95,
     0,
-    123
+    119
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.812,
-    "rest": 0.864
+    "food": 0.78,
+    "rest": 0.845
    },
    "mood": 0.62,
    "thoughts": [
@@ -623,11 +623,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830183284
+   "rx": 1788830213034
   },
   {
    "v": 0,
-   "t": 724750,
+   "t": 726000,
    "type": "pawn_snapshot",
    "id": 73176,
    "name": "Paul",
@@ -640,10 +640,10 @@
    ],
    "job": "downed.",
    "needs": {
-    "food": 0.728,
-    "rest": 0.936
+    "food": 0.696,
+    "rest": 0.917
    },
-   "mood": 0.414,
+   "mood": 0.4,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -685,7 +685,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788830183284
+   "rx": 1788830213034
   }
  ],
  "recent": [
@@ -1447,20 +1447,219 @@
    "def": "DeepTalk",
    "text": "<color=#D09B61FF>Ellie</color> and <color=#D09B61FF>Dan</color> talked deeply about morality.",
    "rx": 1788830182318
+  },
+  {
+   "v": 0,
+   "t": 724777,
+   "type": "letter",
+   "label": "Sad wander: Zeke",
+   "text": "<color=#D09B61FF>Zeke</color> has broken down and is wandering around in sadness.",
+   "def": "NegativeEvent",
+   "rx": 1788830191387
+  },
+  {
+   "v": 0,
+   "t": 724777,
+   "type": "mental_state",
+   "pawn": 948,
+   "state": "sad wandering",
+   "reason": null,
+   "rx": 1788830191388
+  },
+  {
+   "v": 0,
+   "t": 724782,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830192746
+  },
+  {
+   "v": 0,
+   "t": 725032,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830196912
+  },
+  {
+   "v": 0,
+   "t": 725037,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "GotoWander",
+   "target": "(97, 0, 104)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830196996
+  },
+  {
+   "v": 0,
+   "t": 725567,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830205811
+  },
+  {
+   "v": 0,
+   "t": 725572,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830205894
+  },
+  {
+   "v": 0,
+   "t": 725736,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830208628
+  },
+  {
+   "v": 0,
+   "t": 725785,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830209444
+  },
+  {
+   "v": 0,
+   "t": 725790,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Goto",
+   "target": "(96, 0, 117)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830209528
+  },
+  {
+   "v": 0,
+   "t": 725908,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830211495
+  },
+  {
+   "v": 0,
+   "t": 725912,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830211561
+  },
+  {
+   "v": 0,
+   "t": 725912,
+   "type": "job_start",
+   "pawn": 73176,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830211561
+  },
+  {
+   "v": 0,
+   "t": 725917,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "GotoWander",
+   "target": "(92, 0, 108)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830211644
+  },
+  {
+   "v": 0,
+   "t": 725917,
+   "type": "job_start",
+   "pawn": 73176,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788830211645
+  },
+  {
+   "v": 0,
+   "t": 726013,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830213247
+  },
+  {
+   "v": 0,
+   "t": 726018,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Goto",
+   "target": "(87, 0, 114)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830213329
+  },
+  {
+   "v": 0,
+   "t": 726034,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830213595
+  },
+  {
+   "v": 0,
+   "t": 726044,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830213761
+  },
+  {
+   "v": 0,
+   "t": 726058,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830213995
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 72,
-  "pawn_snapshot": 458,
-  "job_start": 42,
+  "world_snapshot": 77,
+  "pawn_snapshot": 518,
+  "job_start": 60,
   "job_end": 19,
   "hediff": 2,
-  "letter": 3,
+  "letter": 4,
   "incident": 3,
-  "interaction": 8
+  "interaction": 8,
+  "mental_state": 1
  },
- "last_event_at": 1788830183.2849128,
- "published_at": 1788830188
+ "last_event_at": 1788830213.995575,
+ "published_at": 1788830219
 }
