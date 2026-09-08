@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 710500,
+  "t": 712500,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788829869612
+  "rx": 1788829902996
  },
  "pawns": [
   {
    "v": 0,
-   "t": 710500,
+   "t": 712500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,8 +38,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.692,
-    "rest": 0.373,
+    "food": 0.601,
+    "rest": 0.447,
     "joy": 0.05
    },
    "mood": 0.156,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829869613
+   "rx": 1788829902999
   },
   {
    "v": 0,
-   "t": 710500,
+   "t": 712500,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.173,
-    "rest": 0.931,
+    "food": 0.11,
+    "rest": 0.9,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -121,8 +121,8 @@
      "mood": -20
     },
     {
-     "label": "Hungry",
-     "mood": -6
+     "label": "Ravenously hungry",
+     "mood": -12
     },
     {
      "label": "Initial hope",
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829869613
+   "rx": 1788829902999
   },
   {
    "v": 0,
-   "t": 710500,
+   "t": 712500,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -176,10 +176,10 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.025,
-    "rest": 0.867
+    "food": 0.012,
+    "rest": 0.836
    },
-   "mood": 0.126,
+   "mood": 0.08,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829869613
+   "rx": 1788829903000
   }
  ],
  "recent": [
@@ -258,10 +258,10 @@
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 15,
-  "pawn_snapshot": 45,
+  "world_snapshot": 23,
+  "pawn_snapshot": 69,
   "job_start": 1
  },
- "last_event_at": 1788829869.613672,
- "published_at": 1788829871
+ "last_event_at": 1788829903.000196,
+ "published_at": 1788829903
 }
