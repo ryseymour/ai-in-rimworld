@@ -2,7 +2,15 @@
  "hello": {},
  "world": {},
  "pawns": [],
- "recent": [],
- "counts": {},
- "last_event_at": 0.0
+ "recent": [
+  {
+   "type": "mod_connected",
+   "peer": "('127.0.0.1', 54095)",
+   "rx": 1788890172002
+  }
+ ],
+ "counts": {
+  "mod_connected": 1
+ },
+ "last_event_at": 1788890172.0021381
 }
