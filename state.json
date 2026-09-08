@@ -12,55 +12,55 @@
  },
  "world": {
   "v": 0,
-  "t": 1037000,
+  "t": 1042750,
   "type": "world_snapshot",
   "day": 17,
-  "hour": 6,
+  "hour": 9,
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
-  "wealth": 25523,
+  "wealth": 24873,
   "colonists": 4,
   "visitors": 2,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890731122
+  "rx": 1788890763209
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1037000,
+   "t": 1042750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 6,
+   "hour": 9,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    103,
     0,
-    110
+    101
    ],
-   "job": "melee attacking gravlite panel.",
+   "job": "wandering.",
    "needs": {
-    "food": 0.011,
-    "rest": 0.689,
-    "joy": 0.21
+    "food": 0,
+    "rest": 0.599,
+    "joy": 0.173
    },
-   "mood": 0.182,
+   "mood": 0.452,
    "thoughts": [
+    {
+     "label": "Catharsis",
+     "mood": 40
+    },
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
+     "label": "Malnourished",
+     "mood": -20
     },
     {
      "label": "Recreation unfulfilled",
@@ -120,46 +120,46 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890731122
+   "rx": 1788890763210
   },
   {
    "v": 0,
-   "t": 1037000,
+   "t": 1042750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 6,
+   "hour": 9,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    97,
+    108,
     0,
-    102
+    125
    ],
-   "job": "cleaning dirt.",
+   "job": "wandering.",
    "needs": {
-    "food": 0.011,
-    "rest": 0.639,
-    "joy": 0.761
+    "food": 0,
+    "rest": 0.546,
+    "joy": 0.703
    },
-   "mood": 0.351,
+   "mood": 0.29,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
-    },
-    {
-     "label": "No Thinker",
-     "mood": -5
+     "label": "Malnourished",
+     "mood": -20
     },
     {
      "label": "Recreation satisfied",
      "mood": 5
+    },
+    {
+     "label": "No Thinker",
+     "mood": -5
     },
     {
      "label": "Wearing clothes (non-groin)",
@@ -201,18 +201,18 @@
     {
      "other": "G\u00e9radon",
      "kind": "brother",
-     "opinion": -23
+     "opinion": -22
     }
    ],
    "drafted": false,
-   "rx": 1788890731123
+   "rx": 1788890763210
   },
   {
    "v": 0,
-   "t": 1037000,
+   "t": 1042750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 6,
+   "hour": 9,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
@@ -224,23 +224,27 @@
    ],
    "job": "researching.",
    "needs": {
-    "food": 0.011,
-    "rest": 0.58,
-    "joy": 0.677
+    "food": 0,
+    "rest": 0.489,
+    "joy": 0.62
    },
-   "mood": 0.38,
+   "mood": 0.34,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
+     "label": "Malnourished",
+     "mood": -20
+    },
+    {
      "label": "Burning passion for my work",
      "mood": 14
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Trees sorely missed",
@@ -248,10 +252,6 @@
     },
     {
      "label": "No Thinker",
-     "mood": -5
-    },
-    {
-     "label": "Darkness",
      "mood": -5
     }
    ],
@@ -293,34 +293,38 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890731123
+   "rx": 1788890763210
   },
   {
    "v": 0,
-   "t": 1037000,
+   "t": 1042750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 6,
+   "hour": 9,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    100,
+    102,
     0,
     113
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.045,
-    "rest": 0.677,
-    "joy": 0.184
+    "food": 0,
+    "rest": 0.584,
+    "joy": 0.146
    },
-   "mood": 0.66,
+   "mood": 0.538,
    "thoughts": [
     {
      "label": "Catharsis",
      "mood": 40
+    },
+    {
+     "label": "Badly malnourished",
+     "mood": -26
     },
     {
      "label": "Very low expectations",
@@ -335,12 +339,8 @@
      "mood": -12
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
-    },
-    {
-     "label": "Recreation unfulfilled",
-     "mood": -5
+     "label": "Recreation-deprived",
+     "mood": -10
     }
    ],
    "health": "Healthy",
@@ -381,14 +381,14 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890731123
+   "rx": 1788890763210
   },
   {
    "v": 0,
-   "t": 1037000,
+   "t": 1042750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 6,
+   "hour": 9,
    "id": 84939,
    "name": "Irwin",
    "faction": "Neveherda",
@@ -396,14 +396,14 @@
    "pos": [
     87,
     0,
-    119
+    117
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.428,
-    "rest": 0.71
+    "food": 0.984,
+    "rest": 0.617
    },
-   "mood": 0.52,
+   "mood": 0.54,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -412,6 +412,14 @@
     {
      "label": "Night owl in daytime",
      "mood": -10
+    },
+    {
+     "label": "Ate fine meal",
+     "mood": 5
+    },
+    {
+     "label": "Ate without table",
+     "mood": -3
     }
    ],
    "health": "Healthy",
@@ -454,14 +462,14 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890731123
+   "rx": 1788890763211
   },
   {
    "v": 0,
-   "t": 1037000,
+   "t": 1042750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 6,
+   "hour": 9,
    "id": 84947,
    "name": "Mushinto",
    "faction": "Neveherda",
@@ -469,12 +477,12 @@
    "pos": [
     87,
     0,
-    114
+    124
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.502,
-    "rest": 0.702
+    "food": 0.381,
+    "rest": 0.612
    },
    "mood": 0.62,
    "thoughts": [
@@ -527,7 +535,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890731123
+   "rx": 1788890763211
   }
  ],
  "recent": [
@@ -3450,6 +3458,420 @@
    "target": "Thing_GravlitePanel1058",
    "source": "JobGiver_Tantrum",
    "rx": 1788890730971
+  },
+  {
+   "v": 0,
+   "t": 1037095,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890731635
+  },
+  {
+   "v": 0,
+   "t": 1037215,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890732303
+  },
+  {
+   "v": 0,
+   "t": 1037335,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890732969
+  },
+  {
+   "v": 0,
+   "t": 1037336,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81698,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890732986
+  },
+  {
+   "v": 0,
+   "t": 1037336,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890732986
+  },
+  {
+   "v": 0,
+   "t": 1037336,
+   "type": "interaction",
+   "day": 17,
+   "hour": 6,
+   "initiator": 81698,
+   "recipient": 81686,
+   "def": "Chitchat",
+   "text": "Joe and Schlitzer joked about cooking with gourds.",
+   "rx": 1788890732987
+  },
+  {
+   "v": 0,
+   "t": 1037452,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "def": "Catharsis",
+   "label": "Catharsis",
+   "mood": 40,
+   "rx": 1788890733626
+  },
+  {
+   "v": 0,
+   "t": 1038000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 7,
+   "total": 53,
+   "counts": {
+    "Wait_MaintainPosture": 34,
+    "GotoWander": 9,
+    "Wait_Wander": 10
+   },
+   "rx": 1788890736677
+  },
+  {
+   "v": 0,
+   "t": 1038435,
+   "type": "thought",
+   "day": 17,
+   "hour": 7,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890739087
+  },
+  {
+   "v": 0,
+   "t": 1038435,
+   "type": "thought",
+   "day": 17,
+   "hour": 7,
+   "pawn": 948,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890739087
+  },
+  {
+   "v": 0,
+   "t": 1038435,
+   "type": "interaction",
+   "day": 17,
+   "hour": 7,
+   "initiator": 81686,
+   "recipient": 948,
+   "def": "Chitchat",
+   "text": "Schlitzer and Zeke joked about cooking with corn cobs.",
+   "rx": 1788890739088
+  },
+  {
+   "v": 0,
+   "t": 1038531,
+   "type": "hediff",
+   "day": 17,
+   "hour": 7,
+   "pawn": 81686,
+   "def": "Malnutrition",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788890739624
+  },
+  {
+   "v": 0,
+   "t": 1038566,
+   "type": "hediff",
+   "day": 17,
+   "hour": 7,
+   "pawn": 81698,
+   "def": "Malnutrition",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788890739820
+  },
+  {
+   "v": 0,
+   "t": 1038580,
+   "type": "hediff",
+   "day": 17,
+   "hour": 7,
+   "pawn": 81682,
+   "def": "Malnutrition",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788890739893
+  },
+  {
+   "v": 0,
+   "t": 1040000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 8,
+   "total": 42,
+   "counts": {
+    "Wait_MaintainPosture": 21,
+    "GotoWander": 12,
+    "Wait_Wander": 9
+   },
+   "rx": 1788890747895
+  },
+  {
+   "v": 0,
+   "t": 1040039,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 81698,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890748103
+  },
+  {
+   "v": 0,
+   "t": 1040039,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890748104
+  },
+  {
+   "v": 0,
+   "t": 1040039,
+   "type": "interaction",
+   "day": 17,
+   "hour": 8,
+   "initiator": 81698,
+   "recipient": 81686,
+   "def": "Chitchat",
+   "text": "Joe made a comment about beautiful people to Schlitzer.",
+   "rx": 1788890748105
+  },
+  {
+   "v": 0,
+   "t": 1040061,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 84939,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84947,
+   "about_name": "Mushinto",
+   "rx": 1788890748220
+  },
+  {
+   "v": 0,
+   "t": 1040061,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 84947,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84939,
+   "about_name": "Irwin",
+   "rx": 1788890748220
+  },
+  {
+   "v": 0,
+   "t": 1040061,
+   "type": "interaction",
+   "day": 17,
+   "hour": 8,
+   "initiator": 84939,
+   "recipient": 84947,
+   "def": "Chitchat",
+   "text": "Irwin gabbed about balloons with Mushinto.",
+   "rx": 1788890748220
+  },
+  {
+   "v": 0,
+   "t": 1040507,
+   "type": "job_start",
+   "day": 17,
+   "hour": 8,
+   "pawn": 81698,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890750710
+  },
+  {
+   "v": 0,
+   "t": 1041100,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 81682,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890754019
+  },
+  {
+   "v": 0,
+   "t": 1041100,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81682,
+   "about_name": "G\u00e9radon",
+   "rx": 1788890754019
+  },
+  {
+   "v": 0,
+   "t": 1041100,
+   "type": "interaction",
+   "day": 17,
+   "hour": 8,
+   "initiator": 81682,
+   "recipient": 81686,
+   "def": "Chitchat",
+   "text": "G\u00e9radon chatted about clubs with Schlitzer.",
+   "rx": 1788890754021
+  },
+  {
+   "v": 0,
+   "t": 1041654,
+   "type": "job_start",
+   "day": 17,
+   "hour": 8,
+   "pawn": 84939,
+   "job": "Ingest",
+   "target": "Thing_MealFine85262",
+   "source": "JobGiver_GetFood",
+   "rx": 1788890757121
+  },
+  {
+   "v": 0,
+   "t": 1042000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 8,
+   "total": 40,
+   "counts": {
+    "Wait_MaintainPosture": 21,
+    "Wait_Wander": 10,
+    "GotoWander": 9
+   },
+   "rx": 1788890759062
+  },
+  {
+   "v": 0,
+   "t": 1042154,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 84939,
+   "def": "AteWithoutTable",
+   "label": "Ate without table",
+   "mood": -3,
+   "rx": 1788890759904
+  },
+  {
+   "v": 0,
+   "t": 1042154,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 84939,
+   "def": "AteFineMeal",
+   "label": "Ate fine meal",
+   "mood": 5,
+   "rx": 1788890759905
+  },
+  {
+   "v": 0,
+   "t": 1042298,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 84947,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84939,
+   "about_name": "Irwin",
+   "rx": 1788890760703
+  },
+  {
+   "v": 0,
+   "t": 1042298,
+   "type": "thought",
+   "day": 17,
+   "hour": 8,
+   "pawn": 84939,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84947,
+   "about_name": "Mushinto",
+   "rx": 1788890760703
+  },
+  {
+   "v": 0,
+   "t": 1042298,
+   "type": "interaction",
+   "day": 17,
+   "hour": 8,
+   "initiator": 84947,
+   "recipient": 84939,
+   "def": "Chitchat",
+   "text": "Mushinto made a comment about kids' games to Irwin.",
+   "rx": 1788890760704
   }
  ],
  "counts": {
@@ -3457,15 +3879,16 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 187,
-  "pawn_snapshot": 862,
-  "job_start": 54,
-  "thought": 84,
-  "interaction": 22,
-  "job_noise": 20,
+  "world_snapshot": 210,
+  "pawn_snapshot": 1000,
+  "job_start": 59,
+  "thought": 99,
+  "interaction": 28,
+  "job_noise": 23,
   "job_end": 35,
   "incident": 1,
-  "mental_state": 1
+  "mental_state": 1,
+  "hediff": 3
  },
- "last_event_at": 1788890731.123679
+ "last_event_at": 1788890763.211259
 }
