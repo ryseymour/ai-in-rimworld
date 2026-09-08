@@ -12,41 +12,41 @@
  },
  "world": {
   "v": 0,
-  "t": 1002750,
+  "t": 1008500,
   "type": "world_snapshot",
   "day": 16,
-  "hour": 17,
-  "date": "2nd of Jugust, 5500",
+  "hour": 19,
+  "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 25788,
+  "wealth": 25608,
   "colonists": 4,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890533197
+  "rx": 1788890566492
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1002750,
+   "t": 1008500,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 17,
+   "hour": 19,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    107
+    103
    ],
-   "job": "researching.",
+   "job": "sleeping.",
    "needs": {
-    "food": 0.476,
-    "rest": 0.76,
-    "joy": 0.401
+    "food": 0.324,
+    "rest": 0.732,
+    "joy": 0.358
    },
    "mood": 0.37,
    "thoughts": [
@@ -63,16 +63,16 @@
      "mood": -5
     },
     {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
     },
     {
      "label": "Constraining clothes",
      "mood": -3
+    },
+    {
+     "label": "Planetary habitat",
+     "mood": -2
     }
    ],
    "health": "Healthy",
@@ -114,46 +114,36 @@
    "gender": "Male",
    "relations": [
     {
-     "other": "Isaias",
-     "kind": "father",
-     "opinion": 25
-    },
-    {
      "other": "Schlitzer",
      "kind": "brother",
      "opinion": 35
-    },
-    {
-     "other": "Kay",
-     "kind": "father",
-     "opinion": 5
     }
    ],
    "drafted": false,
-   "rx": 1788890533197
+   "rx": 1788890566492
   },
   {
    "v": 0,
-   "t": 1002750,
+   "t": 1008500,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 17,
+   "hour": 19,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    99,
+    104,
     0,
-    127
+    123
    ],
-   "job": "wandering.",
+   "job": "sleeping.",
    "needs": {
-    "food": 0.476,
-    "rest": 0.786,
-    "joy": 0.952
+    "food": 0.324,
+    "rest": 0.828,
+    "joy": 0.989
    },
-   "mood": 0.442,
+   "mood": 0.44,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -172,12 +162,12 @@
      "mood": -5
     },
     {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
+    },
+    {
+     "label": "Planetary habitat",
+     "mood": -2
     }
    ],
    "health": "Healthy",
@@ -209,46 +199,36 @@
    "gender": "Male",
    "relations": [
     {
-     "other": "Isaias",
-     "kind": "father",
-     "opinion": 25
-    },
-    {
      "other": "G\u00e9radon",
      "kind": "brother",
      "opinion": -23
-    },
-    {
-     "other": "Kay",
-     "kind": "father",
-     "opinion": 5
     }
    ],
    "drafted": false,
-   "rx": 1788890533197
+   "rx": 1788890566492
   },
   {
    "v": 0,
-   "t": 1002750,
+   "t": 1008500,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 17,
+   "hour": 19,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    120
+    106
    ],
-   "job": "wandering.",
+   "job": "sleeping.",
    "needs": {
-    "food": 0.476,
-    "rest": 0.747,
-    "joy": 0.953
+    "food": 0.324,
+    "rest": 0.921,
+    "joy": 0.943
    },
-   "mood": 0.558,
+   "mood": 0.55,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -259,16 +239,16 @@
      "mood": 10
     },
     {
+     "label": "Extremely comfortable",
+     "mood": 8
+    },
+    {
      "label": "Trees sorely missed",
      "mood": -5
     },
     {
      "label": "No Thinker",
      "mood": -5
-    },
-    {
-     "label": "Spacious interior",
-     "mood": 5
     },
     {
      "label": "Wearing clothes (non-groin)",
@@ -313,14 +293,14 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890533198
+   "rx": 1788890566492
   },
   {
    "v": 0,
-   "t": 1002750,
+   "t": 1008500,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 17,
+   "hour": 19,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
@@ -333,7 +313,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.476,
+    "rest": 0.693,
     "joy": 0.338
    },
    "mood": 0.381,
@@ -355,11 +335,11 @@
      "mood": -10
     },
     {
-     "label": "Minor pain",
-     "mood": -5
+     "label": "Quite comfortable",
+     "mood": 6
     },
     {
-     "label": "No Thinker",
+     "label": "Minor pain",
      "mood": -5
     }
    ],
@@ -401,7 +381,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890533198
+   "rx": 1788890566492
   }
  ],
  "recent": [
@@ -1046,6 +1026,230 @@
     "GotoWander": 2
    },
    "rx": 1788890528872
+  },
+  {
+   "v": 0,
+   "t": 1003030,
+   "type": "job_start",
+   "day": 16,
+   "hour": 17,
+   "pawn": 81682,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890534909
+  },
+  {
+   "v": 0,
+   "t": 1003030,
+   "type": "job_end",
+   "day": 16,
+   "hour": 17,
+   "duration_ticks": 0,
+   "pawn": 81682,
+   "job": "Research",
+   "condition": "Succeeded",
+   "rx": 1788890534909
+  },
+  {
+   "v": 0,
+   "t": 1003038,
+   "type": "thought",
+   "day": 16,
+   "hour": 17,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890534963
+  },
+  {
+   "v": 0,
+   "t": 1003038,
+   "type": "thought",
+   "day": 16,
+   "hour": 17,
+   "pawn": 81698,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890534964
+  },
+  {
+   "v": 0,
+   "t": 1003038,
+   "type": "interaction",
+   "day": 16,
+   "hour": 17,
+   "initiator": 81686,
+   "recipient": 81698,
+   "def": "Chitchat",
+   "text": "Schlitzer spoke about making shirts with Joe.",
+   "rx": 1788890534965
+  },
+  {
+   "v": 0,
+   "t": 1003163,
+   "type": "job_start",
+   "day": 16,
+   "hour": 17,
+   "pawn": 81698,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_GetRest",
+   "rx": 1788890535706
+  },
+  {
+   "v": 0,
+   "t": 1003163,
+   "type": "job_end",
+   "day": 16,
+   "hour": 17,
+   "duration_ticks": 0,
+   "pawn": 81698,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788890535706
+  },
+  {
+   "v": 0,
+   "t": 1003707,
+   "type": "job_start",
+   "day": 16,
+   "hour": 17,
+   "pawn": 81686,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84650",
+   "source": "JobGiver_Work",
+   "rx": 1788890538927
+  },
+  {
+   "v": 0,
+   "t": 1003707,
+   "type": "job_end",
+   "day": 16,
+   "hour": 17,
+   "duration_ticks": 0,
+   "pawn": 81686,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788890538927
+  },
+  {
+   "v": 0,
+   "t": 1003766,
+   "type": "thought",
+   "day": 16,
+   "hour": 17,
+   "pawn": 81698,
+   "def": "ObservedLayingCorpse",
+   "label": "Observed corpse",
+   "mood": 0,
+   "rx": 1788890539287
+  },
+  {
+   "v": 0,
+   "t": 1003766,
+   "type": "thought",
+   "day": 16,
+   "hour": 17,
+   "pawn": 81698,
+   "def": "ObservedLayingCorpse",
+   "label": "Observed corpse",
+   "mood": 0,
+   "rx": 1788890539288
+  },
+  {
+   "v": 0,
+   "t": 1003968,
+   "type": "job_start",
+   "day": 16,
+   "hour": 17,
+   "pawn": 81686,
+   "job": "GoForWalk",
+   "target": "(96, 0, 123)",
+   "source": "JobGiver_GetJoy",
+   "rx": 1788890540468
+  },
+  {
+   "v": 0,
+   "t": 1003968,
+   "type": "job_end",
+   "day": 16,
+   "hour": 17,
+   "duration_ticks": 0,
+   "pawn": 81686,
+   "job": "GoForWalk",
+   "condition": "Succeeded",
+   "rx": 1788890540468
+  },
+  {
+   "v": 0,
+   "t": 1004000,
+   "type": "job_noise",
+   "day": 16,
+   "hour": 17,
+   "total": 10,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "GotoWander": 2,
+    "Wait_Wander": 1
+   },
+   "rx": 1788890540651
+  },
+  {
+   "v": 0,
+   "t": 1005276,
+   "type": "job_start",
+   "day": 16,
+   "hour": 18,
+   "pawn": 81686,
+   "job": "LayDown",
+   "target": "Thing_SleepingSpot33288",
+   "source": "JobGiver_GetRest",
+   "rx": 1788890547857
+  },
+  {
+   "v": 0,
+   "t": 1006000,
+   "type": "job_noise",
+   "day": 16,
+   "hour": 18,
+   "total": 6,
+   "counts": {
+    "Wait_Wander": 2,
+    "Wait_MaintainPosture": 3,
+    "GotoWander": 1
+   },
+   "rx": 1788890551940
+  },
+  {
+   "v": 0,
+   "t": 1007035,
+   "type": "job_start",
+   "day": 16,
+   "hour": 18,
+   "pawn": 81682,
+   "job": "LayDown",
+   "target": "Thing_SleepingSpot31692",
+   "source": "JobGiver_GetRest",
+   "rx": 1788890557811
+  },
+  {
+   "v": 0,
+   "t": 1008000,
+   "type": "job_noise",
+   "day": 16,
+   "hour": 19,
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788890563556
   }
  ],
  "counts": {
@@ -1053,13 +1257,13 @@
   "command_result": 8,
   "letter": 1,
   "hello": 1,
-  "world_snapshot": 50,
-  "pawn_snapshot": 200,
-  "job_start": 11,
-  "thought": 8,
-  "interaction": 4,
-  "job_noise": 6,
-  "job_end": 10
+  "world_snapshot": 73,
+  "pawn_snapshot": 292,
+  "job_start": 17,
+  "thought": 12,
+  "interaction": 5,
+  "job_noise": 9,
+  "job_end": 14
  },
- "last_event_at": 1788890533.198327
+ "last_event_at": 1788890566.4929621
 }
