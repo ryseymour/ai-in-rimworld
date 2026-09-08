@@ -1691,6 +1691,11 @@
     "paused": true
    },
    "rx": 1788833398628
+  },
+  {
+   "type": "mod_disconnected",
+   "peer": "('127.0.0.1', 50662)",
+   "rx": 1788833570618
   }
  ],
  "counts": {
@@ -1702,8 +1707,9 @@
   "job_end": 2,
   "command_result": 10,
   "letter": 1,
-  "mental_state": 1
+  "mental_state": 1,
+  "mod_disconnected": 1
  },
- "last_event_at": 1788833398.628392,
- "published_at": 1788833553
+ "last_event_at": 1788833570.618133,
+ "published_at": 1788833584
 }
