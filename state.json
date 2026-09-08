@@ -549,11 +549,17 @@
     ]
    },
    "rx": 1788834789244
+  },
+  {
+   "type": "mod_disconnected",
+   "peer": "('127.0.0.1', 50905)",
+   "rx": 1788835280217
   }
  ],
  "counts": {
   "mod_connected": 1,
-  "command_result": 2
+  "command_result": 2,
+  "mod_disconnected": 1
  },
- "last_event_at": 1788834789.244908
+ "last_event_at": 1788835280.217053
 }
