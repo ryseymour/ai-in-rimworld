@@ -43,9 +43,9 @@ namespace AiRim
         {
             foreach (var map in Find.Maps)
             {
-                Events.WorldSnapshot(map);
+                Events.Guard("world_snapshot", () => Events.WorldSnapshot(map));
                 foreach (var p in map.mapPawns.AllPawnsSpawned)
-                    if (Events.Tracked(p)) Events.PawnSnapshot(p);
+                    if (Events.Tracked(p)) Events.Guard("pawn_snapshot", () => Events.PawnSnapshot(p));
             }
         }
     }

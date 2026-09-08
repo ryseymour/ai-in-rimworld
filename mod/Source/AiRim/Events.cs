@@ -21,6 +21,13 @@ namespace AiRim
             Transport.Send(j.ToString());
         }
 
+        /// <summary>Run an observer; never let an observer exception reach game code.</summary>
+        public static void Guard(string what, System.Action a)
+        {
+            try { a(); }
+            catch (System.Exception e) { Log.ErrorOnce($"[AiRim] {what} failed: {e}", what.GetHashCode()); }
+        }
+
         public static string Kind(Pawn p)
         {
             if (p.RaceProps != null && !p.RaceProps.Humanlike) return "animal";
@@ -160,7 +167,13 @@ namespace AiRim
                 .Put("initiator", initiator?.thingIDNumber ?? -1)
                 .Put("recipient", recipient?.thingIDNumber ?? -1)
                 .Put("def", def?.defName)
-                .Put("text", entry.ToGameStringFromPOV(initiator, false)));
+                .Put("text", SafeText(entry, initiator)));
+        }
+
+        private static string SafeText(LogEntry entry, Pawn pov)
+        {
+            try { return entry.ToGameStringFromPOV(pov, false); }
+            catch { return null; }
         }
 
         public static void MentalState(Pawn p, MentalStateDef def, string reason)
