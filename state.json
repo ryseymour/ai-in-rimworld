@@ -1645,6 +1645,106 @@
    "target": null,
    "source": "JobGiver_GotoTravelDestination",
    "rx": 1788830213995
+  },
+  {
+   "v": 0,
+   "t": 726094,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830249766
+  },
+  {
+   "v": 0,
+   "t": 726100,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830249861
+  },
+  {
+   "v": 0,
+   "t": 726105,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Goto",
+   "target": "(88, 0, 121)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830249944
+  },
+  {
+   "v": 0,
+   "t": 726120,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830250195
+  },
+  {
+   "v": 0,
+   "t": 726125,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Goto",
+   "target": "(89, 0, 112)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830250277
+  },
+  {
+   "v": 0,
+   "t": 726132,
+   "type": "interaction",
+   "initiator": 73117,
+   "recipient": 73102,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Ellie</color> and <color=#D09B61FF>AJ</color> chatted about favorite clothes.",
+   "rx": 1788830250403
+  },
+  {
+   "v": 0,
+   "t": 726135,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830250444
+  },
+  {
+   "v": 0,
+   "t": 726138,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830250496
+  },
+  {
+   "v": 0,
+   "t": 726147,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830250645
+  },
+  {
+   "v": 0,
+   "t": 726152,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Goto",
+   "target": "(87, 0, 121)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830250728
   }
  ],
  "counts": {
@@ -1652,14 +1752,14 @@
   "hello": 1,
   "world_snapshot": 77,
   "pawn_snapshot": 518,
-  "job_start": 60,
+  "job_start": 69,
   "job_end": 19,
   "hediff": 2,
   "letter": 4,
   "incident": 3,
-  "interaction": 8,
+  "interaction": 9,
   "mental_state": 1
  },
- "last_event_at": 1788830213.995575,
- "published_at": 1788830219
+ "last_event_at": 1788830250.728739,
+ "published_at": 1788830251
 }
