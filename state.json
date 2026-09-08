@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 823000,
+  "t": 824750,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 10,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788833835574
+  "rx": 1788833864738
  },
  "pawns": [
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -36,10 +36,10 @@
     0,
     109
    ],
-   "job": "downed.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.769,
+    "rest": 0.759,
     "joy": 0
    },
    "mood": 0,
@@ -89,25 +89,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833835575
+   "rx": 1788833864738
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    117,
+    112,
     0,
     122
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.42
+    "rest": 0.392
    },
    "mood": 0.235,
    "thoughts": [
@@ -156,25 +156,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833835575
+   "rx": 1788833864739
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79429,
    "name": "Goabanbi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    119,
+    114,
     0,
-    120
+    117
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.586,
-    "rest": 0.751
+    "food": 0.514,
+    "rest": 0.723
    },
    "mood": 0.56,
    "thoughts": [
@@ -233,25 +233,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833835575
+   "rx": 1788833864739
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79449,
    "name": "Trocam",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    112,
+    116,
     0,
-    120
+    115
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.72,
-    "rest": 0.765
+    "food": 0.676,
+    "rest": 0.739
    },
    "mood": 0.56,
    "thoughts": [
@@ -292,25 +292,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833835576
+   "rx": 1788833864739
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79454,
    "name": "Snail",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    110,
+    114,
     0,
-    120
+    126
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.72,
-    "rest": 0.75
+    "food": 0.672,
+    "rest": 0.721
    },
    "mood": 0.6,
    "thoughts": [
@@ -356,25 +356,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833835576
+   "rx": 1788833864740
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79459,
    "name": "Pelican",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    119,
+    114,
     0,
-    121
+    120
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.72,
-    "rest": 0.825
+    "food": 0.676,
+    "rest": 0.798
    },
    "mood": 0.54,
    "thoughts": [
@@ -419,25 +419,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833835576
+   "rx": 1788833864740
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79464,
    "name": "Blue",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    109,
+    110,
     0,
-    118
+    123
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.724,
-    "rest": 0.757
+    "food": 0.676,
+    "rest": 0.728
    },
    "mood": 0.51,
    "thoughts": [
@@ -481,25 +481,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833835576
+   "rx": 1788833864740
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79469,
    "name": "Red",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    112,
+    113,
     0,
-    121
+    115
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.58,
-    "rest": 0.827
+    "food": 0.508,
+    "rest": 0.798
    },
    "mood": 0.52,
    "thoughts": [
@@ -546,25 +546,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833835576
+   "rx": 1788833864740
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79474,
    "name": "Black",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    115,
+    117,
     0,
-    120
+    125
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.724,
-    "rest": 0.8
+    "food": 0.676,
+    "rest": 0.771
    },
    "mood": 0.56,
    "thoughts": [
@@ -606,25 +606,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833835576
+   "rx": 1788833864740
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79480,
    "name": "Green",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    114,
+    116,
     0,
-    122
+    113
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.72,
-    "rest": 0.737
+    "food": 0.676,
+    "rest": 0.711
    },
    "mood": 0.52,
    "thoughts": [
@@ -685,25 +685,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833835576
+   "rx": 1788833864741
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79494,
    "name": "Gumi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    113,
+    118,
     0,
-    114
+    117
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.72,
-    "rest": 0.822
+    "food": 0.672,
+    "rest": 0.794
    },
    "mood": 0.58,
    "thoughts": [
@@ -755,25 +755,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833835577
+   "rx": 1788833864741
   },
   {
    "v": 0,
-   "t": 823000,
+   "t": 824750,
    "type": "pawn_snapshot",
    "id": 79498,
    "name": "Chicken",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    118,
+    116,
     0,
     120
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.72,
-    "rest": 0.824
+    "food": 0.672,
+    "rest": 0.795
    },
    "mood": 0.56,
    "thoughts": [
@@ -813,6600 +813,10 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833835577
+   "rx": 1788833864741
   }
  ],
  "recent": [
-  {
-   "type": "mod_connected",
-   "peer": "('127.0.0.1', 50662)",
-   "rx": 1788833274748
-  },
-  {
-   "v": 0,
-   "t": 813794,
-   "type": "hello",
-   "mod_version": "0.1.0",
-   "game_version": "1.6.4871 rev597",
-   "map_id": 2,
-   "rx": 1788833293037
-  },
-  {
-   "v": 0,
-   "t": 814078,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833297951
-  },
-  {
-   "v": 0,
-   "t": 814078,
-   "type": "job_end",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833297952
-  },
-  {
-   "v": 0,
-   "t": 814081,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "target": "(103, 0, 122)",
-   "source": "JobGiver_WanderOwnRoom",
-   "rx": 1788833298006
-  },
-  {
-   "v": 0,
-   "t": 814081,
-   "type": "job_end",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833298006
-  },
-  {
-   "v": 0,
-   "t": 814169,
-   "type": "command_result",
-   "id": "c-1",
-   "ok": true,
-   "data": {
-    "mod_version": "0.1.0",
-    "tick": 814169,
-    "paused": false,
-    "in_game": true
-   },
-   "rx": 1788833299460
-  },
-  {
-   "v": 0,
-   "t": 814170,
-   "type": "command_result",
-   "id": "c-2",
-   "ok": true,
-   "data": {
-    "speed": 0,
-    "paused": true
-   },
-   "rx": 1788833299476
-  },
-  {
-   "v": 0,
-   "t": 814170,
-   "type": "command_result",
-   "id": "c-3",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "origin_x": 81,
-    "origin_z": 98,
-    "w": 46,
-    "h": 22,
-    "top_row_z": 119,
-    "rows": [
-     ".................#==.#..#.........a...........",
-     ".................###+####.....................",
-     "................##bc.===#.....................",
-     "................#c...d==##....................",
-     "................#d..=====#...........e........",
-     "................#d.======#....................",
-     "................#f..=====#....................",
-     "................#g...h==##....................",
-     "................##ff.===#.....................",
-     ".................###+####..........ii.........",
-     "......j..........#...#.A#.........iii.........",
-     "......jj.........#==.+.=#.........i.i.........",
-     ".................#==.####........ii...........",
-     ".................#==.#.=#......kk.............",
-     ".................#...+.=#.....................",
-     ".................#...####.....................",
-     ".................+...+=l#.....................",
-     ".................########.....................",
-     ".............k.........B......................",
-     ".............k................................",
-     ".............k................................",
-     ".............................................."
-    ],
-    "pawns": [
-     {
-      "char": "A",
-      "id": 948,
-      "name": "Zeke",
-      "kind": "colonist"
-     },
-     {
-      "char": "B",
-      "id": 70063,
-      "name": "Boomalope",
-      "kind": "animal"
-     }
-    ],
-    "items": [
-     {
-      "char": "a",
-      "def": "MeleeWeapon_BreachAxe",
-      "label": "breach axe"
-     },
-     {
-      "char": "b",
-      "def": "Steel",
-      "label": "steel"
-     },
-     {
-      "char": "c",
-      "def": "MedicineIndustrial",
-      "label": "medicine"
-     },
-     {
-      "char": "d",
-      "def": "WoodLog",
-      "label": "wood"
-     },
-     {
-      "char": "e",
-      "def": "Gun_Autopistol",
-      "label": "autopistol"
-     },
-     {
-      "char": "f",
-      "def": "GravlitePanel",
-      "label": "gravlite panel"
-     },
-     {
-      "char": "g",
-      "def": "Gun_MachinePistol",
-      "label": "machine pistol"
-     },
-     {
-      "char": "h",
-      "def": "Silver",
-      "label": "silver"
-     },
-     {
-      "char": "i",
-      "def": "ChunkSlate",
-      "label": "slate chunk"
-     },
-     {
-      "char": "j",
-      "def": "ChunkGranite",
-      "label": "granite chunk"
-     },
-     {
-      "char": "k",
-      "def": "ChunkSandstone",
-      "label": "sandstone chunk"
-     },
-     {
-      "char": "l",
-      "def": "Corpse_Human",
-      "label": "human corpse"
-     }
-    ],
-    "legend": "# wall, + door, = building, ~ water, ^ rock, . floor, ? unseen, space off-map"
-   },
-   "rx": 1788833299499
-  },
-  {
-   "v": 0,
-   "t": 814170,
-   "type": "command_result",
-   "id": "c-4",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "total": 3,
-    "returned": 3,
-    "things": [
-     {
-      "id": 1042,
-      "def": "Silver",
-      "label": "Silver x270",
-      "category": "Item",
-      "pos": [
-       102,
-       0,
-       112
-      ],
-      "stack": 270,
-      "forbidden": false
-     },
-     {
-      "id": 1058,
-      "def": "GravlitePanel",
-      "label": "Gravlite panel x75",
-      "category": "Item",
-      "pos": [
-       100,
-       0,
-       111
-      ],
-      "stack": 75,
-      "forbidden": false
-     },
-     {
-      "id": 29492,
-      "def": "GravlitePanel",
-      "label": "Gravlite panel x57",
-      "category": "Item",
-      "pos": [
-       100,
-       0,
-       111
-      ],
-      "stack": 57,
-      "forbidden": false
-     }
-    ]
-   },
-   "rx": 1788833318640
-  },
-  {
-   "v": 0,
-   "t": 814170,
-   "type": "command_result",
-   "id": "c-5",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "total": 20,
-    "returned": 20,
-    "things": [
-     {
-      "id": 36958,
-      "def": "Mech_Tesseron",
-      "label": "Tesseron",
-      "category": "Pawn",
-      "pos": [
-       89,
-       0,
-       137
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36960,
-      "def": "Mech_Pikeman",
-      "label": "Pikeman",
-      "category": "Pawn",
-      "pos": [
-       91,
-       0,
-       142
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 70063,
-      "def": "Boomalope",
-      "label": "Boomalope",
-      "category": "Pawn",
-      "pos": [
-       104,
-       0,
-       101
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 948,
-      "def": "Human",
-      "label": "Zeke",
-      "category": "Pawn",
-      "pos": [
-       104,
-       0,
-       109
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 35404,
-      "def": "Human",
-      "label": "Lau",
-      "category": "Pawn",
-      "pos": [
-       104,
-       0,
-       123
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79429,
-      "def": "Human",
-      "label": "Goabanbi",
-      "category": "Pawn",
-      "pos": [
-       187,
-       0,
-       215
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79445,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       201,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79446,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       201,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79444,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       197,
-       0,
-       214
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79447,
-      "def": "Muffalo",
-      "label": "Muffalo",
-      "category": "Pawn",
-      "pos": [
-       198,
-       0,
-       215
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79448,
-      "def": "Muffalo",
-      "label": "Muffalo",
-      "category": "Pawn",
-      "pos": [
-       198,
-       0,
-       215
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79449,
-      "def": "Human",
-      "label": "Trocam",
-      "category": "Pawn",
-      "pos": [
-       185,
-       0,
-       228
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79454,
-      "def": "Human",
-      "label": "Snail",
-      "category": "Pawn",
-      "pos": [
-       190,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79459,
-      "def": "Human",
-      "label": "Pelican",
-      "category": "Pawn",
-      "pos": [
-       191,
-       0,
-       219
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79464,
-      "def": "Human",
-      "label": "Blue",
-      "category": "Pawn",
-      "pos": [
-       192,
-       0,
-       220
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79469,
-      "def": "Human",
-      "label": "Red",
-      "category": "Pawn",
-      "pos": [
-       190,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79474,
-      "def": "Human",
-      "label": "Black",
-      "category": "Pawn",
-      "pos": [
-       185,
-       0,
-       228
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79480,
-      "def": "Human",
-      "label": "Green",
-      "category": "Pawn",
-      "pos": [
-       189,
-       0,
-       217
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79494,
-      "def": "Human",
-      "label": "Gumi",
-      "category": "Pawn",
-      "pos": [
-       190,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79498,
-      "def": "Human",
-      "label": "Chicken",
-      "category": "Pawn",
-      "pos": [
-       189,
-       0,
-       217
-      ],
-      "stack": 1,
-      "forbidden": false
-     }
-    ]
-   },
-   "rx": 1788833318682
-  },
-  {
-   "v": 0,
-   "t": 814170,
-   "type": "command_result",
-   "id": "c-6",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "total": 20,
-    "returned": 20,
-    "things": [
-     {
-      "id": 36958,
-      "def": "Mech_Tesseron",
-      "label": "Tesseron",
-      "category": "Pawn",
-      "pos": [
-       89,
-       0,
-       137
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36960,
-      "def": "Mech_Pikeman",
-      "label": "Pikeman",
-      "category": "Pawn",
-      "pos": [
-       91,
-       0,
-       142
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 70063,
-      "def": "Boomalope",
-      "label": "Boomalope",
-      "category": "Pawn",
-      "pos": [
-       104,
-       0,
-       101
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 948,
-      "def": "Human",
-      "label": "Zeke",
-      "category": "Pawn",
-      "pos": [
-       104,
-       0,
-       109
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 35404,
-      "def": "Human",
-      "label": "Lau",
-      "category": "Pawn",
-      "pos": [
-       104,
-       0,
-       123
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79429,
-      "def": "Human",
-      "label": "Goabanbi",
-      "category": "Pawn",
-      "pos": [
-       187,
-       0,
-       215
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79445,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       201,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79446,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       201,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79444,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       197,
-       0,
-       214
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79447,
-      "def": "Muffalo",
-      "label": "Muffalo",
-      "category": "Pawn",
-      "pos": [
-       198,
-       0,
-       215
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79448,
-      "def": "Muffalo",
-      "label": "Muffalo",
-      "category": "Pawn",
-      "pos": [
-       198,
-       0,
-       215
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79449,
-      "def": "Human",
-      "label": "Trocam",
-      "category": "Pawn",
-      "pos": [
-       185,
-       0,
-       228
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79454,
-      "def": "Human",
-      "label": "Snail",
-      "category": "Pawn",
-      "pos": [
-       190,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79459,
-      "def": "Human",
-      "label": "Pelican",
-      "category": "Pawn",
-      "pos": [
-       191,
-       0,
-       219
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79464,
-      "def": "Human",
-      "label": "Blue",
-      "category": "Pawn",
-      "pos": [
-       192,
-       0,
-       220
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79469,
-      "def": "Human",
-      "label": "Red",
-      "category": "Pawn",
-      "pos": [
-       190,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79474,
-      "def": "Human",
-      "label": "Black",
-      "category": "Pawn",
-      "pos": [
-       185,
-       0,
-       228
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79480,
-      "def": "Human",
-      "label": "Green",
-      "category": "Pawn",
-      "pos": [
-       189,
-       0,
-       217
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79494,
-      "def": "Human",
-      "label": "Gumi",
-      "category": "Pawn",
-      "pos": [
-       190,
-       0,
-       218
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79498,
-      "def": "Human",
-      "label": "Chicken",
-      "category": "Pawn",
-      "pos": [
-       189,
-       0,
-       217
-      ],
-      "stack": 1,
-      "forbidden": false
-     }
-    ]
-   },
-   "rx": 1788833394415
-  },
-  {
-   "v": 0,
-   "t": 814170,
-   "type": "command_result",
-   "id": "c-7",
-   "ok": true,
-   "data": {
-    "pawn": 35404,
-    "would_start": "Wander_Sad"
-   },
-   "rx": 1788833394450
-  },
-  {
-   "v": 0,
-   "t": 814170,
-   "type": "command_result",
-   "id": "c-8",
-   "ok": true,
-   "data": {
-    "speed": 1,
-    "paused": false
-   },
-   "rx": 1788833394478
-  },
-  {
-   "v": 0,
-   "t": 814171,
-   "type": "letter",
-   "label": "Sad wander: Lau",
-   "text": "<color=#D09B61FF>Lau</color> has broken down and is wandering around in sadness.\n\nAiRim dev_action",
-   "def": "NegativeEvent",
-   "rx": 1788833394554
-  },
-  {
-   "v": 0,
-   "t": 814171,
-   "type": "mental_state",
-   "pawn": 35404,
-   "state": "sad wandering",
-   "reason": "AiRim dev_action",
-   "rx": 1788833394554
-  },
-  {
-   "v": 0,
-   "t": 814171,
-   "type": "command_result",
-   "id": "c-9",
-   "ok": true,
-   "data": {
-    "pawn": 35404,
-    "state": "Wander_Sad"
-   },
-   "rx": 1788833394555
-  },
-  {
-   "v": 0,
-   "t": 814174,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833394579
-  },
-  {
-   "v": 0,
-   "t": 814417,
-   "type": "command_result",
-   "id": "c-10",
-   "ok": true,
-   "data": {
-    "speed": 0,
-    "paused": true
-   },
-   "rx": 1788833398628
-  },
-  {
-   "type": "mod_disconnected",
-   "peer": "('127.0.0.1', 50662)",
-   "rx": 1788833570618
-  },
-  {
-   "type": "mod_connected",
-   "peer": "('127.0.0.1', 50717)",
-   "rx": 1788833596936
-  },
-  {
-   "v": 0,
-   "t": 814418,
-   "type": "hello",
-   "mod_version": "0.1.0",
-   "game_version": "1.6.4871 rev597",
-   "map_id": 2,
-   "rx": 1788833638508
-  },
-  {
-   "v": 0,
-   "t": 814492,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833639950
-  },
-  {
-   "v": 0,
-   "t": 814492,
-   "type": "job_end",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833639951
-  },
-  {
-   "v": 0,
-   "t": 814495,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "target": "(106, 0, 119)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833640014
-  },
-  {
-   "v": 0,
-   "t": 814495,
-   "type": "job_end",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833640015
-  },
-  {
-   "v": 0,
-   "t": 814875,
-   "type": "command_result",
-   "id": "c-11",
-   "ok": true,
-   "data": {
-    "mod_version": "0.1.0",
-    "tick": 814875,
-    "paused": false,
-    "in_game": true
-   },
-   "rx": 1788833646349
-  },
-  {
-   "v": 0,
-   "t": 814876,
-   "type": "command_result",
-   "id": "c-12",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "origin_x": 84,
-    "origin_z": 101,
-    "w": 40,
-    "h": 16,
-    "top_row_z": 116,
-    "rows": [
-     ".............#a...b==##.................",
-     ".............#b..=====#...........c.....",
-     ".............#b.======#.................",
-     ".............#d..=====#.................",
-     ".............#e...f==##.................",
-     ".............##dd.===#..................",
-     "..............###+####..........gg......",
-     "...h..........#...#.A#.........ggg......",
-     "...hh.........#==.+.=#.........g.g......",
-     "..............#==.####........gg........",
-     "..............#==.#.=#......ii..........",
-     "..............#...+.=#..................",
-     "..............#...####..................",
-     "..............+...+=j#..................",
-     "..............########..................",
-     "..........i............................."
-    ],
-    "pawns": [
-     {
-      "char": "A",
-      "id": 948,
-      "name": "Zeke",
-      "kind": "colonist"
-     }
-    ],
-    "items": [
-     {
-      "char": "a",
-      "def": "MedicineIndustrial",
-      "label": "medicine"
-     },
-     {
-      "char": "b",
-      "def": "WoodLog",
-      "label": "wood"
-     },
-     {
-      "char": "c",
-      "def": "Gun_Autopistol",
-      "label": "autopistol"
-     },
-     {
-      "char": "d",
-      "def": "GravlitePanel",
-      "label": "gravlite panel"
-     },
-     {
-      "char": "e",
-      "def": "Gun_MachinePistol",
-      "label": "machine pistol"
-     },
-     {
-      "char": "f",
-      "def": "Silver",
-      "label": "silver"
-     },
-     {
-      "char": "g",
-      "def": "ChunkSlate",
-      "label": "slate chunk"
-     },
-     {
-      "char": "h",
-      "def": "ChunkGranite",
-      "label": "granite chunk"
-     },
-     {
-      "char": "i",
-      "def": "ChunkSandstone",
-      "label": "sandstone chunk"
-     },
-     {
-      "char": "j",
-      "def": "Corpse_Human",
-      "label": "human corpse"
-     }
-    ],
-    "legend": "# wall, + door, = building, ~ water, ^ rock, . floor, ? unseen, space off-map"
-   },
-   "rx": 1788833646370
-  },
-  {
-   "v": 0,
-   "t": 815166,
-   "type": "interaction",
-   "initiator": 79498,
-   "recipient": 79469,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>Chicken</color> quipped about making belts with <color=#D09B61FF>Red</color>.",
-   "rx": 1788833651259
-  },
-  {
-   "v": 0,
-   "t": 815637,
-   "type": "command_result",
-   "id": "c-13",
-   "ok": true,
-   "data": {
-    "speed": 1,
-    "paused": false
-   },
-   "rx": 1788833659082
-  },
-  {
-   "v": 0,
-   "t": 815640,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Goto",
-   "target": "(103, 0, 109)",
-   "source": "JobGiver_MoveToStandable",
-   "rx": 1788833659164
-  },
-  {
-   "v": 0,
-   "t": 815640,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Goto",
-   "condition": "InterruptForced",
-   "rx": 1788833659164
-  },
-  {
-   "v": 0,
-   "t": 815640,
-   "type": "command_result",
-   "id": "c-14",
-   "ok": true,
-   "data": {
-    "pawn": 948,
-    "drafted": true
-   },
-   "rx": 1788833659165
-  },
-  {
-   "v": 0,
-   "t": 815641,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Ingest",
-   "target": "Thing_Corpse_Human79428",
-   "source": "JobGiver_GetFood",
-   "rx": 1788833659202
-  },
-  {
-   "v": 0,
-   "t": 815641,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Ingest",
-   "condition": "InterruptForced",
-   "rx": 1788833659203
-  },
-  {
-   "v": 0,
-   "t": 815641,
-   "type": "command_result",
-   "id": "c-15",
-   "ok": true,
-   "data": {
-    "pawn": 948,
-    "drafted": false
-   },
-   "rx": 1788833659203
-  },
-  {
-   "v": 0,
-   "t": 815643,
-   "type": "command_result",
-   "id": "c-16",
-   "ok": false,
-   "error": "no_pawn",
-   "detail": "no spawned pawn with id 36958",
-   "rx": 1788833659215
-  },
-  {
-   "v": 0,
-   "t": 815646,
-   "type": "command_result",
-   "id": "c-17",
-   "ok": false,
-   "error": "not_standable",
-   "detail": "nothing can stand at that cell",
-   "rx": 1788833659249
-  },
-  {
-   "v": 0,
-   "t": 815647,
-   "type": "command_result",
-   "id": "c-18",
-   "ok": false,
-   "error": "not_standable",
-   "detail": "nothing can stand at that cell",
-   "rx": 1788833659265
-  },
-  {
-   "v": 0,
-   "t": 815648,
-   "type": "command_result",
-   "id": "c-19",
-   "ok": false,
-   "error": "not_standable",
-   "detail": "nothing can stand at that cell",
-   "rx": 1788833659281
-  },
-  {
-   "v": 0,
-   "t": 815650,
-   "type": "command_result",
-   "id": "c-20",
-   "ok": true,
-   "data": {
-    "pawn": 948,
-    "name": "Zeke",
-    "work": [
-     {
-      "work": "Firefighter",
-      "label": "firefight",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Patient",
-      "label": "patient",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Doctor",
-      "label": "doctor",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "PatientBedRest",
-      "label": "bed rest",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "BasicWorker",
-      "label": "basic",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Warden",
-      "label": "warden",
-      "disabled": false,
-      "priority": 0
-     },
-     {
-      "work": "Handling",
-      "label": "handle",
-      "disabled": false,
-      "priority": 0
-     },
-     {
-      "work": "Cooking",
-      "label": "cook",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Hunting",
-      "label": "hunt",
-      "disabled": true,
-      "priority": 0
-     },
-     {
-      "work": "Construction",
-      "label": "construct",
-      "disabled": false,
-      "priority": 0
-     },
-     {
-      "work": "Growing",
-      "label": "grow",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Mining",
-      "label": "mine",
-      "disabled": false,
-      "priority": 0
-     },
-     {
-      "work": "PlantCutting",
-      "label": "plant cut",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Smithing",
-      "label": "smith",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Tailoring",
-      "label": "tailor",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Art",
-      "label": "art",
-      "disabled": false,
-      "priority": 0
-     },
-     {
-      "work": "Crafting",
-      "label": "craft",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Hauling",
-      "label": "haul",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Cleaning",
-      "label": "clean",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Research",
-      "label": "research",
-      "disabled": false,
-      "priority": 0
-     },
-     {
-      "work": "Childcare",
-      "label": "childcare",
-      "disabled": false,
-      "priority": 3
-     },
-     {
-      "work": "Fishing",
-      "label": "fish",
-      "disabled": false,
-      "priority": 0
-     }
-    ]
-   },
-   "rx": 1788833659316
-  },
-  {
-   "v": 0,
-   "t": 816063,
-   "type": "interaction",
-   "initiator": 79449,
-   "recipient": 79474,
-   "def": "Slight",
-   "text": "<color=#D09B61FF>Trocam</color> implied negative things about <color=#D09B61FF>Black</color>'s culture.",
-   "rx": 1788833666188
-  },
-  {
-   "v": 0,
-   "t": 816778,
-   "type": "command_result",
-   "id": "c-21",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "origin_x": 84,
-    "origin_z": 95,
-    "w": 40,
-    "h": 16,
-    "top_row_z": 110,
-    "rows": [
-     "..............###+####..........aa......",
-     "...b..........#...#.=#.........aaa......",
-     "...bb.........#==.+.=#.........a.a......",
-     "..............#==.####........aa........",
-     "..............#==.#.=#......cc..........",
-     "..............#...+.=#..................",
-     "..............#...####..................",
-     "..............+...+=A#..................",
-     "..............########..................",
-     "..........c.............................",
-     "..........c.............................",
-     "..........c.............................",
-     "........................................",
-     ".......aaa...B..........................",
-     ".........a..............................",
-     "........................................"
-    ],
-    "pawns": [
-     {
-      "char": "A",
-      "id": 948,
-      "name": "Zeke",
-      "kind": "colonist"
-     },
-     {
-      "char": "B",
-      "id": 70063,
-      "name": "Boomalope",
-      "kind": "animal"
-     }
-    ],
-    "items": [
-     {
-      "char": "a",
-      "def": "ChunkSlate",
-      "label": "slate chunk"
-     },
-     {
-      "char": "b",
-      "def": "ChunkGranite",
-      "label": "granite chunk"
-     },
-     {
-      "char": "c",
-      "def": "ChunkSandstone",
-      "label": "sandstone chunk"
-     }
-    ],
-    "legend": "# wall, + door, = building, ~ water, ^ rock, . floor, ? unseen, space off-map"
-   },
-   "rx": 1788833678116
-  },
-  {
-   "v": 0,
-   "t": 816966,
-   "type": "interaction",
-   "initiator": 79498,
-   "recipient": 79464,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>Chicken</color> quipped about lavish meals with <color=#D09B61FF>Blue</color>.",
-   "rx": 1788833681235
-  },
-  {
-   "v": 0,
-   "t": 817471,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Goto",
-   "target": "(93, 0, 103)",
-   "source": "ThinkNode_QueuedJob",
-   "rx": 1788833689684
-  },
-  {
-   "v": 0,
-   "t": 817471,
-   "type": "command_result",
-   "id": "c-22",
-   "ok": true,
-   "data": {
-    "pawn": 948,
-    "target": [
-     93,
-     0,
-     103
-    ]
-   },
-   "rx": 1788833689685
-  },
-  {
-   "v": 0,
-   "t": 817641,
-   "type": "command_result",
-   "id": "c-23",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "total": 20,
-    "returned": 20,
-    "things": [
-     {
-      "id": 36958,
-      "def": "Mech_Tesseron",
-      "label": "Tesseron",
-      "category": "Pawn",
-      "pos": [
-       89,
-       0,
-       137
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36960,
-      "def": "Mech_Pikeman",
-      "label": "Pikeman",
-      "category": "Pawn",
-      "pos": [
-       91,
-       0,
-       142
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 70063,
-      "def": "Boomalope",
-      "label": "Boomalope",
-      "category": "Pawn",
-      "pos": [
-       103,
-       0,
-       90
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 948,
-      "def": "Human",
-      "label": "Zeke",
-      "category": "Pawn",
-      "pos": [
-       102,
-       0,
-       103
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 35404,
-      "def": "Human",
-      "label": "Lau",
-      "category": "Pawn",
-      "pos": [
-       106,
-       0,
-       120
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79429,
-      "def": "Human",
-      "label": "Goabanbi",
-      "category": "Pawn",
-      "pos": [
-       139,
-       0,
-       153
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79445,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       143,
-       0,
-       156
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79446,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       143,
-       0,
-       156
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79444,
-      "def": "Dromedary",
-      "label": "Dromedary",
-      "category": "Pawn",
-      "pos": [
-       142,
-       0,
-       152
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79447,
-      "def": "Muffalo",
-      "label": "Muffalo",
-      "category": "Pawn",
-      "pos": [
-       143,
-       0,
-       153
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79448,
-      "def": "Muffalo",
-      "label": "Muffalo",
-      "category": "Pawn",
-      "pos": [
-       143,
-       0,
-       153
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79449,
-      "def": "Human",
-      "label": "Trocam",
-      "category": "Pawn",
-      "pos": [
-       133,
-       0,
-       161
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79454,
-      "def": "Human",
-      "label": "Snail",
-      "category": "Pawn",
-      "pos": [
-       143,
-       0,
-       155
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79459,
-      "def": "Human",
-      "label": "Pelican",
-      "category": "Pawn",
-      "pos": [
-       143,
-       0,
-       157
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79464,
-      "def": "Human",
-      "label": "Blue",
-      "category": "Pawn",
-      "pos": [
-       143,
-       0,
-       157
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79469,
-      "def": "Human",
-      "label": "Red",
-      "category": "Pawn",
-      "pos": [
-       143,
-       0,
-       155
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79474,
-      "def": "Human",
-      "label": "Black",
-      "category": "Pawn",
-      "pos": [
-       133,
-       0,
-       161
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79480,
-      "def": "Human",
-      "label": "Green",
-      "category": "Pawn",
-      "pos": [
-       144,
-       0,
-       154
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79494,
-      "def": "Human",
-      "label": "Gumi",
-      "category": "Pawn",
-      "pos": [
-       142,
-       0,
-       155
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 79498,
-      "def": "Human",
-      "label": "Chicken",
-      "category": "Pawn",
-      "pos": [
-       144,
-       0,
-       154
-      ],
-      "stack": 1,
-      "forbidden": false
-     }
-    ]
-   },
-   "rx": 1788833692732
-  },
-  {
-   "v": 0,
-   "t": 817642,
-   "type": "command_result",
-   "id": "c-24",
-   "ok": true,
-   "data": {
-    "would_designate_cells": 17,
-    "would_designate_things": 0
-   },
-   "rx": 1788833692751
-  },
-  {
-   "v": 0,
-   "t": 817644,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833692752
-  },
-  {
-   "v": 0,
-   "t": 817645,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833692766
-  },
-  {
-   "v": 0,
-   "t": 817645,
-   "type": "command_result",
-   "id": "c-25",
-   "ok": true,
-   "data": {
-    "kind": "chop",
-    "cells": 17,
-    "things": 0
-   },
-   "rx": 1788833692792
-  },
-  {
-   "v": 0,
-   "t": 817647,
-   "type": "command_result",
-   "id": "c-26",
-   "ok": false,
-   "error": "unknown_kind",
-   "detail": "designate kinds: mine, chop, harvest, deconstruct, hunt, haul, cancel",
-   "rx": 1788833692816
-  },
-  {
-   "v": 0,
-   "t": 817648,
-   "type": "interaction",
-   "initiator": 79480,
-   "recipient": 79459,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>Green</color> chatted about crazy cods with <color=#D09B61FF>Pelican</color>.",
-   "rx": 1788833692817
-  },
-  {
-   "v": 0,
-   "t": 817648,
-   "type": "command_result",
-   "id": "c-27",
-   "ok": true,
-   "data": {
-    "would_build": "Wall",
-    "stuff": "WoodLog",
-    "at": [
-     93,
-     0,
-     100
-    ]
-   },
-   "rx": 1788833692834
-  },
-  {
-   "v": 0,
-   "t": 817650,
-   "type": "command_result",
-   "id": "c-28",
-   "ok": true,
-   "data": {
-    "def": "Wall",
-    "stuff": "WoodLog",
-    "at": [
-     93,
-     0,
-     100
-    ],
-    "rot": 0
-   },
-   "rx": 1788833692870
-  },
-  {
-   "v": 0,
-   "t": 817651,
-   "type": "command_result",
-   "id": "c-29",
-   "ok": true,
-   "data": {
-    "def": "Wall",
-    "stuff": "WoodLog",
-    "at": [
-     93,
-     0,
-     100
-    ],
-    "rot": 0
-   },
-   "rx": 1788833692885
-  },
-  {
-   "v": 0,
-   "t": 817966,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833698116
-  },
-  {
-   "v": 0,
-   "t": 817969,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "target": "(109, 0, 125)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833698167
-  },
-  {
-   "v": 0,
-   "t": 818257,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Ingest",
-   "target": "Thing_Corpse_Human79428",
-   "source": "JobGiver_GetFood",
-   "rx": 1788833702968
-  },
-  {
-   "v": 0,
-   "t": 818466,
-   "type": "interaction",
-   "initiator": 79498,
-   "recipient": 79454,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>Chicken</color> chatted about xenohumans with <color=#D09B61FF>Snail</color>.",
-   "rx": 1788833706453
-  },
-  {
-   "v": 0,
-   "t": 818496,
-   "type": "command_result",
-   "id": "c-30",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "total": 568,
-    "returned": 200,
-    "things": [
-     {
-      "id": 36818,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36819,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       137
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36820,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       138
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36821,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       139
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36822,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       140
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36823,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       141
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36824,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       142
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36825,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       143
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36826,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       144
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36827,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       145
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36828,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       146
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36829,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       147
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36830,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36831,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       149
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36832,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36833,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       85,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36834,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       85,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36835,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       86,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36836,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       86,
-       0,
-       149
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36837,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       86,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36838,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       87,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36839,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       87,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36840,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       87,
-       0,
-       149
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36841,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       88,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36842,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       88,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36843,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       89,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36844,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       89,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36845,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       90,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36846,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       90,
-       0,
-       147
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36847,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       90,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36848,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       91,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36849,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       91,
-       0,
-       144
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36850,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       91,
-       0,
-       145
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36851,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       91,
-       0,
-       146
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36852,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       91,
-       0,
-       147
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36858,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36859,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       137
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36860,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       138
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36861,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       139
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36862,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       140
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36863,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       141
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36864,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       142
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36865,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       143
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36866,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       144
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36867,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       145
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36868,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       146
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36869,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       147
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36870,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36871,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       149
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36872,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       98,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36873,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       97,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36874,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       97,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36875,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       96,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36876,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       96,
-       0,
-       149
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36877,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       96,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36878,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       95,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36879,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       95,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36880,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       95,
-       0,
-       149
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36881,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       94,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36882,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       94,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36883,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       93,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36884,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       93,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36885,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       92,
-       0,
-       136
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36886,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       92,
-       0,
-       147
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36887,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       92,
-       0,
-       148
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36963,
-      "def": "Wall",
-      "label": "Steel wall (58%)",
-      "category": "Building",
-      "pos": [
-       196,
-       0,
-       234
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36964,
-      "def": "Wall",
-      "label": "Steel wall (59%)",
-      "category": "Building",
-      "pos": [
-       196,
-       0,
-       235
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36965,
-      "def": "Wall",
-      "label": "Steel wall (80%)",
-      "category": "Building",
-      "pos": [
-       196,
-       0,
-       236
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36966,
-      "def": "Wall",
-      "label": "Steel wall (79%)",
-      "category": "Building",
-      "pos": [
-       196,
-       0,
-       237
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36967,
-      "def": "Wall",
-      "label": "Steel wall (90%)",
-      "category": "Building",
-      "pos": [
-       196,
-       0,
-       238
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36968,
-      "def": "Wall",
-      "label": "Steel wall (96%)",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       238
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36969,
-      "def": "Wall",
-      "label": "Steel wall (86%)",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       237
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36970,
-      "def": "Wall",
-      "label": "Steel wall (87%)",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       238
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36971,
-      "def": "Wall",
-      "label": "Steel wall (86%)",
-      "category": "Building",
-      "pos": [
-       199,
-       0,
-       238
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36972,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       199,
-       0,
-       239
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36973,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       200,
-       0,
-       239
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36974,
-      "def": "Wall",
-      "label": "Steel wall (28%)",
-      "category": "Building",
-      "pos": [
-       201,
-       0,
-       231
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36975,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       201,
-       0,
-       239
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36976,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       202,
-       0,
-       239
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36978,
-      "def": "Wall",
-      "label": "Steel wall (37%)",
-      "category": "Building",
-      "pos": [
-       208,
-       0,
-       232
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36979,
-      "def": "Wall",
-      "label": "Steel wall (48%)",
-      "category": "Building",
-      "pos": [
-       208,
-       0,
-       233
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36980,
-      "def": "Wall",
-      "label": "Steel wall (54%)",
-      "category": "Building",
-      "pos": [
-       208,
-       0,
-       234
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36981,
-      "def": "Wall",
-      "label": "Steel wall (80%)",
-      "category": "Building",
-      "pos": [
-       208,
-       0,
-       237
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36982,
-      "def": "Wall",
-      "label": "Steel wall (88%)",
-      "category": "Building",
-      "pos": [
-       208,
-       0,
-       238
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36983,
-      "def": "Wall",
-      "label": "Steel wall (90%)",
-      "category": "Building",
-      "pos": [
-       207,
-       0,
-       238
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36984,
-      "def": "Wall",
-      "label": "Steel wall (76%)",
-      "category": "Building",
-      "pos": [
-       206,
-       0,
-       237
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36985,
-      "def": "Wall",
-      "label": "Steel wall (92%)",
-      "category": "Building",
-      "pos": [
-       206,
-       0,
-       238
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36986,
-      "def": "Wall",
-      "label": "Steel wall (76%)",
-      "category": "Building",
-      "pos": [
-       205,
-       0,
-       237
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36987,
-      "def": "Wall",
-      "label": "Steel wall (91%)",
-      "category": "Building",
-      "pos": [
-       205,
-       0,
-       238
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36988,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       205,
-       0,
-       239
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36989,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       204,
-       0,
-       239
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36990,
-      "def": "Wall",
-      "label": "Steel wall (99%)",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       239
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36994,
-      "def": "Wall",
-      "label": "Limestone wall (16%)",
-      "category": "Building",
-      "pos": [
-       79,
-       0,
-       47
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36995,
-      "def": "Wall",
-      "label": "Limestone wall (29%)",
-      "category": "Building",
-      "pos": [
-       80,
-       0,
-       45
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36996,
-      "def": "Wall",
-      "label": "Limestone wall (46%)",
-      "category": "Building",
-      "pos": [
-       81,
-       0,
-       45
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36997,
-      "def": "Wall",
-      "label": "Limestone wall (63%)",
-      "category": "Building",
-      "pos": [
-       82,
-       0,
-       45
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36998,
-      "def": "Wall",
-      "label": "Limestone wall (79%)",
-      "category": "Building",
-      "pos": [
-       83,
-       0,
-       48
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 36999,
-      "def": "Wall",
-      "label": "Limestone wall (95%)",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       45
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37000,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       46
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37001,
-      "def": "Wall",
-      "label": "Limestone wall",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       48
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37003,
-      "def": "Wall",
-      "label": "Limestone wall (31%)",
-      "category": "Building",
-      "pos": [
-       80,
-       0,
-       52
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37004,
-      "def": "Wall",
-      "label": "Limestone wall (51%)",
-      "category": "Building",
-      "pos": [
-       81,
-       0,
-       52
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37005,
-      "def": "Wall",
-      "label": "Limestone wall (62%)",
-      "category": "Building",
-      "pos": [
-       82,
-       0,
-       52
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37006,
-      "def": "Wall",
-      "label": "Limestone wall (77%)",
-      "category": "Building",
-      "pos": [
-       83,
-       0,
-       49
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37007,
-      "def": "Wall",
-      "label": "Limestone wall (98%)",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       52
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37008,
-      "def": "Wall",
-      "label": "Limestone wall (98%)",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       51
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37009,
-      "def": "Wall",
-      "label": "Limestone wall (86%)",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       50
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37010,
-      "def": "Wall",
-      "label": "Limestone wall (90%)",
-      "category": "Building",
-      "pos": [
-       84,
-       0,
-       49
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37012,
-      "def": "Wall",
-      "label": "Granite wall (10%)",
-      "category": "Building",
-      "pos": [
-       220,
-       0,
-       40
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37013,
-      "def": "Wall",
-      "label": "Granite wall (18%)",
-      "category": "Building",
-      "pos": [
-       221,
-       0,
-       33
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37014,
-      "def": "Wall",
-      "label": "Granite wall (18%)",
-      "category": "Building",
-      "pos": [
-       221,
-       0,
-       40
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37015,
-      "def": "Wall",
-      "label": "Granite wall (30%)",
-      "category": "Building",
-      "pos": [
-       222,
-       0,
-       32
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37016,
-      "def": "Wall",
-      "label": "Granite wall (40%)",
-      "category": "Building",
-      "pos": [
-       223,
-       0,
-       40
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37017,
-      "def": "Wall",
-      "label": "Granite wall (53%)",
-      "category": "Building",
-      "pos": [
-       224,
-       0,
-       40
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37019,
-      "def": "Wall",
-      "label": "Granite wall",
-      "category": "Building",
-      "pos": [
-       229,
-       0,
-       33
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37020,
-      "def": "Wall",
-      "label": "Granite wall",
-      "category": "Building",
-      "pos": [
-       229,
-       0,
-       34
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37021,
-      "def": "Wall",
-      "label": "Granite wall",
-      "category": "Building",
-      "pos": [
-       229,
-       0,
-       35
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37022,
-      "def": "Wall",
-      "label": "Granite wall",
-      "category": "Building",
-      "pos": [
-       229,
-       0,
-       36
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37023,
-      "def": "Wall",
-      "label": "Granite wall",
-      "category": "Building",
-      "pos": [
-       229,
-       0,
-       37
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37024,
-      "def": "Wall",
-      "label": "Granite wall",
-      "category": "Building",
-      "pos": [
-       229,
-       0,
-       38
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37025,
-      "def": "Wall",
-      "label": "Granite wall (97%)",
-      "category": "Building",
-      "pos": [
-       229,
-       0,
-       39
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37026,
-      "def": "Wall",
-      "label": "Granite wall (91%)",
-      "category": "Building",
-      "pos": [
-       229,
-       0,
-       40
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37027,
-      "def": "Wall",
-      "label": "Granite wall (96%)",
-      "category": "Building",
-      "pos": [
-       228,
-       0,
-       33
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37028,
-      "def": "Wall",
-      "label": "Granite wall (86%)",
-      "category": "Building",
-      "pos": [
-       228,
-       0,
-       40
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37029,
-      "def": "Wall",
-      "label": "Granite wall (75%)",
-      "category": "Building",
-      "pos": [
-       227,
-       0,
-       33
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37030,
-      "def": "Wall",
-      "label": "Granite wall (73%)",
-      "category": "Building",
-      "pos": [
-       227,
-       0,
-       40
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37031,
-      "def": "Wall",
-      "label": "Granite wall (73%)",
-      "category": "Building",
-      "pos": [
-       226,
-       0,
-       32
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37032,
-      "def": "Wall",
-      "label": "Granite wall (70%)",
-      "category": "Building",
-      "pos": [
-       226,
-       0,
-       33
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37033,
-      "def": "Wall",
-      "label": "Granite wall (57%)",
-      "category": "Building",
-      "pos": [
-       225,
-       0,
-       32
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37034,
-      "def": "Wall",
-      "label": "Granite wall (60%)",
-      "category": "Building",
-      "pos": [
-       225,
-       0,
-       40
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37037,
-      "def": "Wall",
-      "label": "Sandstone wall (43%)",
-      "category": "Building",
-      "pos": [
-       192,
-       0,
-       46
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37038,
-      "def": "Wall",
-      "label": "Sandstone wall (41%)",
-      "category": "Building",
-      "pos": [
-       196,
-       0,
-       46
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37039,
-      "def": "Wall",
-      "label": "Sandstone wall (15%)",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       44
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37040,
-      "def": "Wall",
-      "label": "Sandstone wall (55%)",
-      "category": "Building",
-      "pos": [
-       192,
-       0,
-       47
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37041,
-      "def": "Wall",
-      "label": "Sandstone wall (89%)",
-      "category": "Building",
-      "pos": [
-       193,
-       0,
-       50
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37042,
-      "def": "Wall",
-      "label": "Sandstone wall (89%)",
-      "category": "Building",
-      "pos": [
-       194,
-       0,
-       50
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37043,
-      "def": "Wall",
-      "label": "Sandstone wall (88%)",
-      "category": "Building",
-      "pos": [
-       195,
-       0,
-       50
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37044,
-      "def": "Wall",
-      "label": "Sandstone wall (89%)",
-      "category": "Building",
-      "pos": [
-       196,
-       0,
-       50
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37045,
-      "def": "Wall",
-      "label": "Sandstone wall (90%)",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       50
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37046,
-      "def": "Wall",
-      "label": "Sandstone wall (76%)",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       49
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37047,
-      "def": "Wall",
-      "label": "Sandstone wall (74%)",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       48
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37048,
-      "def": "Wall",
-      "label": "Sandstone wall (53%)",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       47
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37051,
-      "def": "Wall",
-      "label": "Steel wall (51%)",
-      "category": "Building",
-      "pos": [
-       200,
-       0,
-       128
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37052,
-      "def": "Wall",
-      "label": "Steel wall (89%)",
-      "category": "Building",
-      "pos": [
-       202,
-       0,
-       125
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37053,
-      "def": "Wall",
-      "label": "Steel wall (82%)",
-      "category": "Building",
-      "pos": [
-       202,
-       0,
-       128
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37054,
-      "def": "Wall",
-      "label": "Steel wall (99%)",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       125
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37055,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       126
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37056,
-      "def": "Wall",
-      "label": "Steel wall (94%)",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       127
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37057,
-      "def": "Wall",
-      "label": "Steel wall (92%)",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       128
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37058,
-      "def": "Wall",
-      "label": "Steel wall (39%)",
-      "category": "Building",
-      "pos": [
-       199,
-       0,
-       132
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37059,
-      "def": "Wall",
-      "label": "Steel wall (59%)",
-      "category": "Building",
-      "pos": [
-       200,
-       0,
-       129
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37060,
-      "def": "Wall",
-      "label": "Steel wall (71%)",
-      "category": "Building",
-      "pos": [
-       201,
-       0,
-       132
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37061,
-      "def": "Wall",
-      "label": "Steel wall (86%)",
-      "category": "Building",
-      "pos": [
-       202,
-       0,
-       132
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37062,
-      "def": "Wall",
-      "label": "Steel wall (83%)",
-      "category": "Building",
-      "pos": [
-       202,
-       0,
-       129
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37063,
-      "def": "Wall",
-      "label": "Steel wall (100%)",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       132
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37064,
-      "def": "Wall",
-      "label": "Steel wall (89%)",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       130
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37065,
-      "def": "Wall",
-      "label": "Steel wall (97%)",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       129
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37066,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       156
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37067,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       157
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37068,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       158
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37069,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       160
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37070,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       161
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37071,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       162
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37072,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       163
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37073,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       164
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37074,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       165
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37075,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       166
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37076,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       167
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37077,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       197,
-       0,
-       168
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37078,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       153
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37079,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       155
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37080,
-      "def": "Wall",
-      "label": "Steel wall (98%)",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       156
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37081,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       158
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37082,
-      "def": "Wall",
-      "label": "Steel wall (98%)",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       159
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37083,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       160
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37084,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       198,
-       0,
-       168
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37085,
-      "def": "Wall",
-      "label": "Steel wall (93%)",
-      "category": "Building",
-      "pos": [
-       199,
-       0,
-       152
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37086,
-      "def": "Wall",
-      "label": "Steel wall (97%)",
-      "category": "Building",
-      "pos": [
-       199,
-       0,
-       153
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37087,
-      "def": "Wall",
-      "label": "Steel wall",
-      "category": "Building",
-      "pos": [
-       199,
-       0,
-       168
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37088,
-      "def": "Wall",
-      "label": "Steel wall (92%)",
-      "category": "Building",
-      "pos": [
-       200,
-       0,
-       151
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37089,
-      "def": "Wall",
-      "label": "Steel wall (86%)",
-      "category": "Building",
-      "pos": [
-       200,
-       0,
-       152
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37090,
-      "def": "Wall",
-      "label": "Steel wall (86%)",
-      "category": "Building",
-      "pos": [
-       200,
-       0,
-       168
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37091,
-      "def": "Wall",
-      "label": "Steel wall (82%)",
-      "category": "Building",
-      "pos": [
-       201,
-       0,
-       151
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37092,
-      "def": "Wall",
-      "label": "Steel wall (92%)",
-      "category": "Building",
-      "pos": [
-       201,
-       0,
-       168
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37093,
-      "def": "Wall",
-      "label": "Steel wall (73%)",
-      "category": "Building",
-      "pos": [
-       203,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37094,
-      "def": "Wall",
-      "label": "Steel wall (73%)",
-      "category": "Building",
-      "pos": [
-       204,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37095,
-      "def": "Wall",
-      "label": "Steel wall (69%)",
-      "category": "Building",
-      "pos": [
-       205,
-       0,
-       150
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37096,
-      "def": "Wall",
-      "label": "Steel wall (60%)",
-      "category": "Building",
-      "pos": [
-       205,
-       0,
-       164
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37097,
-      "def": "Wall",
-      "label": "Steel wall (62%)",
-      "category": "Building",
-      "pos": [
-       205,
-       0,
-       165
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37098,
-      "def": "Wall",
-      "label": "Steel wall (62%)",
-      "category": "Building",
-      "pos": [
-       205,
-       0,
-       167
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37099,
-      "def": "Wall",
-      "label": "Steel wall (64%)",
-      "category": "Building",
-      "pos": [
-       205,
-       0,
-       168
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37100,
-      "def": "Wall",
-      "label": "Steel wall (60%)",
-      "category": "Building",
-      "pos": [
-       206,
-       0,
-       151
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37101,
-      "def": "Wall",
-      "label": "Steel wall (53%)",
-      "category": "Building",
-      "pos": [
-       206,
-       0,
-       165
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37111,
-      "def": "Wall",
-      "label": "Steel wall (12%)",
-      "category": "Building",
-      "pos": [
-       214,
-       0,
-       153
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37112,
-      "def": "Wall",
-      "label": "Steel wall (17%)",
-      "category": "Building",
-      "pos": [
-       213,
-       0,
-       153
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37113,
-      "def": "Wall",
-      "label": "Steel wall (21%)",
-      "category": "Building",
-      "pos": [
-       212,
-       0,
-       151
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37114,
-      "def": "Wall",
-      "label": "Steel wall (25%)",
-      "category": "Building",
-      "pos": [
-       212,
-       0,
-       152
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37115,
-      "def": "Wall",
-      "label": "Steel wall (22%)",
-      "category": "Building",
-      "pos": [
-       212,
-       0,
-       168
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37116,
-      "def": "Wall",
-      "label": "Steel wall (31%)",
-      "category": "Building",
-      "pos": [
-       211,
-       0,
-       168
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 37117,
-      "def": "Wall",
-      "label": "Steel wall (43%)",
-      "category": "Building",
-      "pos": [
-       209,
-       0,
-       151
-      ],
-      "stack": 1,
-      "forbidden": false
-     }
-    ]
-   },
-   "rx": 1788833706980
-  },
-  {
-   "v": 0,
-   "t": 818497,
-   "type": "command_result",
-   "id": "c-31",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "total": 18,
-    "returned": 18,
-    "things": [
-     {
-      "id": 38627,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       91,
-       0,
-       100
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 39187,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       89,
-       0,
-       99
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 40457,
-      "def": "Plant_YellowTallGrass",
-      "label": "Tall yellow grass",
-      "category": "Plant",
-      "pos": [
-       89,
-       0,
-       102
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 45563,
-      "def": "Plant_YellowTallGrass",
-      "label": "Tall yellow grass",
-      "category": "Plant",
-      "pos": [
-       86,
-       0,
-       97
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 46212,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       87,
-       0,
-       100
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 46716,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       90,
-       0,
-       103
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 48458,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       89,
-       0,
-       101
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 48563,
-      "def": "Plant_YellowTallGrass",
-      "label": "Tall yellow grass",
-      "category": "Plant",
-      "pos": [
-       86,
-       0,
-       101
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 49947,
-      "def": "Plant_YellowTallGrass",
-      "label": "Tall yellow grass",
-      "category": "Plant",
-      "pos": [
-       90,
-       0,
-       101
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 50261,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       86,
-       0,
-       99
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 51097,
-      "def": "Plant_YellowTallGrass",
-      "label": "Tall yellow grass",
-      "category": "Plant",
-      "pos": [
-       87,
-       0,
-       97
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 52156,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       89,
-       0,
-       103
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 53104,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       88,
-       0,
-       101
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 53387,
-      "def": "Plant_YellowTallGrass",
-      "label": "Tall yellow grass",
-      "category": "Plant",
-      "pos": [
-       90,
-       0,
-       99
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 54029,
-      "def": "Plant_YellowTallGrass",
-      "label": "Tall yellow grass",
-      "category": "Plant",
-      "pos": [
-       91,
-       0,
-       101
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 54891,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       88,
-       0,
-       100
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 56658,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       87,
-       0,
-       98
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 58365,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       89,
-       0,
-       97
-      ],
-      "stack": 1,
-      "forbidden": false
-     }
-    ]
-   },
-   "rx": 1788833707001
-  },
-  {
-   "v": 0,
-   "t": 818537,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "FleeAndCower",
-   "target": "(101, 0, 107)",
-   "source": "JobGiver_ConfigurableHostilityResponse",
-   "rx": 1788833707641
-  },
-  {
-   "v": 0,
-   "t": 818788,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833711816
-  },
-  {
-   "v": 0,
-   "t": 818791,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833711867
-  },
-  {
-   "v": 0,
-   "t": 818897,
-   "type": "command_result",
-   "id": "c-32",
-   "ok": true,
-   "data": {
-    "map_id": 2,
-    "total": 6,
-    "returned": 6,
-    "things": [
-     {
-      "id": 41655,
-      "def": "Plant_YellowGrass",
-      "label": "Yellow grass",
-      "category": "Plant",
-      "pos": [
-       93,
-       0,
-       101
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 54099,
-      "def": "Plant_YellowTallGrass",
-      "label": "Tall yellow grass",
-      "category": "Plant",
-      "pos": [
-       93,
-       0,
-       99
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 64949,
-      "def": "Filth_RubbleRock",
-      "label": "Rock rubble x1",
-      "category": "Filth",
-      "pos": [
-       93,
-       0,
-       100
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 64953,
-      "def": "Filth_RubbleRock",
-      "label": "Rock rubble x1",
-      "category": "Filth",
-      "pos": [
-       93,
-       0,
-       99
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 85854,
-      "def": "ChunkSandstone",
-      "label": "Sandstone chunk",
-      "category": "Item",
-      "pos": [
-       94,
-       0,
-       100
-      ],
-      "stack": 1,
-      "forbidden": false
-     },
-     {
-      "id": 87827,
-      "def": "Blueprint_Wall",
-      "label": "Wooden wall (blueprint)",
-      "category": "Ethereal",
-      "pos": [
-       93,
-       0,
-       100
-      ],
-      "stack": 1,
-      "forbidden": false
-     }
-    ]
-   },
-   "rx": 1788833713656
-  },
-  {
-   "v": 0,
-   "t": 818954,
-   "type": "hediff",
-   "pawn": 948,
-   "def": "Bruise",
-   "part": "torso",
-   "severity": 8.743,
-   "rx": 1788833714620
-  },
-  {
-   "v": 0,
-   "t": 819019,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833715700
-  },
-  {
-   "v": 0,
-   "t": 819022,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "target": "(110, 0, 121)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833715750
-  },
-  {
-   "v": 0,
-   "t": 819074,
-   "type": "hediff",
-   "pawn": 948,
-   "def": "Bruise",
-   "part": "right leg",
-   "severity": 7.373,
-   "rx": 1788833716619
-  },
-  {
-   "v": 0,
-   "t": 819074,
-   "type": "hediff",
-   "pawn": 948,
-   "def": "Crack",
-   "part": "right tibia",
-   "severity": 2.63,
-   "rx": 1788833716620
-  },
-  {
-   "v": 0,
-   "t": 819313,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788833720587
-  },
-  {
-   "v": 0,
-   "t": 819387,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833721817
-  },
-  {
-   "v": 0,
-   "t": 819390,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Goto",
-   "target": "(110, 0, 124)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788833721877
-  },
-  {
-   "v": 0,
-   "t": 819404,
-   "type": "hediff",
-   "pawn": 948,
-   "def": "Bruise",
-   "part": "torso",
-   "severity": 7.742,
-   "rx": 1788833722101
-  },
-  {
-   "v": 0,
-   "t": 819442,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788833722733
-  },
-  {
-   "v": 0,
-   "t": 819521,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "FleeAndCower",
-   "target": "(101, 0, 128)",
-   "source": "JobGiver_ConfigurableHostilityResponse",
-   "rx": 1788833724052
-  },
-  {
-   "v": 0,
-   "t": 819523,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833724083
-  },
-  {
-   "v": 0,
-   "t": 819526,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833724134
-  },
-  {
-   "v": 0,
-   "t": 819540,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833724366
-  },
-  {
-   "v": 0,
-   "t": 819543,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Goto",
-   "target": "(108, 0, 119)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788833724417
-  },
-  {
-   "v": 0,
-   "t": 819554,
-   "type": "hediff",
-   "pawn": 948,
-   "def": "Bruise",
-   "part": "right leg",
-   "severity": 8.028,
-   "rx": 1788833724603
-  },
-  {
-   "v": 0,
-   "t": 819562,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788833724733
-  },
-  {
-   "v": 0,
-   "t": 819639,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "GotoWander",
-   "target": "(118, 0, 123)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833726025
-  },
-  {
-   "v": 0,
-   "t": 819644,
-   "type": "interaction",
-   "initiator": 79464,
-   "recipient": 79454,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>Blue</color> made a comment about taming herons to <color=#D09B61FF>Snail</color>.",
-   "rx": 1788833726101
-  },
-  {
-   "v": 0,
-   "t": 819659,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "target": "(120, 0, 122)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833726352
-  },
-  {
-   "v": 0,
-   "t": 819679,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "GotoWander",
-   "target": "(120, 0, 118)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833726684
-  },
-  {
-   "v": 0,
-   "t": 819683,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833726752
-  },
-  {
-   "v": 0,
-   "t": 819686,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833726800
-  },
-  {
-   "v": 0,
-   "t": 819695,
-   "type": "interaction",
-   "initiator": 79494,
-   "recipient": 79449,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>Gumi</color> talked about billiards with <color=#D09B61FF>Trocam</color>.",
-   "rx": 1788833726952
-  },
-  {
-   "v": 0,
-   "t": 819733,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "GotoWander",
-   "target": "(114, 0, 125)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833727584
-  },
-  {
-   "v": 0,
-   "t": 819749,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(114, 0, 113)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833727851
-  },
-  {
-   "v": 0,
-   "t": 819790,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "GotoWander",
-   "target": "(112, 0, 112)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833728534
-  },
-  {
-   "v": 0,
-   "t": 819795,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "GotoWander",
-   "target": "(118, 0, 114)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833728617
-  },
-  {
-   "v": 0,
-   "t": 819799,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833728683
-  },
-  {
-   "v": 0,
-   "t": 819802,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "target": "(114, 0, 119)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833728734
-  },
-  {
-   "v": 0,
-   "t": 819868,
-   "type": "interaction",
-   "initiator": 79480,
-   "recipient": 79474,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>Green</color> told a joke about recreation to <color=#D09B61FF>Black</color>.",
-   "rx": 1788833729836
-  },
-  {
-   "v": 0,
-   "t": 819893,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833730250
-  },
-  {
-   "v": 0,
-   "t": 819895,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833730284
-  },
-  {
-   "v": 0,
-   "t": 819895,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "GotoWander",
-   "target": "(115, 0, 122)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833730284
-  },
-  {
-   "v": 0,
-   "t": 819943,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833731083
-  },
-  {
-   "v": 0,
-   "t": 819944,
-   "type": "hediff",
-   "pawn": 948,
-   "def": "Bruise",
-   "part": "left arm",
-   "severity": 9.035,
-   "rx": 1788833731101
-  },
-  {
-   "v": 0,
-   "t": 819946,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833731134
-  },
-  {
-   "v": 0,
-   "t": 820010,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833732199
-  },
-  {
-   "v": 0,
-   "t": 820013,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "GotoWander",
-   "target": "(118, 0, 122)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833732250
-  },
-  {
-   "v": 0,
-   "t": 820033,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833732583
-  },
-  {
-   "v": 0,
-   "t": 820036,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "GotoWander",
-   "target": "(117, 0, 124)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833732634
-  },
-  {
-   "v": 0,
-   "t": 820073,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "GotoWander",
-   "target": "(115, 0, 125)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833733251
-  },
-  {
-   "v": 0,
-   "t": 820090,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833733534
-  },
-  {
-   "v": 0,
-   "t": 820093,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833733584
-  },
-  {
-   "v": 0,
-   "t": 820101,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833733716
-  },
-  {
-   "v": 0,
-   "t": 820104,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833733767
-  },
-  {
-   "v": 0,
-   "t": 820165,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833734784
-  },
-  {
-   "v": 0,
-   "t": 820168,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "GotoWander",
-   "target": "(115, 0, 120)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833734838
-  },
-  {
-   "v": 0,
-   "t": 820193,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833735250
-  },
-  {
-   "v": 0,
-   "t": 820196,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833735303
-  },
-  {
-   "v": 0,
-   "t": 820206,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833735467
-  },
-  {
-   "v": 0,
-   "t": 820208,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833735500
-  },
-  {
-   "v": 0,
-   "t": 820214,
-   "type": "hediff",
-   "pawn": 948,
-   "def": "Bruise",
-   "part": "left ear",
-   "severity": 9.717,
-   "rx": 1788833735616
-  },
-  {
-   "v": 0,
-   "t": 820214,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_Downed",
-   "target": null,
-   "source": "ThinkNode_CrawlInterrupt",
-   "rx": 1788833735623
-  },
-  {
-   "v": 0,
-   "t": 820259,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833736351
-  },
-  {
-   "v": 0,
-   "t": 820259,
-   "type": "job_end",
-   "pawn": 79498,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833736351
-  },
-  {
-   "v": 0,
-   "t": 820260,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833736367
-  },
-  {
-   "v": 0,
-   "t": 820260,
-   "type": "job_end",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833736368
-  },
-  {
-   "v": 0,
-   "t": 820260,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833736368
-  },
-  {
-   "v": 0,
-   "t": 820260,
-   "type": "job_end",
-   "pawn": 79498,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833736368
-  },
-  {
-   "v": 0,
-   "t": 820263,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833736417
-  },
-  {
-   "v": 0,
-   "t": 820263,
-   "type": "job_end",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833736417
-  },
-  {
-   "v": 0,
-   "t": 820297,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833736983
-  },
-  {
-   "v": 0,
-   "t": 820297,
-   "type": "job_end",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833736983
-  },
-  {
-   "v": 0,
-   "t": 820299,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833737016
-  },
-  {
-   "v": 0,
-   "t": 820299,
-   "type": "job_end",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833737017
-  },
-  {
-   "v": 0,
-   "t": 820349,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833737850
-  },
-  {
-   "v": 0,
-   "t": 820349,
-   "type": "job_end",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833737851
-  },
-  {
-   "v": 0,
-   "t": 820351,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833737884
-  },
-  {
-   "v": 0,
-   "t": 820351,
-   "type": "job_end",
-   "pawn": 35404,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833737884
-  },
-  {
-   "v": 0,
-   "t": 820391,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833738550
-  },
-  {
-   "v": 0,
-   "t": 820391,
-   "type": "job_end",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833738551
-  },
-  {
-   "v": 0,
-   "t": 820394,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "GotoWander",
-   "target": "(108, 0, 116)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833738601
-  },
-  {
-   "v": 0,
-   "t": 820394,
-   "type": "job_end",
-   "pawn": 79469,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833738601
-  },
-  {
-   "v": 0,
-   "t": 820411,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833738884
-  },
-  {
-   "v": 0,
-   "t": 820411,
-   "type": "job_end",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833738886
-  },
-  {
-   "v": 0,
-   "t": 820414,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "GotoWander",
-   "target": "(111, 0, 112)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833738934
-  },
-  {
-   "v": 0,
-   "t": 820414,
-   "type": "job_end",
-   "pawn": 79480,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833738935
-  },
-  {
-   "v": 0,
-   "t": 820425,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833739116
-  },
-  {
-   "v": 0,
-   "t": 820425,
-   "type": "job_end",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833739116
-  },
-  {
-   "v": 0,
-   "t": 820426,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833739134
-  },
-  {
-   "v": 0,
-   "t": 820426,
-   "type": "job_end",
-   "pawn": 79454,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833739134
-  },
-  {
-   "v": 0,
-   "t": 820428,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833739167
-  },
-  {
-   "v": 0,
-   "t": 820428,
-   "type": "job_end",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833739168
-  },
-  {
-   "v": 0,
-   "t": 820431,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(111, 0, 117)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833739217
-  },
-  {
-   "v": 0,
-   "t": 820431,
-   "type": "job_end",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833739218
-  },
-  {
-   "v": 0,
-   "t": 820454,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833739600
-  },
-  {
-   "v": 0,
-   "t": 820454,
-   "type": "job_end",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833739601
-  },
-  {
-   "v": 0,
-   "t": 820457,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "GotoWander",
-   "target": "(106, 0, 118)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833739652
-  },
-  {
-   "v": 0,
-   "t": 820457,
-   "type": "job_end",
-   "pawn": 79464,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833739653
-  },
-  {
-   "v": 0,
-   "t": 820479,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833740023
-  },
-  {
-   "v": 0,
-   "t": 820479,
-   "type": "job_end",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833740025
-  },
-  {
-   "v": 0,
-   "t": 820482,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "GotoWander",
-   "target": "(119, 0, 120)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833740067
-  },
-  {
-   "v": 0,
-   "t": 820482,
-   "type": "job_end",
-   "pawn": 79429,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833740068
-  },
-  {
-   "v": 0,
-   "t": 820512,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833740567
-  },
-  {
-   "v": 0,
-   "t": 820512,
-   "type": "job_end",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833740567
-  },
-  {
-   "v": 0,
-   "t": 820515,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "target": "(110, 0, 124)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833740617
-  },
-  {
-   "v": 0,
-   "t": 820515,
-   "type": "job_end",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833740618
-  },
-  {
-   "v": 0,
-   "t": 820522,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833740733
-  },
-  {
-   "v": 0,
-   "t": 820522,
-   "type": "job_end",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833740734
-  },
-  {
-   "v": 0,
-   "t": 820525,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833740784
-  },
-  {
-   "v": 0,
-   "t": 820525,
-   "type": "job_end",
-   "pawn": 79459,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833740785
-  },
-  {
-   "v": 0,
-   "t": 820581,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833741719
-  },
-  {
-   "v": 0,
-   "t": 820581,
-   "type": "job_end",
-   "pawn": 79498,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833741719
-  },
-  {
-   "v": 0,
-   "t": 820584,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "GotoWander",
-   "target": "(117, 0, 116)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833741767
-  },
-  {
-   "v": 0,
-   "t": 820584,
-   "type": "job_end",
-   "pawn": 79498,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833741768
-  },
-  {
-   "v": 0,
-   "t": 820591,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833741884
-  },
-  {
-   "v": 0,
-   "t": 820591,
-   "type": "job_end",
-   "pawn": 35404,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833741884
-  },
-  {
-   "v": 0,
-   "t": 820594,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "target": "(109, 0, 123)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788833741933
-  },
-  {
-   "v": 0,
-   "t": 820594,
-   "type": "job_end",
-   "pawn": 35404,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833741933
-  },
-  {
-   "v": 0,
-   "t": 820596,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833741967
-  },
-  {
-   "v": 0,
-   "t": 820596,
-   "type": "job_end",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833741967
-  },
-  {
-   "v": 0,
-   "t": 820598,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833742000
-  },
-  {
-   "v": 0,
-   "t": 820598,
-   "type": "job_end",
-   "pawn": 79494,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833742001
-  },
-  {
-   "v": 0,
-   "t": 820606,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833742134
-  },
-  {
-   "v": 0,
-   "t": 820606,
-   "type": "job_end",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833742135
-  },
-  {
-   "v": 0,
-   "t": 820607,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833742150
-  },
-  {
-   "v": 0,
-   "t": 820607,
-   "type": "job_end",
-   "pawn": 79469,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833742150
-  },
-  {
-   "v": 0,
-   "t": 820633,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833742584
-  },
-  {
-   "v": 0,
-   "t": 820633,
-   "type": "job_end",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833742584
-  },
-  {
-   "v": 0,
-   "t": 820635,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833742617
-  },
-  {
-   "v": 0,
-   "t": 820635,
-   "type": "job_end",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833742617
-  },
-  {
-   "v": 0,
-   "t": 820675,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833743284
-  },
-  {
-   "v": 0,
-   "t": 820675,
-   "type": "job_end",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833743285
-  },
-  {
-   "v": 0,
-   "t": 820678,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "GotoWander",
-   "target": "(118, 0, 123)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833743337
-  },
-  {
-   "v": 0,
-   "t": 820678,
-   "type": "job_end",
-   "pawn": 79459,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833743338
-  },
-  {
-   "v": 0,
-   "t": 820682,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833743433
-  },
-  {
-   "v": 0,
-   "t": 820682,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833743434
-  },
-  {
-   "v": 0,
-   "t": 820685,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "LayDown",
-   "target": "Thing_Bed31715",
-   "source": "JobGiver_PatientGoToBed",
-   "rx": 1788833743478
-  },
-  {
-   "v": 0,
-   "t": 820685,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "LayDown",
-   "condition": "Succeeded",
-   "rx": 1788833743478
-  },
-  {
-   "v": 0,
-   "t": 820711,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833743905
-  },
-  {
-   "v": 0,
-   "t": 820711,
-   "type": "job_end",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833743905
-  },
-  {
-   "v": 0,
-   "t": 820714,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "GotoWander",
-   "target": "(114, 0, 125)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833743955
-  },
-  {
-   "v": 0,
-   "t": 820714,
-   "type": "job_end",
-   "pawn": 79454,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833743955
-  },
-  {
-   "v": 0,
-   "t": 820781,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833745072
-  },
-  {
-   "v": 0,
-   "t": 820781,
-   "type": "job_end",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833745072
-  },
-  {
-   "v": 0,
-   "t": 820784,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "GotoWander",
-   "target": "(116, 0, 123)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833745116
-  },
-  {
-   "v": 0,
-   "t": 820784,
-   "type": "job_end",
-   "pawn": 79494,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833745116
-  },
-  {
-   "v": 0,
-   "t": 820794,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833745282
-  },
-  {
-   "v": 0,
-   "t": 820794,
-   "type": "job_end",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833745282
-  },
-  {
-   "v": 0,
-   "t": 820796,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833745322
-  },
-  {
-   "v": 0,
-   "t": 820796,
-   "type": "job_end",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833745322
-  },
-  {
-   "v": 0,
-   "t": 820797,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833745338
-  },
-  {
-   "v": 0,
-   "t": 820797,
-   "type": "job_end",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833745339
-  },
-  {
-   "v": 0,
-   "t": 820799,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "GotoWander",
-   "target": "(109, 0, 124)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833745372
-  },
-  {
-   "v": 0,
-   "t": 820799,
-   "type": "job_end",
-   "pawn": 79469,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833745373
-  },
-  {
-   "v": 0,
-   "t": 820839,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833746038
-  },
-  {
-   "v": 0,
-   "t": 820839,
-   "type": "job_end",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833746038
-  },
-  {
-   "v": 0,
-   "t": 820840,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833746055
-  },
-  {
-   "v": 0,
-   "t": 820840,
-   "type": "job_end",
-   "pawn": 79459,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833746055
-  },
-  {
-   "v": 0,
-   "t": 820876,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833746650
-  },
-  {
-   "v": 0,
-   "t": 820876,
-   "type": "job_end",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833746650
-  },
-  {
-   "v": 0,
-   "t": 820877,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833746675
-  },
-  {
-   "v": 0,
-   "t": 820877,
-   "type": "job_end",
-   "pawn": 79464,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833746676
-  },
-  {
-   "v": 0,
-   "t": 820888,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833746855
-  },
-  {
-   "v": 0,
-   "t": 820888,
-   "type": "job_end",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833746856
-  },
-  {
-   "v": 0,
-   "t": 820889,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833746874
-  },
-  {
-   "v": 0,
-   "t": 820889,
-   "type": "job_end",
-   "pawn": 79494,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833746875
-  },
-  {
-   "v": 0,
-   "t": 820903,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833747105
-  },
-  {
-   "v": 0,
-   "t": 820903,
-   "type": "job_end",
-   "pawn": 79498,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833747105
-  },
-  {
-   "v": 0,
-   "t": 820905,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833747147
-  },
-  {
-   "v": 0,
-   "t": 820905,
-   "type": "job_end",
-   "pawn": 79498,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833747148
-  },
-  {
-   "v": 0,
-   "t": 820953,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833747932
-  },
-  {
-   "v": 0,
-   "t": 820953,
-   "type": "job_end",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833747933
-  },
-  {
-   "v": 0,
-   "t": 820956,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(110, 0, 123)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833747982
-  },
-  {
-   "v": 0,
-   "t": 820956,
-   "type": "job_end",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833747982
-  },
-  {
-   "v": 0,
-   "t": 820968,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833748188
-  },
-  {
-   "v": 0,
-   "t": 820968,
-   "type": "job_end",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833748189
-  },
-  {
-   "v": 0,
-   "t": 820969,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833748205
-  },
-  {
-   "v": 0,
-   "t": 820969,
-   "type": "job_end",
-   "pawn": 79454,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833748206
-  },
-  {
-   "v": 0,
-   "t": 821016,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833748989
-  },
-  {
-   "v": 0,
-   "t": 821016,
-   "type": "job_end",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833748989
-  },
-  {
-   "v": 0,
-   "t": 821019,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833749039
-  },
-  {
-   "v": 0,
-   "t": 821019,
-   "type": "job_end",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833749039
-  },
-  {
-   "v": 0,
-   "t": 821020,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833749054
-  },
-  {
-   "v": 0,
-   "t": 821020,
-   "type": "job_end",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833749054
-  },
-  {
-   "v": 0,
-   "t": 821023,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "GotoWander",
-   "target": "(120, 0, 121)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833749107
-  },
-  {
-   "v": 0,
-   "t": 821023,
-   "type": "job_end",
-   "pawn": 79459,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833749107
-  },
-  {
-   "v": 0,
-   "t": 821031,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833749239
-  },
-  {
-   "v": 0,
-   "t": 821031,
-   "type": "job_end",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833749239
-  },
-  {
-   "v": 0,
-   "t": 821032,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833749255
-  },
   {
    "v": 0,
    "t": 821032,
@@ -9641,22 +3051,3257 @@
    "job": "GotoWander",
    "condition": "Succeeded",
    "rx": 1788833836225
+  },
+  {
+   "v": 0,
+   "t": 823087,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833837021
+  },
+  {
+   "v": 0,
+   "t": 823087,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833837022
+  },
+  {
+   "v": 0,
+   "t": 823089,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833837054
+  },
+  {
+   "v": 0,
+   "t": 823089,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833837054
+  },
+  {
+   "v": 0,
+   "t": 823099,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833837219
+  },
+  {
+   "v": 0,
+   "t": 823099,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833837220
+  },
+  {
+   "v": 0,
+   "t": 823101,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833837255
+  },
+  {
+   "v": 0,
+   "t": 823101,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833837256
+  },
+  {
+   "v": 0,
+   "t": 823128,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833837703
+  },
+  {
+   "v": 0,
+   "t": 823128,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833837704
+  },
+  {
+   "v": 0,
+   "t": 823130,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833837738
+  },
+  {
+   "v": 0,
+   "t": 823130,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833837738
+  },
+  {
+   "v": 0,
+   "t": 823133,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833837787
+  },
+  {
+   "v": 0,
+   "t": 823133,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833837788
+  },
+  {
+   "v": 0,
+   "t": 823136,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "target": "(117, 0, 124)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833837838
+  },
+  {
+   "v": 0,
+   "t": 823136,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833837838
+  },
+  {
+   "v": 0,
+   "t": 823159,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833838221
+  },
+  {
+   "v": 0,
+   "t": 823159,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833838221
+  },
+  {
+   "v": 0,
+   "t": 823162,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833838271
+  },
+  {
+   "v": 0,
+   "t": 823162,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833838271
+  },
+  {
+   "v": 0,
+   "t": 823192,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833838771
+  },
+  {
+   "v": 0,
+   "t": 823192,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833838771
+  },
+  {
+   "v": 0,
+   "t": 823195,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "target": "(110, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833838834
+  },
+  {
+   "v": 0,
+   "t": 823195,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833838834
+  },
+  {
+   "v": 0,
+   "t": 823215,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833839154
+  },
+  {
+   "v": 0,
+   "t": 823215,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833839155
+  },
+  {
+   "v": 0,
+   "t": 823216,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833839171
+  },
+  {
+   "v": 0,
+   "t": 823216,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833839171
+  },
+  {
+   "v": 0,
+   "t": 823235,
+   "type": "interaction",
+   "initiator": 79494,
+   "recipient": 79449,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Gumi</color> said something about guilty pleasures to <color=#D09B61FF>Trocam</color>.",
+   "rx": 1788833839490
+  },
+  {
+   "v": 0,
+   "t": 823242,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833839604
+  },
+  {
+   "v": 0,
+   "t": 823242,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833839604
+  },
+  {
+   "v": 0,
+   "t": 823245,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "target": "(117, 0, 113)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833839654
+  },
+  {
+   "v": 0,
+   "t": 823245,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833839654
+  },
+  {
+   "v": 0,
+   "t": 823288,
+   "type": "interaction",
+   "initiator": 79480,
+   "recipient": 79498,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Green</color> said a word about eating zucchinis to <color=#D09B61FF>Chicken</color>.",
+   "rx": 1788833840374
+  },
+  {
+   "v": 0,
+   "t": 823302,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833840604
+  },
+  {
+   "v": 0,
+   "t": 823302,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833840605
+  },
+  {
+   "v": 0,
+   "t": 823305,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "target": "(114, 0, 124)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833840655
+  },
+  {
+   "v": 0,
+   "t": 823305,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833840655
+  },
+  {
+   "v": 0,
+   "t": 823322,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833840937
+  },
+  {
+   "v": 0,
+   "t": 823322,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833840938
+  },
+  {
+   "v": 0,
+   "t": 823323,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833840953
+  },
+  {
+   "v": 0,
+   "t": 823323,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833840954
+  },
+  {
+   "v": 0,
+   "t": 823363,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833841620
+  },
+  {
+   "v": 0,
+   "t": 823363,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833841621
+  },
+  {
+   "v": 0,
+   "t": 823366,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "target": "(112, 0, 120)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833841670
+  },
+  {
+   "v": 0,
+   "t": 823366,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833841671
+  },
+  {
+   "v": 0,
+   "t": 823422,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833842603
+  },
+  {
+   "v": 0,
+   "t": 823422,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833842604
+  },
+  {
+   "v": 0,
+   "t": 823425,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833842654
+  },
+  {
+   "v": 0,
+   "t": 823425,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833842654
+  },
+  {
+   "v": 0,
+   "t": 823427,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833842688
+  },
+  {
+   "v": 0,
+   "t": 823427,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833842688
+  },
+  {
+   "v": 0,
+   "t": 823429,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833842721
+  },
+  {
+   "v": 0,
+   "t": 823429,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833842721
+  },
+  {
+   "v": 0,
+   "t": 823432,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833842770
+  },
+  {
+   "v": 0,
+   "t": 823432,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833842771
+  },
+  {
+   "v": 0,
+   "t": 823435,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "target": "(113, 0, 123)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833842821
+  },
+  {
+   "v": 0,
+   "t": 823435,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833842821
+  },
+  {
+   "v": 0,
+   "t": 823439,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833842888
+  },
+  {
+   "v": 0,
+   "t": 823439,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833842888
+  },
+  {
+   "v": 0,
+   "t": 823442,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833842937
+  },
+  {
+   "v": 0,
+   "t": 823442,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833842937
+  },
+  {
+   "v": 0,
+   "t": 823502,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833843937
+  },
+  {
+   "v": 0,
+   "t": 823502,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833843937
+  },
+  {
+   "v": 0,
+   "t": 823505,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "target": "(109, 0, 117)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833843987
+  },
+  {
+   "v": 0,
+   "t": 823505,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833843988
+  },
+  {
+   "v": 0,
+   "t": 823574,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833845138
+  },
+  {
+   "v": 0,
+   "t": 823575,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833845154
+  },
+  {
+   "v": 0,
+   "t": 823596,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833845504
+  },
+  {
+   "v": 0,
+   "t": 823599,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "target": "(110, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833845554
+  },
+  {
+   "v": 0,
+   "t": 823623,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833845954
+  },
+  {
+   "v": 0,
+   "t": 823626,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "target": "(117, 0, 120)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833846004
+  },
+  {
+   "v": 0,
+   "t": 823648,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833846371
+  },
+  {
+   "v": 0,
+   "t": 823648,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833846371
+  },
+  {
+   "v": 0,
+   "t": 823649,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833846387
+  },
+  {
+   "v": 0,
+   "t": 823649,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833846387
+  },
+  {
+   "v": 0,
+   "t": 823649,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833846388
+  },
+  {
+   "v": 0,
+   "t": 823649,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833846388
+  },
+  {
+   "v": 0,
+   "t": 823652,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "target": "(106, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833846438
+  },
+  {
+   "v": 0,
+   "t": 823652,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833846438
+  },
+  {
+   "v": 0,
+   "t": 823654,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833846483
+  },
+  {
+   "v": 0,
+   "t": 823654,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833846483
+  },
+  {
+   "v": 0,
+   "t": 823657,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "target": "(113, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833846521
+  },
+  {
+   "v": 0,
+   "t": 823657,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833846521
+  },
+  {
+   "v": 0,
+   "t": 823665,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833846656
+  },
+  {
+   "v": 0,
+   "t": 823665,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833846656
+  },
+  {
+   "v": 0,
+   "t": 823666,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833846672
+  },
+  {
+   "v": 0,
+   "t": 823666,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833846672
+  },
+  {
+   "v": 0,
+   "t": 823697,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833847187
+  },
+  {
+   "v": 0,
+   "t": 823697,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833847187
+  },
+  {
+   "v": 0,
+   "t": 823698,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833847204
+  },
+  {
+   "v": 0,
+   "t": 823698,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833847204
+  },
+  {
+   "v": 0,
+   "t": 823712,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833847437
+  },
+  {
+   "v": 0,
+   "t": 823712,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833847437
+  },
+  {
+   "v": 0,
+   "t": 823715,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833847488
+  },
+  {
+   "v": 0,
+   "t": 823715,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833847489
+  },
+  {
+   "v": 0,
+   "t": 823745,
+   "type": "interaction",
+   "initiator": 79469,
+   "recipient": 79464,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Red</color> quipped about canyons with <color=#D09B61FF>Blue</color>.",
+   "rx": 1788833847989
+  },
+  {
+   "v": 0,
+   "t": 823782,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833848606
+  },
+  {
+   "v": 0,
+   "t": 823782,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833848606
+  },
+  {
+   "v": 0,
+   "t": 823785,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "target": "(116, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833848654
+  },
+  {
+   "v": 0,
+   "t": 823785,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833848655
+  },
+  {
+   "v": 0,
+   "t": 823789,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833848721
+  },
+  {
+   "v": 0,
+   "t": 823789,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833848721
+  },
+  {
+   "v": 0,
+   "t": 823792,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833848771
+  },
+  {
+   "v": 0,
+   "t": 823792,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833848771
+  },
+  {
+   "v": 0,
+   "t": 823800,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833848917
+  },
+  {
+   "v": 0,
+   "t": 823800,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833848917
+  },
+  {
+   "v": 0,
+   "t": 823803,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833848954
+  },
+  {
+   "v": 0,
+   "t": 823803,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833848955
+  },
+  {
+   "v": 0,
+   "t": 823829,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833849387
+  },
+  {
+   "v": 0,
+   "t": 823829,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833849388
+  },
+  {
+   "v": 0,
+   "t": 823832,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "target": "(117, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833849438
+  },
+  {
+   "v": 0,
+   "t": 823832,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833849438
+  },
+  {
+   "v": 0,
+   "t": 823897,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833850520
+  },
+  {
+   "v": 0,
+   "t": 823897,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833850521
+  },
+  {
+   "v": 0,
+   "t": 823900,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "target": "(115, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833850570
+  },
+  {
+   "v": 0,
+   "t": 823900,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833850570
+  },
+  {
+   "v": 0,
+   "t": 823920,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833850904
+  },
+  {
+   "v": 0,
+   "t": 823920,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833850904
+  },
+  {
+   "v": 0,
+   "t": 823923,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "target": "(112, 0, 113)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833850953
+  },
+  {
+   "v": 0,
+   "t": 823923,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833850954
+  },
+  {
+   "v": 0,
+   "t": 823952,
+   "type": "command_result",
+   "id": "c-40",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "total": 20,
+    "returned": 20,
+    "things": [
+     {
+      "id": 36958,
+      "def": "Mech_Tesseron",
+      "label": "Tesseron",
+      "category": "Pawn",
+      "pos": [
+       89,
+       0,
+       137
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 36960,
+      "def": "Mech_Pikeman",
+      "label": "Pikeman",
+      "category": "Pawn",
+      "pos": [
+       91,
+       0,
+       142
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 70063,
+      "def": "Boomalope",
+      "label": "Boomalope",
+      "category": "Pawn",
+      "pos": [
+       103,
+       0,
+       109
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 948,
+      "def": "Human",
+      "label": "Zeke",
+      "category": "Pawn",
+      "pos": [
+       104,
+       0,
+       109
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 35404,
+      "def": "Human",
+      "label": "Lau",
+      "category": "Pawn",
+      "pos": [
+       114,
+       0,
+       122
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79429,
+      "def": "Human",
+      "label": "Goabanbi",
+      "category": "Pawn",
+      "pos": [
+       117,
+       0,
+       113
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79445,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       117,
+       0,
+       118
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79446,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       117,
+       0,
+       118
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79444,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       119,
+       0,
+       112
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79447,
+      "def": "Muffalo",
+      "label": "Muffalo",
+      "category": "Pawn",
+      "pos": [
+       120,
+       0,
+       116
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79448,
+      "def": "Muffalo",
+      "label": "Muffalo",
+      "category": "Pawn",
+      "pos": [
+       115,
+       0,
+       117
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79449,
+      "def": "Human",
+      "label": "Trocam",
+      "category": "Pawn",
+      "pos": [
+       117,
+       0,
+       119
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79454,
+      "def": "Human",
+      "label": "Snail",
+      "category": "Pawn",
+      "pos": [
+       113,
+       0,
+       123
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79459,
+      "def": "Human",
+      "label": "Pelican",
+      "category": "Pawn",
+      "pos": [
+       110,
+       0,
+       121
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79464,
+      "def": "Human",
+      "label": "Blue",
+      "category": "Pawn",
+      "pos": [
+       109,
+       0,
+       117
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79469,
+      "def": "Human",
+      "label": "Red",
+      "category": "Pawn",
+      "pos": [
+       107,
+       0,
+       117
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79474,
+      "def": "Human",
+      "label": "Black",
+      "category": "Pawn",
+      "pos": [
+       110,
+       0,
+       118
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79480,
+      "def": "Human",
+      "label": "Green",
+      "category": "Pawn",
+      "pos": [
+       114,
+       0,
+       117
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79494,
+      "def": "Human",
+      "label": "Gumi",
+      "category": "Pawn",
+      "pos": [
+       117,
+       0,
+       122
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79498,
+      "def": "Human",
+      "label": "Chicken",
+      "category": "Pawn",
+      "pos": [
+       114,
+       0,
+       121
+      ],
+      "stack": 1,
+      "forbidden": false
+     }
+    ]
+   },
+   "rx": 1788833851470
+  },
+  {
+   "v": 0,
+   "t": 823953,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "LayDown",
+   "target": "Thing_Bed31715",
+   "source": "JobGiver_PatientGoToBed",
+   "rx": 1788833851492
+  },
+  {
+   "v": 0,
+   "t": 823953,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "LayDown",
+   "condition": "InterruptForced",
+   "rx": 1788833851492
+  },
+  {
+   "v": 0,
+   "t": 823953,
+   "type": "command_result",
+   "id": "c-41",
+   "ok": true,
+   "data": {
+    "pawn": 948,
+    "target": [
+     84,
+     0,
+     107
+    ]
+   },
+   "rx": 1788833851492
+  },
+  {
+   "v": 0,
+   "t": 823976,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833851838
+  },
+  {
+   "v": 0,
+   "t": 823976,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833851838
+  },
+  {
+   "v": 0,
+   "t": 823978,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833851871
+  },
+  {
+   "v": 0,
+   "t": 823978,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833851871
+  },
+  {
+   "v": 0,
+   "t": 823979,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833851888
+  },
+  {
+   "v": 0,
+   "t": 823979,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833851888
+  },
+  {
+   "v": 0,
+   "t": 823980,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833851904
+  },
+  {
+   "v": 0,
+   "t": 823980,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833851905
+  },
+  {
+   "v": 0,
+   "t": 824002,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833852270
+  },
+  {
+   "v": 0,
+   "t": 824002,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833852271
+  },
+  {
+   "v": 0,
+   "t": 824005,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833852320
+  },
+  {
+   "v": 0,
+   "t": 824005,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833852320
+  },
+  {
+   "v": 0,
+   "t": 824040,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833852904
+  },
+  {
+   "v": 0,
+   "t": 824040,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833852904
+  },
+  {
+   "v": 0,
+   "t": 824043,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "target": "(117, 0, 125)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833852955
+  },
+  {
+   "v": 0,
+   "t": 824043,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833852955
+  },
+  {
+   "v": 0,
+   "t": 824092,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833853771
+  },
+  {
+   "v": 0,
+   "t": 824092,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833853772
+  },
+  {
+   "v": 0,
+   "t": 824094,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833853804
+  },
+  {
+   "v": 0,
+   "t": 824094,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833853804
+  },
+  {
+   "v": 0,
+   "t": 824096,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833853838
+  },
+  {
+   "v": 0,
+   "t": 824096,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833853838
+  },
+  {
+   "v": 0,
+   "t": 824098,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833853871
+  },
+  {
+   "v": 0,
+   "t": 824098,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833853871
+  },
+  {
+   "v": 0,
+   "t": 824099,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "target": "(110, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833853896
+  },
+  {
+   "v": 0,
+   "t": 824099,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833853897
+  },
+  {
+   "v": 0,
+   "t": 824101,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "target": "(114, 0, 124)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833853918
+  },
+  {
+   "v": 0,
+   "t": 824101,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833853919
+  },
+  {
+   "v": 0,
+   "t": 824155,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833854822
+  },
+  {
+   "v": 0,
+   "t": 824155,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833854822
+  },
+  {
+   "v": 0,
+   "t": 824158,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833854871
+  },
+  {
+   "v": 0,
+   "t": 824158,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833854871
+  },
+  {
+   "v": 0,
+   "t": 824174,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833855137
+  },
+  {
+   "v": 0,
+   "t": 824174,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833855137
+  },
+  {
+   "v": 0,
+   "t": 824175,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833855155
+  },
+  {
+   "v": 0,
+   "t": 824175,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833855155
+  },
+  {
+   "v": 0,
+   "t": 824185,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833855321
+  },
+  {
+   "v": 0,
+   "t": 824185,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833855322
+  },
+  {
+   "v": 0,
+   "t": 824188,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833855371
+  },
+  {
+   "v": 0,
+   "t": 824188,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833855371
+  },
+  {
+   "v": 0,
+   "t": 824202,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833855604
+  },
+  {
+   "v": 0,
+   "t": 824202,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833855605
+  },
+  {
+   "v": 0,
+   "t": 824205,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "target": "(116, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833855654
+  },
+  {
+   "v": 0,
+   "t": 824205,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833855655
+  },
+  {
+   "v": 0,
+   "t": 824234,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833856137
+  },
+  {
+   "v": 0,
+   "t": 824234,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833856138
+  },
+  {
+   "v": 0,
+   "t": 824237,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "target": "(113, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833856188
+  },
+  {
+   "v": 0,
+   "t": 824237,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833856188
+  },
+  {
+   "v": 0,
+   "t": 824272,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833856772
+  },
+  {
+   "v": 0,
+   "t": 824272,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833856772
+  },
+  {
+   "v": 0,
+   "t": 824275,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "target": "(116, 0, 113)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833856822
+  },
+  {
+   "v": 0,
+   "t": 824275,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833856822
+  },
+  {
+   "v": 0,
+   "t": 824296,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833857171
+  },
+  {
+   "v": 0,
+   "t": 824296,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833857171
+  },
+  {
+   "v": 0,
+   "t": 824297,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833857188
+  },
+  {
+   "v": 0,
+   "t": 824297,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833857188
+  },
+  {
+   "v": 0,
+   "t": 824299,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833857220
+  },
+  {
+   "v": 0,
+   "t": 824299,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833857221
+  },
+  {
+   "v": 0,
+   "t": 824302,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833857272
+  },
+  {
+   "v": 0,
+   "t": 824302,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833857273
+  },
+  {
+   "v": 0,
+   "t": 824303,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833857286
+  },
+  {
+   "v": 0,
+   "t": 824303,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833857287
+  },
+  {
+   "v": 0,
+   "t": 824306,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833857338
+  },
+  {
+   "v": 0,
+   "t": 824306,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833857338
+  },
+  {
+   "v": 0,
+   "t": 824328,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833857704
+  },
+  {
+   "v": 0,
+   "t": 824328,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833857705
+  },
+  {
+   "v": 0,
+   "t": 824331,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "target": "(117, 0, 120)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833857754
+  },
+  {
+   "v": 0,
+   "t": 824331,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833857755
+  },
+  {
+   "v": 0,
+   "t": 824392,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833858771
+  },
+  {
+   "v": 0,
+   "t": 824392,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833858772
+  },
+  {
+   "v": 0,
+   "t": 824395,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "target": "(114, 0, 126)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833858821
+  },
+  {
+   "v": 0,
+   "t": 824395,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833858822
+  },
+  {
+   "v": 0,
+   "t": 824435,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833859488
+  },
+  {
+   "v": 0,
+   "t": 824435,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833859488
+  },
+  {
+   "v": 0,
+   "t": 824436,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833859504
+  },
+  {
+   "v": 0,
+   "t": 824436,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833859505
+  },
+  {
+   "v": 0,
+   "t": 824444,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833859650
+  },
+  {
+   "v": 0,
+   "t": 824444,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833859650
+  },
+  {
+   "v": 0,
+   "t": 824445,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833859651
+  },
+  {
+   "v": 0,
+   "t": 824445,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833859651
+  },
+  {
+   "v": 0,
+   "t": 824452,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833859771
+  },
+  {
+   "v": 0,
+   "t": 824452,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833859771
+  },
+  {
+   "v": 0,
+   "t": 824455,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "target": "(112, 0, 122)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833859821
+  },
+  {
+   "v": 0,
+   "t": 824455,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833859821
+  },
+  {
+   "v": 0,
+   "t": 824457,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833859854
+  },
+  {
+   "v": 0,
+   "t": 824457,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833859854
+  },
+  {
+   "v": 0,
+   "t": 824458,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833859871
+  },
+  {
+   "v": 0,
+   "t": 824458,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833859871
+  },
+  {
+   "v": 0,
+   "t": 824460,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833859904
+  },
+  {
+   "v": 0,
+   "t": 824460,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833859905
+  },
+  {
+   "v": 0,
+   "t": 824461,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "target": "(110, 0, 125)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833859921
+  },
+  {
+   "v": 0,
+   "t": 824461,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833859921
+  },
+  {
+   "v": 0,
+   "t": 824496,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833860504
+  },
+  {
+   "v": 0,
+   "t": 824496,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833860505
+  },
+  {
+   "v": 0,
+   "t": 824497,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833860521
+  },
+  {
+   "v": 0,
+   "t": 824497,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833860522
+  },
+  {
+   "v": 0,
+   "t": 824532,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833861104
+  },
+  {
+   "v": 0,
+   "t": 824532,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833861104
+  },
+  {
+   "v": 0,
+   "t": 824534,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833861138
+  },
+  {
+   "v": 0,
+   "t": 824534,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833861138
+  },
+  {
+   "v": 0,
+   "t": 824535,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "target": "(116, 0, 125)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833861154
+  },
+  {
+   "v": 0,
+   "t": 824535,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833861154
+  },
+  {
+   "v": 0,
+   "t": 824536,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833861170
+  },
+  {
+   "v": 0,
+   "t": 824536,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833861171
+  },
+  {
+   "v": 0,
+   "t": 824596,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833862171
+  },
+  {
+   "v": 0,
+   "t": 824596,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833862171
+  },
+  {
+   "v": 0,
+   "t": 824597,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833862189
+  },
+  {
+   "v": 0,
+   "t": 824597,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833862189
+  },
+  {
+   "v": 0,
+   "t": 824612,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833862438
+  },
+  {
+   "v": 0,
+   "t": 824612,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833862438
+  },
+  {
+   "v": 0,
+   "t": 824615,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "target": "(112, 0, 126)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833862488
+  },
+  {
+   "v": 0,
+   "t": 824615,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833862488
+  },
+  {
+   "v": 0,
+   "t": 824621,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833862589
+  },
+  {
+   "v": 0,
+   "t": 824621,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833862589
+  },
+  {
+   "v": 0,
+   "t": 824624,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "target": "(120, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833862637
+  },
+  {
+   "v": 0,
+   "t": 824624,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833862637
+  },
+  {
+   "v": 0,
+   "t": 824634,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833862804
+  },
+  {
+   "v": 0,
+   "t": 824634,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833862804
+  },
+  {
+   "v": 0,
+   "t": 824637,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "target": "(110, 0, 116)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833862854
+  },
+  {
+   "v": 0,
+   "t": 824637,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833862855
+  },
+  {
+   "v": 0,
+   "t": 824677,
+   "type": "command_result",
+   "id": "c-42",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "total": 20,
+    "returned": 20,
+    "things": [
+     {
+      "id": 36958,
+      "def": "Mech_Tesseron",
+      "label": "Tesseron",
+      "category": "Pawn",
+      "pos": [
+       89,
+       0,
+       137
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 36960,
+      "def": "Mech_Pikeman",
+      "label": "Pikeman",
+      "category": "Pawn",
+      "pos": [
+       91,
+       0,
+       142
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 70063,
+      "def": "Boomalope",
+      "label": "Boomalope",
+      "category": "Pawn",
+      "pos": [
+       103,
+       0,
+       108
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 948,
+      "def": "Human",
+      "label": "Zeke",
+      "category": "Pawn",
+      "pos": [
+       104,
+       0,
+       109
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 35404,
+      "def": "Human",
+      "label": "Lau",
+      "category": "Pawn",
+      "pos": [
+       112,
+       0,
+       121
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79429,
+      "def": "Human",
+      "label": "Goabanbi",
+      "category": "Pawn",
+      "pos": [
+       112,
+       0,
+       115
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79445,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       107,
+       0,
+       110
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79446,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       108,
+       0,
+       110
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79444,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       112,
+       0,
+       107
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79447,
+      "def": "Muffalo",
+      "label": "Muffalo",
+      "category": "Pawn",
+      "pos": [
+       114,
+       0,
+       116
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79448,
+      "def": "Muffalo",
+      "label": "Muffalo",
+      "category": "Pawn",
+      "pos": [
+       111,
+       0,
+       112
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79449,
+      "def": "Human",
+      "label": "Trocam",
+      "category": "Pawn",
+      "pos": [
+       116,
+       0,
+       115
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79454,
+      "def": "Human",
+      "label": "Snail",
+      "category": "Pawn",
+      "pos": [
+       114,
+       0,
+       126
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79459,
+      "def": "Human",
+      "label": "Pelican",
+      "category": "Pawn",
+      "pos": [
+       114,
+       0,
+       119
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79464,
+      "def": "Human",
+      "label": "Blue",
+      "category": "Pawn",
+      "pos": [
+       110,
+       0,
+       122
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79469,
+      "def": "Human",
+      "label": "Red",
+      "category": "Pawn",
+      "pos": [
+       113,
+       0,
+       115
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79474,
+      "def": "Human",
+      "label": "Black",
+      "category": "Pawn",
+      "pos": [
+       117,
+       0,
+       125
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79480,
+      "def": "Human",
+      "label": "Green",
+      "category": "Pawn",
+      "pos": [
+       116,
+       0,
+       113
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79494,
+      "def": "Human",
+      "label": "Gumi",
+      "category": "Pawn",
+      "pos": [
+       117,
+       0,
+       115
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79498,
+      "def": "Human",
+      "label": "Chicken",
+      "category": "Pawn",
+      "pos": [
+       117,
+       0,
+       120
+      ],
+      "stack": 1,
+      "forbidden": false
+     }
+    ]
+   },
+   "rx": 1788833863555
+  },
+  {
+   "v": 0,
+   "t": 824678,
+   "type": "command_result",
+   "id": "c-43",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "total": 0,
+    "returned": 0,
+    "by_kind": {
+     "CutPlant": 28
+    },
+    "designations": []
+   },
+   "rx": 1788833863570
+  },
+  {
+   "v": 0,
+   "t": 824684,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833863637
+  },
+  {
+   "v": 0,
+   "t": 824684,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833863638
+  },
+  {
+   "v": 0,
+   "t": 824686,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833863671
+  },
+  {
+   "v": 0,
+   "t": 824686,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833863671
+  },
+  {
+   "v": 0,
+   "t": 824718,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833864203
+  },
+  {
+   "v": 0,
+   "t": 824718,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833864204
+  },
+  {
+   "v": 0,
+   "t": 824721,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "target": "(116, 0, 117)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833864256
+  },
+  {
+   "v": 0,
+   "t": 824721,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833864256
+  },
+  {
+   "v": 0,
+   "t": 824757,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833864854
+  },
+  {
+   "v": 0,
+   "t": 824757,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833864854
+  },
+  {
+   "v": 0,
+   "t": 824760,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "target": "(120, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833864904
+  },
+  {
+   "v": 0,
+   "t": 824760,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833864904
+  },
+  {
+   "v": 0,
+   "t": 824761,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833864921
+  },
+  {
+   "v": 0,
+   "t": 824761,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833864921
+  },
+  {
+   "v": 0,
+   "t": 824764,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "target": "(116, 0, 116)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833864983
+  },
+  {
+   "v": 0,
+   "t": 824764,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833864983
+  },
+  {
+   "v": 0,
+   "t": 824773,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833865121
+  },
+  {
+   "v": 0,
+   "t": 824773,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833865121
+  },
+  {
+   "v": 0,
+   "t": 824776,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "target": "(118, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833865171
+  },
+  {
+   "v": 0,
+   "t": 824776,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833865171
+  },
+  {
+   "v": 0,
+   "t": 824834,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833866138
+  },
+  {
+   "v": 0,
+   "t": 824834,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833866139
+  },
+  {
+   "v": 0,
+   "t": 824837,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "target": "(113, 0, 111)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833866188
+  },
+  {
+   "v": 0,
+   "t": 824872,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833866771
+  },
+  {
+   "v": 0,
+   "t": 824873,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833866787
+  },
+  {
+   "v": 0,
+   "t": 824907,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833867354
+  },
+  {
+   "v": 0,
+   "t": 824908,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833867371
+  },
+  {
+   "v": 0,
+   "t": 824908,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833867372
+  },
+  {
+   "v": 0,
+   "t": 824911,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "target": "(111, 0, 119)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833867423
+  },
+  {
+   "v": 0,
+   "t": 824962,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833868271
+  },
+  {
+   "v": 0,
+   "t": 824964,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833868304
+  },
+  {
+   "v": 0,
+   "t": 824983,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833868621
+  },
+  {
+   "v": 0,
+   "t": 824984,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833868638
+  },
+  {
+   "v": 0,
+   "t": 824986,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833868671
+  },
+  {
+   "v": 0,
+   "t": 824989,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833868721
   }
  ],
  "counts": {
   "mod_connected": 3,
   "hello": 3,
-  "world_snapshot": 40,
-  "pawn_snapshot": 480,
-  "job_start": 263,
-  "job_end": 134,
-  "command_result": 39,
+  "world_snapshot": 47,
+  "pawn_snapshot": 564,
+  "job_start": 410,
+  "job_end": 262,
+  "command_result": 43,
   "letter": 1,
   "mental_state": 1,
   "mod_disconnected": 2,
-  "interaction": 12,
+  "interaction": 15,
   "hediff": 7
  },
- "last_event_at": 1788833836.225156,
- "published_at": 1788833836
+ "last_event_at": 1788833868.721401,
+ "published_at": 1788833868
 }
