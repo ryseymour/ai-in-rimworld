@@ -1604,12 +1604,341 @@
    "type": "mod_disconnected",
    "peer": "('127.0.0.1', 53919)",
    "rx": 1788888838022
+  },
+  {
+   "type": "mod_connected",
+   "peer": "('127.0.0.1', 53936)",
+   "rx": 1788888851638
+  },
+  {
+   "v": 0,
+   "t": 0,
+   "type": "command_result",
+   "id": "c-7",
+   "ok": true,
+   "data": {
+    "loading": "Aurora (Permadeath) BACKUP-pre-airim-test",
+    "note": "load started; poll ping until in_game is true"
+   },
+   "rx": 1788888853789
+  },
+  {
+   "v": 0,
+   "t": 0,
+   "type": "command_result",
+   "id": "c-8",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 0,
+    "paused": true,
+    "in_game": false
+   },
+   "rx": 1788888853846
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-9",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 990617,
+    "paused": true,
+    "in_game": true
+   },
+   "rx": 1788888858891
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-10",
+   "ok": true,
+   "data": {
+    "speed": 0,
+    "paused": true
+   },
+   "rx": 1788888858921
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-11",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "total": 11,
+    "returned": 11,
+    "rooms": [
+     {
+      "id": 71,
+      "role": "Bedroom",
+      "role_label": "bedroom",
+      "cells": 4,
+      "outdoors": false,
+      "owners": [
+       {
+        "id": 948,
+        "name": "Zeke"
+       }
+      ],
+      "a_cell": [
+       103,
+       0,
+       108
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": 16,
+       "cleanliness": 0,
+       "beauty": 0,
+       "space": 3,
+       "wealth": 301
+      },
+      "beds": 1
+     },
+     {
+      "id": 84,
+      "role": "Tomb",
+      "role_label": "tomb",
+      "cells": 143,
+      "outdoors": false,
+      "a_cell": [
+       85,
+       0,
+       137
+      ],
+      "temp_c": 28,
+      "stats": {
+       "impressiveness": 70,
+       "cleanliness": 0.06,
+       "beauty": 0,
+       "space": 178,
+       "wealth": 3578
+      },
+      "beds": 0,
+      "items": {
+       "Luciferium": 5,
+       "PsychicSoothePulser": 1,
+       "PsychicAnimalPulser": 1,
+       "Neurotrainer_Cooking": 1
+      }
+     },
+     {
+      "id": 73,
+      "role": "Storeroom",
+      "role_label": "storeroom",
+      "cells": 50,
+      "outdoors": false,
+      "a_cell": [
+       99,
+       0,
+       111
+      ],
+      "temp_c": 29,
+      "stats": {
+       "impressiveness": 40,
+       "cleanliness": 0,
+       "beauty": -1,
+       "space": 37,
+       "wealth": 5331
+      },
+      "beds": 0,
+      "items": {
+       "GravlitePanel": 272,
+       "Silver": 270,
+       "WoodLog": 144,
+       "Steel": 124,
+       "ComponentIndustrial": 34,
+       "MedicineIndustrial": 29,
+       "Gun_MachinePistol": 1,
+       "MeleeWeapon_BreachAxe": 1,
+       "Gun_Autopistol": 1
+      }
+     },
+     {
+      "id": 65,
+      "role": "Laboratory",
+      "role_label": "laboratory",
+      "cells": 21,
+      "outdoors": false,
+      "a_cell": [
+       99,
+       0,
+       103
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": 28,
+       "cleanliness": 0,
+       "beauty": 0,
+       "space": 23,
+       "wealth": 872
+      },
+      "beds": 0
+     },
+     {
+      "id": 75,
+      "role": "Room",
+      "role_label": "room",
+      "cells": 21,
+      "outdoors": false,
+      "a_cell": [
+       99,
+       0,
+       119
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": 14,
+       "cleanliness": 0,
+       "beauty": 0,
+       "space": 20,
+       "wealth": 1022
+      },
+      "beds": 0
+     },
+     {
+      "id": 96,
+      "role": "Room",
+      "role_label": "room",
+      "cells": 8,
+      "outdoors": false,
+      "a_cell": [
+       11,
+       0,
+       165
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": 9,
+       "cleanliness": -0.25,
+       "beauty": 0,
+       "space": 11,
+       "wealth": 206
+      },
+      "beds": 0
+     },
+     {
+      "id": 69,
+      "role": "Bedroom",
+      "role_label": "bedroom",
+      "cells": 4,
+      "outdoors": false,
+      "a_cell": [
+       103,
+       0,
+       105
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": -17,
+       "cleanliness": 0,
+       "beauty": -2,
+       "space": 3,
+       "wealth": 299
+      },
+      "beds": 1,
+      "items": {
+       "Corpse_Human": 1
+      }
+     },
+     {
+      "id": 76,
+      "role": "Room",
+      "role_label": "room",
+      "cells": 4,
+      "outdoors": false,
+      "a_cell": [
+       103,
+       0,
+       119
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": 19,
+       "cleanliness": 0,
+       "beauty": 0,
+       "space": 5,
+       "wealth": 213
+      },
+      "beds": 0
+     },
+     {
+      "id": 78,
+      "role": "Bedroom",
+      "role_label": "bedroom",
+      "cells": 4,
+      "outdoors": false,
+      "a_cell": [
+       103,
+       0,
+       122
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": 19,
+       "cleanliness": 0,
+       "beauty": 0,
+       "space": 5,
+       "wealth": 189
+      },
+      "beds": 1
+     },
+     {
+      "id": 67,
+      "role": "Bedroom",
+      "role_label": "bedroom",
+      "cells": 2,
+      "outdoors": false,
+      "a_cell": [
+       103,
+       0,
+       103
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": 13,
+       "cleanliness": 0,
+       "beauty": 0,
+       "space": 2,
+       "wealth": 164
+      },
+      "beds": 1
+     },
+     {
+      "id": 82,
+      "role": "Room",
+      "role_label": "room",
+      "cells": 2,
+      "outdoors": false,
+      "a_cell": [
+       103,
+       0,
+       125
+      ],
+      "temp_c": 30,
+      "stats": {
+       "impressiveness": 13,
+       "cleanliness": 0,
+       "beauty": 0,
+       "space": 2,
+       "wealth": 164
+      },
+      "beds": 0
+     }
+    ]
+   },
+   "rx": 1788888869720
   }
  ],
  "counts": {
-  "mod_connected": 2,
+  "mod_connected": 3,
   "mod_disconnected": 2,
-  "command_result": 6,
+  "command_result": 11,
   "hello": 1,
   "world_snapshot": 12,
   "pawn_snapshot": 12,
@@ -1617,5 +1946,5 @@
   "job_end": 1,
   "job_noise": 1
  },
- "last_event_at": 1788888838.022004
+ "last_event_at": 1788888869.7206972
 }
