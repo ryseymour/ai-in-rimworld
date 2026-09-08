@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 941250,
+  "t": 958250,
   "type": "world_snapshot",
-  "date": "1st of Jugust, 5500",
+  "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 21661,
+  "wealth": 21840,
   "colonists": 1,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887952401
+  "rx": 1788887984254
  },
  "pawns": [
   {
    "v": 0,
-   "t": 941250,
+   "t": 958250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    113,
+    104,
     0,
-    80
+    109
    ],
-   "job": "going for a walk.",
+   "job": "sleeping.",
    "needs": {
-    "food": 0.787,
-    "rest": 0.487,
-    "joy": 0.315
+    "food": 0,
+    "rest": 0.817,
+    "joy": 0.716
    },
-   "mood": 0.583,
+   "mood": 0.863,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -61,12 +61,12 @@
      "mood": -12
     },
     {
-     "label": "Initial hope",
-     "mood": 5
+     "label": "Ravenously hungry",
+     "mood": -12
     },
     {
-     "label": "Darkness",
-     "mood": -5
+     "label": "Quite comfortable",
+     "mood": 6
     }
    ],
    "health": "Healthy",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887952401
+   "rx": 1788887984254
   },
   {
    "v": 0,
@@ -4432,6 +4432,25 @@
     "Wait_MaintainPosture": 1
    },
    "rx": 1788887948858
+  },
+  {
+   "v": 0,
+   "t": 946427,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "LayDown",
+   "target": "Thing_Bed31715",
+   "source": "JobGiver_GetRest",
+   "rx": 1788887966802
+  },
+  {
+   "v": 0,
+   "t": 946427,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788887966802
   }
  ],
  "counts": {
@@ -4439,10 +4458,10 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 2073,
-  "pawn_snapshot": 2066,
-  "job_start": 99,
-  "job_end": 53,
+  "world_snapshot": 2141,
+  "pawn_snapshot": 2134,
+  "job_start": 100,
+  "job_end": 54,
   "job_noise": 87,
   "hediff": 18,
   "death": 6,
@@ -4451,5 +4470,5 @@
   "interaction": 17,
   "mental_state": 1
  },
- "last_event_at": 1788887952.401877
+ "last_event_at": 1788887984.254719
 }
