@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 825000,
+  "t": 827500,
   "type": "world_snapshot",
   "date": "15th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 21860,
+  "wealth": 24021,
   "colonists": 3,
-  "visitors": 0,
+  "visitors": 15,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788847007089
+  "rx": 1788847785032
  },
  "pawns": [
   {
    "v": 0,
-   "t": 825000,
+   "t": 827500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    102,
     0,
-    109
+    103
    ],
-   "job": "resting.",
+   "job": "feeding Shun, Assembler (dead) to Lau.",
    "needs": {
-    "food": 0.403,
-    "rest": 0.903,
+    "food": 0.224,
+    "rest": 0.862,
     "joy": 0
    },
-   "mood": 0.209,
+   "mood": 0.253,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -65,11 +65,11 @@
      "mood": -12
     },
     {
-     "label": "Initial hope",
-     "mood": 5
+     "label": "Quite comfortable",
+     "mood": 6
     }
    ],
-   "health": "Incapacitated",
+   "health": "Injured",
    "skills": {
     "Construction": 1,
     "Mining": 2,
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788847007090
+   "rx": 1788847785034
   },
   {
    "v": 0,
@@ -164,23 +164,23 @@
   },
   {
    "v": 0,
-   "t": 825000,
+   "t": 827500,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    103,
+    104,
     0,
     123
    ],
-   "job": "downed.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.39
+    "rest": 0.445
    },
-   "mood": 0.014,
+   "mood": 0.036,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -227,7 +227,810 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788847007090
+   "rx": 1788847785034
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79594,
+   "name": "Lamp",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    221,
+    0,
+    230
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.923
+   },
+   "mood": 0.498,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 6,
+    "Construction": 4,
+    "Mining": 4,
+    "Cooking": 2,
+    "Plants": 1,
+    "Animals": 1,
+    "Crafting": 5,
+    "Artistic": 5,
+    "Medicine": 6,
+    "Social": 3,
+    "Intellectual": 10
+   },
+   "traits": [
+    "Ascetic"
+   ],
+   "relations": [
+    {
+     "other": "Castro",
+     "kind": "son",
+     "opinion": 30
+    },
+    {
+     "other": "Lala",
+     "kind": "lover",
+     "opinion": 35
+    }
+   ],
+   "drafted": false,
+   "rx": 1788847785037
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79600,
+   "name": "Dweeb",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    218,
+    0,
+    229
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.944
+   },
+   "mood": 0.498,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 1,
+    "Construction": 10,
+    "Mining": 7,
+    "Cooking": 2,
+    "Plants": 9,
+    "Animals": 3,
+    "Crafting": 3,
+    "Artistic": 5,
+    "Medicine": 1,
+    "Social": 0,
+    "Intellectual": 2
+   },
+   "traits": [
+    "Pyromaniac",
+    "Teetotaler",
+    "Trigger-happy"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788847785037
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79607,
+   "name": "Thirteen",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    220,
+    0,
+    229
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.886
+   },
+   "mood": 0.486,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Ratty apparel",
+     "mood": -3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 1,
+    "Construction": 2,
+    "Mining": 2,
+    "Cooking": 3,
+    "Plants": 2,
+    "Animals": 0,
+    "Crafting": 2,
+    "Artistic": 3,
+    "Medicine": 6,
+    "Social": 1,
+    "Intellectual": 2
+   },
+   "traits": [
+    "Beautiful"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788847785037
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79613,
+   "name": "Rho",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    224,
+    0,
+    233
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.901
+   },
+   "mood": 0.54,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Ratty apparel",
+     "mood": -3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 6,
+    "Construction": 3,
+    "Mining": 9,
+    "Cooking": 3,
+    "Plants": 4,
+    "Animals": 1,
+    "Crafting": 4,
+    "Artistic": 8,
+    "Medicine": 2,
+    "Social": 4,
+    "Intellectual": 10
+   },
+   "traits": [
+    "Tough",
+    "Brawler"
+   ],
+   "relations": [
+    {
+     "other": "Wade",
+     "kind": "son",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788847785037
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79620,
+   "name": "Emi",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    220,
+    0,
+    229
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.956
+   },
+   "mood": 0.498,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 5,
+    "Melee": 5,
+    "Construction": 3,
+    "Mining": 4,
+    "Cooking": 1,
+    "Plants": 4,
+    "Animals": 3,
+    "Crafting": 4,
+    "Artistic": 9,
+    "Medicine": 0,
+    "Social": 11,
+    "Intellectual": 5
+   },
+   "traits": [
+    "Annoying voice"
+   ],
+   "relations": [
+    {
+     "other": "Ecalpro",
+     "kind": "father",
+     "opinion": -10
+    },
+    {
+     "other": "Roeurkos",
+     "kind": "brother",
+     "opinion": 20
+    },
+    {
+     "other": "Palatina",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788847785038
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79642,
+   "name": "Rocket",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    221,
+    0,
+    231
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.936
+   },
+   "mood": 0.498,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
+    },
+    {
+     "label": "Body modder frustrated",
+     "mood": -4
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 1,
+    "Construction": 1,
+    "Mining": 2,
+    "Cooking": 0,
+    "Plants": 2,
+    "Animals": 9,
+    "Crafting": 2,
+    "Artistic": 2,
+    "Medicine": 0,
+    "Intellectual": 3
+   },
+   "traits": [
+    "Great memory",
+    "Psychically deaf",
+    "Body modder"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788847785038
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79656,
+   "name": "Genevieve",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    221,
+    0,
+    226
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.915
+   },
+   "mood": 0.558,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Night owl at night",
+     "mood": 16
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
+     "mood": 0
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 1,
+    "Construction": 4,
+    "Mining": 2,
+    "Cooking": 4,
+    "Plants": 10,
+    "Animals": 7,
+    "Crafting": 3,
+    "Artistic": 4,
+    "Medicine": 3,
+    "Social": 2,
+    "Intellectual": 7
+   },
+   "traits": [
+    "Night owl",
+    "Trigger-happy",
+    "Chemical fascination"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788847785038
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79664,
+   "name": "Breaker",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    223,
+    0,
+    230
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.945
+   },
+   "mood": 0.466,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 3,
+    "Melee": 3,
+    "Construction": 0,
+    "Mining": 0,
+    "Cooking": 6,
+    "Plants": 10,
+    "Animals": 4,
+    "Crafting": 0,
+    "Artistic": 1,
+    "Medicine": 0,
+    "Social": 9,
+    "Intellectual": 6
+   },
+   "traits": [
+    "Psychopath"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788847785039
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79670,
+   "name": "Gleb",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    226,
+    0,
+    228
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.972
+   },
+   "mood": 0.498,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 2,
+    "Construction": 4,
+    "Mining": 0,
+    "Cooking": 4,
+    "Plants": 3,
+    "Animals": 6,
+    "Crafting": 4,
+    "Artistic": 13,
+    "Medicine": 0,
+    "Social": 8
+   },
+   "traits": [
+    "Fast walker",
+    "Kind"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788847785039
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79676,
+   "name": "Lee",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    217,
+    0,
+    227
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.926
+   },
+   "mood": 0.49,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 6,
+    "Melee": 8,
+    "Construction": 2,
+    "Mining": 2,
+    "Cooking": 0,
+    "Plants": 3,
+    "Animals": 1,
+    "Crafting": 2,
+    "Artistic": 6,
+    "Medicine": 4,
+    "Intellectual": 7
+   },
+   "traits": [
+    "Steadfast"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788847785039
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79682,
+   "name": "Lime",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    218,
+    0,
+    227
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.904
+   },
+   "mood": 0.5,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
+    },
+    {
+     "label": "Ratty apparel",
+     "mood": -3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 1,
+    "Melee": 2,
+    "Construction": 6,
+    "Mining": 0,
+    "Plants": 1,
+    "Animals": 7,
+    "Crafting": 2,
+    "Medicine": 1,
+    "Social": 0
+   },
+   "traits": [
+    "Pyromaniac",
+    "Great memory"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788847785040
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 73122,
+   "name": "Deccy",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    224,
+    0,
+    227
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.917
+   },
+   "mood": 0.462,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Insulted",
+     "mood": -5
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
+    }
+   ],
+   "health": "Injured",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 9,
+    "Construction": 0,
+    "Mining": 3,
+    "Cooking": 1,
+    "Plants": 1,
+    "Animals": 1,
+    "Crafting": 1,
+    "Artistic": 3,
+    "Intellectual": 6
+   },
+   "traits": [
+    "Psychopath"
+   ],
+   "relations": [
+    {
+     "other": "Palamas",
+     "kind": "father",
+     "opinion": 15
+    }
+   ],
+   "drafted": false,
+   "rx": 1788847785040
+  },
+  {
+   "v": 0,
+   "t": 827500,
+   "type": "pawn_snapshot",
+   "id": 79700,
+   "name": "Castro",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    223,
+    0,
+    228
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.768,
+    "rest": 0.907
+   },
+   "mood": 0.53,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 7,
+    "Melee": 6,
+    "Construction": 2,
+    "Mining": 3,
+    "Cooking": 1,
+    "Plants": 4,
+    "Animals": 4,
+    "Crafting": 4,
+    "Artistic": 3,
+    "Intellectual": 4
+   },
+   "traits": [
+    "Tough"
+   ],
+   "relations": [
+    {
+     "other": "Lamp",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788847785040
   }
  ],
  "recent": [
@@ -2216,22 +3019,404 @@
    "job": "LayDown",
    "condition": "Succeeded",
    "rx": 1788847007252
+  },
+  {
+   "v": 0,
+   "t": 825492,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "FeedPatient",
+   "target": "Thing_Corpse_Human79496",
+   "source": "JobGiver_Work",
+   "rx": 1788847008744
+  },
+  {
+   "v": 0,
+   "t": 826000,
+   "type": "letter",
+   "label": "Squirrel self-tamed",
+   "text": "A squirrel has become tame. It is now designated Squirrel 1.",
+   "def": "PositiveEvent",
+   "rx": 1788847010461
+  },
+  {
+   "v": 0,
+   "t": 826000,
+   "type": "incident",
+   "def": "SelfTame",
+   "label": "self-tame",
+   "points": 23.228,
+   "rx": 1788847010461
+  },
+  {
+   "v": 0,
+   "t": 826000,
+   "type": "job_noise",
+   "total": 5,
+   "counts": {
+    "Wait_MaintainPosture": 3,
+    "GotoWander": 1,
+    "Wait_Wander": 1
+   },
+   "rx": 1788847010462
+  },
+  {
+   "v": 0,
+   "t": 826139,
+   "type": "job_start",
+   "pawn": 79564,
+   "job": "FleeAndCower",
+   "target": "(81, 0, 30)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788847010913
+  },
+  {
+   "v": 0,
+   "t": 826310,
+   "type": "letter",
+   "label": "Visitors",
+   "text": "A group from (*Faction=Faction_0)Neveherda(/Faction) are visiting the colony.\n\nThey seem to have a few items to trade.",
+   "def": "NeutralEvent",
+   "rx": 1788847013993
+  },
+  {
+   "v": 0,
+   "t": 826310,
+   "type": "incident",
+   "def": "VisitorGroup",
+   "label": "visitor group",
+   "points": 800,
+   "rx": 1788847013993
+  },
+  {
+   "v": 0,
+   "t": 826310,
+   "type": "command_result",
+   "id": "c-14",
+   "ok": true,
+   "data": {
+    "def": "VisitorGroup"
+   },
+   "rx": 1788847013994
+  },
+  {
+   "v": 0,
+   "t": 826311,
+   "type": "hediff",
+   "pawn": 79676,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788847013997
+  },
+  {
+   "v": 0,
+   "t": 826312,
+   "type": "command_result",
+   "id": "c-15",
+   "ok": true,
+   "data": {
+    "speed": 3,
+    "paused": false
+   },
+   "rx": 1788847014032
+  },
+  {
+   "v": 0,
+   "t": 826315,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Goto",
+   "target": "(111, 0, 114)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847014067
+  },
+  {
+   "v": 0,
+   "t": 826320,
+   "type": "hediff",
+   "pawn": 79656,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788847014151
+  },
+  {
+   "v": 0,
+   "t": 826337,
+   "type": "hediff",
+   "pawn": 79649,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788847014452
+  },
+  {
+   "v": 0,
+   "t": 826340,
+   "type": "hediff",
+   "pawn": 79607,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788847014502
+  },
+  {
+   "v": 0,
+   "t": 826346,
+   "type": "hediff",
+   "pawn": 79594,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788847014617
+  },
+  {
+   "v": 0,
+   "t": 826358,
+   "type": "hediff",
+   "pawn": 79664,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788847014833
+  },
+  {
+   "v": 0,
+   "t": 826371,
+   "type": "job_start",
+   "pawn": 79676,
+   "job": "Goto",
+   "target": "(107, 0, 117)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015055
+  },
+  {
+   "v": 0,
+   "t": 826378,
+   "type": "job_start",
+   "pawn": 79692,
+   "job": "Goto",
+   "target": "(113, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015200
+  },
+  {
+   "v": 0,
+   "t": 826379,
+   "type": "job_start",
+   "pawn": 79613,
+   "job": "Goto",
+   "target": "(115, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015215
+  },
+  {
+   "v": 0,
+   "t": 826389,
+   "type": "job_start",
+   "pawn": 79600,
+   "job": "Goto",
+   "target": "(109, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015383
+  },
+  {
+   "v": 0,
+   "t": 826395,
+   "type": "job_start",
+   "pawn": 79656,
+   "job": "Goto",
+   "target": "(113, 0, 111)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015486
+  },
+  {
+   "v": 0,
+   "t": 826395,
+   "type": "job_start",
+   "pawn": 79670,
+   "job": "Goto",
+   "target": "(114, 0, 111)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015487
+  },
+  {
+   "v": 0,
+   "t": 826405,
+   "type": "job_start",
+   "pawn": 79620,
+   "job": "Goto",
+   "target": "(114, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015684
+  },
+  {
+   "v": 0,
+   "t": 826406,
+   "type": "job_start",
+   "pawn": 79594,
+   "job": "Goto",
+   "target": "(111, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015699
+  },
+  {
+   "v": 0,
+   "t": 826412,
+   "type": "job_start",
+   "pawn": 79649,
+   "job": "Goto",
+   "target": "(111, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015801
+  },
+  {
+   "v": 0,
+   "t": 826415,
+   "type": "job_start",
+   "pawn": 79607,
+   "job": "Goto",
+   "target": "(114, 0, 114)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015852
+  },
+  {
+   "v": 0,
+   "t": 826415,
+   "type": "job_start",
+   "pawn": 79642,
+   "job": "Goto",
+   "target": "(110, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847015853
+  },
+  {
+   "v": 0,
+   "t": 826433,
+   "type": "job_start",
+   "pawn": 79664,
+   "job": "Goto",
+   "target": "(114, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847016171
+  },
+  {
+   "v": 0,
+   "t": 826438,
+   "type": "job_start",
+   "pawn": 79682,
+   "job": "Goto",
+   "target": "(110, 0, 110)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847016266
+  },
+  {
+   "v": 0,
+   "t": 826457,
+   "type": "interaction",
+   "initiator": 79649,
+   "recipient": 79642,
+   "def": "Chitchat",
+   "text": "Wade said a word about lunchtime to Rocket.",
+   "rx": 1788847016631
+  },
+  {
+   "v": 0,
+   "t": 826460,
+   "type": "job_start",
+   "pawn": 79700,
+   "job": "Goto",
+   "target": "(114, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788847016682
+  },
+  {
+   "v": 0,
+   "t": 826466,
+   "type": "interaction",
+   "initiator": 79594,
+   "recipient": 79682,
+   "def": "Chitchat",
+   "text": "Lamp quipped about lavish meals with Lime.",
+   "rx": 1788847016785
+  },
+  {
+   "v": 0,
+   "t": 826760,
+   "type": "interaction",
+   "initiator": 79607,
+   "recipient": 79600,
+   "def": "Slight",
+   "text": "Thirteen spoke badly of Dweeb's fashion knowledge.",
+   "rx": 1788847022625
+  },
+  {
+   "v": 0,
+   "t": 826805,
+   "type": "interaction",
+   "initiator": 79700,
+   "recipient": 79620,
+   "def": "Chitchat",
+   "text": "Castro chatted about xenohumans with Emi.",
+   "rx": 1788847023455
+  },
+  {
+   "v": 0,
+   "t": 826844,
+   "type": "job_start",
+   "pawn": 79564,
+   "job": "FleeAndCower",
+   "target": "(63, 0, 24)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788847024208
+  },
+  {
+   "v": 0,
+   "t": 827055,
+   "type": "interaction",
+   "initiator": 79670,
+   "recipient": 79649,
+   "def": "Chitchat",
+   "text": "Gleb made a comment about playing dice to Wade.",
+   "rx": 1788847028072
+  },
+  {
+   "v": 0,
+   "t": 827248,
+   "type": "interaction",
+   "initiator": 79682,
+   "recipient": 79656,
+   "def": "Chitchat",
+   "text": "Lime and Genevieve chatted about training rabbits.",
+   "rx": 1788847031486
+  },
+  {
+   "v": 0,
+   "t": 827429,
+   "type": "job_start",
+   "pawn": 79564,
+   "job": "FleeAndCower",
+   "target": "(44, 0, 18)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788847783643
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "command_result": 13,
+  "command_result": 15,
   "mod_disconnected": 1,
   "hello": 2,
-  "world_snapshot": 1515,
-  "pawn_snapshot": 589,
-  "job_start": 31,
+  "world_snapshot": 1525,
+  "pawn_snapshot": 674,
+  "job_start": 50,
   "job_end": 25,
-  "job_noise": 39,
-  "hediff": 2,
+  "job_noise": 40,
+  "hediff": 8,
   "death": 4,
-  "letter": 16,
-  "incident": 11
+  "letter": 18,
+  "incident": 13,
+  "interaction": 6
  },
- "last_event_at": 1788847007.25245
+ "last_event_at": 1788847785.040801
 }
