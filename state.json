@@ -12,10 +12,10 @@
  },
  "world": {
   "v": 0,
-  "t": 1071750,
+  "t": 1074250,
   "type": "world_snapshot",
   "day": 17,
-  "hour": 20,
+  "hour": 21,
   "date": "4th of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
@@ -24,15 +24,15 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788891582428
+  "rx": 1788891642741
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1071750,
+   "t": 1074250,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 20,
+   "hour": 21,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
@@ -45,7 +45,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.61,
+    "rest": 0.683,
     "joy": 0.087
    },
    "mood": 0.42,
@@ -120,14 +120,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788891582433
+   "rx": 1788891642754
   },
   {
    "v": 0,
-   "t": 1071750,
+   "t": 1074250,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 20,
+   "hour": 21,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
@@ -140,7 +140,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.631,
+    "rest": 0.709,
     "joy": 0.53
    },
    "mood": 0.185,
@@ -154,6 +154,10 @@
      "mood": 24
     },
     {
+     "label": "No Thinker",
+     "mood": -5
+    },
+    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
     },
@@ -164,10 +168,6 @@
     {
      "label": "Planetary habitat",
      "mood": -2
-    },
-    {
-     "label": "No tree",
-     "mood": -1
     }
    ],
    "health": "Healthy",
@@ -205,14 +205,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788891582437
+   "rx": 1788891642755
   },
   {
    "v": 0,
-   "t": 1071750,
+   "t": 1074250,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 20,
+   "hour": 21,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
@@ -225,7 +225,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.879,
+    "rest": 0.978,
     "joy": 0.478
    },
    "mood": 0.316,
@@ -293,14 +293,14 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788891582438
+   "rx": 1788891642758
   },
   {
    "v": 0,
-   "t": 1071750,
+   "t": 1074250,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 20,
+   "hour": 21,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
@@ -313,7 +313,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.622,
+    "rest": 0.719,
     "joy": 0.067
    },
    "mood": 0,
@@ -381,7 +381,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788891582441
+   "rx": 1788891642762
   },
   {
    "v": 0,
@@ -4560,8 +4560,8 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 326,
-  "pawn_snapshot": 1592,
+  "world_snapshot": 336,
+  "pawn_snapshot": 1632,
   "job_start": 80,
   "thought": 116,
   "interaction": 33,
@@ -4571,5 +4571,5 @@
   "mental_state": 1,
   "hediff": 3
  },
- "last_event_at": 1788891582.4410088
+ "last_event_at": 1788891642.762339
 }
