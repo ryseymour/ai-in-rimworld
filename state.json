@@ -10,51 +10,55 @@
  },
  "world": {
   "v": 0,
-  "t": 815750,
+  "t": 826750,
   "type": "world_snapshot",
-  "date": "14th of Aprimay, 5500",
+  "date": "15th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 23001,
-  "colonists": 3,
+  "wealth": 21865,
+  "colonists": 2,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887633666
+  "rx": 1788887665496
  },
  "pawns": [
   {
    "v": 0,
-   "t": 815750,
+   "t": 826750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    101,
     0,
-    109
+    111
    ],
-   "job": "sleeping.",
+   "job": "wandering.",
    "needs": {
-    "food": 0,
-    "rest": 0.885,
+    "food": 0.581,
+    "rest": 0.874,
     "joy": 0
    },
-   "mood": 0,
+   "mood": 0.295,
    "thoughts": [
-    {
-     "label": "Advanced starvation",
-     "mood": -38
-    },
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
+     "label": "Raw cannibalism",
+     "mood": 20
+    },
+    {
      "label": "Recreation-starved",
      "mood": -20
+    },
+    {
+     "label": "Ate corpse",
+     "mood": -12
     },
     {
      "label": "Serious pain",
@@ -63,10 +67,6 @@
     {
      "label": "Quite comfortable",
      "mood": 6
-    },
-    {
-     "label": "Initial hope",
-     "mood": 5
     }
    ],
    "health": "Injured",
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887633666
+   "rx": 1788887665496
   },
   {
    "v": 0,
-   "t": 815750,
+   "t": 818000,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -107,7 +107,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.834,
+    "rest": 0.798,
     "joy": 0.289
    },
    "mood": 0.18,
@@ -159,28 +159,33 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887633666
+   "rx": 1788887640420,
+   "dead": true
   },
   {
    "v": 0,
-   "t": 815750,
+   "t": 826750,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    103,
+    101,
     0,
     123
    ],
-   "job": "wandering.",
+   "job": "Crawling to bed.",
    "needs": {
     "food": 0,
-    "rest": 0.534
+    "rest": 0.361
    },
-   "mood": 0,
+   "mood": 0.101,
    "thoughts": [
+    {
+     "label": "Catharsis",
+     "mood": 40
+    },
     {
      "label": "Badly malnourished",
      "mood": -26
@@ -194,19 +199,15 @@
      "mood": -15
     },
     {
-     "label": "Sweltering hot",
-     "mood": -12
+     "label": "Hot",
+     "mood": -8
     },
     {
      "label": "I am disliked xenotype",
      "mood": -6
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
     }
    ],
-   "health": "Injured",
+   "health": "Incapacitated",
    "skills": {
     "Shooting": 0,
     "Melee": 1,
@@ -226,7 +227,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887633667
+   "rx": 1788887665496
   }
  ],
  "recent": [
@@ -3067,6 +3068,293 @@
     "GotoWander": 2
    },
    "rx": 1788887628753
+  },
+  {
+   "v": 0,
+   "t": 816000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 3,
+    "GotoWander": 1
+   },
+   "rx": 1788887634370
+  },
+  {
+   "v": 0,
+   "t": 817000,
+   "type": "letter",
+   "label": "Rare thrumbos",
+   "text": "A small herd of thrumbos have wandered into the area.\n\nPeaceful by nature, these rare creatures are extremely dangerous when confronted. Some traders are willing to pay a lot of money for their precious leather and horn.\n\nThrumbos will leave the area in a few days.",
+   "def": "PositiveEvent",
+   "rx": 1788887637380
+  },
+  {
+   "v": 0,
+   "t": 817000,
+   "type": "incident",
+   "def": "ThrumboPasses",
+   "label": "thrumbos pass",
+   "points": 32.311,
+   "rx": 1788887637383
+  },
+  {
+   "v": 0,
+   "t": 818000,
+   "type": "job_noise",
+   "total": 10,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 3,
+    "GotoWander": 2
+   },
+   "rx": 1788887640420
+  },
+  {
+   "v": 0,
+   "t": 818195,
+   "type": "letter",
+   "label": "Thinker role deactivated",
+   "text": "Number of Pasturists in your colony fell to 1. The Thinker role is no longer active. This role will become available once again when the number of Pasturists reaches 3.",
+   "def": "NeutralEvent",
+   "rx": 1788887641007
+  },
+  {
+   "v": 0,
+   "t": 818195,
+   "type": "letter",
+   "label": "Funeral of Masculinity opportunity for Shun",
+   "text": "You can hold a pasturic funeral for <color=#D09B61FF>Shun</color>.\n\nTo begin the ritual, select a grave containing Shun's corpse and click the 'Begin Funeral of Masculinity' command.\n\nExpires in <color=#87F6F6FF><color=#87F6F6FF>9 days</color></color>, on 8th of Jugust.",
+   "def": "NeutralEvent",
+   "rx": 1788887641020
+  },
+  {
+   "v": 0,
+   "t": 818195,
+   "type": "letter",
+   "label": "Death: Shun",
+   "text": "(*Name)Shun(/Name) has died. Cause: Malnutrition.\n\n(*Name)Shun(/Name) should be buried and given a funeral so his friends and family can say farewell.",
+   "def": "Death",
+   "rx": 1788887641036
+  },
+  {
+   "v": 0,
+   "t": 818195,
+   "type": "death",
+   "pawn": 835,
+   "cause": null,
+   "killer": null,
+   "rx": 1788887641037
+  },
+  {
+   "v": 0,
+   "t": 818951,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_Corpse_Human79506",
+   "source": "JobGiver_GetFood",
+   "rx": 1788887643176
+  },
+  {
+   "v": 0,
+   "t": 820000,
+   "type": "job_noise",
+   "total": 6,
+   "counts": {
+    "Wait_MaintainPosture": 3,
+    "Wait_Wander": 2,
+    "GotoWander": 1
+   },
+   "rx": 1788887646165
+  },
+  {
+   "v": 0,
+   "t": 821501,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "LayDown",
+   "target": "Thing_Bed31715",
+   "source": "JobGiver_Work",
+   "rx": 1788887650402
+  },
+  {
+   "v": 0,
+   "t": 821501,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788887650403
+  },
+  {
+   "v": 0,
+   "t": 822000,
+   "type": "job_noise",
+   "total": 7,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 3
+   },
+   "rx": 1788887651834
+  },
+  {
+   "v": 0,
+   "t": 824000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "GotoWander": 1,
+    "Wait_Wander": 3
+   },
+   "rx": 1788887657432
+  },
+  {
+   "v": 0,
+   "t": 824722,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "ThinkNode_CrawlInterrupt",
+   "rx": 1788887659484
+  },
+  {
+   "v": 0,
+   "t": 824859,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Rescue",
+   "target": "Thing_Human35404",
+   "source": "JobGiver_Work",
+   "rx": 1788887659894
+  },
+  {
+   "v": 0,
+   "t": 825151,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_PatientGoToBed",
+   "rx": 1788887660745
+  },
+  {
+   "v": 0,
+   "t": 825151,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "LayDown",
+   "condition": "InterruptForced",
+   "rx": 1788887660745
+  },
+  {
+   "v": 0,
+   "t": 825154,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "ThinkNode_CrawlInterrupt",
+   "rx": 1788887660747
+  },
+  {
+   "v": 0,
+   "t": 825154,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "LayDown",
+   "condition": "InterruptForced",
+   "rx": 1788887660747
+  },
+  {
+   "v": 0,
+   "t": 825580,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_PatientGoToBed",
+   "rx": 1788887662046
+  },
+  {
+   "v": 0,
+   "t": 825580,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "LayDown",
+   "condition": "InterruptForced",
+   "rx": 1788887662047
+  },
+  {
+   "v": 0,
+   "t": 825583,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "ThinkNode_CrawlInterrupt",
+   "rx": 1788887662096
+  },
+  {
+   "v": 0,
+   "t": 825583,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "LayDown",
+   "condition": "InterruptForced",
+   "rx": 1788887662096
+  },
+  {
+   "v": 0,
+   "t": 825677,
+   "type": "letter",
+   "label": "Hide in room: Zeke",
+   "text": "<color=#D09B61FF>Zeke</color> is hiding in his room.\n\nThis happened because of poor mood.\n\nThe final straw was: Recreation-starved",
+   "def": "NegativeEvent",
+   "rx": 1788887662425
+  },
+  {
+   "v": 0,
+   "t": 825677,
+   "type": "mental_state",
+   "pawn": 948,
+   "state": "sitting alone",
+   "reason": "This happened because of poor mood.\n\nThe final straw was: Recreation-starved",
+   "rx": 1788887662425
+  },
+  {
+   "v": 0,
+   "t": 825931,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_PatientGoToBed",
+   "rx": 1788887663211
+  },
+  {
+   "v": 0,
+   "t": 825931,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788887663211
+  },
+  {
+   "v": 0,
+   "t": 826000,
+   "type": "job_noise",
+   "total": 6,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788887663402
   }
  ],
  "counts": {
@@ -3074,16 +3362,17 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 1571,
-  "pawn_snapshot": 1102,
-  "job_start": 61,
-  "job_end": 27,
-  "job_noise": 44,
+  "world_snapshot": 1615,
+  "pawn_snapshot": 1199,
+  "job_start": 70,
+  "job_end": 33,
+  "job_noise": 50,
   "hediff": 18,
-  "death": 4,
-  "letter": 18,
-  "incident": 13,
-  "interaction": 15
+  "death": 5,
+  "letter": 23,
+  "incident": 14,
+  "interaction": 15,
+  "mental_state": 1
  },
- "last_event_at": 1788887633.66702
+ "last_event_at": 1788887665.496725
 }
