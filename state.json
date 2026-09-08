@@ -3807,11 +3807,25 @@
     "paused": true
    },
    "rx": 1788852132374
+  },
+  {
+   "v": 0,
+   "t": 833510,
+   "type": "command_result",
+   "id": "c-17",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 833510,
+    "paused": true,
+    "in_game": true
+   },
+   "rx": 1788863296848
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "command_result": 16,
+  "command_result": 17,
   "mod_disconnected": 1,
   "hello": 2,
   "world_snapshot": 1549,
@@ -3825,5 +3839,5 @@
   "incident": 13,
   "interaction": 15
  },
- "last_event_at": 1788852132.37407
+ "last_event_at": 1788863296.848521
 }
