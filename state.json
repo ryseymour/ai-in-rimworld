@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 721250,
+  "t": 723000,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
   "wealth": 23697,
   "colonists": 3,
-  "visitors": 8,
+  "visitors": 9,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788830122548
+  "rx": 1788830154110
  },
  "pawns": [
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    101,
     0,
-    109
+    103
    ],
-   "job": "sleeping.",
+   "job": "feeding raw fungus to Shun.",
    "needs": {
-    "food": 0.216,
-    "rest": 0.762,
-    "joy": 0.049
+    "food": 0.174,
+    "rest": 0.782,
+    "joy": 0.045
    },
-   "mood": 0.171,
+   "mood": 0.214,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122549
+   "rx": 1788830154110
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -104,10 +104,10 @@
     0,
     103
    ],
-   "job": "resting.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.762,
+    "rest": 0.774,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122549
+   "rx": 1788830154111
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -176,8 +176,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.848,
-    "rest": 0.846
+    "food": 0.804,
+    "rest": 0.894
    },
    "mood": 0.153,
    "thoughts": [
@@ -226,25 +226,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122549
+   "rx": 1788830154111
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 73039,
    "name": "Lala",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    182,
+    147,
     0,
-    132
+    113
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.904,
-    "rest": 0.894
+    "food": 0.856,
+    "rest": 0.865
    },
    "mood": 0.57,
    "thoughts": [
@@ -279,25 +279,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122550
+   "rx": 1788830154111
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 73093,
    "name": "Adrian",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    183,
+    148,
     0,
-    147
+    116
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.923,
-    "rest": 0.845
+    "food": 0.885,
+    "rest": 0.817
    },
    "mood": 0.62,
    "thoughts": [
@@ -329,25 +329,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122550
+   "rx": 1788830154111
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 73102,
    "name": "AJ",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    180,
+    147,
     0,
-    132
+    116
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.904,
-    "rest": 0.937
+    "food": 0.856,
+    "rest": 0.909
    },
    "mood": 0.57,
    "thoughts": [
@@ -380,25 +380,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122550
+   "rx": 1788830154111
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 73108,
    "name": "Loner",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    180,
+    146,
     0,
-    132
+    118
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.904,
-    "rest": 0.86
+    "food": 0.86,
+    "rest": 0.833
    },
    "mood": 0.62,
    "thoughts": [
@@ -425,27 +425,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122550
+   "rx": 1788830154112
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 73117,
    "name": "Ellie",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    182,
+    150,
     0,
-    146
+    118
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.904,
-    "rest": 0.924
+    "food": 0.86,
+    "rest": 0.898
    },
-   "mood": 0.673,
+   "mood": 0.752,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -478,25 +478,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122551
+   "rx": 1788830154112
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 73122,
    "name": "Deccy",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    181,
+    147,
     0,
-    120
+    116
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.904,
-    "rest": 0.935
+    "food": 0.86,
+    "rest": 0.909
    },
    "mood": 0.62,
    "thoughts": [
@@ -529,25 +529,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788830122551
+   "rx": 1788830154113
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 73128,
    "name": "Dan",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    182,
+    147,
     0,
-    132
+    117
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.904,
-    "rest": 0.926
+    "food": 0.856,
+    "rest": 0.897
    },
    "mood": 0.62,
    "thoughts": [
@@ -575,25 +575,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122551
+   "rx": 1788830154114
   },
   {
    "v": 0,
-   "t": 721250,
+   "t": 723000,
    "type": "pawn_snapshot",
    "id": 73134,
    "name": "Kaia",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    181,
+    146,
     0,
-    132
+    122
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.904,
-    "rest": 0.919
+    "food": 0.86,
+    "rest": 0.892
    },
    "mood": 0.62,
    "thoughts": [
@@ -623,7 +623,69 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830122552
+   "rx": 1788830154114
+  },
+  {
+   "v": 0,
+   "t": 723000,
+   "type": "pawn_snapshot",
+   "id": 73176,
+   "name": "Paul",
+   "faction": null,
+   "kind": "visitor",
+   "pos": [
+    46,
+    0,
+    56
+   ],
+   "job": "downed.",
+   "needs": {
+    "food": 0.776,
+    "rest": 0.964
+   },
+   "mood": 0.471,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Mind-shattering pain",
+     "mood": -20
+    },
+    {
+     "label": "Planetary habitat",
+     "mood": -2
+    }
+   ],
+   "health": "Pain shock",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 2,
+    "Construction": 3,
+    "Mining": 3,
+    "Cooking": 3,
+    "Plants": 1,
+    "Animals": 4,
+    "Crafting": 10,
+    "Artistic": 4,
+    "Medicine": 8,
+    "Social": 4,
+    "Intellectual": 11
+   },
+   "traits": [
+    "Chemical fascination",
+    "Brawler"
+   ],
+   "relations": [
+    {
+     "other": "Eszenosky",
+     "kind": "son",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788830154114
   }
  ],
  "recent": [
@@ -1197,20 +1259,108 @@
    "def": "Chitchat",
    "text": "<color=#D09B61FF>Kaia</color> and <color=#D09B61FF>AJ</color> quipped about lovin'.",
    "rx": 1788830123131
+  },
+  {
+   "v": 0,
+   "t": 721512,
+   "type": "interaction",
+   "initiator": 73128,
+   "recipient": 73108,
+   "def": "Slight",
+   "text": "<color=#D09B61FF>Dan</color> sniggered at <color=#D09B61FF>Loner</color>'s mining skill.",
+   "rx": 1788830126899
+  },
+  {
+   "v": 0,
+   "t": 722000,
+   "type": "letter",
+   "label": "Transport pod crash",
+   "text": "A prosthetic surgeon named (*Name)Paul(/Name) is crashing in a transport pod nearby. If he survives the impact, he will be badly wounded.\n\n(*Name)Paul(/Name) is not affiliated with any faction. You can rescue him and hope he joins freely, or capture him for recruitment or slavery purposes.",
+   "def": "NeutralEvent",
+   "rx": 1788830135085
+  },
+  {
+   "v": 0,
+   "t": 722000,
+   "type": "incident",
+   "def": "RefugeePodCrash",
+   "label": "transport pod crash",
+   "points": 45.283,
+   "rx": 1788830135094
+  },
+  {
+   "v": 0,
+   "t": 722150,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Goto",
+   "target": "(103, 0, 109)",
+   "source": "JobGiver_MoveToStandable",
+   "rx": 1788830137605
+  },
+  {
+   "v": 0,
+   "t": 722175,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Combat",
+   "target": "(103, 0, 109)",
+   "source": "JobGiver_Orders",
+   "rx": 1788830137996
+  },
+  {
+   "v": 0,
+   "t": 722272,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "FeedPatient",
+   "target": "Thing_RawFungus31338",
+   "source": "JobGiver_Work",
+   "rx": 1788830139645
+  },
+  {
+   "v": 0,
+   "t": 722299,
+   "type": "job_start",
+   "pawn": 73176,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830140080
+  },
+  {
+   "v": 0,
+   "t": 722302,
+   "type": "job_start",
+   "pawn": 73176,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788830140114
+  },
+  {
+   "v": 0,
+   "t": 723101,
+   "type": "interaction",
+   "initiator": 73102,
+   "recipient": 73108,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>AJ</color> told a joke about computer games to <color=#D09B61FF>Loner</color>.",
+   "rx": 1788830155790
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 58,
-  "pawn_snapshot": 294,
-  "job_start": 31,
+  "world_snapshot": 65,
+  "pawn_snapshot": 374,
+  "job_start": 36,
   "job_end": 19,
   "hediff": 2,
-  "letter": 2,
-  "incident": 2,
-  "interaction": 2
+  "letter": 3,
+  "incident": 3,
+  "interaction": 4
  },
- "last_event_at": 1788830123.1315598,
- "published_at": 1788830124
+ "last_event_at": 1788830155.790401,
+ "published_at": 1788830156
 }
