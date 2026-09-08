@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 730500,
+  "t": 733500,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 23687,
+  "wealth": 23167,
   "colonists": 3,
   "visitors": 9,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788830407845
+  "rx": 1788830432628
  },
  "pawns": [
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    74,
+    59,
     0,
-    110
+    122
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.058,
-    "rest": 0.664,
+    "food": 0.023,
+    "rest": 0.616,
     "joy": 0.038
    },
-   "mood": 0.242,
+   "mood": 0.146,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407846
+   "rx": 1788830432628
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -104,10 +104,10 @@
     0,
     103
    ],
-   "job": "sleeping.",
+   "job": "resting.",
    "needs": {
-    "food": 0.067,
-    "rest": 0.99,
+    "food": 0.014,
+    "rest": 0.96,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407846
+   "rx": 1788830432629
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -176,8 +176,8 @@
    ],
    "job": "skydreaming.",
    "needs": {
-    "food": 0.604,
-    "rest": 0.938
+    "food": 0.524,
+    "rest": 0.891
    },
    "mood": 0.291,
    "thoughts": [
@@ -226,25 +226,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407847
+   "rx": 1788830432629
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73039,
    "name": "Lala",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    87,
+    92,
     0,
-    117
+    119
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.746
+    "food": 0.576,
+    "rest": 0.699
    },
    "mood": 0.57,
    "thoughts": [
@@ -279,11 +279,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407847
+   "rx": 1788830432629
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73093,
    "name": "Adrian",
@@ -292,12 +292,12 @@
    "pos": [
     88,
     0,
-    123
+    116
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.725,
-    "rest": 0.698
+    "food": 0.661,
+    "rest": 0.65
    },
    "mood": 0.62,
    "thoughts": [
@@ -329,11 +329,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407847
+   "rx": 1788830432629
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73102,
    "name": "AJ",
@@ -342,18 +342,22 @@
    "pos": [
     94,
     0,
-    119
+    113
    ],
-   "job": "wandering.",
+   "job": "fighting with Deccy.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.79
+    "food": 0.576,
+    "rest": 0.742
    },
    "mood": 0.57,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Burning passion for my work",
+     "mood": 14
     },
     {
      "label": "Minor pain",
@@ -380,31 +384,35 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407847
+   "rx": 1788830432629
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73108,
    "name": "Loner",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    93,
+    92,
     0,
-    118
+    120
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.66,
-    "rest": 0.715
+    "food": 0.58,
+    "rest": 0.667
    },
-   "mood": 0.62,
+   "mood": 0.596,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Night owl in daytime",
+     "mood": -10
     }
    ],
    "health": "Healthy",
@@ -425,25 +433,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407847
+   "rx": 1788830432630
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73117,
    "name": "Ellie",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    87,
+    86,
     0,
-    118
+    123
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.66,
-    "rest": 0.779
+    "food": 0.58,
+    "rest": 0.732
    },
    "mood": 0.82,
    "thoughts": [
@@ -478,31 +486,39 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407847
+   "rx": 1788830432630
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73122,
    "name": "Deccy",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    89,
+    95,
     0,
-    118
+    111
    ],
-   "job": "wandering.",
+   "job": "fighting with AJ.",
    "needs": {
-    "food": 0.66,
-    "rest": 0.79
+    "food": 0.58,
+    "rest": 0.743
    },
    "mood": 0.62,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Burning passion for my work",
+     "mood": 14
+    },
+    {
+     "label": "Insulted",
+     "mood": -5
     }
    ],
    "health": "Healthy",
@@ -529,25 +545,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788830407848
+   "rx": 1788830432630
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73128,
    "name": "Dan",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    94,
+    89,
     0,
-    122
+    115
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.779
+    "food": 0.576,
+    "rest": 0.731
    },
    "mood": 0.62,
    "thoughts": [
@@ -575,25 +591,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407848
+   "rx": 1788830432630
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73134,
    "name": "Kaia",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    86,
+    91,
     0,
-    115
+    121
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.66,
-    "rest": 0.774
+    "food": 0.58,
+    "rest": 0.726
    },
    "mood": 0.62,
    "thoughts": [
@@ -623,11 +639,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830407849
+   "rx": 1788830432630
   },
   {
    "v": 0,
-   "t": 730500,
+   "t": 733500,
    "type": "pawn_snapshot",
    "id": 73176,
    "name": "Paul",
@@ -638,10 +654,10 @@
     0,
     56
    ],
-   "job": "downed.",
+   "job": "downed, unconscious.",
    "needs": {
-    "food": 0.576,
-    "rest": 0.846
+    "food": 0.496,
+    "rest": 0.798
    },
    "mood": 0.4,
    "thoughts": [
@@ -658,7 +674,7 @@
      "mood": -2
     }
    ],
-   "health": "Pain shock",
+   "health": "Unconscious",
    "skills": {
     "Shooting": 0,
     "Melee": 2,
@@ -685,2786 +701,10 @@
     }
    ],
    "drafted": false,
-   "rx": 1788830407849
+   "rx": 1788830432630
   }
  ],
  "recent": [
-  {
-   "v": 0,
-   "t": 727063,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830266045
-  },
-  {
-   "v": 0,
-   "t": 727063,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830266046
-  },
-  {
-   "v": 0,
-   "t": 727066,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830266095
-  },
-  {
-   "v": 0,
-   "t": 727066,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830266095
-  },
-  {
-   "v": 0,
-   "t": 727067,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830266111
-  },
-  {
-   "v": 0,
-   "t": 727067,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830266111
-  },
-  {
-   "v": 0,
-   "t": 727068,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Goto",
-   "target": "(87, 0, 122)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830266128
-  },
-  {
-   "v": 0,
-   "t": 727068,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830266128
-  },
-  {
-   "v": 0,
-   "t": 727072,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Goto",
-   "target": "(85, 0, 115)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830266194
-  },
-  {
-   "v": 0,
-   "t": 727072,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830266194
-  },
-  {
-   "v": 0,
-   "t": 727075,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830266244
-  },
-  {
-   "v": 0,
-   "t": 727075,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830266244
-  },
-  {
-   "v": 0,
-   "t": 727080,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Goto",
-   "target": "(87, 0, 121)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830266329
-  },
-  {
-   "v": 0,
-   "t": 727080,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830266329
-  },
-  {
-   "v": 0,
-   "t": 727088,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830266470
-  },
-  {
-   "v": 0,
-   "t": 727088,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830266471
-  },
-  {
-   "v": 0,
-   "t": 727093,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Goto",
-   "target": "(91, 0, 115)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830266545
-  },
-  {
-   "v": 0,
-   "t": 727093,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830266545
-  },
-  {
-   "v": 0,
-   "t": 727103,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830266711
-  },
-  {
-   "v": 0,
-   "t": 727103,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830266711
-  },
-  {
-   "v": 0,
-   "t": 727114,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830266895
-  },
-  {
-   "v": 0,
-   "t": 727114,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830266895
-  },
-  {
-   "v": 0,
-   "t": 727117,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788830266937
-  },
-  {
-   "v": 0,
-   "t": 727117,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830266938
-  },
-  {
-   "v": 0,
-   "t": 727130,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830267162
-  },
-  {
-   "v": 0,
-   "t": 727130,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830267162
-  },
-  {
-   "v": 0,
-   "t": 727135,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Goto",
-   "target": "(90, 0, 123)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830267245
-  },
-  {
-   "v": 0,
-   "t": 727135,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830267245
-  },
-  {
-   "v": 0,
-   "t": 727152,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830267528
-  },
-  {
-   "v": 0,
-   "t": 727152,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830267528
-  },
-  {
-   "v": 0,
-   "t": 727157,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Goto",
-   "target": "(85, 0, 120)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830267610
-  },
-  {
-   "v": 0,
-   "t": 727157,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830267610
-  },
-  {
-   "v": 0,
-   "t": 727197,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830268278
-  },
-  {
-   "v": 0,
-   "t": 727197,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830268279
-  },
-  {
-   "v": 0,
-   "t": 727213,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830268548
-  },
-  {
-   "v": 0,
-   "t": 727213,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830268549
-  },
-  {
-   "v": 0,
-   "t": 727240,
-   "type": "interaction",
-   "initiator": 73122,
-   "recipient": 73108,
-   "def": "DeepTalk",
-   "text": "<color=#D09B61FF>Deccy</color> and <color=#D09B61FF>Loner</color> talked quietly about this planet.",
-   "rx": 1788830268996
-  },
-  {
-   "v": 0,
-   "t": 727281,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830269677
-  },
-  {
-   "v": 0,
-   "t": 727281,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830269677
-  },
-  {
-   "v": 0,
-   "t": 727286,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830269761
-  },
-  {
-   "v": 0,
-   "t": 727286,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830269762
-  },
-  {
-   "v": 0,
-   "t": 727287,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830269778
-  },
-  {
-   "v": 0,
-   "t": 727287,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830269778
-  },
-  {
-   "v": 0,
-   "t": 727291,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Goto",
-   "target": "(93, 0, 117)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830269844
-  },
-  {
-   "v": 0,
-   "t": 727291,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830269845
-  },
-  {
-   "v": 0,
-   "t": 727292,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Goto",
-   "target": "(90, 0, 118)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830269860
-  },
-  {
-   "v": 0,
-   "t": 727292,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830269861
-  },
-  {
-   "v": 0,
-   "t": 727297,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830269945
-  },
-  {
-   "v": 0,
-   "t": 727297,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830269945
-  },
-  {
-   "v": 0,
-   "t": 727302,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "GotoWander",
-   "target": "(86, 0, 106)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788830270030
-  },
-  {
-   "v": 0,
-   "t": 727302,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830270031
-  },
-  {
-   "v": 0,
-   "t": 727319,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830270311
-  },
-  {
-   "v": 0,
-   "t": 727319,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830270311
-  },
-  {
-   "v": 0,
-   "t": 727335,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830270577
-  },
-  {
-   "v": 0,
-   "t": 727335,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830270577
-  },
-  {
-   "v": 0,
-   "t": 727340,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Goto",
-   "target": "(94, 0, 114)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830270661
-  },
-  {
-   "v": 0,
-   "t": 727340,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830270662
-  },
-  {
-   "v": 0,
-   "t": 727344,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830270729
-  },
-  {
-   "v": 0,
-   "t": 727344,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830270732
-  },
-  {
-   "v": 0,
-   "t": 727383,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830271377
-  },
-  {
-   "v": 0,
-   "t": 727383,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830271378
-  },
-  {
-   "v": 0,
-   "t": 727386,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830271427
-  },
-  {
-   "v": 0,
-   "t": 727386,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830271428
-  },
-  {
-   "v": 0,
-   "t": 727388,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Goto",
-   "target": "(89, 0, 117)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830271460
-  },
-  {
-   "v": 0,
-   "t": 727388,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830271461
-  },
-  {
-   "v": 0,
-   "t": 727428,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830272128
-  },
-  {
-   "v": 0,
-   "t": 727428,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830272129
-  },
-  {
-   "v": 0,
-   "t": 727433,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Goto",
-   "target": "(86, 0, 121)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830272210
-  },
-  {
-   "v": 0,
-   "t": 727433,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830272211
-  },
-  {
-   "v": 0,
-   "t": 727458,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830272627
-  },
-  {
-   "v": 0,
-   "t": 727458,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830272627
-  },
-  {
-   "v": 0,
-   "t": 727469,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830272811
-  },
-  {
-   "v": 0,
-   "t": 727469,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830272811
-  },
-  {
-   "v": 0,
-   "t": 727472,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788830272861
-  },
-  {
-   "v": 0,
-   "t": 727472,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830272861
-  },
-  {
-   "v": 0,
-   "t": 727475,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830272912
-  },
-  {
-   "v": 0,
-   "t": 727475,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830272912
-  },
-  {
-   "v": 0,
-   "t": 727480,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Goto",
-   "target": "(87, 0, 122)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830272995
-  },
-  {
-   "v": 0,
-   "t": 727480,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830272995
-  },
-  {
-   "v": 0,
-   "t": 727502,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830273361
-  },
-  {
-   "v": 0,
-   "t": 727502,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830273361
-  },
-  {
-   "v": 0,
-   "t": 727507,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Goto",
-   "target": "(93, 0, 121)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830273445
-  },
-  {
-   "v": 0,
-   "t": 727507,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830273445
-  },
-  {
-   "v": 0,
-   "t": 727542,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830274028
-  },
-  {
-   "v": 0,
-   "t": 727542,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830274029
-  },
-  {
-   "v": 0,
-   "t": 727543,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830274044
-  },
-  {
-   "v": 0,
-   "t": 727543,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830274045
-  },
-  {
-   "v": 0,
-   "t": 727631,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830275512
-  },
-  {
-   "v": 0,
-   "t": 727631,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830275512
-  },
-  {
-   "v": 0,
-   "t": 727632,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830275527
-  },
-  {
-   "v": 0,
-   "t": 727632,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830275527
-  },
-  {
-   "v": 0,
-   "t": 727637,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Goto",
-   "target": "(91, 0, 114)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830275611
-  },
-  {
-   "v": 0,
-   "t": 727637,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830275612
-  },
-  {
-   "v": 0,
-   "t": 727639,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830275644
-  },
-  {
-   "v": 0,
-   "t": 727639,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830275644
-  },
-  {
-   "v": 0,
-   "t": 727652,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830275861
-  },
-  {
-   "v": 0,
-   "t": 727652,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830275862
-  },
-  {
-   "v": 0,
-   "t": 727657,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Goto",
-   "target": "(93, 0, 121)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830275945
-  },
-  {
-   "v": 0,
-   "t": 727657,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830275945
-  },
-  {
-   "v": 0,
-   "t": 727666,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830280635
-  },
-  {
-   "v": 0,
-   "t": 727666,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830280639
-  },
-  {
-   "v": 0,
-   "t": 727687,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830280978
-  },
-  {
-   "v": 0,
-   "t": 727687,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830280979
-  },
-  {
-   "v": 0,
-   "t": 727692,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "GotoWander",
-   "target": "(80, 0, 106)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788830281061
-  },
-  {
-   "v": 0,
-   "t": 727692,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830281061
-  },
-  {
-   "v": 0,
-   "t": 727723,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830281577
-  },
-  {
-   "v": 0,
-   "t": 727723,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830281578
-  },
-  {
-   "v": 0,
-   "t": 727728,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Goto",
-   "target": "(93, 0, 116)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830281661
-  },
-  {
-   "v": 0,
-   "t": 727728,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830281661
-  },
-  {
-   "v": 0,
-   "t": 727734,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830281761
-  },
-  {
-   "v": 0,
-   "t": 727734,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830281762
-  },
-  {
-   "v": 0,
-   "t": 727740,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830281863
-  },
-  {
-   "v": 0,
-   "t": 727740,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830281863
-  },
-  {
-   "v": 0,
-   "t": 727741,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830281878
-  },
-  {
-   "v": 0,
-   "t": 727741,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830281879
-  },
-  {
-   "v": 0,
-   "t": 727745,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Goto",
-   "target": "(89, 0, 120)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830281947
-  },
-  {
-   "v": 0,
-   "t": 727745,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830281947
-  },
-  {
-   "v": 0,
-   "t": 727761,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830282211
-  },
-  {
-   "v": 0,
-   "t": 727761,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830282212
-  },
-  {
-   "v": 0,
-   "t": 727766,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Goto",
-   "target": "(94, 0, 119)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830282295
-  },
-  {
-   "v": 0,
-   "t": 727766,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830282295
-  },
-  {
-   "v": 0,
-   "t": 727808,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830282995
-  },
-  {
-   "v": 0,
-   "t": 727808,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830282995
-  },
-  {
-   "v": 0,
-   "t": 727810,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830283028
-  },
-  {
-   "v": 0,
-   "t": 727810,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830283028
-  },
-  {
-   "v": 0,
-   "t": 727815,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Goto",
-   "target": "(95, 0, 118)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830283111
-  },
-  {
-   "v": 0,
-   "t": 727815,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830283111
-  },
-  {
-   "v": 0,
-   "t": 727846,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830283627
-  },
-  {
-   "v": 0,
-   "t": 727846,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830283628
-  },
-  {
-   "v": 0,
-   "t": 727870,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830284028
-  },
-  {
-   "v": 0,
-   "t": 727870,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830284028
-  },
-  {
-   "v": 0,
-   "t": 727872,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830284061
-  },
-  {
-   "v": 0,
-   "t": 727872,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830284062
-  },
-  {
-   "v": 0,
-   "t": 727877,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Goto",
-   "target": "(90, 0, 120)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830284147
-  },
-  {
-   "v": 0,
-   "t": 727877,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830284147
-  },
-  {
-   "v": 0,
-   "t": 727878,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830284160
-  },
-  {
-   "v": 0,
-   "t": 727878,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830284160
-  },
-  {
-   "v": 0,
-   "t": 727883,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Goto",
-   "target": "(86, 0, 120)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830284245
-  },
-  {
-   "v": 0,
-   "t": 727883,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830284245
-  },
-  {
-   "v": 0,
-   "t": 727908,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830284661
-  },
-  {
-   "v": 0,
-   "t": 727908,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830284662
-  },
-  {
-   "v": 0,
-   "t": 727929,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830285011
-  },
-  {
-   "v": 0,
-   "t": 727929,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830285012
-  },
-  {
-   "v": 0,
-   "t": 727931,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830285045
-  },
-  {
-   "v": 0,
-   "t": 727931,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830285045
-  },
-  {
-   "v": 0,
-   "t": 727934,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830285094
-  },
-  {
-   "v": 0,
-   "t": 727934,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830285095
-  },
-  {
-   "v": 0,
-   "t": 727936,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Goto",
-   "target": "(90, 0, 111)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830285127
-  },
-  {
-   "v": 0,
-   "t": 727936,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830285128
-  },
-  {
-   "v": 0,
-   "t": 727957,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830285478
-  },
-  {
-   "v": 0,
-   "t": 727957,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830285478
-  },
-  {
-   "v": 0,
-   "t": 727962,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830285562
-  },
-  {
-   "v": 0,
-   "t": 727962,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830285563
-  },
-  {
-   "v": 0,
-   "t": 727967,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Goto",
-   "target": "(92, 0, 120)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830285644
-  },
-  {
-   "v": 0,
-   "t": 727967,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830285645
-  },
-  {
-   "v": 0,
-   "t": 727970,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830285694
-  },
-  {
-   "v": 0,
-   "t": 727970,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830285695
-  },
-  {
-   "v": 0,
-   "t": 727975,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Goto",
-   "target": "(87, 0, 120)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830285778
-  },
-  {
-   "v": 0,
-   "t": 727975,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830285778
-  },
-  {
-   "v": 0,
-   "t": 727988,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830285994
-  },
-  {
-   "v": 0,
-   "t": 727988,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830285995
-  },
-  {
-   "v": 0,
-   "t": 727993,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830286077
-  },
-  {
-   "v": 0,
-   "t": 727993,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830286077
-  },
-  {
-   "v": 0,
-   "t": 727993,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Goto",
-   "target": "(93, 0, 122)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830286078
-  },
-  {
-   "v": 0,
-   "t": 727993,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830286078
-  },
-  {
-   "v": 0,
-   "t": 727997,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788830286144
-  },
-  {
-   "v": 0,
-   "t": 727997,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830286144
-  },
-  {
-   "v": 0,
-   "t": 728013,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830286411
-  },
-  {
-   "v": 0,
-   "t": 728013,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830286411
-  },
-  {
-   "v": 0,
-   "t": 728018,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830286494
-  },
-  {
-   "v": 0,
-   "t": 728018,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830286496
-  },
-  {
-   "v": 0,
-   "t": 728018,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Goto",
-   "target": "(93, 0, 115)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830286496
-  },
-  {
-   "v": 0,
-   "t": 728018,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830286496
-  },
-  {
-   "v": 0,
-   "t": 728022,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830286562
-  },
-  {
-   "v": 0,
-   "t": 728022,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830286562
-  },
-  {
-   "v": 0,
-   "t": 728028,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830286661
-  },
-  {
-   "v": 0,
-   "t": 728028,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830286661
-  },
-  {
-   "v": 0,
-   "t": 728052,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830287061
-  },
-  {
-   "v": 0,
-   "t": 728052,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830287062
-  },
-  {
-   "v": 0,
-   "t": 728057,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Goto",
-   "target": "(92, 0, 120)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830287145
-  },
-  {
-   "v": 0,
-   "t": 728057,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830287145
-  },
-  {
-   "v": 0,
-   "t": 728072,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830287394
-  },
-  {
-   "v": 0,
-   "t": 728072,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830287395
-  },
-  {
-   "v": 0,
-   "t": 728075,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830287445
-  },
-  {
-   "v": 0,
-   "t": 728075,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830287445
-  },
-  {
-   "v": 0,
-   "t": 728075,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830287445
-  },
-  {
-   "v": 0,
-   "t": 728075,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830287445
-  },
-  {
-   "v": 0,
-   "t": 728076,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830287461
-  },
-  {
-   "v": 0,
-   "t": 728076,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830287461
-  },
-  {
-   "v": 0,
-   "t": 728077,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Goto",
-   "target": "(87, 0, 115)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830287477
-  },
-  {
-   "v": 0,
-   "t": 728077,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830287477
-  },
-  {
-   "v": 0,
-   "t": 728080,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Goto",
-   "target": "(86, 0, 119)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830287527
-  },
-  {
-   "v": 0,
-   "t": 728080,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830287527
-  },
-  {
-   "v": 0,
-   "t": 728107,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830287979
-  },
-  {
-   "v": 0,
-   "t": 728107,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830287980
-  },
-  {
-   "v": 0,
-   "t": 728112,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Goto",
-   "target": "(90, 0, 122)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830288062
-  },
-  {
-   "v": 0,
-   "t": 728112,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830288062
-  },
-  {
-   "v": 0,
-   "t": 728133,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830288411
-  },
-  {
-   "v": 0,
-   "t": 728133,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830288411
-  },
-  {
-   "v": 0,
-   "t": 728138,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "Goto",
-   "target": "(85, 0, 116)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830288495
-  },
-  {
-   "v": 0,
-   "t": 728138,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830288495
-  },
-  {
-   "v": 0,
-   "t": 728140,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830288527
-  },
-  {
-   "v": 0,
-   "t": 728140,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830288528
-  },
-  {
-   "v": 0,
-   "t": 728145,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Goto",
-   "target": "(88, 0, 119)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830288611
-  },
-  {
-   "v": 0,
-   "t": 728145,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830288611
-  },
-  {
-   "v": 0,
-   "t": 728172,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830289077
-  },
-  {
-   "v": 0,
-   "t": 728172,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830289078
-  },
-  {
-   "v": 0,
-   "t": 728177,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "GotoWander",
-   "target": "(77, 0, 102)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788830289161
-  },
-  {
-   "v": 0,
-   "t": 728177,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830289162
-  },
-  {
-   "v": 0,
-   "t": 728185,
-   "type": "interaction",
-   "initiator": 73134,
-   "recipient": 73108,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>Kaia</color> quipped about entertainment with <color=#D09B61FF>Loner</color>.",
-   "rx": 1788830289297
-  },
-  {
-   "v": 0,
-   "t": 728196,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830289477
-  },
-  {
-   "v": 0,
-   "t": 728196,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830289477
-  },
-  {
-   "v": 0,
-   "t": 728213,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830289761
-  },
-  {
-   "v": 0,
-   "t": 728213,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830289762
-  },
-  {
-   "v": 0,
-   "t": 728255,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830290460
-  },
-  {
-   "v": 0,
-   "t": 728255,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830290461
-  },
-  {
-   "v": 0,
-   "t": 728260,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Goto",
-   "target": "(92, 0, 117)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830290544
-  },
-  {
-   "v": 0,
-   "t": 728260,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830290544
-  },
-  {
-   "v": 0,
-   "t": 728317,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830291497
-  },
-  {
-   "v": 0,
-   "t": 728317,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830291499
-  },
-  {
-   "v": 0,
-   "t": 728322,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Goto",
-   "target": "(85, 0, 116)",
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830291577
-  },
-  {
-   "v": 0,
-   "t": 728322,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Goto",
-   "condition": "Succeeded",
-   "rx": 1788830291577
-  },
-  {
-   "v": 0,
-   "t": 728344,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830291944
-  },
-  {
-   "v": 0,
-   "t": 728344,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830291945
-  },
-  {
-   "v": 0,
-   "t": 728344,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830291945
-  },
-  {
-   "v": 0,
-   "t": 728344,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830291945
-  },
-  {
-   "v": 0,
-   "t": 728346,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830291978
-  },
-  {
-   "v": 0,
-   "t": 728346,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830291978
-  },
-  {
-   "v": 0,
-   "t": 728363,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_GotoTravelDestination",
-   "rx": 1788830292261
-  },
-  {
-   "v": 0,
-   "t": 728363,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830292262
-  },
-  {
-   "v": 0,
-   "t": 728378,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830292511
-  },
-  {
-   "v": 0,
-   "t": 728378,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830292512
-  },
-  {
-   "v": 0,
-   "t": 728383,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830292609
-  },
-  {
-   "v": 0,
-   "t": 728383,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830292612
-  },
-  {
-   "v": 0,
-   "t": 728399,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830292861
-  },
-  {
-   "v": 0,
-   "t": 728399,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830292862
-  },
-  {
-   "v": 0,
-   "t": 728402,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788830292911
-  },
-  {
-   "v": 0,
-   "t": 728402,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830292912
-  },
-  {
-   "v": 0,
-   "t": 728416,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830293144
-  },
-  {
-   "v": 0,
-   "t": 728416,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830293145
-  },
-  {
-   "v": 0,
-   "t": 728421,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830293227
-  },
-  {
-   "v": 0,
-   "t": 728421,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830293228
-  },
-  {
-   "v": 0,
-   "t": 728432,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830293410
-  },
-  {
-   "v": 0,
-   "t": 728432,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830293410
-  },
-  {
-   "v": 0,
-   "t": 728437,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830293495
-  },
-  {
-   "v": 0,
-   "t": 728437,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830293495
-  },
-  {
-   "v": 0,
-   "t": 728461,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "GotoWander",
-   "target": "(87, 0, 114)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830293967
-  },
-  {
-   "v": 0,
-   "t": 728461,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830293968
-  },
-  {
-   "v": 0,
-   "t": 728472,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830294161
-  },
-  {
-   "v": 0,
-   "t": 728472,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830294162
-  },
-  {
-   "v": 0,
-   "t": 728477,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830294245
-  },
-  {
-   "v": 0,
-   "t": 728477,
-   "type": "job_end",
-   "pawn": 73039,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830294245
-  },
-  {
-   "v": 0,
-   "t": 728531,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "GotoWander",
-   "target": "(83, 0, 119)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830295145
-  },
-  {
-   "v": 0,
-   "t": 728531,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830295145
-  },
-  {
-   "v": 0,
-   "t": 728539,
-   "type": "job_start",
-   "pawn": 73108,
-   "job": "GotoWander",
-   "target": "(93, 0, 111)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830295278
-  },
-  {
-   "v": 0,
-   "t": 728539,
-   "type": "job_end",
-   "pawn": 73108,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830295278
-  },
-  {
-   "v": 0,
-   "t": 728621,
-   "type": "interaction",
-   "initiator": 73102,
-   "recipient": 73122,
-   "def": "Chitchat",
-   "text": "<color=#D09B61FF>AJ</color> and <color=#D09B61FF>Deccy</color> quipped about practicing roulette.",
-   "rx": 1788830360698
-  },
-  {
-   "v": 0,
-   "t": 728638,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830360978
-  },
-  {
-   "v": 0,
-   "t": 728638,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830360979
-  },
-  {
-   "v": 0,
-   "t": 728643,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "GotoWander",
-   "target": "(92, 0, 119)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830361061
-  },
-  {
-   "v": 0,
-   "t": 728643,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830361061
-  },
-  {
-   "v": 0,
-   "t": 728652,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830361212
-  },
-  {
-   "v": 0,
-   "t": 728652,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830361212
-  },
-  {
-   "v": 0,
-   "t": 728657,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830361294
-  },
-  {
-   "v": 0,
-   "t": 728657,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830361295
-  },
-  {
-   "v": 0,
-   "t": 728657,
-   "type": "job_start",
-   "pawn": 73117,
-   "job": "GotoWander",
-   "target": "(91, 0, 124)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830361295
-  },
-  {
-   "v": 0,
-   "t": 728657,
-   "type": "job_end",
-   "pawn": 73117,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830361295
-  },
-  {
-   "v": 0,
-   "t": 728662,
-   "type": "job_start",
-   "pawn": 948,
-   "job": "GotoWander",
-   "target": "(77, 0, 105)",
-   "source": "JobGiver_WanderAnywhere",
-   "rx": 1788830361378
-  },
-  {
-   "v": 0,
-   "t": 728662,
-   "type": "job_end",
-   "pawn": 948,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830361378
-  },
-  {
-   "v": 0,
-   "t": 728673,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "GotoWander",
-   "target": "(87, 0, 118)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830361561
-  },
-  {
-   "v": 0,
-   "t": 728673,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830361562
-  },
-  {
-   "v": 0,
-   "t": 728682,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830361710
-  },
-  {
-   "v": 0,
-   "t": 728682,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830361711
-  },
-  {
-   "v": 0,
-   "t": 728685,
-   "type": "job_start",
-   "pawn": 73134,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830361763
-  },
-  {
-   "v": 0,
-   "t": 728685,
-   "type": "job_end",
-   "pawn": 73134,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830361764
-  },
-  {
-   "v": 0,
-   "t": 728741,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830362695
-  },
-  {
-   "v": 0,
-   "t": 728741,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830362695
-  },
-  {
-   "v": 0,
-   "t": 728746,
-   "type": "job_start",
-   "pawn": 73102,
-   "job": "GotoWander",
-   "target": "(91, 0, 120)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830362778
-  },
-  {
-   "v": 0,
-   "t": 728746,
-   "type": "job_end",
-   "pawn": 73102,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788830362778
-  },
-  {
-   "v": 0,
-   "t": 728774,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830363244
-  },
-  {
-   "v": 0,
-   "t": 728774,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830363244
-  },
-  {
-   "v": 0,
-   "t": 728777,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830363295
-  },
-  {
-   "v": 0,
-   "t": 728777,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830363295
-  },
-  {
-   "v": 0,
-   "t": 728777,
-   "type": "job_start",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830363295
-  },
-  {
-   "v": 0,
-   "t": 728777,
-   "type": "job_end",
-   "pawn": 73128,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830363295
-  },
-  {
-   "v": 0,
-   "t": 728780,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830363344
-  },
-  {
-   "v": 0,
-   "t": 728780,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830363344
-  },
-  {
-   "v": 0,
-   "t": 728794,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830363577
-  },
-  {
-   "v": 0,
-   "t": 728794,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830363577
-  },
-  {
-   "v": 0,
-   "t": 728798,
-   "type": "job_start",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830363645
-  },
-  {
-   "v": 0,
-   "t": 728798,
-   "type": "job_end",
-   "pawn": 73093,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830363645
-  },
-  {
-   "v": 0,
-   "t": 728827,
-   "type": "job_start",
-   "pawn": 73039,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788830364128
-  },
   {
    "v": 0,
    "t": 728827,
@@ -5454,21 +2694,2851 @@
    "job": "GotoWander",
    "condition": "Succeeded",
    "rx": 1788830408879
+  },
+  {
+   "v": 0,
+   "t": 730594,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830409411
+  },
+  {
+   "v": 0,
+   "t": 730594,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830409411
+  },
+  {
+   "v": 0,
+   "t": 730598,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830409477
+  },
+  {
+   "v": 0,
+   "t": 730598,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830409477
+  },
+  {
+   "v": 0,
+   "t": 730600,
+   "type": "interaction",
+   "initiator": 73122,
+   "recipient": 73093,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Deccy</color> talked about laundry with <color=#D09B61FF>Adrian</color>.",
+   "rx": 1788830409512
+  },
+  {
+   "v": 0,
+   "t": 730622,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830409877
+  },
+  {
+   "v": 0,
+   "t": 730622,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830409877
+  },
+  {
+   "v": 0,
+   "t": 730625,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830409927
+  },
+  {
+   "v": 0,
+   "t": 730625,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830409927
+  },
+  {
+   "v": 0,
+   "t": 730626,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830409944
+  },
+  {
+   "v": 0,
+   "t": 730626,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830409945
+  },
+  {
+   "v": 0,
+   "t": 730627,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830409961
+  },
+  {
+   "v": 0,
+   "t": 730627,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830409961
+  },
+  {
+   "v": 0,
+   "t": 730653,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830410394
+  },
+  {
+   "v": 0,
+   "t": 730653,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830410394
+  },
+  {
+   "v": 0,
+   "t": 730658,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "target": "(90, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830410478
+  },
+  {
+   "v": 0,
+   "t": 730658,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830410479
+  },
+  {
+   "v": 0,
+   "t": 730678,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830410812
+  },
+  {
+   "v": 0,
+   "t": 730678,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830410812
+  },
+  {
+   "v": 0,
+   "t": 730682,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830410878
+  },
+  {
+   "v": 0,
+   "t": 730682,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830410878
+  },
+  {
+   "v": 0,
+   "t": 730740,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830411845
+  },
+  {
+   "v": 0,
+   "t": 730740,
+   "type": "job_end",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830411845
+  },
+  {
+   "v": 0,
+   "t": 730745,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "GotoWander",
+   "target": "(97, 0, 120)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830411928
+  },
+  {
+   "v": 0,
+   "t": 730745,
+   "type": "job_end",
+   "pawn": 73122,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830411929
+  },
+  {
+   "v": 0,
+   "t": 730755,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830412094
+  },
+  {
+   "v": 0,
+   "t": 730755,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830412095
+  },
+  {
+   "v": 0,
+   "t": 730760,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "target": "(95, 0, 117)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830412178
+  },
+  {
+   "v": 0,
+   "t": 730760,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830412178
+  },
+  {
+   "v": 0,
+   "t": 730796,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830412786
+  },
+  {
+   "v": 0,
+   "t": 730796,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830412786
+  },
+  {
+   "v": 0,
+   "t": 730801,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "GotoWander",
+   "target": "(88, 0, 111)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830412861
+  },
+  {
+   "v": 0,
+   "t": 730801,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830412862
+  },
+  {
+   "v": 0,
+   "t": 730833,
+   "type": "interaction",
+   "initiator": 73108,
+   "recipient": 73039,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Loner</color> chatted about guilty pleasures with <color=#D09B61FF>Lala</color>.",
+   "rx": 1788830413395
+  },
+  {
+   "v": 0,
+   "t": 730836,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830413446
+  },
+  {
+   "v": 0,
+   "t": 730836,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830413446
+  },
+  {
+   "v": 0,
+   "t": 730837,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830413462
+  },
+  {
+   "v": 0,
+   "t": 730837,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830413462
+  },
+  {
+   "v": 0,
+   "t": 730847,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830413627
+  },
+  {
+   "v": 0,
+   "t": 730847,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830413627
+  },
+  {
+   "v": 0,
+   "t": 730852,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "GotoWander",
+   "target": "(91, 0, 119)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830413711
+  },
+  {
+   "v": 0,
+   "t": 730852,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830413711
+  },
+  {
+   "v": 0,
+   "t": 730859,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830413827
+  },
+  {
+   "v": 0,
+   "t": 730859,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830413828
+  },
+  {
+   "v": 0,
+   "t": 730863,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830413894
+  },
+  {
+   "v": 0,
+   "t": 730863,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830413894
+  },
+  {
+   "v": 0,
+   "t": 730902,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830414544
+  },
+  {
+   "v": 0,
+   "t": 730902,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830414544
+  },
+  {
+   "v": 0,
+   "t": 730907,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "GotoWander",
+   "target": "(87, 0, 120)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830414627
+  },
+  {
+   "v": 0,
+   "t": 730907,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830414628
+  },
+  {
+   "v": 0,
+   "t": 730912,
+   "type": "job_start",
+   "pawn": 73176,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830414711
+  },
+  {
+   "v": 0,
+   "t": 730912,
+   "type": "job_end",
+   "pawn": 73176,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830414712
+  },
+  {
+   "v": 0,
+   "t": 730917,
+   "type": "job_start",
+   "pawn": 73176,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788830414794
+  },
+  {
+   "v": 0,
+   "t": 730917,
+   "type": "job_end",
+   "pawn": 73176,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788830414794
+  },
+  {
+   "v": 0,
+   "t": 730937,
+   "type": "job_start",
+   "pawn": 73176,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788830415128
+  },
+  {
+   "v": 0,
+   "t": 730953,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830415394
+  },
+  {
+   "v": 0,
+   "t": 730953,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830415394
+  },
+  {
+   "v": 0,
+   "t": 730958,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "target": "(84, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830415477
+  },
+  {
+   "v": 0,
+   "t": 730958,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830415478
+  },
+  {
+   "v": 0,
+   "t": 731002,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830416210
+  },
+  {
+   "v": 0,
+   "t": 731002,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830416211
+  },
+  {
+   "v": 0,
+   "t": 731007,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "GotoWander",
+   "target": "(90, 0, 114)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830416295
+  },
+  {
+   "v": 0,
+   "t": 731007,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830416295
+  },
+  {
+   "v": 0,
+   "t": 731059,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830417161
+  },
+  {
+   "v": 0,
+   "t": 731059,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830417162
+  },
+  {
+   "v": 0,
+   "t": 731063,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830417228
+  },
+  {
+   "v": 0,
+   "t": 731063,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830417228
+  },
+  {
+   "v": 0,
+   "t": 731063,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830417228
+  },
+  {
+   "v": 0,
+   "t": 731063,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830417229
+  },
+  {
+   "v": 0,
+   "t": 731067,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830417294
+  },
+  {
+   "v": 0,
+   "t": 731067,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830417294
+  },
+  {
+   "v": 0,
+   "t": 731098,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830417811
+  },
+  {
+   "v": 0,
+   "t": 731098,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830417811
+  },
+  {
+   "v": 0,
+   "t": 731102,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830417879
+  },
+  {
+   "v": 0,
+   "t": 731102,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830417879
+  },
+  {
+   "v": 0,
+   "t": 731103,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830417894
+  },
+  {
+   "v": 0,
+   "t": 731103,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830417894
+  },
+  {
+   "v": 0,
+   "t": 731103,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "target": "(91, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830417894
+  },
+  {
+   "v": 0,
+   "t": 731103,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830417894
+  },
+  {
+   "v": 0,
+   "t": 731107,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "GotoWander",
+   "target": "(68, 0, 114)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830417960
+  },
+  {
+   "v": 0,
+   "t": 731107,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830417961
+  },
+  {
+   "v": 0,
+   "t": 731107,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830417961
+  },
+  {
+   "v": 0,
+   "t": 731107,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830417962
+  },
+  {
+   "v": 0,
+   "t": 731146,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830418612
+  },
+  {
+   "v": 0,
+   "t": 731146,
+   "type": "job_end",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830418612
+  },
+  {
+   "v": 0,
+   "t": 731150,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830418679
+  },
+  {
+   "v": 0,
+   "t": 731150,
+   "type": "job_end",
+   "pawn": 73122,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830418679
+  },
+  {
+   "v": 0,
+   "t": 731154,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830418744
+  },
+  {
+   "v": 0,
+   "t": 731154,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830418745
+  },
+  {
+   "v": 0,
+   "t": 731158,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830418811
+  },
+  {
+   "v": 0,
+   "t": 731158,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830418812
+  },
+  {
+   "v": 0,
+   "t": 731161,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830418861
+  },
+  {
+   "v": 0,
+   "t": 731161,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830418861
+  },
+  {
+   "v": 0,
+   "t": 731165,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830418928
+  },
+  {
+   "v": 0,
+   "t": 731165,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830418928
+  },
+  {
+   "v": 0,
+   "t": 731268,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830420646
+  },
+  {
+   "v": 0,
+   "t": 731268,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830420646
+  },
+  {
+   "v": 0,
+   "t": 731273,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "target": "(92, 0, 114)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830420728
+  },
+  {
+   "v": 0,
+   "t": 731273,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830420728
+  },
+  {
+   "v": 0,
+   "t": 731319,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830421495
+  },
+  {
+   "v": 0,
+   "t": 731319,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830421496
+  },
+  {
+   "v": 0,
+   "t": 731321,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830421544
+  },
+  {
+   "v": 0,
+   "t": 731321,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830421545
+  },
+  {
+   "v": 0,
+   "t": 731328,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830421644
+  },
+  {
+   "v": 0,
+   "t": 731328,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830421645
+  },
+  {
+   "v": 0,
+   "t": 731333,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "target": "(87, 0, 114)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830421728
+  },
+  {
+   "v": 0,
+   "t": 731333,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830421728
+  },
+  {
+   "v": 0,
+   "t": 731352,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830422044
+  },
+  {
+   "v": 0,
+   "t": 731352,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830422044
+  },
+  {
+   "v": 0,
+   "t": 731357,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "GotoWander",
+   "target": "(95, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830422128
+  },
+  {
+   "v": 0,
+   "t": 731357,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830422128
+  },
+  {
+   "v": 0,
+   "t": 731358,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830422144
+  },
+  {
+   "v": 0,
+   "t": 731358,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830422145
+  },
+  {
+   "v": 0,
+   "t": 731362,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830422211
+  },
+  {
+   "v": 0,
+   "t": 731362,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830422211
+  },
+  {
+   "v": 0,
+   "t": 731417,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830423128
+  },
+  {
+   "v": 0,
+   "t": 731417,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830423129
+  },
+  {
+   "v": 0,
+   "t": 731417,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830423129
+  },
+  {
+   "v": 0,
+   "t": 731417,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830423129
+  },
+  {
+   "v": 0,
+   "t": 731422,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830423210
+  },
+  {
+   "v": 0,
+   "t": 731422,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830423211
+  },
+  {
+   "v": 0,
+   "t": 731422,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "GotoWander",
+   "target": "(87, 0, 111)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830423211
+  },
+  {
+   "v": 0,
+   "t": 731422,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830423211
+  },
+  {
+   "v": 0,
+   "t": 731425,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830423260
+  },
+  {
+   "v": 0,
+   "t": 731430,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830423344
+  },
+  {
+   "v": 0,
+   "t": 731430,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "target": "(93, 0, 113)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830423344
+  },
+  {
+   "v": 0,
+   "t": 731435,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "GotoWander",
+   "target": "(83, 0, 117)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830423428
+  },
+  {
+   "v": 0,
+   "t": 731546,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830425277
+  },
+  {
+   "v": 0,
+   "t": 731551,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "GotoWander",
+   "target": "(96, 0, 114)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830425360
+  },
+  {
+   "v": 0,
+   "t": 731551,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830425361
+  },
+  {
+   "v": 0,
+   "t": 731553,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830425394
+  },
+  {
+   "v": 0,
+   "t": 731558,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830425477
+  },
+  {
+   "v": 0,
+   "t": 731560,
+   "type": "interaction",
+   "initiator": 73122,
+   "recipient": 73039,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Deccy</color> shared a word about fighting buffalos with <color=#D09B61FF>Lala</color>.",
+   "rx": 1788830425513
+  },
+  {
+   "v": 0,
+   "t": 731562,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830425544
+  },
+  {
+   "v": 0,
+   "t": 731602,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830426210
+  },
+  {
+   "v": 0,
+   "t": 731602,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830426211
+  },
+  {
+   "v": 0,
+   "t": 731607,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "GotoWander",
+   "target": "(67, 0, 120)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830426295
+  },
+  {
+   "v": 0,
+   "t": 731607,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830426296
+  },
+  {
+   "v": 0,
+   "t": 731648,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830426978
+  },
+  {
+   "v": 0,
+   "t": 731648,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830426978
+  },
+  {
+   "v": 0,
+   "t": 731650,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830427011
+  },
+  {
+   "v": 0,
+   "t": 731650,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830427012
+  },
+  {
+   "v": 0,
+   "t": 731652,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830427047
+  },
+  {
+   "v": 0,
+   "t": 731652,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830427048
+  },
+  {
+   "v": 0,
+   "t": 731657,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "GotoWander",
+   "target": "(92, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830427128
+  },
+  {
+   "v": 0,
+   "t": 731657,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830427128
+  },
+  {
+   "v": 0,
+   "t": 731742,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830427727
+  },
+  {
+   "v": 0,
+   "t": 731743,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830427728
+  },
+  {
+   "v": 0,
+   "t": 731772,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830427811
+  },
+  {
+   "v": 0,
+   "t": 731777,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "GotoWander",
+   "target": "(96, 0, 112)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830427817
+  },
+  {
+   "v": 0,
+   "t": 731883,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428112
+  },
+  {
+   "v": 0,
+   "t": 731887,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428128
+  },
+  {
+   "v": 0,
+   "t": 731933,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428247
+  },
+  {
+   "v": 0,
+   "t": 731938,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "target": "(89, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428263
+  },
+  {
+   "v": 0,
+   "t": 731938,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830428264
+  },
+  {
+   "v": 0,
+   "t": 731940,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428277
+  },
+  {
+   "v": 0,
+   "t": 731940,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830428278
+  },
+  {
+   "v": 0,
+   "t": 731945,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "target": "(89, 0, 116)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428280
+  },
+  {
+   "v": 0,
+   "t": 731945,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830428280
+  },
+  {
+   "v": 0,
+   "t": 731971,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428362
+  },
+  {
+   "v": 0,
+   "t": 731976,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428378
+  },
+  {
+   "v": 0,
+   "t": 731988,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428411
+  },
+  {
+   "v": 0,
+   "t": 731993,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "target": "(95, 0, 114)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428414
+  },
+  {
+   "v": 0,
+   "t": 732008,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428479
+  },
+  {
+   "v": 0,
+   "t": 732012,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428481
+  },
+  {
+   "v": 0,
+   "t": 732039,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428546
+  },
+  {
+   "v": 0,
+   "t": 732043,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428562
+  },
+  {
+   "v": 0,
+   "t": 732082,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428663
+  },
+  {
+   "v": 0,
+   "t": 732087,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830428680
+  },
+  {
+   "v": 0,
+   "t": 732087,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428680
+  },
+  {
+   "v": 0,
+   "t": 732092,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "GotoWander",
+   "target": "(96, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428695
+  },
+  {
+   "v": 0,
+   "t": 732136,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428814
+  },
+  {
+   "v": 0,
+   "t": 732140,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428829
+  },
+  {
+   "v": 0,
+   "t": 732146,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428844
+  },
+  {
+   "v": 0,
+   "t": 732150,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428861
+  },
+  {
+   "v": 0,
+   "t": 732151,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428862
+  },
+  {
+   "v": 0,
+   "t": 732153,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428864
+  },
+  {
+   "v": 0,
+   "t": 732176,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428929
+  },
+  {
+   "v": 0,
+   "t": 732181,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "GotoWander",
+   "target": "(85, 0, 113)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428944
+  },
+  {
+   "v": 0,
+   "t": 732183,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830428945
+  },
+  {
+   "v": 0,
+   "t": 732188,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "target": "(94, 0, 123)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830428962
+  },
+  {
+   "v": 0,
+   "t": 732233,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429080
+  },
+  {
+   "v": 0,
+   "t": 732237,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830429095
+  },
+  {
+   "v": 0,
+   "t": 732252,
+   "type": "interaction",
+   "initiator": 73117,
+   "recipient": 73134,
+   "def": "Slight",
+   "text": "<color=#D09B61FF>Ellie</color> belittled <color=#D09B61FF>Kaia</color>'s opinions.",
+   "rx": 1788830429148
+  },
+  {
+   "v": 0,
+   "t": 732252,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429148
+  },
+  {
+   "v": 0,
+   "t": 732257,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "GotoWander",
+   "target": "(95, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830429151
+  },
+  {
+   "v": 0,
+   "t": 732277,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429210
+  },
+  {
+   "v": 0,
+   "t": 732277,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830429211
+  },
+  {
+   "v": 0,
+   "t": 732282,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "GotoWander",
+   "target": "(64, 0, 123)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830429227
+  },
+  {
+   "v": 0,
+   "t": 732282,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830429227
+  },
+  {
+   "v": 0,
+   "t": 732325,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429344
+  },
+  {
+   "v": 0,
+   "t": 732325,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830429344
+  },
+  {
+   "v": 0,
+   "t": 732330,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "target": "(86, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830429360
+  },
+  {
+   "v": 0,
+   "t": 732330,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830429361
+  },
+  {
+   "v": 0,
+   "t": 732340,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429380
+  },
+  {
+   "v": 0,
+   "t": 732340,
+   "type": "job_end",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830429381
+  },
+  {
+   "v": 0,
+   "t": 732345,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "GotoWander",
+   "target": "(92, 0, 116)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830429396
+  },
+  {
+   "v": 0,
+   "t": 732345,
+   "type": "job_end",
+   "pawn": 73122,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830429396
+  },
+  {
+   "v": 0,
+   "t": 732408,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429578
+  },
+  {
+   "v": 0,
+   "t": 732408,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830429578
+  },
+  {
+   "v": 0,
+   "t": 732412,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830429580
+  },
+  {
+   "v": 0,
+   "t": 732412,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830429580
+  },
+  {
+   "v": 0,
+   "t": 732478,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429764
+  },
+  {
+   "v": 0,
+   "t": 732478,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830429765
+  },
+  {
+   "v": 0,
+   "t": 732481,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429778
+  },
+  {
+   "v": 0,
+   "t": 732481,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830429779
+  },
+  {
+   "v": 0,
+   "t": 732483,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "target": "(92, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830429780
+  },
+  {
+   "v": 0,
+   "t": 732483,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830429780
+  },
+  {
+   "v": 0,
+   "t": 732485,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830429782
+  },
+  {
+   "v": 0,
+   "t": 732485,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830429782
+  },
+  {
+   "v": 0,
+   "t": 732497,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830429814
+  },
+  {
+   "v": 0,
+   "t": 732497,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830429814
+  },
+  {
+   "v": 0,
+   "t": 732502,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "GotoWander",
+   "target": "(89, 0, 123)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830429831
+  },
+  {
+   "v": 0,
+   "t": 732502,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830429831
+  },
+  {
+   "v": 0,
+   "t": 732577,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430045
+  },
+  {
+   "v": 0,
+   "t": 732582,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830430061
+  },
+  {
+   "v": 0,
+   "t": 732589,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430078
+  },
+  {
+   "v": 0,
+   "t": 732593,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830430082
+  },
+  {
+   "v": 0,
+   "t": 732682,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430330
+  },
+  {
+   "v": 0,
+   "t": 732684,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430344
+  },
+  {
+   "v": 0,
+   "t": 732687,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830430346
+  },
+  {
+   "v": 0,
+   "t": 732688,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830430347
+  },
+  {
+   "v": 0,
+   "t": 732707,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430396
+  },
+  {
+   "v": 0,
+   "t": 732712,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "GotoWander",
+   "target": "(90, 0, 114)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830430413
+  },
+  {
+   "v": 0,
+   "t": 732751,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430530
+  },
+  {
+   "v": 0,
+   "t": 732751,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830430530
+  },
+  {
+   "v": 0,
+   "t": 732753,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430530
+  },
+  {
+   "v": 0,
+   "t": 732753,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830430530
+  },
+  {
+   "v": 0,
+   "t": 732756,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830430544
+  },
+  {
+   "v": 0,
+   "t": 732756,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788830430545
+  },
+  {
+   "v": 0,
+   "t": 732758,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "target": "(94, 0, 116)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830430545
+  },
+  {
+   "v": 0,
+   "t": 732758,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788830430545
+  },
+  {
+   "v": 0,
+   "t": 732796,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430647
+  },
+  {
+   "v": 0,
+   "t": 732800,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830430662
+  },
+  {
+   "v": 0,
+   "t": 732805,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430678
+  },
+  {
+   "v": 0,
+   "t": 732810,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "target": "(92, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830430694
+  },
+  {
+   "v": 0,
+   "t": 732818,
+   "type": "interaction",
+   "initiator": 73093,
+   "recipient": 73128,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Adrian</color> chatted about life's annoyances with <color=#D09B61FF>Dan</color>.",
+   "rx": 1788830430712
+  },
+  {
+   "v": 0,
+   "t": 732832,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830430746
+  },
+  {
+   "v": 0,
+   "t": 732837,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "GotoWander",
+   "target": "(61, 0, 121)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830430763
+  },
+  {
+   "v": 0,
+   "t": 732947,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431077
+  },
+  {
+   "v": 0,
+   "t": 732952,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "GotoWander",
+   "target": "(85, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431080
+  },
+  {
+   "v": 0,
+   "t": 732978,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431162
+  },
+  {
+   "v": 0,
+   "t": 732983,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "target": "(87, 0, 117)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431177
+  },
+  {
+   "v": 0,
+   "t": 732986,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431180
+  },
+  {
+   "v": 0,
+   "t": 732991,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "GotoWander",
+   "target": "(95, 0, 113)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431197
+  },
+  {
+   "v": 0,
+   "t": 733053,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431362
+  },
+  {
+   "v": 0,
+   "t": 733057,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431378
+  },
+  {
+   "v": 0,
+   "t": 733063,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431396
+  },
+  {
+   "v": 0,
+   "t": 733067,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431410
+  },
+  {
+   "v": 0,
+   "t": 733085,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431460
+  },
+  {
+   "v": 0,
+   "t": 733090,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "GotoWander",
+   "target": "(95, 0, 111)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431463
+  },
+  {
+   "v": 0,
+   "t": 733104,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431534
+  },
+  {
+   "v": 0,
+   "t": 733107,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830431535
+  },
+  {
+   "v": 0,
+   "t": 733109,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431561
+  },
+  {
+   "v": 0,
+   "t": 733111,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431563
+  },
+  {
+   "v": 0,
+   "t": 733113,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431564
+  },
+  {
+   "v": 0,
+   "t": 733115,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431565
+  },
+  {
+   "v": 0,
+   "t": 733234,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431880
+  },
+  {
+   "v": 0,
+   "t": 733238,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431896
+  },
+  {
+   "v": 0,
+   "t": 733262,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431961
+  },
+  {
+   "v": 0,
+   "t": 733267,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "GotoWander",
+   "target": "(93, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431978
+  },
+  {
+   "v": 0,
+   "t": 733268,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830431979
+  },
+  {
+   "v": 0,
+   "t": 733273,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "GotoWander",
+   "target": "(89, 0, 124)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830431996
+  },
+  {
+   "v": 0,
+   "t": 733317,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432112
+  },
+  {
+   "v": 0,
+   "t": 733322,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "GotoWander",
+   "target": "(56, 0, 125)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788830432129
+  },
+  {
+   "v": 0,
+   "t": 733396,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432330
+  },
+  {
+   "v": 0,
+   "t": 733398,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432345
+  },
+  {
+   "v": 0,
+   "t": 733400,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830432346
+  },
+  {
+   "v": 0,
+   "t": 733403,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "GotoWander",
+   "target": "(94, 0, 111)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830432360
+  },
+  {
+   "v": 0,
+   "t": 733405,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432363
+  },
+  {
+   "v": 0,
+   "t": 733407,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432363
+  },
+  {
+   "v": 0,
+   "t": 733410,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "GotoWander",
+   "target": "(88, 0, 116)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830432378
+  },
+  {
+   "v": 0,
+   "t": 733412,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "GotoWander",
+   "target": "(83, 0, 119)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830432379
+  },
+  {
+   "v": 0,
+   "t": 733481,
+   "type": "mental_state",
+   "pawn": 73122,
+   "state": "social fighting",
+   "reason": null,
+   "rx": 1788830432584
+  },
+  {
+   "v": 0,
+   "t": 733481,
+   "type": "mental_state",
+   "pawn": 73102,
+   "state": "social fighting",
+   "reason": null,
+   "rx": 1788830432584
+  },
+  {
+   "v": 0,
+   "t": 733481,
+   "type": "interaction",
+   "initiator": 73102,
+   "recipient": 73122,
+   "def": "Insult",
+   "text": "<color=#D09B61FF>AJ</color> compared <color=#D09B61FF>Deccy</color>'s uncle to a hyena. This drove <color=#D09B61FF>Deccy</color> into a rage and he began a fight!",
+   "rx": 1788830432586
+  },
+  {
+   "v": 0,
+   "t": 733485,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "SocialFight",
+   "target": "Thing_Human73102",
+   "source": "JobGiver_SocialFighting",
+   "rx": 1788830432593
+  },
+  {
+   "v": 0,
+   "t": 733486,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "SocialFight",
+   "target": "Thing_Human73122",
+   "source": "JobGiver_SocialFighting",
+   "rx": 1788830432593
+  },
+  {
+   "v": 0,
+   "t": 733510,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432656
+  },
+  {
+   "v": 0,
+   "t": 733511,
+   "type": "hediff",
+   "pawn": 73122,
+   "def": "Bruise",
+   "part": "torso",
+   "severity": 8.011,
+   "rx": 1788830432679
+  },
+  {
+   "v": 0,
+   "t": 733511,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "SocialFight",
+   "target": "Thing_Human73102",
+   "source": "JobGiver_SocialFighting",
+   "rx": 1788830432680
+  },
+  {
+   "v": 0,
+   "t": 733511,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432686
+  },
+  {
+   "v": 0,
+   "t": 733511,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830432687
+  },
+  {
+   "v": 0,
+   "t": 733516,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "SocialFight",
+   "target": "Thing_Human73122",
+   "source": "JobGiver_SocialFighting",
+   "rx": 1788830432690
+  },
+  {
+   "v": 0,
+   "t": 733541,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432745
+  },
+  {
+   "v": 0,
+   "t": 733542,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788830432745
+  },
+  {
+   "v": 0,
+   "t": 733630,
+   "type": "hediff",
+   "pawn": 73102,
+   "def": "Bruise",
+   "part": "right arm",
+   "severity": 7.384,
+   "rx": 1788830432985
+  },
+  {
+   "v": 0,
+   "t": 733630,
+   "type": "hediff",
+   "pawn": 73102,
+   "def": "Crack",
+   "part": "right humerus",
+   "severity": 2.872,
+   "rx": 1788830432985
+  },
+  {
+   "v": 0,
+   "t": 733630,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830432986
+  },
+  {
+   "v": 0,
+   "t": 733631,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830433011
+  },
+  {
+   "v": 0,
+   "t": 733635,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "SocialFight",
+   "target": "Thing_Human73102",
+   "source": "JobGiver_SocialFighting",
+   "rx": 1788830433013
+  },
+  {
+   "v": 0,
+   "t": 733636,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "SocialFight",
+   "target": "Thing_Human73122",
+   "source": "JobGiver_SocialFighting",
+   "rx": 1788830433014
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 95,
-  "pawn_snapshot": 734,
-  "job_start": 405,
-  "job_end": 298,
-  "hediff": 5,
+  "world_snapshot": 107,
+  "pawn_snapshot": 878,
+  "job_start": 598,
+  "job_end": 386,
+  "hediff": 8,
   "letter": 4,
   "incident": 3,
-  "interaction": 18,
-  "mental_state": 1
+  "interaction": 24,
+  "mental_state": 3
  },
- "last_event_at": 1788830408.879123,
- "published_at": 1788830409
+ "last_event_at": 1788830433.014369,
+ "published_at": 1788830440
 }
