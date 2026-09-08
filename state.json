@@ -800,16 +800,6 @@
   {
    "v": 0,
    "t": 823130,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833837738
-  },
-  {
-   "v": 0,
-   "t": 823130,
    "type": "job_end",
    "pawn": 79464,
    "job": "Wait_Wander",
@@ -6219,10 +6209,15 @@
    "type": "mod_disconnected",
    "peer": "('127.0.0.1', 50763)",
    "rx": 1788833926070
+  },
+  {
+   "type": "mod_connected",
+   "peer": "('127.0.0.1', 50798)",
+   "rx": 1788833951320
   }
  ],
  "counts": {
-  "mod_connected": 3,
+  "mod_connected": 4,
   "hello": 3,
   "world_snapshot": 60,
   "pawn_snapshot": 720,
@@ -6235,6 +6230,6 @@
   "interaction": 20,
   "hediff": 7
  },
- "last_event_at": 1788833926.07066,
- "published_at": 1788833931
+ "last_event_at": 1788833951.320974,
+ "published_at": 1788833963
 }

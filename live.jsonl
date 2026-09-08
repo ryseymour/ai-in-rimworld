@@ -1753,3 +1753,4 @@
 {"v":0,"t":828164,"type":"job_start","pawn":79464,"job":"Wait_MaintainPosture","target":null,"source":null,"rx":1788833921655}
 {"v":0,"t":828167,"type":"job_start","pawn":79464,"job":"GotoWander","target":"(115, 0, 114)","source":"JobGiver_WanderNearDutyLocation","rx":1788833921706}
 {"type":"mod_disconnected","peer":"('127.0.0.1', 50763)","rx":1788833926070}
+{"type":"mod_connected","peer":"('127.0.0.1', 50798)","rx":1788833951320}
