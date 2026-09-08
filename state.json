@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 851750,
+  "t": 862500,
   "type": "world_snapshot",
   "date": "15th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 22769,
-  "colonists": 2,
-  "visitors": 10,
+  "wealth": 21314,
+  "colonists": 1,
+  "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788834594422
+  "rx": 1788834624274
  },
  "pawns": [
   {
    "v": 0,
-   "t": 851750,
+   "t": 855000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -39,7 +39,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.905,
+    "rest": 0.853,
     "joy": 0
    },
    "mood": 0,
@@ -89,7 +89,8 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788834594422
+   "rx": 1788834603461,
+   "dead": true
   },
   {
    "v": 0,
@@ -161,23 +162,23 @@
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 857500,
    "type": "pawn_snapshot",
    "id": 79429,
    "name": "Goabanbi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    119,
+    1,
     0,
-    120
+    117
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.834,
-    "rest": 0.295
+    "food": 0.606,
+    "rest": 0.227
    },
-   "mood": 0.591,
+   "mood": 0.52,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -192,16 +193,16 @@
      "mood": -15
     },
     {
+     "label": "Drowsy",
+     "mood": -6
+    },
+    {
      "label": "Observed corpse",
      "mood": -4
     },
     {
      "label": "Sweaty",
      "mood": -4
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
     }
    ],
    "health": "Injured",
@@ -232,27 +233,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788834594423
+   "rx": 1788834610390
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858000,
    "type": "pawn_snapshot",
    "id": 79449,
    "name": "Trocam",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    111,
+    8,
     0,
-    122
+    117
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.312
+    "food": 0.488,
+    "rest": 0.232
    },
-   "mood": 0.43,
+   "mood": 0.3,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -263,16 +264,20 @@
      "mood": -15
     },
     {
-     "label": "Sweaty",
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Drowsy",
+     "mood": -6
+    },
+    {
+     "label": "Observed corpse",
      "mood": -4
     },
     {
      "label": "Ate without table",
      "mood": -3
-    },
-    {
-     "label": "Wielding a steel spear (normal)",
-     "mood": 3
     }
    ],
    "health": "Injured",
@@ -295,43 +300,43 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788834594423
+   "rx": 1788834611777
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858750,
    "type": "pawn_snapshot",
    "id": 79454,
    "name": "Snail",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    113,
+    11,
     0,
-    124
+    115
    ],
-   "job": "wandering.",
+   "job": "standing.",
    "needs": {
-    "food": 0.652,
-    "rest": 0.294
+    "food": 0.468,
+    "rest": 0.213
    },
-   "mood": 0.686,
+   "mood": 0.56,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
     },
     {
+     "label": "Recluse alone",
+     "mood": 12
+    },
+    {
      "label": "Hot",
      "mood": -8
     },
     {
-     "label": "Recluse in small group",
-     "mood": 8
-    },
-    {
-     "label": "Beautiful fire x4",
-     "mood": 8
+     "label": "Drowsy",
+     "mood": -6
     },
     {
      "label": "Observed corpse",
@@ -363,27 +368,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788834594423
+   "rx": 1788834613857
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858250,
    "type": "pawn_snapshot",
    "id": 79459,
    "name": "Pelican",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    117,
+    7,
     0,
-    119
+    117
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.371
+    "food": 0.48,
+    "rest": 0.27
    },
-   "mood": 0.47,
+   "mood": 0.451,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -392,6 +397,10 @@
     {
      "label": "Hot",
      "mood": -8
+    },
+    {
+     "label": "Drowsy",
+     "mood": -6
     },
     {
      "label": "Observed corpse",
@@ -404,10 +413,6 @@
     {
      "label": "Undergrounder outdoors",
      "mood": -3
-    },
-    {
-     "label": "Wielding a steel spear (normal)",
-     "mood": 3
     }
    ],
    "health": "Healthy",
@@ -430,27 +435,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788834594423
+   "rx": 1788834612475
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858250,
    "type": "pawn_snapshot",
    "id": 79464,
    "name": "Blue",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    118,
+    4,
     0,
-    115
+    117
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.301
+    "food": 0.484,
+    "rest": 0.223
    },
-   "mood": 0.69,
+   "mood": 0.59,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -461,20 +466,20 @@
      "mood": 16
     },
     {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Drowsy",
+     "mood": -6
+    },
+    {
      "label": "Minor pain",
      "mood": -5
     },
     {
-     "label": "Sweaty",
-     "mood": -4
-    },
-    {
      "label": "Ate without table",
      "mood": -3
-    },
-    {
-     "label": "Wielding a recurve bow (poor 76%)",
-     "mood": 3
     }
    ],
    "health": "Healthy",
@@ -496,27 +501,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788834594423
+   "rx": 1788834612477
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858250,
    "type": "pawn_snapshot",
    "id": 79469,
    "name": "Red",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    108,
+    14,
     0,
-    121
+    117
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.828,
-    "rest": 0.371
+    "food": 0.57,
+    "rest": 0.271
    },
-   "mood": 0.51,
+   "mood": 0.456,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -525,6 +530,10 @@
     {
      "label": "Hot",
      "mood": -8
+    },
+    {
+     "label": "Drowsy",
+     "mood": -6
     },
     {
      "label": "Observed corpse",
@@ -537,10 +546,6 @@
     {
      "label": "Witnessed outsider's death",
      "mood": -3
-    },
-    {
-     "label": "Wielding a steel spear (normal)",
-     "mood": 3
     }
    ],
    "health": "Healthy",
@@ -569,27 +574,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788834594424
+   "rx": 1788834612477
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858000,
    "type": "pawn_snapshot",
    "id": 79474,
    "name": "Black",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    120,
+    12,
     0,
-    118
+    117
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.344
+    "food": 0.488,
+    "rest": 0.255
    },
-   "mood": 0.57,
+   "mood": 0.503,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -604,16 +609,16 @@
      "mood": -10
     },
     {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Drowsy",
+     "mood": -6
+    },
+    {
      "label": "Observed corpse",
      "mood": -4
-    },
-    {
-     "label": "Sweaty",
-     "mood": -4
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
     }
    ],
    "health": "Injured",
@@ -637,27 +642,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788834594424
+   "rx": 1788834611778
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858500,
    "type": "pawn_snapshot",
    "id": 79480,
    "name": "Green",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    107,
+    1,
     0,
-    121
+    116
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.283
+    "food": 0.476,
+    "rest": 0.207
    },
-   "mood": 0.62,
+   "mood": 0.53,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -672,16 +677,16 @@
      "mood": -8
     },
     {
+     "label": "Drowsy",
+     "mood": -6
+    },
+    {
      "label": "Observed corpse",
      "mood": -4
     },
     {
      "label": "Body modder frustrated",
      "mood": -4
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
     }
    ],
    "health": "Healthy",
@@ -710,34 +715,42 @@
     }
    ],
    "drafted": false,
-   "rx": 1788834594424
+   "rx": 1788834613172
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858250,
    "type": "pawn_snapshot",
    "id": 79494,
    "name": "Gumi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    112,
+    2,
     0,
-    112
+    119
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.652,
-    "rest": 0.366
+    "food": 0.48,
+    "rest": 0.268
    },
-   "mood": 0.52,
+   "mood": 0.416,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
     },
     {
-     "label": "Sweaty",
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Drowsy",
+     "mood": -6
+    },
+    {
+     "label": "Observed corpse",
      "mood": -4
     },
     {
@@ -747,14 +760,6 @@
     {
      "label": "Witnessed outsider's death",
      "mood": -3
-    },
-    {
-     "label": "Undergrounder outdoors",
-     "mood": -3
-    },
-    {
-     "label": "Wielding a short bow (poor)",
-     "mood": 3
     }
    ],
    "health": "Healthy",
@@ -784,38 +789,42 @@
     }
    ],
    "drafted": false,
-   "rx": 1788834594424
+   "rx": 1788834612478
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 858500,
    "type": "pawn_snapshot",
    "id": 79498,
    "name": "Chicken",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    120,
+    6,
     0,
     117
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.652,
-    "rest": 0.368
+    "food": 0.472,
+    "rest": 0.266
    },
-   "mood": 0.54,
+   "mood": 0.471,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
     },
     {
-     "label": "Observed corpse",
-     "mood": -4
+     "label": "Hot",
+     "mood": -8
     },
     {
-     "label": "Sweaty",
+     "label": "Drowsy",
+     "mood": -6
+    },
+    {
+     "label": "Observed corpse",
      "mood": -4
     },
     {
@@ -846,11 +855,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788834594424
+   "rx": 1788834613172
   },
   {
    "v": 0,
-   "t": 851750,
+   "t": 862500,
    "type": "pawn_snapshot",
    "id": 93450,
    "name": "Martin",
@@ -863,11 +872,11 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.214,
-    "rest": 0.974,
-    "joy": 0.401
+    "food": 0.095,
+    "rest": 0.803,
+    "joy": 0.701
    },
-   "mood": 0.409,
+   "mood": 0.348,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -882,15 +891,15 @@
      "mood": 16
     },
     {
+     "label": "Ravenously hungry",
+     "mood": -12
+    },
+    {
      "label": "Extremely comfortable",
      "mood": 8
     },
     {
-     "label": "Hungry",
-     "mood": -6
-    },
-    {
-     "label": "Unsightly environment",
+     "label": "Darkness",
      "mood": -5
     }
    ],
@@ -920,1200 +929,10 @@
     }
    ],
    "drafted": false,
-   "rx": 1788834594424
+   "rx": 1788834624275
   }
  ],
  "recent": [
-  {
-   "v": 0,
-   "t": 836337,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834378687
-  },
-  {
-   "v": 0,
-   "t": 836337,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "GotoWander",
-   "target": "(108, 0, 120)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834378688
-  },
-  {
-   "v": 0,
-   "t": 836337,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "GotoWander",
-   "target": "(117, 0, 118)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834378688
-  },
-  {
-   "v": 0,
-   "t": 836337,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "target": "(119, 0, 120)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834378689
-  },
-  {
-   "v": 0,
-   "t": 836338,
-   "type": "hediff",
-   "pawn": 79449,
-   "def": "Burn",
-   "part": "torso",
-   "severity": 10,
-   "rx": 1788834378691
-  },
-  {
-   "v": 0,
-   "t": 836339,
-   "type": "hediff",
-   "pawn": 79474,
-   "def": "Burn",
-   "part": "torso",
-   "severity": 5.75,
-   "rx": 1788834378693
-  },
-  {
-   "v": 0,
-   "t": 836339,
-   "type": "hediff",
-   "pawn": 35404,
-   "def": "Burn",
-   "part": "torso",
-   "severity": 5,
-   "rx": 1788834378694
-  },
-  {
-   "v": 0,
-   "t": 836340,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(106, 0, 124)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834378713
-  },
-  {
-   "v": 0,
-   "t": 836340,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834378713
-  },
-  {
-   "v": 0,
-   "t": 836340,
-   "type": "hediff",
-   "pawn": 79429,
-   "def": "Burn",
-   "part": "right leg",
-   "severity": 10,
-   "rx": 1788834378714
-  },
-  {
-   "v": 0,
-   "t": 836341,
-   "type": "job_start",
-   "pawn": 35404,
-   "job": "Wait_Downed",
-   "target": null,
-   "source": "JobGiver_IdleForever",
-   "rx": 1788834378714
-  },
-  {
-   "v": 0,
-   "t": 836343,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834378747
-  },
-  {
-   "v": 0,
-   "t": 836343,
-   "type": "hediff",
-   "pawn": 79429,
-   "def": "Burn",
-   "part": "torso",
-   "severity": 2,
-   "rx": 1788834378749
-  },
-  {
-   "v": 0,
-   "t": 836347,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834378814
-  },
-  {
-   "v": 0,
-   "t": 836352,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834378896
-  },
-  {
-   "v": 0,
-   "t": 836352,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "target": "(106, 0, 122)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834378896
-  },
-  {
-   "v": 0,
-   "t": 836355,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "GotoWander",
-   "target": "(116, 0, 124)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834378946
-  },
-  {
-   "v": 0,
-   "t": 836358,
-   "type": "hediff",
-   "pawn": 79474,
-   "def": "Burn",
-   "part": "torso",
-   "severity": 1.15,
-   "rx": 1788834378998
-  },
-  {
-   "v": 0,
-   "t": 836364,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834379096
-  },
-  {
-   "v": 0,
-   "t": 836365,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834379113
-  },
-  {
-   "v": 0,
-   "t": 836379,
-   "type": "hediff",
-   "pawn": 79449,
-   "def": "Burn",
-   "part": "right foot",
-   "severity": 2,
-   "rx": 1788834379347
-  },
-  {
-   "v": 0,
-   "t": 836394,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834379596
-  },
-  {
-   "v": 0,
-   "t": 836395,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834379618
-  },
-  {
-   "v": 0,
-   "t": 836428,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834380163
-  },
-  {
-   "v": 0,
-   "t": 836431,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "GotoWander",
-   "target": "(118, 0, 118)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834380213
-  },
-  {
-   "v": 0,
-   "t": 836444,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834380429
-  },
-  {
-   "v": 0,
-   "t": 836447,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834380480
-  },
-  {
-   "v": 0,
-   "t": 836461,
-   "type": "hediff",
-   "pawn": 35404,
-   "def": "Burn",
-   "part": "right leg",
-   "severity": 1,
-   "rx": 1788834380713
-  },
-  {
-   "v": 0,
-   "t": 836490,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834381196
-  },
-  {
-   "v": 0,
-   "t": 836490,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834381196
-  },
-  {
-   "v": 0,
-   "t": 836493,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834381246
-  },
-  {
-   "v": 0,
-   "t": 836493,
-   "type": "hediff",
-   "pawn": 79429,
-   "def": "Burn",
-   "part": "right shoulder",
-   "severity": 2,
-   "rx": 1788834381247
-  },
-  {
-   "v": 0,
-   "t": 836508,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834381496
-  },
-  {
-   "v": 0,
-   "t": 836508,
-   "type": "hediff",
-   "pawn": 79474,
-   "def": "Burn",
-   "part": "jaw",
-   "severity": 1.15,
-   "rx": 1788834381497
-  },
-  {
-   "v": 0,
-   "t": 836511,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(107, 0, 118)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834381547
-  },
-  {
-   "v": 0,
-   "t": 836519,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834381679
-  },
-  {
-   "v": 0,
-   "t": 836520,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834381696
-  },
-  {
-   "v": 0,
-   "t": 836526,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834381796
-  },
-  {
-   "v": 0,
-   "t": 836529,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "GotoWander",
-   "target": "(120, 0, 120)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834381846
-  },
-  {
-   "v": 0,
-   "t": 836529,
-   "type": "hediff",
-   "pawn": 79449,
-   "def": "Burn",
-   "part": "left leg",
-   "severity": 1,
-   "rx": 1788834381846
-  },
-  {
-   "v": 0,
-   "t": 836561,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834382379
-  },
-  {
-   "v": 0,
-   "t": 836563,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834382413
-  },
-  {
-   "v": 0,
-   "t": 836564,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "GotoWander",
-   "target": "(119, 0, 120)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834382430
-  },
-  {
-   "v": 0,
-   "t": 836566,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "GotoWander",
-   "target": "(113, 0, 120)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834382463
-  },
-  {
-   "v": 0,
-   "t": 836601,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834383046
-  },
-  {
-   "v": 0,
-   "t": 836604,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834383096
-  },
-  {
-   "v": 0,
-   "t": 836611,
-   "type": "hediff",
-   "pawn": 35404,
-   "def": "Burn",
-   "part": "right shoulder",
-   "severity": 1,
-   "rx": 1788834383213
-  },
-  {
-   "v": 0,
-   "t": 836613,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834383246
-  },
-  {
-   "v": 0,
-   "t": 836616,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(112, 0, 117)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834383296
-  },
-  {
-   "v": 0,
-   "t": 836619,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834383346
-  },
-  {
-   "v": 0,
-   "t": 836622,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834383396
-  },
-  {
-   "v": 0,
-   "t": 836634,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834383596
-  },
-  {
-   "v": 0,
-   "t": 836637,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "GotoWander",
-   "target": "(117, 0, 116)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834383646
-  },
-  {
-   "v": 0,
-   "t": 836638,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834383663
-  },
-  {
-   "v": 0,
-   "t": 836641,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834383713
-  },
-  {
-   "v": 0,
-   "t": 836643,
-   "type": "hediff",
-   "pawn": 79429,
-   "def": "Burn",
-   "part": "left leg",
-   "severity": 2,
-   "rx": 1788834383747
-  },
-  {
-   "v": 0,
-   "t": 836647,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834383813
-  },
-  {
-   "v": 0,
-   "t": 836650,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "GotoWander",
-   "target": "(111, 0, 118)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834383863
-  },
-  {
-   "v": 0,
-   "t": 836654,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834383931
-  },
-  {
-   "v": 0,
-   "t": 836655,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834383947
-  },
-  {
-   "v": 0,
-   "t": 836658,
-   "type": "hediff",
-   "pawn": 79474,
-   "def": "Burn",
-   "part": "right leg",
-   "severity": 2.3,
-   "rx": 1788834383998
-  },
-  {
-   "v": 0,
-   "t": 836667,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834384146
-  },
-  {
-   "v": 0,
-   "t": 836670,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "target": "(106, 0, 120)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834384196
-  },
-  {
-   "v": 0,
-   "t": 836679,
-   "type": "hediff",
-   "pawn": 79449,
-   "def": "Burn",
-   "part": "right arm",
-   "severity": 2,
-   "rx": 1788834384348
-  },
-  {
-   "v": 0,
-   "t": 836682,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834384397
-  },
-  {
-   "v": 0,
-   "t": 836685,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "GotoWander",
-   "target": "(112, 0, 112)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834384446
-  },
-  {
-   "v": 0,
-   "t": 836693,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834384579
-  },
-  {
-   "v": 0,
-   "t": 836694,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834384596
-  },
-  {
-   "v": 0,
-   "t": 836695,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834384612
-  },
-  {
-   "v": 0,
-   "t": 836697,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834384646
-  },
-  {
-   "v": 0,
-   "t": 836703,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834384748
-  },
-  {
-   "v": 0,
-   "t": 836706,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(107, 0, 113)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834384796
-  },
-  {
-   "v": 0,
-   "t": 836706,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834384797
-  },
-  {
-   "v": 0,
-   "t": 836709,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "target": "(107, 0, 117)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834384846
-  },
-  {
-   "v": 0,
-   "t": 836724,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834385096
-  },
-  {
-   "v": 0,
-   "t": 836727,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834385148
-  },
-  {
-   "v": 0,
-   "t": 836736,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834385296
-  },
-  {
-   "v": 0,
-   "t": 836739,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "GotoWander",
-   "target": "(118, 0, 120)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834385346
-  },
-  {
-   "v": 0,
-   "t": 836747,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834385480
-  },
-  {
-   "v": 0,
-   "t": 836748,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834385496
-  },
-  {
-   "v": 0,
-   "t": 836757,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834385646
-  },
-  {
-   "v": 0,
-   "t": 836759,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834385679
-  },
-  {
-   "v": 0,
-   "t": 836760,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "target": "(108, 0, 120)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834385695
-  },
-  {
-   "v": 0,
-   "t": 836761,
-   "type": "hediff",
-   "pawn": 35404,
-   "def": "Burn",
-   "part": "left leg",
-   "severity": 1,
-   "rx": 1788834385713
-  },
-  {
-   "v": 0,
-   "t": 836762,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834385730
-  },
-  {
-   "v": 0,
-   "t": 836762,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834385730
-  },
-  {
-   "v": 0,
-   "t": 836763,
-   "type": "job_start",
-   "pawn": 79498,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834385746
-  },
-  {
-   "v": 0,
-   "t": 836765,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834385780
-  },
-  {
-   "v": 0,
-   "t": 836768,
-   "type": "job_start",
-   "pawn": 79469,
-   "job": "GotoWander",
-   "target": "(114, 0, 123)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834385829
-  },
-  {
-   "v": 0,
-   "t": 836793,
-   "type": "hediff",
-   "pawn": 79429,
-   "def": "Burn",
-   "part": "left arm",
-   "severity": 2,
-   "rx": 1788834386247
-  },
-  {
-   "v": 0,
-   "t": 836798,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386331
-  },
-  {
-   "v": 0,
-   "t": 836799,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834386348
-  },
-  {
-   "v": 0,
-   "t": 836800,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386362
-  },
-  {
-   "v": 0,
-   "t": 836802,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834386396
-  },
-  {
-   "v": 0,
-   "t": 836806,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386463
-  },
-  {
-   "v": 0,
-   "t": 836808,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834386496
-  },
-  {
-   "v": 0,
-   "t": 836808,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386496
-  },
-  {
-   "v": 0,
-   "t": 836808,
-   "type": "hediff",
-   "pawn": 79474,
-   "def": "Burn",
-   "part": "left index finger",
-   "severity": 2.3,
-   "rx": 1788834386497
-  },
-  {
-   "v": 0,
-   "t": 836811,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386546
-  },
-  {
-   "v": 0,
-   "t": 836811,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "GotoWander",
-   "target": "(112, 0, 118)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834386546
-  },
-  {
-   "v": 0,
-   "t": 836814,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(108, 0, 113)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834386596
-  },
-  {
-   "v": 0,
-   "t": 836817,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386646
-  },
-  {
-   "v": 0,
-   "t": 836818,
-   "type": "job_start",
-   "pawn": 79454,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834386663
-  },
-  {
-   "v": 0,
-   "t": 836820,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386696
-  },
-  {
-   "v": 0,
-   "t": 836820,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386697
-  },
-  {
-   "v": 0,
-   "t": 836821,
-   "type": "job_start",
-   "pawn": 79459,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834386713
-  },
-  {
-   "v": 0,
-   "t": 836823,
-   "type": "job_start",
-   "pawn": 79429,
-   "job": "GotoWander",
-   "target": "(122, 0, 125)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834386747
-  },
-  {
-   "v": 0,
-   "t": 836828,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834386829
-  },
-  {
-   "v": 0,
-   "t": 836829,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834386846
-  },
-  {
-   "v": 0,
-   "t": 836829,
-   "type": "hediff",
-   "pawn": 79449,
-   "def": "Burn",
-   "part": "left ear",
-   "severity": 2,
-   "rx": 1788834386846
-  },
-  {
-   "v": 0,
-   "t": 836841,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834387046
-  },
-  {
-   "v": 0,
-   "t": 836844,
-   "type": "job_start",
-   "pawn": 79449,
-   "job": "GotoWander",
-   "target": "(113, 0, 114)",
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834387096
-  },
-  {
-   "v": 0,
-   "t": 836864,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834387430
-  },
-  {
-   "v": 0,
-   "t": 836865,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_RunRandom",
-   "rx": 1788834387446
-  },
-  {
-   "v": 0,
-   "t": 836872,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834387563
-  },
-  {
-   "v": 0,
-   "t": 836874,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788834387596
-  },
-  {
-   "v": 0,
-   "t": 836875,
-   "type": "job_start",
-   "pawn": 79480,
-   "job": "GotoWander",
-   "target": "(109, 0, 114)",
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788834387614
-  },
-  {
-   "v": 0,
-   "t": 836877,
-   "type": "job_start",
-   "pawn": 79474,
-   "job": "ExtinguishSelf",
-   "target": "Thing_Fire93608",
-   "source": "JobGiver_ExtinguishSelf",
-   "rx": 1788834387646
-  },
-  {
-   "v": 0,
-   "t": 836911,
-   "type": "hediff",
-   "pawn": 35404,
-   "def": "Burn",
-   "part": "right leg",
-   "severity": 1,
-   "rx": 1788834388213
-  },
   {
    "v": 0,
    "t": 836915,
@@ -6368,25 +5187,1215 @@
    "def": "Chitchat",
    "text": "<color=#D09B61FF>Pelican</color> chatted about poker with <color=#D09B61FF>Blue</color>.",
    "rx": 1788834590972
+  },
+  {
+   "v": 0,
+   "t": 852000,
+   "type": "job_noise",
+   "total": 116,
+   "counts": {
+    "Wait_MaintainPosture": 58,
+    "Wait_Wander": 27,
+    "GotoWander": 31
+   },
+   "rx": 1788834595111
+  },
+  {
+   "v": 0,
+   "t": 852388,
+   "type": "interaction",
+   "initiator": 79480,
+   "recipient": 79498,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Green</color> talked about practicing roulette with <color=#D09B61FF>Chicken</color>.",
+   "rx": 1788834596192
+  },
+  {
+   "v": 0,
+   "t": 853105,
+   "type": "interaction",
+   "initiator": 79454,
+   "recipient": 79464,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Snail</color> joked about creeks with <color=#D09B61FF>Blue</color>.",
+   "rx": 1788834598188
+  },
+  {
+   "v": 0,
+   "t": 854000,
+   "type": "job_noise",
+   "total": 132,
+   "counts": {
+    "Wait_MaintainPosture": 66,
+    "Wait_Wander": 35,
+    "GotoWander": 31
+   },
+   "rx": 1788834600677
+  },
+  {
+   "v": 0,
+   "t": 854346,
+   "type": "interaction",
+   "initiator": 79498,
+   "recipient": 79449,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Chicken</color> chatted about lunchtime with <color=#D09B61FF>Trocam</color>.",
+   "rx": 1788834601625
+  },
+  {
+   "v": 0,
+   "t": 854864,
+   "type": "interaction",
+   "initiator": 79464,
+   "recipient": 79459,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Blue</color> and <color=#D09B61FF>Pelican</color> joked about learning craps.",
+   "rx": 1788834603072
+  },
+  {
+   "v": 0,
+   "t": 854980,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 123)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834603398
+  },
+  {
+   "v": 0,
+   "t": 854980,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Goto",
+   "condition": "InterruptForced",
+   "rx": 1788834603398
+  },
+  {
+   "v": 0,
+   "t": 855102,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 126)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834603726
+  },
+  {
+   "v": 0,
+   "t": 855102,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788834603726
+  },
+  {
+   "v": 0,
+   "t": 855132,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79448",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834603808
+  },
+  {
+   "v": 0,
+   "t": 855132,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "FollowClose",
+   "condition": "Succeeded",
+   "rx": 1788834603808
+  },
+  {
+   "v": 0,
+   "t": 855147,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834603856
+  },
+  {
+   "v": 0,
+   "t": 855175,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834603938
+  },
+  {
+   "v": 0,
+   "t": 855186,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834603958
+  },
+  {
+   "v": 0,
+   "t": 855199,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834604004
+  },
+  {
+   "v": 0,
+   "t": 855222,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 127)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834604057
+  },
+  {
+   "v": 0,
+   "t": 855227,
+   "type": "letter",
+   "label": "Primary ideoligion changed",
+   "text": "Your faction's primary ideoligion has changed from (*Ideo=Ideo_12)Man-Pasturism(/Ideo) to (*Ideo=Ideo_8)Archonic Academy(/Ideo).\n\nThis happened because (*Ideo=Ideo_8)Archonic Academy(/Ideo) is now more common among your colonists than any other ideoligion.\n\nYour primary ideoligion affects relationships with other factions, based on how closely your beliefs align with theirs.",
+   "def": "NeutralEvent",
+   "rx": 1788834604079
+  },
+  {
+   "v": 0,
+   "t": 855227,
+   "type": "letter",
+   "label": "(*Ideo=Ideo_8)Archonic Academy(/Ideo) rituals activated",
+   "text": "Since (*Ideo=Ideo_8)Archonic Academy(/Ideo) is now the primary ideoligion of your faction, Mankindists will demand that the rituals of (*Ideo=Ideo_8)Archonic Academy(/Ideo) be carried out.",
+   "def": "NeutralEvent",
+   "rx": 1788834604079
+  },
+  {
+   "v": 0,
+   "t": 855227,
+   "type": "letter",
+   "label": "Death: Zeke",
+   "text": "(*Name)Zeke(/Name) has died. Cause: Malnutrition.\n\n(*Name)Zeke(/Name) should be buried and given a funeral so his friends and family can say farewell.",
+   "def": "Death",
+   "rx": 1788834604080
+  },
+  {
+   "v": 0,
+   "t": 855227,
+   "type": "death",
+   "pawn": 948,
+   "cause": null,
+   "killer": null,
+   "rx": 1788834604080
+  },
+  {
+   "v": 0,
+   "t": 855232,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834604106
+  },
+  {
+   "v": 0,
+   "t": 855293,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834604257
+  },
+  {
+   "v": 0,
+   "t": 855296,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834604272
+  },
+  {
+   "v": 0,
+   "t": 855332,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834604372
+  },
+  {
+   "v": 0,
+   "t": 855342,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 127)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834604390
+  },
+  {
+   "v": 0,
+   "t": 855462,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 127)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834604724
+  },
+  {
+   "v": 0,
+   "t": 855582,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 127)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834605058
+  },
+  {
+   "v": 0,
+   "t": 855702,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 124)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834605391
+  },
+  {
+   "v": 0,
+   "t": 855822,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 121)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834605723
+  },
+  {
+   "v": 0,
+   "t": 855942,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 121)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834606058
+  },
+  {
+   "v": 0,
+   "t": 856000,
+   "type": "job_noise",
+   "total": 91,
+   "counts": {
+    "Wait_MaintainPosture": 42,
+    "GotoWander": 26,
+    "Wait_Wander": 23
+   },
+   "rx": 1788834606227
+  },
+  {
+   "v": 0,
+   "t": 856055,
+   "type": "interaction",
+   "initiator": 79494,
+   "recipient": 79459,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Gumi</color> made a comment about comfortable furniture to <color=#D09B61FF>Pelican</color>.",
+   "rx": 1788834606375
+  },
+  {
+   "v": 0,
+   "t": 856057,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834606389
+  },
+  {
+   "v": 0,
+   "t": 856062,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 121)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834606392
+  },
+  {
+   "v": 0,
+   "t": 856143,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834606624
+  },
+  {
+   "v": 0,
+   "t": 856182,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 121)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834606725
+  },
+  {
+   "v": 0,
+   "t": 856182,
+   "type": "interaction",
+   "initiator": 79429,
+   "recipient": 79454,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Goabanbi</color> chatted about fine meals with <color=#D09B61FF>Snail</color>.",
+   "rx": 1788834606726
+  },
+  {
+   "v": 0,
+   "t": 856205,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834606791
+  },
+  {
+   "v": 0,
+   "t": 856248,
+   "type": "hediff",
+   "pawn": 79474,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788834606907
+  },
+  {
+   "v": 0,
+   "t": 856263,
+   "type": "hediff",
+   "pawn": 79449,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788834606955
+  },
+  {
+   "v": 0,
+   "t": 856302,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834607057
+  },
+  {
+   "v": 0,
+   "t": 856422,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834607390
+  },
+  {
+   "v": 0,
+   "t": 856512,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834607641
+  },
+  {
+   "v": 0,
+   "t": 856540,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834607722
+  },
+  {
+   "v": 0,
+   "t": 856542,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834607724
+  },
+  {
+   "v": 0,
+   "t": 856600,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79448",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834607890
+  },
+  {
+   "v": 0,
+   "t": 856610,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834607922
+  },
+  {
+   "v": 0,
+   "t": 856625,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834607957
+  },
+  {
+   "v": 0,
+   "t": 856662,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834608068
+  },
+  {
+   "v": 0,
+   "t": 856662,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788834608068
+  },
+  {
+   "v": 0,
+   "t": 856777,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834608388
+  },
+  {
+   "v": 0,
+   "t": 856782,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834608391
+  },
+  {
+   "v": 0,
+   "t": 856784,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Pray",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_GetJoyInBed",
+   "rx": 1788834608410
+  },
+  {
+   "v": 0,
+   "t": 856902,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834608724
+  },
+  {
+   "v": 0,
+   "t": 857005,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79448",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834609031
+  },
+  {
+   "v": 0,
+   "t": 857022,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834609057
+  },
+  {
+   "v": 0,
+   "t": 857142,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834609390
+  },
+  {
+   "v": 0,
+   "t": 857142,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788834609390
+  },
+  {
+   "v": 0,
+   "t": 857262,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834609725
+  },
+  {
+   "v": 0,
+   "t": 857290,
+   "type": "interaction",
+   "initiator": 79454,
+   "recipient": 79464,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Snail</color> said a word about cooking with gourds to <color=#D09B61FF>Blue</color>.",
+   "rx": 1788834609807
+  },
+  {
+   "v": 0,
+   "t": 857382,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834610058
+  },
+  {
+   "v": 0,
+   "t": 857465,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834610290
+  },
+  {
+   "v": 0,
+   "t": 857478,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79447",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834610324
+  },
+  {
+   "v": 0,
+   "t": 857502,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834610392
+  },
+  {
+   "v": 0,
+   "t": 857523,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79448",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834610452
+  },
+  {
+   "v": 0,
+   "t": 857548,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79448",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834610523
+  },
+  {
+   "v": 0,
+   "t": 857548,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "FollowClose",
+   "condition": "Succeeded",
+   "rx": 1788834610523
+  },
+  {
+   "v": 0,
+   "t": 857603,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79448",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834610674
+  },
+  {
+   "v": 0,
+   "t": 857603,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "FollowClose",
+   "target": "Thing_Muffalo79448",
+   "source": "JobGiver_AIFollowEscortee",
+   "rx": 1788834610674
+  },
+  {
+   "v": 0,
+   "t": 857622,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834610724
+  },
+  {
+   "v": 0,
+   "t": 857622,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834610725
+  },
+  {
+   "v": 0,
+   "t": 857622,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Goto",
+   "target": "(0, 0, 115)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834610725
+  },
+  {
+   "v": 0,
+   "t": 857622,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834610725
+  },
+  {
+   "v": 0,
+   "t": 857687,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Goto",
+   "target": "(0, 0, 115)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834610908
+  },
+  {
+   "v": 0,
+   "t": 857763,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611122
+  },
+  {
+   "v": 0,
+   "t": 857788,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611189
+  },
+  {
+   "v": 0,
+   "t": 857789,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611190
+  },
+  {
+   "v": 0,
+   "t": 857808,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611241
+  },
+  {
+   "v": 0,
+   "t": 857852,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Goto",
+   "target": "(0, 0, 116)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611372
+  },
+  {
+   "v": 0,
+   "t": 857855,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611374
+  },
+  {
+   "v": 0,
+   "t": 857871,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Goto",
+   "target": "(0, 0, 115)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611422
+  },
+  {
+   "v": 0,
+   "t": 857883,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611456
+  },
+  {
+   "v": 0,
+   "t": 857902,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611506
+  },
+  {
+   "v": 0,
+   "t": 857908,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611523
+  },
+  {
+   "v": 0,
+   "t": 857928,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611574
+  },
+  {
+   "v": 0,
+   "t": 857972,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611706
+  },
+  {
+   "v": 0,
+   "t": 857975,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611708
+  },
+  {
+   "v": 0,
+   "t": 857984,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611738
+  },
+  {
+   "v": 0,
+   "t": 858000,
+   "type": "job_noise",
+   "total": 32,
+   "counts": {
+    "Wait_MaintainPosture": 20,
+    "Wait_Wander": 7,
+    "GotoWander": 5
+   },
+   "rx": 1788834611779
+  },
+  {
+   "v": 0,
+   "t": 858003,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611789
+  },
+  {
+   "v": 0,
+   "t": 858006,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Goto",
+   "target": "(0, 0, 116)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611791
+  },
+  {
+   "v": 0,
+   "t": 858028,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611857
+  },
+  {
+   "v": 0,
+   "t": 858048,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611907
+  },
+  {
+   "v": 0,
+   "t": 858067,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834611971
+  },
+  {
+   "v": 0,
+   "t": 858092,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612038
+  },
+  {
+   "v": 0,
+   "t": 858095,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612040
+  },
+  {
+   "v": 0,
+   "t": 858104,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612072
+  },
+  {
+   "v": 0,
+   "t": 858123,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612122
+  },
+  {
+   "v": 0,
+   "t": 858126,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612124
+  },
+  {
+   "v": 0,
+   "t": 858148,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612189
+  },
+  {
+   "v": 0,
+   "t": 858168,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Goto",
+   "target": "(0, 0, 116)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612241
+  },
+  {
+   "v": 0,
+   "t": 858187,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612305
+  },
+  {
+   "v": 0,
+   "t": 858212,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612373
+  },
+  {
+   "v": 0,
+   "t": 858215,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612374
+  },
+  {
+   "v": 0,
+   "t": 858224,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612405
+  },
+  {
+   "v": 0,
+   "t": 858246,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Goto",
+   "target": "(0, 0, 119)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612458
+  },
+  {
+   "v": 0,
+   "t": 858268,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Goto",
+   "target": "(0, 0, 118)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612523
+  },
+  {
+   "v": 0,
+   "t": 858307,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612638
+  },
+  {
+   "v": 0,
+   "t": 858332,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612705
+  },
+  {
+   "v": 0,
+   "t": 858366,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612791
+  },
+  {
+   "v": 0,
+   "t": 858388,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834612856
+  },
+  {
+   "v": 0,
+   "t": 858452,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Goto",
+   "target": "(0, 0, 116)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834613038
+  },
+  {
+   "v": 0,
+   "t": 858486,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Goto",
+   "target": "(0, 0, 117)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834613125
+  },
+  {
+   "v": 0,
+   "t": 858760,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Goto",
+   "target": "(0, 0, 115)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834613889
+  },
+  {
+   "v": 0,
+   "t": 858925,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Goto",
+   "target": "(0, 0, 116)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788834614354
+  },
+  {
+   "v": 0,
+   "t": 859785,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "ThinkNode_QueuedJob",
+   "rx": 1788834616749
+  },
+  {
+   "v": 0,
+   "t": 860000,
+   "type": "job_noise",
+   "total": 2,
+   "counts": {
+    "Wait_MaintainPosture": 2
+   },
+   "rx": 1788834617342
+  },
+  {
+   "v": 0,
+   "t": 862614,
+   "type": "command_result",
+   "id": "c-68",
+   "ok": true,
+   "data": {
+    "speed": 0,
+    "paused": true
+   },
+   "rx": 1788834624604
   }
  ],
  "counts": {
   "mod_connected": 5,
   "hello": 5,
-  "world_snapshot": 157,
-  "pawn_snapshot": 1951,
-  "job_start": 1464,
-  "job_end": 632,
-  "command_result": 67,
-  "letter": 4,
+  "world_snapshot": 200,
+  "pawn_snapshot": 2266,
+  "job_start": 1558,
+  "job_end": 638,
+  "command_result": 68,
+  "letter": 7,
   "mental_state": 1,
   "mod_disconnected": 4,
-  "interaction": 51,
-  "hediff": 99,
+  "interaction": 58,
+  "hediff": 101,
   "incident": 2,
-  "job_noise": 6,
-  "death": 1
+  "job_noise": 11,
+  "death": 2
  },
- "last_event_at": 1788834594.4248881,
- "published_at": 1788834594
+ "last_event_at": 1788834624.6046112,
+ "published_at": 1788834626
 }
