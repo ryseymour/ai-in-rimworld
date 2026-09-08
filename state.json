@@ -1,52 +1,189 @@
 {
  "hello": {
   "v": 0,
-  "t": 862615,
+  "t": 810618,
   "type": "hello",
   "mod_version": "0.1.0",
   "game_version": "1.6.4871 rev597",
   "map_id": 2,
-  "rx": 1788835317736
+  "rx": 1788843042351
  },
  "world": {
   "v": 0,
-  "t": 1226250,
+  "t": 815500,
   "type": "world_snapshot",
-  "date": "6th of Jugust, 5500",
+  "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 19089,
-  "colonists": 0,
-  "visitors": 1,
+  "wealth": 23001,
+  "colonists": 3,
+  "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788843033994
+  "rx": 1788845984562
  },
  "pawns": [
   {
    "v": 0,
-   "t": 936750,
+   "t": 815500,
    "type": "pawn_snapshot",
-   "id": 93450,
-   "name": "Martin",
+   "id": 948,
+   "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    90,
+    104,
     0,
-    106
+    109
    ],
-   "job": "downed, unconscious.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.108,
-    "joy": 0.591
+    "rest": 0.88,
+    "joy": 0
    },
-   "mood": 0.322,
+   "mood": 0,
    "thoughts": [
+    {
+     "label": "Advanced starvation",
+     "mood": -38
+    },
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Recreation-starved",
+     "mood": -20
+    },
+    {
+     "label": "Serious pain",
+     "mood": -10
+    },
+    {
+     "label": "Quite comfortable",
+     "mood": 6
+    },
+    {
+     "label": "Initial hope",
+     "mood": 5
+    }
+   ],
+   "health": "Injured",
+   "skills": {
+    "Construction": 1,
+    "Mining": 2,
+    "Cooking": 8,
+    "Plants": 14,
+    "Animals": 1,
+    "Crafting": 6,
+    "Artistic": 2,
+    "Medicine": 4,
+    "Social": 0,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Cannibal",
+    "Steadfast",
+    "Gay"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788845984563
+  },
+  {
+   "v": 0,
+   "t": 815500,
+   "type": "pawn_snapshot",
+   "id": 835,
+   "name": "Shun",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    104,
+    0,
+    103
+   ],
+   "job": "resting.",
+   "needs": {
+    "food": 0,
+    "rest": 0.836,
+    "joy": 0.289
+   },
+   "mood": 0.18,
+   "thoughts": [
+    {
+     "label": "Catharsis",
+     "mood": 40
+    },
     {
      "label": "Starving",
      "mood": -32
+    },
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Mind-shattering pain",
+     "mood": -20
+    },
+    {
+     "label": "Initial hope",
+     "mood": 5
+    },
+    {
+     "label": "Rebuffed by Zeke",
+     "mood": -5
+    }
+   ],
+   "health": "Unconscious",
+   "skills": {
+    "Shooting": 1,
+    "Melee": 1,
+    "Construction": 1,
+    "Mining": 2,
+    "Cooking": 6,
+    "Plants": 9,
+    "Animals": 3,
+    "Crafting": 11,
+    "Artistic": 5,
+    "Medicine": 11,
+    "Social": 0,
+    "Intellectual": 8
+   },
+   "traits": [
+    "Psychopath",
+    "Gourmand",
+    "Gay"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788845984563
+  },
+  {
+   "v": 0,
+   "t": 815500,
+   "type": "pawn_snapshot",
+   "id": 35404,
+   "name": "Lau",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    104,
+    0,
+    123
+   ],
+   "job": "wandering.",
+   "needs": {
+    "food": 0,
+    "rest": 0.539
+   },
+   "mood": 0,
+   "thoughts": [
+    {
+     "label": "Badly malnourished",
+     "mood": -26
     },
     {
      "label": "Very low expectations",
@@ -57,110 +194,39 @@
      "mood": -15
     },
     {
-     "label": "Tired",
+     "label": "Sweltering hot",
      "mood": -12
     },
     {
-     "label": "Colonist left unburied",
-     "mood": -10
-    },
-    {
-     "label": "Unsightly environment",
-     "mood": -5
-    }
-   ],
-   "health": "Unconscious",
-   "skills": {
-    "Shooting": 14,
-    "Melee": 1,
-    "Construction": 0,
-    "Mining": 0,
-    "Cooking": 4,
-    "Plants": 3,
-    "Animals": 1,
-    "Crafting": 10,
-    "Artistic": 0,
-    "Medicine": 9,
-    "Social": 3,
-    "Intellectual": 4
-   },
-   "traits": [
-    "Sickly"
-   ],
-   "relations": [
-    {
-     "other": "Zekai",
-     "kind": "father",
-     "opinion": 30
-    }
-   ],
-   "drafted": false,
-   "rx": 1788835445409,
-   "dead": true
-  },
-  {
-   "v": 0,
-   "t": 1226250,
-   "type": "pawn_snapshot",
-   "id": 160280,
-   "name": "Croirobi",
-   "faction": null,
-   "kind": "visitor",
-   "pos": [
-    206,
-    0,
-    68
-   ],
-   "job": "wandering.",
-   "needs": {
-    "food": 0.56,
-    "rest": 0.396
-   },
-   "mood": 0.41,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Ate raw food",
-     "mood": -7
-    },
-    {
-     "label": "Ate fungus raw",
+     "label": "I am disliked xenotype",
      "mood": -6
     },
     {
-     "label": "Uncovered groin/chest",
-     "mood": -4
-    },
-    {
-     "label": "Sweaty",
-     "mood": -4
+     "label": "Darkness",
+     "mood": -5
     }
    ],
-   "health": "Healthy",
+   "health": "Injured",
    "skills": {
-    "Shooting": 5,
-    "Melee": 5,
+    "Shooting": 0,
+    "Melee": 1,
     "Construction": 0,
-    "Mining": 1,
+    "Mining": 0,
     "Cooking": 0,
-    "Plants": 0,
-    "Animals": 6,
-    "Crafting": 4,
-    "Artistic": 12,
-    "Social": 0,
-    "Intellectual": 3
+    "Plants": 1,
+    "Animals": 2,
+    "Crafting": 2,
+    "Artistic": 3,
+    "Medicine": 1,
+    "Social": 2
    },
    "traits": [
-    "Trigger-happy",
-    "Annoying voice",
-    "Greedy"
+    "Misogynist",
+    "Tough"
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788843033995
+   "rx": 1788845984564
   }
  ],
  "recent": [
@@ -1889,22 +1955,81 @@
     "note": "load started; poll ping until in_game is true"
    },
    "rx": 1788843034245
+  },
+  {
+   "v": 0,
+   "t": 810618,
+   "type": "hello",
+   "mod_version": "0.1.0",
+   "game_version": "1.6.4871 rev597",
+   "map_id": 2,
+   "rx": 1788843042351
+  },
+  {
+   "v": 0,
+   "t": 810695,
+   "type": "command_result",
+   "id": "c-12",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 810695,
+    "paused": false,
+    "in_game": true
+   },
+   "rx": 1788843043924
+  },
+  {
+   "v": 0,
+   "t": 811297,
+   "type": "command_result",
+   "id": "c-13",
+   "ok": true,
+   "data": {
+    "speed": 3,
+    "paused": false
+   },
+   "rx": 1788843056123
+  },
+  {
+   "v": 0,
+   "t": 812000,
+   "type": "job_noise",
+   "total": 7,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "GotoWander": 2,
+    "Wait_Wander": 1
+   },
+   "rx": 1788844076440
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "GotoWander": 1,
+    "Wait_Wander": 3
+   },
+   "rx": 1788845002869
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "command_result": 11,
+  "command_result": 13,
   "mod_disconnected": 1,
-  "hello": 1,
-  "world_snapshot": 1456,
-  "pawn_snapshot": 440,
+  "hello": 2,
+  "world_snapshot": 1477,
+  "pawn_snapshot": 503,
   "job_start": 25,
   "job_end": 23,
-  "job_noise": 32,
+  "job_noise": 34,
   "hediff": 1,
   "death": 3,
   "letter": 12,
   "incident": 10
  },
- "last_event_at": 1788843034.245312
+ "last_event_at": 1788845984.564225
 }
