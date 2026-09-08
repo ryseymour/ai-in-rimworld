@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 1024750,
+  "t": 1030500,
   "type": "world_snapshot",
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
@@ -20,29 +20,29 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788888143618
+  "rx": 1788888159602
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1024750,
+   "t": 1030500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    103,
+    99,
     0,
-    101
+    112
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.675,
-    "rest": 0.884,
-    "joy": 0.271
+    "food": 0.25,
+    "rest": 0.793,
+    "joy": 0.231
    },
-   "mood": 0.755,
+   "mood": 0.866,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888143618
+   "rx": 1788888159602
   },
   {
    "v": 0,
@@ -4969,18 +4969,104 @@
     "GotoWander": 1
    },
    "rx": 1788888141499
+  },
+  {
+   "v": 0,
+   "t": 1026000,
+   "type": "job_noise",
+   "total": 4,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788888147102
+  },
+  {
+   "v": 0,
+   "t": 1028000,
+   "type": "job_noise",
+   "total": 4,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788888152654
+  },
+  {
+   "v": 0,
+   "t": 1028111,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt82174",
+   "source": "JobGiver_Work",
+   "rx": 1788888152968
+  },
+  {
+   "v": 0,
+   "t": 1028111,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788888152968
+  },
+  {
+   "v": 0,
+   "t": 1029476,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt82234",
+   "source": "JobGiver_Work",
+   "rx": 1788888156759
+  },
+  {
+   "v": 0,
+   "t": 1029476,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788888156760
+  },
+  {
+   "v": 0,
+   "t": 1030000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 2,
+    "GotoWander": 1
+   },
+   "rx": 1788888158224
+  },
+  {
+   "v": 0,
+   "t": 1030562,
+   "type": "command_result",
+   "id": "c-24",
+   "ok": true,
+   "data": {
+    "speed": 0,
+    "paused": true
+   },
+   "rx": 1788888159782
   }
  ],
  "counts": {
   "mod_connected": 3,
-  "command_result": 23,
+  "command_result": 24,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 2407,
-  "pawn_snapshot": 2400,
-  "job_start": 115,
-  "job_end": 66,
-  "job_noise": 108,
+  "world_snapshot": 2430,
+  "pawn_snapshot": 2423,
+  "job_start": 117,
+  "job_end": 68,
+  "job_noise": 111,
   "hediff": 18,
   "death": 6,
   "letter": 25,
@@ -4988,5 +5074,5 @@
   "interaction": 17,
   "mental_state": 1
  },
- "last_event_at": 1788888143.618814
+ "last_event_at": 1788888159.782187
 }
