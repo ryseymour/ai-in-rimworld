@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 892750,
+  "t": 906500,
   "type": "world_snapshot",
   "date": "1st of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 22367,
-  "colonists": 2,
+  "wealth": 21842,
+  "colonists": 1,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887825093
+  "rx": 1788887857111
  },
  "pawns": [
   {
    "v": 0,
-   "t": 892750,
+   "t": 906500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -36,21 +36,17 @@
     0,
     109
    ],
-   "job": "resting.",
+   "job": "sleeping.",
    "needs": {
-    "food": 0,
-    "rest": 0.895,
+    "food": 0.205,
+    "rest": 0.914,
     "joy": 0
    },
-   "mood": 0.469,
+   "mood": 0.761,
    "thoughts": [
     {
      "label": "Catharsis",
      "mood": 40
-    },
-    {
-     "label": "Badly malnourished",
-     "mood": -26
     },
     {
      "label": "Very low expectations",
@@ -67,9 +63,13 @@
     {
      "label": "Ate corpse",
      "mood": -12
+    },
+    {
+     "label": "Quite comfortable",
+     "mood": 6
     }
    ],
-   "health": "Injured",
+   "health": "Healthy",
    "skills": {
     "Construction": 1,
     "Mining": 2,
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887825093
+   "rx": 1788887857111
   },
   {
    "v": 0,
@@ -164,7 +164,7 @@
   },
   {
    "v": 0,
-   "t": 892750,
+   "t": 899750,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -175,10 +175,10 @@
     0,
     106
    ],
-   "job": "sleeping.",
+   "job": "resting.",
    "needs": {
-    "food": 0.084,
-    "rest": 0.815
+    "food": 0.009,
+    "rest": 0.962
    },
    "mood": 0.306,
    "thoughts": [
@@ -191,8 +191,8 @@
      "mood": 24
     },
     {
-     "label": "Mind-shattering pain",
-     "mood": -20
+     "label": "Intense pain",
+     "mood": -15
     },
     {
      "label": "Ate corpse",
@@ -227,7 +227,8 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887825093
+   "rx": 1788887844552,
+   "dead": true
   }
  ],
  "recent": [
@@ -3659,6 +3660,72 @@
     "Wait_MaintainPosture": 1
    },
    "rx": 1788887811897
+  },
+  {
+   "v": 0,
+   "t": 893645,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_Corpse_Human79506",
+   "source": "JobGiver_GetFood",
+   "rx": 1788887827578
+  },
+  {
+   "v": 0,
+   "t": 895306,
+   "type": "letter",
+   "label": "Funeral of Masculinity opportunity for Shun",
+   "text": "You can hold a pasturic funeral for <color=#D09B61FF>Shun</color> even though the body was lost.\n\nTo begin the ritual, select an empty grave to mourn Shun's passing and click the 'Begin Funeral of Masculinity' command.\n\nExpires in <color=#87F6F6FF><color=#87F6F6FF>9 days</color></color>, on 10th of Jugust.",
+   "def": "NeutralEvent",
+   "rx": 1788887832203
+  },
+  {
+   "v": 0,
+   "t": 895307,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "LayDown",
+   "target": "Thing_Bed31715",
+   "source": "JobGiver_Work",
+   "rx": 1788887832206
+  },
+  {
+   "v": 0,
+   "t": 896000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788887834126
+  },
+  {
+   "v": 0,
+   "t": 899000,
+   "type": "incident",
+   "def": "ShipChunkDrop",
+   "label": "ship chunk drop",
+   "points": -1,
+   "rx": 1788887842475
+  },
+  {
+   "v": 0,
+   "t": 899779,
+   "type": "letter",
+   "label": "Death: Lau",
+   "text": "(*Name)Lau(/Name) has died. Cause: Heatstroke.\n\n(*Name)Lau(/Name) should be buried and given a funeral so her friends and family can say farewell.",
+   "def": "Death",
+   "rx": 1788887844639
+  },
+  {
+   "v": 0,
+   "t": 899779,
+   "type": "death",
+   "pawn": 35404,
+   "cause": null,
+   "killer": null,
+   "rx": 1788887844640
   }
  ],
  "counts": {
@@ -3666,17 +3733,17 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 1879,
-  "pawn_snapshot": 1727,
-  "job_start": 75,
+  "world_snapshot": 1934,
+  "pawn_snapshot": 1810,
+  "job_start": 77,
   "job_end": 34,
-  "job_noise": 71,
+  "job_noise": 72,
   "hediff": 18,
-  "death": 5,
-  "letter": 23,
-  "incident": 14,
+  "death": 6,
+  "letter": 25,
+  "incident": 15,
   "interaction": 15,
   "mental_state": 1
  },
- "last_event_at": 1788887825.09372
+ "last_event_at": 1788887857.111858
 }
