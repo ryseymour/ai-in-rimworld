@@ -1,1 +1,5 @@
 {"type":"mod_connected","peer":"('127.0.0.1', 53905)","rx":1788888636579}
+{"type":"mod_disconnected","peer":"('127.0.0.1', 53905)","rx":1788888758777}
+{"type":"mod_connected","peer":"('127.0.0.1', 53919)","rx":1788888773577}
+{"v":0,"t":0,"type":"command_result","id":"c-1","ok":true,"data":{"loading":"Aurora (Permadeath) BACKUP-pre-airim-test","note":"load started; poll ping until in_game is true"},"rx":1788888784228}
+{"v":0,"t":0,"type":"command_result","id":"c-2","ok":true,"data":{"mod_version":"0.1.0","tick":0,"paused":true,"in_game":false},"rx":1788888784253}
