@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 991000,
+  "t": 999000,
   "type": "world_snapshot",
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 21839,
+  "wealth": 26522,
   "colonists": 4,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788888915392
+  "rx": 1788889368330
  },
  "pawns": [
   {
    "v": 0,
-   "t": 991000,
+   "t": 999000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    98,
     0,
-    119
+    128
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.979,
-    "rest": 0.993,
-    "joy": 0.996
+    "food": 0.608,
+    "rest": 0.867,
+    "joy": 0.916
    },
-   "mood": 0.613,
+   "mood": 0.907,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -53,20 +53,20 @@
      "mood": 24
     },
     {
-     "label": "Raw cannibalism",
-     "mood": 20
-    },
-    {
-     "label": "Ate corpse",
-     "mood": -12
-    },
-    {
      "label": "Recreation fully satisfied",
      "mood": 10
     },
     {
-     "label": "Colonist left unburied",
-     "mood": -10
+     "label": "No Thinker",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Wearing clothes (non-groin)",
+     "mood": -4
     }
    ],
    "health": "Healthy",
@@ -89,28 +89,28 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888915393
+   "rx": 1788889368331
   },
   {
    "v": 0,
-   "t": 991000,
+   "t": 999000,
    "type": "pawn_snapshot",
    "id": 84427,
    "name": "Jacobson",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    97,
+    99,
     0,
-    103
+    101
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.988,
-    "rest": 0.993,
-    "joy": 0.996
+    "food": 0.776,
+    "rest": 0.867,
+    "joy": 0.916
    },
-   "mood": 0.486,
+   "mood": 0.424,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -121,10 +121,6 @@
      "mood": 10
     },
     {
-     "label": "Colonist left unburied",
-     "mood": -10
-    },
-    {
      "label": "Trees sorely missed",
      "mood": -5
     },
@@ -133,7 +129,11 @@
      "mood": -5
     },
     {
-     "label": "Body modder frustrated",
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Observed corpse",
      "mood": -4
     }
    ],
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888915393
+   "rx": 1788889368331
   },
   {
    "v": 0,
-   "t": 991000,
+   "t": 999000,
    "type": "pawn_snapshot",
    "id": 84431,
    "name": "Martin",
@@ -172,23 +172,23 @@
    "pos": [
     108,
     0,
-    119
+    103
    ],
-   "job": "building grave (blueprint).",
+   "job": "wandering.",
    "needs": {
-    "food": 0.788,
-    "rest": 0.926,
-    "joy": 0.592
+    "food": 0.576,
+    "rest": 0.8,
+    "joy": 0.985
    },
-   "mood": 0.486,
+   "mood": 0.52,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Colonist left unburied",
-     "mood": -10
+     "label": "Recreation fully satisfied",
+     "mood": 10
     },
     {
      "label": "Trees sorely missed",
@@ -226,11 +226,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888915393
+   "rx": 1788889368331
   },
   {
    "v": 0,
-   "t": 991000,
+   "t": 999000,
    "type": "pawn_snapshot",
    "id": 84435,
    "name": "Fu",
@@ -239,15 +239,15 @@
    "pos": [
     101,
     0,
-    111
+    107
    ],
    "job": "researching.",
    "needs": {
-    "food": 0.792,
-    "rest": 0.967,
-    "joy": 0.537
+    "food": 0.58,
+    "rest": 0.841,
+    "joy": 0.458
    },
-   "mood": 0.51,
+   "mood": 0.46,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -262,16 +262,16 @@
      "mood": -5
     },
     {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
      "label": "Wearing veil",
      "mood": 2
     },
     {
      "label": "Planetary habitat",
      "mood": -2
-    },
-    {
-     "label": "Colonist left unburied",
-     "mood": 0
     }
    ],
    "health": "Healthy",
@@ -296,7 +296,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888915393
+   "rx": 1788889368331
   }
  ],
  "recent": [
@@ -2620,20 +2620,318 @@
    "job": "FinishFrame",
    "condition": "Succeeded",
    "rx": 1788888915602
+  },
+  {
+   "v": 0,
+   "t": 991361,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Blood70167",
+   "source": "JobGiver_Work",
+   "rx": 1788889346641
+  },
+  {
+   "v": 0,
+   "t": 991361,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788889346641
+  },
+  {
+   "v": 0,
+   "t": 991539,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "Repair",
+   "target": "Thing_GravshipHull31592",
+   "source": "JobGiver_Work",
+   "rx": 1788889347148
+  },
+  {
+   "v": 0,
+   "t": 991539,
+   "type": "job_end",
+   "pawn": 84431,
+   "job": "Repair",
+   "condition": "Succeeded",
+   "rx": 1788889347148
+  },
+  {
+   "v": 0,
+   "t": 991728,
+   "type": "job_start",
+   "pawn": 84427,
+   "job": "HaulToContainer",
+   "target": "Thing_Corpse_Human80405",
+   "source": "JobGiver_Work",
+   "rx": 1788889347659
+  },
+  {
+   "v": 0,
+   "t": 991728,
+   "type": "job_end",
+   "pawn": 84427,
+   "job": "HaulToContainer",
+   "condition": "Succeeded",
+   "rx": 1788889347659
+  },
+  {
+   "v": 0,
+   "t": 991974,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "Repair",
+   "target": "Thing_GravshipHull31557",
+   "source": "JobGiver_Work",
+   "rx": 1788889348331
+  },
+  {
+   "v": 0,
+   "t": 991974,
+   "type": "job_end",
+   "pawn": 84431,
+   "job": "Repair",
+   "condition": "Succeeded",
+   "rx": 1788889348331
+  },
+  {
+   "v": 0,
+   "t": 992000,
+   "type": "job_noise",
+   "total": 6,
+   "counts": {
+    "GotoWander": 1,
+    "Wait_MaintainPosture": 5
+   },
+   "rx": 1788889348420
+  },
+  {
+   "v": 0,
+   "t": 992226,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "Clean",
+   "target": "Thing_Filth_BloodSmear70172",
+   "source": "JobGiver_Work",
+   "rx": 1788889349036
+  },
+  {
+   "v": 0,
+   "t": 992226,
+   "type": "job_end",
+   "pawn": 84431,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788889349036
+  },
+  {
+   "v": 0,
+   "t": 992498,
+   "type": "interaction",
+   "initiator": 948,
+   "recipient": 84431,
+   "def": "Chitchat",
+   "text": "Zeke and Martin chatted about training rabbits.",
+   "rx": 1788889349796
+  },
+  {
+   "v": 0,
+   "t": 992721,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84459",
+   "source": "JobGiver_Work",
+   "rx": 1788889350413
+  },
+  {
+   "v": 0,
+   "t": 992721,
+   "type": "job_end",
+   "pawn": 84431,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788889350414
+  },
+  {
+   "v": 0,
+   "t": 993141,
+   "type": "interaction",
+   "initiator": 84427,
+   "recipient": 948,
+   "def": "Chitchat",
+   "text": "Jacobson joked about comfortable furniture with Zeke.",
+   "rx": 1788889351579
+  },
+  {
+   "v": 0,
+   "t": 993492,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "Meditate",
+   "target": "(94, 0, 118)",
+   "source": "JobGiver_IdleJoy",
+   "rx": 1788889352572
+  },
+  {
+   "v": 0,
+   "t": 993492,
+   "type": "job_end",
+   "pawn": 84431,
+   "job": "Meditate",
+   "condition": "Succeeded",
+   "rx": 1788889352572
+  },
+  {
+   "v": 0,
+   "t": 994000,
+   "type": "job_noise",
+   "total": 12,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "Wait_Wander": 3,
+    "GotoWander": 2
+   },
+   "rx": 1788889353982
+  },
+  {
+   "v": 0,
+   "t": 995068,
+   "type": "job_start",
+   "pawn": 84435,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788889356948
+  },
+  {
+   "v": 0,
+   "t": 995068,
+   "type": "job_end",
+   "pawn": 84435,
+   "job": "Research",
+   "condition": "Succeeded",
+   "rx": 1788889356948
+  },
+  {
+   "v": 0,
+   "t": 995622,
+   "type": "command_result",
+   "id": "c-27",
+   "ok": true,
+   "data": {
+    "speed": 3,
+    "paused": false
+   },
+   "rx": 1788889358494
+  },
+  {
+   "v": 0,
+   "t": 996000,
+   "type": "job_noise",
+   "total": 11,
+   "counts": {
+    "Wait_MaintainPosture": 6,
+    "GotoWander": 3,
+    "Wait_Wander": 2
+   },
+   "rx": 1788889359533
+  },
+  {
+   "v": 0,
+   "t": 996141,
+   "type": "job_start",
+   "pawn": 84427,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84520",
+   "source": "JobGiver_Work",
+   "rx": 1788889359929
+  },
+  {
+   "v": 0,
+   "t": 996141,
+   "type": "job_end",
+   "pawn": 84427,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788889359930
+  },
+  {
+   "v": 0,
+   "t": 998000,
+   "type": "job_noise",
+   "total": 14,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "Wait_Wander": 3,
+    "GotoWander": 4
+   },
+   "rx": 1788889365536
+  },
+  {
+   "v": 0,
+   "t": 998472,
+   "type": "interaction",
+   "initiator": 84427,
+   "recipient": 84431,
+   "def": "Chitchat",
+   "text": "Jacobson and Martin gabbed about making evening gowns.",
+   "rx": 1788889366835
+  },
+  {
+   "v": 0,
+   "t": 999000,
+   "type": "letter",
+   "label": "Mad squirrel",
+   "text": "A local squirrel has gone mad. It will attack everyone it sees.",
+   "def": "ThreatSmall",
+   "rx": 1788889368329
+  },
+  {
+   "v": 0,
+   "t": 999000,
+   "type": "incident",
+   "def": "AnimalInsanitySingle",
+   "label": "single animal insanity",
+   "points": 49.153,
+   "rx": 1788889368330
+  },
+  {
+   "v": 0,
+   "t": 999073,
+   "type": "job_start",
+   "pawn": 84435,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788889368532
+  },
+  {
+   "v": 0,
+   "t": 999073,
+   "type": "job_end",
+   "pawn": 84435,
+   "job": "Research",
+   "condition": "Succeeded",
+   "rx": 1788889368532
   }
  ],
  "counts": {
   "mod_connected": 3,
   "mod_disconnected": 2,
-  "command_result": 26,
+  "command_result": 27,
   "hello": 2,
-  "world_snapshot": 15,
-  "pawn_snapshot": 24,
-  "job_start": 4,
-  "job_end": 2,
-  "job_noise": 1,
-  "letter": 1,
-  "interaction": 1
+  "world_snapshot": 47,
+  "pawn_snapshot": 152,
+  "job_start": 14,
+  "job_end": 12,
+  "job_noise": 5,
+  "letter": 2,
+  "interaction": 4,
+  "incident": 1
  },
- "last_event_at": 1788888915.6027288
+ "last_event_at": 1788889368.53299
 }
