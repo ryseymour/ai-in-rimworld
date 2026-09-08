@@ -54,3 +54,13 @@ uv run airim serve --publish
 ## Findings
 
 (fill in during the session)
+
+### Session 1, 2026-09-07 evening (user's Mac, RimWorld 1.6.4871 rev597)
+
+- Mod loaded, connected, and streamed from a live colony ("Aurora", 3 colonists) with no errors. Telemetry branch publishing worked; Claude followed from the cloud session.
+- Every event type fired within 10 minutes: job_start/job_end, interaction (chitchat), hediff (malnutrition), letter + incident (quest, trade caravan), pawn_snapshot with all fields, world_snapshot. Visitors from the caravan were classified `visitor` with their faction.
+- No `dropped` or `malformed` events at speed 1–2 with 11 pawns.
+- Bugs found: interaction text carried Unity `<color>` tags; letter text carried `(*Faction=...)` markup; job labels had a trailing period. Fixed by stripping markup in the mod (`Events.Clean`) and defensively in the dashboard.
+- Observed: Goto and Wait_MaintainPosture jobs for arriving caravan pawns start and end on the same tick. Expected for lord-driven travel; noisy but harmless. Consider filtering same-tick pairs in M2.
+- `source` on job_start is populated (e.g. `JobGiver_GotoTravelDestination`, `JobGiver_Work`) and useful.
+- `relations` came back empty for all pawns; unverified whether the colony simply has none. Check with a pawn known to have family.

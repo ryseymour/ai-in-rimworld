@@ -9,7 +9,7 @@ Tasks, ideas, and work items for the AI in Rimworld project.
 - [x] Periodic world and pawn snapshots.
 - [x] Background-thread TCP transport with bounded queue.
 - [x] Orchestrator: receiver, event log, state, dashboard, replay, tests.
-- [ ] **Run the mod in RimWorld 1.6 and confirm events arrive.** Needs a machine with the game.
+- [x] Run the mod in RimWorld 1.6 and confirm events arrive (session 1, 2026-09-07).
 - [ ] Check Player.log for exceptions from the patches; profile with Dubs Performance Analyzer.
 - [ ] Record a real session log and add it as a fixture.
 - [ ] Capture think-node source on job_start via the `jobGiver` parameter of StartJob.

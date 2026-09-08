@@ -63,7 +63,7 @@ const $ = id => document.getElementById(id);
 function fmtTick(t){ if(t==null) return '—'; const d = Math.floor(t/60000), h = Math.floor((t%60000)/2500); return `d${d} ${String(h).padStart(2,'0')}h`; }
 function pct(v){ return v==null ? 0 : Math.max(0,Math.min(100,Math.round(v*100))); }
 function barCls(v){ return v==null ? '' : v<0.2 ? 'crit' : v<0.4 ? 'low' : ''; }
-function esc(s){ return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function esc(s){ return String(s??'').replace(/<[^>]+>|\(\*[^)]*\)|\(\/[^)]*\)/g,'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
 
 function renderHeader(){
   $('date').textContent = world.date || '—';

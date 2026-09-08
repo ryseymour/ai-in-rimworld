@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Linq;
 using RimWorld;
 using Verse;
@@ -44,13 +45,18 @@ namespace AiRim
             return true;
         }
 
+        private static readonly Regex TagRx = new Regex(@"<[^>]+>|\(\*[^)]*\)|\(/[^)]*\)", RegexOptions.Compiled);
+
+        /// <summary>Strip Unity rich-text and RimWorld (*Tag) markup from display strings.</summary>
+        public static string Clean(string s) => s == null ? null : TagRx.Replace(s, "").Trim();
+
         public static string Name(Pawn p) => p.Name != null ? p.Name.ToStringShort : p.LabelShortCap;
 
         public static string JobLabel(Pawn p)
         {
             var job = p.jobs?.curJob;
             if (job == null) return null;
-            try { return p.jobs.curDriver?.GetReport() ?? job.def.label; }
+            try { return Clean(p.jobs.curDriver?.GetReport() ?? job.def.label).TrimEnd('.'); }
             catch { return job.def.label; }
         }
 
@@ -103,7 +109,7 @@ namespace AiRim
                 var tmp = new List<Thought>();
                 p.needs.mood.thoughts.GetAllMoodThoughts(tmp);
                 foreach (var t in tmp.OrderByDescending(t => System.Math.Abs(t.MoodOffset())).Take(6))
-                    thoughts.Add(Json.Obj().Put("label", t.LabelCap.ToString()).Put("mood", (int)t.MoodOffset()));
+                    thoughts.Add(Json.Obj().Put("label", Clean(t.LabelCap.ToString())).Put("mood", (int)t.MoodOffset()));
             }
 
             var skills = Json.Obj();
@@ -172,7 +178,7 @@ namespace AiRim
 
         private static string SafeText(LogEntry entry, Pawn pov)
         {
-            try { return entry.ToGameStringFromPOV(pov, false); }
+            try { return Clean(entry.ToGameStringFromPOV(pov, false)); }
             catch { return null; }
         }
 
@@ -206,8 +212,8 @@ namespace AiRim
         {
             if (letter == null) return;
             string text = null;
-            if (letter is ChoiceLetter cl) text = cl.Text.ToString();
-            Emit(Base("letter").Put("label", letter.Label.ToString()).Put("text", text).Put("def", letter.def?.defName));
+            if (letter is ChoiceLetter cl) text = Clean(cl.Text.ToString());
+            Emit(Base("letter").Put("label", Clean(letter.Label.ToString())).Put("text", text).Put("def", letter.def?.defName));
         }
 
         public static void Incident(IncidentDef def, IncidentParms parms, bool fired)
