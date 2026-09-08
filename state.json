@@ -1,17 +1,987 @@
 {
- "hello": {},
- "world": {},
- "pawns": [],
+ "hello": {
+  "v": 0,
+  "t": 813794,
+  "type": "hello",
+  "mod_version": "0.1.0",
+  "game_version": "1.6.4871 rev597",
+  "map_id": 2,
+  "rx": 1788833293037
+ },
+ "world": {
+  "v": 0,
+  "t": 814000,
+  "type": "world_snapshot",
+  "date": "14th of Aprimay, 5500",
+  "season": "PermanentSummer",
+  "weather": "clear",
+  "wealth": 21734,
+  "colonists": 2,
+  "visitors": 10,
+  "hostiles": 0,
+  "tile": 1524,
+  "rx": 1788833296665
+ },
+ "pawns": [
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 948,
+   "name": "Zeke",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    104,
+    0,
+    109
+   ],
+   "job": "sleeping.",
+   "needs": {
+    "food": 0,
+    "rest": 0.823,
+    "joy": 0
+   },
+   "mood": 0,
+   "thoughts": [
+    {
+     "label": "Advanced starvation",
+     "mood": -38
+    },
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Recreation-starved",
+     "mood": -20
+    },
+    {
+     "label": "Serious pain",
+     "mood": -10
+    },
+    {
+     "label": "Quite comfortable",
+     "mood": 6
+    },
+    {
+     "label": "Initial hope",
+     "mood": 5
+    }
+   ],
+   "health": "Injured",
+   "skills": {
+    "Construction": 1,
+    "Mining": 2,
+    "Cooking": 8,
+    "Plants": 14,
+    "Animals": 1,
+    "Crafting": 6,
+    "Artistic": 2,
+    "Medicine": 4,
+    "Social": 0,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Cannibal",
+    "Steadfast",
+    "Gay"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788833296667
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 35404,
+   "name": "Lau",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    104,
+    0,
+    123
+   ],
+   "job": "wandering.",
+   "needs": {
+    "food": 0,
+    "rest": 0.563
+   },
+   "mood": 0,
+   "thoughts": [
+    {
+     "label": "Badly malnourished",
+     "mood": -26
+    },
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Intense pain",
+     "mood": -15
+    },
+    {
+     "label": "Sweltering hot",
+     "mood": -12
+    },
+    {
+     "label": "I am disliked xenotype",
+     "mood": -6
+    },
+    {
+     "label": "Unsightly environment",
+     "mood": -5
+    }
+   ],
+   "health": "Injured",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 1,
+    "Construction": 0,
+    "Mining": 0,
+    "Cooking": 0,
+    "Plants": 1,
+    "Animals": 2,
+    "Crafting": 2,
+    "Artistic": 3,
+    "Medicine": 1,
+    "Social": 2
+   },
+   "traits": [
+    "Misogynist",
+    "Tough"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788833296667
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79429,
+   "name": "Goabanbi",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    190,
+    0,
+    218
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.946,
+    "rest": 0.894
+   },
+   "mood": 0.565,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a recurve bow (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 3,
+    "Melee": 6,
+    "Construction": 3,
+    "Mining": 4,
+    "Cooking": 12,
+    "Plants": 3,
+    "Animals": 7,
+    "Crafting": 0,
+    "Artistic": 3,
+    "Medicine": 8,
+    "Social": 1,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Greedy",
+    "Gourmand",
+    "Sickly"
+   ],
+   "relations": [
+    {
+     "other": "Busto",
+     "kind": "father",
+     "opinion": 30
+    },
+    {
+     "other": "Green",
+     "kind": "brother",
+     "opinion": 20
+    },
+    {
+     "other": "Wolf",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788833296668
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79449,
+   "name": "Trocam",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    188,
+    0,
+    231
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.96,
+    "rest": 0.908
+   },
+   "mood": 0.57,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a steel spear (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 3,
+    "Construction": 4,
+    "Mining": 13,
+    "Cooking": 2,
+    "Plants": 0,
+    "Animals": 3,
+    "Crafting": 5,
+    "Artistic": 3,
+    "Medicine": 2,
+    "Social": 0,
+    "Intellectual": 8
+   },
+   "traits": [
+    "Abrasive"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788833296668
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79454,
+   "name": "Snail",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    194,
+    0,
+    222
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.96,
+    "rest": 0.892
+   },
+   "mood": 0.572,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Recluse in small group",
+     "mood": 8
+    },
+    {
+     "label": "Wielding a steel ikwa (poor)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 8,
+    "Construction": 4,
+    "Mining": 1,
+    "Cooking": 1,
+    "Plants": 6,
+    "Animals": 8,
+    "Crafting": 2,
+    "Artistic": 4,
+    "Medicine": 0,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Recluse",
+    "Pyromaniac",
+    "Misogynist"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788833296668
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79459,
+   "name": "Pelican",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    195,
+    0,
+    223
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.96,
+    "rest": 0.967
+   },
+   "mood": 0.54,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Undergrounder outdoors",
+     "mood": -3
+    },
+    {
+     "label": "Wielding a steel spear (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 5,
+    "Construction": 4,
+    "Mining": 4,
+    "Cooking": 4,
+    "Plants": 10,
+    "Animals": 3,
+    "Crafting": 4,
+    "Artistic": 0,
+    "Medicine": 1,
+    "Social": 0,
+    "Intellectual": 1
+   },
+   "traits": [
+    "Undergrounder"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788833296669
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79464,
+   "name": "Blue",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    195,
+    0,
+    223
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.964,
+    "rest": 0.899
+   },
+   "mood": 0.52,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Wielding a recurve bow (poor 76%)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 10,
+    "Melee": 6,
+    "Construction": 2,
+    "Mining": 4,
+    "Cooking": 0,
+    "Plants": 2,
+    "Animals": 10,
+    "Crafting": 4,
+    "Artistic": 4,
+    "Social": 1,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Psychopath"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788833296670
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79469,
+   "name": "Red",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    193,
+    0,
+    221
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.94,
+    "rest": 0.969
+   },
+   "mood": 0.57,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a steel spear (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 6,
+    "Construction": 2,
+    "Mining": 0,
+    "Cooking": 7,
+    "Plants": 6,
+    "Animals": 0,
+    "Crafting": 9,
+    "Artistic": 2,
+    "Social": 0,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Gourmand",
+    "Brawler"
+   ],
+   "relations": [
+    {
+     "other": "Gumi",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788833296671
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79474,
+   "name": "Black",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    188,
+    0,
+    231
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.964,
+    "rest": 0.942
+   },
+   "mood": 0.565,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a steel spear (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 3,
+    "Construction": 0,
+    "Mining": 1,
+    "Cooking": 4,
+    "Plants": 11,
+    "Animals": 3,
+    "Crafting": 0,
+    "Artistic": 4,
+    "Medicine": 4,
+    "Social": 5,
+    "Intellectual": 5
+   },
+   "traits": [
+    "Jogger",
+    "Delicate"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788833296671
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79480,
+   "name": "Green",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    193,
+    0,
+    221
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.96,
+    "rest": 0.88
+   },
+   "mood": 0.53,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Body modder frustrated",
+     "mood": -4
+    },
+    {
+     "label": "Wielding a short bow (poor)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 3,
+    "Melee": 7,
+    "Construction": 1,
+    "Mining": 4,
+    "Cooking": 0,
+    "Plants": 3,
+    "Animals": 8,
+    "Crafting": 6,
+    "Artistic": 4,
+    "Medicine": 3,
+    "Intellectual": 2
+   },
+   "traits": [
+    "Slow learner",
+    "Body modder"
+   ],
+   "relations": [
+    {
+     "other": "Busto",
+     "kind": "father",
+     "opinion": 30
+    },
+    {
+     "other": "Goabanbi",
+     "kind": "brother",
+     "opinion": 20
+    },
+    {
+     "other": "Wolf",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788833296671
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79494,
+   "name": "Gumi",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    193,
+    0,
+    221
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.96,
+    "rest": 0.965
+   },
+   "mood": 0.54,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Undergrounder outdoors",
+     "mood": -3
+    },
+    {
+     "label": "Wielding a short bow (poor)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 9,
+    "Melee": 8,
+    "Construction": 9,
+    "Mining": 6,
+    "Cooking": 0,
+    "Plants": 4,
+    "Animals": 1,
+    "Crafting": 4,
+    "Artistic": 3,
+    "Medicine": 2,
+    "Social": 2,
+    "Intellectual": 1
+   },
+   "traits": [
+    "Undergrounder",
+    "Slothful"
+   ],
+   "relations": [
+    {
+     "other": "Red",
+     "kind": "son",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788833296672
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "pawn_snapshot",
+   "id": 79498,
+   "name": "Chicken",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    192,
+    0,
+    220
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.96,
+    "rest": 0.966
+   },
+   "mood": 0.57,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a recurve bow (good)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 13,
+    "Melee": 11,
+    "Construction": 0,
+    "Mining": 0,
+    "Cooking": 1,
+    "Plants": 4,
+    "Animals": 2,
+    "Crafting": 4,
+    "Artistic": 5,
+    "Social": 5,
+    "Intellectual": 4
+   },
+   "traits": [
+    "Greedy"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788833296672
+  }
+ ],
  "recent": [
   {
    "type": "mod_connected",
-   "peer": "('127.0.0.1', 50655)",
-   "rx": 1788833256167
+   "peer": "('127.0.0.1', 50662)",
+   "rx": 1788833274748
+  },
+  {
+   "v": 0,
+   "t": 813794,
+   "type": "hello",
+   "mod_version": "0.1.0",
+   "game_version": "1.6.4871 rev597",
+   "map_id": 2,
+   "rx": 1788833293037
+  },
+  {
+   "v": 0,
+   "t": 814078,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833297951
+  },
+  {
+   "v": 0,
+   "t": 814078,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833297952
+  },
+  {
+   "v": 0,
+   "t": 814081,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "target": "(103, 0, 122)",
+   "source": "JobGiver_WanderOwnRoom",
+   "rx": 1788833298006
+  },
+  {
+   "v": 0,
+   "t": 814081,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833298006
+  },
+  {
+   "v": 0,
+   "t": 814169,
+   "type": "command_result",
+   "id": "c-1",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 814169,
+    "paused": false,
+    "in_game": true
+   },
+   "rx": 1788833299460
+  },
+  {
+   "v": 0,
+   "t": 814170,
+   "type": "command_result",
+   "id": "c-2",
+   "ok": true,
+   "data": {
+    "speed": 0,
+    "paused": true
+   },
+   "rx": 1788833299476
+  },
+  {
+   "v": 0,
+   "t": 814170,
+   "type": "command_result",
+   "id": "c-3",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "origin_x": 81,
+    "origin_z": 98,
+    "w": 46,
+    "h": 22,
+    "top_row_z": 119,
+    "rows": [
+     ".................#==.#..#.........a...........",
+     ".................###+####.....................",
+     "................##bc.===#.....................",
+     "................#c...d==##....................",
+     "................#d..=====#...........e........",
+     "................#d.======#....................",
+     "................#f..=====#....................",
+     "................#g...h==##....................",
+     "................##ff.===#.....................",
+     ".................###+####..........ii.........",
+     "......j..........#...#.A#.........iii.........",
+     "......jj.........#==.+.=#.........i.i.........",
+     ".................#==.####........ii...........",
+     ".................#==.#.=#......kk.............",
+     ".................#...+.=#.....................",
+     ".................#...####.....................",
+     ".................+...+=l#.....................",
+     ".................########.....................",
+     ".............k.........B......................",
+     ".............k................................",
+     ".............k................................",
+     ".............................................."
+    ],
+    "pawns": [
+     {
+      "char": "A",
+      "id": 948,
+      "name": "Zeke",
+      "kind": "colonist"
+     },
+     {
+      "char": "B",
+      "id": 70063,
+      "name": "Boomalope",
+      "kind": "animal"
+     }
+    ],
+    "items": [
+     {
+      "char": "a",
+      "def": "MeleeWeapon_BreachAxe",
+      "label": "breach axe"
+     },
+     {
+      "char": "b",
+      "def": "Steel",
+      "label": "steel"
+     },
+     {
+      "char": "c",
+      "def": "MedicineIndustrial",
+      "label": "medicine"
+     },
+     {
+      "char": "d",
+      "def": "WoodLog",
+      "label": "wood"
+     },
+     {
+      "char": "e",
+      "def": "Gun_Autopistol",
+      "label": "autopistol"
+     },
+     {
+      "char": "f",
+      "def": "GravlitePanel",
+      "label": "gravlite panel"
+     },
+     {
+      "char": "g",
+      "def": "Gun_MachinePistol",
+      "label": "machine pistol"
+     },
+     {
+      "char": "h",
+      "def": "Silver",
+      "label": "silver"
+     },
+     {
+      "char": "i",
+      "def": "ChunkSlate",
+      "label": "slate chunk"
+     },
+     {
+      "char": "j",
+      "def": "ChunkGranite",
+      "label": "granite chunk"
+     },
+     {
+      "char": "k",
+      "def": "ChunkSandstone",
+      "label": "sandstone chunk"
+     },
+     {
+      "char": "l",
+      "def": "Corpse_Human",
+      "label": "human corpse"
+     }
+    ],
+    "legend": "# wall, + door, = building, ~ water, ^ rock, . floor, ? unseen, space off-map"
+   },
+   "rx": 1788833299499
   }
  ],
  "counts": {
-  "mod_connected": 1
+  "mod_connected": 1,
+  "hello": 1,
+  "world_snapshot": 2,
+  "pawn_snapshot": 24,
+  "job_start": 2,
+  "job_end": 2,
+  "command_result": 3
  },
- "last_event_at": 1788833256.167491,
- "published_at": 1788833262
+ "last_event_at": 1788833299.499111,
+ "published_at": 1788833301
 }
