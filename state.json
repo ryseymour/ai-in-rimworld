@@ -12,10 +12,10 @@
  },
  "world": {
   "v": 0,
-  "t": 1014250,
+  "t": 1019500,
   "type": "world_snapshot",
   "day": 16,
-  "hour": 21,
+  "hour": 23,
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
@@ -24,31 +24,31 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890599404
+  "rx": 1788890630927
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1014250,
+   "t": 1019500,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 21,
+   "hour": 23,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    99,
     0,
-    103
+    114
    ],
-   "job": "sleeping.",
+   "job": "wandering.",
    "needs": {
-    "food": 0.206,
-    "rest": 0.906,
-    "joy": 0.358
+    "food": 0.136,
+    "rest": 0.967,
+    "joy": 0.337
    },
-   "mood": 0.37,
+   "mood": 0.323,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -120,38 +120,34 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890599404
+   "rx": 1788890630928
   },
   {
    "v": 0,
-   "t": 1014250,
+   "t": 1019500,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 21,
+   "hour": 23,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    101,
     0,
-    123
+    106
    ],
-   "job": "resting.",
+   "job": "wandering.",
    "needs": {
-    "food": 0.204,
-    "rest": 0.998,
-    "joy": 0.988
+    "food": 0.134,
+    "rest": 0.914,
+    "joy": 0.935
    },
-   "mood": 0.435,
+   "mood": 0.496,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
-    },
-    {
-     "label": "Colonist left unburied",
-     "mood": -10
     },
     {
      "label": "Recreation fully satisfied",
@@ -168,6 +164,10 @@
     {
      "label": "Darkness",
      "mood": -5
+    },
+    {
+     "label": "Wearing clothes (non-groin)",
+     "mood": -4
     }
    ],
    "health": "Healthy",
@@ -205,14 +205,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890599405
+   "rx": 1788890630928
   },
   {
    "v": 0,
-   "t": 1014250,
+   "t": 1019500,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 21,
+   "hour": 23,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
@@ -224,9 +224,9 @@
    ],
    "job": "researching.",
    "needs": {
-    "food": 0.206,
-    "rest": 0.941,
-    "joy": 0.905
+    "food": 0.136,
+    "rest": 0.857,
+    "joy": 0.853
    },
    "mood": 0.64,
    "thoughts": [
@@ -243,15 +243,15 @@
      "mood": 10
     },
     {
-     "label": "Quite comfortable",
-     "mood": 6
-    },
-    {
      "label": "Hungry",
      "mood": -6
     },
     {
      "label": "Trees sorely missed",
+     "mood": -5
+    },
+    {
+     "label": "No Thinker",
      "mood": -5
     }
    ],
@@ -293,53 +293,53 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890599405
+   "rx": 1788890630928
   },
   {
    "v": 0,
-   "t": 1014250,
+   "t": 1019500,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 21,
+   "hour": 23,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    103,
     0,
-    109
+    106
    ],
-   "job": "sleeping.",
+   "job": "consuming Lau, Child (dead).",
    "needs": {
-    "food": 0,
-    "rest": 0.916,
-    "joy": 0.338
+    "food": 0.537,
+    "rest": 0.952,
+    "joy": 0.308
    },
-   "mood": 0.381,
+   "mood": 0.496,
    "thoughts": [
     {
      "label": "Catharsis",
      "mood": 40
     },
     {
-     "label": "Starving",
-     "mood": -32
-    },
-    {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Colonist left unburied",
-     "mood": -10
+     "label": "Raw cannibalism",
+     "mood": 20
+    },
+    {
+     "label": "Ate corpse",
+     "mood": -12
     },
     {
      "label": "Quite comfortable",
      "mood": 6
     },
     {
-     "label": "Minor pain",
+     "label": "Darkness",
      "mood": -5
     }
    ],
@@ -381,7 +381,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890599405
+   "rx": 1788890630928
   }
  ],
  "recent": [
@@ -1346,6 +1346,658 @@
    "label": "Awful bedroom",
    "mood": -2,
    "rx": 1788890599524
+  },
+  {
+   "v": 0,
+   "t": 1014545,
+   "type": "job_start",
+   "day": 16,
+   "hour": 21,
+   "pawn": 81698,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890601057
+  },
+  {
+   "v": 0,
+   "t": 1014545,
+   "type": "job_end",
+   "day": 16,
+   "hour": 21,
+   "duration_ticks": 0,
+   "pawn": 81698,
+   "job": "Research",
+   "condition": "Succeeded",
+   "rx": 1788890601057
+  },
+  {
+   "v": 0,
+   "t": 1016000,
+   "type": "job_noise",
+   "day": 16,
+   "hour": 22,
+   "total": 10,
+   "counts": {
+    "GotoWander": 3,
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 2
+   },
+   "rx": 1788890610561
+  },
+  {
+   "v": 0,
+   "t": 1016658,
+   "type": "thought",
+   "day": 16,
+   "hour": 22,
+   "pawn": 948,
+   "def": "SleptInBedroom",
+   "label": "Awful bedroom",
+   "mood": -2,
+   "rx": 1788890614386
+  },
+  {
+   "v": 0,
+   "t": 1016658,
+   "type": "job_start",
+   "day": 16,
+   "hour": 22,
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_Corpse_Human80405",
+   "source": "JobGiver_GetFood",
+   "rx": 1788890614401
+  },
+  {
+   "v": 0,
+   "t": 1016834,
+   "type": "thought",
+   "day": 16,
+   "hour": 22,
+   "pawn": 81698,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890615417
+  },
+  {
+   "v": 0,
+   "t": 1016834,
+   "type": "thought",
+   "day": 16,
+   "hour": 22,
+   "pawn": 948,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890615419
+  },
+  {
+   "v": 0,
+   "t": 1016834,
+   "type": "interaction",
+   "day": 16,
+   "hour": 22,
+   "initiator": 81698,
+   "recipient": 948,
+   "def": "Chitchat",
+   "text": "Joe and Zeke talked about recreation.",
+   "rx": 1788890615419
+  },
+  {
+   "v": 0,
+   "t": 1017395,
+   "type": "thought",
+   "day": 16,
+   "hour": 22,
+   "pawn": 81682,
+   "def": "SleptOnGround",
+   "label": "Slept on ground",
+   "mood": 0,
+   "rx": 1788890618703
+  },
+  {
+   "v": 0,
+   "t": 1017395,
+   "type": "thought",
+   "day": 16,
+   "hour": 22,
+   "pawn": 81682,
+   "def": "SleptInBedroom",
+   "label": "Awful bedroom",
+   "mood": -2,
+   "rx": 1788890618708
+  },
+  {
+   "v": 0,
+   "t": 1017681,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteWithoutTable",
+   "label": "Ate without table",
+   "mood": 0,
+   "rx": 1788890620342
+  },
+  {
+   "v": 0,
+   "t": 1017681,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteCorpse",
+   "label": "Ate corpse",
+   "mood": -12,
+   "rx": 1788890620345
+  },
+  {
+   "v": 0,
+   "t": 1017681,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteHumanlikeMeatDirectCannibal",
+   "label": "Raw cannibalism",
+   "mood": 20,
+   "rx": 1788890620345
+  },
+  {
+   "v": 0,
+   "t": 1017681,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteHumanMeat_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "rx": 1788890620346
+  },
+  {
+   "v": 0,
+   "t": 1017681,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81682,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890620351
+  },
+  {
+   "v": 0,
+   "t": 1017681,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81686,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890620351
+  },
+  {
+   "v": 0,
+   "t": 1017681,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81698,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890620352
+  },
+  {
+   "v": 0,
+   "t": 1017760,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81682,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890620841
+  },
+  {
+   "v": 0,
+   "t": 1017760,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81698,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81682,
+   "about_name": "G\u00e9radon",
+   "rx": 1788890620841
+  },
+  {
+   "v": 0,
+   "t": 1017760,
+   "type": "interaction",
+   "day": 16,
+   "hour": 23,
+   "initiator": 81682,
+   "recipient": 81698,
+   "def": "Chitchat",
+   "text": "G\u00e9radon made a comment about taming herons to Joe.",
+   "rx": 1788890620841
+  },
+  {
+   "v": 0,
+   "t": 1018000,
+   "type": "job_noise",
+   "day": 16,
+   "hour": 23,
+   "total": 5,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "Wait_Wander": 1,
+    "GotoWander": 2
+   },
+   "rx": 1788890622189
+  },
+  {
+   "v": 0,
+   "t": 1018179,
+   "type": "job_start",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81686,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84828",
+   "source": "JobGiver_Work",
+   "rx": 1788890623194
+  },
+  {
+   "v": 0,
+   "t": 1018179,
+   "type": "job_end",
+   "day": 16,
+   "hour": 23,
+   "duration_ticks": 0,
+   "pawn": 81686,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788890623194
+  },
+  {
+   "v": 0,
+   "t": 1018338,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteWithoutTable",
+   "label": "Ate without table",
+   "mood": 0,
+   "rx": 1788890624102
+  },
+  {
+   "v": 0,
+   "t": 1018338,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteCorpse",
+   "label": "Ate corpse",
+   "mood": -12,
+   "rx": 1788890624105
+  },
+  {
+   "v": 0,
+   "t": 1018338,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteHumanlikeMeatDirectCannibal",
+   "label": "Raw cannibalism",
+   "mood": 20,
+   "rx": 1788890624107
+  },
+  {
+   "v": 0,
+   "t": 1018338,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteHumanMeat_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "rx": 1788890624107
+  },
+  {
+   "v": 0,
+   "t": 1018338,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81682,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890624107
+  },
+  {
+   "v": 0,
+   "t": 1018338,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81686,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890624107
+  },
+  {
+   "v": 0,
+   "t": 1018338,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81698,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890624107
+  },
+  {
+   "v": 0,
+   "t": 1018416,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81682,
+   "about_name": "G\u00e9radon",
+   "rx": 1788890624560
+  },
+  {
+   "v": 0,
+   "t": 1018416,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81682,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890624561
+  },
+  {
+   "v": 0,
+   "t": 1018416,
+   "type": "interaction",
+   "day": 16,
+   "hour": 23,
+   "initiator": 81686,
+   "recipient": 81682,
+   "def": "Chitchat",
+   "text": "Schlitzer gabbed about crooks with G\u00e9radon.",
+   "rx": 1788890624561
+  },
+  {
+   "v": 0,
+   "t": 1018464,
+   "type": "job_start",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81686,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84830",
+   "source": "JobGiver_Work",
+   "rx": 1788890624856
+  },
+  {
+   "v": 0,
+   "t": 1018464,
+   "type": "job_end",
+   "day": 16,
+   "hour": 23,
+   "duration_ticks": 0,
+   "pawn": 81686,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788890624856
+  },
+  {
+   "v": 0,
+   "t": 1018550,
+   "type": "job_start",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81698,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890625392
+  },
+  {
+   "v": 0,
+   "t": 1018550,
+   "type": "job_end",
+   "day": 16,
+   "hour": 23,
+   "duration_ticks": 0,
+   "pawn": 81698,
+   "job": "Research",
+   "condition": "Succeeded",
+   "rx": 1788890625394
+  },
+  {
+   "v": 0,
+   "t": 1018995,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteWithoutTable",
+   "label": "Ate without table",
+   "mood": 0,
+   "rx": 1788890627985
+  },
+  {
+   "v": 0,
+   "t": 1018995,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteCorpse",
+   "label": "Ate corpse",
+   "mood": -12,
+   "rx": 1788890627987
+  },
+  {
+   "v": 0,
+   "t": 1018995,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteHumanlikeMeatDirectCannibal",
+   "label": "Raw cannibalism",
+   "mood": 20,
+   "rx": 1788890627987
+  },
+  {
+   "v": 0,
+   "t": 1018995,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteHumanMeat_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "rx": 1788890627987
+  },
+  {
+   "v": 0,
+   "t": 1018995,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81682,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890627989
+  },
+  {
+   "v": 0,
+   "t": 1018995,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81686,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890627989
+  },
+  {
+   "v": 0,
+   "t": 1018995,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81698,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890627989
+  },
+  {
+   "v": 0,
+   "t": 1019652,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteWithoutTable",
+   "label": "Ate without table",
+   "mood": 0,
+   "rx": 1788890631769
+  },
+  {
+   "v": 0,
+   "t": 1019652,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteCorpse",
+   "label": "Ate corpse",
+   "mood": -12,
+   "rx": 1788890631769
+  },
+  {
+   "v": 0,
+   "t": 1019652,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteHumanlikeMeatDirectCannibal",
+   "label": "Raw cannibalism",
+   "mood": 20,
+   "rx": 1788890631769
+  },
+  {
+   "v": 0,
+   "t": 1019652,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 948,
+   "def": "AteHumanMeat_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "rx": 1788890631769
+  },
+  {
+   "v": 0,
+   "t": 1019652,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81682,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890631769
+  },
+  {
+   "v": 0,
+   "t": 1019652,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81686,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890631770
+  },
+  {
+   "v": 0,
+   "t": 1019652,
+   "type": "thought",
+   "day": 16,
+   "hour": 23,
+   "pawn": 81698,
+   "def": "AteHumanMeat_Know_Abhorrent",
+   "label": "Ate human meat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890631770
   }
  ],
  "counts": {
@@ -1353,13 +2005,13 @@
   "command_result": 8,
   "letter": 1,
   "hello": 1,
-  "world_snapshot": 96,
-  "pawn_snapshot": 384,
-  "job_start": 18,
-  "thought": 19,
-  "interaction": 5,
-  "job_noise": 9,
-  "job_end": 14
+  "world_snapshot": 117,
+  "pawn_snapshot": 468,
+  "job_start": 23,
+  "thought": 56,
+  "interaction": 8,
+  "job_noise": 11,
+  "job_end": 18
  },
- "last_event_at": 1788890599.524734
+ "last_event_at": 1788890631.770071
 }
