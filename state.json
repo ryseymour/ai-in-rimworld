@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 718000,
+  "t": 719500,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 8,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788830061399
+  "rx": 1788830093334
  },
  "pawns": [
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,8 +38,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.342,
-    "rest": 0.642,
+    "food": 0.272,
+    "rest": 0.699,
     "joy": 0.049
    },
    "mood": 0.171,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061401
+   "rx": 1788830093340
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.013,
-    "rest": 0.812,
+    "food": 0,
+    "rest": 0.789,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -117,12 +117,12 @@
      "mood": 24
     },
     {
-     "label": "Mind-shattering pain",
+     "label": "Malnourished",
      "mood": -20
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
+     "label": "Mind-shattering pain",
+     "mood": -20
     },
     {
      "label": "Initial hope",
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061401
+   "rx": 1788830093340
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -176,8 +176,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.958,
-    "rest": 0.748
+    "food": 0.898,
+    "rest": 0.792
    },
    "mood": 0.153,
    "thoughts": [
@@ -194,16 +194,16 @@
      "mood": -6
     },
     {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
      "label": "Unsightly environment",
      "mood": -5
     },
     {
      "label": "My rival Bomba died",
      "mood": 4
+    },
+    {
+     "label": "Slept on ground",
+     "mood": -4
     }
    ],
    "health": "Injured",
@@ -226,27 +226,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061401
+   "rx": 1788830093341
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 73039,
    "name": "Lala",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    244,
+    215,
     0,
-    176
+    150
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.988,
-    "rest": 0.944
+    "food": 0.948,
+    "rest": 0.92
    },
-   "mood": 0.522,
+   "mood": 0.57,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -279,27 +279,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061401
+   "rx": 1788830093341
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 73093,
    "name": "Adrian",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    245,
+    215,
     0,
-    181
+    168
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.99,
-    "rest": 0.895
+    "food": 0.958,
+    "rest": 0.871
    },
-   "mood": 0.522,
+   "mood": 0.594,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -329,27 +329,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061402
+   "rx": 1788830093341
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 73102,
    "name": "AJ",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    241,
+    212,
     0,
-    174
+    154
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.992,
-    "rest": 0.989
+    "food": 0.952,
+    "rest": 0.966
    },
-   "mood": 0.514,
+   "mood": 0.57,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -380,27 +380,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061402
+   "rx": 1788830093342
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 73108,
    "name": "Loner",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    243,
+    214,
     0,
-    176
+    151
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.992,
-    "rest": 0.912
+    "food": 0.952,
+    "rest": 0.888
    },
-   "mood": 0.514,
+   "mood": 0.586,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -429,27 +429,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061402
+   "rx": 1788830093342
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 73117,
    "name": "Ellie",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    242,
+    213,
     0,
-    180
+    166
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.992,
-    "rest": 0.976
+    "food": 0.952,
+    "rest": 0.953
    },
-   "mood": 0.514,
+   "mood": 0.586,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -482,27 +482,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061402
+   "rx": 1788830093342
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 73122,
    "name": "Deccy",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    244,
+    215,
     0,
-    172
+    145
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.992,
-    "rest": 0.987
+    "food": 0.952,
+    "rest": 0.963
    },
-   "mood": 0.514,
+   "mood": 0.586,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -533,27 +533,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788830061403
+   "rx": 1788830093343
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 73128,
    "name": "Dan",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    244,
+    215,
     0,
-    176
+    150
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.988,
-    "rest": 0.976
+    "food": 0.948,
+    "rest": 0.952
    },
-   "mood": 0.522,
+   "mood": 0.594,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -579,27 +579,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061403
+   "rx": 1788830093343
   },
   {
    "v": 0,
-   "t": 718000,
+   "t": 719500,
    "type": "pawn_snapshot",
    "id": 73134,
    "name": "Kaia",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    243,
+    214,
     0,
-    175
+    149
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.992,
-    "rest": 0.971
+    "food": 0.952,
+    "rest": 0.947
    },
-   "mood": 0.514,
+   "mood": 0.586,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -627,7 +627,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830061403
+   "rx": 1788830093344
   }
  ],
  "recent": [
@@ -1171,19 +1171,29 @@
    "job": "Goto",
    "condition": "Succeeded",
    "rx": 1788830057745
+  },
+  {
+   "v": 0,
+   "t": 718745,
+   "type": "hediff",
+   "pawn": 835,
+   "def": "Malnutrition",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788830073813
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 45,
-  "pawn_snapshot": 151,
+  "world_snapshot": 51,
+  "pawn_snapshot": 217,
   "job_start": 31,
   "job_end": 19,
-  "hediff": 1,
+  "hediff": 2,
   "letter": 2,
   "incident": 2
  },
- "last_event_at": 1788830061.4035032,
- "published_at": 1788830061
+ "last_event_at": 1788830093.3441322,
+ "published_at": 1788830093
 }
