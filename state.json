@@ -12,7 +12,7 @@
  },
  "world": {
   "v": 0,
-  "t": 1058000,
+  "t": 1059500,
   "type": "world_snapshot",
   "day": 17,
   "hour": 15,
@@ -21,15 +21,15 @@
   "weather": "windy",
   "wealth": 24693,
   "colonists": 4,
-  "visitors": 2,
+  "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890852377
+  "rx": 1788890889201
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1058000,
+   "t": 1059500,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 15,
@@ -45,10 +45,10 @@
    "job": "researching.",
    "needs": {
     "food": 0,
-    "rest": 0.356,
-    "joy": 0.102
+    "rest": 0.333,
+    "joy": 0.096
    },
-   "mood": 0.442,
+   "mood": 0.43,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -120,11 +120,11 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890852483
+   "rx": 1788890889240
   },
   {
    "v": 0,
-   "t": 1058000,
+   "t": 1059500,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 15,
@@ -133,17 +133,17 @@
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    105,
+    106,
     0,
-    100
+    128
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.306,
-    "joy": 0.551
+    "rest": 0.283,
+    "joy": 0.536
    },
-   "mood": 0.216,
+   "mood": 0.19,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -205,11 +205,11 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890852486
+   "rx": 1788890889243
   },
   {
    "v": 0,
-   "t": 1058000,
+   "t": 1059500,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 15,
@@ -225,7 +225,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.311,
+    "rest": 0.373,
     "joy": 0.478
    },
    "mood": 0.316,
@@ -251,8 +251,8 @@
      "mood": -4
     },
     {
-     "label": "Planetary habitat",
-     "mood": -2
+     "label": "Comfortable",
+     "mood": 4
     }
    ],
    "health": "Healthy",
@@ -293,11 +293,11 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890852490
+   "rx": 1788890889244
   },
   {
    "v": 0,
-   "t": 1058000,
+   "t": 1059500,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 15,
@@ -306,17 +306,17 @@
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    105,
     0,
-    106
+    101
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.344,
-    "joy": 0.085
+    "rest": 0.321,
+    "joy": 0.079
    },
-   "mood": 0.067,
+   "mood": 0.019,
    "thoughts": [
     {
      "label": "Starving",
@@ -381,11 +381,11 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890852491
+   "rx": 1788890889246
   },
   {
    "v": 0,
-   "t": 1058000,
+   "t": 1058750,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 15,
@@ -394,14 +394,14 @@
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    232,
+    246,
     0,
     65
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.58,
-    "rest": 0.377
+    "food": 0.56,
+    "rest": 0.365
    },
    "mood": 0.64,
    "thoughts": [
@@ -462,11 +462,11 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890852491
+   "rx": 1788890874187
   },
   {
    "v": 0,
-   "t": 1058000,
+   "t": 1058750,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 15,
@@ -475,14 +475,14 @@
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    233,
+    246,
     0,
-    59
+    58
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.773,
-    "rest": 0.37
+    "food": 0.757,
+    "rest": 0.358
    },
    "mood": 0.54,
    "thoughts": [
@@ -543,7 +543,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890852491
+   "rx": 1788890874187
   }
  ],
  "recent": [
@@ -4384,6 +4384,54 @@
     "Wait_Wander": 2
    },
    "rx": 1788890852491
+  },
+  {
+   "v": 0,
+   "t": 1058297,
+   "type": "job_start",
+   "day": 17,
+   "hour": 15,
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85548",
+   "source": "JobGiver_Work",
+   "rx": 1788890865176
+  },
+  {
+   "v": 0,
+   "t": 1058602,
+   "type": "job_start",
+   "day": 17,
+   "hour": 15,
+   "pawn": 84939,
+   "job": "Goto",
+   "target": "(249, 0, 65)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788890869501
+  },
+  {
+   "v": 0,
+   "t": 1058669,
+   "type": "job_start",
+   "day": 17,
+   "hour": 15,
+   "pawn": 84947,
+   "job": "Goto",
+   "target": "(249, 0, 59)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788890873650
+  },
+  {
+   "v": 0,
+   "t": 1059570,
+   "type": "job_start",
+   "day": 17,
+   "hour": 15,
+   "pawn": 81686,
+   "job": "LayDown",
+   "target": "Thing_SleepingSpot33288",
+   "source": "JobGiver_GetRest",
+   "rx": 1788890896215
   }
  ],
  "counts": {
@@ -4391,9 +4439,9 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 271,
-  "pawn_snapshot": 1366,
-  "job_start": 74,
+  "world_snapshot": 277,
+  "pawn_snapshot": 1396,
+  "job_start": 78,
   "thought": 110,
   "interaction": 33,
   "job_noise": 31,
@@ -4402,5 +4450,5 @@
   "mental_state": 1,
   "hediff": 3
  },
- "last_event_at": 1788890852.491862
+ "last_event_at": 1788890896.217538
 }
