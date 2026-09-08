@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 1066750,
+  "t": 1089000,
   "type": "world_snapshot",
   "date": "4th of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
-  "wealth": 19125,
+  "wealth": 19150,
   "colonists": 0,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835639985
+  "rx": 1788835671642
  },
  "pawns": [
   {
@@ -1449,22 +1449,92 @@
    "text": "You can hold a pro-man funeral for <color=#D09B61FF>Martin</color> even though the body was lost.\n\nTo begin the ritual, select an empty grave to mourn Martin's passing and click the 'Begin Mourning of Family' command.\n\nExpires in <color=#87F6F6FF><color=#87F6F6FF>9 days</color></color>, on 12th of Jugust.",
    "def": "NeutralEvent",
    "rx": 1788835608511
+  },
+  {
+   "v": 0,
+   "t": 1077605,
+   "type": "incident",
+   "def": "VisitorGroup",
+   "label": "visitor group",
+   "points": -1,
+   "rx": 1788835655534
+  },
+  {
+   "v": 0,
+   "t": 1077605,
+   "type": "command_result",
+   "id": "c-7",
+   "ok": true,
+   "data": {
+    "def": "VisitorGroup"
+   },
+   "rx": 1788835655535
+  },
+  {
+   "v": 0,
+   "t": 1077629,
+   "type": "incident",
+   "def": "TraderCaravanArrival",
+   "label": "trader caravan arrival",
+   "points": -1,
+   "rx": 1788835655567
+  },
+  {
+   "v": 0,
+   "t": 1077629,
+   "type": "command_result",
+   "id": "c-8",
+   "ok": true,
+   "data": {
+    "def": "TraderCaravanArrival"
+   },
+   "rx": 1788835655567
+  },
+  {
+   "v": 0,
+   "t": 1077641,
+   "type": "command_result",
+   "id": "c-9",
+   "ok": true,
+   "data": {
+    "speed": 3,
+    "paused": false
+   },
+   "rx": 1788835655616
+  },
+  {
+   "v": 0,
+   "t": 1083000,
+   "type": "incident",
+   "def": "MeteoriteImpact",
+   "label": "meteorite impact",
+   "points": 44.733,
+   "rx": 1788835663161
+  },
+  {
+   "v": 0,
+   "t": 1083183,
+   "type": "letter",
+   "label": "Meteorite: Gold ore",
+   "text": "A large meteorite has struck ground in the area. It has left behind a lump of gold ore.",
+   "def": "PositiveEvent",
+   "rx": 1788835663488
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "command_result": 6,
+  "command_result": 9,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 818,
+  "world_snapshot": 907,
   "pawn_snapshot": 298,
   "job_start": 24,
   "job_end": 22,
   "job_noise": 14,
   "hediff": 1,
   "death": 3,
-  "letter": 9,
-  "incident": 4
+  "letter": 10,
+  "incident": 7
  },
- "last_event_at": 1788835639.985832
+ "last_event_at": 1788835671.64205
 }
