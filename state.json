@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 814750,
+  "t": 816750,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 10,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788833644251
+  "rx": 1788833677632
  },
  "pawns": [
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -34,12 +34,12 @@
    "pos": [
     104,
     0,
-    109
+    103
    ],
-   "job": "sleeping.",
+   "job": "consuming Shun, Assembler (dead).",
    "needs": {
     "food": 0,
-    "rest": 0.851,
+    "rest": 0.869,
     "joy": 0
    },
    "mood": 0,
@@ -89,27 +89,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833644252
+   "rx": 1788833677634
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    103,
+    106,
     0,
-    123
+    127
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.551
+    "rest": 0.52
    },
-   "mood": 0.029,
+   "mood": 0.122,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -156,35 +156,39 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833644252
+   "rx": 1788833677634
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79429,
    "name": "Goabanbi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    182,
+    154,
     0,
-    204
+    169
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.916,
-    "rest": 0.882
+    "food": 0.832,
+    "rest": 0.849
    },
-   "mood": 0.57,
+   "mood": 0.56,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
     },
     {
-     "label": "Hot",
-     "mood": -8
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
     },
     {
      "label": "Wielding a recurve bow (normal)",
@@ -229,27 +233,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833644253
+   "rx": 1788833677635
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79449,
    "name": "Trocam",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    176,
+    144,
     0,
-    216
+    177
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.94,
-    "rest": 0.896
+    "food": 0.888,
+    "rest": 0.865
    },
-   "mood": 0.57,
+   "mood": 0.52,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -288,27 +292,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833644253
+   "rx": 1788833677635
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79454,
    "name": "Snail",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    182,
+    157,
     0,
-    207
+    172
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.94,
-    "rest": 0.88
+    "food": 0.888,
+    "rest": 0.849
    },
-   "mood": 0.608,
+   "mood": 0.6,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -352,25 +356,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833644253
+   "rx": 1788833677635
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79459,
    "name": "Pelican",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    183,
+    159,
     0,
-    208
+    174
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.94,
-    "rest": 0.955
+    "food": 0.888,
+    "rest": 0.924
    },
    "mood": 0.54,
    "thoughts": [
@@ -415,27 +419,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833644254
+   "rx": 1788833677635
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79464,
    "name": "Blue",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    182,
+    159,
     0,
-    209
+    174
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.944,
-    "rest": 0.887
+    "food": 0.888,
+    "rest": 0.854
    },
-   "mood": 0.52,
+   "mood": 0.47,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -447,6 +451,10 @@
     },
     {
      "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
      "mood": -5
     },
     {
@@ -473,27 +481,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833644254
+   "rx": 1788833677636
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79469,
    "name": "Red",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    182,
+    157,
     0,
-    207
+    172
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.91,
-    "rest": 0.957
+    "food": 0.832,
+    "rest": 0.926
    },
-   "mood": 0.57,
+   "mood": 0.52,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -538,27 +546,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833644256
+   "rx": 1788833677636
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79474,
    "name": "Black",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    176,
+    144,
     0,
-    216
+    177
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.944,
-    "rest": 0.93
+    "food": 0.888,
+    "rest": 0.897
    },
-   "mood": 0.57,
+   "mood": 0.52,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -567,6 +575,10 @@
     {
      "label": "Hot",
      "mood": -8
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Wielding a steel spear (normal)",
@@ -594,27 +606,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833644257
+   "rx": 1788833677636
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79480,
    "name": "Green",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    182,
+    156,
     0,
-    206
+    171
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.94,
-    "rest": 0.868
+    "food": 0.888,
+    "rest": 0.837
    },
-   "mood": 0.53,
+   "mood": 0.48,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -673,25 +685,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833644258
+   "rx": 1788833677637
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79494,
    "name": "Gumi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    182,
+    157,
     0,
-    207
+    172
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.94,
-    "rest": 0.953
+    "food": 0.888,
+    "rest": 0.922
    },
    "mood": 0.54,
    "thoughts": [
@@ -743,27 +755,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833644258
+   "rx": 1788833677637
   },
   {
    "v": 0,
-   "t": 814750,
+   "t": 816750,
    "type": "pawn_snapshot",
    "id": 79498,
    "name": "Chicken",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    182,
+    156,
     0,
-    206
+    171
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.94,
-    "rest": 0.955
+    "food": 0.888,
+    "rest": 0.924
    },
-   "mood": 0.57,
+   "mood": 0.52,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -801,7 +813,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833644258
+   "rx": 1788833677637
   }
  ],
  "recent": [
@@ -1845,20 +1857,367 @@
     "legend": "# wall, + door, = building, ~ water, ^ rock, . floor, ? unseen, space off-map"
    },
    "rx": 1788833646370
+  },
+  {
+   "v": 0,
+   "t": 815166,
+   "type": "interaction",
+   "initiator": 79498,
+   "recipient": 79469,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Chicken</color> quipped about making belts with <color=#D09B61FF>Red</color>.",
+   "rx": 1788833651259
+  },
+  {
+   "v": 0,
+   "t": 815637,
+   "type": "command_result",
+   "id": "c-13",
+   "ok": true,
+   "data": {
+    "speed": 1,
+    "paused": false
+   },
+   "rx": 1788833659082
+  },
+  {
+   "v": 0,
+   "t": 815640,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Goto",
+   "target": "(103, 0, 109)",
+   "source": "JobGiver_MoveToStandable",
+   "rx": 1788833659164
+  },
+  {
+   "v": 0,
+   "t": 815640,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Goto",
+   "condition": "InterruptForced",
+   "rx": 1788833659164
+  },
+  {
+   "v": 0,
+   "t": 815640,
+   "type": "command_result",
+   "id": "c-14",
+   "ok": true,
+   "data": {
+    "pawn": 948,
+    "drafted": true
+   },
+   "rx": 1788833659165
+  },
+  {
+   "v": 0,
+   "t": 815641,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_Corpse_Human79428",
+   "source": "JobGiver_GetFood",
+   "rx": 1788833659202
+  },
+  {
+   "v": 0,
+   "t": 815641,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Ingest",
+   "condition": "InterruptForced",
+   "rx": 1788833659203
+  },
+  {
+   "v": 0,
+   "t": 815641,
+   "type": "command_result",
+   "id": "c-15",
+   "ok": true,
+   "data": {
+    "pawn": 948,
+    "drafted": false
+   },
+   "rx": 1788833659203
+  },
+  {
+   "v": 0,
+   "t": 815643,
+   "type": "command_result",
+   "id": "c-16",
+   "ok": false,
+   "error": "no_pawn",
+   "detail": "no spawned pawn with id 36958",
+   "rx": 1788833659215
+  },
+  {
+   "v": 0,
+   "t": 815646,
+   "type": "command_result",
+   "id": "c-17",
+   "ok": false,
+   "error": "not_standable",
+   "detail": "nothing can stand at that cell",
+   "rx": 1788833659249
+  },
+  {
+   "v": 0,
+   "t": 815647,
+   "type": "command_result",
+   "id": "c-18",
+   "ok": false,
+   "error": "not_standable",
+   "detail": "nothing can stand at that cell",
+   "rx": 1788833659265
+  },
+  {
+   "v": 0,
+   "t": 815648,
+   "type": "command_result",
+   "id": "c-19",
+   "ok": false,
+   "error": "not_standable",
+   "detail": "nothing can stand at that cell",
+   "rx": 1788833659281
+  },
+  {
+   "v": 0,
+   "t": 815650,
+   "type": "command_result",
+   "id": "c-20",
+   "ok": true,
+   "data": {
+    "pawn": 948,
+    "name": "Zeke",
+    "work": [
+     {
+      "work": "Firefighter",
+      "label": "firefight",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Patient",
+      "label": "patient",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Doctor",
+      "label": "doctor",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "PatientBedRest",
+      "label": "bed rest",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "BasicWorker",
+      "label": "basic",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Warden",
+      "label": "warden",
+      "disabled": false,
+      "priority": 0
+     },
+     {
+      "work": "Handling",
+      "label": "handle",
+      "disabled": false,
+      "priority": 0
+     },
+     {
+      "work": "Cooking",
+      "label": "cook",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Hunting",
+      "label": "hunt",
+      "disabled": true,
+      "priority": 0
+     },
+     {
+      "work": "Construction",
+      "label": "construct",
+      "disabled": false,
+      "priority": 0
+     },
+     {
+      "work": "Growing",
+      "label": "grow",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Mining",
+      "label": "mine",
+      "disabled": false,
+      "priority": 0
+     },
+     {
+      "work": "PlantCutting",
+      "label": "plant cut",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Smithing",
+      "label": "smith",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Tailoring",
+      "label": "tailor",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Art",
+      "label": "art",
+      "disabled": false,
+      "priority": 0
+     },
+     {
+      "work": "Crafting",
+      "label": "craft",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Hauling",
+      "label": "haul",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Cleaning",
+      "label": "clean",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Research",
+      "label": "research",
+      "disabled": false,
+      "priority": 0
+     },
+     {
+      "work": "Childcare",
+      "label": "childcare",
+      "disabled": false,
+      "priority": 3
+     },
+     {
+      "work": "Fishing",
+      "label": "fish",
+      "disabled": false,
+      "priority": 0
+     }
+    ]
+   },
+   "rx": 1788833659316
+  },
+  {
+   "v": 0,
+   "t": 816063,
+   "type": "interaction",
+   "initiator": 79449,
+   "recipient": 79474,
+   "def": "Slight",
+   "text": "<color=#D09B61FF>Trocam</color> implied negative things about <color=#D09B61FF>Black</color>'s culture.",
+   "rx": 1788833666188
+  },
+  {
+   "v": 0,
+   "t": 816778,
+   "type": "command_result",
+   "id": "c-21",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "origin_x": 84,
+    "origin_z": 95,
+    "w": 40,
+    "h": 16,
+    "top_row_z": 110,
+    "rows": [
+     "..............###+####..........aa......",
+     "...b..........#...#.=#.........aaa......",
+     "...bb.........#==.+.=#.........a.a......",
+     "..............#==.####........aa........",
+     "..............#==.#.=#......cc..........",
+     "..............#...+.=#..................",
+     "..............#...####..................",
+     "..............+...+=A#..................",
+     "..............########..................",
+     "..........c.............................",
+     "..........c.............................",
+     "..........c.............................",
+     "........................................",
+     ".......aaa...B..........................",
+     ".........a..............................",
+     "........................................"
+    ],
+    "pawns": [
+     {
+      "char": "A",
+      "id": 948,
+      "name": "Zeke",
+      "kind": "colonist"
+     },
+     {
+      "char": "B",
+      "id": 70063,
+      "name": "Boomalope",
+      "kind": "animal"
+     }
+    ],
+    "items": [
+     {
+      "char": "a",
+      "def": "ChunkSlate",
+      "label": "slate chunk"
+     },
+     {
+      "char": "b",
+      "def": "ChunkGranite",
+      "label": "granite chunk"
+     },
+     {
+      "char": "c",
+      "def": "ChunkSandstone",
+      "label": "sandstone chunk"
+     }
+    ],
+    "legend": "# wall, + door, = building, ~ water, ^ rock, . floor, ? unseen, space off-map"
+   },
+   "rx": 1788833678116
   }
  ],
  "counts": {
   "mod_connected": 2,
   "hello": 2,
-  "world_snapshot": 6,
-  "pawn_snapshot": 72,
-  "job_start": 5,
-  "job_end": 4,
-  "command_result": 12,
+  "world_snapshot": 14,
+  "pawn_snapshot": 168,
+  "job_start": 7,
+  "job_end": 6,
+  "command_result": 21,
   "letter": 1,
   "mental_state": 1,
-  "mod_disconnected": 1
+  "mod_disconnected": 1,
+  "interaction": 2
  },
- "last_event_at": 1788833646.3703082,
- "published_at": 1788833647
+ "last_event_at": 1788833678.116603,
+ "published_at": 1788833679
 }
