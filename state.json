@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 1045000,
+  "t": 1066750,
   "type": "world_snapshot",
-  "date": "3rd of Jugust, 5500",
+  "date": "4th of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
-  "wealth": 19494,
+  "wealth": 19125,
   "colonists": 0,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835608654
+  "rx": 1788835639985
  },
  "pawns": [
   {
@@ -1456,7 +1456,7 @@
   "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 731,
+  "world_snapshot": 818,
   "pawn_snapshot": 298,
   "job_start": 24,
   "job_end": 22,
@@ -1466,5 +1466,5 @@
   "letter": 9,
   "incident": 4
  },
- "last_event_at": 1788835608.654546
+ "last_event_at": 1788835639.985832
 }
