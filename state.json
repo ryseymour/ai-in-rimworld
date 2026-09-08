@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 1154750,
+  "t": 1211500,
   "type": "world_snapshot",
-  "date": "5th of Jugust, 5500",
+  "date": "6th of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 19115,
+  "wealth": 19105,
   "colonists": 0,
-  "visitors": 0,
+  "visitors": 1,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835765996
+  "rx": 1788841251255
  },
  "pawns": [
   {
@@ -97,6 +97,66 @@
    "drafted": false,
    "rx": 1788835445409,
    "dead": true
+  },
+  {
+   "v": 0,
+   "t": 1211500,
+   "type": "pawn_snapshot",
+   "id": 160280,
+   "name": "Croirobi",
+   "faction": null,
+   "kind": "visitor",
+   "pos": [
+    189,
+    0,
+    77
+   ],
+   "job": "wandering.",
+   "needs": {
+    "food": 0.952,
+    "rest": 0.629
+   },
+   "mood": 0.575,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Ate raw food",
+     "mood": -7
+    },
+    {
+     "label": "Ate fungus raw",
+     "mood": -6
+    },
+    {
+     "label": "Uncovered groin/chest",
+     "mood": -4
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 5,
+    "Melee": 5,
+    "Construction": 0,
+    "Mining": 1,
+    "Cooking": 0,
+    "Plants": 0,
+    "Animals": 6,
+    "Crafting": 4,
+    "Artistic": 12,
+    "Social": 0,
+    "Intellectual": 3
+   },
+   "traits": [
+    "Trigger-happy",
+    "Annoying voice",
+    "Greedy"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788841251255
   }
  ],
  "recent": [
@@ -1528,22 +1588,211 @@
    "label": "traveler group",
    "points": -1,
    "rx": 1788835760751
+  },
+  {
+   "v": 0,
+   "t": 1163106,
+   "type": "command_result",
+   "id": "c-10",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 1163106,
+    "paused": false,
+    "in_game": true
+   },
+   "rx": 1788836052608
+  },
+  {
+   "v": 0,
+   "t": 1183001,
+   "type": "letter",
+   "label": "Drought",
+   "text": "Due to a recent lack of rain, a drought has begun. Outdoor plants will grow significantly slower.",
+   "def": "ThreatSmall",
+   "rx": 1788836081620
+  },
+  {
+   "v": 0,
+   "t": 1183001,
+   "type": "incident",
+   "def": "Drought",
+   "label": "drought",
+   "points": 40.84,
+   "rx": 1788836081621
+  },
+  {
+   "v": 0,
+   "t": 1191000,
+   "type": "letter",
+   "label": "Wild woman wanders in",
+   "text": "A person living among wild animals has wandered into the area. She's called <color=#D09B61FF>Croirobi</color>.\n\nYou can attempt to tame her.",
+   "def": "NeutralEvent",
+   "rx": 1788838178787
+  },
+  {
+   "v": 0,
+   "t": 1191000,
+   "type": "incident",
+   "def": "WildManWandersIn",
+   "label": "wild man wanders in",
+   "points": 23.218,
+   "rx": 1788838178788
+  },
+  {
+   "v": 0,
+   "t": 1192000,
+   "type": "job_noise",
+   "total": 7,
+   "counts": {
+    "Wait_Wander": 2,
+    "Wait_MaintainPosture": 3,
+    "GotoWander": 2
+   },
+   "rx": 1788839090341
+  },
+  {
+   "v": 0,
+   "t": 1194000,
+   "type": "job_noise",
+   "total": 14,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "Wait_Wander": 4,
+    "GotoWander": 3
+   },
+   "rx": 1788839093435
+  },
+  {
+   "v": 0,
+   "t": 1196000,
+   "type": "job_noise",
+   "total": 18,
+   "counts": {
+    "Wait_MaintainPosture": 9,
+    "GotoWander": 4,
+    "Wait_Wander": 5
+   },
+   "rx": 1788840116680
+  },
+  {
+   "v": 0,
+   "t": 1198000,
+   "type": "job_noise",
+   "total": 14,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "Wait_Wander": 4,
+    "GotoWander": 3
+   },
+   "rx": 1788840119828
+  },
+  {
+   "v": 0,
+   "t": 1200000,
+   "type": "job_noise",
+   "total": 18,
+   "counts": {
+    "Wait_MaintainPosture": 9,
+    "GotoWander": 5,
+    "Wait_Wander": 4
+   },
+   "rx": 1788841108232
+  },
+  {
+   "v": 0,
+   "t": 1202000,
+   "type": "job_noise",
+   "total": 14,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "Wait_Wander": 4,
+    "GotoWander": 3
+   },
+   "rx": 1788841235753
+  },
+  {
+   "v": 0,
+   "t": 1204000,
+   "type": "job_noise",
+   "total": 16,
+   "counts": {
+    "Wait_MaintainPosture": 8,
+    "GotoWander": 4,
+    "Wait_Wander": 4
+   },
+   "rx": 1788841239145
+  },
+  {
+   "v": 0,
+   "t": 1206000,
+   "type": "job_noise",
+   "total": 16,
+   "counts": {
+    "Wait_MaintainPosture": 8,
+    "GotoWander": 4,
+    "Wait_Wander": 4
+   },
+   "rx": 1788841242211
+  },
+  {
+   "v": 0,
+   "t": 1208000,
+   "type": "job_noise",
+   "total": 16,
+   "counts": {
+    "Wait_MaintainPosture": 8,
+    "GotoWander": 4,
+    "Wait_Wander": 4
+   },
+   "rx": 1788841245325
+  },
+  {
+   "v": 0,
+   "t": 1209781,
+   "type": "job_start",
+   "pawn": 160280,
+   "job": "Ingest",
+   "target": "Thing_RawFungus126277",
+   "source": "JobGiver_GetFood",
+   "rx": 1788841248259
+  },
+  {
+   "v": 0,
+   "t": 1209781,
+   "type": "job_end",
+   "pawn": 160280,
+   "job": "Ingest",
+   "condition": "Succeeded",
+   "rx": 1788841248260
+  },
+  {
+   "v": 0,
+   "t": 1210000,
+   "type": "job_noise",
+   "total": 15,
+   "counts": {
+    "Wait_MaintainPosture": 8,
+    "GotoWander": 4,
+    "Wait_Wander": 3
+   },
+   "rx": 1788841248721
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "command_result": 9,
+  "command_result": 10,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 1170,
-  "pawn_snapshot": 298,
-  "job_start": 24,
-  "job_end": 22,
-  "job_noise": 14,
+  "world_snapshot": 1397,
+  "pawn_snapshot": 381,
+  "job_start": 25,
+  "job_end": 23,
+  "job_noise": 24,
   "hediff": 1,
   "death": 3,
-  "letter": 10,
-  "incident": 8
+  "letter": 12,
+  "incident": 10
  },
- "last_event_at": 1788835765.9969862
+ "last_event_at": 1788841251.255897
 }
