@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 1001750,
+  "t": 1003750,
   "type": "world_snapshot",
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
@@ -20,29 +20,29 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788889397305
+  "rx": 1788889430645
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1001750,
+   "t": 1003750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    97,
+    62,
     0,
-    154
+    177
    ],
    "job": "fleeing.",
    "needs": {
-    "food": 0.482,
-    "rest": 0.824,
-    "joy": 0.889
+    "food": 0.384,
+    "rest": 0.791,
+    "joy": 0.868
    },
-   "mood": 0.836,
+   "mood": 0.786,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -57,16 +57,16 @@
      "mood": 10
     },
     {
+     "label": "Serious pain",
+     "mood": -10
+    },
+    {
      "label": "Darkness",
      "mood": -5
     },
     {
-     "label": "Minor pain",
+     "label": "No Thinker",
      "mood": -5
-    },
-    {
-     "label": "Wearing clothes (non-groin)",
-     "mood": -4
     }
    ],
    "health": "Injured",
@@ -89,28 +89,28 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889397306
+   "rx": 1788889430645
   },
   {
    "v": 0,
-   "t": 1001750,
+   "t": 1003750,
    "type": "pawn_snapshot",
    "id": 84427,
    "name": "Jacobson",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    99,
+    101,
     0,
-    104
+    118
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.704,
-    "rest": 0.824,
-    "joy": 0.994
+    "food": 0.648,
+    "rest": 0.791,
+    "joy": 0.973
    },
-   "mood": 0.432,
+   "mood": 0.473,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -133,8 +133,8 @@
      "mood": -5
     },
     {
-     "label": "Spacious interior",
-     "mood": 5
+     "label": "Observed corpse",
+     "mood": -4
     }
    ],
    "health": "Healthy",
@@ -159,28 +159,28 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889397306
+   "rx": 1788889430645
   },
   {
    "v": 0,
-   "t": 1001750,
+   "t": 1003750,
    "type": "pawn_snapshot",
    "id": 84431,
    "name": "Martin",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    108,
+    101,
     0,
-    161
+    116
    ],
-   "job": "cowering.",
+   "job": "resting.",
    "needs": {
-    "food": 0.504,
-    "rest": 0.757,
-    "joy": 0.958
+    "food": 0.448,
+    "rest": 0.724,
+    "joy": 0.937
    },
-   "mood": 0.508,
+   "mood": 0.54,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -199,12 +199,12 @@
      "mood": -5
     },
     {
-     "label": "Wearing clothes (non-groin)",
-     "mood": -4
+     "label": "Spacious interior",
+     "mood": 5
     },
     {
-     "label": "Undergrounder outdoors",
-     "mood": -3
+     "label": "Wearing clothes (non-groin)",
+     "mood": -4
     }
    ],
    "health": "Injured",
@@ -226,11 +226,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889397306
+   "rx": 1788889430645
   },
   {
    "v": 0,
-   "t": 1001750,
+   "t": 1003750,
    "type": "pawn_snapshot",
    "id": 84435,
    "name": "Fu",
@@ -243,9 +243,9 @@
    ],
    "job": "researching.",
    "needs": {
-    "food": 0.504,
-    "rest": 0.796,
-    "joy": 0.429
+    "food": 0.452,
+    "rest": 0.765,
+    "joy": 0.41
    },
    "mood": 0.46,
    "thoughts": [
@@ -296,7 +296,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889397307
+   "rx": 1788889430645
   }
  ],
  "recent": [
@@ -3147,6 +3147,107 @@
    "def": "DeepTalk",
    "text": "Jacobson and Fu exchanged thoughts about alien contact.",
    "rx": 1788889397282
+  },
+  {
+   "v": 0,
+   "t": 1002000,
+   "type": "job_noise",
+   "total": 3,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "GotoWander": 1
+   },
+   "rx": 1788889401484
+  },
+  {
+   "v": 0,
+   "t": 1002055,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "right ear",
+   "severity": 2.164,
+   "rx": 1788889402398
+  },
+  {
+   "v": 0,
+   "t": 1002055,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "right eye",
+   "severity": 2.164,
+   "rx": 1788889402400
+  },
+  {
+   "v": 0,
+   "t": 1002555,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_GetRest",
+   "rx": 1788889410738
+  },
+  {
+   "v": 0,
+   "t": 1002572,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "FleeAndCower",
+   "target": "(65, 0, 176)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889411007
+  },
+  {
+   "v": 0,
+   "t": 1003078,
+   "type": "job_start",
+   "pawn": 84435,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788889419449
+  },
+  {
+   "v": 0,
+   "t": 1003296,
+   "type": "job_start",
+   "pawn": 84427,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84653",
+   "source": "JobGiver_Work",
+   "rx": 1788889423082
+  },
+  {
+   "v": 0,
+   "t": 1003465,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "right foot",
+   "severity": 2.49,
+   "rx": 1788889425896
+  },
+  {
+   "v": 0,
+   "t": 1003465,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "right middle toe",
+   "severity": 2.49,
+   "rx": 1788889425896
+  },
+  {
+   "v": 0,
+   "t": 1003517,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "FleeAndCower",
+   "target": "(48, 0, 187)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889426777
   }
  ],
  "counts": {
@@ -3154,15 +3255,15 @@
   "mod_disconnected": 2,
   "command_result": 27,
   "hello": 2,
-  "world_snapshot": 58,
-  "pawn_snapshot": 196,
-  "job_start": 23,
+  "world_snapshot": 66,
+  "pawn_snapshot": 228,
+  "job_start": 28,
   "job_end": 12,
-  "job_noise": 6,
+  "job_noise": 7,
   "letter": 3,
   "interaction": 6,
   "incident": 2,
-  "hediff": 9
+  "hediff": 13
  },
- "last_event_at": 1788889397.3071601
+ "last_event_at": 1788889430.645748
 }
