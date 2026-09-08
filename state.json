@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 876750,
+  "t": 896250,
   "type": "world_snapshot",
-  "date": "15th of Aprimay, 5500",
+  "date": "1st of Jugust, 5500",
   "season": "PermanentSummer",
-  "weather": "clear",
-  "wealth": 21307,
+  "weather": "rainy thunderstorm",
+  "wealth": 21052,
   "colonists": 1,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835356639
+  "rx": 1788835388059
  },
  "pawns": [
   {
    "v": 0,
-   "t": 876750,
+   "t": 896250,
    "type": "pawn_snapshot",
    "id": 93450,
    "name": "Martin",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    106,
+    90,
     0,
-    101
+    106
    ],
-   "job": "equipping revolver (good).",
+   "job": "downed, unconscious.",
    "needs": {
     "food": 0,
-    "rest": 0.926,
-    "joy": 0.62
+    "rest": 0.618,
+    "joy": 0.591
    },
-   "mood": 0.413,
+   "mood": 0.322,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -61,15 +61,15 @@
      "mood": -15
     },
     {
-     "label": "Quite comfortable",
-     "mood": 6
+     "label": "Unsightly environment",
+     "mood": -5
     },
     {
-     "label": "Darkness",
-     "mood": -5
+     "label": "Slept in the heat",
+     "mood": -4
     }
    ],
-   "health": "Injured",
+   "health": "Unconscious",
    "skills": {
     "Shooting": 14,
     "Melee": 1,
@@ -95,7 +95,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788835356640
+   "rx": 1788835388059
   }
  ],
  "recent": [
@@ -917,6 +917,161 @@
    "part": null,
    "severity": 0.001,
    "rx": 1788835356523
+  },
+  {
+   "v": 0,
+   "t": 878000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835360292
+  },
+  {
+   "v": 0,
+   "t": 878760,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_Work",
+   "rx": 1788835362410
+  },
+  {
+   "v": 0,
+   "t": 878760,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788835362410
+  },
+  {
+   "v": 0,
+   "t": 879619,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835364805
+  },
+  {
+   "v": 0,
+   "t": 879619,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Incompletable",
+   "rx": 1788835364805
+  },
+  {
+   "v": 0,
+   "t": 880000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835365312
+  },
+  {
+   "v": 0,
+   "t": 884559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835371641
+  },
+  {
+   "v": 0,
+   "t": 884559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835371642
+  },
+  {
+   "v": 0,
+   "t": 886000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835373645
+  },
+  {
+   "v": 0,
+   "t": 889559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835378761
+  },
+  {
+   "v": 0,
+   "t": 889559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835378761
+  },
+  {
+   "v": 0,
+   "t": 890000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835379379
+  },
+  {
+   "v": 0,
+   "t": 894559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835385710
+  },
+  {
+   "v": 0,
+   "t": 894559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835385710
+  },
+  {
+   "v": 0,
+   "t": 895279,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835386707
+  },
+  {
+   "v": 0,
+   "t": 896000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835387711
   }
  ],
  "counts": {
@@ -924,12 +1079,12 @@
   "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 58,
-  "pawn_snapshot": 58,
-  "job_start": 10,
-  "job_end": 9,
-  "job_noise": 1,
+  "world_snapshot": 136,
+  "pawn_snapshot": 136,
+  "job_start": 16,
+  "job_end": 14,
+  "job_noise": 6,
   "hediff": 1
  },
- "last_event_at": 1788835356.640291
+ "last_event_at": 1788835388.0596201
 }
