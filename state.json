@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 1211500,
+  "t": 1226250,
   "type": "world_snapshot",
   "date": "6th of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 19105,
+  "wealth": 19089,
   "colonists": 0,
   "visitors": 1,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788841251255
+  "rx": 1788843033994
  },
  "pawns": [
   {
@@ -100,23 +100,23 @@
   },
   {
    "v": 0,
-   "t": 1211500,
+   "t": 1226250,
    "type": "pawn_snapshot",
    "id": 160280,
    "name": "Croirobi",
    "faction": null,
    "kind": "visitor",
    "pos": [
-    189,
+    206,
     0,
-    77
+    68
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.629
+    "food": 0.56,
+    "rest": 0.396
    },
-   "mood": 0.575,
+   "mood": 0.41,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -132,6 +132,10 @@
     },
     {
      "label": "Uncovered groin/chest",
+     "mood": -4
+    },
+    {
+     "label": "Sweaty",
      "mood": -4
     }
    ],
@@ -156,7 +160,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788841251255
+   "rx": 1788843033995
   }
  ],
  "recent": [
@@ -1777,22 +1781,130 @@
     "Wait_Wander": 3
    },
    "rx": 1788841248721
+  },
+  {
+   "v": 0,
+   "t": 1212000,
+   "type": "job_noise",
+   "total": 6,
+   "counts": {
+    "Wait_MaintainPosture": 3,
+    "Wait_Wander": 2,
+    "GotoWander": 1
+   },
+   "rx": 1788841251992
+  },
+  {
+   "v": 0,
+   "t": 1214000,
+   "type": "job_noise",
+   "total": 16,
+   "counts": {
+    "Wait_MaintainPosture": 8,
+    "GotoWander": 4,
+    "Wait_Wander": 4
+   },
+   "rx": 1788841254954
+  },
+  {
+   "v": 0,
+   "t": 1216000,
+   "type": "job_noise",
+   "total": 20,
+   "counts": {
+    "Wait_MaintainPosture": 10,
+    "GotoWander": 5,
+    "Wait_Wander": 5
+   },
+   "rx": 1788842241922
+  },
+  {
+   "v": 0,
+   "t": 1218000,
+   "type": "job_noise",
+   "total": 22,
+   "counts": {
+    "Wait_MaintainPosture": 11,
+    "GotoWander": 6,
+    "Wait_Wander": 5
+   },
+   "rx": 1788842244933
+  },
+  {
+   "v": 0,
+   "t": 1220000,
+   "type": "job_noise",
+   "total": 14,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "Wait_Wander": 4,
+    "GotoWander": 3
+   },
+   "rx": 1788843023162
+  },
+  {
+   "v": 0,
+   "t": 1222000,
+   "type": "job_noise",
+   "total": 16,
+   "counts": {
+    "Wait_MaintainPosture": 8,
+    "GotoWander": 4,
+    "Wait_Wander": 4
+   },
+   "rx": 1788843026159
+  },
+  {
+   "v": 0,
+   "t": 1224000,
+   "type": "job_noise",
+   "total": 16,
+   "counts": {
+    "Wait_MaintainPosture": 8,
+    "GotoWander": 4,
+    "Wait_Wander": 4
+   },
+   "rx": 1788843030698
+  },
+  {
+   "v": 0,
+   "t": 1226000,
+   "type": "job_noise",
+   "total": 16,
+   "counts": {
+    "Wait_MaintainPosture": 8,
+    "GotoWander": 4,
+    "Wait_Wander": 4
+   },
+   "rx": 1788843033632
+  },
+  {
+   "v": 0,
+   "t": 1226414,
+   "type": "command_result",
+   "id": "c-11",
+   "ok": true,
+   "data": {
+    "loading": "Aurora (Permadeath) BACKUP-pre-airim-test",
+    "note": "load started; poll ping until in_game is true"
+   },
+   "rx": 1788843034245
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "command_result": 10,
+  "command_result": 11,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 1397,
-  "pawn_snapshot": 381,
+  "world_snapshot": 1456,
+  "pawn_snapshot": 440,
   "job_start": 25,
   "job_end": 23,
-  "job_noise": 24,
+  "job_noise": 32,
   "hediff": 1,
   "death": 3,
   "letter": 12,
   "incident": 10
  },
- "last_event_at": 1788841251.255897
+ "last_event_at": 1788843034.245312
 }
