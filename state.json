@@ -3821,12 +3821,17 @@
     "in_game": true
    },
    "rx": 1788863296848
+  },
+  {
+   "type": "mod_disconnected",
+   "peer": "('127.0.0.1', 50951)",
+   "rx": 1788869532581
   }
  ],
  "counts": {
   "mod_connected": 2,
   "command_result": 17,
-  "mod_disconnected": 1,
+  "mod_disconnected": 2,
   "hello": 2,
   "world_snapshot": 1549,
   "pawn_snapshot": 1036,
@@ -3839,5 +3844,5 @@
   "incident": 13,
   "interaction": 15
  },
- "last_event_at": 1788863296.848521
+ "last_event_at": 1788869532.581331
 }
