@@ -12,27 +12,27 @@
  },
  "world": {
   "v": 0,
-  "t": 1008500,
+  "t": 1014250,
   "type": "world_snapshot",
   "day": 16,
-  "hour": 19,
+  "hour": 21,
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 25608,
+  "wealth": 25607,
   "colonists": 4,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890566492
+  "rx": 1788890599404
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1008500,
+   "t": 1014250,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 19,
+   "hour": 21,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
@@ -44,8 +44,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.324,
-    "rest": 0.732,
+    "food": 0.206,
+    "rest": 0.906,
     "joy": 0.358
    },
    "mood": 0.37,
@@ -53,6 +53,10 @@
     {
      "label": "Very low expectations",
      "mood": 24
+    },
+    {
+     "label": "Hungry",
+     "mood": -6
     },
     {
      "label": "Trees sorely missed",
@@ -69,10 +73,6 @@
     {
      "label": "Constraining clothes",
      "mood": -3
-    },
-    {
-     "label": "Planetary habitat",
-     "mood": -2
     }
    ],
    "health": "Healthy",
@@ -120,14 +120,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890566492
+   "rx": 1788890599404
   },
   {
    "v": 0,
-   "t": 1008500,
+   "t": 1014250,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 19,
+   "hour": 21,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
@@ -137,13 +137,13 @@
     0,
     123
    ],
-   "job": "sleeping.",
+   "job": "resting.",
    "needs": {
-    "food": 0.324,
-    "rest": 0.828,
-    "joy": 0.989
+    "food": 0.204,
+    "rest": 0.998,
+    "joy": 0.988
    },
-   "mood": 0.44,
+   "mood": 0.435,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -158,16 +158,16 @@
      "mood": 10
     },
     {
+     "label": "Hungry",
+     "mood": -6
+    },
+    {
      "label": "No Thinker",
      "mood": -5
     },
     {
-     "label": "Wearing clothes (non-groin)",
-     "mood": -4
-    },
-    {
-     "label": "Planetary habitat",
-     "mood": -2
+     "label": "Darkness",
+     "mood": -5
     }
    ],
    "health": "Healthy",
@@ -205,54 +205,54 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890566492
+   "rx": 1788890599405
   },
   {
    "v": 0,
-   "t": 1008500,
+   "t": 1014250,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 19,
+   "hour": 21,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    101,
     0,
-    106
+    107
    ],
-   "job": "sleeping.",
+   "job": "researching.",
    "needs": {
-    "food": 0.324,
-    "rest": 0.921,
-    "joy": 0.943
+    "food": 0.206,
+    "rest": 0.941,
+    "joy": 0.905
    },
-   "mood": 0.55,
+   "mood": 0.64,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
+     "label": "Burning passion for my work",
+     "mood": 14
+    },
+    {
      "label": "Recreation fully satisfied",
      "mood": 10
     },
     {
-     "label": "Extremely comfortable",
-     "mood": 8
+     "label": "Quite comfortable",
+     "mood": 6
+    },
+    {
+     "label": "Hungry",
+     "mood": -6
     },
     {
      "label": "Trees sorely missed",
      "mood": -5
-    },
-    {
-     "label": "No Thinker",
-     "mood": -5
-    },
-    {
-     "label": "Wearing clothes (non-groin)",
-     "mood": -4
     }
    ],
    "health": "Healthy",
@@ -293,14 +293,14 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890566492
+   "rx": 1788890599405
   },
   {
    "v": 0,
-   "t": 1008500,
+   "t": 1014250,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 19,
+   "hour": 21,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
@@ -313,7 +313,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.693,
+    "rest": 0.916,
     "joy": 0.338
    },
    "mood": 0.381,
@@ -381,7 +381,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890566492
+   "rx": 1788890599405
   }
  ],
  "recent": [
@@ -1250,6 +1250,102 @@
     "Wait_MaintainPosture": 1
    },
    "rx": 1788890563556
+  },
+  {
+   "v": 0,
+   "t": 1009696,
+   "type": "thought",
+   "day": 16,
+   "hour": 19,
+   "pawn": 948,
+   "def": "SleptInBedroom",
+   "label": "Awful bedroom",
+   "mood": -2,
+   "rx": 1788890573468
+  },
+  {
+   "v": 0,
+   "t": 1010413,
+   "type": "job_start",
+   "day": 16,
+   "hour": 20,
+   "pawn": 81698,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890577605
+  },
+  {
+   "v": 0,
+   "t": 1012954,
+   "type": "thought",
+   "day": 16,
+   "hour": 21,
+   "pawn": 81686,
+   "def": "SleptOnGround",
+   "label": "Slept on ground",
+   "mood": 0,
+   "rx": 1788890592203
+  },
+  {
+   "v": 0,
+   "t": 1012954,
+   "type": "thought",
+   "day": 16,
+   "hour": 21,
+   "pawn": 81686,
+   "def": "SleptInBedroom",
+   "label": "Awful bedroom",
+   "mood": -2,
+   "rx": 1788890592207
+  },
+  {
+   "v": 0,
+   "t": 1012969,
+   "type": "thought",
+   "day": 16,
+   "hour": 21,
+   "pawn": 81682,
+   "def": "SleptOnGround",
+   "label": "Slept on ground",
+   "mood": 0,
+   "rx": 1788890592288
+  },
+  {
+   "v": 0,
+   "t": 1012969,
+   "type": "thought",
+   "day": 16,
+   "hour": 21,
+   "pawn": 81682,
+   "def": "SleptInBedroom",
+   "label": "Awful bedroom",
+   "mood": -2,
+   "rx": 1788890592288
+  },
+  {
+   "v": 0,
+   "t": 1014270,
+   "type": "thought",
+   "day": 16,
+   "hour": 21,
+   "pawn": 81686,
+   "def": "SleptOnGround",
+   "label": "Slept on ground",
+   "mood": 0,
+   "rx": 1788890599524
+  },
+  {
+   "v": 0,
+   "t": 1014270,
+   "type": "thought",
+   "day": 16,
+   "hour": 21,
+   "pawn": 81686,
+   "def": "SleptInBedroom",
+   "label": "Awful bedroom",
+   "mood": -2,
+   "rx": 1788890599524
   }
  ],
  "counts": {
@@ -1257,13 +1353,13 @@
   "command_result": 8,
   "letter": 1,
   "hello": 1,
-  "world_snapshot": 73,
-  "pawn_snapshot": 292,
-  "job_start": 17,
-  "thought": 12,
+  "world_snapshot": 96,
+  "pawn_snapshot": 384,
+  "job_start": 18,
+  "thought": 19,
   "interaction": 5,
   "job_noise": 9,
   "job_end": 14
  },
- "last_event_at": 1788890566.4929621
+ "last_event_at": 1788890599.524734
 }
