@@ -1,7 +1,103 @@
 {
- "hello": {},
- "world": {},
- "pawns": [],
+ "hello": {
+  "v": 0,
+  "t": 862615,
+  "type": "hello",
+  "mod_version": "0.1.0",
+  "game_version": "1.6.4871 rev597",
+  "map_id": 2,
+  "rx": 1788835317736
+ },
+ "world": {
+  "v": 0,
+  "t": 863000,
+  "type": "world_snapshot",
+  "date": "15th of Aprimay, 5500",
+  "season": "PermanentSummer",
+  "weather": "clear",
+  "wealth": 21307,
+  "colonists": 1,
+  "visitors": 0,
+  "hostiles": 0,
+  "tile": 1524,
+  "rx": 1788835324372
+ },
+ "pawns": [
+  {
+   "v": 0,
+   "t": 863000,
+   "type": "pawn_snapshot",
+   "id": 93450,
+   "name": "Martin",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    104,
+    0,
+    106
+   ],
+   "job": "resting.",
+   "needs": {
+    "food": 0.092,
+    "rest": 0.796,
+    "joy": 0.696
+   },
+   "mood": 0.348,
+   "thoughts": [
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Mind-shattering pain",
+     "mood": -20
+    },
+    {
+     "label": "Psychic soothe",
+     "mood": 16
+    },
+    {
+     "label": "Ravenously hungry",
+     "mood": -12
+    },
+    {
+     "label": "Extremely comfortable",
+     "mood": 8
+    },
+    {
+     "label": "Unsightly environment",
+     "mood": -5
+    }
+   ],
+   "health": "Pain shock",
+   "skills": {
+    "Shooting": 14,
+    "Melee": 1,
+    "Construction": 0,
+    "Mining": 0,
+    "Cooking": 4,
+    "Plants": 3,
+    "Animals": 1,
+    "Crafting": 10,
+    "Artistic": 0,
+    "Medicine": 9,
+    "Social": 3,
+    "Intellectual": 4
+   },
+   "traits": [
+    "Sickly"
+   ],
+   "relations": [
+    {
+     "other": "Zekai",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788835324373
+  }
+ ],
  "recent": [
   {
    "type": "mod_connected",
@@ -554,12 +650,69 @@
    "type": "mod_disconnected",
    "peer": "('127.0.0.1', 50905)",
    "rx": 1788835280217
+  },
+  {
+   "type": "mod_connected",
+   "peer": "('127.0.0.1', 50951)",
+   "rx": 1788835308666
+  },
+  {
+   "v": 0,
+   "t": 0,
+   "type": "command_result",
+   "id": "c-3",
+   "ok": true,
+   "data": {
+    "loading": "Aurora (Permadeath)",
+    "note": "load started; poll ping until in_game is true"
+   },
+   "rx": 1788835311480
+  },
+  {
+   "v": 0,
+   "t": 0,
+   "type": "command_result",
+   "id": "c-4",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 0,
+    "paused": true,
+    "in_game": false
+   },
+   "rx": 1788835311506
+  },
+  {
+   "v": 0,
+   "t": 862614,
+   "type": "command_result",
+   "id": "c-5",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 862614,
+    "paused": true,
+    "in_game": true
+   },
+   "rx": 1788835315539
+  },
+  {
+   "v": 0,
+   "t": 862615,
+   "type": "hello",
+   "mod_version": "0.1.0",
+   "game_version": "1.6.4871 rev597",
+   "map_id": 2,
+   "rx": 1788835317736
   }
  ],
  "counts": {
-  "mod_connected": 1,
-  "command_result": 2,
-  "mod_disconnected": 1
+  "mod_connected": 2,
+  "command_result": 5,
+  "mod_disconnected": 1,
+  "hello": 1,
+  "world_snapshot": 3,
+  "pawn_snapshot": 3
  },
- "last_event_at": 1788835280.217053
+ "last_event_at": 1788835324.37379
 }
