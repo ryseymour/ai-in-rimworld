@@ -12,10 +12,10 @@
  },
  "world": {
   "v": 0,
-  "t": 1074250,
+  "t": 1075000,
   "type": "world_snapshot",
   "day": 17,
-  "hour": 21,
+  "hour": 22,
   "date": "4th of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
@@ -24,15 +24,15 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788891642741
+  "rx": 1788891670850
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1074250,
+   "t": 1075000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 21,
+   "hour": 22,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
@@ -45,7 +45,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.683,
+    "rest": 0.706,
     "joy": 0.087
    },
    "mood": 0.42,
@@ -120,14 +120,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788891642754
+   "rx": 1788891670870
   },
   {
    "v": 0,
-   "t": 1074250,
+   "t": 1075000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 21,
+   "hour": 22,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
@@ -140,7 +140,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.709,
+    "rest": 0.732,
     "joy": 0.53
    },
    "mood": 0.185,
@@ -205,30 +205,30 @@
     }
    ],
    "drafted": false,
-   "rx": 1788891642755
+   "rx": 1788891670872
   },
   {
    "v": 0,
-   "t": 1074250,
+   "t": 1075000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 21,
+   "hour": 22,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    101,
     0,
-    106
+    109
    ],
-   "job": "sleeping.",
+   "job": "cleaning dirt.",
    "needs": {
     "food": 0,
-    "rest": 0.978,
-    "joy": 0.478
+    "rest": 0.998,
+    "joy": 0.476
    },
-   "mood": 0.316,
+   "mood": 0.311,
    "thoughts": [
     {
      "label": "Badly malnourished",
@@ -251,8 +251,8 @@
      "mood": -5
     },
     {
-     "label": "Wearing clothes (non-groin)",
-     "mood": -4
+     "label": "Darkness",
+     "mood": -5
     }
    ],
    "health": "Healthy",
@@ -293,14 +293,14 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788891642758
+   "rx": 1788891670872
   },
   {
    "v": 0,
-   "t": 1074250,
+   "t": 1075000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 21,
+   "hour": 22,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
@@ -313,7 +313,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.719,
+    "rest": 0.747,
     "joy": 0.067
    },
    "mood": 0,
@@ -381,7 +381,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788891642762
+   "rx": 1788891670873
   },
   {
    "v": 0,
@@ -4553,6 +4553,54 @@
    "label": "Awful bedroom",
    "mood": -2,
    "rx": 1788891575625
+  },
+  {
+   "v": 0,
+   "t": 1074768,
+   "type": "thought",
+   "day": 17,
+   "hour": 21,
+   "pawn": 81698,
+   "def": "SleptInBedroom",
+   "label": "Awful bedroom",
+   "mood": -2,
+   "rx": 1788891658369
+  },
+  {
+   "v": 0,
+   "t": 1074768,
+   "type": "job_start",
+   "day": 17,
+   "hour": 21,
+   "pawn": 81698,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85597",
+   "source": "JobGiver_Work",
+   "rx": 1788891658383
+  },
+  {
+   "v": 0,
+   "t": 1074884,
+   "type": "job_start",
+   "day": 17,
+   "hour": 21,
+   "pawn": 81698,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85610",
+   "source": "JobGiver_Work",
+   "rx": 1788891661658
+  },
+  {
+   "v": 0,
+   "t": 1074884,
+   "type": "job_end",
+   "day": 17,
+   "hour": 21,
+   "duration_ticks": 0,
+   "pawn": 81698,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788891661966
   }
  ],
  "counts": {
@@ -4560,16 +4608,16 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 336,
-  "pawn_snapshot": 1632,
-  "job_start": 80,
-  "thought": 116,
+  "world_snapshot": 339,
+  "pawn_snapshot": 1644,
+  "job_start": 82,
+  "thought": 117,
   "interaction": 33,
   "job_noise": 33,
-  "job_end": 35,
+  "job_end": 36,
   "incident": 1,
   "mental_state": 1,
   "hediff": 3
  },
- "last_event_at": 1788891642.762339
+ "last_event_at": 1788891670.8735309
 }
