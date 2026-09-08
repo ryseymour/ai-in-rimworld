@@ -1,1 +1,4 @@
 {"type":"mod_connected","peer":"('127.0.0.1', 50519)","rx":1788832777983}
+{"v":0,"t":0,"type":"command_result","id":"c-1","ok":true,"data":{"type":"mentalstate","total":5,"returned":5,"defs":[{"defName":"Wander_Psychotic","label":"wandering in psychosis"},{"defName":"Wander_Psychotic_Short","label":"wandering in psychosis"},{"defName":"Wander_Sad","label":"sad wandering"},{"defName":"Wander_OwnRoom","label":"sitting alone"},{"defName":"WanderConfused","label":"confused wandering"}]},"rx":1788832827016}
+{"v":0,"t":0,"type":"command_result","id":"c-2","ok":true,"data":{"type":"incident","total":2,"returned":2,"defs":[{"defName":"RaidFriendly","label":"friendly raid"},{"defName":"RaidEnemy","label":"enemy raid"}]},"rx":1788832827055}
+{"v":0,"t":0,"type":"command_result","id":"c-3","ok":false,"error":"no_map","detail":"no game loaded, or no map with that id","rx":1788832827073}
