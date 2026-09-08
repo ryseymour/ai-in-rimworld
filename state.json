@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 719500,
+  "t": 721250,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 8,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788830093334
+  "rx": 1788830122548
  },
  "pawns": [
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,8 +38,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.272,
-    "rest": 0.699,
+    "food": 0.216,
+    "rest": 0.762,
     "joy": 0.049
    },
    "mood": 0.171,
@@ -57,15 +57,15 @@
      "mood": 6
     },
     {
+     "label": "Hungry",
+     "mood": -6
+    },
+    {
      "label": "Initial hope",
      "mood": 5
     },
     {
      "label": "Minor pain",
-     "mood": -5
-    },
-    {
-     "label": "No Thinker",
      "mood": -5
     }
    ],
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093340
+   "rx": 1788830122549
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -107,7 +107,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.789,
+    "rest": 0.762,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093340
+   "rx": 1788830122549
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -176,8 +176,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.898,
-    "rest": 0.792
+    "food": 0.848,
+    "rest": 0.846
    },
    "mood": 0.153,
    "thoughts": [
@@ -226,25 +226,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093341
+   "rx": 1788830122549
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 73039,
    "name": "Lala",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    215,
+    182,
     0,
-    150
+    132
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.948,
-    "rest": 0.92
+    "food": 0.904,
+    "rest": 0.894
    },
    "mood": 0.57,
    "thoughts": [
@@ -279,27 +279,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093341
+   "rx": 1788830122550
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 73093,
    "name": "Adrian",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    215,
+    183,
     0,
-    168
+    147
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.958,
-    "rest": 0.871
+    "food": 0.923,
+    "rest": 0.845
    },
-   "mood": 0.594,
+   "mood": 0.62,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -329,25 +329,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093341
+   "rx": 1788830122550
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 73102,
    "name": "AJ",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    212,
+    180,
     0,
-    154
+    132
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.966
+    "food": 0.904,
+    "rest": 0.937
    },
    "mood": 0.57,
    "thoughts": [
@@ -380,35 +380,31 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093342
+   "rx": 1788830122550
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 73108,
    "name": "Loner",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    214,
+    180,
     0,
-    151
+    132
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.888
+    "food": 0.904,
+    "rest": 0.86
    },
-   "mood": 0.586,
+   "mood": 0.62,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
-    },
-    {
-     "label": "Night owl at night",
-     "mood": 16
     }
    ],
    "health": "Healthy",
@@ -429,27 +425,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093342
+   "rx": 1788830122550
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 73117,
    "name": "Ellie",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    213,
+    182,
     0,
-    166
+    146
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.953
+    "food": 0.904,
+    "rest": 0.924
    },
-   "mood": 0.586,
+   "mood": 0.673,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -482,27 +478,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093342
+   "rx": 1788830122551
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 73122,
    "name": "Deccy",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    215,
+    181,
     0,
-    145
+    120
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.963
+    "food": 0.904,
+    "rest": 0.935
    },
-   "mood": 0.586,
+   "mood": 0.62,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -533,27 +529,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788830093343
+   "rx": 1788830122551
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 73128,
    "name": "Dan",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    215,
+    182,
     0,
-    150
+    132
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.948,
-    "rest": 0.952
+    "food": 0.904,
+    "rest": 0.926
    },
-   "mood": 0.594,
+   "mood": 0.62,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -579,27 +575,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093343
+   "rx": 1788830122551
   },
   {
    "v": 0,
-   "t": 719500,
+   "t": 721250,
    "type": "pawn_snapshot",
    "id": 73134,
    "name": "Kaia",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    214,
+    181,
     0,
-    149
+    132
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.947
+    "food": 0.904,
+    "rest": 0.919
    },
-   "mood": 0.586,
+   "mood": 0.62,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -627,7 +623,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830093344
+   "rx": 1788830122552
   }
  ],
  "recent": [
@@ -1181,19 +1177,40 @@
    "part": null,
    "severity": 0.001,
    "rx": 1788830073813
+  },
+  {
+   "v": 0,
+   "t": 720972,
+   "type": "interaction",
+   "initiator": 73117,
+   "recipient": 73093,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Ellie</color> commented about eating pumpkins to <color=#D09B61FF>Adrian</color>.",
+   "rx": 1788830117925
+  },
+  {
+   "v": 0,
+   "t": 721285,
+   "type": "interaction",
+   "initiator": 73134,
+   "recipient": 73102,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Kaia</color> and <color=#D09B61FF>AJ</color> quipped about lovin'.",
+   "rx": 1788830123131
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 51,
-  "pawn_snapshot": 217,
+  "world_snapshot": 58,
+  "pawn_snapshot": 294,
   "job_start": 31,
   "job_end": 19,
   "hediff": 2,
   "letter": 2,
-  "incident": 2
+  "incident": 2,
+  "interaction": 2
  },
- "last_event_at": 1788830093.3441322,
- "published_at": 1788830093
+ "last_event_at": 1788830123.1315598,
+ "published_at": 1788830124
 }
