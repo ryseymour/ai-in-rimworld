@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 815500,
+  "t": 825000,
   "type": "world_snapshot",
-  "date": "14th of Aprimay, 5500",
+  "date": "15th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 23001,
+  "wealth": 21860,
   "colonists": 3,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788845984562
+  "rx": 1788847007089
  },
  "pawns": [
   {
    "v": 0,
-   "t": 815500,
+   "t": 825000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -36,40 +36,40 @@
     0,
     109
    ],
-   "job": "sleeping.",
+   "job": "resting.",
    "needs": {
-    "food": 0,
-    "rest": 0.88,
+    "food": 0.403,
+    "rest": 0.903,
     "joy": 0
    },
-   "mood": 0,
+   "mood": 0.209,
    "thoughts": [
-    {
-     "label": "Advanced starvation",
-     "mood": -38
-    },
     {
      "label": "Very low expectations",
      "mood": 24
+    },
+    {
+     "label": "Raw cannibalism",
+     "mood": 20
     },
     {
      "label": "Recreation-starved",
      "mood": -20
     },
     {
-     "label": "Serious pain",
-     "mood": -10
+     "label": "Intense pain",
+     "mood": -15
     },
     {
-     "label": "Quite comfortable",
-     "mood": 6
+     "label": "Ate corpse",
+     "mood": -12
     },
     {
      "label": "Initial hope",
      "mood": 5
     }
    ],
-   "health": "Injured",
+   "health": "Incapacitated",
    "skills": {
     "Construction": 1,
     "Mining": 2,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788845984563
+   "rx": 1788847007090
   },
   {
    "v": 0,
-   "t": 815500,
+   "t": 818000,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -107,7 +107,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.836,
+    "rest": 0.798,
     "joy": 0.289
    },
    "mood": 0.18,
@@ -159,28 +159,33 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788845984563
+   "rx": 1788846982436,
+   "dead": true
   },
   {
    "v": 0,
-   "t": 815500,
+   "t": 825000,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    103,
     0,
     123
    ],
-   "job": "wandering.",
+   "job": "downed.",
    "needs": {
     "food": 0,
-    "rest": 0.539
+    "rest": 0.39
    },
-   "mood": 0,
+   "mood": 0.014,
    "thoughts": [
+    {
+     "label": "Catharsis",
+     "mood": 40
+    },
     {
      "label": "Badly malnourished",
      "mood": -26
@@ -194,19 +199,15 @@
      "mood": -15
     },
     {
-     "label": "Sweltering hot",
-     "mood": -12
+     "label": "Hot",
+     "mood": -8
     },
     {
      "label": "I am disliked xenotype",
      "mood": -6
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
     }
    ],
-   "health": "Injured",
+   "health": "Incapacitated",
    "skills": {
     "Shooting": 0,
     "Melee": 1,
@@ -226,7 +227,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788845984564
+   "rx": 1788847007090
   }
  ],
  "recent": [
@@ -2014,6 +2015,207 @@
     "Wait_Wander": 3
    },
    "rx": 1788845002869
+  },
+  {
+   "v": 0,
+   "t": 816000,
+   "type": "job_noise",
+   "total": 10,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 3,
+    "GotoWander": 2
+   },
+   "rx": 1788845986163
+  },
+  {
+   "v": 0,
+   "t": 818000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 2,
+    "GotoWander": 2
+   },
+   "rx": 1788846982437
+  },
+  {
+   "v": 0,
+   "t": 818195,
+   "type": "letter",
+   "label": "Thinker role deactivated",
+   "text": "Number of Pasturists in your colony fell to 1. The Thinker role is no longer active. This role will become available once again when the number of Pasturists reaches 3.",
+   "def": "NeutralEvent",
+   "rx": 1788846983004
+  },
+  {
+   "v": 0,
+   "t": 818195,
+   "type": "letter",
+   "label": "Funeral of Masculinity opportunity for Shun",
+   "text": "You can hold a pasturic funeral for <color=#D09B61FF>Shun</color>.\n\nTo begin the ritual, select a grave containing Shun's corpse and click the 'Begin Funeral of Masculinity' command.\n\nExpires in <color=#87F6F6FF><color=#87F6F6FF>9 days</color></color>, on 8th of Jugust.",
+   "def": "NeutralEvent",
+   "rx": 1788846983022
+  },
+  {
+   "v": 0,
+   "t": 818195,
+   "type": "letter",
+   "label": "Death: Shun",
+   "text": "(*Name)Shun(/Name) has died. Cause: Malnutrition.\n\n(*Name)Shun(/Name) should be buried and given a funeral so his friends and family can say farewell.",
+   "def": "Death",
+   "rx": 1788846983022
+  },
+  {
+   "v": 0,
+   "t": 818195,
+   "type": "death",
+   "pawn": 835,
+   "cause": null,
+   "killer": null,
+   "rx": 1788846983023
+  },
+  {
+   "v": 0,
+   "t": 818951,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_Corpse_Human79496",
+   "source": "JobGiver_GetFood",
+   "rx": 1788846985418
+  },
+  {
+   "v": 0,
+   "t": 820000,
+   "type": "job_noise",
+   "total": 10,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 3,
+    "GotoWander": 2
+   },
+   "rx": 1788846989001
+  },
+  {
+   "v": 0,
+   "t": 820648,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "FoodPoisoning",
+   "part": null,
+   "severity": 1,
+   "rx": 1788846992403
+  },
+  {
+   "v": 0,
+   "t": 820649,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "ThinkNode_CrawlInterrupt",
+   "rx": 1788846993005
+  },
+  {
+   "v": 0,
+   "t": 821114,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "LayDown",
+   "target": "Thing_Bed31715",
+   "source": "JobGiver_PatientGoToBed",
+   "rx": 1788846994457
+  },
+  {
+   "v": 0,
+   "t": 821114,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788846994458
+  },
+  {
+   "v": 0,
+   "t": 822000,
+   "type": "job_noise",
+   "total": 5,
+   "counts": {
+    "Wait_MaintainPosture": 3,
+    "Wait_Wander": 2
+   },
+   "rx": 1788846997144
+  },
+  {
+   "v": 0,
+   "t": 824000,
+   "type": "job_noise",
+   "total": 12,
+   "counts": {
+    "Wait_MaintainPosture": 6,
+    "GotoWander": 3,
+    "Wait_Wander": 3
+   },
+   "rx": 1788847003725
+  },
+  {
+   "v": 0,
+   "t": 824722,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "ThinkNode_CrawlInterrupt",
+   "rx": 1788847005910
+  },
+  {
+   "v": 0,
+   "t": 824899,
+   "type": "letter",
+   "label": "Man in black",
+   "text": "Sensing trouble, a mysterious man in black has arrived.\n\nWill he be able to set things right in these parts?",
+   "def": "PositiveEvent",
+   "rx": 1788847006602
+  },
+  {
+   "v": 0,
+   "t": 824899,
+   "type": "incident",
+   "def": "StrangerInBlackJoin",
+   "label": "man in black",
+   "points": -1,
+   "rx": 1788847006609
+  },
+  {
+   "v": 0,
+   "t": 824909,
+   "type": "job_start",
+   "pawn": 79564,
+   "job": "Repair",
+   "target": "Thing_GravshipHull31557",
+   "source": "JobGiver_Work",
+   "rx": 1788847006757
+  },
+  {
+   "v": 0,
+   "t": 825028,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "LayDown",
+   "target": "Thing_SleepingSpot33288",
+   "source": "JobGiver_PatientGoToBed",
+   "rx": 1788847007251
+  },
+  {
+   "v": 0,
+   "t": 825028,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788847007252
   }
  ],
  "counts": {
@@ -2021,15 +2223,15 @@
   "command_result": 13,
   "mod_disconnected": 1,
   "hello": 2,
-  "world_snapshot": 1477,
-  "pawn_snapshot": 503,
-  "job_start": 25,
-  "job_end": 23,
-  "job_noise": 34,
-  "hediff": 1,
-  "death": 3,
-  "letter": 12,
-  "incident": 10
+  "world_snapshot": 1515,
+  "pawn_snapshot": 589,
+  "job_start": 31,
+  "job_end": 25,
+  "job_noise": 39,
+  "hediff": 2,
+  "death": 4,
+  "letter": 16,
+  "incident": 11
  },
- "last_event_at": 1788845984.564225
+ "last_event_at": 1788847007.25245
 }
