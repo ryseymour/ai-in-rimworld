@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 811750,
+  "t": 815750,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887600528
+  "rx": 1788887633666
  },
  "pawns": [
   {
    "v": 0,
-   "t": 811750,
+   "t": 815750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -36,10 +36,10 @@
     0,
     109
    ],
-   "job": "resting.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.753,
+    "rest": 0.885,
     "joy": 0
    },
    "mood": 0,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887600528
+   "rx": 1788887633666
   },
   {
    "v": 0,
-   "t": 811750,
+   "t": 815750,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -107,7 +107,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.895,
+    "rest": 0.834,
     "joy": 0.289
    },
    "mood": 0.18,
@@ -159,25 +159,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887600528
+   "rx": 1788887633666
   },
   {
    "v": 0,
-   "t": 811750,
+   "t": 815750,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    103,
     0,
     123
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.599
+    "rest": 0.534
    },
    "mood": 0,
    "thoughts": [
@@ -202,7 +202,7 @@
      "mood": -6
     },
     {
-     "label": "Unsightly environment",
+     "label": "Darkness",
      "mood": -5
     }
    ],
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887600528
+   "rx": 1788887633667
   }
  ],
  "recent": [
@@ -3032,23 +3032,58 @@
    "game_version": "1.6.4871 rev597",
    "map_id": 2,
    "rx": 1788887581348
+  },
+  {
+   "v": 0,
+   "t": 812000,
+   "type": "job_noise",
+   "total": 2,
+   "counts": {
+    "Wait_MaintainPosture": 1,
+    "Wait_Wander": 1
+   },
+   "rx": 1788887606024
+  },
+  {
+   "v": 0,
+   "t": 813194,
+   "type": "command_result",
+   "id": "c-22",
+   "ok": true,
+   "data": {
+    "speed": 3,
+    "paused": false
+   },
+   "rx": 1788887626461
+  },
+  {
+   "v": 0,
+   "t": 814000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 2,
+    "GotoWander": 2
+   },
+   "rx": 1788887628753
   }
  ],
  "counts": {
   "mod_connected": 3,
-  "command_result": 21,
+  "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 1555,
-  "pawn_snapshot": 1054,
+  "world_snapshot": 1571,
+  "pawn_snapshot": 1102,
   "job_start": 61,
   "job_end": 27,
-  "job_noise": 42,
+  "job_noise": 44,
   "hediff": 18,
   "death": 4,
   "letter": 18,
   "incident": 13,
   "interaction": 15
  },
- "last_event_at": 1788887600.528634
+ "last_event_at": 1788887633.66702
 }
