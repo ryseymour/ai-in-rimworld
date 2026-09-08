@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 896250,
+  "t": 918750,
   "type": "world_snapshot",
   "date": "1st of Jugust, 5500",
   "season": "PermanentSummer",
-  "weather": "rainy thunderstorm",
-  "wealth": 21052,
+  "weather": "windy",
+  "wealth": 21051,
   "colonists": 1,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835388059
+  "rx": 1788835419325
  },
  "pawns": [
   {
    "v": 0,
-   "t": 896250,
+   "t": 918750,
    "type": "pawn_snapshot",
    "id": 93450,
    "name": "Martin",
@@ -39,18 +39,18 @@
    "job": "downed, unconscious.",
    "needs": {
     "food": 0,
-    "rest": 0.618,
+    "rest": 0.266,
     "joy": 0.591
    },
    "mood": 0.322,
    "thoughts": [
     {
-     "label": "Very low expectations",
-     "mood": 24
+     "label": "Badly malnourished",
+     "mood": -26
     },
     {
-     "label": "Malnourished",
-     "mood": -20
+     "label": "Very low expectations",
+     "mood": 24
     },
     {
      "label": "Psychic soothe",
@@ -61,12 +61,12 @@
      "mood": -15
     },
     {
-     "label": "Unsightly environment",
-     "mood": -5
+     "label": "Colonist left unburied",
+     "mood": -10
     },
     {
-     "label": "Slept in the heat",
-     "mood": -4
+     "label": "Drowsy",
+     "mood": -6
     }
    ],
    "health": "Unconscious",
@@ -95,7 +95,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788835388059
+   "rx": 1788835419325
   }
  ],
  "recent": [
@@ -1072,6 +1072,122 @@
     "Wait_MaintainPosture": 1
    },
    "rx": 1788835387711
+  },
+  {
+   "v": 0,
+   "t": 899559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835392658
+  },
+  {
+   "v": 0,
+   "t": 899559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835392658
+  },
+  {
+   "v": 0,
+   "t": 900000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835393307
+  },
+  {
+   "v": 0,
+   "t": 904559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835399609
+  },
+  {
+   "v": 0,
+   "t": 904559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835399609
+  },
+  {
+   "v": 0,
+   "t": 906000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835401625
+  },
+  {
+   "v": 0,
+   "t": 909559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835406559
+  },
+  {
+   "v": 0,
+   "t": 909559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835406559
+  },
+  {
+   "v": 0,
+   "t": 910000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835407177
+  },
+  {
+   "v": 0,
+   "t": 914559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835413507
+  },
+  {
+   "v": 0,
+   "t": 914559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835413507
+  },
+  {
+   "v": 0,
+   "t": 916000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835415510
   }
  ],
  "counts": {
@@ -1079,12 +1195,12 @@
   "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 136,
-  "pawn_snapshot": 136,
-  "job_start": 16,
-  "job_end": 14,
-  "job_noise": 6,
+  "world_snapshot": 226,
+  "pawn_snapshot": 226,
+  "job_start": 20,
+  "job_end": 18,
+  "job_noise": 10,
   "hediff": 1
  },
- "last_event_at": 1788835388.0596201
+ "last_event_at": 1788835419.325809
 }
