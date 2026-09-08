@@ -12,27 +12,27 @@
  },
  "world": {
   "v": 0,
-  "t": 1031000,
+  "t": 1037000,
   "type": "world_snapshot",
   "day": 17,
-  "hour": 4,
+  "hour": 6,
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
-  "wealth": 25343,
+  "wealth": 25523,
   "colonists": 4,
   "visitors": 2,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890697589
+  "rx": 1788890731122
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1031000,
+   "t": 1037000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 4,
+   "hour": 6,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
@@ -40,15 +40,15 @@
    "pos": [
     101,
     0,
-    107
+    110
    ],
-   "job": "researching.",
+   "job": "melee attacking gravlite panel.",
    "needs": {
-    "food": 0.051,
-    "rest": 0.784,
-    "joy": 0.245
+    "food": 0.011,
+    "rest": 0.689,
+    "joy": 0.21
    },
-   "mood": 0.18,
+   "mood": 0.182,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -59,19 +59,19 @@
      "mood": -12
     },
     {
-     "label": "Trees sorely missed",
-     "mood": -5
-    },
-    {
-     "label": "No Thinker",
-     "mood": -5
-    },
-    {
      "label": "Darkness",
      "mood": -5
     },
     {
      "label": "Recreation unfulfilled",
+     "mood": -5
+    },
+    {
+     "label": "Trees sorely missed",
+     "mood": -5
+    },
+    {
+     "label": "No Thinker",
      "mood": -5
     }
    ],
@@ -120,30 +120,30 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890697590
+   "rx": 1788890731122
   },
   {
    "v": 0,
-   "t": 1031000,
+   "t": 1037000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 4,
+   "hour": 6,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    97,
     0,
-    119
+    102
    ],
-   "job": "wandering.",
+   "job": "cleaning dirt.",
    "needs": {
-    "food": 0.051,
-    "rest": 0.734,
-    "joy": 0.821
+    "food": 0.011,
+    "rest": 0.639,
+    "joy": 0.761
    },
-   "mood": 0.412,
+   "mood": 0.351,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -158,16 +158,16 @@
      "mood": -5
     },
     {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
      "label": "Recreation satisfied",
      "mood": 5
     },
     {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
+    },
+    {
+     "label": "Uncomfortable",
+     "mood": -3
     }
    ],
    "health": "Healthy",
@@ -195,7 +195,7 @@
     "childhood": "offworld recruit",
     "adulthood": "shock trooper"
    },
-   "age": 31,
+   "age": 32,
    "gender": "Male",
    "relations": [
     {
@@ -205,14 +205,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890697590
+   "rx": 1788890731123
   },
   {
    "v": 0,
-   "t": 1031000,
+   "t": 1037000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 4,
+   "hour": 6,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
@@ -220,19 +220,23 @@
    "pos": [
     101,
     0,
-    120
+    107
    ],
-   "job": "wandering.",
+   "job": "researching.",
    "needs": {
-    "food": 0.051,
-    "rest": 0.675,
-    "joy": 0.737
+    "food": 0.011,
+    "rest": 0.58,
+    "joy": 0.677
    },
-   "mood": 0.414,
+   "mood": 0.38,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
+    },
+    {
+     "label": "Burning passion for my work",
+     "mood": 14
     },
     {
      "label": "Ravenously hungry",
@@ -249,10 +253,6 @@
     {
      "label": "Darkness",
      "mood": -5
-    },
-    {
-     "label": "Recreation satisfied",
-     "mood": 5
     }
    ],
    "health": "Healthy",
@@ -293,30 +293,30 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890697590
+   "rx": 1788890731123
   },
   {
    "v": 0,
-   "t": 1031000,
+   "t": 1037000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 4,
+   "hour": 6,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    108,
+    100,
     0,
-    114
+    113
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.199,
-    "rest": 0.772,
-    "joy": 0.226
+    "food": 0.045,
+    "rest": 0.677,
+    "joy": 0.184
    },
-   "mood": 0.742,
+   "mood": 0.66,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -335,11 +335,11 @@
      "mood": -12
     },
     {
-     "label": "Hungry",
-     "mood": -6
+     "label": "Ravenously hungry",
+     "mood": -12
     },
     {
-     "label": "Minor pain",
+     "label": "Recreation unfulfilled",
      "mood": -5
     }
    ],
@@ -381,33 +381,37 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890697590
+   "rx": 1788890731123
   },
   {
    "v": 0,
-   "t": 1031000,
+   "t": 1037000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 4,
+   "hour": 6,
    "id": 84939,
    "name": "Irwin",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    90,
+    87,
     0,
-    122
+    119
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.588,
-    "rest": 0.805
+    "food": 0.428,
+    "rest": 0.71
    },
-   "mood": 0.62,
+   "mood": 0.52,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Night owl in daytime",
+     "mood": -10
     }
    ],
    "health": "Healthy",
@@ -450,27 +454,27 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890697593
+   "rx": 1788890731123
   },
   {
    "v": 0,
-   "t": 1031000,
+   "t": 1037000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 4,
+   "hour": 6,
    "id": 84947,
    "name": "Mushinto",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    93,
+    87,
     0,
-    115
+    114
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.63,
-    "rest": 0.797
+    "food": 0.502,
+    "rest": 0.702
    },
    "mood": 0.62,
    "thoughts": [
@@ -523,7 +527,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890697594
+   "rx": 1788890731123
   }
  ],
  "recent": [
@@ -2846,21 +2850,622 @@
    "job": "Research",
    "condition": "Succeeded",
    "rx": 1788890696906
+  },
+  {
+   "v": 0,
+   "t": 1031331,
+   "type": "thought",
+   "day": 17,
+   "hour": 4,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890699436
+  },
+  {
+   "v": 0,
+   "t": 1031331,
+   "type": "thought",
+   "day": 17,
+   "hour": 4,
+   "pawn": 81698,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890699436
+  },
+  {
+   "v": 0,
+   "t": 1031331,
+   "type": "interaction",
+   "day": 17,
+   "hour": 4,
+   "initiator": 81686,
+   "recipient": 81698,
+   "def": "Chitchat",
+   "text": "Schlitzer told a joke about sweating to Joe.",
+   "rx": 1788890699440
+  },
+  {
+   "v": 0,
+   "t": 1032000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 4,
+   "total": 58,
+   "counts": {
+    "Wait_MaintainPosture": 30,
+    "Wait_Wander": 14,
+    "GotoWander": 14
+   },
+   "rx": 1788890703260
+  },
+  {
+   "v": 0,
+   "t": 1032356,
+   "type": "thought",
+   "day": 17,
+   "hour": 4,
+   "pawn": 948,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890705237
+  },
+  {
+   "v": 0,
+   "t": 1032356,
+   "type": "thought",
+   "day": 17,
+   "hour": 4,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890705238
+  },
+  {
+   "v": 0,
+   "t": 1032356,
+   "type": "interaction",
+   "day": 17,
+   "hour": 4,
+   "initiator": 948,
+   "recipient": 81686,
+   "def": "Chitchat",
+   "text": "Zeke gabbed about vacations with Schlitzer.",
+   "rx": 1788890705238
+  },
+  {
+   "v": 0,
+   "t": 1032470,
+   "type": "thought",
+   "day": 17,
+   "hour": 4,
+   "pawn": 84947,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84939,
+   "about_name": "Irwin",
+   "rx": 1788890705868
+  },
+  {
+   "v": 0,
+   "t": 1032470,
+   "type": "thought",
+   "day": 17,
+   "hour": 4,
+   "pawn": 84939,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84947,
+   "about_name": "Mushinto",
+   "rx": 1788890705868
+  },
+  {
+   "v": 0,
+   "t": 1032470,
+   "type": "interaction",
+   "day": 17,
+   "hour": 4,
+   "initiator": 84947,
+   "recipient": 84939,
+   "def": "Chitchat",
+   "text": "Mushinto and Irwin spoke about cooking with lentils.",
+   "rx": 1788890705869
+  },
+  {
+   "v": 0,
+   "t": 1034000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 5,
+   "total": 42,
+   "counts": {
+    "Wait_MaintainPosture": 21,
+    "Wait_Wander": 10,
+    "GotoWander": 11
+   },
+   "rx": 1788890714381
+  },
+  {
+   "v": 0,
+   "t": 1034182,
+   "type": "thought",
+   "day": 17,
+   "hour": 5,
+   "pawn": 81682,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890715372
+  },
+  {
+   "v": 0,
+   "t": 1034182,
+   "type": "thought",
+   "day": 17,
+   "hour": 5,
+   "pawn": 948,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81682,
+   "about_name": "G\u00e9radon",
+   "rx": 1788890715373
+  },
+  {
+   "v": 0,
+   "t": 1034182,
+   "type": "interaction",
+   "day": 17,
+   "hour": 5,
+   "initiator": 81682,
+   "recipient": 948,
+   "def": "Chitchat",
+   "text": "G\u00e9radon chatted about vomiting with Zeke.",
+   "rx": 1788890715377
+  },
+  {
+   "v": 0,
+   "t": 1034418,
+   "type": "job_start",
+   "day": 17,
+   "hour": 5,
+   "pawn": 81686,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85117",
+   "source": "JobGiver_Work",
+   "rx": 1788890716688
+  },
+  {
+   "v": 0,
+   "t": 1034418,
+   "type": "job_end",
+   "day": 17,
+   "hour": 5,
+   "duration_ticks": 0,
+   "pawn": 81686,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788890716689
+  },
+  {
+   "v": 0,
+   "t": 1034881,
+   "type": "job_start",
+   "day": 17,
+   "hour": 5,
+   "pawn": 81682,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890719290
+  },
+  {
+   "v": 0,
+   "t": 1034881,
+   "type": "job_end",
+   "day": 17,
+   "hour": 5,
+   "duration_ticks": 0,
+   "pawn": 81682,
+   "job": "Research",
+   "condition": "Succeeded",
+   "rx": 1788890719290
+  },
+  {
+   "v": 0,
+   "t": 1035147,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81686,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85131",
+   "source": "JobGiver_Work",
+   "rx": 1788890720773
+  },
+  {
+   "v": 0,
+   "t": 1035891,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890724918
+  },
+  {
+   "v": 0,
+   "t": 1035891,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 948,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890724919
+  },
+  {
+   "v": 0,
+   "t": 1035891,
+   "type": "interaction",
+   "day": 17,
+   "hour": 6,
+   "initiator": 81686,
+   "recipient": 948,
+   "def": "Chitchat",
+   "text": "Schlitzer and Zeke talked about comfortable furniture.",
+   "rx": 1788890724920
+  },
+  {
+   "v": 0,
+   "t": 1036000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 6,
+   "total": 55,
+   "counts": {
+    "Wait_MaintainPosture": 29,
+    "Wait_Wander": 14,
+    "GotoWander": 12
+   },
+   "rx": 1788890725523
+  },
+  {
+   "v": 0,
+   "t": 1036030,
+   "type": "letter",
+   "day": 17,
+   "hour": 6,
+   "label": "Tantrum: G\u00e9radon",
+   "text": "<color=#D09B61FF>G\u00e9radon</color> is having a tantrum.\n\nHe is going to destroy gravlite panel x75.\n\nThis happened because of poor mood.\n\nThe final straw was: Ravenously hungry",
+   "def": "NegativeEvent",
+   "rx": 1788890725710
+  },
+  {
+   "v": 0,
+   "t": 1036030,
+   "type": "mental_state",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "state": "tantrum",
+   "reason": "This happened because of poor mood.\n\nThe final straw was: Ravenously hungry",
+   "rx": 1788890725711
+  },
+  {
+   "v": 0,
+   "t": 1036033,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890725738
+  },
+  {
+   "v": 0,
+   "t": 1036052,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Trash85160",
+   "source": "JobGiver_Work",
+   "rx": 1788890725837
+  },
+  {
+   "v": 0,
+   "t": 1036127,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81698,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890726251
+  },
+  {
+   "v": 0,
+   "t": 1036127,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890726251
+  },
+  {
+   "v": 0,
+   "t": 1036127,
+   "type": "interaction",
+   "day": 17,
+   "hour": 6,
+   "initiator": 81698,
+   "recipient": 81686,
+   "def": "Chitchat",
+   "text": "Joe and Schlitzer chatted about billiards.",
+   "rx": 1788890726252
+  },
+  {
+   "v": 0,
+   "t": 1036135,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890726317
+  },
+  {
+   "v": 0,
+   "t": 1036208,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85153",
+   "source": "JobGiver_Work",
+   "rx": 1788890726721
+  },
+  {
+   "v": 0,
+   "t": 1036255,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890726968
+  },
+  {
+   "v": 0,
+   "t": 1036375,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890727636
+  },
+  {
+   "v": 0,
+   "t": 1036409,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81698,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890727837
+  },
+  {
+   "v": 0,
+   "t": 1036491,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81686,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 948,
+   "about_name": "Zeke",
+   "rx": 1788890728285
+  },
+  {
+   "v": 0,
+   "t": 1036491,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 948,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81686,
+   "about_name": "Schlitzer",
+   "rx": 1788890728286
+  },
+  {
+   "v": 0,
+   "t": 1036491,
+   "type": "interaction",
+   "day": 17,
+   "hour": 6,
+   "initiator": 81686,
+   "recipient": 948,
+   "def": "Chitchat",
+   "text": "Schlitzer said a word about eating zucchinis to Zeke.",
+   "rx": 1788890728286
+  },
+  {
+   "v": 0,
+   "t": 1036495,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890728302
+  },
+  {
+   "v": 0,
+   "t": 1036615,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890728971
+  },
+  {
+   "v": 0,
+   "t": 1036658,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 84947,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84939,
+   "about_name": "Irwin",
+   "rx": 1788890729218
+  },
+  {
+   "v": 0,
+   "t": 1036658,
+   "type": "thought",
+   "day": 17,
+   "hour": 6,
+   "pawn": 84939,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84947,
+   "about_name": "Mushinto",
+   "rx": 1788890729218
+  },
+  {
+   "v": 0,
+   "t": 1036658,
+   "type": "interaction",
+   "day": 17,
+   "hour": 6,
+   "initiator": 84947,
+   "recipient": 84939,
+   "def": "Chitchat",
+   "text": "Mushinto made a comment about fighting storks to Irwin.",
+   "rx": 1788890729219
+  },
+  {
+   "v": 0,
+   "t": 1036735,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890729635
+  },
+  {
+   "v": 0,
+   "t": 1036855,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890730302
+  },
+  {
+   "v": 0,
+   "t": 1036911,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81686,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85180",
+   "source": "JobGiver_Work",
+   "rx": 1788890730621
+  },
+  {
+   "v": 0,
+   "t": 1036975,
+   "type": "job_start",
+   "day": 17,
+   "hour": 6,
+   "pawn": 81682,
+   "job": "AttackMelee",
+   "target": "Thing_GravlitePanel1058",
+   "source": "JobGiver_Tantrum",
+   "rx": 1788890730971
   }
  ],
  "counts": {
   "mod_connected": 1,
   "command_result": 8,
-  "letter": 2,
+  "letter": 3,
   "hello": 1,
-  "world_snapshot": 163,
-  "pawn_snapshot": 718,
-  "job_start": 38,
-  "thought": 68,
-  "interaction": 14,
-  "job_noise": 17,
-  "job_end": 33,
-  "incident": 1
+  "world_snapshot": 187,
+  "pawn_snapshot": 862,
+  "job_start": 54,
+  "thought": 84,
+  "interaction": 22,
+  "job_noise": 20,
+  "job_end": 35,
+  "incident": 1,
+  "mental_state": 1
  },
- "last_event_at": 1788890697.594078
+ "last_event_at": 1788890731.123679
 }
