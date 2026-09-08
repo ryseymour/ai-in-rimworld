@@ -21,3 +21,4 @@
 {"v":0,"t":810516,"type":"job_start","pawn":35404,"job":"Wait_MaintainPosture","target":null,"source":null,"rx":1788831143859}
 {"v":0,"t":810517,"type":"job_start","pawn":35404,"job":"Wait_Wander","target":null,"source":"JobGiver_WanderOwnRoom","rx":1788831143874}
 {"type":"mod_disconnected","peer":"('127.0.0.1', 50341)","rx":1788831154379}
+{"type":"mod_connected","peer":"('127.0.0.1', 50377)","rx":1788831458226}
