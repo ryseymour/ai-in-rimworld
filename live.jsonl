@@ -57,3 +57,4 @@
 {"v":0,"t":814250,"type":"pawn_snapshot","id":79498,"name":"Chicken","faction":"Caro Tribe","kind":"visitor","pos":[187,0,215],"job":"moving.","needs":{"food":0.952,"rest":0.962},"mood":0.565,"thoughts":[{"label":"Extremely low expectations","mood":30},{"label":"Hot","mood":-8},{"label":"Darkness","mood":-5},{"label":"Wielding a recurve bow (good)","mood":3}],"health":"Healthy","skills":{"Shooting":13,"Melee":11,"Construction":0,"Mining":0,"Cooking":1,"Plants":4,"Animals":2,"Crafting":4,"Artistic":5,"Social":5,"Intellectual":4},"traits":["Greedy"],"relations":[],"drafted":false,"rx":1788833395850}
 {"v":0,"t":814417,"type":"command_result","id":"c-10","ok":true,"data":{"speed":0,"paused":true},"rx":1788833398628}
 {"type":"mod_disconnected","peer":"('127.0.0.1', 50662)","rx":1788833570618}
+{"type":"mod_connected","peer":"('127.0.0.1', 50717)","rx":1788833596936}
