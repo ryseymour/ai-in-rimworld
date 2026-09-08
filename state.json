@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 918750,
+  "t": 940500,
   "type": "world_snapshot",
   "date": "1st of Jugust, 5500",
   "season": "PermanentSummer",
-  "weather": "windy",
-  "wealth": 21051,
-  "colonists": 1,
+  "weather": "clear",
+  "wealth": 20519,
+  "colonists": 0,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835419325
+  "rx": 1788835450846
  },
  "pawns": [
   {
    "v": 0,
-   "t": 918750,
+   "t": 936750,
    "type": "pawn_snapshot",
    "id": 93450,
    "name": "Martin",
@@ -39,34 +39,34 @@
    "job": "downed, unconscious.",
    "needs": {
     "food": 0,
-    "rest": 0.266,
+    "rest": 0.108,
     "joy": 0.591
    },
    "mood": 0.322,
    "thoughts": [
     {
-     "label": "Badly malnourished",
-     "mood": -26
+     "label": "Starving",
+     "mood": -32
     },
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Psychic soothe",
-     "mood": 16
-    },
-    {
      "label": "Intense pain",
      "mood": -15
+    },
+    {
+     "label": "Tired",
+     "mood": -12
     },
     {
      "label": "Colonist left unburied",
      "mood": -10
     },
     {
-     "label": "Drowsy",
-     "mood": -6
+     "label": "Unsightly environment",
+     "mood": -5
     }
    ],
    "health": "Unconscious",
@@ -95,7 +95,8 @@
     }
    ],
    "drafted": false,
-   "rx": 1788835419325
+   "rx": 1788835445409,
+   "dead": true
   }
  ],
  "recent": [
@@ -1188,6 +1189,167 @@
     "Wait_MaintainPosture": 1
    },
    "rx": 1788835415510
+  },
+  {
+   "v": 0,
+   "t": 919559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835420442
+  },
+  {
+   "v": 0,
+   "t": 919559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835420442
+  },
+  {
+   "v": 0,
+   "t": 920000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835421062
+  },
+  {
+   "v": 0,
+   "t": 924559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835428458
+  },
+  {
+   "v": 0,
+   "t": 924559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835428459
+  },
+  {
+   "v": 0,
+   "t": 926000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835430461
+  },
+  {
+   "v": 0,
+   "t": 929559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835435407
+  },
+  {
+   "v": 0,
+   "t": 929559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835435407
+  },
+  {
+   "v": 0,
+   "t": 930000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835436032
+  },
+  {
+   "v": 0,
+   "t": 934559,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788835442345
+  },
+  {
+   "v": 0,
+   "t": 934559,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Wait_Downed",
+   "condition": "Succeeded",
+   "rx": 1788835442345
+  },
+  {
+   "v": 0,
+   "t": 936000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788835444358
+  },
+  {
+   "v": 0,
+   "t": 936633,
+   "type": "death",
+   "pawn": 79449,
+   "cause": null,
+   "killer": null,
+   "rx": 1788835445249
+  },
+  {
+   "v": 0,
+   "t": 936978,
+   "type": "letter",
+   "label": "Mourning of Family opportunity for Martin",
+   "text": "You can hold a pro-man funeral for <color=#D09B61FF>Martin</color>.\n\nTo begin the ritual, select a grave containing Martin's corpse and click the 'Begin Mourning of Family' command.\n\nExpires in <color=#87F6F6FF><color=#87F6F6FF>9 days</color></color>, on 10th of Jugust.",
+   "def": "NeutralEvent",
+   "rx": 1788835445750
+  },
+  {
+   "v": 0,
+   "t": 936978,
+   "type": "letter",
+   "label": "Death: Martin",
+   "text": "(*Name)Martin(/Name) has died. Cause: Blood loss.\n\n(*Name)Martin(/Name) should be buried and given a funeral so his friends and family can say farewell.",
+   "def": "Death",
+   "rx": 1788835445763
+  },
+  {
+   "v": 0,
+   "t": 936978,
+   "type": "death",
+   "pawn": 93450,
+   "cause": null,
+   "killer": null,
+   "rx": 1788835445763
+  },
+  {
+   "v": 0,
+   "t": 937377,
+   "type": "letter",
+   "label": "Game Over",
+   "text": "Everyone is dead or gone. This story is over.\n\nPerhaps someone else will find a use for the ruins of this place.",
+   "def": "GameEnded",
+   "rx": 1788835446311
   }
  ],
  "counts": {
@@ -1195,12 +1357,14 @@
   "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 226,
-  "pawn_snapshot": 226,
-  "job_start": 20,
-  "job_end": 18,
-  "job_noise": 10,
-  "hediff": 1
+  "world_snapshot": 313,
+  "pawn_snapshot": 298,
+  "job_start": 24,
+  "job_end": 22,
+  "job_noise": 14,
+  "hediff": 1,
+  "death": 2,
+  "letter": 3
  },
- "last_event_at": 1788835419.325809
+ "last_event_at": 1788835450.84603
 }
