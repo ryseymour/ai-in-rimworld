@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 1026750,
+  "t": 1045000,
   "type": "world_snapshot",
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
-  "wealth": 19781,
+  "wealth": 19494,
   "colonists": 0,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835577172
+  "rx": 1788835608654
  },
  "pawns": [
   {
@@ -1413,6 +1413,42 @@
    "label": "flashstorm",
    "points": 47.442,
    "rx": 1788835569412
+  },
+  {
+   "v": 0,
+   "t": 1029498,
+   "type": "letter",
+   "label": "Area revealed",
+   "text": "A new area has been revealed.",
+   "def": "NeutralEvent",
+   "rx": 1788835582029
+  },
+  {
+   "v": 0,
+   "t": 1030000,
+   "type": "letter",
+   "label": "Cargo pods",
+   "text": "You have detected a cluster of cargo pods crashing nearby.\n\nPerhaps you'll find something useful in the wreckage.",
+   "def": "PositiveEvent",
+   "rx": 1788835582927
+  },
+  {
+   "v": 0,
+   "t": 1030000,
+   "type": "incident",
+   "def": "ResourcePodCrash",
+   "label": "resource pod crash",
+   "points": 38.559,
+   "rx": 1788835582927
+  },
+  {
+   "v": 0,
+   "t": 1044892,
+   "type": "letter",
+   "label": "Mourning of Family opportunity for Martin",
+   "text": "You can hold a pro-man funeral for <color=#D09B61FF>Martin</color> even though the body was lost.\n\nTo begin the ritual, select an empty grave to mourn Martin's passing and click the 'Begin Mourning of Family' command.\n\nExpires in <color=#87F6F6FF><color=#87F6F6FF>9 days</color></color>, on 12th of Jugust.",
+   "def": "NeutralEvent",
+   "rx": 1788835608511
   }
  ],
  "counts": {
@@ -1420,15 +1456,15 @@
   "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 658,
+  "world_snapshot": 731,
   "pawn_snapshot": 298,
   "job_start": 24,
   "job_end": 22,
   "job_noise": 14,
   "hediff": 1,
   "death": 3,
-  "letter": 6,
-  "incident": 3
+  "letter": 9,
+  "incident": 4
  },
- "last_event_at": 1788835577.1726131
+ "last_event_at": 1788835608.654546
 }
