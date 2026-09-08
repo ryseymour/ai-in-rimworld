@@ -12,10 +12,10 @@
  },
  "world": {
   "v": 0,
-  "t": 1061250,
+  "t": 1063250,
   "type": "world_snapshot",
   "day": 17,
-  "hour": 16,
+  "hour": 17,
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
@@ -24,29 +24,29 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890938220
+  "rx": 1788890993347
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1061250,
+   "t": 1063250,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 16,
+   "hour": 17,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    107
+    103
    ],
-   "job": "researching.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.304,
-    "joy": 0.089
+    "rest": 0.35,
+    "joy": 0.087
    },
    "mood": 0.42,
    "thoughts": [
@@ -120,14 +120,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890938229
+   "rx": 1788890993370
   },
   {
    "v": 0,
-   "t": 1061250,
+   "t": 1063250,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 16,
+   "hour": 17,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
@@ -140,7 +140,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.311,
+    "rest": 0.371,
     "joy": 0.53
    },
    "mood": 0.185,
@@ -205,14 +205,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890938280
+   "rx": 1788890993377
   },
   {
    "v": 0,
-   "t": 1061250,
+   "t": 1063250,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 16,
+   "hour": 17,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
@@ -225,7 +225,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.447,
+    "rest": 0.527,
     "joy": 0.478
    },
    "mood": 0.316,
@@ -293,28 +293,28 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890938281
+   "rx": 1788890993377
   },
   {
    "v": 0,
-   "t": 1061250,
+   "t": 1063250,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 16,
+   "hour": 17,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    107,
+    104,
     0,
-    126
+    109
    ],
-   "job": "resting.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.292,
-    "joy": 0.072
+    "rest": 0.296,
+    "joy": 0.067
    },
    "mood": 0,
    "thoughts": [
@@ -381,7 +381,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890938287
+   "rx": 1788890993377
   },
   {
    "v": 0,
@@ -4457,6 +4457,30 @@
    "target": "Thing_Bed31715",
    "source": "JobGiver_GetRest",
    "rx": 1788890935492
+  },
+  {
+   "v": 0,
+   "t": 1061485,
+   "type": "job_start",
+   "day": 17,
+   "hour": 16,
+   "pawn": 81682,
+   "job": "LayDown",
+   "target": "Thing_SleepingSpot31692",
+   "source": "JobGiver_GetRest",
+   "rx": 1788890953758
+  },
+  {
+   "v": 0,
+   "t": 1062000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 16,
+   "total": 2,
+   "counts": {
+    "Wait_MaintainPosture": 2
+   },
+   "rx": 1788890969347
   }
  ],
  "counts": {
@@ -4464,16 +4488,16 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 284,
-  "pawn_snapshot": 1424,
-  "job_start": 79,
+  "world_snapshot": 292,
+  "pawn_snapshot": 1456,
+  "job_start": 80,
   "thought": 110,
   "interaction": 33,
-  "job_noise": 32,
+  "job_noise": 33,
   "job_end": 35,
   "incident": 1,
   "mental_state": 1,
   "hediff": 3
  },
- "last_event_at": 1788890938.287341
+ "last_event_at": 1788890993.3777652
 }
