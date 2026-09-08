@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 811750,
+  "t": 813250,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
   "wealth": 23001,
-  "colonists": 3,
-  "visitors": 0,
+  "colonists": 2,
+  "visitors": 10,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788831947047
+  "rx": 1788831972264
  },
  "pawns": [
   {
    "v": 0,
-   "t": 811750,
+   "t": 813250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -36,10 +36,10 @@
     0,
     109
    ],
-   "job": "resting.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.753,
+    "rest": 0.794,
     "joy": 0
    },
    "mood": 0,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831947048
+   "rx": 1788831972264
   },
   {
    "v": 0,
-   "t": 811750,
+   "t": 812500,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -107,7 +107,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.895,
+    "rest": 0.884,
     "joy": 0.289
    },
    "mood": 0.18,
@@ -159,11 +159,12 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831947048
+   "rx": 1788831959566,
+   "dead": true
   },
   {
    "v": 0,
-   "t": 811750,
+   "t": 813250,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -177,7 +178,7 @@
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.599
+    "rest": 0.575
    },
    "mood": 0,
    "thoughts": [
@@ -202,7 +203,7 @@
      "mood": -6
     },
     {
-     "label": "Unsightly environment",
+     "label": "Darkness",
      "mood": -5
     }
    ],
@@ -226,7 +227,624 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831947049
+   "rx": 1788831972264
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79429,
+   "name": "Goabanbi",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    205,
+    0,
+    233
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.976,
+    "rest": 0.906
+   },
+   "mood": 0.529,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a recurve bow (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 3,
+    "Melee": 6,
+    "Construction": 3,
+    "Mining": 4,
+    "Cooking": 12,
+    "Plants": 3,
+    "Animals": 7,
+    "Crafting": 0,
+    "Artistic": 3,
+    "Medicine": 8,
+    "Social": 1,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Greedy",
+    "Gourmand",
+    "Sickly"
+   ],
+   "relations": [
+    {
+     "other": "Busto",
+     "kind": "father",
+     "opinion": 30
+    },
+    {
+     "other": "Green",
+     "kind": "brother",
+     "opinion": 20
+    },
+    {
+     "other": "Wolf",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788831972266
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79449,
+   "name": "Trocam",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    200,
+    0,
+    240
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.98,
+    "rest": 0.92
+   },
+   "mood": 0.536,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a steel spear (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 3,
+    "Construction": 4,
+    "Mining": 13,
+    "Cooking": 2,
+    "Plants": 0,
+    "Animals": 3,
+    "Crafting": 5,
+    "Artistic": 3,
+    "Medicine": 2,
+    "Social": 0,
+    "Intellectual": 8
+   },
+   "traits": [
+    "Abrasive"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788831972266
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79454,
+   "name": "Snail",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    209,
+    0,
+    236
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.98,
+    "rest": 0.904
+   },
+   "mood": 0.536,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Recluse in small group",
+     "mood": 8
+    },
+    {
+     "label": "Wielding a steel ikwa (poor)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 8,
+    "Construction": 4,
+    "Mining": 1,
+    "Cooking": 1,
+    "Plants": 6,
+    "Animals": 8,
+    "Crafting": 2,
+    "Artistic": 4,
+    "Medicine": 0,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Recluse",
+    "Pyromaniac",
+    "Misogynist"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788831972267
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79459,
+   "name": "Pelican",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    209,
+    0,
+    236
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.98,
+    "rest": 0.979
+   },
+   "mood": 0.536,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Undergrounder outdoors",
+     "mood": -3
+    },
+    {
+     "label": "Wielding a steel spear (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 5,
+    "Construction": 4,
+    "Mining": 4,
+    "Cooking": 4,
+    "Plants": 10,
+    "Animals": 3,
+    "Crafting": 4,
+    "Artistic": 0,
+    "Medicine": 1,
+    "Social": 0,
+    "Intellectual": 1
+   },
+   "traits": [
+    "Undergrounder"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788831972267
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79464,
+   "name": "Blue",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    209,
+    0,
+    237
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.984,
+    "rest": 0.911
+   },
+   "mood": 0.52,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Wielding a recurve bow (poor 76%)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 10,
+    "Melee": 6,
+    "Construction": 2,
+    "Mining": 4,
+    "Cooking": 0,
+    "Plants": 2,
+    "Animals": 10,
+    "Crafting": 4,
+    "Artistic": 4,
+    "Social": 1,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Psychopath"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788831972267
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79469,
+   "name": "Red",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    208,
+    0,
+    235
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.97,
+    "rest": 0.981
+   },
+   "mood": 0.536,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a steel spear (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 6,
+    "Construction": 2,
+    "Mining": 0,
+    "Cooking": 7,
+    "Plants": 6,
+    "Animals": 0,
+    "Crafting": 9,
+    "Artistic": 2,
+    "Social": 0,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Gourmand",
+    "Brawler"
+   ],
+   "relations": [
+    {
+     "other": "Gumi",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788831972267
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79474,
+   "name": "Black",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    200,
+    0,
+    240
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.984,
+    "rest": 0.954
+   },
+   "mood": 0.529,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a steel spear (normal)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 3,
+    "Construction": 0,
+    "Mining": 1,
+    "Cooking": 4,
+    "Plants": 11,
+    "Animals": 3,
+    "Crafting": 0,
+    "Artistic": 4,
+    "Medicine": 4,
+    "Social": 5,
+    "Intellectual": 5
+   },
+   "traits": [
+    "Jogger",
+    "Delicate"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788831972268
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79480,
+   "name": "Green",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    208,
+    0,
+    235
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.98,
+    "rest": 0.891
+   },
+   "mood": 0.53,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Body modder frustrated",
+     "mood": -4
+    },
+    {
+     "label": "Wielding a short bow (poor)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 3,
+    "Melee": 7,
+    "Construction": 1,
+    "Mining": 4,
+    "Cooking": 0,
+    "Plants": 3,
+    "Animals": 8,
+    "Crafting": 6,
+    "Artistic": 4,
+    "Medicine": 3,
+    "Intellectual": 2
+   },
+   "traits": [
+    "Slow learner",
+    "Body modder"
+   ],
+   "relations": [
+    {
+     "other": "Busto",
+     "kind": "father",
+     "opinion": 30
+    },
+    {
+     "other": "Goabanbi",
+     "kind": "brother",
+     "opinion": 20
+    },
+    {
+     "other": "Wolf",
+     "kind": "father",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788831972268
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79494,
+   "name": "Gumi",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    208,
+    0,
+    235
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.98,
+    "rest": 0.976
+   },
+   "mood": 0.536,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Undergrounder outdoors",
+     "mood": -3
+    },
+    {
+     "label": "Wielding a short bow (poor)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 9,
+    "Melee": 8,
+    "Construction": 9,
+    "Mining": 6,
+    "Cooking": 0,
+    "Plants": 4,
+    "Animals": 1,
+    "Crafting": 4,
+    "Artistic": 3,
+    "Medicine": 2,
+    "Social": 2,
+    "Intellectual": 1
+   },
+   "traits": [
+    "Undergrounder",
+    "Slothful"
+   ],
+   "relations": [
+    {
+     "other": "Red",
+     "kind": "son",
+     "opinion": 30
+    }
+   ],
+   "drafted": false,
+   "rx": 1788831972268
+  },
+  {
+   "v": 0,
+   "t": 813250,
+   "type": "pawn_snapshot",
+   "id": 79498,
+   "name": "Chicken",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    207,
+    0,
+    235
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.98,
+    "rest": 0.978
+   },
+   "mood": 0.536,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Hot",
+     "mood": -8
+    },
+    {
+     "label": "Wielding a recurve bow (good)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 13,
+    "Melee": 11,
+    "Construction": 0,
+    "Mining": 0,
+    "Cooking": 1,
+    "Plants": 4,
+    "Animals": 2,
+    "Crafting": 4,
+    "Artistic": 5,
+    "Social": 5,
+    "Intellectual": 4
+   },
+   "traits": [
+    "Greedy"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788831972269
   }
  ],
  "recent": [
@@ -408,17 +1026,847 @@
     "paused": false
    },
    "rx": 1788831950512
+  },
+  {
+   "v": 0,
+   "t": 811958,
+   "type": "command_result",
+   "id": "c-8",
+   "ok": false,
+   "error": "bad_arg",
+   "detail": "'speed' must be 0-3 (0 = paused)",
+   "rx": 1788831950547
+  },
+  {
+   "v": 0,
+   "t": 811959,
+   "type": "command_result",
+   "id": "c-9",
+   "ok": false,
+   "error": "unknown_cmd",
+   "detail": "no such command: fly_to_moon",
+   "rx": 1788831950563
+  },
+  {
+   "v": 0,
+   "t": 811961,
+   "type": "command_result",
+   "id": "c-10",
+   "ok": false,
+   "error": "unknown_action",
+   "detail": "no such dev action: nope",
+   "rx": 1788831950596
+  },
+  {
+   "v": 0,
+   "t": 811962,
+   "type": "command_result",
+   "id": "c-11",
+   "ok": false,
+   "error": "no_pawn",
+   "detail": "no spawned pawn with id 999999",
+   "rx": 1788831950613
+  },
+  {
+   "v": 0,
+   "t": 811963,
+   "type": "command_result",
+   "id": "c-12",
+   "ok": false,
+   "error": "no_def",
+   "detail": "no MentalStateDef named NotARealState",
+   "rx": 1788831950629
+  },
+  {
+   "v": 0,
+   "t": 811987,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831951014
+  },
+  {
+   "v": 0,
+   "t": 811990,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderOwnRoom",
+   "rx": 1788831951063
+  },
+  {
+   "v": 0,
+   "t": 812556,
+   "type": "command_result",
+   "id": "c-13",
+   "ok": true,
+   "data": {
+    "pawn": 948,
+    "would_start": "Wander_Sad"
+   },
+   "rx": 1788831960512
+  },
+  {
+   "v": 0,
+   "t": 812558,
+   "type": "command_result",
+   "id": "c-14",
+   "ok": false,
+   "error": "refused",
+   "detail": "TryStartMentalState refused for Zeke",
+   "data": {
+    "pawn": 948,
+    "state": "Wander_Sad"
+   },
+   "rx": 1788831960546
+  },
+  {
+   "v": 0,
+   "t": 812559,
+   "type": "letter",
+   "label": "Thinker role deactivated",
+   "text": "Number of Pasturists in your colony fell to 1. The Thinker role is no longer active. This role will become available once again when the number of Pasturists reaches 3.",
+   "def": "NeutralEvent",
+   "rx": 1788831960626
+  },
+  {
+   "v": 0,
+   "t": 812559,
+   "type": "letter",
+   "label": "Funeral of Masculinity opportunity for Shun",
+   "text": "You can hold a pasturic funeral for <color=#D09B61FF>Shun</color>.\n\nTo begin the ritual, select a grave containing Shun's corpse and click the 'Begin Funeral of Masculinity' command.\n\nExpires in <color=#87F6F6FF><color=#87F6F6FF>9 days</color></color>, on 8th of Jugust.",
+   "def": "NeutralEvent",
+   "rx": 1788831960636
+  },
+  {
+   "v": 0,
+   "t": 812559,
+   "type": "letter",
+   "label": "Death: Shun",
+   "text": "Shun has been cut to death.\n\n(*Name)Shun(/Name) should be buried and given a funeral so his friends and family can say farewell.",
+   "def": "Death",
+   "rx": 1788831960649
+  },
+  {
+   "v": 0,
+   "t": 812559,
+   "type": "death",
+   "pawn": 835,
+   "cause": "Cut",
+   "killer": null,
+   "rx": 1788831960650
+  },
+  {
+   "v": 0,
+   "t": 812559,
+   "type": "command_result",
+   "id": "c-15",
+   "ok": true,
+   "data": {
+    "pawn": 835,
+    "amount": 8,
+    "dead": true
+   },
+   "rx": 1788831960654
+  },
+  {
+   "v": 0,
+   "t": 812560,
+   "type": "letter",
+   "label": "Shaman merchant from Caro Tribe",
+   "text": "A caravan from (*Faction=Faction_2)Caro Tribe(/Faction) is approaching. They are a shaman merchant.\n\nThey will hang around the colony for some time before leaving. You can attack them - but this will anger their faction!",
+   "def": "PositiveEvent",
+   "rx": 1788831960782
+  },
+  {
+   "v": 0,
+   "t": 812560,
+   "type": "incident",
+   "def": "TraderCaravanArrival",
+   "label": "trader caravan arrival",
+   "points": 599,
+   "rx": 1788831960786
+  },
+  {
+   "v": 0,
+   "t": 812560,
+   "type": "command_result",
+   "id": "c-16",
+   "ok": true,
+   "data": {
+    "def": "TraderCaravanArrival"
+   },
+   "rx": 1788831960786
+  },
+  {
+   "v": 0,
+   "t": 812562,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960791
+  },
+  {
+   "v": 0,
+   "t": 812562,
+   "type": "hediff",
+   "pawn": 79429,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788831960791
+  },
+  {
+   "v": 0,
+   "t": 812563,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960814
+  },
+  {
+   "v": 0,
+   "t": 812564,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960814
+  },
+  {
+   "v": 0,
+   "t": 812564,
+   "type": "hediff",
+   "pawn": 79464,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788831960815
+  },
+  {
+   "v": 0,
+   "t": 812567,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960863
+  },
+  {
+   "v": 0,
+   "t": 812568,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960879
+  },
+  {
+   "v": 0,
+   "t": 812568,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960879
+  },
+  {
+   "v": 0,
+   "t": 812568,
+   "type": "hediff",
+   "pawn": 79474,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788831960880
+  },
+  {
+   "v": 0,
+   "t": 812570,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960912
+  },
+  {
+   "v": 0,
+   "t": 812571,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960929
+  },
+  {
+   "v": 0,
+   "t": 812572,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960945
+  },
+  {
+   "v": 0,
+   "t": 812575,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831960996
+  },
+  {
+   "v": 0,
+   "t": 812583,
+   "type": "hediff",
+   "pawn": 79449,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788831961129
+  },
+  {
+   "v": 0,
+   "t": 812586,
+   "type": "hediff",
+   "pawn": 79498,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788831961181
+  },
+  {
+   "v": 0,
+   "t": 812587,
+   "type": "hediff",
+   "pawn": 79459,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788831961198
+  },
+  {
+   "v": 0,
+   "t": 812605,
+   "type": "hediff",
+   "pawn": 79454,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788831961487
+  },
+  {
+   "v": 0,
+   "t": 812608,
+   "type": "hediff",
+   "pawn": 79480,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788831961530
+  },
+  {
+   "v": 0,
+   "t": 812612,
+   "type": "hediff",
+   "pawn": 79469,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788831961598
+  },
+  {
+   "v": 0,
+   "t": 812615,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831961647
+  },
+  {
+   "v": 0,
+   "t": 812615,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831961648
+  },
+  {
+   "v": 0,
+   "t": 812615,
+   "type": "hediff",
+   "pawn": 79494,
+   "def": "Heatstroke",
+   "part": null,
+   "severity": 0,
+   "rx": 1788831961648
+  },
+  {
+   "v": 0,
+   "t": 812617,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831961679
+  },
+  {
+   "v": 0,
+   "t": 812617,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831961680
+  },
+  {
+   "v": 0,
+   "t": 812622,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831961763
+  },
+  {
+   "v": 0,
+   "t": 812622,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831961763
+  },
+  {
+   "v": 0,
+   "t": 812624,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831961796
+  },
+  {
+   "v": 0,
+   "t": 812624,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831961797
+  },
+  {
+   "v": 0,
+   "t": 812628,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831961863
+  },
+  {
+   "v": 0,
+   "t": 812628,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831961863
+  },
+  {
+   "v": 0,
+   "t": 812628,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831961863
+  },
+  {
+   "v": 0,
+   "t": 812628,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831961864
+  },
+  {
+   "v": 0,
+   "t": 812630,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Goto",
+   "target": "(107, 0, 119)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831961896
+  },
+  {
+   "v": 0,
+   "t": 812630,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831961897
+  },
+  {
+   "v": 0,
+   "t": 812631,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831961915
+  },
+  {
+   "v": 0,
+   "t": 812631,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831961915
+  },
+  {
+   "v": 0,
+   "t": 812632,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Goto",
+   "target": "(110, 0, 117)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831961930
+  },
+  {
+   "v": 0,
+   "t": 812632,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831961930
+  },
+  {
+   "v": 0,
+   "t": 812635,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831961979
+  },
+  {
+   "v": 0,
+   "t": 812635,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831961980
+  },
+  {
+   "v": 0,
+   "t": 812637,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Goto",
+   "target": "(109, 0, 123)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831962014
+  },
+  {
+   "v": 0,
+   "t": 812637,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831962014
+  },
+  {
+   "v": 0,
+   "t": 812638,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831962030
+  },
+  {
+   "v": 0,
+   "t": 812638,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831962030
+  },
+  {
+   "v": 0,
+   "t": 812639,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Goto",
+   "target": "(117, 0, 116)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831962046
+  },
+  {
+   "v": 0,
+   "t": 812639,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831962047
+  },
+  {
+   "v": 0,
+   "t": 812643,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Goto",
+   "target": "(109, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831962113
+  },
+  {
+   "v": 0,
+   "t": 812643,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831962113
+  },
+  {
+   "v": 0,
+   "t": 812643,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Goto",
+   "target": "(108, 0, 121)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831962114
+  },
+  {
+   "v": 0,
+   "t": 812643,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831962114
+  },
+  {
+   "v": 0,
+   "t": 812646,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Goto",
+   "target": "(108, 0, 117)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831962163
+  },
+  {
+   "v": 0,
+   "t": 812646,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831962163
+  },
+  {
+   "v": 0,
+   "t": 812650,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Goto",
+   "target": "(115, 0, 118)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831962230
+  },
+  {
+   "v": 0,
+   "t": 812650,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831962230
+  },
+  {
+   "v": 0,
+   "t": 812653,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Goto",
+   "target": "(113, 0, 122)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831962280
+  },
+  {
+   "v": 0,
+   "t": 812653,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831962280
+  },
+  {
+   "v": 0,
+   "t": 812657,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831962346
+  },
+  {
+   "v": 0,
+   "t": 812657,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831962346
+  },
+  {
+   "v": 0,
+   "t": 812672,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Goto",
+   "target": "(111, 0, 120)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788831962596
+  },
+  {
+   "v": 0,
+   "t": 812672,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788831962597
+  },
+  {
+   "v": 0,
+   "t": 812719,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831963380
+  },
+  {
+   "v": 0,
+   "t": 812719,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788831963380
+  },
+  {
+   "v": 0,
+   "t": 812722,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderOwnRoom",
+   "rx": 1788831963430
+  },
+  {
+   "v": 0,
+   "t": 812722,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788831963430
+  },
+  {
+   "v": 0,
+   "t": 813035,
+   "type": "interaction",
+   "initiator": 79494,
+   "recipient": 79498,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Gumi</color> said something about cannibals to <color=#D09B61FF>Chicken</color>.",
+   "rx": 1788831968688
+  },
+  {
+   "v": 0,
+   "t": 813344,
+   "type": "interaction",
+   "initiator": 79464,
+   "recipient": 79480,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Blue</color> said a word about warriors to <color=#D09B61FF>Green</color>.",
+   "rx": 1788831973832
+  },
+  {
+   "v": 0,
+   "t": 813452,
+   "type": "command_result",
+   "id": "c-17",
+   "ok": true,
+   "data": {
+    "speed": 0,
+    "paused": true
+   },
+   "rx": 1788831975647
   }
  ],
  "counts": {
   "mod_connected": 4,
   "hello": 2,
-  "world_snapshot": 10,
-  "pawn_snapshot": 30,
-  "job_start": 6,
+  "world_snapshot": 16,
+  "pawn_snapshot": 75,
+  "job_start": 40,
   "mod_disconnected": 3,
-  "command_result": 5
+  "command_result": 15,
+  "letter": 4,
+  "death": 1,
+  "incident": 1,
+  "hediff": 10,
+  "job_end": 22,
+  "interaction": 2
  },
- "last_event_at": 1788831950.512872,
- "published_at": 1788831950
+ "last_event_at": 1788831975.647242,
+ "published_at": 1788831982
 }
