@@ -12,10 +12,10 @@
  },
  "world": {
   "v": 0,
-  "t": 1048500,
+  "t": 1053750,
   "type": "world_snapshot",
   "day": 17,
-  "hour": 11,
+  "hour": 13,
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
@@ -24,31 +24,31 @@
   "visitors": 2,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890795244
+  "rx": 1788890827220
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1048500,
+   "t": 1053750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 11,
+   "hour": 13,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    97,
+    102,
     0,
-    104
+    113
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.506,
-    "joy": 0.14
+    "rest": 0.423,
+    "joy": 0.119
    },
-   "mood": 0.501,
+   "mood": 0.492,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -120,30 +120,30 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890795244
+   "rx": 1788890827221
   },
   {
    "v": 0,
-   "t": 1048500,
+   "t": 1053750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 11,
+   "hour": 13,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    100,
+    101,
     0,
-    124
+    127
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.456,
-    "joy": 0.646
+    "rest": 0.373,
+    "joy": 0.593
    },
-   "mood": 0.28,
+   "mood": 0.226,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -201,18 +201,18 @@
     {
      "other": "G\u00e9radon",
      "kind": "brother",
-     "opinion": -22
+     "opinion": -23
     }
    ],
    "drafted": false,
-   "rx": 1788890795245
+   "rx": 1788890827221
   },
   {
    "v": 0,
-   "t": 1048500,
+   "t": 1053750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 11,
+   "hour": 13,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
@@ -225,8 +225,8 @@
    "job": "researching.",
    "needs": {
     "food": 0,
-    "rest": 0.397,
-    "joy": 0.562
+    "rest": 0.314,
+    "joy": 0.509
    },
    "mood": 0.34,
    "thoughts": [
@@ -289,18 +289,18 @@
     "childhood": "shop kid",
     "adulthood": "torturer"
    },
-   "age": 35,
+   "age": 36,
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890795245
+   "rx": 1788890827221
   },
   {
    "v": 0,
-   "t": 1048500,
+   "t": 1053750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 11,
+   "hour": 13,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
@@ -308,15 +308,15 @@
    "pos": [
     101,
     0,
-    110
+    123
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.494,
-    "joy": 0.123
+    "rest": 0.411,
+    "joy": 0.102
    },
-   "mood": 0.369,
+   "mood": 0.201,
    "thoughts": [
     {
      "label": "Starving",
@@ -381,37 +381,33 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890795245
+   "rx": 1788890827221
   },
   {
    "v": 0,
-   "t": 1048500,
+   "t": 1053750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 11,
+   "hour": 13,
    "id": 84939,
    "name": "Irwin",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    87,
+    152,
     0,
-    118
+    64
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.832,
-    "rest": 0.527
+    "food": 0.692,
+    "rest": 0.444
    },
-   "mood": 0.54,
+   "mood": 0.64,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
-    },
-    {
-     "label": "Night owl in daytime",
-     "mood": -10
     },
     {
      "label": "Ate fine meal",
@@ -420,6 +416,10 @@
     {
      "label": "Ate without table",
      "mood": -3
+    },
+    {
+     "label": "Darkness",
+     "mood": 0
     }
    ],
    "health": "Healthy",
@@ -462,33 +462,37 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890795245
+   "rx": 1788890827221
   },
   {
    "v": 0,
-   "t": 1048500,
+   "t": 1053750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 11,
+   "hour": 13,
    "id": 84947,
    "name": "Mushinto",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    89,
+    151,
     0,
-    127
+    59
    ],
-   "job": "wandering.",
+   "job": "moving.",
    "needs": {
-    "food": 0.974,
-    "rest": 0.519
+    "food": 0.862,
+    "rest": 0.436
    },
    "mood": 0.59,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Ate without table",
@@ -539,7 +543,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890795245
+   "rx": 1788890827221
   }
  ],
  "recent": [
@@ -4030,6 +4034,146 @@
     "Wait_Wander": 8
    },
    "rx": 1788890792394
+  },
+  {
+   "v": 0,
+   "t": 1048694,
+   "type": "job_start",
+   "day": 17,
+   "hour": 11,
+   "pawn": 81698,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890796328
+  },
+  {
+   "v": 0,
+   "t": 1050000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 12,
+   "total": 55,
+   "counts": {
+    "Wait_MaintainPosture": 28,
+    "Wait_Wander": 14,
+    "GotoWander": 13
+   },
+   "rx": 1788890803652
+  },
+  {
+   "v": 0,
+   "t": 1050174,
+   "type": "job_start",
+   "day": 17,
+   "hour": 12,
+   "pawn": 84939,
+   "job": "Goto",
+   "target": "(244, 0, 65)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788890804603
+  },
+  {
+   "v": 0,
+   "t": 1050209,
+   "type": "job_start",
+   "day": 17,
+   "hour": 12,
+   "pawn": 84947,
+   "job": "Goto",
+   "target": "(245, 0, 59)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788890804802
+  },
+  {
+   "v": 0,
+   "t": 1051295,
+   "type": "job_start",
+   "day": 17,
+   "hour": 12,
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85422",
+   "source": "JobGiver_Work",
+   "rx": 1788890813575
+  },
+  {
+   "v": 0,
+   "t": 1052000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 12,
+   "total": 23,
+   "counts": {
+    "Wait_MaintainPosture": 13,
+    "Wait_Wander": 6,
+    "GotoWander": 4
+   },
+   "rx": 1788890817494
+  },
+  {
+   "v": 0,
+   "t": 1052364,
+   "type": "job_start",
+   "day": 17,
+   "hour": 12,
+   "pawn": 81686,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85429",
+   "source": "JobGiver_Work",
+   "rx": 1788890819536
+  },
+  {
+   "v": 0,
+   "t": 1052699,
+   "type": "job_start",
+   "day": 17,
+   "hour": 13,
+   "pawn": 81698,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890821375
+  },
+  {
+   "v": 0,
+   "t": 1052746,
+   "type": "thought",
+   "day": 17,
+   "hour": 13,
+   "pawn": 81682,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890821636
+  },
+  {
+   "v": 0,
+   "t": 1052746,
+   "type": "thought",
+   "day": 17,
+   "hour": 13,
+   "pawn": 81698,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 81682,
+   "about_name": "G\u00e9radon",
+   "rx": 1788890821637
+  },
+  {
+   "v": 0,
+   "t": 1052746,
+   "type": "interaction",
+   "day": 17,
+   "hour": 13,
+   "initiator": 81682,
+   "recipient": 81698,
+   "def": "Chitchat",
+   "text": "G\u00e9radon spoke about parties with Joe.",
+   "rx": 1788890821652
   }
  ],
  "counts": {
@@ -4037,16 +4181,16 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 233,
-  "pawn_snapshot": 1138,
-  "job_start": 64,
-  "thought": 102,
-  "interaction": 29,
-  "job_noise": 26,
+  "world_snapshot": 254,
+  "pawn_snapshot": 1264,
+  "job_start": 70,
+  "thought": 104,
+  "interaction": 30,
+  "job_noise": 28,
   "job_end": 35,
   "incident": 1,
   "mental_state": 1,
   "hediff": 3
  },
- "last_event_at": 1788890795.2456121
+ "last_event_at": 1788890827.221754
 }
