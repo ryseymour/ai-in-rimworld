@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 826750,
+  "t": 838250,
   "type": "world_snapshot",
   "date": "15th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 21865,
+  "wealth": 22000,
   "colonists": 2,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887665496
+  "rx": 1788887697796
  },
  "pawns": [
   {
    "v": 0,
-   "t": 826750,
+   "t": 838250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    111
+    109
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.581,
-    "rest": 0.874,
+    "food": 0.049,
+    "rest": 0.694,
     "joy": 0
    },
-   "mood": 0.295,
+   "mood": 0.128,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -61,12 +61,12 @@
      "mood": -12
     },
     {
-     "label": "Serious pain",
-     "mood": -10
+     "label": "Ravenously hungry",
+     "mood": -12
     },
     {
-     "label": "Quite comfortable",
-     "mood": 6
+     "label": "Serious pain",
+     "mood": -10
     }
    ],
    "health": "Injured",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887665496
+   "rx": 1788887697796
   },
   {
    "v": 0,
@@ -164,31 +164,31 @@
   },
   {
    "v": 0,
-   "t": 826750,
+   "t": 838250,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    123
+    106
    ],
-   "job": "Crawling to bed.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.361
+    "rest": 0.408
    },
-   "mood": 0.101,
+   "mood": 0.169,
    "thoughts": [
     {
      "label": "Catharsis",
      "mood": 40
     },
     {
-     "label": "Badly malnourished",
-     "mood": -26
+     "label": "Starving",
+     "mood": -32
     },
     {
      "label": "Very low expectations",
@@ -203,8 +203,8 @@
      "mood": -8
     },
     {
-     "label": "I am disliked xenotype",
-     "mood": -6
+     "label": "Extremely comfortable",
+     "mood": 8
     }
    ],
    "health": "Incapacitated",
@@ -227,7 +227,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887665496
+   "rx": 1788887697796
   }
  ],
  "recent": [
@@ -3355,6 +3355,77 @@
     "GotoWander": 1
    },
    "rx": 1788887663402
+  },
+  {
+   "v": 0,
+   "t": 828000,
+   "type": "job_noise",
+   "total": 2,
+   "counts": {
+    "Wait_MaintainPosture": 1,
+    "Wait_Wander": 1
+   },
+   "rx": 1788887669131
+  },
+  {
+   "v": 0,
+   "t": 830000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "GotoWander": 2,
+    "Wait_Wander": 2
+   },
+   "rx": 1788887674738
+  },
+  {
+   "v": 0,
+   "t": 832000,
+   "type": "job_noise",
+   "total": 10,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "GotoWander": 3,
+    "Wait_Wander": 2
+   },
+   "rx": 1788887680336
+  },
+  {
+   "v": 0,
+   "t": 834000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 2,
+    "GotoWander": 2
+   },
+   "rx": 1788887685932
+  },
+  {
+   "v": 0,
+   "t": 836000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 3,
+    "GotoWander": 1
+   },
+   "rx": 1788887691534
+  },
+  {
+   "v": 0,
+   "t": 838000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 3,
+    "GotoWander": 1
+   },
+   "rx": 1788887697101
   }
  ],
  "counts": {
@@ -3362,11 +3433,11 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 1615,
-  "pawn_snapshot": 1199,
+  "world_snapshot": 1661,
+  "pawn_snapshot": 1291,
   "job_start": 70,
   "job_end": 33,
-  "job_noise": 50,
+  "job_noise": 56,
   "hediff": 18,
   "death": 5,
   "letter": 23,
@@ -3374,5 +3445,5 @@
   "interaction": 15,
   "mental_state": 1
  },
- "last_event_at": 1788887665.496725
+ "last_event_at": 1788887697.79649
 }
