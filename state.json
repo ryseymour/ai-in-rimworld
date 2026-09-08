@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 1133250,
+  "t": 1154750,
   "type": "world_snapshot",
   "date": "5th of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 19116,
+  "wealth": 19115,
   "colonists": 0,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835734708
+  "rx": 1788835765996
  },
  "pawns": [
   {
@@ -1519,6 +1519,15 @@
    "text": "A large meteorite has struck ground in the area. It has left behind a lump of gold ore.",
    "def": "PositiveEvent",
    "rx": 1788835663488
+  },
+  {
+   "v": 0,
+   "t": 1152000,
+   "type": "incident",
+   "def": "TravelerGroup",
+   "label": "traveler group",
+   "points": -1,
+   "rx": 1788835760751
   }
  ],
  "counts": {
@@ -1526,7 +1535,7 @@
   "command_result": 9,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 1084,
+  "world_snapshot": 1170,
   "pawn_snapshot": 298,
   "job_start": 24,
   "job_end": 22,
@@ -1534,7 +1543,7 @@
   "hediff": 1,
   "death": 3,
   "letter": 10,
-  "incident": 7
+  "incident": 8
  },
- "last_event_at": 1788835734.7087529
+ "last_event_at": 1788835765.9969862
 }
