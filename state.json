@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 831750,
+  "t": 833500,
   "type": "world_snapshot",
   "date": "15th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 15,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788850963946
+  "rx": 1788852131933
  },
  "pawns": [
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -34,15 +34,15 @@
    "pos": [
     101,
     0,
-    122
+    114
    ],
-   "job": "resting.",
+   "job": "downed, unconscious.",
    "needs": {
-    "food": 0.092,
-    "rest": 0.796,
+    "food": 0.059,
+    "rest": 0.767,
     "joy": 0
    },
-   "mood": 0.175,
+   "mood": 0.166,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -57,19 +57,19 @@
      "mood": -20
     },
     {
+     "label": "Intense pain",
+     "mood": -15
+    },
+    {
      "label": "Ate corpse",
      "mood": -12
     },
     {
      "label": "Ravenously hungry",
      "mood": -12
-    },
-    {
-     "label": "Serious pain",
-     "mood": -10
     }
    ],
-   "health": "Injured",
+   "health": "Unconscious",
    "skills": {
     "Construction": 1,
     "Mining": 2,
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963947
+   "rx": 1788852131934
   },
   {
    "v": 0,
@@ -164,7 +164,7 @@
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -177,8 +177,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.79,
-    "rest": 0.57
+    "food": 0.713,
+    "rest": 0.624
    },
    "mood": 0.036,
    "thoughts": [
@@ -227,25 +227,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963948
+   "rx": 1788852131934
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79594,
    "name": "Lamp",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    146,
+    122,
     0,
-    160
+    129
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.856
+    "food": 0.608,
+    "rest": 0.828
    },
    "mood": 0.49,
    "thoughts": [
@@ -293,25 +293,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788850963979
+   "rx": 1788852131935
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79600,
    "name": "Dweeb",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    145,
+    118,
     0,
-    159
+    129
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.877
+    "food": 0.608,
+    "rest": 0.849
    },
    "mood": 0.48,
    "thoughts": [
@@ -354,25 +354,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963979
+   "rx": 1788852131936
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79607,
    "name": "Thirteen",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    150,
+    129,
     0,
-    164
+    131
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.819
+    "food": 0.608,
+    "rest": 0.791
    },
    "mood": 0.46,
    "thoughts": [
@@ -413,25 +413,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963980
+   "rx": 1788852131936
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79613,
    "name": "Rho",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    168,
+    147,
     0,
-    179
+    152
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.834
+    "food": 0.608,
+    "rest": 0.806
    },
    "mood": 0.54,
    "thoughts": [
@@ -475,25 +475,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788850963980
+   "rx": 1788852131936
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79620,
    "name": "Emi",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    148,
+    123,
     0,
-    162
+    129
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.89
+    "food": 0.608,
+    "rest": 0.861
    },
    "mood": 0.48,
    "thoughts": [
@@ -550,25 +550,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788850963981
+   "rx": 1788852131937
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79642,
    "name": "Rocket",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    155,
+    132,
     0,
-    170
+    142
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.652,
-    "rest": 0.868
+    "food": 0.608,
+    "rest": 0.841
    },
    "mood": 0.53,
    "thoughts": [
@@ -606,27 +606,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963981
+   "rx": 1788852131937
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79656,
    "name": "Genevieve",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    158,
+    129,
     0,
-    155
+    127
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.848
+    "food": 0.608,
+    "rest": 0.82
    },
-   "mood": 0.657,
+   "mood": 0.69,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -671,25 +671,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963982
+   "rx": 1788852131937
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79664,
    "name": "Breaker",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    152,
+    129,
     0,
-    167
+    135
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.652,
-    "rest": 0.876
+    "food": 0.608,
+    "rest": 0.85
    },
    "mood": 0.44,
    "thoughts": [
@@ -702,11 +702,11 @@
      "mood": -8
     },
     {
-     "label": "Minor pain",
+     "label": "Darkness",
      "mood": -5
     },
     {
-     "label": "Darkness",
+     "label": "Minor pain",
      "mood": -5
     }
    ],
@@ -730,25 +730,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963982
+   "rx": 1788852131938
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79670,
    "name": "Gleb",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    156,
+    126,
     0,
-    152
+    123
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.905
+    "food": 0.608,
+    "rest": 0.877
    },
    "mood": 0.52,
    "thoughts": [
@@ -785,25 +785,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963982
+   "rx": 1788852131938
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79676,
    "name": "Lee",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    143,
+    116,
     0,
-    156
+    126
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.859
+    "food": 0.608,
+    "rest": 0.831
    },
    "mood": 0.49,
    "thoughts": [
@@ -839,25 +839,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963982
+   "rx": 1788852131938
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79682,
    "name": "Lime",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    144,
+    123,
     0,
-    158
+    124
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.652,
-    "rest": 0.835
+    "food": 0.608,
+    "rest": 0.809
    },
    "mood": 0.54,
    "thoughts": [
@@ -892,25 +892,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788850963983
+   "rx": 1788852131939
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 73122,
    "name": "Deccy",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    147,
+    125,
     0,
-    161
+    128
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.851
+    "food": 0.608,
+    "rest": 0.822
    },
    "mood": 0.43,
    "thoughts": [
@@ -959,25 +959,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788850963985
+   "rx": 1788852131939
   },
   {
    "v": 0,
-   "t": 831750,
+   "t": 833500,
    "type": "pawn_snapshot",
    "id": 79700,
    "name": "Castro",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    149,
+    125,
     0,
-    163
+    131
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.656,
-    "rest": 0.84
+    "food": 0.608,
+    "rest": 0.812
    },
    "mood": 0.53,
    "thoughts": [
@@ -1018,7 +1018,75 @@
     }
    ],
    "drafted": false,
-   "rx": 1788850963985
+   "rx": 1788852131939
+  },
+  {
+   "v": 0,
+   "t": 833500,
+   "type": "pawn_snapshot",
+   "id": 79564,
+   "name": "Pi",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    12,
+    0,
+    75
+   ],
+   "job": "Crawling to bed.",
+   "needs": {
+    "food": 0.568,
+    "rest": 0.829,
+    "joy": 0.499
+   },
+   "mood": 0.576,
+   "thoughts": [
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Mind-shattering pain",
+     "mood": -20
+    },
+    {
+     "label": "Night owl at night",
+     "mood": 16
+    },
+    {
+     "label": "Unsightly environment",
+     "mood": -5
+    },
+    {
+     "label": "Sad youngsters",
+     "mood": -2
+    },
+    {
+     "label": "Wearing favorite color",
+     "mood": 1
+    }
+   ],
+   "health": "Pain shock",
+   "skills": {
+    "Shooting": 10,
+    "Melee": 4,
+    "Construction": 10,
+    "Mining": 2,
+    "Cooking": 3,
+    "Plants": 8,
+    "Animals": 3,
+    "Crafting": 6,
+    "Artistic": 1,
+    "Medicine": 1,
+    "Intellectual": 16
+   },
+   "traits": [
+    "Night owl",
+    "Psychically sensitive"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788852131935
   }
  ],
  "recent": [
@@ -3629,23 +3697,133 @@
    "part": "jaw",
    "severity": 5.417,
    "rx": 1788850037226
+  },
+  {
+   "v": 0,
+   "t": 832000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788851897041
+  },
+  {
+   "v": 0,
+   "t": 832019,
+   "type": "hediff",
+   "pawn": 79564,
+   "def": "Bruise",
+   "part": "torso",
+   "severity": 7.635,
+   "rx": 1788851897387
+  },
+  {
+   "v": 0,
+   "t": 832169,
+   "type": "hediff",
+   "pawn": 79564,
+   "def": "Bruise",
+   "part": "right second toe",
+   "severity": 7.407,
+   "rx": 1788851900409
+  },
+  {
+   "v": 0,
+   "t": 832169,
+   "type": "job_start",
+   "pawn": 79564,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "ThinkNode_CrawlInterrupt",
+   "rx": 1788851900424
+  },
+  {
+   "v": 0,
+   "t": 832769,
+   "type": "job_start",
+   "pawn": 79564,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_PatientGoToBed",
+   "rx": 1788852124946
+  },
+  {
+   "v": 0,
+   "t": 832769,
+   "type": "job_end",
+   "pawn": 79564,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788852124946
+  },
+  {
+   "v": 0,
+   "t": 832776,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788852125090
+  },
+  {
+   "v": 0,
+   "t": 832776,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_Downed",
+   "condition": "Incompletable",
+   "rx": 1788852125091
+  },
+  {
+   "v": 0,
+   "t": 833055,
+   "type": "interaction",
+   "initiator": 79670,
+   "recipient": 73122,
+   "def": "Chitchat",
+   "text": "Gleb commented about okapis to Deccy.",
+   "rx": 1788852130450
+  },
+  {
+   "v": 0,
+   "t": 833180,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788852130981
+  },
+  {
+   "v": 0,
+   "t": 833510,
+   "type": "command_result",
+   "id": "c-16",
+   "ok": true,
+   "data": {
+    "speed": 0,
+    "paused": true
+   },
+   "rx": 1788852132374
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "command_result": 15,
+  "command_result": 16,
   "mod_disconnected": 1,
   "hello": 2,
-  "world_snapshot": 1542,
-  "pawn_snapshot": 929,
-  "job_start": 57,
-  "job_end": 25,
-  "job_noise": 41,
-  "hediff": 16,
+  "world_snapshot": 1549,
+  "pawn_snapshot": 1036,
+  "job_start": 61,
+  "job_end": 27,
+  "job_noise": 42,
+  "hediff": 18,
   "death": 4,
   "letter": 18,
   "incident": 13,
-  "interaction": 14
+  "interaction": 15
  },
- "last_event_at": 1788850963.9856188
+ "last_event_at": 1788852132.37407
 }
