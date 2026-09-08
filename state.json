@@ -1,16 +1,16 @@
 {
  "hello": {
   "v": 0,
-  "t": 813794,
+  "t": 814418,
   "type": "hello",
   "mod_version": "0.1.0",
   "game_version": "1.6.4871 rev597",
   "map_id": 2,
-  "rx": 1788833293037
+  "rx": 1788833638508
  },
  "world": {
   "v": 0,
-  "t": 814250,
+  "t": 814750,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 10,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788833395847
+  "rx": 1788833644251
  },
  "pawns": [
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -39,7 +39,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.828,
+    "rest": 0.851,
     "joy": 0
    },
    "mood": 0,
@@ -89,27 +89,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833395847
+   "rx": 1788833644252
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    103,
     0,
     123
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.558
+    "rest": 0.551
    },
-   "mood": 0.007,
+   "mood": 0.029,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -156,25 +156,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833395847
+   "rx": 1788833644252
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79429,
    "name": "Goabanbi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    186,
+    182,
     0,
-    213
+    204
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.934,
-    "rest": 0.889
+    "food": 0.916,
+    "rest": 0.882
    },
    "mood": 0.57,
    "thoughts": [
@@ -185,10 +185,6 @@
     {
      "label": "Hot",
      "mood": -8
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
     },
     {
      "label": "Wielding a recurve bow (normal)",
@@ -233,25 +229,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833395847
+   "rx": 1788833644253
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79449,
    "name": "Trocam",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    183,
+    176,
     0,
-    226
+    216
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.956,
-    "rest": 0.906
+    "food": 0.94,
+    "rest": 0.896
    },
    "mood": 0.57,
    "thoughts": [
@@ -292,27 +288,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833395848
+   "rx": 1788833644253
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79454,
    "name": "Snail",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    189,
+    182,
     0,
-    217
+    207
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.887
+    "food": 0.94,
+    "rest": 0.88
    },
-   "mood": 0.586,
+   "mood": 0.608,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -356,25 +352,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833395848
+   "rx": 1788833644253
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79459,
    "name": "Pelican",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    190,
+    183,
     0,
-    218
+    208
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.956,
-    "rest": 0.965
+    "food": 0.94,
+    "rest": 0.955
    },
    "mood": 0.54,
    "thoughts": [
@@ -419,25 +415,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833395848
+   "rx": 1788833644254
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79464,
    "name": "Blue",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    190,
+    182,
     0,
-    218
+    209
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.956,
-    "rest": 0.894
+    "food": 0.944,
+    "rest": 0.887
    },
    "mood": 0.52,
    "thoughts": [
@@ -451,10 +447,6 @@
     },
     {
      "label": "Minor pain",
-     "mood": -5
-    },
-    {
-     "label": "Darkness",
      "mood": -5
     },
     {
@@ -481,27 +473,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833395848
+   "rx": 1788833644254
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79469,
    "name": "Red",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    188,
+    182,
     0,
-    216
+    207
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.928,
-    "rest": 0.964
+    "food": 0.91,
+    "rest": 0.957
    },
-   "mood": 0.565,
+   "mood": 0.57,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -546,27 +538,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833395848
+   "rx": 1788833644256
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79474,
    "name": "Black",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    183,
+    176,
     0,
-    226
+    216
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.956,
-    "rest": 0.937
+    "food": 0.944,
+    "rest": 0.93
    },
-   "mood": 0.565,
+   "mood": 0.57,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -575,10 +567,6 @@
     {
      "label": "Hot",
      "mood": -8
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
     },
     {
      "label": "Wielding a steel spear (normal)",
@@ -606,25 +594,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833395849
+   "rx": 1788833644257
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79480,
    "name": "Green",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    188,
+    182,
     0,
-    216
+    206
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.956,
-    "rest": 0.877
+    "food": 0.94,
+    "rest": 0.868
    },
    "mood": 0.53,
    "thoughts": [
@@ -685,25 +673,25 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833395849
+   "rx": 1788833644258
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79494,
    "name": "Gumi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    188,
+    182,
     0,
-    216
+    207
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.96
+    "food": 0.94,
+    "rest": 0.953
    },
    "mood": 0.54,
    "thoughts": [
@@ -755,27 +743,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833395849
+   "rx": 1788833644258
   },
   {
    "v": 0,
-   "t": 814250,
+   "t": 814750,
    "type": "pawn_snapshot",
    "id": 79498,
    "name": "Chicken",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    187,
+    182,
     0,
-    215
+    206
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.952,
-    "rest": 0.962
+    "food": 0.94,
+    "rest": 0.955
    },
-   "mood": 0.565,
+   "mood": 0.57,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -813,7 +801,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833395850
+   "rx": 1788833644258
   }
  ],
  "recent": [
@@ -1701,20 +1689,176 @@
    "type": "mod_connected",
    "peer": "('127.0.0.1', 50717)",
    "rx": 1788833596936
+  },
+  {
+   "v": 0,
+   "t": 814418,
+   "type": "hello",
+   "mod_version": "0.1.0",
+   "game_version": "1.6.4871 rev597",
+   "map_id": 2,
+   "rx": 1788833638508
+  },
+  {
+   "v": 0,
+   "t": 814492,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833639950
+  },
+  {
+   "v": 0,
+   "t": 814492,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833639951
+  },
+  {
+   "v": 0,
+   "t": 814495,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "target": "(106, 0, 119)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833640014
+  },
+  {
+   "v": 0,
+   "t": 814495,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833640015
+  },
+  {
+   "v": 0,
+   "t": 814875,
+   "type": "command_result",
+   "id": "c-11",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 814875,
+    "paused": false,
+    "in_game": true
+   },
+   "rx": 1788833646349
+  },
+  {
+   "v": 0,
+   "t": 814876,
+   "type": "command_result",
+   "id": "c-12",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "origin_x": 84,
+    "origin_z": 101,
+    "w": 40,
+    "h": 16,
+    "top_row_z": 116,
+    "rows": [
+     ".............#a...b==##.................",
+     ".............#b..=====#...........c.....",
+     ".............#b.======#.................",
+     ".............#d..=====#.................",
+     ".............#e...f==##.................",
+     ".............##dd.===#..................",
+     "..............###+####..........gg......",
+     "...h..........#...#.A#.........ggg......",
+     "...hh.........#==.+.=#.........g.g......",
+     "..............#==.####........gg........",
+     "..............#==.#.=#......ii..........",
+     "..............#...+.=#..................",
+     "..............#...####..................",
+     "..............+...+=j#..................",
+     "..............########..................",
+     "..........i............................."
+    ],
+    "pawns": [
+     {
+      "char": "A",
+      "id": 948,
+      "name": "Zeke",
+      "kind": "colonist"
+     }
+    ],
+    "items": [
+     {
+      "char": "a",
+      "def": "MedicineIndustrial",
+      "label": "medicine"
+     },
+     {
+      "char": "b",
+      "def": "WoodLog",
+      "label": "wood"
+     },
+     {
+      "char": "c",
+      "def": "Gun_Autopistol",
+      "label": "autopistol"
+     },
+     {
+      "char": "d",
+      "def": "GravlitePanel",
+      "label": "gravlite panel"
+     },
+     {
+      "char": "e",
+      "def": "Gun_MachinePistol",
+      "label": "machine pistol"
+     },
+     {
+      "char": "f",
+      "def": "Silver",
+      "label": "silver"
+     },
+     {
+      "char": "g",
+      "def": "ChunkSlate",
+      "label": "slate chunk"
+     },
+     {
+      "char": "h",
+      "def": "ChunkGranite",
+      "label": "granite chunk"
+     },
+     {
+      "char": "i",
+      "def": "ChunkSandstone",
+      "label": "sandstone chunk"
+     },
+     {
+      "char": "j",
+      "def": "Corpse_Human",
+      "label": "human corpse"
+     }
+    ],
+    "legend": "# wall, + door, = building, ~ water, ^ rock, . floor, ? unseen, space off-map"
+   },
+   "rx": 1788833646370
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "hello": 1,
-  "world_snapshot": 3,
-  "pawn_snapshot": 36,
-  "job_start": 3,
-  "job_end": 2,
-  "command_result": 10,
+  "hello": 2,
+  "world_snapshot": 6,
+  "pawn_snapshot": 72,
+  "job_start": 5,
+  "job_end": 4,
+  "command_result": 12,
   "letter": 1,
   "mental_state": 1,
   "mod_disconnected": 1
  },
- "last_event_at": 1788833596.9366028,
- "published_at": 1788833616
+ "last_event_at": 1788833646.3703082,
+ "published_at": 1788833647
 }
