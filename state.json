@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 940500,
+  "t": 963250,
   "type": "world_snapshot",
-  "date": "1st of Jugust, 5500",
+  "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
-  "weather": "clear",
-  "wealth": 20519,
+  "weather": "windy",
+  "wealth": 20542,
   "colonists": 0,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835450846
+  "rx": 1788835482491
  },
  "pawns": [
   {
@@ -1350,6 +1350,33 @@
    "text": "Everyone is dead or gone. This story is over.\n\nPerhaps someone else will find a use for the ruins of this place.",
    "def": "GameEnded",
    "rx": 1788835446311
+  },
+  {
+   "v": 0,
+   "t": 943000,
+   "type": "incident",
+   "def": "DroughtInitial",
+   "label": "initial drought conditions",
+   "points": 23.749,
+   "rx": 1788835454341
+  },
+  {
+   "v": 0,
+   "t": 949977,
+   "type": "death",
+   "pawn": 79429,
+   "cause": null,
+   "killer": null,
+   "rx": 1788835464057
+  },
+  {
+   "v": 0,
+   "t": 957377,
+   "type": "letter",
+   "label": "Create new wanderers",
+   "text": "Everyone is dead or gone. Perhaps someone will find a use for the ruins of this place.\n\nChoose new wanderers arrive at your colony and continue the story.",
+   "def": "GameEnded",
+   "rx": 1788835474327
   }
  ],
  "counts": {
@@ -1357,14 +1384,15 @@
   "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 313,
+  "world_snapshot": 404,
   "pawn_snapshot": 298,
   "job_start": 24,
   "job_end": 22,
   "job_noise": 14,
   "hediff": 1,
-  "death": 2,
-  "letter": 3
+  "death": 3,
+  "letter": 4,
+  "incident": 1
  },
- "last_event_at": 1788835450.84603
+ "last_event_at": 1788835482.4912179
 }
