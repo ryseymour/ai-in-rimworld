@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 712500,
+  "t": 714250,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788829902996
+  "rx": 1788829932330
  },
  "pawns": [
   {
    "v": 0,
-   "t": 712500,
+   "t": 714250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,11 +38,11 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.601,
-    "rest": 0.447,
-    "joy": 0.05
+    "food": 0.517,
+    "rest": 0.499,
+    "joy": 0.049
    },
-   "mood": 0.156,
+   "mood": 0.171,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829902999
+   "rx": 1788829932331
   },
   {
    "v": 0,
-   "t": 712500,
+   "t": 714250,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.11,
-    "rest": 0.9,
+    "food": 0.078,
+    "rest": 0.872,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829902999
+   "rx": 1788829932332
   },
   {
    "v": 0,
-   "t": 712500,
+   "t": 714250,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -176,8 +176,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.012,
-    "rest": 0.836
+    "food": 0,
+    "rest": 0.808
    },
    "mood": 0.08,
    "thoughts": [
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829903000
+   "rx": 1788829932332
   }
  ],
  "recent": [
@@ -253,15 +253,76 @@
    "target": "Thing_SleepingSpot33288",
    "source": "JobGiver_Work",
    "rx": 1788829839265
+  },
+  {
+   "v": 0,
+   "t": 713669,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Goto",
+   "target": "(103, 0, 109)",
+   "source": "JobGiver_MoveToStandable",
+   "rx": 1788829922625
+  },
+  {
+   "v": 0,
+   "t": 713694,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Combat",
+   "target": "(103, 0, 109)",
+   "source": "JobGiver_Orders",
+   "rx": 1788829923066
+  },
+  {
+   "v": 0,
+   "t": 713918,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "LayDown",
+   "target": "Thing_Bed31715",
+   "source": "JobGiver_GetRest",
+   "rx": 1788829926822
+  },
+  {
+   "v": 0,
+   "t": 713918,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "LayDown",
+   "condition": "InterruptForced",
+   "rx": 1788829926823
+  },
+  {
+   "v": 0,
+   "t": 714319,
+   "type": "hediff",
+   "pawn": 35404,
+   "def": "Malnutrition",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788829933499
+  },
+  {
+   "v": 0,
+   "t": 714377,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Ingest",
+   "target": "Thing_MealSimple34320",
+   "source": "JobGiver_GetFood",
+   "rx": 1788829934464
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 23,
-  "pawn_snapshot": 69,
-  "job_start": 1
+  "world_snapshot": 30,
+  "pawn_snapshot": 90,
+  "job_start": 5,
+  "job_end": 1,
+  "hediff": 1
  },
- "last_event_at": 1788829903.000196,
- "published_at": 1788829903
+ "last_event_at": 1788829934.46434,
+ "published_at": 1788829936
 }
