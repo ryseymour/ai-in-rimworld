@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 919000,
+  "t": 930250,
   "type": "world_snapshot",
   "date": "1st of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
   "wealth": 21841,
   "colonists": 1,
-  "visitors": 0,
+  "visitors": 2,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887888691
+  "rx": 1788887920351
  },
  "pawns": [
   {
    "v": 0,
-   "t": 919000,
+   "t": 930250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    100,
     0,
-    111
+    105
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.838,
+    "rest": 0.66,
     "joy": 0
    },
-   "mood": 0.53,
+   "mood": 0.475,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887888691
+   "rx": 1788887920351
   },
   {
    "v": 0,
@@ -229,6 +229,116 @@
    "drafted": false,
    "rx": 1788887844552,
    "dead": true
+  },
+  {
+   "v": 0,
+   "t": 930250,
+   "type": "pawn_snapshot",
+   "id": 73304,
+   "name": "Donkey",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    135,
+    0,
+    148
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.632,
+    "rest": 0.825
+   },
+   "mood": 0.65,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Wielding a short bow (poor 54%)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 3,
+    "Melee": 2,
+    "Construction": 0,
+    "Mining": 3,
+    "Cooking": 2,
+    "Plants": 2,
+    "Animals": 0,
+    "Crafting": 3,
+    "Artistic": 8,
+    "Medicine": 3,
+    "Social": 1,
+    "Intellectual": 0
+   },
+   "traits": [
+    "Abrasive"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788887920351
+  },
+  {
+   "v": 0,
+   "t": 930250,
+   "type": "pawn_snapshot",
+   "id": 80754,
+   "name": "Laxe",
+   "faction": "Caro Tribe",
+   "kind": "visitor",
+   "pos": [
+    139,
+    0,
+    150
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.632,
+    "rest": 0.893
+   },
+   "mood": 0.53,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Tortured artist",
+     "mood": -8
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
+    },
+    {
+     "label": "Wielding a short bow (poor)",
+     "mood": 3
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 10,
+    "Construction": 4,
+    "Mining": 5,
+    "Cooking": 5,
+    "Plants": 8,
+    "Animals": 2,
+    "Crafting": 4,
+    "Artistic": 3,
+    "Social": 3,
+    "Intellectual": 2
+   },
+   "traits": [
+    "Tortured artist",
+    "Psychically sensitive"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788887920351
   }
  ],
  "recent": [
@@ -4016,6 +4126,192 @@
     "Wait_Wander": 1
    },
    "rx": 1788887885930
+  },
+  {
+   "v": 0,
+   "t": 920000,
+   "type": "job_noise",
+   "total": 10,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "GotoWander": 3,
+    "Wait_Wander": 2
+   },
+   "rx": 1788887891555
+  },
+  {
+   "v": 0,
+   "t": 920582,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt80658",
+   "source": "JobGiver_Work",
+   "rx": 1788887893171
+  },
+  {
+   "v": 0,
+   "t": 920582,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887893171
+  },
+  {
+   "v": 0,
+   "t": 920879,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt80664",
+   "source": "JobGiver_Work",
+   "rx": 1788887893994
+  },
+  {
+   "v": 0,
+   "t": 920879,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887893995
+  },
+  {
+   "v": 0,
+   "t": 922000,
+   "type": "job_noise",
+   "total": 6,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788887897240
+  },
+  {
+   "v": 0,
+   "t": 924000,
+   "type": "incident",
+   "def": "TravelerGroup",
+   "label": "traveler group",
+   "points": 128.102,
+   "rx": 1788887902905
+  },
+  {
+   "v": 0,
+   "t": 924000,
+   "type": "job_noise",
+   "total": 6,
+   "counts": {
+    "Wait_MaintainPosture": 3,
+    "Wait_Wander": 2,
+    "GotoWander": 1
+   },
+   "rx": 1788887902906
+  },
+  {
+   "v": 0,
+   "t": 924005,
+   "type": "job_start",
+   "pawn": 73304,
+   "job": "Goto",
+   "target": "(1, 0, 13)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788887902929
+  },
+  {
+   "v": 0,
+   "t": 924109,
+   "type": "job_start",
+   "pawn": 80754,
+   "job": "Goto",
+   "target": "(0, 0, 10)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788887903217
+  },
+  {
+   "v": 0,
+   "t": 924109,
+   "type": "job_end",
+   "pawn": 80754,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788887903217
+  },
+  {
+   "v": 0,
+   "t": 925172,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt80767",
+   "source": "JobGiver_Work",
+   "rx": 1788887906205
+  },
+  {
+   "v": 0,
+   "t": 925172,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887906205
+  },
+  {
+   "v": 0,
+   "t": 926000,
+   "type": "job_noise",
+   "total": 13,
+   "counts": {
+    "Wait_Wander": 3,
+    "Wait_MaintainPosture": 7,
+    "GotoWander": 3
+   },
+   "rx": 1788887908510
+  },
+  {
+   "v": 0,
+   "t": 928000,
+   "type": "job_noise",
+   "total": 4,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788887914104
+  },
+  {
+   "v": 0,
+   "t": 929756,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt80806",
+   "source": "JobGiver_Work",
+   "rx": 1788887918971
+  },
+  {
+   "v": 0,
+   "t": 929756,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887918972
+  },
+  {
+   "v": 0,
+   "t": 930000,
+   "type": "job_noise",
+   "total": 9,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 2,
+    "GotoWander": 2
+   },
+   "rx": 1788887919657
   }
  ],
  "counts": {
@@ -4023,17 +4319,17 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 1984,
-  "pawn_snapshot": 1860,
-  "job_start": 90,
-  "job_end": 46,
-  "job_noise": 77,
+  "world_snapshot": 2029,
+  "pawn_snapshot": 1957,
+  "job_start": 96,
+  "job_end": 51,
+  "job_noise": 83,
   "hediff": 18,
   "death": 6,
   "letter": 25,
-  "incident": 15,
+  "incident": 16,
   "interaction": 15,
   "mental_state": 1
  },
- "last_event_at": 1788887888.691861
+ "last_event_at": 1788887920.351742
 }
