@@ -13,9 +13,17 @@ Checklist for the first joint run. Tick as we go; record surprises at the bottom
   - Linux: `~/.steam/steam/steamapps/common/RimWorld/Mods/`
 - [ ] `cd orchestrator && uv sync --extra dev && uv run pytest` passes.
 
+## Letting Claude watch
+
+Run the orchestrator with `--publish`. Every 30 s it commits the live log and a state summary to the `telemetry` branch on GitHub (in a separate worktree, never touching `main`) and pushes. Claude polls that branch during the session. Your git credentials on this machine must be able to push to the repo.
+
+```
+uv run airim serve --publish
+```
+
 ## Smoke test
 
-1. `uv run airim serve` and open http://127.0.0.1:7600/. Header dot should be red (no mod yet).
+1. `uv run airim serve --publish` and open http://127.0.0.1:7600/. Header dot should be red (no mod yet).
 2. Launch RimWorld. Enable Harmony then AiRim in the mod list, restart.
 3. Check the in-game log (Options → Development mode → log) for `[AiRim] patches applied`. Any red error mentioning AiRim: copy it.
 4. Load or start a colony. Within a few seconds the dot should go green and pawn cards should appear.

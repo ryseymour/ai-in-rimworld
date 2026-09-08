@@ -7,7 +7,7 @@ import logging
 import time
 from pathlib import Path
 
-from . import dashboard, receiver, replay
+from . import dashboard, publish, receiver, replay
 from .bus import EventBus
 from .state import ColonyState
 
@@ -18,9 +18,13 @@ def _log_path(root: Path) -> Path:
 
 
 async def run_serve(args: argparse.Namespace) -> None:
-    bus = EventBus(ColonyState(), None if args.no_log else _log_path(Path(args.log_dir)))
+    log_path = None if args.no_log else _log_path(Path(args.log_dir))
+    bus = EventBus(ColonyState(), log_path)
     await receiver.serve(bus, args.host, args.mod_port)
     await dashboard.serve(bus, args.host, args.http_port)
+    if args.publish:
+        repo = Path(__file__).resolve().parents[2]
+        asyncio.create_task(publish.publish_loop(bus, repo, log_path, args.publish_interval))
     try:
         await asyncio.Event().wait()
     finally:
@@ -46,6 +50,8 @@ def main() -> None:
     s.add_argument("--mod-port", type=int, default=7601)
     s.add_argument("--log-dir", default="logs")
     s.add_argument("--no-log", action="store_true")
+    s.add_argument("--publish", action="store_true", help="push live log + state to the 'telemetry' git branch")
+    s.add_argument("--publish-interval", type=float, default=30.0)
 
     r = sub.add_parser("replay", help="replay a recorded log into the dashboard")
     r.add_argument("log")
