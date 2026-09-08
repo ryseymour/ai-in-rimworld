@@ -10,62 +10,62 @@
  },
  "world": {
   "v": 0,
-  "t": 1009500,
+  "t": 1024750,
   "type": "world_snapshot",
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
-  "weather": "clear",
-  "wealth": 21659,
+  "weather": "rain",
+  "wealth": 21394,
   "colonists": 1,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788888111866
+  "rx": 1788888143618
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1009500,
+   "t": 1024750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    103,
     0,
-    109
+    101
    ],
-   "job": "sleeping.",
+   "job": "wandering.",
    "needs": {
-    "food": 0,
-    "rest": 0.701,
-    "joy": 0.332
+    "food": 0.675,
+    "rest": 0.884,
+    "joy": 0.271
    },
-   "mood": 0.418,
+   "mood": 0.755,
    "thoughts": [
     {
      "label": "Catharsis",
      "mood": 40
     },
     {
-     "label": "Starving",
-     "mood": -32
-    },
-    {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Colonist left unburied",
-     "mood": -10
+     "label": "Raw cannibalism",
+     "mood": 20
     },
     {
-     "label": "Quite comfortable",
-     "mood": 6
+     "label": "Ate corpse",
+     "mood": -12
     },
     {
      "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Recreation unfulfilled",
      "mood": -5
     }
    ],
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888111867
+   "rx": 1788888143618
   },
   {
    "v": 0,
@@ -4902,18 +4902,85 @@
     "Wait_MaintainPosture": 1
    },
    "rx": 1788888101450
+  },
+  {
+   "v": 0,
+   "t": 1017502,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_Corpse_Human80405",
+   "source": "JobGiver_GetFood",
+   "rx": 1788888123181
+  },
+  {
+   "v": 0,
+   "t": 1022000,
+   "type": "job_noise",
+   "total": 6,
+   "counts": {
+    "Wait_MaintainPosture": 3,
+    "GotoWander": 2,
+    "Wait_Wander": 1
+   },
+   "rx": 1788888135752
+  },
+  {
+   "v": 0,
+   "t": 1022699,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt82128",
+   "source": "JobGiver_Work",
+   "rx": 1788888137706
+  },
+  {
+   "v": 0,
+   "t": 1022699,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788888137707
+  },
+  {
+   "v": 0,
+   "t": 1022898,
+   "type": "command_result",
+   "id": "c-23",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 1022898,
+    "paused": false,
+    "in_game": true
+   },
+   "rx": 1788888138262
+  },
+  {
+   "v": 0,
+   "t": 1024000,
+   "type": "job_noise",
+   "total": 5,
+   "counts": {
+    "Wait_MaintainPosture": 3,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788888141499
   }
  ],
  "counts": {
   "mod_connected": 3,
-  "command_result": 22,
+  "command_result": 23,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 2346,
-  "pawn_snapshot": 2339,
-  "job_start": 113,
-  "job_end": 65,
-  "job_noise": 106,
+  "world_snapshot": 2407,
+  "pawn_snapshot": 2400,
+  "job_start": 115,
+  "job_end": 66,
+  "job_noise": 108,
   "hediff": 18,
   "death": 6,
   "letter": 25,
@@ -4921,5 +4988,5 @@
   "interaction": 17,
   "mental_state": 1
  },
- "last_event_at": 1788888111.8671758
+ "last_event_at": 1788888143.618814
 }
