@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 863000,
+  "t": 876750,
   "type": "world_snapshot",
   "date": "15th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,36 +20,36 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835324372
+  "rx": 1788835356639
  },
  "pawns": [
   {
    "v": 0,
-   "t": 863000,
+   "t": 876750,
    "type": "pawn_snapshot",
    "id": 93450,
    "name": "Martin",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    106,
     0,
-    106
+    101
    ],
-   "job": "resting.",
+   "job": "equipping revolver (good).",
    "needs": {
-    "food": 0.092,
-    "rest": 0.796,
-    "joy": 0.696
+    "food": 0,
+    "rest": 0.926,
+    "joy": 0.62
    },
-   "mood": 0.348,
+   "mood": 0.413,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Mind-shattering pain",
+     "label": "Malnourished",
      "mood": -20
     },
     {
@@ -57,19 +57,19 @@
      "mood": 16
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
+     "label": "Intense pain",
+     "mood": -15
     },
     {
-     "label": "Extremely comfortable",
-     "mood": 8
+     "label": "Quite comfortable",
+     "mood": 6
     },
     {
-     "label": "Unsightly environment",
+     "label": "Darkness",
      "mood": -5
     }
    ],
-   "health": "Pain shock",
+   "health": "Injured",
    "skills": {
     "Shooting": 14,
     "Melee": 1,
@@ -95,7 +95,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788835324373
+   "rx": 1788835356640
   }
  ],
  "recent": [
@@ -704,15 +704,232 @@
    "game_version": "1.6.4871 rev597",
    "map_id": 2,
    "rx": 1788835317736
+  },
+  {
+   "v": 0,
+   "t": 863184,
+   "type": "command_result",
+   "id": "c-6",
+   "ok": true,
+   "data": {
+    "speed": 3,
+    "paused": false
+   },
+   "rx": 1788835327456
+  },
+  {
+   "v": 0,
+   "t": 872187,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire99924",
+   "source": "JobGiver_Work",
+   "rx": 1788835343933
+  },
+  {
+   "v": 0,
+   "t": 874029,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire99976",
+   "source": "JobGiver_Work",
+   "rx": 1788835349060
+  },
+  {
+   "v": 0,
+   "t": 874029,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "condition": "Succeeded",
+   "rx": 1788835349061
+  },
+  {
+   "v": 0,
+   "t": 874096,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire99949",
+   "source": "JobGiver_Work",
+   "rx": 1788835349242
+  },
+  {
+   "v": 0,
+   "t": 874096,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "condition": "Succeeded",
+   "rx": 1788835349242
+  },
+  {
+   "v": 0,
+   "t": 874487,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire99891",
+   "source": "JobGiver_Work",
+   "rx": 1788835350339
+  },
+  {
+   "v": 0,
+   "t": 874487,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "condition": "Succeeded",
+   "rx": 1788835350340
+  },
+  {
+   "v": 0,
+   "t": 874935,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire100008",
+   "source": "JobGiver_Work",
+   "rx": 1788835351591
+  },
+  {
+   "v": 0,
+   "t": 874935,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "condition": "Succeeded",
+   "rx": 1788835351591
+  },
+  {
+   "v": 0,
+   "t": 875002,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire100018",
+   "source": "JobGiver_Work",
+   "rx": 1788835351778
+  },
+  {
+   "v": 0,
+   "t": 875002,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "condition": "Succeeded",
+   "rx": 1788835351778
+  },
+  {
+   "v": 0,
+   "t": 875069,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire99922",
+   "source": "JobGiver_Work",
+   "rx": 1788835351960
+  },
+  {
+   "v": 0,
+   "t": 875069,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "condition": "Succeeded",
+   "rx": 1788835351960
+  },
+  {
+   "v": 0,
+   "t": 875517,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire100029",
+   "source": "JobGiver_Work",
+   "rx": 1788835353207
+  },
+  {
+   "v": 0,
+   "t": 875517,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "condition": "Succeeded",
+   "rx": 1788835353207
+  },
+  {
+   "v": 0,
+   "t": 875584,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "target": "Thing_Fire99970",
+   "source": "JobGiver_Work",
+   "rx": 1788835353393
+  },
+  {
+   "v": 0,
+   "t": 875584,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "BeatFire",
+   "condition": "Succeeded",
+   "rx": 1788835353394
+  },
+  {
+   "v": 0,
+   "t": 876000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 8
+   },
+   "rx": 1788835354559
+  },
+  {
+   "v": 0,
+   "t": 876032,
+   "type": "job_start",
+   "pawn": 93450,
+   "job": "Equip",
+   "target": "Thing_Gun_Revolver93458",
+   "source": "JobGiver_PickupDroppedWeapon",
+   "rx": 1788835354647
+  },
+  {
+   "v": 0,
+   "t": 876032,
+   "type": "job_end",
+   "pawn": 93450,
+   "job": "Equip",
+   "condition": "Succeeded",
+   "rx": 1788835354648
+  },
+  {
+   "v": 0,
+   "t": 876708,
+   "type": "hediff",
+   "pawn": 93450,
+   "def": "Malnutrition",
+   "part": null,
+   "severity": 0.001,
+   "rx": 1788835356523
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "command_result": 5,
+  "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 3,
-  "pawn_snapshot": 3
+  "world_snapshot": 58,
+  "pawn_snapshot": 58,
+  "job_start": 10,
+  "job_end": 9,
+  "job_noise": 1,
+  "hediff": 1
  },
- "last_event_at": 1788835324.37379
+ "last_event_at": 1788835356.640291
 }
