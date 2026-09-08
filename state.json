@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 716250,
+  "t": 717000,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788829966846
+  "rx": 1788829989617
  },
  "pawns": [
   {
    "v": 0,
-   "t": 716250,
+   "t": 717000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,8 +38,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.426,
-    "rest": 0.574,
+    "food": 0.391,
+    "rest": 0.602,
     "joy": 0.049
    },
    "mood": 0.171,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829966846
+   "rx": 1788829989617
   },
   {
    "v": 0,
-   "t": 716250,
+   "t": 717000,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.044,
-    "rest": 0.841,
+    "food": 0.031,
+    "rest": 0.829,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829966846
+   "rx": 1788829989617
   },
   {
    "v": 0,
-   "t": 716250,
+   "t": 717000,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -174,12 +174,12 @@
     0,
     114
    ],
-   "job": "consuming simple meal.",
+   "job": "resting.",
    "needs": {
-    "food": 0,
-    "rest": 0.777
+    "food": 1,
+    "rest": 0.765
    },
-   "mood": 0.087,
+   "mood": 0.115,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -202,8 +202,8 @@
      "mood": -5
     },
     {
-     "label": "My rival Bomba died",
-     "mood": 4
+     "label": "Spacious interior",
+     "mood": 5
     }
    ],
    "health": "Injured",
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829966847
+   "rx": 1788829989617
   }
  ],
  "recent": [
@@ -330,19 +330,57 @@
    "label": "quest",
    "points": 35,
    "rx": 1788829962718
+  },
+  {
+   "v": 0,
+   "t": 716972,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788829989153
+  },
+  {
+   "v": 0,
+   "t": 716972,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788829989154
+  },
+  {
+   "v": 0,
+   "t": 716974,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "LayDown",
+   "target": "Thing_SleepingSpot33288",
+   "source": "JobGiver_Work",
+   "rx": 1788829989186
+  },
+  {
+   "v": 0,
+   "t": 716974,
+   "type": "job_end",
+   "pawn": 35404,
+   "job": "LayDown",
+   "condition": "Succeeded",
+   "rx": 1788829989186
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 38,
-  "pawn_snapshot": 114,
-  "job_start": 5,
-  "job_end": 1,
+  "world_snapshot": 41,
+  "pawn_snapshot": 123,
+  "job_start": 7,
+  "job_end": 3,
   "hediff": 1,
   "letter": 1,
   "incident": 1
  },
- "last_event_at": 1788829966.8472362,
- "published_at": 1788829967
+ "last_event_at": 1788829989.617932,
+ "published_at": 1788829998
 }
