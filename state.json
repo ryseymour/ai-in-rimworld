@@ -893,100 +893,6 @@
  "recent": [
   {
    "v": 0,
-   "t": 828768,
-   "type": "job_end",
-   "pawn": 79498,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788833986752
-  },
-  {
-   "v": 0,
-   "t": 828799,
-   "type": "letter",
-   "label": "Man in black",
-   "text": "Sensing trouble, a mysterious man in black has arrived.\n\nWill he be able to set things right in these parts?",
-   "def": "PositiveEvent",
-   "rx": 1788833987343
-  },
-  {
-   "v": 0,
-   "t": 828799,
-   "type": "incident",
-   "def": "StrangerInBlackJoin",
-   "label": "man in black",
-   "points": -1,
-   "rx": 1788833987344
-  },
-  {
-   "v": 0,
-   "t": 828813,
-   "type": "job_start",
-   "pawn": 93450,
-   "job": "TendPatient",
-   "target": "Thing_Human948",
-   "source": "JobGiver_Work",
-   "rx": 1788833987592
-  },
-  {
-   "v": 0,
-   "t": 828848,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833988150
-  },
-  {
-   "v": 0,
-   "t": 828848,
-   "type": "job_end",
-   "pawn": 79494,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833988151
-  },
-  {
-   "v": 0,
-   "t": 828851,
-   "type": "job_start",
-   "pawn": 79494,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788833988201
-  },
-  {
-   "v": 0,
-   "t": 828851,
-   "type": "job_end",
-   "pawn": 79494,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788833988201
-  },
-  {
-   "v": 0,
-   "t": 828869,
-   "type": "job_start",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "target": null,
-   "source": null,
-   "rx": 1788833988502
-  },
-  {
-   "v": 0,
-   "t": 828869,
-   "type": "job_end",
-   "pawn": 79464,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788833988502
-  },
-  {
-   "v": 0,
    "t": 828872,
    "type": "job_start",
    "pawn": 79464,
@@ -6611,6 +6517,106 @@
     "paused": true
    },
    "rx": 1788834067184
+  },
+  {
+   "v": 0,
+   "t": 833579,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788834339035
+  },
+  {
+   "v": 0,
+   "t": 833582,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "target": "(115, 0, 114)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788834339065
+  },
+  {
+   "v": 0,
+   "t": 833636,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788834339964
+  },
+  {
+   "v": 0,
+   "t": 833638,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788834339997
+  },
+  {
+   "v": 0,
+   "t": 833640,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788834340032
+  },
+  {
+   "v": 0,
+   "t": 833643,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788834340083
+  },
+  {
+   "v": 0,
+   "t": 833720,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788834341364
+  },
+  {
+   "v": 0,
+   "t": 833721,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788834341381
+  },
+  {
+   "v": 0,
+   "t": 833729,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788834341514
+  },
+  {
+   "v": 0,
+   "t": 833730,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "target": "(117, 0, 125)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788834341531
   }
  ],
  "counts": {
@@ -6618,7 +6624,7 @@
   "hello": 4,
   "world_snapshot": 83,
   "pawn_snapshot": 1015,
-  "job_start": 992,
+  "job_start": 1002,
   "job_end": 471,
   "command_result": 56,
   "letter": 3,
@@ -6628,6 +6634,6 @@
   "hediff": 9,
   "incident": 2
  },
- "last_event_at": 1788834067.184455,
- "published_at": 1788834310
+ "last_event_at": 1788834341.531008,
+ "published_at": 1788834341
 }

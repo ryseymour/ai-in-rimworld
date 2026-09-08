@@ -2665,3 +2665,13 @@
 {"v":0,"t":833541,"type":"job_start","pawn":79449,"job":"Wait_MaintainPosture","target":null,"source":null,"rx":1788834066585}
 {"v":0,"t":833544,"type":"job_start","pawn":79449,"job":"GotoWander","target":"(112, 0, 115)","source":"JobGiver_WanderNearDutyLocation","rx":1788834066635}
 {"v":0,"t":833576,"type":"command_result","id":"c-56","ok":true,"data":{"speed":0,"paused":true},"rx":1788834067184}
+{"v":0,"t":833579,"type":"job_start","pawn":79469,"job":"Wait_MaintainPosture","target":null,"source":null,"rx":1788834339035}
+{"v":0,"t":833582,"type":"job_start","pawn":79469,"job":"GotoWander","target":"(115, 0, 114)","source":"JobGiver_WanderNearDutyLocation","rx":1788834339065}
+{"v":0,"t":833636,"type":"job_start","pawn":79480,"job":"Wait_MaintainPosture","target":null,"source":null,"rx":1788834339964}
+{"v":0,"t":833638,"type":"job_start","pawn":79480,"job":"Wait_Wander","target":null,"source":"JobGiver_WanderNearDutyLocation","rx":1788834339997}
+{"v":0,"t":833640,"type":"job_start","pawn":79498,"job":"Wait_MaintainPosture","target":null,"source":null,"rx":1788834340032}
+{"v":0,"t":833643,"type":"job_start","pawn":79498,"job":"Wait_Wander","target":null,"source":"JobGiver_WanderNearDutyLocation","rx":1788834340083}
+{"v":0,"t":833720,"type":"job_start","pawn":79474,"job":"Wait_MaintainPosture","target":null,"source":null,"rx":1788834341364}
+{"v":0,"t":833721,"type":"job_start","pawn":79474,"job":"Wait_Wander","target":null,"source":"JobGiver_WanderNearDutyLocation","rx":1788834341381}
+{"v":0,"t":833729,"type":"job_start","pawn":79464,"job":"Wait_MaintainPosture","target":null,"source":null,"rx":1788834341514}
+{"v":0,"t":833730,"type":"job_start","pawn":79464,"job":"GotoWander","target":"(117, 0, 125)","source":"JobGiver_WanderNearDutyLocation","rx":1788834341531}
