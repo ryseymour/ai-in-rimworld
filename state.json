@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 717500,
+  "t": 718000,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
   "wealth": 23697,
   "colonists": 3,
-  "visitors": 0,
+  "visitors": 8,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788830023164
+  "rx": 1788830061399
  },
  "pawns": [
   {
    "v": 0,
-   "t": 717500,
+   "t": 718000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,8 +38,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.37,
-    "rest": 0.619,
+    "food": 0.342,
+    "rest": 0.642,
     "joy": 0.049
    },
    "mood": 0.171,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830023165
+   "rx": 1788830061401
   },
   {
    "v": 0,
-   "t": 717500,
+   "t": 718000,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.023,
-    "rest": 0.822,
+    "food": 0.013,
+    "rest": 0.812,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -159,27 +159,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830023165
+   "rx": 1788830061401
   },
   {
    "v": 0,
-   "t": 717500,
+   "t": 718000,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    121
+    123
    ],
-   "job": "resting.",
+   "job": "sleeping.",
    "needs": {
-    "food": 0.976,
-    "rest": 0.755
+    "food": 0.958,
+    "rest": 0.748
    },
-   "mood": 0.132,
+   "mood": 0.153,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -202,8 +202,8 @@
      "mood": -5
     },
     {
-     "label": "Spacious interior",
-     "mood": 5
+     "label": "My rival Bomba died",
+     "mood": 4
     }
    ],
    "health": "Injured",
@@ -226,7 +226,408 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830023165
+   "rx": 1788830061401
+  },
+  {
+   "v": 0,
+   "t": 718000,
+   "type": "pawn_snapshot",
+   "id": 73039,
+   "name": "Lala",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    244,
+    0,
+    176
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.988,
+    "rest": 0.944
+   },
+   "mood": 0.522,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 2,
+    "Construction": 4,
+    "Mining": 4,
+    "Cooking": 2,
+    "Plants": 0,
+    "Animals": 1,
+    "Crafting": 1,
+    "Artistic": 5,
+    "Medicine": 0,
+    "Social": 2,
+    "Intellectual": 2
+   },
+   "traits": [
+    "Pyromaniac",
+    "Quick sleeper",
+    "Very neurotic"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788830061401
+  },
+  {
+   "v": 0,
+   "t": 718000,
+   "type": "pawn_snapshot",
+   "id": 73093,
+   "name": "Adrian",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    245,
+    0,
+    181
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.99,
+    "rest": 0.895
+   },
+   "mood": 0.522,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 14,
+    "Melee": 9,
+    "Construction": 1,
+    "Mining": 3,
+    "Cooking": 4,
+    "Plants": 0,
+    "Animals": 0,
+    "Crafting": 1,
+    "Artistic": 0,
+    "Medicine": 7,
+    "Social": 0,
+    "Intellectual": 5
+   },
+   "traits": [
+    "Too smart",
+    "Very neurotic",
+    "Fast learner",
+    "Psychically deaf"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788830061402
+  },
+  {
+   "v": 0,
+   "t": 718000,
+   "type": "pawn_snapshot",
+   "id": 73102,
+   "name": "AJ",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    241,
+    0,
+    174
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.992,
+    "rest": 0.989
+   },
+   "mood": 0.514,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Minor pain",
+     "mood": -5
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 5,
+    "Construction": 1,
+    "Mining": 3,
+    "Cooking": 3,
+    "Plants": 3,
+    "Animals": 1,
+    "Crafting": 0,
+    "Artistic": 2,
+    "Intellectual": 5
+   },
+   "traits": [
+    "Psychopath",
+    "Nimble",
+    "Misandrist"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788830061402
+  },
+  {
+   "v": 0,
+   "t": 718000,
+   "type": "pawn_snapshot",
+   "id": 73108,
+   "name": "Loner",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    243,
+    0,
+    176
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.992,
+    "rest": 0.912
+   },
+   "mood": 0.514,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Night owl at night",
+     "mood": 16
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 8,
+    "Melee": 11,
+    "Construction": 5,
+    "Mining": 1,
+    "Cooking": 6,
+    "Plants": 2,
+    "Animals": 2,
+    "Crafting": 7
+   },
+   "traits": [
+    "Night owl",
+    "Fast learner",
+    "Misogynist"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788830061402
+  },
+  {
+   "v": 0,
+   "t": 718000,
+   "type": "pawn_snapshot",
+   "id": 73117,
+   "name": "Ellie",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    242,
+    0,
+    180
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.992,
+    "rest": 0.976
+   },
+   "mood": 0.514,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    },
+    {
+     "label": "Happily nude",
+     "mood": 20
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 9,
+    "Melee": 0,
+    "Construction": 8,
+    "Mining": 0,
+    "Cooking": 5,
+    "Plants": 4,
+    "Animals": 0,
+    "Crafting": 0,
+    "Artistic": 5,
+    "Medicine": 3,
+    "Social": 16,
+    "Intellectual": 7
+   },
+   "traits": [
+    "Misandrist",
+    "Nudist",
+    "Jogger"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788830061402
+  },
+  {
+   "v": 0,
+   "t": 718000,
+   "type": "pawn_snapshot",
+   "id": 73122,
+   "name": "Deccy",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    244,
+    0,
+    172
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.992,
+    "rest": 0.987
+   },
+   "mood": 0.514,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 4,
+    "Melee": 9,
+    "Construction": 0,
+    "Mining": 3,
+    "Cooking": 1,
+    "Plants": 1,
+    "Animals": 1,
+    "Crafting": 1,
+    "Artistic": 3,
+    "Intellectual": 6
+   },
+   "traits": [
+    "Psychopath"
+   ],
+   "relations": [
+    {
+     "other": "Palamas",
+     "kind": "father",
+     "opinion": 15
+    }
+   ],
+   "drafted": false,
+   "rx": 1788830061403
+  },
+  {
+   "v": 0,
+   "t": 718000,
+   "type": "pawn_snapshot",
+   "id": 73128,
+   "name": "Dan",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    244,
+    0,
+    176
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.988,
+    "rest": 0.976
+   },
+   "mood": 0.522,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 10,
+    "Construction": 4,
+    "Cooking": 4,
+    "Plants": 1,
+    "Animals": 7,
+    "Crafting": 5,
+    "Artistic": 0,
+    "Medicine": 1,
+    "Social": 9
+   },
+   "traits": [
+    "Greedy",
+    "Abrasive"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788830061403
+  },
+  {
+   "v": 0,
+   "t": 718000,
+   "type": "pawn_snapshot",
+   "id": 73134,
+   "name": "Kaia",
+   "faction": "Neveherda",
+   "kind": "visitor",
+   "pos": [
+    243,
+    0,
+    175
+   ],
+   "job": "moving.",
+   "needs": {
+    "food": 0.992,
+    "rest": 0.971
+   },
+   "mood": 0.514,
+   "thoughts": [
+    {
+     "label": "Extremely low expectations",
+     "mood": 30
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 0,
+    "Construction": 0,
+    "Mining": 3,
+    "Cooking": 0,
+    "Plants": 2,
+    "Animals": 8,
+    "Crafting": 3,
+    "Artistic": 3,
+    "Medicine": 3,
+    "Intellectual": 2
+   },
+   "traits": [
+    "Wimp",
+    "Bloodlust",
+    "Very neurotic"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788830061403
   }
  ],
  "recent": [
@@ -368,19 +769,421 @@
    "job": "LayDown",
    "condition": "Succeeded",
    "rx": 1788829989186
+  },
+  {
+   "v": 0,
+   "t": 717635,
+   "type": "letter",
+   "label": "Bulk goods trader from Neveherda",
+   "text": "A caravan from (*Faction=Faction_0)Neveherda(/Faction) is approaching. They are a bulk goods trader.\n\nThey will hang around the colony for some time before leaving. You can attack them - but this will anger their faction!",
+   "def": "PositiveEvent",
+   "rx": 1788830055173
+  },
+  {
+   "v": 0,
+   "t": 717635,
+   "type": "incident",
+   "def": "TraderCaravanArrival",
+   "label": "trader caravan arrival",
+   "points": 579,
+   "rx": 1788830055178
+  },
+  {
+   "v": 0,
+   "t": 717636,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830055183
+  },
+  {
+   "v": 0,
+   "t": 717638,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830055233
+  },
+  {
+   "v": 0,
+   "t": 717640,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830055249
+  },
+  {
+   "v": 0,
+   "t": 717640,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830055249
+  },
+  {
+   "v": 0,
+   "t": 717642,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830055279
+  },
+  {
+   "v": 0,
+   "t": 717642,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830055280
+  },
+  {
+   "v": 0,
+   "t": 717647,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830055363
+  },
+  {
+   "v": 0,
+   "t": 717648,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830055379
+  },
+  {
+   "v": 0,
+   "t": 717685,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830055996
+  },
+  {
+   "v": 0,
+   "t": 717685,
+   "type": "job_end",
+   "pawn": 73122,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830055997
+  },
+  {
+   "v": 0,
+   "t": 717692,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830056113
+  },
+  {
+   "v": 0,
+   "t": 717692,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830056114
+  },
+  {
+   "v": 0,
+   "t": 717696,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830056179
+  },
+  {
+   "v": 0,
+   "t": 717696,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830056180
+  },
+  {
+   "v": 0,
+   "t": 717700,
+   "type": "job_start",
+   "pawn": 73122,
+   "job": "Goto",
+   "target": "(93, 0, 116)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830056245
+  },
+  {
+   "v": 0,
+   "t": 717700,
+   "type": "job_end",
+   "pawn": 73122,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788830056246
+  },
+  {
+   "v": 0,
+   "t": 717701,
+   "type": "job_start",
+   "pawn": 73102,
+   "job": "Goto",
+   "target": "(94, 0, 116)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830056262
+  },
+  {
+   "v": 0,
+   "t": 717701,
+   "type": "job_end",
+   "pawn": 73102,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788830056263
+  },
+  {
+   "v": 0,
+   "t": 717707,
+   "type": "job_start",
+   "pawn": 73039,
+   "job": "Goto",
+   "target": "(92, 0, 113)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830056363
+  },
+  {
+   "v": 0,
+   "t": 717707,
+   "type": "job_end",
+   "pawn": 73039,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788830056363
+  },
+  {
+   "v": 0,
+   "t": 717708,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830056380
+  },
+  {
+   "v": 0,
+   "t": 717708,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830056380
+  },
+  {
+   "v": 0,
+   "t": 717723,
+   "type": "job_start",
+   "pawn": 73108,
+   "job": "Goto",
+   "target": "(90, 0, 118)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830056629
+  },
+  {
+   "v": 0,
+   "t": 717723,
+   "type": "job_end",
+   "pawn": 73108,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788830056629
+  },
+  {
+   "v": 0,
+   "t": 717732,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830056779
+  },
+  {
+   "v": 0,
+   "t": 717732,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830056779
+  },
+  {
+   "v": 0,
+   "t": 717732,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830056779
+  },
+  {
+   "v": 0,
+   "t": 717732,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830056780
+  },
+  {
+   "v": 0,
+   "t": 717743,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830056963
+  },
+  {
+   "v": 0,
+   "t": 717743,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830056963
+  },
+  {
+   "v": 0,
+   "t": 717747,
+   "type": "job_start",
+   "pawn": 73117,
+   "job": "Goto",
+   "target": "(91, 0, 115)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830057029
+  },
+  {
+   "v": 0,
+   "t": 717747,
+   "type": "job_end",
+   "pawn": 73117,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788830057030
+  },
+  {
+   "v": 0,
+   "t": 717747,
+   "type": "job_start",
+   "pawn": 73128,
+   "job": "Goto",
+   "target": "(96, 0, 117)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830057030
+  },
+  {
+   "v": 0,
+   "t": 717747,
+   "type": "job_end",
+   "pawn": 73128,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788830057031
+  },
+  {
+   "v": 0,
+   "t": 717758,
+   "type": "job_start",
+   "pawn": 73093,
+   "job": "Goto",
+   "target": "(89, 0, 112)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830057212
+  },
+  {
+   "v": 0,
+   "t": 717758,
+   "type": "job_end",
+   "pawn": 73093,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788830057212
+  },
+  {
+   "v": 0,
+   "t": 717775,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788830057497
+  },
+  {
+   "v": 0,
+   "t": 717775,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788830057497
+  },
+  {
+   "v": 0,
+   "t": 717790,
+   "type": "job_start",
+   "pawn": 73134,
+   "job": "Goto",
+   "target": "(93, 0, 122)",
+   "source": "JobGiver_GotoTravelDestination",
+   "rx": 1788830057745
+  },
+  {
+   "v": 0,
+   "t": 717790,
+   "type": "job_end",
+   "pawn": 73134,
+   "job": "Goto",
+   "condition": "Succeeded",
+   "rx": 1788830057745
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 43,
-  "pawn_snapshot": 129,
-  "job_start": 7,
-  "job_end": 3,
+  "world_snapshot": 45,
+  "pawn_snapshot": 151,
+  "job_start": 31,
+  "job_end": 19,
   "hediff": 1,
-  "letter": 1,
-  "incident": 1
+  "letter": 2,
+  "incident": 2
  },
- "last_event_at": 1788830023.165855,
- "published_at": 1788830030
+ "last_event_at": 1788830061.4035032,
+ "published_at": 1788830061
 }
