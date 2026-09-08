@@ -10,47 +10,43 @@
  },
  "world": {
   "v": 0,
-  "t": 930250,
+  "t": 941250,
   "type": "world_snapshot",
   "date": "1st of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 21841,
+  "wealth": 21661,
   "colonists": 1,
-  "visitors": 2,
+  "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887920351
+  "rx": 1788887952401
  },
  "pawns": [
   {
    "v": 0,
-   "t": 930250,
+   "t": 941250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    100,
+    113,
     0,
-    105
+    80
    ],
-   "job": "wandering.",
+   "job": "going for a walk.",
    "needs": {
-    "food": 0,
-    "rest": 0.66,
-    "joy": 0
+    "food": 0.787,
+    "rest": 0.487,
+    "joy": 0.315
    },
-   "mood": 0.475,
+   "mood": 0.583,
    "thoughts": [
     {
      "label": "Catharsis",
      "mood": 40
-    },
-    {
-     "label": "Badly malnourished",
-     "mood": -26
     },
     {
      "label": "Very low expectations",
@@ -61,12 +57,16 @@
      "mood": 20
     },
     {
-     "label": "Recreation-starved",
-     "mood": -20
-    },
-    {
      "label": "Ate corpse",
      "mood": -12
+    },
+    {
+     "label": "Initial hope",
+     "mood": 5
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     }
    ],
    "health": "Healthy",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887920351
+   "rx": 1788887952401
   },
   {
    "v": 0,
@@ -232,27 +232,31 @@
   },
   {
    "v": 0,
-   "t": 930250,
+   "t": 938500,
    "type": "pawn_snapshot",
    "id": 73304,
    "name": "Donkey",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    135,
+    2,
     0,
-    148
+    13
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.632,
-    "rest": 0.825
+    "food": 0.412,
+    "rest": 0.694
    },
-   "mood": 0.65,
+   "mood": 0.6,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Wielding a short bow (poor 54%)",
@@ -279,27 +283,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887920351
+   "rx": 1788887944680
   },
   {
    "v": 0,
-   "t": 930250,
+   "t": 938250,
    "type": "pawn_snapshot",
    "id": 80754,
    "name": "Laxe",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    139,
+    4,
     0,
-    150
+    14
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.632,
-    "rest": 0.893
+    "food": 0.42,
+    "rest": 0.767
    },
-   "mood": 0.53,
+   "mood": 0.46,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -310,8 +314,12 @@
      "mood": -8
     },
     {
-     "label": "Sweaty",
-     "mood": -4
+     "label": "Observed rotting corpse",
+     "mood": -6
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Wielding a short bow (poor)",
@@ -338,7 +346,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887920351
+   "rx": 1788887943988
   }
  ],
  "recent": [
@@ -4312,6 +4320,118 @@
     "GotoWander": 2
    },
    "rx": 1788887919657
+  },
+  {
+   "v": 0,
+   "t": 930860,
+   "type": "interaction",
+   "initiator": 73304,
+   "recipient": 80754,
+   "def": "Chitchat",
+   "text": "Donkey quipped about making belts with Laxe.",
+   "rx": 1788887923044
+  },
+  {
+   "v": 0,
+   "t": 932000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 2,
+    "GotoWander": 2
+   },
+   "rx": 1788887926204
+  },
+  {
+   "v": 0,
+   "t": 934000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 2,
+    "GotoWander": 2
+   },
+   "rx": 1788887931955
+  },
+  {
+   "v": 0,
+   "t": 935105,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_Corpse_Human80405",
+   "source": "JobGiver_GetFood",
+   "rx": 1788887935038
+  },
+  {
+   "v": 0,
+   "t": 935105,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Ingest",
+   "condition": "Succeeded",
+   "rx": 1788887935039
+  },
+  {
+   "v": 0,
+   "t": 936000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788887937522
+  },
+  {
+   "v": 0,
+   "t": 937220,
+   "type": "interaction",
+   "initiator": 73304,
+   "recipient": 80754,
+   "def": "Chitchat",
+   "text": "Donkey said a word about lunchtime to Laxe.",
+   "rx": 1788887940920
+  },
+  {
+   "v": 0,
+   "t": 938426,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "GoForWalk",
+   "target": "(98, 0, 100)",
+   "source": "JobGiver_GetJoy",
+   "rx": 1788887944509
+  },
+  {
+   "v": 0,
+   "t": 938426,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "GoForWalk",
+   "condition": "Succeeded",
+   "rx": 1788887944509
+  },
+  {
+   "v": 0,
+   "t": 938508,
+   "type": "job_start",
+   "pawn": 73304,
+   "job": "Goto",
+   "target": "(0, 0, 13)",
+   "source": "JobGiver_ExitMapBest",
+   "rx": 1788887944703
+  },
+  {
+   "v": 0,
+   "t": 940000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788887948858
   }
  ],
  "counts": {
@@ -4319,17 +4439,17 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 2029,
-  "pawn_snapshot": 1957,
-  "job_start": 96,
-  "job_end": 51,
-  "job_noise": 83,
+  "world_snapshot": 2073,
+  "pawn_snapshot": 2066,
+  "job_start": 99,
+  "job_end": 53,
+  "job_noise": 87,
   "hediff": 18,
   "death": 6,
   "letter": 25,
   "incident": 16,
-  "interaction": 15,
+  "interaction": 17,
   "mental_state": 1
  },
- "last_event_at": 1788887920.351742
+ "last_event_at": 1788887952.401877
 }
