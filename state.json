@@ -3826,10 +3826,15 @@
    "type": "mod_disconnected",
    "peer": "('127.0.0.1', 50951)",
    "rx": 1788869532581
+  },
+  {
+   "type": "mod_connected",
+   "peer": "('127.0.0.1', 53672)",
+   "rx": 1788887561534
   }
  ],
  "counts": {
-  "mod_connected": 2,
+  "mod_connected": 3,
   "command_result": 17,
   "mod_disconnected": 2,
   "hello": 2,
@@ -3844,5 +3849,5 @@
   "incident": 13,
   "interaction": 15
  },
- "last_event_at": 1788869532.581331
+ "last_event_at": 1788887561.538186
 }

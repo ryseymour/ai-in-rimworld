@@ -2804,3 +2804,4 @@
 {"v":0,"t":833510,"type":"command_result","id":"c-16","ok":true,"data":{"speed":0,"paused":true},"rx":1788852132374}
 {"v":0,"t":833510,"type":"command_result","id":"c-17","ok":true,"data":{"mod_version":"0.1.0","tick":833510,"paused":true,"in_game":true},"rx":1788863296848}
 {"type":"mod_disconnected","peer":"('127.0.0.1', 50951)","rx":1788869532581}
+{"type":"mod_connected","peer":"('127.0.0.1', 53672)","rx":1788887561534}
