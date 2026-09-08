@@ -12,10 +12,10 @@
  },
  "world": {
   "v": 0,
-  "t": 993000,
+  "t": 997750,
   "type": "world_snapshot",
   "day": 16,
-  "hour": 13,
+  "hour": 15,
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
@@ -24,15 +24,15 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890466967
+  "rx": 1788890499909
  },
  "pawns": [
   {
    "v": 0,
-   "t": 993000,
+   "t": 997750,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 13,
+   "hour": 15,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
@@ -44,11 +44,11 @@
    ],
    "job": "researching.",
    "needs": {
-    "food": 0.736,
-    "rest": 0.914,
-    "joy": 0.499
+    "food": 0.612,
+    "rest": 0.84,
+    "joy": 0.452
    },
-   "mood": 0.423,
+   "mood": 0.37,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -130,30 +130,30 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890466968
+   "rx": 1788890499909
   },
   {
    "v": 0,
-   "t": 993000,
+   "t": 997750,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 13,
+   "hour": 15,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    100,
+    84,
     0,
-    115
+    77
    ],
-   "job": "wandering.",
+   "job": "going for a walk.",
    "needs": {
-    "food": 0.736,
-    "rest": 0.941,
-    "joy": 0.558
+    "food": 0.608,
+    "rest": 0.865,
+    "joy": 0.982
    },
-   "mood": 0.423,
+   "mood": 0.458,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -164,20 +164,20 @@
      "mood": -10
     },
     {
-     "label": "Trees sorely missed",
-     "mood": -5
+     "label": "Recreation fully satisfied",
+     "mood": 10
     },
     {
      "label": "No Thinker",
      "mood": -5
     },
     {
-     "label": "Wearing clothes (non-groin)",
-     "mood": -4
+     "label": "Darkness",
+     "mood": -5
     },
     {
-     "label": "Planetary habitat",
-     "mood": -2
+     "label": "Wearing clothes (non-groin)",
+     "mood": -4
     }
    ],
    "health": "Healthy",
@@ -225,34 +225,38 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890466968
+   "rx": 1788890499909
   },
   {
    "v": 0,
-   "t": 993000,
+   "t": 997750,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 13,
+   "hour": 15,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    107,
+    88,
     0,
-    101
+    106
    ],
-   "job": "wandering.",
+   "job": "going for a walk.",
    "needs": {
-    "food": 0.736,
-    "rest": 0.901,
-    "joy": 0.576
+    "food": 0.612,
+    "rest": 0.827,
+    "joy": 0.957
    },
-   "mood": 0.464,
+   "mood": 0.486,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
+    },
+    {
+     "label": "Recreation fully satisfied",
+     "mood": 10
     },
     {
      "label": "Trees sorely missed",
@@ -263,16 +267,12 @@
      "mood": -5
     },
     {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
-    },
-    {
-     "label": "Planetary habitat",
-     "mood": -2
-    },
-    {
-     "label": "Colonist left unburied",
-     "mood": 0
     }
    ],
    "health": "Healthy",
@@ -313,30 +313,30 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890466969
+   "rx": 1788890499910
   },
   {
    "v": 0,
-   "t": 993000,
+   "t": 997750,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 13,
+   "hour": 15,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    103,
+    101,
     0,
     127
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.525,
-    "joy": 0.416
+    "rest": 0.449,
+    "joy": 0.368
    },
-   "mood": 0.515,
+   "mood": 0.466,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -401,7 +401,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890466969
+   "rx": 1788890499910
   }
  ],
  "recent": [
@@ -720,6 +720,106 @@
    "job": "Clean",
    "condition": "Succeeded",
    "rx": 1788890467467
+  },
+  {
+   "v": 0,
+   "t": 994000,
+   "type": "job_noise",
+   "day": 16,
+   "hour": 13,
+   "total": 13,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "Wait_Wander": 3,
+    "GotoWander": 3
+   },
+   "rx": 1788890473817
+  },
+  {
+   "v": 0,
+   "t": 994200,
+   "type": "job_start",
+   "day": 16,
+   "hour": 13,
+   "pawn": 81686,
+   "job": "GoForWalk",
+   "target": "(99, 0, 98)",
+   "source": "JobGiver_IdleJoy",
+   "rx": 1788890475101
+  },
+  {
+   "v": 0,
+   "t": 994200,
+   "type": "job_end",
+   "day": 16,
+   "hour": 13,
+   "duration_ticks": 0,
+   "pawn": 81686,
+   "job": "GoForWalk",
+   "condition": "Succeeded",
+   "rx": 1788890475102
+  },
+  {
+   "v": 0,
+   "t": 994586,
+   "type": "job_start",
+   "day": 16,
+   "hour": 13,
+   "pawn": 81698,
+   "job": "GoForWalk",
+   "target": "(101, 0, 130)",
+   "source": "JobGiver_IdleJoy",
+   "rx": 1788890477517
+  },
+  {
+   "v": 0,
+   "t": 994586,
+   "type": "job_end",
+   "day": 16,
+   "hour": 13,
+   "duration_ticks": 0,
+   "pawn": 81698,
+   "job": "GoForWalk",
+   "condition": "Succeeded",
+   "rx": 1788890477517
+  },
+  {
+   "v": 0,
+   "t": 995020,
+   "type": "job_start",
+   "day": 16,
+   "hour": 14,
+   "pawn": 81682,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890480588
+  },
+  {
+   "v": 0,
+   "t": 995020,
+   "type": "job_end",
+   "day": 16,
+   "hour": 14,
+   "duration_ticks": 0,
+   "pawn": 81682,
+   "job": "Research",
+   "condition": "Succeeded",
+   "rx": 1788890480588
+  },
+  {
+   "v": 0,
+   "t": 996000,
+   "type": "job_noise",
+   "day": 16,
+   "hour": 14,
+   "total": 9,
+   "counts": {
+    "Wait_MaintainPosture": 6,
+    "Wait_Wander": 2,
+    "GotoWander": 1
+   },
+   "rx": 1788890487604
   }
  ],
  "counts": {
@@ -727,13 +827,13 @@
   "command_result": 8,
   "letter": 1,
   "hello": 1,
-  "world_snapshot": 11,
-  "pawn_snapshot": 44,
-  "job_start": 2,
+  "world_snapshot": 30,
+  "pawn_snapshot": 120,
+  "job_start": 5,
   "thought": 6,
   "interaction": 3,
-  "job_noise": 1,
-  "job_end": 1
+  "job_noise": 3,
+  "job_end": 4
  },
- "last_event_at": 1788890467.4673028
+ "last_event_at": 1788890499.9102871
 }
