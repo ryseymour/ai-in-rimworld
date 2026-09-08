@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 708500,
+  "t": 710500,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788829836213
+  "rx": 1788829869612
  },
  "pawns": [
   {
    "v": 0,
-   "t": 708500,
+   "t": 710500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,8 +38,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.79,
-    "rest": 0.293,
+    "food": 0.692,
+    "rest": 0.373,
     "joy": 0.05
    },
    "mood": 0.156,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829836214
+   "rx": 1788829869613
   },
   {
    "v": 0,
-   "t": 708500,
+   "t": 710500,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.317,
-    "rest": 0.964,
+    "food": 0.173,
+    "rest": 0.931,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -121,6 +121,10 @@
      "mood": -20
     },
     {
+     "label": "Hungry",
+     "mood": -6
+    },
+    {
      "label": "Initial hope",
      "mood": 5
     },
@@ -131,10 +135,6 @@
     {
      "label": "No Thinker",
      "mood": -5
-    },
-    {
-     "label": "My rival Bomba died",
-     "mood": 4
     }
    ],
    "health": "Unconscious",
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829836214
+   "rx": 1788829869613
   },
   {
    "v": 0,
-   "t": 708500,
+   "t": 710500,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -176,18 +176,18 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.038,
-    "rest": 0.898
+    "food": 0.025,
+    "rest": 0.867
    },
-   "mood": 0.188,
+   "mood": 0.126,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Mind-shattering pain",
-     "mood": -20
+     "label": "Intense pain",
+     "mood": -15
     },
     {
      "label": "Ravenously hungry",
@@ -206,7 +206,7 @@
      "mood": -5
     }
    ],
-   "health": "Pain shock",
+   "health": "Injured",
    "skills": {
     "Shooting": 0,
     "Melee": 1,
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829836214
+   "rx": 1788829869613
   }
  ],
  "recent": [
@@ -258,10 +258,10 @@
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 7,
-  "pawn_snapshot": 21,
+  "world_snapshot": 15,
+  "pawn_snapshot": 45,
   "job_start": 1
  },
- "last_event_at": 1788829839.265616,
- "published_at": 1788829840
+ "last_event_at": 1788829869.613672,
+ "published_at": 1788829871
 }
