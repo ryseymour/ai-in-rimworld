@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 958250,
+  "t": 972000,
   "type": "world_snapshot",
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
@@ -20,27 +20,27 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887984254
+  "rx": 1788888015974
  },
  "pawns": [
   {
    "v": 0,
-   "t": 958250,
+   "t": 972000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    94,
     0,
-    109
+    110
    ],
-   "job": "sleeping.",
+   "job": "wandering.",
    "needs": {
-    "food": 0,
-    "rest": 0.817,
-    "joy": 0.716
+    "food": 0.186,
+    "rest": 0.857,
+    "joy": 0.626
    },
    "mood": 0.863,
    "thoughts": [
@@ -61,12 +61,12 @@
      "mood": -12
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
+     "label": "Hungry",
+     "mood": -6
     },
     {
-     "label": "Quite comfortable",
-     "mood": 6
+     "label": "Minor pain",
+     "mood": -5
     }
    ],
    "health": "Healthy",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887984254
+   "rx": 1788888015974
   },
   {
    "v": 0,
@@ -4451,6 +4451,193 @@
    "job": "LayDown",
    "condition": "Succeeded",
    "rx": 1788887966802
+  },
+  {
+   "v": 0,
+   "t": 963064,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "HaulToCell",
+   "target": "Thing_MeleeWeapon_BreachAxe983",
+   "source": "JobGiver_Work",
+   "rx": 1788887991153
+  },
+  {
+   "v": 0,
+   "t": 965150,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "HarvestDesignated",
+   "target": "Thing_Plant_Berry52246",
+   "source": "JobGiver_Work",
+   "rx": 1788887996941
+  },
+  {
+   "v": 0,
+   "t": 965150,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "HarvestDesignated",
+   "condition": "Succeeded",
+   "rx": 1788887996941
+  },
+  {
+   "v": 0,
+   "t": 966000,
+   "type": "job_noise",
+   "total": 1,
+   "counts": {
+    "Wait_MaintainPosture": 1
+   },
+   "rx": 1788887999304
+  },
+  {
+   "v": 0,
+   "t": 966557,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_RawBerries81368",
+   "source": "JobGiver_GetFood",
+   "rx": 1788888000853
+  },
+  {
+   "v": 0,
+   "t": 966557,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Ingest",
+   "condition": "Succeeded",
+   "rx": 1788888000853
+  },
+  {
+   "v": 0,
+   "t": 967196,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "HaulToCell",
+   "target": "Thing_Gun_Autopistol981",
+   "source": "JobGiver_Work",
+   "rx": 1788888002621
+  },
+  {
+   "v": 0,
+   "t": 967196,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "HaulToCell",
+   "condition": "Succeeded",
+   "rx": 1788888002621
+  },
+  {
+   "v": 0,
+   "t": 968000,
+   "type": "job_noise",
+   "total": 2,
+   "counts": {
+    "Wait_MaintainPosture": 2
+   },
+   "rx": 1788888004853
+  },
+  {
+   "v": 0,
+   "t": 968546,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt81337",
+   "source": "JobGiver_Work",
+   "rx": 1788888006372
+  },
+  {
+   "v": 0,
+   "t": 968546,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788888006372
+  },
+  {
+   "v": 0,
+   "t": 968681,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_BloodSmear81328",
+   "source": "JobGiver_Work",
+   "rx": 1788888006754
+  },
+  {
+   "v": 0,
+   "t": 968681,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788888006754
+  },
+  {
+   "v": 0,
+   "t": 969188,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt81402",
+   "source": "JobGiver_Work",
+   "rx": 1788888008156
+  },
+  {
+   "v": 0,
+   "t": 969188,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788888008156
+  },
+  {
+   "v": 0,
+   "t": 970000,
+   "type": "job_noise",
+   "total": 7,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788888010421
+  },
+  {
+   "v": 0,
+   "t": 970313,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt81413",
+   "source": "JobGiver_Work",
+   "rx": 1788888011287
+  },
+  {
+   "v": 0,
+   "t": 970313,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788888011287
+  },
+  {
+   "v": 0,
+   "t": 972000,
+   "type": "job_noise",
+   "total": 5,
+   "counts": {
+    "Wait_MaintainPosture": 3,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788888015974
   }
  ],
  "counts": {
@@ -4458,11 +4645,11 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 2141,
-  "pawn_snapshot": 2134,
-  "job_start": 100,
-  "job_end": 54,
-  "job_noise": 87,
+  "world_snapshot": 2196,
+  "pawn_snapshot": 2189,
+  "job_start": 108,
+  "job_end": 61,
+  "job_noise": 91,
   "hediff": 18,
   "death": 6,
   "letter": 25,
@@ -4470,5 +4657,5 @@
   "interaction": 17,
   "mental_state": 1
  },
- "last_event_at": 1788887984.254719
+ "last_event_at": 1788888015.974872
 }
