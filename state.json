@@ -2,8 +2,16 @@
  "hello": {},
  "world": {},
  "pawns": [],
- "recent": [],
- "counts": {},
- "last_event_at": 0.0,
- "published_at": 1788832748
+ "recent": [
+  {
+   "type": "mod_connected",
+   "peer": "('127.0.0.1', 50519)",
+   "rx": 1788832777983
+  }
+ ],
+ "counts": {
+  "mod_connected": 1
+ },
+ "last_event_at": 1788832777.983467,
+ "published_at": 1788832780
 }
