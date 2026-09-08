@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 963250,
+  "t": 985000,
   "type": "world_snapshot",
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
-  "weather": "windy",
-  "wealth": 20542,
+  "weather": "clear",
+  "wealth": 20296,
   "colonists": 0,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835482491
+  "rx": 1788835514067
  },
  "pawns": [
   {
@@ -1377,6 +1377,24 @@
    "text": "Everyone is dead or gone. Perhaps someone will find a use for the ruins of this place.\n\nChoose new wanderers arrive at your colony and continue the story.",
    "def": "GameEnded",
    "rx": 1788835474327
+  },
+  {
+   "v": 0,
+   "t": 978000,
+   "type": "letter",
+   "label": "Rare thrumbos",
+   "text": "A small herd of thrumbos have wandered into the area.\n\nPeaceful by nature, these rare creatures are extremely dangerous when confronted. Some traders are willing to pay a lot of money for their precious leather and horn.\n\nThrumbos will leave the area in a few days.",
+   "def": "PositiveEvent",
+   "rx": 1788835503256
+  },
+  {
+   "v": 0,
+   "t": 978000,
+   "type": "incident",
+   "def": "ThrumboPasses",
+   "label": "thrumbos pass",
+   "points": 30.103,
+   "rx": 1788835503256
   }
  ],
  "counts": {
@@ -1384,15 +1402,15 @@
   "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 404,
+  "world_snapshot": 491,
   "pawn_snapshot": 298,
   "job_start": 24,
   "job_end": 22,
   "job_noise": 14,
   "hediff": 1,
   "death": 3,
-  "letter": 4,
-  "incident": 1
+  "letter": 5,
+  "incident": 2
  },
- "last_event_at": 1788835482.4912179
+ "last_event_at": 1788835514.0673559
 }
