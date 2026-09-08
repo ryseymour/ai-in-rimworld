@@ -10,17 +10,17 @@
  },
  "world": {
   "v": 0,
-  "t": 1006500,
+  "t": 1026750,
   "type": "world_snapshot",
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
-  "weather": "clear",
-  "wealth": 20040,
+  "weather": "windy",
+  "wealth": 19781,
   "colonists": 0,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788835545434
+  "rx": 1788835577172
  },
  "pawns": [
   {
@@ -1395,6 +1395,24 @@
    "label": "thrumbos pass",
    "points": 30.103,
    "rx": 1788835503256
+  },
+  {
+   "v": 0,
+   "t": 1022000,
+   "type": "letter",
+   "label": "Flashstorm",
+   "text": "A freak localized flashstorm is striking a small area with lightning. This can cause massive fires.",
+   "def": "ThreatSmall",
+   "rx": 1788835569407
+  },
+  {
+   "v": 0,
+   "t": 1022000,
+   "type": "incident",
+   "def": "Flashstorm",
+   "label": "flashstorm",
+   "points": 47.442,
+   "rx": 1788835569412
   }
  ],
  "counts": {
@@ -1402,15 +1420,15 @@
   "command_result": 6,
   "mod_disconnected": 1,
   "hello": 1,
-  "world_snapshot": 577,
+  "world_snapshot": 658,
   "pawn_snapshot": 298,
   "job_start": 24,
   "job_end": 22,
   "job_noise": 14,
   "hediff": 1,
   "death": 3,
-  "letter": 5,
-  "incident": 2
+  "letter": 6,
+  "incident": 3
  },
- "last_event_at": 1788835545.434895
+ "last_event_at": 1788835577.1726131
 }
