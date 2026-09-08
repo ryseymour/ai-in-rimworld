@@ -313,6 +313,20 @@
    "type": "mod_connected",
    "peer": "('127.0.0.1', 50415)",
    "rx": 1788831796782
+  },
+  {
+   "v": 0,
+   "t": 0,
+   "type": "command_result",
+   "id": "c-3",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 0,
+    "paused": true,
+    "in_game": false
+   },
+   "rx": 1788831843457
   }
  ],
  "counts": {
@@ -321,8 +335,9 @@
   "world_snapshot": 4,
   "pawn_snapshot": 12,
   "job_start": 4,
-  "mod_disconnected": 3
+  "mod_disconnected": 3,
+  "command_result": 1
  },
- "last_event_at": 1788831796.7829251,
- "published_at": 1788831824
+ "last_event_at": 1788831843.457133,
+ "published_at": 1788831856
 }

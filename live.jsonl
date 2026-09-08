@@ -26,3 +26,4 @@
 {"type":"mod_connected","peer":"('127.0.0.1', 50394)","rx":1788831573503}
 {"type":"mod_disconnected","peer":"('127.0.0.1', 50394)","rx":1788831770308}
 {"type":"mod_connected","peer":"('127.0.0.1', 50415)","rx":1788831796782}
+{"v":0,"t":0,"type":"command_result","id":"c-3","ok":true,"data":{"mod_version":"0.1.0","tick":0,"paused":true,"in_game":false},"rx":1788831843457}
