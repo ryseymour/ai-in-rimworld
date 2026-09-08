@@ -12,10 +12,10 @@
  },
  "world": {
   "v": 0,
-  "t": 1053750,
+  "t": 1058000,
   "type": "world_snapshot",
   "day": 17,
-  "hour": 13,
+  "hour": 15,
   "date": "3rd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
@@ -24,31 +24,31 @@
   "visitors": 2,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890827220
+  "rx": 1788890852377
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1053750,
+   "t": 1058000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 13,
+   "hour": 15,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    102,
+    101,
     0,
-    113
+    107
    ],
-   "job": "wandering.",
+   "job": "researching.",
    "needs": {
     "food": 0,
-    "rest": 0.423,
-    "joy": 0.119
+    "rest": 0.356,
+    "joy": 0.102
    },
-   "mood": 0.492,
+   "mood": 0.442,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -120,30 +120,30 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890827221
+   "rx": 1788890852483
   },
   {
    "v": 0,
-   "t": 1053750,
+   "t": 1058000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 13,
+   "hour": 15,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    105,
     0,
-    127
+    100
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.373,
-    "joy": 0.593
+    "rest": 0.306,
+    "joy": 0.551
    },
-   "mood": 0.226,
+   "mood": 0.216,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -205,30 +205,30 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890827221
+   "rx": 1788890852486
   },
   {
    "v": 0,
-   "t": 1053750,
+   "t": 1058000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 13,
+   "hour": 15,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    107
+    106
    ],
-   "job": "researching.",
+   "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.314,
-    "joy": 0.509
+    "rest": 0.311,
+    "joy": 0.478
    },
-   "mood": 0.34,
+   "mood": 0.316,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -239,20 +239,20 @@
      "mood": -20
     },
     {
-     "label": "Burning passion for my work",
-     "mood": 14
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
      "label": "Trees sorely missed",
      "mood": -5
     },
     {
      "label": "No Thinker",
      "mood": -5
+    },
+    {
+     "label": "Wearing clothes (non-groin)",
+     "mood": -4
+    },
+    {
+     "label": "Planetary habitat",
+     "mood": -2
     }
    ],
    "health": "Healthy",
@@ -293,14 +293,14 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890827221
+   "rx": 1788890852490
   },
   {
    "v": 0,
-   "t": 1053750,
+   "t": 1058000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 13,
+   "hour": 15,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
@@ -308,15 +308,15 @@
    "pos": [
     101,
     0,
-    123
+    106
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.411,
-    "joy": 0.102
+    "rest": 0.344,
+    "joy": 0.085
    },
-   "mood": 0.201,
+   "mood": 0.067,
    "thoughts": [
     {
      "label": "Starving",
@@ -381,27 +381,27 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890827221
+   "rx": 1788890852491
   },
   {
    "v": 0,
-   "t": 1053750,
+   "t": 1058000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 13,
+   "hour": 15,
    "id": 84939,
    "name": "Irwin",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    152,
+    232,
     0,
-    64
+    65
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.692,
-    "rest": 0.444
+    "food": 0.58,
+    "rest": 0.377
    },
    "mood": 0.64,
    "thoughts": [
@@ -462,29 +462,29 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890827221
+   "rx": 1788890852491
   },
   {
    "v": 0,
-   "t": 1053750,
+   "t": 1058000,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 13,
+   "hour": 15,
    "id": 84947,
    "name": "Mushinto",
    "faction": "Neveherda",
    "kind": "visitor",
    "pos": [
-    151,
+    233,
     0,
     59
    ],
    "job": "moving.",
    "needs": {
-    "food": 0.862,
-    "rest": 0.436
+    "food": 0.773,
+    "rest": 0.37
    },
-   "mood": 0.59,
+   "mood": 0.54,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -543,7 +543,7 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890827221
+   "rx": 1788890852491
   }
  ],
  "recent": [
@@ -4174,6 +4174,216 @@
    "def": "Chitchat",
    "text": "G\u00e9radon spoke about parties with Joe.",
    "rx": 1788890821652
+  },
+  {
+   "v": 0,
+   "t": 1054000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 13,
+   "total": 20,
+   "counts": {
+    "Wait_MaintainPosture": 11,
+    "Wait_Wander": 5,
+    "GotoWander": 4
+   },
+   "rx": 1788890828610
+  },
+  {
+   "v": 0,
+   "t": 1054521,
+   "type": "thought",
+   "day": 17,
+   "hour": 13,
+   "pawn": 84939,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84947,
+   "about_name": "Mushinto",
+   "rx": 1788890831502
+  },
+  {
+   "v": 0,
+   "t": 1054521,
+   "type": "thought",
+   "day": 17,
+   "hour": 13,
+   "pawn": 84947,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84939,
+   "about_name": "Irwin",
+   "rx": 1788890831502
+  },
+  {
+   "v": 0,
+   "t": 1054521,
+   "type": "interaction",
+   "day": 17,
+   "hour": 13,
+   "initiator": 84939,
+   "recipient": 84947,
+   "def": "Chitchat",
+   "text": "Irwin and Mushinto chatted about fat people.",
+   "rx": 1788890831503
+  },
+  {
+   "v": 0,
+   "t": 1054667,
+   "type": "thought",
+   "day": 17,
+   "hour": 13,
+   "pawn": 84947,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84939,
+   "about_name": "Irwin",
+   "rx": 1788890832304
+  },
+  {
+   "v": 0,
+   "t": 1054667,
+   "type": "thought",
+   "day": 17,
+   "hour": 13,
+   "pawn": 84939,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84947,
+   "about_name": "Mushinto",
+   "rx": 1788890832304
+  },
+  {
+   "v": 0,
+   "t": 1054667,
+   "type": "interaction",
+   "day": 17,
+   "hour": 13,
+   "initiator": 84947,
+   "recipient": 84939,
+   "def": "Chitchat",
+   "text": "Mushinto chatted about crazy ducks with Irwin.",
+   "rx": 1788890832305
+  },
+  {
+   "v": 0,
+   "t": 1055706,
+   "type": "job_start",
+   "day": 17,
+   "hour": 14,
+   "pawn": 81686,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85480",
+   "source": "JobGiver_Work",
+   "rx": 1788890838106
+  },
+  {
+   "v": 0,
+   "t": 1056000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 14,
+   "total": 17,
+   "counts": {
+    "Wait_MaintainPosture": 9,
+    "Wait_Wander": 4,
+    "GotoWander": 4
+   },
+   "rx": 1788890839761
+  },
+  {
+   "v": 0,
+   "t": 1056704,
+   "type": "job_start",
+   "day": 17,
+   "hour": 14,
+   "pawn": 81698,
+   "job": "LayDown",
+   "target": "Thing_Bed31705",
+   "source": "JobGiver_GetRest",
+   "rx": 1788890843677
+  },
+  {
+   "v": 0,
+   "t": 1057161,
+   "type": "thought",
+   "day": 17,
+   "hour": 14,
+   "pawn": 84939,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84947,
+   "about_name": "Mushinto",
+   "rx": 1788890846219
+  },
+  {
+   "v": 0,
+   "t": 1057161,
+   "type": "thought",
+   "day": 17,
+   "hour": 14,
+   "pawn": 84947,
+   "def": "Chitchat",
+   "label": "Chitchat",
+   "mood": 0,
+   "about": 84939,
+   "about_name": "Irwin",
+   "rx": 1788890846219
+  },
+  {
+   "v": 0,
+   "t": 1057161,
+   "type": "interaction",
+   "day": 17,
+   "hour": 14,
+   "initiator": 84939,
+   "recipient": 84947,
+   "def": "Chitchat",
+   "text": "Irwin and Mushinto quipped about wearing tuques.",
+   "rx": 1788890846220
+  },
+  {
+   "v": 0,
+   "t": 1057219,
+   "type": "job_start",
+   "day": 17,
+   "hour": 14,
+   "pawn": 81682,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788890846542
+  },
+  {
+   "v": 0,
+   "t": 1057589,
+   "type": "job_start",
+   "day": 17,
+   "hour": 15,
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt85533",
+   "source": "JobGiver_Work",
+   "rx": 1788890849143
+  },
+  {
+   "v": 0,
+   "t": 1058000,
+   "type": "job_noise",
+   "day": 17,
+   "hour": 15,
+   "total": 11,
+   "counts": {
+    "Wait_MaintainPosture": 7,
+    "GotoWander": 2,
+    "Wait_Wander": 2
+   },
+   "rx": 1788890852491
   }
  ],
  "counts": {
@@ -4181,16 +4391,16 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 254,
-  "pawn_snapshot": 1264,
-  "job_start": 70,
-  "thought": 104,
-  "interaction": 30,
-  "job_noise": 28,
+  "world_snapshot": 271,
+  "pawn_snapshot": 1366,
+  "job_start": 74,
+  "thought": 110,
+  "interaction": 33,
+  "job_noise": 31,
   "job_end": 35,
   "incident": 1,
   "mental_state": 1,
   "hediff": 3
  },
- "last_event_at": 1788890827.221754
+ "last_event_at": 1788890852.491862
 }
