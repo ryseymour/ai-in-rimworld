@@ -12,10 +12,10 @@
  },
  "world": {
   "v": 0,
-  "t": 991000,
+  "t": 993000,
   "type": "world_snapshot",
   "day": 16,
-  "hour": 12,
+  "hour": 13,
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
@@ -24,15 +24,15 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788890316935
+  "rx": 1788890466967
  },
  "pawns": [
   {
    "v": 0,
-   "t": 991000,
+   "t": 993000,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 12,
+   "hour": 13,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
@@ -40,15 +40,15 @@
    "pos": [
     101,
     0,
-    109
+    107
    ],
    "job": "researching.",
    "needs": {
-    "food": 0.792,
-    "rest": 0.947,
-    "joy": 0.52
+    "food": 0.736,
+    "rest": 0.914,
+    "joy": 0.499
    },
-   "mood": 0.49,
+   "mood": 0.423,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -63,16 +63,16 @@
      "mood": -5
     },
     {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
     },
     {
      "label": "Constraining clothes",
      "mood": -3
-    },
-    {
-     "label": "Planetary habitat",
-     "mood": -2
     }
    ],
    "health": "Healthy",
@@ -130,30 +130,30 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890316938
+   "rx": 1788890466968
   },
   {
    "v": 0,
-   "t": 991000,
+   "t": 993000,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 12,
+   "hour": 13,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    100,
     0,
-    119
+    115
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.788,
-    "rest": 0.972,
-    "joy": 0.577
+    "food": 0.736,
+    "rest": 0.941,
+    "joy": 0.558
    },
-   "mood": 0.486,
+   "mood": 0.423,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -172,12 +172,12 @@
      "mood": -5
     },
     {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
+    },
+    {
+     "label": "Planetary habitat",
+     "mood": -2
     }
    ],
    "health": "Healthy",
@@ -225,30 +225,30 @@
     }
    ],
    "drafted": false,
-   "rx": 1788890316938
+   "rx": 1788890466968
   },
   {
    "v": 0,
-   "t": 991000,
+   "t": 993000,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 12,
+   "hour": 13,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    107,
     0,
-    119
+    101
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.792,
-    "rest": 0.934,
-    "joy": 0.597
+    "food": 0.736,
+    "rest": 0.901,
+    "joy": 0.576
    },
-   "mood": 0.495,
+   "mood": 0.464,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -263,16 +263,16 @@
      "mood": -5
     },
     {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
     },
     {
      "label": "Planetary habitat",
      "mood": -2
+    },
+    {
+     "label": "Colonist left unburied",
+     "mood": 0
     }
    ],
    "health": "Healthy",
@@ -313,30 +313,30 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890316938
+   "rx": 1788890466969
   },
   {
    "v": 0,
-   "t": 991000,
+   "t": 993000,
    "type": "pawn_snapshot",
    "day": 16,
-   "hour": 12,
+   "hour": 13,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    103,
     0,
-    119
+    127
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.556,
-    "joy": 0.436
+    "rest": 0.525,
+    "joy": 0.416
    },
-   "mood": 0.577,
+   "mood": 0.515,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -401,7 +401,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788890316938
+   "rx": 1788890466969
   }
  ],
  "recent": [
@@ -642,6 +642,84 @@
    "def": "Chitchat",
    "text": "G\u00e9radon and Schlitzer chatted about training rabbits.",
    "rx": 1788890315562
+  },
+  {
+   "v": 0,
+   "t": 991684,
+   "type": "thought",
+   "day": 16,
+   "hour": 12,
+   "pawn": 81682,
+   "def": "DeepTalk",
+   "label": "Deep talk",
+   "mood": 0,
+   "about": 81698,
+   "about_name": "Joe",
+   "rx": 1788890459417
+  },
+  {
+   "v": 0,
+   "t": 991684,
+   "type": "thought",
+   "day": 16,
+   "hour": 12,
+   "pawn": 81698,
+   "def": "DeepTalk",
+   "label": "Deep talk",
+   "mood": 0,
+   "about": 81682,
+   "about_name": "G\u00e9radon",
+   "rx": 1788890459417
+  },
+  {
+   "v": 0,
+   "t": 991684,
+   "type": "interaction",
+   "day": 16,
+   "hour": 12,
+   "initiator": 81682,
+   "recipient": 81698,
+   "def": "DeepTalk",
+   "text": "G\u00e9radon talked deeply about freedom with Joe.",
+   "rx": 1788890459418
+  },
+  {
+   "v": 0,
+   "t": 992000,
+   "type": "job_noise",
+   "day": 16,
+   "hour": 12,
+   "total": 18,
+   "counts": {
+    "GotoWander": 6,
+    "Wait_MaintainPosture": 8,
+    "Wait_Wander": 4
+   },
+   "rx": 1788890461315
+  },
+  {
+   "v": 0,
+   "t": 993077,
+   "type": "job_start",
+   "day": 16,
+   "hour": 13,
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84478",
+   "source": "JobGiver_Work",
+   "rx": 1788890467467
+  },
+  {
+   "v": 0,
+   "t": 993077,
+   "type": "job_end",
+   "day": 16,
+   "hour": 13,
+   "duration_ticks": 0,
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788890467467
   }
  ],
  "counts": {
@@ -649,11 +727,13 @@
   "command_result": 8,
   "letter": 1,
   "hello": 1,
-  "world_snapshot": 3,
-  "pawn_snapshot": 12,
-  "job_start": 1,
-  "thought": 4,
-  "interaction": 2
+  "world_snapshot": 11,
+  "pawn_snapshot": 44,
+  "job_start": 2,
+  "thought": 6,
+  "interaction": 3,
+  "job_noise": 1,
+  "job_end": 1
  },
- "last_event_at": 1788890316.9389172
+ "last_event_at": 1788890467.4673028
 }
