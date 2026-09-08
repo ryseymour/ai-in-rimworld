@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 717000,
+  "t": 717500,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 23707,
+  "wealth": 23697,
   "colonists": 3,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788829989617
+  "rx": 1788830023164
  },
  "pawns": [
   {
    "v": 0,
-   "t": 717000,
+   "t": 717500,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,8 +38,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.391,
-    "rest": 0.602,
+    "food": 0.37,
+    "rest": 0.619,
     "joy": 0.049
    },
    "mood": 0.171,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829989617
+   "rx": 1788830023165
   },
   {
    "v": 0,
-   "t": 717000,
+   "t": 717500,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.031,
-    "rest": 0.829,
+    "food": 0.023,
+    "rest": 0.822,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -159,35 +159,31 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829989617
+   "rx": 1788830023165
   },
   {
    "v": 0,
-   "t": 717000,
+   "t": 717500,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    100,
+    101,
     0,
-    114
+    121
    ],
    "job": "resting.",
    "needs": {
-    "food": 1,
-    "rest": 0.765
+    "food": 0.976,
+    "rest": 0.755
    },
-   "mood": 0.115,
+   "mood": 0.132,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
-    },
-    {
-     "label": "Malnourished",
-     "mood": -20
     },
     {
      "label": "Intense pain",
@@ -196,6 +192,10 @@
     {
      "label": "I am disliked xenotype",
      "mood": -6
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Unsightly environment",
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829989617
+   "rx": 1788830023165
   }
  ],
  "recent": [
@@ -373,14 +373,14 @@
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 41,
-  "pawn_snapshot": 123,
+  "world_snapshot": 43,
+  "pawn_snapshot": 129,
   "job_start": 7,
   "job_end": 3,
   "hediff": 1,
   "letter": 1,
   "incident": 1
  },
- "last_event_at": 1788829989.617932,
- "published_at": 1788829998
+ "last_event_at": 1788830023.165855,
+ "published_at": 1788830030
 }
