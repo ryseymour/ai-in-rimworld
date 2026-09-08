@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 821158,
+  "t": 823000,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,26 +20,26 @@
   "visitors": 10,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788833804639
+  "rx": 1788833835574
  },
  "pawns": [
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    101,
+    104,
     0,
-    108
+    109
    ],
-   "job": "Crawling to bed.",
+   "job": "downed.",
    "needs": {
     "food": 0,
-    "rest": 0.8,
+    "rest": 0.769,
     "joy": 0
    },
    "mood": 0,
@@ -61,12 +61,12 @@
      "mood": -20
     },
     {
-     "label": "Initial hope",
-     "mood": 5
+     "label": "Quite comfortable",
+     "mood": 6
     },
     {
-     "label": "Unsightly environment",
-     "mood": -5
+     "label": "Initial hope",
+     "mood": 5
     }
    ],
    "health": "Pain shock",
@@ -89,25 +89,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833804645
+   "rx": 1788833835575
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    111,
+    117,
     0,
     122
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.449
+    "rest": 0.42
    },
    "mood": 0.235,
    "thoughts": [
@@ -156,31 +156,35 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833804647
+   "rx": 1788833835575
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79429,
    "name": "Goabanbi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    118,
+    119,
     0,
     120
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.658,
-    "rest": 0.78
+    "food": 0.586,
+    "rest": 0.751
    },
    "mood": 0.56,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Sweaty",
@@ -229,31 +233,35 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833804655
+   "rx": 1788833835575
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79449,
    "name": "Trocam",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    110,
+    112,
     0,
     120
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.772,
-    "rest": 0.796
+    "food": 0.72,
+    "rest": 0.765
    },
    "mood": 0.56,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Sweaty",
@@ -284,25 +292,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833804655
+   "rx": 1788833835576
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79454,
    "name": "Snail",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    114,
+    110,
     0,
-    125
+    120
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.768,
-    "rest": 0.778
+    "food": 0.72,
+    "rest": 0.75
    },
    "mood": 0.6,
    "thoughts": [
@@ -317,6 +325,10 @@
     {
      "label": "Recluse in small group",
      "mood": 8
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Wielding a steel ikwa (poor)",
@@ -344,25 +356,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833804656
+   "rx": 1788833835576
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79459,
    "name": "Pelican",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    120,
+    119,
     0,
     121
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.772,
-    "rest": 0.855
+    "food": 0.72,
+    "rest": 0.825
    },
    "mood": 0.54,
    "thoughts": [
@@ -381,6 +393,10 @@
     {
      "label": "Wielding a steel spear (normal)",
      "mood": 3
+    },
+    {
+     "label": "Darkness",
+     "mood": 0
     }
    ],
    "health": "Healthy",
@@ -403,27 +419,27 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833804657
+   "rx": 1788833835576
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79464,
    "name": "Blue",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    106,
+    109,
     0,
     118
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.772,
-    "rest": 0.785
+    "food": 0.724,
+    "rest": 0.757
    },
-   "mood": 0.477,
+   "mood": 0.51,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -431,6 +447,10 @@
     },
     {
      "label": "Minor pain",
+     "mood": -5
+    },
+    {
+     "label": "Darkness",
      "mood": -5
     },
     {
@@ -461,25 +481,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833804657
+   "rx": 1788833835576
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79469,
    "name": "Red",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    109,
+    112,
     0,
-    123
+    121
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.652,
-    "rest": 0.855
+    "food": 0.58,
+    "rest": 0.827
    },
    "mood": 0.52,
    "thoughts": [
@@ -490,6 +510,10 @@
     {
      "label": "Hot",
      "mood": -8
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Wielding a steel spear (normal)",
@@ -522,31 +546,35 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833804657
+   "rx": 1788833835576
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79474,
    "name": "Black",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    110,
+    115,
     0,
-    124
+    120
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.772,
-    "rest": 0.828
+    "food": 0.724,
+    "rest": 0.8
    },
    "mood": 0.56,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Sweaty",
@@ -578,35 +606,39 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833804658
+   "rx": 1788833835576
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79480,
    "name": "Green",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    111,
+    114,
     0,
-    112
+    122
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.768,
-    "rest": 0.766
+    "food": 0.72,
+    "rest": 0.737
    },
-   "mood": 0.487,
+   "mood": 0.52,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
     },
     {
-     "label": "Hot",
-     "mood": -8
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
+     "label": "Sweaty",
+     "mood": -4
     },
     {
      "label": "Body modder frustrated",
@@ -653,27 +685,27 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833804658
+   "rx": 1788833835576
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79494,
    "name": "Gumi",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    116,
+    113,
     0,
-    123
+    114
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.768,
-    "rest": 0.851
+    "food": 0.72,
+    "rest": 0.822
    },
-   "mood": 0.562,
+   "mood": 0.58,
    "thoughts": [
     {
      "label": "Extremely low expectations",
@@ -690,6 +722,10 @@
     {
      "label": "Wielding a short bow (poor)",
      "mood": 3
+    },
+    {
+     "label": "Darkness",
+     "mood": 0
     }
    ],
    "health": "Healthy",
@@ -719,31 +755,35 @@
     }
    ],
    "drafted": false,
-   "rx": 1788833804658
+   "rx": 1788833835577
   },
   {
    "v": 0,
-   "t": 821158,
+   "t": 823000,
    "type": "pawn_snapshot",
    "id": 79498,
    "name": "Chicken",
    "faction": "Caro Tribe",
    "kind": "visitor",
    "pos": [
-    117,
+    118,
     0,
-    116
+    120
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.768,
-    "rest": 0.852
+    "food": 0.72,
+    "rest": 0.824
    },
    "mood": 0.56,
    "thoughts": [
     {
      "label": "Extremely low expectations",
      "mood": 30
+    },
+    {
+     "label": "Darkness",
+     "mood": -5
     },
     {
      "label": "Sweaty",
@@ -773,7 +813,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788833804658
+   "rx": 1788833835577
   }
  ],
  "recent": [
@@ -7508,22 +7548,2115 @@
    "game_version": "1.6.4871 rev597",
    "map_id": 2,
    "rx": 1788833804637
+  },
+  {
+   "v": 0,
+   "t": 821192,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833805426
+  },
+  {
+   "v": 0,
+   "t": 821192,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833805426
+  },
+  {
+   "v": 0,
+   "t": 821195,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "target": "(110, 0, 116)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833805487
+  },
+  {
+   "v": 0,
+   "t": 821195,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833805487
+  },
+  {
+   "v": 0,
+   "t": 821204,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833805638
+  },
+  {
+   "v": 0,
+   "t": 821204,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833805639
+  },
+  {
+   "v": 0,
+   "t": 821207,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833805670
+  },
+  {
+   "v": 0,
+   "t": 821207,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833805671
+  },
+  {
+   "v": 0,
+   "t": 821210,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833805720
+  },
+  {
+   "v": 0,
+   "t": 821210,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833805721
+  },
+  {
+   "v": 0,
+   "t": 821212,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833805753
+  },
+  {
+   "v": 0,
+   "t": 821212,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833805753
+  },
+  {
+   "v": 0,
+   "t": 821213,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "target": "(113, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833805770
+  },
+  {
+   "v": 0,
+   "t": 821213,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833805770
+  },
+  {
+   "v": 0,
+   "t": 821215,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "target": "(114, 0, 124)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833805803
+  },
+  {
+   "v": 0,
+   "t": 821215,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833805803
+  },
+  {
+   "v": 0,
+   "t": 821259,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833806537
+  },
+  {
+   "v": 0,
+   "t": 821259,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833806537
+  },
+  {
+   "v": 0,
+   "t": 821262,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833806587
+  },
+  {
+   "v": 0,
+   "t": 821262,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833806587
+  },
+  {
+   "v": 0,
+   "t": 821266,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833806654
+  },
+  {
+   "v": 0,
+   "t": 821266,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833806654
+  },
+  {
+   "v": 0,
+   "t": 821269,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833806704
+  },
+  {
+   "v": 0,
+   "t": 821269,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833806704
+  },
+  {
+   "v": 0,
+   "t": 821269,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833806704
+  },
+  {
+   "v": 0,
+   "t": 821269,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833806705
+  },
+  {
+   "v": 0,
+   "t": 821272,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "target": "(114, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833806754
+  },
+  {
+   "v": 0,
+   "t": 821272,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833806754
+  },
+  {
+   "v": 0,
+   "t": 821346,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833807988
+  },
+  {
+   "v": 0,
+   "t": 821347,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833808018
+  },
+  {
+   "v": 0,
+   "t": 821372,
+   "type": "interaction",
+   "initiator": 79469,
+   "recipient": 79449,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Red</color> gabbed about vacations with <color=#D09B61FF>Trocam</color>.",
+   "rx": 1788833808451
+  },
+  {
+   "v": 0,
+   "t": 821379,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833808560
+  },
+  {
+   "v": 0,
+   "t": 821382,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "target": "(117, 0, 124)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833808604
+  },
+  {
+   "v": 0,
+   "t": 821406,
+   "type": "interaction",
+   "initiator": 79498,
+   "recipient": 79429,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Chicken</color> and <color=#D09B61FF>Goabanbi</color> spoke about cooking with lentils.",
+   "rx": 1788833809005
+  },
+  {
+   "v": 0,
+   "t": 821443,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833809620
+  },
+  {
+   "v": 0,
+   "t": 821446,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "target": "(109, 0, 120)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833809671
+  },
+  {
+   "v": 0,
+   "t": 821483,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833810287
+  },
+  {
+   "v": 0,
+   "t": 821486,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "target": "(109, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833810337
+  },
+  {
+   "v": 0,
+   "t": 821501,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833810586
+  },
+  {
+   "v": 0,
+   "t": 821502,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833810604
+  },
+  {
+   "v": 0,
+   "t": 821505,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833810653
+  },
+  {
+   "v": 0,
+   "t": 821508,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "target": "(116, 0, 120)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833810703
+  },
+  {
+   "v": 0,
+   "t": 821509,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833810721
+  },
+  {
+   "v": 0,
+   "t": 821512,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "target": "(117, 0, 118)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833810770
+  },
+  {
+   "v": 0,
+   "t": 821515,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833810821
+  },
+  {
+   "v": 0,
+   "t": 821518,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "target": "(112, 0, 120)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833810871
+  },
+  {
+   "v": 0,
+   "t": 821562,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833811606
+  },
+  {
+   "v": 0,
+   "t": 821564,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833811638
+  },
+  {
+   "v": 0,
+   "t": 821581,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833811921
+  },
+  {
+   "v": 0,
+   "t": 821581,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833811921
+  },
+  {
+   "v": 0,
+   "t": 821584,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833811971
+  },
+  {
+   "v": 0,
+   "t": 821584,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833811971
+  },
+  {
+   "v": 0,
+   "t": 821589,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833812053
+  },
+  {
+   "v": 0,
+   "t": 821589,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833812054
+  },
+  {
+   "v": 0,
+   "t": 821591,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833812087
+  },
+  {
+   "v": 0,
+   "t": 821591,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833812087
+  },
+  {
+   "v": 0,
+   "t": 821691,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833813753
+  },
+  {
+   "v": 0,
+   "t": 821694,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833813804
+  },
+  {
+   "v": 0,
+   "t": 821741,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833814587
+  },
+  {
+   "v": 0,
+   "t": 821742,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833814603
+  },
+  {
+   "v": 0,
+   "t": 821787,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833815353
+  },
+  {
+   "v": 0,
+   "t": 821789,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833815387
+  },
+  {
+   "v": 0,
+   "t": 821792,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833815438
+  },
+  {
+   "v": 0,
+   "t": 821795,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "target": "(115, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833815488
+  },
+  {
+   "v": 0,
+   "t": 821810,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833815737
+  },
+  {
+   "v": 0,
+   "t": 821813,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "target": "(111, 0, 123)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833815787
+  },
+  {
+   "v": 0,
+   "t": 821821,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833815921
+  },
+  {
+   "v": 0,
+   "t": 821824,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833815971
+  },
+  {
+   "v": 0,
+   "t": 821829,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833816053
+  },
+  {
+   "v": 0,
+   "t": 821832,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "target": "(113, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833816105
+  },
+  {
+   "v": 0,
+   "t": 821834,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833816137
+  },
+  {
+   "v": 0,
+   "t": 821835,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833816154
+  },
+  {
+   "v": 0,
+   "t": 821839,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833816221
+  },
+  {
+   "v": 0,
+   "t": 821842,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "target": "(108, 0, 124)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833816270
+  },
+  {
+   "v": 0,
+   "t": 821855,
+   "type": "interaction",
+   "initiator": 79494,
+   "recipient": 79459,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Gumi</color> chatted about vomiting with <color=#D09B61FF>Pelican</color>.",
+   "rx": 1788833816489
+  },
+  {
+   "v": 0,
+   "t": 821930,
+   "type": "command_result",
+   "id": "c-33",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 821930,
+    "paused": false,
+    "in_game": true
+   },
+   "rx": 1788833817755
+  },
+  {
+   "v": 0,
+   "t": 821931,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833817759
+  },
+  {
+   "v": 0,
+   "t": 821931,
+   "type": "command_result",
+   "id": "c-34",
+   "ok": true,
+   "data": {
+    "speed": 1,
+    "paused": false
+   },
+   "rx": 1788833817769
+  },
+  {
+   "v": 0,
+   "t": 821934,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "target": "(119, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833817803
+  },
+  {
+   "v": 0,
+   "t": 821935,
+   "type": "command_result",
+   "id": "c-35",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "origin_x": 83,
+    "origin_z": 100,
+    "w": 40,
+    "h": 16,
+    "top_row_z": 115,
+    "rows": [
+     "..............#a..=====#...........b....",
+     "..............#a.======#A....B..........",
+     "..............#c..=====#................",
+     "..............#d...e==##C...............",
+     "..............##cc.===#.................",
+     "...............###+####..........ff.....",
+     "....g..........#...#.=#.........fff.....",
+     "....gg.........#==.+D=#.........f.f.....",
+     "...............#==E####........ff.......",
+     "...............#==.#.=#......hh.........",
+     "...............#...+.=#.................",
+     "...............#...####.................",
+     "...............+...+=i#.................",
+     "...............########.................",
+     "...........h............................",
+     "...........h............................"
+    ],
+    "pawns": [
+     {
+      "char": "A",
+      "id": 79429,
+      "name": "Goabanbi",
+      "kind": "visitor"
+     },
+     {
+      "char": "B",
+      "id": 79445,
+      "name": "Dromedary",
+      "kind": "animal"
+     },
+     {
+      "char": "C",
+      "id": 79446,
+      "name": "Dromedary",
+      "kind": "animal"
+     },
+     {
+      "char": "D",
+      "id": 948,
+      "name": "Zeke",
+      "kind": "colonist"
+     },
+     {
+      "char": "E",
+      "id": 70063,
+      "name": "Boomalope",
+      "kind": "animal"
+     }
+    ],
+    "items": [
+     {
+      "char": "a",
+      "def": "WoodLog",
+      "label": "wood"
+     },
+     {
+      "char": "b",
+      "def": "Gun_Autopistol",
+      "label": "autopistol"
+     },
+     {
+      "char": "c",
+      "def": "GravlitePanel",
+      "label": "gravlite panel"
+     },
+     {
+      "char": "d",
+      "def": "Gun_MachinePistol",
+      "label": "machine pistol"
+     },
+     {
+      "char": "e",
+      "def": "Silver",
+      "label": "silver"
+     },
+     {
+      "char": "f",
+      "def": "ChunkSlate",
+      "label": "slate chunk"
+     },
+     {
+      "char": "g",
+      "def": "ChunkGranite",
+      "label": "granite chunk"
+     },
+     {
+      "char": "h",
+      "def": "ChunkSandstone",
+      "label": "sandstone chunk"
+     },
+     {
+      "char": "i",
+      "def": "Corpse_Human",
+      "label": "human corpse"
+     }
+    ],
+    "legend": "# wall, + door, = building, ~ water, ^ rock, . floor, ? unseen, space off-map"
+   },
+   "rx": 1788833817840
+  },
+  {
+   "v": 0,
+   "t": 821940,
+   "type": "command_result",
+   "id": "c-36",
+   "ok": true,
+   "data": {
+    "kind": "chop",
+    "cells": 11,
+    "things": 0
+   },
+   "rx": 1788833817923
+  },
+  {
+   "v": 0,
+   "t": 821942,
+   "type": "command_result",
+   "id": "c-37",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "total": 0,
+    "returned": 0,
+    "by_kind": {
+     "CutPlant": 28
+    },
+    "designations": []
+   },
+   "rx": 1788833817956
+  },
+  {
+   "v": 0,
+   "t": 821952,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833818104
+  },
+  {
+   "v": 0,
+   "t": 821954,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833818137
+  },
+  {
+   "v": 0,
+   "t": 821954,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833818137
+  },
+  {
+   "v": 0,
+   "t": 821957,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "target": "(113, 0, 127)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833818188
+  },
+  {
+   "v": 0,
+   "t": 822000,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833818904
+  },
+  {
+   "v": 0,
+   "t": 822003,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "target": "(116, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833818970
+  },
+  {
+   "v": 0,
+   "t": 822013,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833819137
+  },
+  {
+   "v": 0,
+   "t": 822015,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833819170
+  },
+  {
+   "v": 0,
+   "t": 822015,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833819171
+  },
+  {
+   "v": 0,
+   "t": 822016,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833819187
+  },
+  {
+   "v": 0,
+   "t": 822018,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "target": "(108, 0, 125)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833819221
+  },
+  {
+   "v": 0,
+   "t": 822019,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833819241
+  },
+  {
+   "v": 0,
+   "t": 822021,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833819270
+  },
+  {
+   "v": 0,
+   "t": 822022,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833819287
+  },
+  {
+   "v": 0,
+   "t": 822091,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833820421
+  },
+  {
+   "v": 0,
+   "t": 822094,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "target": "(120, 0, 120)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833820470
+  },
+  {
+   "v": 0,
+   "t": 822094,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833820470
+  },
+  {
+   "v": 0,
+   "t": 822125,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833820987
+  },
+  {
+   "v": 0,
+   "t": 822125,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833820988
+  },
+  {
+   "v": 0,
+   "t": 822126,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833821004
+  },
+  {
+   "v": 0,
+   "t": 822126,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833821005
+  },
+  {
+   "v": 0,
+   "t": 822167,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833821704
+  },
+  {
+   "v": 0,
+   "t": 822167,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833821704
+  },
+  {
+   "v": 0,
+   "t": 822170,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833821754
+  },
+  {
+   "v": 0,
+   "t": 822170,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833821754
+  },
+  {
+   "v": 0,
+   "t": 822174,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833821821
+  },
+  {
+   "v": 0,
+   "t": 822174,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833821821
+  },
+  {
+   "v": 0,
+   "t": 822177,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "target": "(113, 0, 116)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833821871
+  },
+  {
+   "v": 0,
+   "t": 822177,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833821872
+  },
+  {
+   "v": 0,
+   "t": 822183,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833821971
+  },
+  {
+   "v": 0,
+   "t": 822184,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833821988
+  },
+  {
+   "v": 0,
+   "t": 822188,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833822056
+  },
+  {
+   "v": 0,
+   "t": 822191,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "target": "(109, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833822104
+  },
+  {
+   "v": 0,
+   "t": 822228,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833822704
+  },
+  {
+   "v": 0,
+   "t": 822228,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833822704
+  },
+  {
+   "v": 0,
+   "t": 822231,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833822754
+  },
+  {
+   "v": 0,
+   "t": 822231,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833822755
+  },
+  {
+   "v": 0,
+   "t": 822251,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833823087
+  },
+  {
+   "v": 0,
+   "t": 822251,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833823087
+  },
+  {
+   "v": 0,
+   "t": 822253,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833823121
+  },
+  {
+   "v": 0,
+   "t": 822253,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833823121
+  },
+  {
+   "v": 0,
+   "t": 822301,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833823920
+  },
+  {
+   "v": 0,
+   "t": 822301,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833823921
+  },
+  {
+   "v": 0,
+   "t": 822304,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "target": "(119, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833823972
+  },
+  {
+   "v": 0,
+   "t": 822304,
+   "type": "job_end",
+   "pawn": 79459,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833823972
+  },
+  {
+   "v": 0,
+   "t": 822337,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833824522
+  },
+  {
+   "v": 0,
+   "t": 822339,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833824554
+  },
+  {
+   "v": 0,
+   "t": 822340,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "GotoWander",
+   "target": "(118, 0, 123)",
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833824570
+  },
+  {
+   "v": 0,
+   "t": 822342,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "target": "(119, 0, 119)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833824605
+  },
+  {
+   "v": 0,
+   "t": 822419,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833825903
+  },
+  {
+   "v": 0,
+   "t": 822420,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833825921
+  },
+  {
+   "v": 0,
+   "t": 822422,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833825955
+  },
+  {
+   "v": 0,
+   "t": 822423,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833825970
+  },
+  {
+   "v": 0,
+   "t": 822469,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833826739
+  },
+  {
+   "v": 0,
+   "t": 822469,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833826741
+  },
+  {
+   "v": 0,
+   "t": 822472,
+   "type": "job_start",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "target": "(106, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833826789
+  },
+  {
+   "v": 0,
+   "t": 822472,
+   "type": "job_end",
+   "pawn": 79454,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833826789
+  },
+  {
+   "v": 0,
+   "t": 822473,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833826804
+  },
+  {
+   "v": 0,
+   "t": 822473,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833826804
+  },
+  {
+   "v": 0,
+   "t": 822476,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "target": "(113, 0, 114)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833826855
+  },
+  {
+   "v": 0,
+   "t": 822476,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833826855
+  },
+  {
+   "v": 0,
+   "t": 822486,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833827021
+  },
+  {
+   "v": 0,
+   "t": 822486,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833827021
+  },
+  {
+   "v": 0,
+   "t": 822489,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "target": "(115, 0, 117)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833827071
+  },
+  {
+   "v": 0,
+   "t": 822489,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833827072
+  },
+  {
+   "v": 0,
+   "t": 822493,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833827138
+  },
+  {
+   "v": 0,
+   "t": 822493,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833827138
+  },
+  {
+   "v": 0,
+   "t": 822495,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833827171
+  },
+  {
+   "v": 0,
+   "t": 822495,
+   "type": "job_end",
+   "pawn": 79474,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833827172
+  },
+  {
+   "v": 0,
+   "t": 822508,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833827387
+  },
+  {
+   "v": 0,
+   "t": 822508,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833827388
+  },
+  {
+   "v": 0,
+   "t": 822509,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833827403
+  },
+  {
+   "v": 0,
+   "t": 822509,
+   "type": "job_end",
+   "pawn": 79464,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833827404
+  },
+  {
+   "v": 0,
+   "t": 822532,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833827788
+  },
+  {
+   "v": 0,
+   "t": 822532,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833827788
+  },
+  {
+   "v": 0,
+   "t": 822535,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "target": "(114, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833827837
+  },
+  {
+   "v": 0,
+   "t": 822535,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833827837
+  },
+  {
+   "v": 0,
+   "t": 822557,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833828204
+  },
+  {
+   "v": 0,
+   "t": 822557,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833828204
+  },
+  {
+   "v": 0,
+   "t": 822558,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833828221
+  },
+  {
+   "v": 0,
+   "t": 822558,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833828221
+  },
+  {
+   "v": 0,
+   "t": 822593,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833828788
+  },
+  {
+   "v": 0,
+   "t": 822593,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833828788
+  },
+  {
+   "v": 0,
+   "t": 822594,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833828804
+  },
+  {
+   "v": 0,
+   "t": 822594,
+   "type": "job_end",
+   "pawn": 79498,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833828805
+  },
+  {
+   "v": 0,
+   "t": 822677,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833830189
+  },
+  {
+   "v": 0,
+   "t": 822677,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833830189
+  },
+  {
+   "v": 0,
+   "t": 822680,
+   "type": "job_start",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "target": "(110, 0, 112)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833830238
+  },
+  {
+   "v": 0,
+   "t": 822680,
+   "type": "job_end",
+   "pawn": 79469,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833830238
+  },
+  {
+   "v": 0,
+   "t": 822708,
+   "type": "interaction",
+   "initiator": 79474,
+   "recipient": 79429,
+   "def": "Chitchat",
+   "text": "<color=#D09B61FF>Black</color> chatted about mushrooms with <color=#D09B61FF>Goabanbi</color>.",
+   "rx": 1788833830707
+  },
+  {
+   "v": 0,
+   "t": 822717,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833830857
+  },
+  {
+   "v": 0,
+   "t": 822717,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833830857
+  },
+  {
+   "v": 0,
+   "t": 822720,
+   "type": "job_start",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "target": "(116, 0, 113)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833830903
+  },
+  {
+   "v": 0,
+   "t": 822720,
+   "type": "job_end",
+   "pawn": 79449,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833830904
+  },
+  {
+   "v": 0,
+   "t": 822732,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833831104
+  },
+  {
+   "v": 0,
+   "t": 822732,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833831105
+  },
+  {
+   "v": 0,
+   "t": 822735,
+   "type": "job_start",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "target": "(120, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833831154
+  },
+  {
+   "v": 0,
+   "t": 822735,
+   "type": "job_end",
+   "pawn": 79429,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833831154
+  },
+  {
+   "v": 0,
+   "t": 822768,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833831704
+  },
+  {
+   "v": 0,
+   "t": 822771,
+   "type": "job_start",
+   "pawn": 79474,
+   "job": "GotoWander",
+   "target": "(106, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833831754
+  },
+  {
+   "v": 0,
+   "t": 822818,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833832538
+  },
+  {
+   "v": 0,
+   "t": 822821,
+   "type": "job_start",
+   "pawn": 79464,
+   "job": "GotoWander",
+   "target": "(107, 0, 121)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833832588
+  },
+  {
+   "v": 0,
+   "t": 822824,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833832638
+  },
+  {
+   "v": 0,
+   "t": 822826,
+   "type": "job_start",
+   "pawn": 79459,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833832673
+  },
+  {
+   "v": 0,
+   "t": 822834,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833832804
+  },
+  {
+   "v": 0,
+   "t": 822837,
+   "type": "job_start",
+   "pawn": 79498,
+   "job": "GotoWander",
+   "target": "(119, 0, 122)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833832856
+  },
+  {
+   "v": 0,
+   "t": 822842,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833832938
+  },
+  {
+   "v": 0,
+   "t": 822844,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833832971
+  },
+  {
+   "v": 0,
+   "t": 822911,
+   "type": "command_result",
+   "id": "c-38",
+   "ok": true,
+   "data": {
+    "would_goto": [
+     84,
+     0,
+     107
+    ]
+   },
+   "rx": 1788833834106
+  },
+  {
+   "v": 0,
+   "t": 822912,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Wait_Downed",
+   "target": null,
+   "source": "JobGiver_IdleForever",
+   "rx": 1788833834128
+  },
+  {
+   "v": 0,
+   "t": 822912,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Wait_Downed",
+   "condition": "InterruptForced",
+   "rx": 1788833834128
+  },
+  {
+   "v": 0,
+   "t": 822912,
+   "type": "command_result",
+   "id": "c-39",
+   "ok": true,
+   "data": {
+    "pawn": 948,
+    "target": [
+     84,
+     0,
+     107
+    ]
+   },
+   "rx": 1788833834129
+  },
+  {
+   "v": 0,
+   "t": 822945,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833834656
+  },
+  {
+   "v": 0,
+   "t": 822945,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833834656
+  },
+  {
+   "v": 0,
+   "t": 822947,
+   "type": "job_start",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833834687
+  },
+  {
+   "v": 0,
+   "t": 822947,
+   "type": "job_end",
+   "pawn": 79494,
+   "job": "Wait_Wander",
+   "condition": "Succeeded",
+   "rx": 1788833834687
+  },
+  {
+   "v": 0,
+   "t": 823036,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788833836170
+  },
+  {
+   "v": 0,
+   "t": 823036,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "Wait_MaintainPosture",
+   "condition": "Succeeded",
+   "rx": 1788833836171
+  },
+  {
+   "v": 0,
+   "t": 823039,
+   "type": "job_start",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "target": "(119, 0, 115)",
+   "source": "JobGiver_WanderNearDutyLocation",
+   "rx": 1788833836224
+  },
+  {
+   "v": 0,
+   "t": 823039,
+   "type": "job_end",
+   "pawn": 79480,
+   "job": "GotoWander",
+   "condition": "Succeeded",
+   "rx": 1788833836225
   }
  ],
  "counts": {
   "mod_connected": 3,
   "hello": 3,
-  "world_snapshot": 32,
-  "pawn_snapshot": 384,
-  "job_start": 130,
-  "job_end": 76,
-  "command_result": 32,
+  "world_snapshot": 40,
+  "pawn_snapshot": 480,
+  "job_start": 263,
+  "job_end": 134,
+  "command_result": 39,
   "letter": 1,
   "mental_state": 1,
   "mod_disconnected": 2,
-  "interaction": 8,
+  "interaction": 12,
   "hediff": 7
  },
- "last_event_at": 1788833804.658992,
- "published_at": 1788833805
+ "last_event_at": 1788833836.225156,
+ "published_at": 1788833836
 }
