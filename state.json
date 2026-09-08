@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 992250,
+  "t": 993250,
   "type": "world_snapshot",
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
@@ -20,29 +20,29 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788888818004
+  "rx": 1788888834672
  },
  "pawns": [
   {
    "v": 0,
-   "t": 992250,
+   "t": 993250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    99,
+    100,
     0,
-    125
+    124
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.537,
-    "joy": 0.424
+    "rest": 0.52,
+    "joy": 0.413
    },
-   "mood": 0.556,
+   "mood": 0.535,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888818005
+   "rx": 1788888834672
   }
  ],
  "recent": [
@@ -1599,18 +1599,23 @@
     "GotoWander": 1
    },
    "rx": 1788888813847
+  },
+  {
+   "type": "mod_disconnected",
+   "peer": "('127.0.0.1', 53919)",
+   "rx": 1788888838022
   }
  ],
  "counts": {
   "mod_connected": 2,
-  "mod_disconnected": 1,
+  "mod_disconnected": 2,
   "command_result": 6,
   "hello": 1,
-  "world_snapshot": 8,
-  "pawn_snapshot": 8,
+  "world_snapshot": 12,
+  "pawn_snapshot": 12,
   "job_start": 1,
   "job_end": 1,
   "job_noise": 1
  },
- "last_event_at": 1788888818.005054
+ "last_event_at": 1788888838.022004
 }
