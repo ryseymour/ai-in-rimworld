@@ -10,43 +10,47 @@
  },
  "world": {
   "v": 0,
-  "t": 906500,
+  "t": 919000,
   "type": "world_snapshot",
   "date": "1st of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 21842,
+  "wealth": 21841,
   "colonists": 1,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887857111
+  "rx": 1788887888691
  },
  "pawns": [
   {
    "v": 0,
-   "t": 906500,
+   "t": 919000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    101,
     0,
-    109
+    111
    ],
-   "job": "sleeping.",
+   "job": "wandering.",
    "needs": {
-    "food": 0.205,
-    "rest": 0.914,
+    "food": 0,
+    "rest": 0.838,
     "joy": 0
    },
-   "mood": 0.761,
+   "mood": 0.53,
    "thoughts": [
     {
      "label": "Catharsis",
      "mood": 40
+    },
+    {
+     "label": "Badly malnourished",
+     "mood": -26
     },
     {
      "label": "Very low expectations",
@@ -63,10 +67,6 @@
     {
      "label": "Ate corpse",
      "mood": -12
-    },
-    {
-     "label": "Quite comfortable",
-     "mood": 6
     }
    ],
    "health": "Healthy",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887857111
+   "rx": 1788887888691
   },
   {
    "v": 0,
@@ -3726,6 +3726,296 @@
    "cause": null,
    "killer": null,
    "rx": 1788887844640
+  },
+  {
+   "v": 0,
+   "t": 908837,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt79610",
+   "source": "JobGiver_Work",
+   "rx": 1788887860463
+  },
+  {
+   "v": 0,
+   "t": 908870,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt79585",
+   "source": "JobGiver_Work",
+   "rx": 1788887860544
+  },
+  {
+   "v": 0,
+   "t": 908870,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887860545
+  },
+  {
+   "v": 0,
+   "t": 909104,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Trash73200",
+   "source": "JobGiver_Work",
+   "rx": 1788887861194
+  },
+  {
+   "v": 0,
+   "t": 909104,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887861194
+  },
+  {
+   "v": 0,
+   "t": 909533,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_BloodSmear73561",
+   "source": "JobGiver_Work",
+   "rx": 1788887862389
+  },
+  {
+   "v": 0,
+   "t": 909533,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887862390
+  },
+  {
+   "v": 0,
+   "t": 910000,
+   "type": "job_noise",
+   "total": 3,
+   "counts": {
+    "Wait_MaintainPosture": 3
+   },
+   "rx": 1788887863690
+  },
+  {
+   "v": 0,
+   "t": 910112,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Blood73553",
+   "source": "JobGiver_Work",
+   "rx": 1788887864003
+  },
+  {
+   "v": 0,
+   "t": 910112,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887864003
+  },
+  {
+   "v": 0,
+   "t": 910466,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_RubbleBuilding73232",
+   "source": "JobGiver_Work",
+   "rx": 1788887864987
+  },
+  {
+   "v": 0,
+   "t": 910466,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887864987
+  },
+  {
+   "v": 0,
+   "t": 910664,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Blood73263",
+   "source": "JobGiver_Work",
+   "rx": 1788887865537
+  },
+  {
+   "v": 0,
+   "t": 910664,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887865537
+  },
+  {
+   "v": 0,
+   "t": 911111,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Blood70199",
+   "source": "JobGiver_Work",
+   "rx": 1788887866771
+  },
+  {
+   "v": 0,
+   "t": 911111,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887866772
+  },
+  {
+   "v": 0,
+   "t": 911684,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Blood70207",
+   "source": "JobGiver_Work",
+   "rx": 1788887868370
+  },
+  {
+   "v": 0,
+   "t": 911684,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887868370
+  },
+  {
+   "v": 0,
+   "t": 912000,
+   "type": "job_noise",
+   "total": 5,
+   "counts": {
+    "Wait_MaintainPosture": 5
+   },
+   "rx": 1788887869253
+  },
+  {
+   "v": 0,
+   "t": 912122,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_BloodSmear70178",
+   "source": "JobGiver_Work",
+   "rx": 1788887869587
+  },
+  {
+   "v": 0,
+   "t": 912122,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887869587
+  },
+  {
+   "v": 0,
+   "t": 913064,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Blood73606",
+   "source": "JobGiver_Work",
+   "rx": 1788887872203
+  },
+  {
+   "v": 0,
+   "t": 913064,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887872203
+  },
+  {
+   "v": 0,
+   "t": 914000,
+   "type": "job_noise",
+   "total": 2,
+   "counts": {
+    "Wait_MaintainPosture": 2
+   },
+   "rx": 1788887874805
+  },
+  {
+   "v": 0,
+   "t": 914357,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_BloodSmear73577",
+   "source": "JobGiver_Work",
+   "rx": 1788887875791
+  },
+  {
+   "v": 0,
+   "t": 914357,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887875791
+  },
+  {
+   "v": 0,
+   "t": 916000,
+   "type": "job_noise",
+   "total": 3,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "GotoWander": 1
+   },
+   "rx": 1788887880349
+  },
+  {
+   "v": 0,
+   "t": 917108,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt80623",
+   "source": "JobGiver_Work",
+   "rx": 1788887883449
+  },
+  {
+   "v": 0,
+   "t": 917108,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Clean",
+   "condition": "Succeeded",
+   "rx": 1788887883449
+  },
+  {
+   "v": 0,
+   "t": 918000,
+   "type": "job_noise",
+   "total": 3,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "Wait_Wander": 1
+   },
+   "rx": 1788887885930
   }
  ],
  "counts": {
@@ -3733,11 +4023,11 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 1934,
-  "pawn_snapshot": 1810,
-  "job_start": 77,
-  "job_end": 34,
-  "job_noise": 72,
+  "world_snapshot": 1984,
+  "pawn_snapshot": 1860,
+  "job_start": 90,
+  "job_end": 46,
+  "job_noise": 77,
   "hediff": 18,
   "death": 6,
   "letter": 25,
@@ -3745,5 +4035,5 @@
   "interaction": 15,
   "mental_state": 1
  },
- "last_event_at": 1788887857.111858
+ "last_event_at": 1788887888.691861
 }
