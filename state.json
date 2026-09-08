@@ -1,31 +1,31 @@
 {
  "hello": {
   "v": 0,
-  "t": 707036,
+  "t": 807694,
   "type": "hello",
   "mod_version": "0.1.0",
   "game_version": "1.6.4871 rev597",
   "map_id": 2,
-  "rx": 1788829811565
+  "rx": 1788831096874
  },
  "world": {
   "v": 0,
-  "t": 807500,
+  "t": 808250,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 23071,
+  "wealth": 23001,
   "colonists": 3,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788831057358
+  "rx": 1788831106094
  },
  "pawns": [
   {
    "v": 0,
-   "t": 807500,
+   "t": 808250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -39,7 +39,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.822,
+    "rest": 0.81,
     "joy": 0
    },
    "mood": 0,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831057359
+   "rx": 1788831106096
   },
   {
    "v": 0,
-   "t": 807500,
+   "t": 808250,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -107,7 +107,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.964,
+    "rest": 0.952,
     "joy": 0.289
    },
    "mood": 0.18,
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831057359
+   "rx": 1788831106096
   },
   {
    "v": 0,
-   "t": 807500,
+   "t": 808250,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -177,7 +177,7 @@
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.665
+    "rest": 0.653
    },
    "mood": 0,
    "thoughts": [
@@ -202,7 +202,7 @@
      "mood": -6
     },
     {
-     "label": "Darkness",
+     "label": "Unsightly environment",
      "mood": -5
     }
    ],
@@ -226,724 +226,10 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831057359
-  },
-  {
-   "v": 0,
-   "t": 772250,
-   "type": "pawn_snapshot",
-   "id": 73039,
-   "name": "Lala",
-   "faction": "Neveherda",
-   "kind": "visitor",
-   "pos": [
-    7,
-    0,
-    117
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.272,
-    "rest": 0.144
-   },
-   "mood": 0.48,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Drowsy",
-     "mood": -6
-    },
-    {
-     "label": "Ate fine meal",
-     "mood": 5
-    },
-    {
-     "label": "Minor pain",
-     "mood": -5
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
-    }
-   ],
-   "health": "Healthy",
-   "skills": {
-    "Shooting": 0,
-    "Melee": 2,
-    "Construction": 4,
-    "Mining": 4,
-    "Cooking": 2,
-    "Plants": 0,
-    "Animals": 1,
-    "Crafting": 1,
-    "Artistic": 5,
-    "Medicine": 0,
-    "Social": 2,
-    "Intellectual": 2
-   },
-   "traits": [
-    "Pyromaniac",
-    "Quick sleeper",
-    "Very neurotic"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830860917
-  },
-  {
-   "v": 0,
-   "t": 773500,
-   "type": "pawn_snapshot",
-   "id": 73093,
-   "name": "Adrian",
-   "faction": "Neveherda",
-   "kind": "visitor",
-   "pos": [
-    13,
-    0,
-    117
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.526,
-    "rest": 0.12
-   },
-   "mood": 0.42,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Tired",
-     "mood": -12
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
-    }
-   ],
-   "health": "Healthy",
-   "skills": {
-    "Shooting": 14,
-    "Melee": 9,
-    "Construction": 1,
-    "Mining": 3,
-    "Cooking": 4,
-    "Plants": 0,
-    "Animals": 0,
-    "Crafting": 1,
-    "Artistic": 0,
-    "Medicine": 7,
-    "Social": 0,
-    "Intellectual": 5
-   },
-   "traits": [
-    "Too smart",
-    "Very neurotic",
-    "Fast learner",
-    "Psychically deaf"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830867862
-  },
-  {
-   "v": 0,
-   "t": 774000,
-   "type": "pawn_snapshot",
-   "id": 73102,
-   "name": "AJ",
-   "faction": "Neveherda",
-   "kind": "visitor",
-   "pos": [
-    3,
-    0,
-    117
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.232,
-    "rest": 0.155
-   },
-   "mood": 0.416,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Serious pain",
-     "mood": -10
-    },
-    {
-     "label": "Drowsy",
-     "mood": -6
-    },
-    {
-     "label": "Hungry",
-     "mood": -6
-    },
-    {
-     "label": "Ate fine meal",
-     "mood": 5
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
-    }
-   ],
-   "health": "Injured",
-   "skills": {
-    "Shooting": 2,
-    "Melee": 5,
-    "Construction": 1,
-    "Mining": 3,
-    "Cooking": 3,
-    "Plants": 3,
-    "Animals": 1,
-    "Crafting": 0,
-    "Artistic": 2,
-    "Intellectual": 5
-   },
-   "traits": [
-    "Psychopath",
-    "Nimble",
-    "Misandrist"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830870649
-  },
-  {
-   "v": 0,
-   "t": 773000,
-   "type": "pawn_snapshot",
-   "id": 73108,
-   "name": "Loner",
-   "faction": "Neveherda",
-   "kind": "visitor",
-   "pos": [
-    8,
-    0,
-    117
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.244,
-    "rest": 0.128
-   },
-   "mood": 0.63,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Night owl at night",
-     "mood": 16
-    },
-    {
-     "label": "Tired",
-     "mood": -12
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
-    },
-    {
-     "label": "Darkness",
-     "mood": 0
-    }
-   ],
-   "health": "Healthy",
-   "skills": {
-    "Shooting": 8,
-    "Melee": 11,
-    "Construction": 5,
-    "Mining": 1,
-    "Cooking": 6,
-    "Plants": 2,
-    "Animals": 2,
-    "Crafting": 7
-   },
-   "traits": [
-    "Night owl",
-    "Fast learner",
-    "Misogynist"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830865078
-  },
-  {
-   "v": 0,
-   "t": 773500,
-   "type": "pawn_snapshot",
-   "id": 73117,
-   "name": "Ellie",
-   "faction": "Neveherda",
-   "kind": "visitor",
-   "pos": [
-    9,
-    0,
-    117
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.236,
-    "rest": 0.152
-   },
-   "mood": 0.725,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Happily nude",
-     "mood": 20
-    },
-    {
-     "label": "Drowsy",
-     "mood": -6
-    },
-    {
-     "label": "Hungry",
-     "mood": -6
-    },
-    {
-     "label": "Ate fine meal",
-     "mood": 5
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
-    }
-   ],
-   "health": "Healthy",
-   "skills": {
-    "Shooting": 9,
-    "Melee": 0,
-    "Construction": 8,
-    "Mining": 0,
-    "Cooking": 5,
-    "Plants": 4,
-    "Animals": 0,
-    "Crafting": 0,
-    "Artistic": 5,
-    "Medicine": 3,
-    "Social": 16,
-    "Intellectual": 7
-   },
-   "traits": [
-    "Misandrist",
-    "Nudist",
-    "Jogger"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830867863
-  },
-  {
-   "v": 0,
-   "t": 773000,
-   "type": "pawn_snapshot",
-   "id": 73122,
-   "name": "Deccy",
-   "faction": "Neveherda",
-   "kind": "visitor",
-   "pos": [
-    12,
-    0,
-    117
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.24,
-    "rest": 0.165
-   },
-   "mood": 0.33,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Serious pain",
-     "mood": -10
-    },
-    {
-     "label": "Drowsy",
-     "mood": -6
-    },
-    {
-     "label": "Insulted",
-     "mood": -5
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
-    }
-   ],
-   "health": "Injured",
-   "skills": {
-    "Shooting": 4,
-    "Melee": 9,
-    "Construction": 0,
-    "Mining": 3,
-    "Cooking": 1,
-    "Plants": 1,
-    "Animals": 1,
-    "Crafting": 1,
-    "Artistic": 3,
-    "Intellectual": 6
-   },
-   "traits": [
-    "Psychopath"
-   ],
-   "relations": [
-    {
-     "other": "Palamas",
-     "kind": "father",
-     "opinion": 15
-    }
-   ],
-   "drafted": false,
-   "rx": 1788830865079
-  },
-  {
-   "v": 0,
-   "t": 773500,
-   "type": "pawn_snapshot",
-   "id": 73128,
-   "name": "Dan",
-   "faction": "Neveherda",
-   "kind": "visitor",
-   "pos": [
-    4,
-    0,
-    119
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.23,
-    "rest": 0.152
-   },
-   "mood": 0.461,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Drowsy",
-     "mood": -6
-    },
-    {
-     "label": "Hungry",
-     "mood": -6
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
-    }
-   ],
-   "health": "Healthy",
-   "skills": {
-    "Shooting": 2,
-    "Melee": 10,
-    "Construction": 4,
-    "Cooking": 4,
-    "Plants": 1,
-    "Animals": 7,
-    "Crafting": 5,
-    "Artistic": 0,
-    "Medicine": 1,
-    "Social": 9
-   },
-   "traits": [
-    "Greedy",
-    "Abrasive"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830867863
-  },
-  {
-   "v": 0,
-   "t": 773000,
-   "type": "pawn_snapshot",
-   "id": 73134,
-   "name": "Kaia",
-   "faction": "Neveherda",
-   "kind": "visitor",
-   "pos": [
-    12,
-    0,
-    117
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.24,
-    "rest": 0.153
-   },
-   "mood": 0.48,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Drowsy",
-     "mood": -6
-    },
-    {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
-     "label": "Ate without table",
-     "mood": -3
-    }
-   ],
-   "health": "Healthy",
-   "skills": {
-    "Shooting": 0,
-    "Melee": 0,
-    "Construction": 0,
-    "Mining": 3,
-    "Cooking": 0,
-    "Plants": 2,
-    "Animals": 8,
-    "Crafting": 3,
-    "Artistic": 3,
-    "Medicine": 3,
-    "Intellectual": 2
-   },
-   "traits": [
-    "Wimp",
-    "Bloodlust",
-    "Very neurotic"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830865080
-  },
-  {
-   "v": 0,
-   "t": 742000,
-   "type": "pawn_snapshot",
-   "id": 73176,
-   "name": "Paul",
-   "faction": null,
-   "kind": "visitor",
-   "pos": [
-    46,
-    0,
-    56
-   ],
-   "job": "downed, unconscious.",
-   "needs": {
-    "food": 0.264,
-    "rest": 0.66
-   },
-   "mood": 0.4,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Mind-shattering pain",
-     "mood": -20
-    },
-    {
-     "label": "Planetary habitat",
-     "mood": -2
-    }
-   ],
-   "health": "Unconscious",
-   "skills": {
-    "Shooting": 0,
-    "Melee": 2,
-    "Construction": 3,
-    "Mining": 3,
-    "Cooking": 3,
-    "Plants": 1,
-    "Animals": 4,
-    "Crafting": 10,
-    "Artistic": 4,
-    "Medicine": 8,
-    "Social": 4,
-    "Intellectual": 11
-   },
-   "traits": [
-    "Chemical fascination",
-    "Brawler"
-   ],
-   "relations": [
-    {
-     "other": "Eszenosky",
-     "kind": "son",
-     "opinion": 30
-    }
-   ],
-   "drafted": false,
-   "rx": 1788830700193,
-   "dead": true
-  },
-  {
-   "v": 0,
-   "t": 751000,
-   "type": "pawn_snapshot",
-   "id": 73304,
-   "name": "Donkey",
-   "faction": "Caro Tribe",
-   "kind": "visitor",
-   "pos": [
-    248,
-    0,
-    89
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.452,
-    "rest": 0.726
-   },
-   "mood": 0.65,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Wielding a short bow (poor)",
-     "mood": 3
-    }
-   ],
-   "health": "Healthy",
-   "skills": {
-    "Shooting": 3,
-    "Melee": 2,
-    "Construction": 0,
-    "Mining": 3,
-    "Cooking": 2,
-    "Plants": 2,
-    "Animals": 0,
-    "Crafting": 3,
-    "Artistic": 8,
-    "Medicine": 3,
-    "Social": 1,
-    "Intellectual": 0
-   },
-   "traits": [
-    "Abrasive"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830725317
-  },
-  {
-   "v": 0,
-   "t": 751250,
-   "type": "pawn_snapshot",
-   "id": 73315,
-   "name": "Banzo",
-   "faction": "Caro Tribe",
-   "kind": "visitor",
-   "pos": [
-    248,
-    0,
-    98
-   ],
-   "job": "moving.",
-   "needs": {
-    "food": 0.448,
-    "rest": 0.738
-   },
-   "mood": 0.65,
-   "thoughts": [
-    {
-     "label": "Extremely low expectations",
-     "mood": 30
-    },
-    {
-     "label": "Wielding a steel ikwa (poor 82%)",
-     "mood": 3
-    }
-   ],
-   "health": "Healthy",
-   "skills": {
-    "Shooting": 2,
-    "Melee": 2,
-    "Construction": 3,
-    "Mining": 0,
-    "Cooking": 3,
-    "Plants": 1,
-    "Animals": 3,
-    "Crafting": 0,
-    "Artistic": 6,
-    "Medicine": 2,
-    "Social": 0,
-    "Intellectual": 2
-   },
-   "traits": [
-    "Teetotaler"
-   ],
-   "relations": [],
-   "drafted": false,
-   "rx": 1788830726028
+   "rx": 1788831106097
   }
  ],
  "recent": [
-  {
-   "v": 0,
-   "t": 766160,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_MaintainPosture",
-   "condition": "Succeeded",
-   "rx": 1788830822947
-  },
-  {
-   "v": 0,
-   "t": 766162,
-   "type": "job_start",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "target": null,
-   "source": "JobGiver_WanderNearDutyLocation",
-   "rx": 1788830822979
-  },
-  {
-   "v": 0,
-   "t": 766162,
-   "type": "job_end",
-   "pawn": 73122,
-   "job": "Wait_Wander",
-   "condition": "Succeeded",
-   "rx": 1788830822984
-  },
   {
    "v": 0,
    "t": 766163,
@@ -5857,14 +5143,43 @@
    "target": null,
    "source": "JobGiver_WanderOwnRoom",
    "rx": 1788831056410
+  },
+  {
+   "v": 0,
+   "t": 807694,
+   "type": "hello",
+   "mod_version": "0.1.0",
+   "game_version": "1.6.4871 rev597",
+   "map_id": 2,
+   "rx": 1788831096874
+  },
+  {
+   "v": 0,
+   "t": 807883,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831099991
+  },
+  {
+   "v": 0,
+   "t": 807886,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderOwnRoom",
+   "rx": 1788831100042
   }
  ],
  "counts": {
   "mod_connected": 1,
-  "hello": 1,
-  "world_snapshot": 403,
-  "pawn_snapshot": 3178,
-  "job_start": 2899,
+  "hello": 2,
+  "world_snapshot": 407,
+  "pawn_snapshot": 3190,
+  "job_start": 2901,
   "job_end": 1175,
   "hediff": 17,
   "letter": 8,
@@ -5873,6 +5188,6 @@
   "mental_state": 6,
   "death": 1
  },
- "last_event_at": 1788831057.3595982,
- "published_at": 1788831075
+ "last_event_at": 1788831106.097172,
+ "published_at": 1788831107
 }
