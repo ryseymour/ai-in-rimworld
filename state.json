@@ -869,15 +869,6 @@
  "recent": [
   {
    "v": 0,
-   "t": 835396,
-   "type": "job_end",
-   "pawn": 79480,
-   "job": "GotoWander",
-   "condition": "Succeeded",
-   "rx": 1788834369545
-  },
-  {
-   "v": 0,
    "t": 835398,
    "type": "job_start",
    "pawn": 79449,
@@ -5738,10 +5729,15 @@
    "type": "mod_disconnected",
    "peer": "('127.0.0.1', 50798)",
    "rx": 1788834431318
+  },
+  {
+   "type": "mod_connected",
+   "peer": "('127.0.0.1', 50861)",
+   "rx": 1788834456415
   }
  ],
  "counts": {
-  "mod_connected": 4,
+  "mod_connected": 5,
   "hello": 4,
   "world_snapshot": 105,
   "pawn_snapshot": 1301,
@@ -5755,6 +5751,6 @@
   "hediff": 61,
   "incident": 2
  },
- "last_event_at": 1788834431.318888,
- "published_at": 1788834436
+ "last_event_at": 1788834456.415852,
+ "published_at": 1788834468
 }

@@ -3636,3 +3636,4 @@
 {"v":0,"t":839065,"type":"job_start","pawn":79469,"job":"GotoWander","target":"(118, 0, 114)","source":"JobGiver_WanderNearDutyLocation","rx":1788834424115}
 {"v":0,"t":839161,"type":"hediff","pawn":35404,"def":"Burn","part":"torso","severity":0.5,"rx":1788834425765}
 {"type":"mod_disconnected","peer":"('127.0.0.1', 50798)","rx":1788834431318}
+{"type":"mod_connected","peer":"('127.0.0.1', 50861)","rx":1788834456415}
