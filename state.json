@@ -12,27 +12,27 @@
  },
  "world": {
   "v": 0,
-  "t": 1069250,
+  "t": 1071750,
   "type": "world_snapshot",
   "day": 17,
-  "hour": 19,
+  "hour": 20,
   "date": "4th of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "windy",
-  "wealth": 24488,
+  "wealth": 24338,
   "colonists": 4,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788891495931
+  "rx": 1788891582428
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1069250,
+   "t": 1071750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 19,
+   "hour": 20,
    "id": 81682,
    "name": "G\u00e9radon",
    "faction": "Aurora",
@@ -45,7 +45,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.533,
+    "rest": 0.61,
     "joy": 0.087
    },
    "mood": 0.42,
@@ -120,14 +120,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788891496023
+   "rx": 1788891582433
   },
   {
    "v": 0,
-   "t": 1069250,
+   "t": 1071750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 19,
+   "hour": 20,
    "id": 81686,
    "name": "Schlitzer",
    "faction": "Aurora",
@@ -140,22 +140,18 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.554,
+    "rest": 0.631,
     "joy": 0.53
    },
    "mood": 0.185,
    "thoughts": [
     {
+     "label": "Badly malnourished",
+     "mood": -26
+    },
+    {
      "label": "Very low expectations",
      "mood": 24
-    },
-    {
-     "label": "Malnourished",
-     "mood": -20
-    },
-    {
-     "label": "No Thinker",
-     "mood": -5
     },
     {
      "label": "Wearing clothes (non-groin)",
@@ -168,6 +164,10 @@
     {
      "label": "Planetary habitat",
      "mood": -2
+    },
+    {
+     "label": "No tree",
+     "mood": -1
     }
    ],
    "health": "Healthy",
@@ -205,14 +205,14 @@
     }
    ],
    "drafted": false,
-   "rx": 1788891496043
+   "rx": 1788891582437
   },
   {
    "v": 0,
-   "t": 1069250,
+   "t": 1071750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 19,
+   "hour": 20,
    "id": 81698,
    "name": "Joe",
    "faction": "Aurora",
@@ -225,7 +225,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.774,
+    "rest": 0.879,
     "joy": 0.478
    },
    "mood": 0.316,
@@ -293,14 +293,14 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788891496045
+   "rx": 1788891582438
   },
   {
    "v": 0,
-   "t": 1069250,
+   "t": 1071750,
    "type": "pawn_snapshot",
    "day": 17,
-   "hour": 19,
+   "hour": 20,
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
@@ -313,14 +313,14 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.524,
+    "rest": 0.622,
     "joy": 0.067
    },
    "mood": 0,
    "thoughts": [
     {
-     "label": "Starving",
-     "mood": -32
+     "label": "Advanced starvation",
+     "mood": -38
     },
     {
      "label": "Very low expectations",
@@ -381,7 +381,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788891496051
+   "rx": 1788891582441
   },
   {
    "v": 0,
@@ -4541,6 +4541,18 @@
    "label": "Awful bedroom",
    "mood": -2,
    "rx": 1788891388308
+  },
+  {
+   "v": 0,
+   "t": 1070834,
+   "type": "thought",
+   "day": 17,
+   "hour": 20,
+   "pawn": 948,
+   "def": "SleptInBedroom",
+   "label": "Awful bedroom",
+   "mood": -2,
+   "rx": 1788891575625
   }
  ],
  "counts": {
@@ -4548,10 +4560,10 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 316,
-  "pawn_snapshot": 1552,
+  "world_snapshot": 326,
+  "pawn_snapshot": 1592,
   "job_start": 80,
-  "thought": 115,
+  "thought": 116,
   "interaction": 33,
   "job_noise": 33,
   "job_end": 35,
@@ -4559,5 +4571,5 @@
   "mental_state": 1,
   "hediff": 3
  },
- "last_event_at": 1788891496.0515358
+ "last_event_at": 1788891582.4410088
 }
