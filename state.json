@@ -1,16 +1,16 @@
 {
  "hello": {
   "v": 0,
-  "t": 809888,
+  "t": 810618,
   "type": "hello",
   "mod_version": "0.1.0",
   "game_version": "1.6.4871 rev597",
   "map_id": 2,
-  "rx": 1788831133393
+  "rx": 1788831927577
  },
  "world": {
   "v": 0,
-  "t": 810500,
+  "t": 811750,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788831143593
+  "rx": 1788831947047
  },
  "pawns": [
   {
    "v": 0,
-   "t": 810500,
+   "t": 811750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -39,7 +39,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.774,
+    "rest": 0.753,
     "joy": 0
    },
    "mood": 0,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831143593
+   "rx": 1788831947048
   },
   {
    "v": 0,
-   "t": 810500,
+   "t": 811750,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -107,7 +107,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.917,
+    "rest": 0.895,
     "joy": 0.289
    },
    "mood": 0.18,
@@ -159,25 +159,25 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831143593
+   "rx": 1788831947048
   },
   {
    "v": 0,
-   "t": 810500,
+   "t": 811750,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    103,
+    104,
     0,
     123
    ],
    "job": "wandering.",
    "needs": {
     "food": 0,
-    "rest": 0.618
+    "rest": 0.599
    },
    "mood": 0,
    "thoughts": [
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788831143594
+   "rx": 1788831947049
   }
  ],
  "recent": [
@@ -327,17 +327,98 @@
     "in_game": false
    },
    "rx": 1788831843457
+  },
+  {
+   "v": 0,
+   "t": 810618,
+   "type": "hello",
+   "mod_version": "0.1.0",
+   "game_version": "1.6.4871 rev597",
+   "map_id": 2,
+   "rx": 1788831927577
+  },
+  {
+   "v": 0,
+   "t": 811359,
+   "type": "command_result",
+   "id": "c-4",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 811359,
+    "paused": false,
+    "in_game": true
+   },
+   "rx": 1788831940479
+  },
+  {
+   "v": 0,
+   "t": 811444,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_MaintainPosture",
+   "target": null,
+   "source": null,
+   "rx": 1788831941882
+  },
+  {
+   "v": 0,
+   "t": 811447,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderOwnRoom",
+   "rx": 1788831941941
+  },
+  {
+   "v": 0,
+   "t": 811954,
+   "type": "command_result",
+   "id": "c-5",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 811954,
+    "paused": false,
+    "in_game": true
+   },
+   "rx": 1788831950463
+  },
+  {
+   "v": 0,
+   "t": 811956,
+   "type": "command_result",
+   "id": "c-6",
+   "ok": true,
+   "data": {
+    "speed": 0,
+    "paused": true
+   },
+   "rx": 1788831950495
+  },
+  {
+   "v": 0,
+   "t": 811956,
+   "type": "command_result",
+   "id": "c-7",
+   "ok": true,
+   "data": {
+    "speed": 1,
+    "paused": false
+   },
+   "rx": 1788831950512
   }
  ],
  "counts": {
   "mod_connected": 4,
-  "hello": 1,
-  "world_snapshot": 4,
-  "pawn_snapshot": 12,
-  "job_start": 4,
+  "hello": 2,
+  "world_snapshot": 10,
+  "pawn_snapshot": 30,
+  "job_start": 6,
   "mod_disconnected": 3,
-  "command_result": 1
+  "command_result": 5
  },
- "last_event_at": 1788831843.457133,
- "published_at": 1788831918
+ "last_event_at": 1788831950.512872,
+ "published_at": 1788831950
 }
