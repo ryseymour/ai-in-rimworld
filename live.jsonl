@@ -23,3 +23,4 @@
 {"type":"mod_disconnected","peer":"('127.0.0.1', 50341)","rx":1788831154379}
 {"type":"mod_connected","peer":"('127.0.0.1', 50377)","rx":1788831458226}
 {"type":"mod_disconnected","peer":"('127.0.0.1', 50377)","rx":1788831551736}
+{"type":"mod_connected","peer":"('127.0.0.1', 50394)","rx":1788831573503}

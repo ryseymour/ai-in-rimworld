@@ -298,16 +298,21 @@
    "type": "mod_disconnected",
    "peer": "('127.0.0.1', 50377)",
    "rx": 1788831551736
+  },
+  {
+   "type": "mod_connected",
+   "peer": "('127.0.0.1', 50394)",
+   "rx": 1788831573503
   }
  ],
  "counts": {
-  "mod_connected": 2,
+  "mod_connected": 3,
   "hello": 1,
   "world_snapshot": 4,
   "pawn_snapshot": 12,
   "job_start": 4,
   "mod_disconnected": 2
  },
- "last_event_at": 1788831551.7366002,
- "published_at": 1788831571
+ "last_event_at": 1788831573.5031219,
+ "published_at": 1788831603
 }
