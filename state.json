@@ -12,7 +12,7 @@
  },
  "world": {
   "v": 0,
-  "t": 1066750,
+  "t": 1067000,
   "type": "world_snapshot",
   "day": 17,
   "hour": 18,
@@ -24,12 +24,12 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788891125810
+  "rx": 1788891155105
  },
  "pawns": [
   {
    "v": 0,
-   "t": 1066750,
+   "t": 1067000,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 18,
@@ -45,7 +45,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.455,
+    "rest": 0.464,
     "joy": 0.087
    },
    "mood": 0.42,
@@ -120,11 +120,11 @@
     }
    ],
    "drafted": false,
-   "rx": 1788891126978
+   "rx": 1788891155111
   },
   {
    "v": 0,
-   "t": 1066750,
+   "t": 1067000,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 18,
@@ -140,7 +140,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.48,
+    "rest": 0.485,
     "joy": 0.53
    },
    "mood": 0.185,
@@ -205,11 +205,11 @@
     }
    ],
    "drafted": false,
-   "rx": 1788891126985
+   "rx": 1788891155115
   },
   {
    "v": 0,
-   "t": 1066750,
+   "t": 1067000,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 18,
@@ -225,7 +225,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.669,
+    "rest": 0.682,
     "joy": 0.478
    },
    "mood": 0.316,
@@ -293,11 +293,11 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788891126986
+   "rx": 1788891155115
   },
   {
    "v": 0,
-   "t": 1066750,
+   "t": 1067000,
    "type": "pawn_snapshot",
    "day": 17,
    "hour": 18,
@@ -313,7 +313,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.433,
+    "rest": 0.439,
     "joy": 0.067
    },
    "mood": 0,
@@ -381,7 +381,7 @@
    "gender": "Male",
    "relations": [],
    "drafted": false,
-   "rx": 1788891127015
+   "rx": 1788891155120
   },
   {
    "v": 0,
@@ -4524,8 +4524,8 @@
   "command_result": 8,
   "letter": 3,
   "hello": 1,
-  "world_snapshot": 306,
-  "pawn_snapshot": 1512,
+  "world_snapshot": 307,
+  "pawn_snapshot": 1516,
   "job_start": 80,
   "thought": 113,
   "interaction": 33,
@@ -4535,5 +4535,5 @@
   "mental_state": 1,
   "hediff": 3
  },
- "last_event_at": 1788891127.016001
+ "last_event_at": 1788891155.12039
 }
