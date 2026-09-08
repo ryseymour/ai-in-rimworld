@@ -1850,6 +1850,20 @@
     "paused": true
    },
    "rx": 1788831975647
+  },
+  {
+   "v": 0,
+   "t": 813452,
+   "type": "command_result",
+   "id": "c-18",
+   "ok": true,
+   "data": {
+    "mod_version": "0.1.0",
+    "tick": 813452,
+    "paused": true,
+    "in_game": true
+   },
+   "rx": 1788832132080
   }
  ],
  "counts": {
@@ -1859,7 +1873,7 @@
   "pawn_snapshot": 75,
   "job_start": 40,
   "mod_disconnected": 3,
-  "command_result": 15,
+  "command_result": 16,
   "letter": 4,
   "death": 1,
   "incident": 1,
@@ -1867,6 +1881,6 @@
   "job_end": 22,
   "interaction": 2
  },
- "last_event_at": 1788831975.647242,
- "published_at": 1788832108
+ "last_event_at": 1788832132.080647,
+ "published_at": 1788832140
 }
