@@ -6,51 +6,47 @@
   "mod_version": "0.1.0",
   "game_version": "1.6.4871 rev597",
   "map_id": 2,
-  "rx": 1788888790540
+  "rx": 1788888914269
  },
  "world": {
   "v": 0,
-  "t": 993250,
+  "t": 990618,
   "type": "world_snapshot",
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
   "wealth": 21839,
-  "colonists": 1,
+  "colonists": 4,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788888834672
+  "rx": 1788888914270
  },
  "pawns": [
   {
    "v": 0,
-   "t": 993250,
+   "t": 990618,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    100,
+    98,
     0,
-    124
+    125
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0,
-    "rest": 0.52,
-    "joy": 0.413
+    "food": 1,
+    "rest": 1,
+    "joy": 1
    },
-   "mood": 0.535,
+   "mood": 0.592,
    "thoughts": [
     {
      "label": "Catharsis",
      "mood": 40
-    },
-    {
-     "label": "Badly malnourished",
-     "mood": -26
     },
     {
      "label": "Very low expectations",
@@ -63,6 +59,10 @@
     {
      "label": "Ate corpse",
      "mood": -12
+    },
+    {
+     "label": "Recreation fully satisfied",
+     "mood": 10
     },
     {
      "label": "Colonist left unburied",
@@ -89,7 +89,214 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888834672
+   "rx": 1788888914285
+  },
+  {
+   "v": 0,
+   "t": 990618,
+   "type": "pawn_snapshot",
+   "id": 84427,
+   "name": "Jacobson",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    100,
+    0,
+    96
+   ],
+   "job": "wandering.",
+   "needs": {
+    "food": 1,
+    "rest": 1,
+    "joy": 1
+   },
+   "mood": 0.5,
+   "thoughts": [
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Recreation fully satisfied",
+     "mood": 10
+    },
+    {
+     "label": "Colonist left unburied",
+     "mood": -10
+    },
+    {
+     "label": "Trees sorely missed",
+     "mood": -5
+    },
+    {
+     "label": "Body modder frustrated",
+     "mood": -4
+    },
+    {
+     "label": "Wearing clothes (non-groin)",
+     "mood": -4
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 2,
+    "Melee": 0,
+    "Construction": 0,
+    "Mining": 0,
+    "Cooking": 3,
+    "Plants": 2,
+    "Animals": 0,
+    "Crafting": 3,
+    "Artistic": 0,
+    "Medicine": 1,
+    "Social": 5,
+    "Intellectual": 1
+   },
+   "traits": [
+    "Masochist",
+    "Slowpoke",
+    "Body modder"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788888914285
+  },
+  {
+   "v": 0,
+   "t": 990618,
+   "type": "pawn_snapshot",
+   "id": 84431,
+   "name": "Martin",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    99,
+    0,
+    125
+   ],
+   "job": "building grave (blueprint).",
+   "needs": {
+    "food": 0.8,
+    "rest": 0.933,
+    "joy": 0.597
+   },
+   "mood": 0.5,
+   "thoughts": [
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Colonist left unburied",
+     "mood": -10
+    },
+    {
+     "label": "Trees sorely missed",
+     "mood": -5
+    },
+    {
+     "label": "Wearing clothes (non-groin)",
+     "mood": -4
+    },
+    {
+     "label": "Undergrounder indoors",
+     "mood": 3
+    },
+    {
+     "label": "Planetary habitat",
+     "mood": -2
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 3,
+    "Construction": 5,
+    "Mining": 17,
+    "Cooking": 4,
+    "Plants": 4,
+    "Animals": 10,
+    "Artistic": 2,
+    "Medicine": 4,
+    "Social": 4
+   },
+   "traits": [
+    "Undergrounder",
+    "Very neurotic"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788888914286
+  },
+  {
+   "v": 0,
+   "t": 990618,
+   "type": "pawn_snapshot",
+   "id": 84435,
+   "name": "Fu",
+   "faction": "Aurora",
+   "kind": "colonist",
+   "pos": [
+    97,
+    0,
+    124
+   ],
+   "job": null,
+   "needs": {
+    "food": 0.8,
+    "rest": 0.972,
+    "joy": 0.54
+   },
+   "mood": 0.5,
+   "thoughts": [
+    {
+     "label": "Very low expectations",
+     "mood": 24
+    },
+    {
+     "label": "Trees sorely missed",
+     "mood": -5
+    },
+    {
+     "label": "Wearing veil",
+     "mood": 2
+    },
+    {
+     "label": "Planetary habitat",
+     "mood": -2
+    },
+    {
+     "label": "Colonist left unburied",
+     "mood": 0
+    },
+    {
+     "label": "Healthy trees",
+     "mood": 0
+    }
+   ],
+   "health": "Healthy",
+   "skills": {
+    "Shooting": 0,
+    "Melee": 9,
+    "Construction": 1,
+    "Mining": 1,
+    "Cooking": 3,
+    "Plants": 3,
+    "Animals": 4,
+    "Crafting": 4,
+    "Artistic": 0,
+    "Medicine": 0,
+    "Social": 5,
+    "Intellectual": 4
+   },
+   "traits": [
+    "Nimble",
+    "Brawler",
+    "Psychopath"
+   ],
+   "relations": [],
+   "drafted": false,
+   "rx": 1788888914287
   }
  ],
  "recent": [
@@ -1933,18 +2140,470 @@
     ]
    },
    "rx": 1788888869720
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-12",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "count": 0,
+    "zones": []
+   },
+   "rx": 1788888884633
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-13",
+   "ok": false,
+   "error": "no_pawn",
+   "detail": "no spawned pawn with id 835",
+   "rx": 1788888884709
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-14",
+   "ok": false,
+   "error": "no_pawn",
+   "detail": "no spawned pawn with id 835",
+   "rx": 1788888884730
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-15",
+   "ok": true,
+   "data": {
+    "pawn": 948,
+    "name": "Zeke",
+    "removed": 2,
+    "downed": false,
+    "health": "Healthy"
+   },
+   "rx": 1788888884757
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-16",
+   "ok": false,
+   "error": "no_pawn",
+   "detail": "no spawned pawn with id 35404",
+   "rx": 1788888884787
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-17",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "total": 15,
+    "returned": 15,
+    "things": [
+     {
+      "id": 36958,
+      "def": "Mech_Tesseron",
+      "label": "Tesseron",
+      "category": "Pawn",
+      "pos": [
+       89,
+       0,
+       137
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 36960,
+      "def": "Mech_Pikeman",
+      "label": "Pikeman",
+      "category": "Pawn",
+      "pos": [
+       91,
+       0,
+       142
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 948,
+      "def": "Human",
+      "label": "Zeke",
+      "category": "Pawn",
+      "pos": [
+       98,
+       0,
+       125
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79597,
+      "def": "Donkey",
+      "label": "Donkey",
+      "category": "Pawn",
+      "pos": [
+       167,
+       0,
+       162
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79598,
+      "def": "Donkey",
+      "label": "Donkey",
+      "category": "Pawn",
+      "pos": [
+       162,
+       0,
+       159
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79599,
+      "def": "Donkey",
+      "label": "Donkey",
+      "category": "Pawn",
+      "pos": [
+       168,
+       0,
+       163
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80198,
+      "def": "Hare",
+      "label": "Hare",
+      "category": "Pawn",
+      "pos": [
+       16,
+       0,
+       134
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80301,
+      "def": "Turkey",
+      "label": "Turkey",
+      "category": "Pawn",
+      "pos": [
+       57,
+       0,
+       229
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80519,
+      "def": "Wolf_Timber",
+      "label": "Timber wolf",
+      "category": "Pawn",
+      "pos": [
+       23,
+       0,
+       102
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80608,
+      "def": "Squirrel",
+      "label": "Squirrel",
+      "category": "Pawn",
+      "pos": [
+       124,
+       0,
+       15
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80735,
+      "def": "Squirrel",
+      "label": "Squirrel",
+      "category": "Pawn",
+      "pos": [
+       123,
+       0,
+       46
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80846,
+      "def": "Turkey",
+      "label": "Turkey",
+      "category": "Pawn",
+      "pos": [
+       199,
+       0,
+       214
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80886,
+      "def": "Squirrel",
+      "label": "Squirrel",
+      "category": "Pawn",
+      "pos": [
+       8,
+       0,
+       56
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80921,
+      "def": "Hare",
+      "label": "Hare",
+      "category": "Pawn",
+      "pos": [
+       133,
+       0,
+       52
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 80994,
+      "def": "Squirrel",
+      "label": "Squirrel",
+      "category": "Pawn",
+      "pos": [
+       7,
+       0,
+       229
+      ],
+      "stack": 1,
+      "forbidden": false
+     }
+    ]
+   },
+   "rx": 1788888899504
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-18",
+   "ok": true,
+   "data": {
+    "would_spawn": "Colonist",
+    "faction": "Aurora",
+    "at": [
+     150,
+     0,
+     120
+    ]
+   },
+   "rx": 1788888899545
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-19",
+   "ok": true,
+   "data": {
+    "id": 84427,
+    "name": "Jacobson",
+    "kind": "Colonist",
+    "faction": "Aurora",
+    "at": [
+     100,
+     0,
+     96
+    ]
+   },
+   "rx": 1788888899632
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-20",
+   "ok": false,
+   "error": "no_def",
+   "detail": "no PawnKindDef named NotARealKind (try /q/defs?type=pawnkind)",
+   "rx": 1788888899663
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-21",
+   "ok": true,
+   "data": {
+    "type": "pawnkind",
+    "total": 1,
+    "returned": 1,
+    "defs": [
+     {
+      "defName": "Colonist",
+      "label": "colonist"
+     }
+    ]
+   },
+   "rx": 1788888899683
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "letter",
+   "label": "Thinker role activated",
+   "text": "The number of Pasturists in your colony has reached 3. You can now assign the role of the Thinker to one of your colonists.\n\nTo assign a role, use the person's Social tab, or select a ritual spot or altar and press the 'Begin role change' button.",
+   "def": "NeutralEvent",
+   "rx": 1788888914002
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-22",
+   "ok": true,
+   "data": {
+    "id": 84431,
+    "name": "Martin",
+    "kind": "Colonist",
+    "faction": "Aurora",
+    "at": [
+     99,
+     0,
+     125
+    ]
+   },
+   "rx": 1788888914002
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-23",
+   "ok": true,
+   "data": {
+    "id": 84435,
+    "name": "Fu",
+    "kind": "Colonist",
+    "faction": "Aurora",
+    "at": [
+     97,
+     0,
+     124
+    ]
+   },
+   "rx": 1788888914054
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-24",
+   "ok": true,
+   "data": {
+    "pawn": 948,
+    "name": "Zeke",
+    "removed": 0,
+    "downed": false,
+    "health": "Healthy"
+   },
+   "rx": 1788888914080
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-25",
+   "ok": true,
+   "data": {
+    "pawn": 84427,
+    "name": "Jacobson",
+    "removed": 0,
+    "downed": false,
+    "health": "Healthy"
+   },
+   "rx": 1788888914096
+  },
+  {
+   "v": 0,
+   "t": 990617,
+   "type": "command_result",
+   "id": "c-26",
+   "ok": true,
+   "data": {
+    "speed": 3,
+    "paused": false
+   },
+   "rx": 1788888914113
+  },
+  {
+   "v": 0,
+   "t": 990618,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "PlaceNoCostFrame",
+   "target": "Thing_Blueprint_Grave81156",
+   "source": "JobGiver_Work",
+   "rx": 1788888914239
+  },
+  {
+   "v": 0,
+   "t": 990618,
+   "type": "hello",
+   "mod_version": "0.1.0",
+   "game_version": "1.6.4871 rev597",
+   "map_id": 2,
+   "rx": 1788888914269
+  },
+  {
+   "v": 0,
+   "t": 990619,
+   "type": "job_start",
+   "pawn": 84435,
+   "job": "Research",
+   "target": "Thing_SimpleResearchBench32635",
+   "source": "JobGiver_Work",
+   "rx": 1788888914305
   }
  ],
  "counts": {
   "mod_connected": 3,
   "mod_disconnected": 2,
-  "command_result": 11,
-  "hello": 1,
-  "world_snapshot": 12,
-  "pawn_snapshot": 12,
-  "job_start": 1,
+  "command_result": 26,
+  "hello": 2,
+  "world_snapshot": 13,
+  "pawn_snapshot": 16,
+  "job_start": 3,
   "job_end": 1,
-  "job_noise": 1
+  "job_noise": 1,
+  "letter": 1
  },
- "last_event_at": 1788888869.7206972
+ "last_event_at": 1788888914.3053482
 }
