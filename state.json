@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 714250,
+  "t": 716250,
   "type": "world_snapshot",
   "date": "13th of Aprimay, 5500",
   "season": "PermanentSummer",
@@ -20,12 +20,12 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788829932330
+  "rx": 1788829966846
  },
  "pawns": [
   {
    "v": 0,
-   "t": 714250,
+   "t": 716250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -38,8 +38,8 @@
    ],
    "job": "sleeping.",
    "needs": {
-    "food": 0.517,
-    "rest": 0.499,
+    "food": 0.426,
+    "rest": 0.574,
     "joy": 0.049
    },
    "mood": 0.171,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829932331
+   "rx": 1788829966846
   },
   {
    "v": 0,
-   "t": 714250,
+   "t": 716250,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -106,8 +106,8 @@
    ],
    "job": "resting.",
    "needs": {
-    "food": 0.078,
-    "rest": 0.872,
+    "food": 0.044,
+    "rest": 0.841,
     "joy": 0.472
    },
    "mood": 0.347,
@@ -159,39 +159,39 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829932332
+   "rx": 1788829966846
   },
   {
    "v": 0,
-   "t": 714250,
+   "t": 716250,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    100,
     0,
-    123
+    114
    ],
-   "job": "resting.",
+   "job": "consuming simple meal.",
    "needs": {
     "food": 0,
-    "rest": 0.808
+    "rest": 0.777
    },
-   "mood": 0.08,
+   "mood": 0.087,
    "thoughts": [
     {
      "label": "Very low expectations",
      "mood": 24
     },
     {
-     "label": "Intense pain",
-     "mood": -15
+     "label": "Malnourished",
+     "mood": -20
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
+     "label": "Intense pain",
+     "mood": -15
     },
     {
      "label": "I am disliked xenotype",
@@ -202,8 +202,8 @@
      "mood": -5
     },
     {
-     "label": "Cramped interior",
-     "mood": -5
+     "label": "My rival Bomba died",
+     "mood": 4
     }
    ],
    "health": "Injured",
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788829932332
+   "rx": 1788829966847
   }
  ],
  "recent": [
@@ -312,17 +312,37 @@
    "target": "Thing_MealSimple34320",
    "source": "JobGiver_GetFood",
    "rx": 1788829934464
+  },
+  {
+   "v": 0,
+   "t": 716000,
+   "type": "letter",
+   "label": "Quest available: Shelter for an Evangelist",
+   "text": "A new quest is available.\n\nThe quest is called 'Shelter for an Evangelist'.\n\nIf you don't accept the quest within 5 days, it will expire.",
+   "def": "NewQuest",
+   "rx": 1788829962716
+  },
+  {
+   "v": 0,
+   "t": 716000,
+   "type": "incident",
+   "def": "GiveQuest_Random",
+   "label": "quest",
+   "points": 35,
+   "rx": 1788829962718
   }
  ],
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 30,
-  "pawn_snapshot": 90,
+  "world_snapshot": 38,
+  "pawn_snapshot": 114,
   "job_start": 5,
   "job_end": 1,
-  "hediff": 1
+  "hediff": 1,
+  "letter": 1,
+  "incident": 1
  },
- "last_event_at": 1788829934.46434,
- "published_at": 1788829936
+ "last_event_at": 1788829966.8472362,
+ "published_at": 1788829967
 }
