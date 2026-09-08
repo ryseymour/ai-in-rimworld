@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 838250,
+  "t": 849250,
   "type": "world_snapshot",
   "date": "15th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 22000,
+  "wealth": 22035,
   "colonists": 2,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788887697796
+  "rx": 1788887729183
  },
  "pawns": [
   {
    "v": 0,
-   "t": 838250,
+   "t": 849250,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    104,
+    103,
     0,
-    109
+    108
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.049,
-    "rest": 0.694,
+    "food": 0.518,
+    "rest": 0.518,
     "joy": 0
    },
-   "mood": 0.128,
+   "mood": 0.248,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -61,12 +61,12 @@
      "mood": -12
     },
     {
-     "label": "Ravenously hungry",
-     "mood": -12
-    },
-    {
      "label": "Serious pain",
      "mood": -10
+    },
+    {
+     "label": "Initial hope",
+     "mood": 5
     }
    ],
    "health": "Injured",
@@ -89,7 +89,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887697796
+   "rx": 1788887729183
   },
   {
    "v": 0,
@@ -164,7 +164,7 @@
   },
   {
    "v": 0,
-   "t": 838250,
+   "t": 849250,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -178,7 +178,7 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.408
+    "rest": 0.85
    },
    "mood": 0.169,
    "thoughts": [
@@ -227,7 +227,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788887697796
+   "rx": 1788887729183
   }
  ],
  "recent": [
@@ -3426,6 +3426,84 @@
     "GotoWander": 1
    },
    "rx": 1788887697101
+  },
+  {
+   "v": 0,
+   "t": 840000,
+   "type": "job_noise",
+   "total": 10,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 3,
+    "GotoWander": 2
+   },
+   "rx": 1788887702768
+  },
+  {
+   "v": 0,
+   "t": 840983,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Ingest",
+   "target": "Thing_Corpse_Human79506",
+   "source": "JobGiver_GetFood",
+   "rx": 1788887705498
+  },
+  {
+   "v": 0,
+   "t": 840983,
+   "type": "job_end",
+   "pawn": 948,
+   "job": "Ingest",
+   "condition": "Succeeded",
+   "rx": 1788887705498
+  },
+  {
+   "v": 0,
+   "t": 842000,
+   "type": "job_noise",
+   "total": 3,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "Wait_Wander": 1
+   },
+   "rx": 1788887708449
+  },
+  {
+   "v": 0,
+   "t": 844000,
+   "type": "job_noise",
+   "total": 4,
+   "counts": {
+    "Wait_MaintainPosture": 2,
+    "Wait_Wander": 1,
+    "GotoWander": 1
+   },
+   "rx": 1788887714232
+  },
+  {
+   "v": 0,
+   "t": 846000,
+   "type": "job_noise",
+   "total": 8,
+   "counts": {
+    "Wait_MaintainPosture": 4,
+    "Wait_Wander": 3,
+    "GotoWander": 1
+   },
+   "rx": 1788887720033
+  },
+  {
+   "v": 0,
+   "t": 848000,
+   "type": "job_noise",
+   "total": 10,
+   "counts": {
+    "Wait_MaintainPosture": 5,
+    "Wait_Wander": 3,
+    "GotoWander": 2
+   },
+   "rx": 1788887725701
   }
  ],
  "counts": {
@@ -3433,11 +3511,11 @@
   "command_result": 22,
   "mod_disconnected": 2,
   "hello": 3,
-  "world_snapshot": 1661,
-  "pawn_snapshot": 1291,
-  "job_start": 70,
-  "job_end": 33,
-  "job_noise": 56,
+  "world_snapshot": 1705,
+  "pawn_snapshot": 1379,
+  "job_start": 71,
+  "job_end": 34,
+  "job_noise": 61,
   "hediff": 18,
   "death": 5,
   "letter": 23,
@@ -3445,5 +3523,5 @@
   "interaction": 15,
   "mental_state": 1
  },
- "last_event_at": 1788887697.79649
+ "last_event_at": 1788887729.183979
 }
