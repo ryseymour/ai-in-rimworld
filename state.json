@@ -10,7 +10,7 @@
  },
  "world": {
   "v": 0,
-  "t": 990618,
+  "t": 991000,
   "type": "world_snapshot",
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
@@ -20,29 +20,29 @@
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788888914270
+  "rx": 1788888915392
  },
  "pawns": [
   {
    "v": 0,
-   "t": 990618,
+   "t": 991000,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    98,
+    101,
     0,
-    125
+    119
    ],
    "job": "wandering.",
    "needs": {
-    "food": 1,
-    "rest": 1,
-    "joy": 1
+    "food": 0.979,
+    "rest": 0.993,
+    "joy": 0.996
    },
-   "mood": 0.592,
+   "mood": 0.613,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -89,28 +89,28 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888914285
+   "rx": 1788888915393
   },
   {
    "v": 0,
-   "t": 990618,
+   "t": 991000,
    "type": "pawn_snapshot",
    "id": 84427,
    "name": "Jacobson",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    100,
+    97,
     0,
-    96
+    103
    ],
    "job": "wandering.",
    "needs": {
-    "food": 1,
-    "rest": 1,
-    "joy": 1
+    "food": 0.988,
+    "rest": 0.993,
+    "joy": 0.996
    },
-   "mood": 0.5,
+   "mood": 0.486,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -129,11 +129,11 @@
      "mood": -5
     },
     {
-     "label": "Body modder frustrated",
-     "mood": -4
+     "label": "No Thinker",
+     "mood": -5
     },
     {
-     "label": "Wearing clothes (non-groin)",
+     "label": "Body modder frustrated",
      "mood": -4
     }
    ],
@@ -159,28 +159,28 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888914285
+   "rx": 1788888915393
   },
   {
    "v": 0,
-   "t": 990618,
+   "t": 991000,
    "type": "pawn_snapshot",
    "id": 84431,
    "name": "Martin",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    99,
+    108,
     0,
-    125
+    119
    ],
    "job": "building grave (blueprint).",
    "needs": {
-    "food": 0.8,
-    "rest": 0.933,
-    "joy": 0.597
+    "food": 0.788,
+    "rest": 0.926,
+    "joy": 0.592
    },
-   "mood": 0.5,
+   "mood": 0.486,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -195,16 +195,16 @@
      "mood": -5
     },
     {
+     "label": "No Thinker",
+     "mood": -5
+    },
+    {
      "label": "Wearing clothes (non-groin)",
      "mood": -4
     },
     {
-     "label": "Undergrounder indoors",
-     "mood": 3
-    },
-    {
-     "label": "Planetary habitat",
-     "mood": -2
+     "label": "Undergrounder outdoors",
+     "mood": -3
     }
    ],
    "health": "Healthy",
@@ -226,28 +226,28 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888914286
+   "rx": 1788888915393
   },
   {
    "v": 0,
-   "t": 990618,
+   "t": 991000,
    "type": "pawn_snapshot",
    "id": 84435,
    "name": "Fu",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    97,
+    101,
     0,
-    124
+    111
    ],
-   "job": null,
+   "job": "researching.",
    "needs": {
-    "food": 0.8,
-    "rest": 0.972,
-    "joy": 0.54
+    "food": 0.792,
+    "rest": 0.967,
+    "joy": 0.537
    },
-   "mood": 0.5,
+   "mood": 0.51,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -255,6 +255,10 @@
     },
     {
      "label": "Trees sorely missed",
+     "mood": -5
+    },
+    {
+     "label": "No Thinker",
      "mood": -5
     },
     {
@@ -267,10 +271,6 @@
     },
     {
      "label": "Colonist left unburied",
-     "mood": 0
-    },
-    {
-     "label": "Healthy trees",
      "mood": 0
     }
    ],
@@ -296,7 +296,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788888914287
+   "rx": 1788888915393
   }
  ],
  "recent": [
@@ -2591,6 +2591,35 @@
    "target": "Thing_SimpleResearchBench32635",
    "source": "JobGiver_Work",
    "rx": 1788888914305
+  },
+  {
+   "v": 0,
+   "t": 990677,
+   "type": "interaction",
+   "initiator": 948,
+   "recipient": 84435,
+   "def": "Chitchat",
+   "text": "Zeke made a comment about playing dice to Fu.",
+   "rx": 1788888914475
+  },
+  {
+   "v": 0,
+   "t": 991080,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "FinishFrame",
+   "target": "Thing_Frame_Grave84446",
+   "source": "JobGiver_Work",
+   "rx": 1788888915602
+  },
+  {
+   "v": 0,
+   "t": 991080,
+   "type": "job_end",
+   "pawn": 84431,
+   "job": "FinishFrame",
+   "condition": "Succeeded",
+   "rx": 1788888915602
   }
  ],
  "counts": {
@@ -2598,12 +2627,13 @@
   "mod_disconnected": 2,
   "command_result": 26,
   "hello": 2,
-  "world_snapshot": 13,
-  "pawn_snapshot": 16,
-  "job_start": 3,
-  "job_end": 1,
+  "world_snapshot": 15,
+  "pawn_snapshot": 24,
+  "job_start": 4,
+  "job_end": 2,
   "job_noise": 1,
-  "letter": 1
+  "letter": 1,
+  "interaction": 1
  },
- "last_event_at": 1788888914.3053482
+ "last_event_at": 1788888915.6027288
 }
