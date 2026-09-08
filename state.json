@@ -10,22 +10,22 @@
  },
  "world": {
   "v": 0,
-  "t": 782000,
+  "t": 787750,
   "type": "world_snapshot",
   "date": "14th of Aprimay, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 23109,
+  "wealth": 23019,
   "colonists": 3,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788830915099
+  "rx": 1788830947077
  },
  "pawns": [
   {
    "v": 0,
-   "t": 782000,
+   "t": 787750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
@@ -39,14 +39,14 @@
    "job": "sleeping.",
    "needs": {
     "food": 0,
-    "rest": 0.462,
+    "rest": 0.685,
     "joy": 0.024
    },
    "mood": 0,
    "thoughts": [
     {
-     "label": "Badly malnourished",
-     "mood": -26
+     "label": "Starving",
+     "mood": -32
     },
     {
      "label": "Very low expectations",
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830915104
+   "rx": 1788830947077
   },
   {
    "v": 0,
-   "t": 782000,
+   "t": 787750,
    "type": "pawn_snapshot",
    "id": 835,
    "name": "Shun",
@@ -107,7 +107,7 @@
    "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.976,
+    "rest": 0.884,
     "joy": 0.289
    },
    "mood": 0.18,
@@ -129,12 +129,12 @@
      "mood": -20
     },
     {
-     "label": "Ate raw food",
-     "mood": -7
+     "label": "Initial hope",
+     "mood": 5
     },
     {
-     "label": "Ate fungus raw",
-     "mood": -6
+     "label": "Rebuffed by Zeke",
+     "mood": -5
     }
    ],
    "health": "Unconscious",
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830915105
+   "rx": 1788830947078
   },
   {
    "v": 0,
-   "t": 782000,
+   "t": 787750,
    "type": "pawn_snapshot",
    "id": 35404,
    "name": "Lau",
@@ -174,10 +174,10 @@
     0,
     123
    ],
-   "job": "sleeping.",
+   "job": "resting.",
    "needs": {
     "food": 0,
-    "rest": 0.874
+    "rest": 0.979
    },
    "mood": 0,
    "thoughts": [
@@ -198,12 +198,12 @@
      "mood": -6
     },
     {
-     "label": "Unsightly environment",
+     "label": "Darkness",
      "mood": -5
     },
     {
-     "label": "My rival Bomba died",
-     "mood": 4
+     "label": "Unsightly environment",
+     "mood": -5
     }
    ],
    "health": "Injured",
@@ -226,7 +226,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788830915106
+   "rx": 1788830947078
   },
   {
    "v": 0,
@@ -5848,8 +5848,8 @@
  "counts": {
   "mod_connected": 1,
   "hello": 1,
-  "world_snapshot": 301,
-  "pawn_snapshot": 2872,
+  "world_snapshot": 324,
+  "pawn_snapshot": 2941,
   "job_start": 2823,
   "job_end": 1173,
   "hediff": 16,
@@ -5859,6 +5859,6 @@
   "mental_state": 4,
   "death": 1
  },
- "last_event_at": 1788830915.106334,
- "published_at": 1788830916
+ "last_event_at": 1788830947.078959,
+ "published_at": 1788830948
 }
