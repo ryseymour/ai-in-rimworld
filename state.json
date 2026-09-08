@@ -10,39 +10,39 @@
  },
  "world": {
   "v": 0,
-  "t": 999000,
+  "t": 1001750,
   "type": "world_snapshot",
   "date": "2nd of Jugust, 5500",
   "season": "PermanentSummer",
   "weather": "clear",
-  "wealth": 26522,
+  "wealth": 26372,
   "colonists": 4,
   "visitors": 0,
   "hostiles": 0,
   "tile": 1524,
-  "rx": 1788889368330
+  "rx": 1788889397305
  },
  "pawns": [
   {
    "v": 0,
-   "t": 999000,
+   "t": 1001750,
    "type": "pawn_snapshot",
    "id": 948,
    "name": "Zeke",
    "faction": "Aurora",
    "kind": "colonist",
    "pos": [
-    98,
+    97,
     0,
-    128
+    154
    ],
-   "job": "wandering.",
+   "job": "fleeing.",
    "needs": {
-    "food": 0.608,
-    "rest": 0.867,
-    "joy": 0.916
+    "food": 0.482,
+    "rest": 0.824,
+    "joy": 0.889
    },
-   "mood": 0.907,
+   "mood": 0.836,
    "thoughts": [
     {
      "label": "Catharsis",
@@ -57,11 +57,11 @@
      "mood": 10
     },
     {
-     "label": "No Thinker",
+     "label": "Darkness",
      "mood": -5
     },
     {
-     "label": "Darkness",
+     "label": "Minor pain",
      "mood": -5
     },
     {
@@ -69,7 +69,7 @@
      "mood": -4
     }
    ],
-   "health": "Healthy",
+   "health": "Injured",
    "skills": {
     "Construction": 1,
     "Mining": 2,
@@ -89,11 +89,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889368331
+   "rx": 1788889397306
   },
   {
    "v": 0,
-   "t": 999000,
+   "t": 1001750,
    "type": "pawn_snapshot",
    "id": 84427,
    "name": "Jacobson",
@@ -102,15 +102,15 @@
    "pos": [
     99,
     0,
-    101
+    104
    ],
    "job": "wandering.",
    "needs": {
-    "food": 0.776,
-    "rest": 0.867,
-    "joy": 0.916
+    "food": 0.704,
+    "rest": 0.824,
+    "joy": 0.994
    },
-   "mood": 0.424,
+   "mood": 0.432,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -121,6 +121,10 @@
      "mood": 10
     },
     {
+     "label": "Darkness",
+     "mood": -5
+    },
+    {
      "label": "Trees sorely missed",
      "mood": -5
     },
@@ -129,12 +133,8 @@
      "mood": -5
     },
     {
-     "label": "Darkness",
-     "mood": -5
-    },
-    {
-     "label": "Observed corpse",
-     "mood": -4
+     "label": "Spacious interior",
+     "mood": 5
     }
    ],
    "health": "Healthy",
@@ -159,11 +159,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889368331
+   "rx": 1788889397306
   },
   {
    "v": 0,
-   "t": 999000,
+   "t": 1001750,
    "type": "pawn_snapshot",
    "id": 84431,
    "name": "Martin",
@@ -172,15 +172,15 @@
    "pos": [
     108,
     0,
-    103
+    161
    ],
-   "job": "wandering.",
+   "job": "cowering.",
    "needs": {
-    "food": 0.576,
-    "rest": 0.8,
-    "joy": 0.985
+    "food": 0.504,
+    "rest": 0.757,
+    "joy": 0.958
    },
-   "mood": 0.52,
+   "mood": 0.508,
    "thoughts": [
     {
      "label": "Very low expectations",
@@ -191,7 +191,7 @@
      "mood": 10
     },
     {
-     "label": "Trees sorely missed",
+     "label": "Minor pain",
      "mood": -5
     },
     {
@@ -207,7 +207,7 @@
      "mood": -3
     }
    ],
-   "health": "Healthy",
+   "health": "Injured",
    "skills": {
     "Shooting": 0,
     "Melee": 3,
@@ -226,11 +226,11 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889368331
+   "rx": 1788889397306
   },
   {
    "v": 0,
-   "t": 999000,
+   "t": 1001750,
    "type": "pawn_snapshot",
    "id": 84435,
    "name": "Fu",
@@ -243,9 +243,9 @@
    ],
    "job": "researching.",
    "needs": {
-    "food": 0.58,
-    "rest": 0.841,
-    "joy": 0.458
+    "food": 0.504,
+    "rest": 0.796,
+    "joy": 0.429
    },
    "mood": 0.46,
    "thoughts": [
@@ -296,7 +296,7 @@
    ],
    "relations": [],
    "drafted": false,
-   "rx": 1788889368331
+   "rx": 1788889397307
   }
  ],
  "recent": [
@@ -2917,6 +2917,236 @@
    "job": "Research",
    "condition": "Succeeded",
    "rx": 1788889368532
+  },
+  {
+   "v": 0,
+   "t": 999412,
+   "type": "interaction",
+   "initiator": 84435,
+   "recipient": 84427,
+   "def": "Chitchat",
+   "text": "Fu spoke about making shirts with Jacobson.",
+   "rx": 1788889369480
+  },
+  {
+   "v": 0,
+   "t": 999870,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "FleeAndCower",
+   "target": "(108, 0, 119)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889370754
+  },
+  {
+   "v": 0,
+   "t": 999950,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84554",
+   "source": "JobGiver_Work",
+   "rx": 1788889370979
+  },
+  {
+   "v": 0,
+   "t": 1000000,
+   "type": "job_noise",
+   "total": 26,
+   "counts": {
+    "Wait_MaintainPosture": 14,
+    "Wait_Wander": 7,
+    "GotoWander": 5
+   },
+   "rx": 1788889371117
+  },
+  {
+   "v": 0,
+   "t": 1000097,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "FleeAndCower",
+   "target": "(108, 0, 134)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889371401
+  },
+  {
+   "v": 0,
+   "t": 1000182,
+   "type": "job_start",
+   "pawn": 84427,
+   "job": "Clean",
+   "target": "Thing_Filth_Dirt84554",
+   "source": "JobGiver_Work",
+   "rx": 1788889371647
+  },
+  {
+   "v": 0,
+   "t": 1000194,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "FleeAndCower",
+   "target": "(108, 0, 140)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889371677
+  },
+  {
+   "v": 0,
+   "t": 1000347,
+   "type": "job_start",
+   "pawn": 84427,
+   "job": "GoForWalk",
+   "target": "(97, 0, 97)",
+   "source": "JobGiver_GetJoy",
+   "rx": 1788889373847
+  },
+  {
+   "v": 0,
+   "t": 1000495,
+   "type": "hediff",
+   "pawn": 84431,
+   "def": "Scratch",
+   "part": "right arm",
+   "severity": 2.617,
+   "rx": 1788889376330
+  },
+  {
+   "v": 0,
+   "t": 1000495,
+   "type": "hediff",
+   "pawn": 84431,
+   "def": "Scratch",
+   "part": "right shoulder",
+   "severity": 2.617,
+   "rx": 1788889376330
+  },
+  {
+   "v": 0,
+   "t": 1000530,
+   "type": "hediff",
+   "pawn": 84431,
+   "def": "BloodLoss",
+   "part": null,
+   "severity": 0,
+   "rx": 1788889376912
+  },
+  {
+   "v": 0,
+   "t": 1000715,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "FleeAndCower",
+   "target": "(98, 0, 153)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889380010
+  },
+  {
+   "v": 0,
+   "t": 1000785,
+   "type": "job_start",
+   "pawn": 84431,
+   "job": "FleeAndCower",
+   "target": "(108, 0, 161)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889381179
+  },
+  {
+   "v": 0,
+   "t": 1000795,
+   "type": "hediff",
+   "pawn": 84431,
+   "def": "Scratch",
+   "part": "torso",
+   "severity": 2.976,
+   "rx": 1788889381346
+  },
+  {
+   "v": 0,
+   "t": 1000795,
+   "type": "hediff",
+   "pawn": 84431,
+   "def": "Scratch",
+   "part": "right shoulder",
+   "severity": 2.976,
+   "rx": 1788889381347
+  },
+  {
+   "v": 0,
+   "t": 1001000,
+   "type": "incident",
+   "def": "MeteoriteImpact",
+   "label": "meteorite impact",
+   "points": 38.438,
+   "rx": 1788889384791
+  },
+  {
+   "v": 0,
+   "t": 1001160,
+   "type": "letter",
+   "label": "Meteorite: Compacted steel",
+   "text": "A large meteorite has struck ground in the area. It has left behind a lump of compacted steel.",
+   "def": "PositiveEvent",
+   "rx": 1788889387491
+  },
+  {
+   "v": 0,
+   "t": 1001305,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "left arm",
+   "severity": 2.585,
+   "rx": 1788889389896
+  },
+  {
+   "v": 0,
+   "t": 1001305,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Scratch",
+   "part": "left hand",
+   "severity": 2.585,
+   "rx": 1788889389897
+  },
+  {
+   "v": 0,
+   "t": 1001357,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "BloodLoss",
+   "part": null,
+   "severity": 0,
+   "rx": 1788889390762
+  },
+  {
+   "v": 0,
+   "t": 1001627,
+   "type": "job_start",
+   "pawn": 948,
+   "job": "FleeAndCower",
+   "target": "(81, 0, 165)",
+   "source": "JobGiver_ConfigurableHostilityResponse",
+   "rx": 1788889395264
+  },
+  {
+   "v": 0,
+   "t": 1001635,
+   "type": "hediff",
+   "pawn": 948,
+   "def": "Bite",
+   "part": "left shoulder",
+   "severity": 5.694,
+   "rx": 1788889395390
+  },
+  {
+   "v": 0,
+   "t": 1001748,
+   "type": "interaction",
+   "initiator": 84427,
+   "recipient": 84435,
+   "def": "DeepTalk",
+   "text": "Jacobson and Fu exchanged thoughts about alien contact.",
+   "rx": 1788889397282
   }
  ],
  "counts": {
@@ -2924,14 +3154,15 @@
   "mod_disconnected": 2,
   "command_result": 27,
   "hello": 2,
-  "world_snapshot": 47,
-  "pawn_snapshot": 152,
-  "job_start": 14,
+  "world_snapshot": 58,
+  "pawn_snapshot": 196,
+  "job_start": 23,
   "job_end": 12,
-  "job_noise": 5,
-  "letter": 2,
-  "interaction": 4,
-  "incident": 1
+  "job_noise": 6,
+  "letter": 3,
+  "interaction": 6,
+  "incident": 2,
+  "hediff": 9
  },
- "last_event_at": 1788889368.53299
+ "last_event_at": 1788889397.3071601
 }
