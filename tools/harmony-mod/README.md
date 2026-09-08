@@ -1,0 +1,1 @@
+Minimal Harmony mod folder built from the `Lib.Harmony` NuGet package, for environments without Steam Workshop access. Same packageId as the official mod (`brrainz.harmony`), so `AiRim` loads after it. Use the Workshop version on a normal install.

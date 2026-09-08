@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Harmony</name>
+  <author>Andreas Pardeike</author>
+  <packageId>brrainz.harmony</packageId>
+  <url>https://github.com/pardeike/HarmonyRimWorld</url>
+  <supportedVersions>
+    <li>1.4</li><li>1.5</li><li>1.6</li>
+  </supportedVersions>
+  <description>Harmony runtime (0Harmony.dll 2.3.6 from NuGet). Stand-in for the Workshop mod when testing in an environment without Steam. MIT licensed.</description>
+</ModMetaData>
