@@ -1300,6 +1300,345 @@
     ]
    },
    "rx": 1788833318682
+  },
+  {
+   "v": 0,
+   "t": 814170,
+   "type": "command_result",
+   "id": "c-6",
+   "ok": true,
+   "data": {
+    "map_id": 2,
+    "total": 20,
+    "returned": 20,
+    "things": [
+     {
+      "id": 36958,
+      "def": "Mech_Tesseron",
+      "label": "Tesseron",
+      "category": "Pawn",
+      "pos": [
+       89,
+       0,
+       137
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 36960,
+      "def": "Mech_Pikeman",
+      "label": "Pikeman",
+      "category": "Pawn",
+      "pos": [
+       91,
+       0,
+       142
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 70063,
+      "def": "Boomalope",
+      "label": "Boomalope",
+      "category": "Pawn",
+      "pos": [
+       104,
+       0,
+       101
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 948,
+      "def": "Human",
+      "label": "Zeke",
+      "category": "Pawn",
+      "pos": [
+       104,
+       0,
+       109
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 35404,
+      "def": "Human",
+      "label": "Lau",
+      "category": "Pawn",
+      "pos": [
+       104,
+       0,
+       123
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79429,
+      "def": "Human",
+      "label": "Goabanbi",
+      "category": "Pawn",
+      "pos": [
+       187,
+       0,
+       215
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79445,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       201,
+       0,
+       218
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79446,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       201,
+       0,
+       218
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79444,
+      "def": "Dromedary",
+      "label": "Dromedary",
+      "category": "Pawn",
+      "pos": [
+       197,
+       0,
+       214
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79447,
+      "def": "Muffalo",
+      "label": "Muffalo",
+      "category": "Pawn",
+      "pos": [
+       198,
+       0,
+       215
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79448,
+      "def": "Muffalo",
+      "label": "Muffalo",
+      "category": "Pawn",
+      "pos": [
+       198,
+       0,
+       215
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79449,
+      "def": "Human",
+      "label": "Trocam",
+      "category": "Pawn",
+      "pos": [
+       185,
+       0,
+       228
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79454,
+      "def": "Human",
+      "label": "Snail",
+      "category": "Pawn",
+      "pos": [
+       190,
+       0,
+       218
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79459,
+      "def": "Human",
+      "label": "Pelican",
+      "category": "Pawn",
+      "pos": [
+       191,
+       0,
+       219
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79464,
+      "def": "Human",
+      "label": "Blue",
+      "category": "Pawn",
+      "pos": [
+       192,
+       0,
+       220
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79469,
+      "def": "Human",
+      "label": "Red",
+      "category": "Pawn",
+      "pos": [
+       190,
+       0,
+       218
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79474,
+      "def": "Human",
+      "label": "Black",
+      "category": "Pawn",
+      "pos": [
+       185,
+       0,
+       228
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79480,
+      "def": "Human",
+      "label": "Green",
+      "category": "Pawn",
+      "pos": [
+       189,
+       0,
+       217
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79494,
+      "def": "Human",
+      "label": "Gumi",
+      "category": "Pawn",
+      "pos": [
+       190,
+       0,
+       218
+      ],
+      "stack": 1,
+      "forbidden": false
+     },
+     {
+      "id": 79498,
+      "def": "Human",
+      "label": "Chicken",
+      "category": "Pawn",
+      "pos": [
+       189,
+       0,
+       217
+      ],
+      "stack": 1,
+      "forbidden": false
+     }
+    ]
+   },
+   "rx": 1788833394415
+  },
+  {
+   "v": 0,
+   "t": 814170,
+   "type": "command_result",
+   "id": "c-7",
+   "ok": true,
+   "data": {
+    "pawn": 35404,
+    "would_start": "Wander_Sad"
+   },
+   "rx": 1788833394450
+  },
+  {
+   "v": 0,
+   "t": 814170,
+   "type": "command_result",
+   "id": "c-8",
+   "ok": true,
+   "data": {
+    "speed": 1,
+    "paused": false
+   },
+   "rx": 1788833394478
+  },
+  {
+   "v": 0,
+   "t": 814171,
+   "type": "letter",
+   "label": "Sad wander: Lau",
+   "text": "<color=#D09B61FF>Lau</color> has broken down and is wandering around in sadness.\n\nAiRim dev_action",
+   "def": "NegativeEvent",
+   "rx": 1788833394554
+  },
+  {
+   "v": 0,
+   "t": 814171,
+   "type": "mental_state",
+   "pawn": 35404,
+   "state": "sad wandering",
+   "reason": "AiRim dev_action",
+   "rx": 1788833394554
+  },
+  {
+   "v": 0,
+   "t": 814171,
+   "type": "command_result",
+   "id": "c-9",
+   "ok": true,
+   "data": {
+    "pawn": 35404,
+    "state": "Wander_Sad"
+   },
+   "rx": 1788833394555
+  },
+  {
+   "v": 0,
+   "t": 814174,
+   "type": "job_start",
+   "pawn": 35404,
+   "job": "Wait_Wander",
+   "target": null,
+   "source": "JobGiver_WanderAnywhere",
+   "rx": 1788833394579
   }
  ],
  "counts": {
@@ -1307,10 +1646,12 @@
   "hello": 1,
   "world_snapshot": 2,
   "pawn_snapshot": 24,
-  "job_start": 2,
+  "job_start": 3,
   "job_end": 2,
-  "command_result": 5
+  "command_result": 9,
+  "letter": 1,
+  "mental_state": 1
  },
- "last_event_at": 1788833318.6829839,
- "published_at": 1788833364
+ "last_event_at": 1788833394.579968,
+ "published_at": 1788833395
 }
