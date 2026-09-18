@@ -3,6 +3,7 @@
 Design notes, decisions, and documentation for the AI in Rimworld project.
 
 - `project-direction.md` — what we are building (start here).
+- `design-inter-colony-trade.md` — traders, trade between colonies, and procedural roads (colony sim).
 - `brainstorm-options.md` — alternatives considered.
 - `architecture-m1-observation.md` — milestone 1 design and event schema.
 - `test-session-m1.md` — checklist for the first in-game test.

@@ -2,6 +2,8 @@
 
 Decided 2026-09-07 after reviewing `brainstorm-options.md`. This page is the current statement of what the project is. Update it when direction changes; keep the brainstorm as history.
 
+**2026-09-18:** the RimWorld mod is paused. The project is now the standalone ascii colony sim (`~/ascii-colony`, not yet on GitHub). The decisions below still describe what we are building; the engine underneath them changed. First feature on the sim is `design-inter-colony-trade.md`.
+
 ## Decisions
 
 1. **Pawns have inner lives and act autonomously.** Every tracked colonist is its own agent with persona, memory, and goals (brainstorm Option 1). The agent is not just a voice: it chooses what the pawn does within the game's legal actions. The game engine still owns needs, health, pathing, and emergency reactions.
