@@ -15,6 +15,7 @@ from .trade import (
     OUTBOUND,
     RETURNING,
     Caravan,
+    cautious_capacity,
     do_business,
     expected_profit,
     expected_relief,
@@ -23,6 +24,7 @@ from .trade import (
     trip_float,
     unload,
 )
+from .wildlife import Wilds, escort_cost, expected_loss, per_day_hazard, populate, raid
 from .world import World, generate_world
 
 #: Per head, per day.
@@ -49,6 +51,12 @@ CATCHMENT = 7
 #: and would tell us nothing about whether the trade code works.
 SURPLUS_FACTOR = 1.12
 STARTING_SILVER = 900.0
+
+#: How dearly a trader treats a dangerous leg when choosing its way there: a
+#: route that is certain to be attacked is worth going this much further round
+#: to avoid. The detour is paid in travel cost, which is the same currency the
+#: road graph is already searched in.
+DANGER_DETOUR = 0.8
 
 
 def terrain_mix(world: World, x: int, y: int, radius: int = CATCHMENT) -> dict[str, float]:
@@ -128,14 +136,32 @@ class Simulation:
     #: Turn trade off to see what the same world does without it. The control
     #: case for every claim that trade is doing something.
     trade_enabled: bool = True
+    #: The animals. `None` is a tame world, and the control case for every
+    #: claim about what the wildlife does.
+    wilds: Wilds | None = None
+    #: Goods eaten or trampled by animals. Nothing else in the sim destroys
+    #: goods, so conservation is checked against this.
+    lost: dict[str, float] = field(default_factory=dict)
+    #: Coin paid to guards. It leaves the trading economy, so it comes out of
+    #: the conserved total the same way.
+    escort_wages: float = 0.0
+    #: Every meeting on the road, including the ones that came to nothing.
+    meetings: int = 0
+    #: Meetings where the animals got at the cargo.
+    raids: int = 0
+    journeys_turned_back: int = 0
     log: list[str] = field(default_factory=list)
+    #: Encounters are the one roll of the dice in the sim. Seeded from the
+    #: world, so a seed still replays exactly.
+    rng: random.Random = field(default_factory=lambda: random.Random(0))
     _next_caravan_id: int = 0
 
     # ---------------------------------------------------------------- totals
     def goods_in_world(self) -> dict[str, float]:
         """Everything on every shelf plus everything on the road.
 
-        Trade must never change this. Only production and consumption may.
+        Trade must never change this. Only production, consumption, and what
+        the animals take (`lost`) may.
         """
         totals = {good: 0.0 for good in GOOD_NAMES}
         for colony in self.colonies:
@@ -150,6 +176,9 @@ class Simulation:
         return sum(c.purse.amount for c in self.colonies) + sum(
             c.purse.amount for c in self.caravans
         )
+
+    def goods_lost(self) -> float:
+        return sum(self.lost.values())
 
     def price_spread(self, good: str) -> float:
         """Gap between the dearest and the cheapest colony.
@@ -189,14 +218,62 @@ class Simulation:
             for good, qty in used.items():
                 self.consumed[good] = self.consumed.get(good, 0.0) + qty
 
+        if self.wilds is not None:
+            self.wilds.settle_day(self.network)
+
         if self.trade_enabled:
             self._advance_caravans()
             self._dispatch()
+
+    # ------------------------------------------------------------- wildlife
+    def _leg_hazard(self, legs: tuple) -> float:
+        """Chance of meeting something over one leg of a journey."""
+        if self.wilds is None:
+            return 0.0
+        return self.wilds.journey_hazard(self.network, legs)
+
+    def _danger_surcharge(self, route) -> float:
+        """What a leg's danger is worth in extra travel cost when choosing a
+        way there. This is the whole of routing around the animals: a wolf
+        valley simply costs more to walk through, so Dijkstra goes round."""
+        if self.wilds is None:
+            return 0.0
+        return route.cost * DANGER_DETOUR * self.wilds.route_hazard(self.network, route)
+
+    def _walk_a_day(self, caravan: Caravan) -> None:
+        """Roll for one day on the road, and deal with what turns up."""
+        if self.wilds is None or caravan.hazard <= 0.0:
+            return
+        days = max(1.0, travel_days(self.world.terrain, self.network, caravan.legs))
+        if self.rng.random() >= per_day_hazard(caravan.hazard, days):
+            return
+
+        path = tuple(tile for leg in caravan.legs for tile in leg.path)
+        den = self.wilds.pick_den(self.rng, self.network, path)
+        if den is None:
+            return
+
+        encounter = raid(self.rng, den, caravan.cargo, caravan.escorted, self.day)
+        caravan.encounters.append(encounter)
+        self.meetings += 1
+        caravan.ledger.append(encounter.describe())
+        for good, qty in encounter.losses.items():
+            self.lost[good] = self.lost.get(good, 0.0) + qty
+        if encounter.outcome != "drove off":
+            self.raids += 1
+        if encounter.outcome == "routed" and caravan.state == OUTBOUND:
+            # It never gets where it was going. Whatever is left goes home.
+            caravan.state = RETURNING
+            caravan.days_left = travel_days(
+                self.world.terrain, self.network, caravan.legs
+            )
+            self.journeys_turned_back += 1
 
     def _advance_caravans(self) -> None:
         for caravan in list(self.caravans):
             if caravan.state == HOME:
                 continue
+            self._walk_a_day(caravan)
             caravan.days_left -= 1
             if caravan.days_left > 0:
                 continue
@@ -236,11 +313,15 @@ class Simulation:
             for other in range(len(self.colonies)):
                 if other == colony.id:
                     continue
-                legs = route_between(self.network, colony.id, other)
+                legs = route_between(
+                    self.network, colony.id, other, surcharge=self._danger_surcharge
+                )
                 if not legs:
                     continue
                 known = colony.known.get(other) or MarketView.unvisited()
-                cargo = plan_cargo(colony, known)
+                hazard = self._leg_hazard(legs)
+                # Less on the road where there is more to lose it to.
+                cargo = plan_cargo(colony, known, cautious_capacity(hazard))
                 worth = expected_profit(colony, known, cargo)
                 if colony.purse.amount >= MIN_TRIP_COIN:
                     worth += expected_relief(colony, known)
@@ -249,14 +330,24 @@ class Simulation:
                 # Round trip plus a day trading, so a short hop cannot win on
                 # the divisor alone while delivering nothing worth having.
                 days = 2 * travel_days(self.world.terrain, self.network, legs) + 1
-                score = worth / days
+                # Both legs are exposed. What goes out is the cargo; what
+                # comes back is whatever the coin turned into, so the float
+                # counts too -- which is why a colony that sets out to buy
+                # rather than to sell is still taking a risk worth pricing.
+                at_risk = (
+                    expected_profit(colony, known, cargo)
+                    + sum(qty * colony.price(good) for good, qty in cargo.items())
+                    + trip_float(colony)
+                )
+                escorted, risk = self._escort_decision(colony, hazard, at_risk, days)
+                score = (worth - risk) / days
                 if best is None or score > best[0]:
-                    best = (score, worth, other, legs, cargo)
+                    best = (score, worth - risk, other, legs, cargo, hazard, escorted)
 
             if best is None or best[1] < MIN_TRIP_WORTH:
                 continue
 
-            _, _, other, legs, cargo = best
+            _, _, other, legs, cargo, hazard, escorted = best
             caravan = Caravan(
                 id=self._next_caravan_id,
                 home=colony.id,
@@ -264,12 +355,38 @@ class Simulation:
                 legs=legs,
                 days_left=travel_days(self.world.terrain, self.network, legs),
                 dispatched_day=self.day,
+                hazard=hazard,
+                escorted=escorted,
             )
             self._next_caravan_id += 1
             for good, qty in cargo.items():
                 caravan.cargo[good] = colony.storage.remove(good, qty)
+            if escorted:
+                days = 2 * travel_days(self.world.terrain, self.network, legs) + 1
+                wage = colony.purse.withdraw(escort_cost(days))
+                self.escort_wages += wage
+                caravan.ledger.append(f"hired guards for {wage:.0f} coin")
             colony.purse.transfer_to(caravan.purse, trip_float(colony))
             self.caravans.append(caravan)
+
+    def _escort_decision(
+        self, colony: Colony, hazard: float, at_risk: float, days: float
+    ) -> tuple[bool, float]:
+        """Guards, or no guards, and what the risk costs either way.
+
+        A colony with coin buys its way out of the problem; a colony without
+        one takes its chances. The comparison is the plain one -- what the
+        animals are expected to take, against what the guards want -- so the
+        wolves are a reason to earn coin rather than a flat tax on trading.
+        """
+        bare = expected_loss(hazard, at_risk)
+        if self.wilds is None or hazard <= 0.0:
+            return False, bare
+        wage = escort_cost(days)
+        guarded = expected_loss(hazard, at_risk, escorted=True) + wage
+        if guarded < bare and colony.purse.amount >= wage + MIN_TRIP_COIN:
+            return True, guarded
+        return False, bare
 
     def run(self, days: int) -> None:
         for _ in range(days):
@@ -277,7 +394,11 @@ class Simulation:
 
 
 def build_simulation(
-    seed: int = 1, settlements: int = 6, width: int = 90, height: int = 45
+    seed: int = 1,
+    settlements: int = 6,
+    width: int = 90,
+    height: int = 45,
+    wildlife: bool = True,
 ) -> Simulation:
     world = generate_world(width, height, settlements, seed)
     network = generate_roads(world)
@@ -286,4 +407,10 @@ def build_simulation(
         build_colony(world, s, population=rng.randint(14, 30)) for s in world.settlements
     ]
     calibrate(colonies)
-    return Simulation(world=world, network=network, colonies=colonies)
+    return Simulation(
+        world=world,
+        network=network,
+        colonies=colonies,
+        wilds=populate(world, seed) if wildlife else None,
+        rng=random.Random(seed ^ 0xD00D),
+    )

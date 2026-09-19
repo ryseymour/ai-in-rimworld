@@ -24,13 +24,19 @@ def main() -> None:
     sim = build_simulation(args.seed, args.settlements, args.width, args.height)
     control = build_simulation(args.seed, args.settlements, args.width, args.height)
     control.trade_enabled = False
+    # The same world with the wolves and bears taken off it, so the cost of
+    # the wild can be read straight off the difference.
+    tame = build_simulation(
+        args.seed, args.settlements, args.width, args.height, wildlife=False
+    )
 
     sim.run(args.days)
     control.run(args.days)
+    tame.run(args.days)
 
-    print(render(sim.world, sim.network))
+    print(render(sim.world, sim.network, sim.wilds))
     print()
-    print(legend(sim.world, sim.network))
+    print(legend(sim.world, sim.network, sim.wilds))
 
     print(f"\n--- after {args.days} days, {sim.journeys} journeys ---\n")
     print(f"{'colony':<12}{'food':>9}{'wood':>9}{'stone':>9}{'cloth':>9}{'tools':>9}{'coin':>10}")
@@ -47,6 +53,15 @@ def main() -> None:
     starved = control.hungry_colonies()
     print(f"\nout of food, with trade: {', '.join(hungry) or 'nobody'}")
     print(f"out of food, without:    {', '.join(starved) or 'nobody'}")
+
+    print(f"\n--- the wild ---\n")
+    print(f"  journeys made:      {sim.journeys}  (a tame world: {tame.journeys})")
+    print(f"  met on the road:    {sim.meetings}")
+    print(f"  raided:             {sim.raids}")
+    print(f"  turned back:        {sim.journeys_turned_back}")
+    lost = ", ".join(f"{q:.0f} {g}" for g, q in sorted(sim.lost.items()) if q >= 0.5)
+    print(f"  taken by animals:   {lost or 'nothing'}")
+    print(f"  paid to guards:     {sim.escort_wages:.0f} coin")
 
     tiers: dict[int, int] = {}
     for tile in sim.network.tiles.values():

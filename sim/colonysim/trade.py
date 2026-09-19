@@ -13,8 +13,9 @@ from dataclasses import dataclass, field
 from .goods import GOODS
 from .money import SILVER, Purse
 from .roads import RoadNetwork, Route, travel_cost
-from .storage import Colony, MarketView
+from .storage import MAX_MULT, Colony, MarketView
 from .terrain import Terrain
+from .wildlife import Encounter
 
 #: Cargo space in one caravan.
 CAPACITY = 120.0
@@ -32,6 +33,14 @@ MIN_TRIP_COIN = 40.0
 #: A journey has to be worth making. Without this, caravans set out for the
 #: sake of a coin's worth of stone and the roads fill with pointless traffic.
 MIN_TRIP_WORTH = 25.0
+#: How much of a caravan's space is left empty on a road that is certain to be
+#: attacked. A trader on a bad road walks light: less to lose and less to slow
+#: it down. At the usual hazards this trims a load by a tenth or so.
+LOAD_CAUTION = 0.5
+#: The most a caravan will add to a host's own price for having carried the
+#: goods through dangerous country, as a share of that price. A host short of
+#: the good pays it; nobody pays above the usual price ceiling.
+MAX_RISK_PREMIUM = 0.35
 
 OUTBOUND = "outbound"
 TRADING = "trading"
@@ -51,6 +60,13 @@ class Caravan:
     purse: Purse = field(default_factory=lambda: Purse(SILVER))
     state: str = OUTBOUND
     days_left: float = 0.0
+    #: Chance of meeting something on the road over one leg of this journey,
+    #: read off the wilds at dispatch. Drives the load, the premium it asks,
+    #: and whether it took guards.
+    hazard: float = 0.0
+    escorted: bool = False
+    #: Everything that happened to it on the road.
+    encounters: list[Encounter] = field(default_factory=list)
     #: The day it set out, so a caravan that never gets home is detectable.
     dispatched_day: int = 0
     #: Filled in on arrival, so the thread can show what actually happened.
@@ -59,6 +75,16 @@ class Caravan:
     @property
     def load(self) -> float:
         return sum(qty * GOODS[good].bulk for good, qty in self.cargo.items())
+
+    @property
+    def risk_premium(self) -> float:
+        """What it asks above a host's own price for having got there at all.
+
+        A caravan that walked a wolf road wants paying for it. The host only
+        wears that while it is short of the good, and never above the price
+        ceiling, so the premium shows up as a thin margin on dangerous routes
+        rather than as a colony being gouged."""
+        return min(MAX_RISK_PREMIUM, self.hazard * MAX_RISK_PREMIUM * 2.0)
 
 
 def travel_days(
@@ -71,6 +97,15 @@ def travel_days(
     """
     cost = sum(travel_cost(terrain, network, leg.path) for leg in legs)
     return max(1.0, math.ceil(cost / TRAVEL_PER_DAY))
+
+
+def cautious_capacity(hazard: float, capacity: float = CAPACITY) -> float:
+    """How full a caravan is willing to load for a road of this hazard.
+
+    The response to risk that costs nothing and always helps: put less on the
+    road. It does not change the chance of being caught, only what is there to
+    be taken when it happens."""
+    return capacity * (1.0 - LOAD_CAUTION * max(0.0, min(1.0, hazard)))
 
 
 def plan_cargo(
@@ -206,11 +241,15 @@ def settle(
 def do_business(caravan: Caravan, host: Colony, home: Colony, day: int = 0) -> None:
     """The caravan sells what it brought, then buys what home is short of."""
     sold_value = 0.0
+    premium = caravan.risk_premium
     for good in sorted(caravan.cargo):
         qty = min(caravan.cargo[good], host.shortfall(good))
         if qty <= 0:
             continue
-        price = host.price(good)  # quoted before the goods land and move it
+        # Quoted before the goods land and move the price, plus whatever the
+        # road was worth, capped at what any good can fetch here.
+        ceiling = GOODS[good].base_price * MAX_MULT
+        price = min(host.price(good) * (1.0 + premium), ceiling)
         bill = qty * price
 
         caravan.cargo[good] -= qty
@@ -234,7 +273,10 @@ def do_business(caravan: Caravan, host: Colony, home: Colony, day: int = 0) -> N
             continue
         price = host.price(good)
         affordable = caravan.purse.amount / price if price > 0 else 0.0
-        space = (CAPACITY - caravan.load) / GOODS[good].bulk
+        # Coming home is the same road, so the same caution applies to the
+        # return load as to the outbound one.
+        room = cautious_capacity(caravan.hazard) - caravan.load
+        space = room / GOODS[good].bulk
         qty = min(want, spare, affordable, space)
         if qty <= 0.01:
             continue

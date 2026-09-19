@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import heapq
 import math
+from collections.abc import Callable
 from dataclasses import dataclass, field
 
 from .terrain import CHEAPEST_TILE, SLOPE_WEIGHT, Terrain
@@ -349,12 +350,23 @@ def travel_cost(terrain: Terrain, network: RoadNetwork, path: tuple[Point, ...])
     return total
 
 
-def route_between(network: RoadNetwork, a: int, b: int) -> tuple[Route, ...]:
+def route_between(
+    network: RoadNetwork,
+    a: int,
+    b: int,
+    surcharge: Callable[[Route], float] | None = None,
+) -> tuple[Route, ...]:
     """The cheapest chain of roads from one settlement to another.
 
     Direct neighbours give a single leg; anywhere else is reached by passing
     through the villages in between. Dijkstra over the route graph, so a
     well-connected village becomes a natural staging post for trade.
+
+    `surcharge` adds to a leg's cost without changing it: it is how something
+    a road does not know about -- wolves, weather -- makes a route less
+    attractive than its length alone suggests, so the search will take a
+    longer way round to avoid it. Costs are returned as carved, not surcharged,
+    so travel time is unaffected by whatever the detour was chosen for.
     """
     if a == b:
         return ()
@@ -377,6 +389,8 @@ def route_between(network: RoadNetwork, a: int, b: int) -> tuple[Route, ...]:
             continue
         for nxt, route in sorted(adjacency.get(node, []), key=lambda pair: pair[0]):
             through = cost + route.cost
+            if surcharge is not None:
+                through += surcharge(route)
             if through < best.get(nxt, math.inf):
                 best[nxt] = through
                 came[nxt] = (node, route)
