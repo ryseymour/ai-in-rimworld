@@ -189,6 +189,29 @@ the cost of the journey. That is the economy working, not a bug — but
 `MIN_TRIP_WORTH`, and stone's `bulk` and `base_price` in `goods.py`, are the
 knobs if it should move.
 
+## Drawing the roads in another UI
+
+If you already have a renderer -- a game map, a minimap, a build-mode overlay
+-- two calls give you the roads as plain JSON-safe data, so nothing on your
+side has to import from this package:
+
+```python
+from colonysim import build_simulation, road_links, road_overlay
+
+sim = build_simulation(seed=23)
+road_overlay(sim.network)          # every road tile: x, y, tier, speed
+road_links(sim.network, sim.world) # one line per route: endpoints and tier
+```
+
+`road_overlay` is per tile, for anywhere the map is drawn at tile resolution.
+`road_links` is one line per route between two settlements, for anywhere too
+small for individual tiles to read -- a minimap, where 120 separate road tiles
+are noise but the shape of the network is the point. Weight the line by `tier`:
+1 is a foot path, 2 a dirt road, 3 paved.
+
+Both follow real wear, so a route that gets busy shows up as a better road in
+whatever is drawing it.
+
 ## Tests
 
 ```

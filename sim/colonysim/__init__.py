@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from .goods import GOODS, Good
 from .money import SILVER, Currency, Purse
-from .roads import RoadNetwork, Route, generate_roads
+from .roads import RoadNetwork, Route, generate_roads, road_links, road_overlay
 from .simulation import Simulation, build_simulation
 from .storage import Colony, MarketView, Storage
 from .terrain import Terrain, generate_terrain
@@ -39,6 +39,8 @@ __all__ = [
     "World",
     "build_simulation",
     "generate_roads",
+    "road_links",
+    "road_overlay",
     "generate_terrain",
     "generate_world",
     "populate",
