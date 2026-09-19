@@ -18,8 +18,9 @@ network, every colony and the caravans moving between them, with what each one
 is carrying and every colony's shelves updating beside it. The Stewards panel
 underneath shows what each colony has decided to do about its own prices --
 `food x1.32` is a colony bidding for supply, `wood x0.71` one discounting to
-shift a pile -- along with the last thing it changed and why. Wolf packs and bear
-territories are the coloured patches the roads have to get past; a caravan with
+shift a pile -- along with the last thing it changed and why. **At the counter**
+under it shows the last few arguments over a price, line by line, as caravans
+arrive and haggle. Wolf packs and bear territories are the coloured patches the roads have to get past; a caravan with
 a ring around it has hired guards. Pause and speed controls are on the page.
 Ctrl-C in the terminal stops it.
 
@@ -88,6 +89,91 @@ steward.set_markup("food", 1.4, "we are short and the road is long")
 steward.set_reserve_days("wood", 20)
 print(steward.brief())
 ```
+
+## Haggling
+
+A sale is not arithmetic any more. When a cart pulls up, the visitor and the
+host argue a good at a time, in `negotiation.py`, and the price is whatever
+they agree on.
+
+Each side has two numbers. A **limit** it will not cross: for the host, its own
+price plus whatever the road was worth, capped at what the good can fetch there
+-- which is exactly the price the sim used to charge outright, so the old
+take-it-or-leave-it figure is now the *most* a host can be talked into. For the
+trader, what the cargo was worth at home when it was loaded, because below that
+it is better off carting the goods back. And an **opening**, nowhere near it.
+They take turns: each turn a side either takes what is on the table or names a
+price a little closer to the other's, and by its last turn everyone is standing
+on their own limit, so it always ends.
+
+What differs between two negotiators is how fast they give that ground away.
+A host four days from an empty granary concedes early and pays for it; one
+merely topping up holds out and pays less, and buys less of it at a price it
+dislikes. A trader carrying goods that were nearly this dear at home has
+nothing to give and holds firm. So the same cargo at the same counter fetches
+different prices depending on who needs it, and you can read why in what was
+said.
+
+A deal is struck exactly when the two limits overlap, and never outside them.
+When they do not, the goods stay on the cart and go home -- a trip that did not
+pay, which the sim had no way to express before. In practice that is rare (one
+journey in a couple of hundred) because a caravan only sets out when the sums
+looked good.
+
+The browser viewer shows the last few arguments under **At the counter**, and
+`python -m colonysim.demo` prints the most recent one:
+
+```
+  day 143, over wood
+    Coldhollow: 10 wood, straight off the road. 1.31 the unit.
+    Brackwater: Say 1.01 and we will take 10 off you.
+    Coldhollow: That will do. 1.01.
+  Brackwater took 10 wood from Coldhollow at 1.01
+```
+
+Nothing here is random: the same seed replays the same argument word for word.
+
+### Letting something else do the talking
+
+`bargain` is the scripted negotiator, and `Steward.negotiator` is where you
+replace it -- the same seam as `decide`, one level down. `decide` is the stance
+a colony takes over weeks; `negotiator` is how it argues a single sale.
+
+```python
+from colonysim import Move
+
+def stubborn(haggle, side):
+    seat = haggle.seat(side)
+    return Move(side, "counter", seat.limit, seat.want, "my price or no price.")
+
+sim.stewards[0].negotiator = stubborn
+```
+
+Whatever is talking sees `Haggle.brief(side)` -- its own position, its limit,
+what has been offered and everything said so far -- and answers with one move.
+`Haggle.play` clamps whatever comes back: an unknown act becomes an offer, a
+price is bounded by the table, a quantity cannot exceed the cart, and accepting
+means the terms that were actually offered rather than terms invented while
+accepting. So a negotiator can be wrong, rude, or absurd, and the worst it can
+do is make a bad deal.
+
+`colonysim/llm.py` is the worked example of a model doing it. Nothing imports
+it, and nothing in it runs unless `COLONYSIM_LLM=1` is set, so the package
+stays standard library only and installs with no dependencies:
+
+```python
+from colonysim.llm import claude_negotiator
+
+for steward in sim.stewards:
+    steward.negotiator = claude_negotiator()   # needs `pip install anthropic`
+```
+
+It asks for one line per turn, so a negotiation is a handful of calls and they
+only happen when a cart actually arrives somewhere. Every failure -- no key, no
+package, a timeout, a reply nobody can parse -- falls back to `bargain`, so the
+sim carries on with a worse negotiator rather than stopping. `speaker_from` is
+the general form: anything that turns a prompt into a line of text is a
+negotiator, including a player's own UI or a local model.
 
 ## How roads are generated
 
@@ -192,8 +278,9 @@ back, which may be weeks stale. And that memory holds what was *for sale*, not
 just the price, because a colony sitting exactly on its reserve quotes a
 perfectly ordinary price while having nothing whatever to sell.
 
-On arrival the caravan sells what the host is short of, at the host's prices,
-then spends the proceeds on what home is short of, then goes home.
+On arrival the caravan does not sell at the host's prices -- it argues about
+them (below), then spends the proceeds on what home is short of, then goes
+home.
 
 **Settlement is in currency, falling back to barter.** The buyer pays from its
 purse as far as the purse goes. Whatever is left it covers in goods out of its

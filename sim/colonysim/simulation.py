@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 
 from .goods import GOOD_NAMES, GOODS
 from .money import SILVER, Purse
+from .negotiation import Haggle, Speakers
 from .roads import RoadNetwork, apply_traffic, generate_roads, route_between
 from .steward import Link, NetworkView, Steward, route_tier
 from .storage import Colony, MarketView, Storage
@@ -58,6 +59,10 @@ STARTING_SILVER = 900.0
 #: to avoid. The detour is paid in travel cost, which is the same currency the
 #: road graph is already searched in.
 DANGER_DETOUR = 0.8
+
+#: Negotiations kept for anyone watching. A long run has thousands; a viewer
+#: wants the last few, and holding every one would be a leak with a plot.
+NEGOTIATIONS_KEPT = 30
 
 
 def terrain_mix(world: World, x: int, y: int, radius: int = CATCHMENT) -> dict[str, float]:
@@ -155,6 +160,10 @@ class Simulation:
     #: Meetings where the animals got at the cargo.
     raids: int = 0
     journeys_turned_back: int = 0
+    #: The last few negotiations at any counter in the world, newest last.
+    #: What was said is kept, not just what was agreed, because the argument
+    #: is the part a reader learns anything from.
+    negotiations: list[Haggle] = field(default_factory=list)
     log: list[str] = field(default_factory=list)
     #: Encounters are the one roll of the dice in the sim. Seeded from the
     #: world, so a seed still replays exactly.
@@ -292,6 +301,39 @@ class Simulation:
         for steward in self.stewards:
             steward.review(self.network_view(steward.colony.id))
 
+    def steward_of(self, colony_id: int) -> Steward | None:
+        """Whoever is minding that colony's shop, if anyone is."""
+        for steward in self.stewards:
+            if steward.colony.id == colony_id:
+                return steward
+        return None
+
+    def _counter(self, caravan: Caravan) -> Speakers:
+        """Who does the talking when this caravan reaches its destination.
+
+        The visiting colony's steward argues for the cart, the host's for the
+        shelves. A colony with nobody in charge falls back to the scripted
+        negotiator, which is what every colony did before there were stewards.
+        """
+        home = self.steward_of(caravan.home)
+        host = self.steward_of(caravan.destination)
+        return Speakers(
+            trader=home.speak if home else None,
+            host=host.speak if host else None,
+        )
+
+    def _record(self, caravan: Caravan, struck: list[Haggle]) -> None:
+        """File what was said: once for the world, once for each party."""
+        if not struck:
+            return
+        self.negotiations.extend(struck)
+        del self.negotiations[:-NEGOTIATIONS_KEPT]
+        for steward in (self.steward_of(caravan.home), self.steward_of(caravan.destination)):
+            if steward is None:
+                continue
+            for haggle in struck:
+                steward.remember(haggle)
+
     # ------------------------------------------------------------- wildlife
     def _route_hazard(self, route) -> float:
         """Today's danger on one carved road, worked out at most once."""
@@ -359,7 +401,16 @@ class Simulation:
                 apply_traffic(self.network, leg)
             if caravan.state == OUTBOUND:
                 host = self.colonies[caravan.destination]
-                do_business(caravan, host, self.colonies[caravan.home], self.day)
+                struck: list[Haggle] = []
+                do_business(
+                    caravan,
+                    host,
+                    self.colonies[caravan.home],
+                    self.day,
+                    speakers=self._counter(caravan),
+                    record=struck,
+                )
+                self._record(caravan, struck)
                 caravan.state = RETURNING
                 caravan.days_left = caravan.leg_days = travel_days(
                     self.world.terrain, self.network, caravan.legs
@@ -436,6 +487,10 @@ class Simulation:
             )
             self._next_caravan_id += 1
             for good, qty in cargo.items():
+                # What it was worth here, before the cart took it off the
+                # shelf. This is what the trader holds out for at the far end:
+                # anything less and the goods were better off staying home.
+                caravan.basis[good] = colony.price(good)
                 caravan.cargo[good] = colony.storage.remove(good, qty)
             if escorted:
                 days = 2 * travel_days(self.world.terrain, self.network, legs) + 1
