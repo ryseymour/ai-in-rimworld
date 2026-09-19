@@ -7,8 +7,10 @@ See `../wiki/design-inter-colony-trade.md` for the design this implements:
 roads, storage and prices, traders moving goods between colonies, a steward
 running each colony's side of it, and a population that grows or shrinks with
 what the colony has to eat. On top of that sits crafting: recipes, workshops,
-and the bows and arrows a colony hunts with -- and over all of it, a year of
-seasons and weather.
+and the bows and arrows a colony hunts with. Hunting itself is deer and boar
+living on the map in herds, a party out of every village every day, and meat
+and hides coming back onto the shelves to be eaten, worn and traded like
+anything else. Over all of it runs a year of seasons and weather.
 
 ## Open it in a browser
 
@@ -31,7 +33,11 @@ underneath shows what each colony has decided to do about its own prices --
 shift a pile -- along with the last thing it changed and why. **At the counter**
 under it shows the last few arguments over a price, line by line, as caravans
 arrive and haggle. Wolf packs and bear territories are the coloured patches the roads have to get past; a caravan with
-a ring around it has hired guards. Pause and speed controls are on the page.
+a ring around it has hired guards. The small tan dots scattered through the
+forest and the plains are the game; they fade as a colony's hunters thin them
+and fill back in over a quiet season. **Out hunting** says what each village
+has within a day's walk, how many of it are out there, and what the last few
+parties brought home -- or what found them first. Pause and speed controls are on the page.
 Ctrl-C in the terminal stops it.
 
 The colony table carries each village's headcount with an arrow for which way
@@ -56,7 +62,8 @@ different world, `--speed` sets days per second.
 python -m colonysim.watch --seed 23
 ```
 
-Redraws the map once per day with caravans (`@`) moving along the roads, and
+Redraws the map once per day with caravans (`@`) moving along the roads, deer
+(`d`) and boar (`b`) on the ground they live on, and
 under it what each one is carrying, where it is headed, and what every colony
 has on its shelves. The line under the map is the date, today's sky, the week
 ahead as one glyph a day, and any route the weather has shut. Ctrl-C to stop.

@@ -17,6 +17,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
 from .goods import GOOD_NAMES
+from .hunting import hunters
 from .reputation import describe
 from .simulation import build_simulation
 from .terrain import FOREST_LEVEL, ROUGH_LEVEL, WATER_LEVEL
@@ -107,6 +108,7 @@ PAGE = """<!doctype html>
   <span class="stat"><b id="people">-</b> people</span>
   <span class="stat"><b id="journeys">-</b> journeys</span>
   <span class="stat"><b id="met">-</b> met in the wild</span>
+  <span class="stat"><b id="game">-</b> taken hunting</span>
   <span class="stat"><b id="refusals">-</b> turned away</span>
   <span class="stat shut" id="closed" hidden></span>
   <button id="pause">pause</button>
@@ -121,6 +123,7 @@ PAGE = """<!doctype html>
     <section><h2>Caravans</h2><div id="caravans"></div></section>
     <section><h2>Storage</h2><div id="colonies"></div></section>
     <section><h2>Workshops</h2><div id="workshops"></div></section>
+    <section><h2>Out hunting</h2><div id="hunting"></div></section>
     <section><h2>Stewards</h2><div id="stewards"></div></section>
     <section><h2>At the counter</h2><div id="deals"></div></section>
     <section><h2>Standing</h2><div id="standing"></div></section>
@@ -131,6 +134,7 @@ const TILE = 9;
 const COLOR = { water: "#16304d", plains: "#4a6b3c", forest: "#26492f", rough: "#5c564c" };
 const ROAD = { 1: "#6d6048", 2: "#9a8460", 3: "#c4ad84" };
 const DEN = { wolves: "#8d6b9c", bears: "#a35f4a" };
+const HERD = { deer: "#c9a86a", boar: "#9c7b5a" };
 // The land under each season. Weather is one sky over the whole map, so it is
 // a wash over everything rather than anything drawn per tile.
 const SEASON_TINT = {
@@ -173,6 +177,18 @@ function draw(state) {
   for (const [x, y, tier] of state.roads) {
     ctx.fillStyle = ROAD[tier] || ROAD[1];
     ctx.fillRect(x * TILE + 1, y * TILE + 1, TILE - 2, TILE - 2);
+  }
+
+  // The game, under everything: small, because a herd is somewhere to walk to
+  // rather than something to avoid, and it fades as the hunting thins it out.
+  for (const [x, y, species, strength] of state.herds || []) {
+    const cx = x * TILE + TILE / 2, cy = y * TILE + TILE / 2;
+    ctx.beginPath();
+    ctx.arc(cx, cy, TILE * (0.18 + 0.3 * strength), 0, Math.PI * 2);
+    ctx.fillStyle = HERD[species] || HERD.deer;
+    ctx.globalAlpha = 0.35 + 0.5 * strength;
+    ctx.fill();
+    ctx.globalAlpha = 1;
   }
 
   // A road that is shut today is drawn as a shut road: the line is still
@@ -268,6 +284,7 @@ function panels(state) {
   document.getElementById("people").textContent = state.people;
   document.getElementById("journeys").textContent = state.journeys;
   document.getElementById("met").textContent = state.met;
+  document.getElementById("game").textContent = state.game;
   document.getElementById("refusals").textContent = state.refusals;
 
   const routes = document.getElementById("caravans");
@@ -334,6 +351,16 @@ function panels(state) {
   document.getElementById("workshops").innerHTML = state.colonies.map(c =>
     `<div class="steward"><div class="who"><span>${c.name}</span></div>` +
     `<div class="note">${c.workshop}</div></div>`).join("");
+
+  // Who is out, on what ground -- then the last few parties that came back
+  // with something, newest first.
+  const hunting = document.getElementById("hunting");
+  hunting.innerHTML = state.colonies.map(c =>
+      `<div class="steward"><div class="who"><span>${c.name}</span>` +
+      `<span>${c.party} out</span></div>` +
+      `<div class="note">${c.ground}</div></div>`).join("") +
+    (state.hunts || []).slice().reverse().map(h =>
+      `<div class="note">${h}</div>`).join("");
 }
 
 async function tick() {
@@ -472,6 +499,10 @@ def standing_payload(sim) -> list[dict]:
 #: panel becoming the whole page.
 DEALS_SHOWN = 4
 
+#: Hunting parties on the page. Every colony sends one out every day, so this
+#: is the last day or two of them rather than a history.
+HUNTS_SHOWN = 6
+
 
 def negotiation_payload(sim, keep: int = DEALS_SHOWN) -> list[dict]:
     """The last few arguments at a counter, oldest first.
@@ -571,7 +602,17 @@ def state_payload(sim) -> dict:
             for den in (sim.wilds.dens if sim.wilds else ())
             if den.strength > 0.0
         ],
+        # Herds are state for the same reason dens are: hunting thins them and
+        # a quiet season brings them back, so the map has to keep up.
+        "herds": [
+            [herd.x, herd.y, herd.species, round(herd.strength, 2)]
+            for herd in (sim.herds.herds if sim.herds else ())
+            if herd.strength > 0.0
+        ],
         "met": sim.meetings,
+        "game": round(sum(sim.game_taken.values())),
+        # The last few parties that brought something home, oldest first.
+        "hunts": [escape(party.describe()) for party in sim.hunts[-HUNTS_SHOWN:]],
         "people": round(sim.population()),
         "raided": sim.raids,
         "stewards": steward_payload(sim),
@@ -594,6 +635,9 @@ def state_payload(sim) -> dict:
                 # are already columns in the storage table above, and this is
                 # the part of the workshop that is not a number on a shelf.
                 "workshop": c.workshop.describe(),
+                # What its hunters have to work with, and how many went out.
+                "ground": escape(sim.ground(c).describe()),
+                "party": round(hunters(c)),
             }
             for c in sim.colonies
         ],

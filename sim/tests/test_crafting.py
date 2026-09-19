@@ -1,5 +1,5 @@
-"""Crafting and hunting: what a colony makes, what it makes it out of, and what
-being armed is worth to it."""
+"""Crafting: what a colony makes, what it makes it out of, and what being armed
+is worth to it. What it hunts with the result is in `test_hunting.py`."""
 from __future__ import annotations
 
 import pytest
@@ -19,16 +19,6 @@ from colonysim.crafting import (
     work_for,
 )
 from colonysim.goods import CRAFTED_GOOD_NAMES, GOODS, RAW_GOOD_NAMES
-from colonysim.hunting import (
-    ARROWS_PER_CAPITA,
-    HIDES_PER_ARROW,
-    MEAT_PER_ARROW,
-    MEAT_PER_ARROW_UNARMED,
-    bow_coverage,
-    hunt,
-    hunters,
-    meat_per_arrow,
-)
 from colonysim.money import SILVER, Purse
 from colonysim.recipes import RECIPES, SMITHY, STATIONS, WORK_VALUE, derived_price
 from colonysim.simulation import CONSUMPTION_PER_CAPITA, build_simulation
@@ -306,48 +296,6 @@ def test_a_workshop_says_what_it_is_doing():
     assert "arrows" in c.workshop.describe()
 
 
-# ---------------------------------------------------------------- the hunting
-
-def test_arrows_spent_come_back_as_meat_and_hides():
-    c = colony(bow=20.0)
-    bag = hunt(c, 10.0)
-
-    assert bag["food"] == pytest.approx(10.0 * MEAT_PER_ARROW)
-    assert bag["cloth"] == pytest.approx(10.0 * HIDES_PER_ARROW)
-    assert c.storage.get("food") == pytest.approx(bag["food"])
-
-
-def test_a_colony_with_no_arrows_brings_nothing_home():
-    assert hunt(colony(bow=20.0), 0.0) == {}
-
-
-def test_bows_are_what_turn_a_day_in_the_woods_into_food():
-    """The reason a colony wants a fletcher and a bowyer at all."""
-    armed = colony(bow=40.0)
-    barehanded = colony()
-    barehanded.storage.remove("bow", barehanded.storage.get("bow"))
-
-    assert bow_coverage(armed) == 1.0
-    assert bow_coverage(barehanded) == 0.0
-    assert meat_per_arrow(armed) == pytest.approx(MEAT_PER_ARROW)
-    assert meat_per_arrow(barehanded) == pytest.approx(MEAT_PER_ARROW_UNARMED)
-    assert hunt(armed, 10.0)["food"] > hunt(barehanded, 10.0)["food"]
-
-
-def test_half_the_party_with_bows_hunts_between_the_two():
-    c = colony()
-    c.storage.remove("bow", c.storage.get("bow"))
-    c.storage.add("bow", hunters(c) / 2.0)
-    assert bow_coverage(c) == pytest.approx(0.5)
-    assert MEAT_PER_ARROW_UNARMED < meat_per_arrow(c) < MEAT_PER_ARROW
-
-
-def test_hunting_is_what_arrows_are_consumed_for():
-    """The consumption rate and the hunt are the same number, so a colony's
-    arrow demand is exactly what its hunters shoot."""
-    assert CONSUMPTION_PER_CAPITA["arrows"] == ARROWS_PER_CAPITA
-
-
 # ------------------------------------------------------------------- the arms
 
 def test_being_armed_is_measured_off_the_armoury():
@@ -504,7 +452,8 @@ def test_the_benches_and_the_hunt_create_nothing_from_nothing(seed):
 
 
 def test_a_workshop_run_world_still_replays_exactly():
-    """Nothing in crafting or hunting rolls a die."""
+    """Nothing at a bench rolls a die, and the one that hunting rolls is
+    seeded off the world like every other."""
     a, b = _run(23), _run(23)
     assert [c.storage.stock for c in a.colonies] == [c.storage.stock for c in b.colonies]
     assert [c.workshop.skill for c in a.colonies] == [

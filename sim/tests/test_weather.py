@@ -472,9 +472,16 @@ def test_a_caravan_on_a_shut_road_sits_still():
     assert sim.days_waited > 0
 
     # Every day waited is a day nobody moved, and no cargo went anywhere.
-    sim.climate = _AlwaysBlizzard(23)
-    while not sim.caravans:
+    # Somebody has to be on the road before the snow comes: under a blizzard
+    # nobody sets out at all (`test_nobody_sets_out_onto_a_shut_road`), so
+    # waiting for a caravan with the weather already shut would wait forever.
+    for _ in range(YEAR_DAYS):
+        if sim.caravans:
+            break
         sim.step_day()
+    assert sim.caravans, "nobody took to the road all year"
+
+    sim.climate = _AlwaysBlizzard(23)
     caravan = sim.caravans[0]
     before = (caravan.days_left, dict(caravan.cargo), caravan.days_waited)
     sim.step_day()

@@ -19,6 +19,7 @@ from dataclasses import dataclass, field
 
 from .crafting import Workshop
 from .goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
+from .hunting import field_hands
 from .money import SILVER, Purse
 from .people import LAND_ELASTICITY, MIN_POPULATION
 from .reputation import Reputation
@@ -43,6 +44,11 @@ MAX_RESERVE = 2.5
 #: stopped making it at all; the ceiling is a workshop given over to it.
 MIN_CRAFT = 0.0
 MAX_CRAFT = 2.5
+#: How far a steward may push the hunt, as a multiple of the share of a colony
+#: ordinarily in the woods. The ceiling is about a third of the village out
+#: after deer, which is as far as a place can go and still be a farm.
+MIN_HUNT = 0.4
+MAX_HUNT = 1.8
 #: How far the land's own output can be pushed toward or away from one good.
 #: Terrain still decides what a village is good at; this is only how hard it
 #: leans on what it has.
@@ -105,6 +111,12 @@ class Policy:
     #: this is not conserved: the bench's day is what the bench's day is, and
     #: this only decides the order it works in and what it bothers with.
     craft: dict[str, float] = field(default_factory=dict)
+    #: On the share of the colony out hunting. One number rather than one per
+    #: good, because a hunting party is people rather than a product: what it
+    #: brings back is whatever is on its ground. This one is paid for, and in
+    #: the same currency as focus -- hands sent to the woods come off the
+    #: fields, in `hunting.field_hands`.
+    hunt: float = 1.0
 
     def markup_for(self, good: str) -> float:
         return clamp(self.markup.get(good, 1.0), MIN_MARKUP, MAX_MARKUP)
@@ -117,6 +129,9 @@ class Policy:
 
     def craft_for(self, good: str) -> float:
         return clamp(self.craft.get(good, 1.0), MIN_CRAFT, MAX_CRAFT)
+
+    def hunt_share(self) -> float:
+        return clamp(self.hunt, MIN_HUNT, MAX_HUNT)
 
     def set_markup(self, good: str, value: float) -> float:
         self.markup[good] = clamp(value, MIN_MARKUP, MAX_MARKUP)
@@ -133,6 +148,10 @@ class Policy:
     def set_craft(self, good: str, value: float) -> float:
         self.craft[good] = clamp(value, MIN_CRAFT, MAX_CRAFT)
         return self.craft[good]
+
+    def set_hunt(self, value: float) -> float:
+        self.hunt = clamp(value, MIN_HUNT, MAX_HUNT)
+        return self.hunt
 
     def rebalance_focus(self, shares: dict[str, float]) -> None:
         """Scale the focus weights so no labour is created by reassigning it.
@@ -184,6 +203,13 @@ class Policy:
                 for g in sorted(self.craft)
                 if abs(self.craft_for(g) - 1.0) > 0.01
             },
+            # One dial, but shaped like the others so nothing reading a stance
+            # has to know it is not a good: "party" is who is in the woods.
+            "hunt": (
+                {"party": round(self.hunt_share(), 3)}
+                if abs(self.hunt_share() - 1.0) > 0.01
+                else {}
+            ),
         }
 
     def is_default(self) -> bool:
@@ -244,6 +270,14 @@ class Colony:
     born: float = 0.0
     starved: float = 0.0
     left: float = 0.0
+    #: People lost in the woods. The only way the sim kills anybody who was not
+    #: going hungry, and the reason arming a hunting party is worth the wood.
+    mauled: float = 0.0
+    #: How good the hunting is within a day's walk, as `hunting.HuntingGround`
+    #: measures it: 1.0 is ordinary country. The simulation keeps this current
+    #: -- the herds move -- and a colony on its own simply hunts ordinary
+    #: ground, which is what it did before the game was on the map.
+    hunting_ground: float = 1.0
     #: The stance its steward has taken. Empty means the colony trades on
     #: scarcity alone, exactly as it did before stewards existed.
     policy: Policy = field(default_factory=Policy)
@@ -333,7 +367,7 @@ class Colony:
         but this says so in the terms that produced it, and it is the number a
         colony is actually judged on.
         """
-        return self.born - self.starved - self.left
+        return self.born - self.starved - self.left - self.mauled
 
     def resize(self, population: float) -> None:
         """Change how many people live here, and everything that follows.
@@ -369,14 +403,19 @@ class Colony:
         """What the colony makes in a day.
 
         The land's rate, times where its steward has put the people, times what
-        the season allows. `season` is a season's own `growth` table, or None
-        for a world with no calendar in it -- which is the control case for
-        every claim about what the seasons do.
+        the season allows, less whoever is out hunting. `season` is a season's
+        own `growth` table, or None for a world with no calendar in it -- which
+        is the control case for every claim about what the seasons do.
+
+        The hunting term is the only one that can take the total down rather
+        than move it about: `focus` is rebalanced so nobody is created by being
+        reassigned, but a party in the woods really is not in the fields.
         """
         return (
             self.production.get(good, 0.0)
             * self.policy.focus_for(good)
             * (season.get(good, 1.0) if season else 1.0)
+            * field_hands(self)
         )
 
     def labour_shares(self) -> dict[str, float]:

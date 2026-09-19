@@ -10,6 +10,8 @@ Tasks, ideas, and work items for the AI in Rimworld project.
 - [x] Storage, prices, currency, traders moving goods (`storage.py`, `trade.py`, `money.py`).
 - [x] Wildlife: dens, hazards, raids, guards; traders route around danger (`wildlife.py`).
 - [x] Stewards: per-colony agent setting prices, reserves, labour (`steward.py`).
+- [x] Crafting: recipes, workshops, bows, arrows, spears (`recipes.py`, `crafting.py`).
+- [x] Hunting: deer and boar herds on the terrain, hunting parties, meat and hides into the economy (`hunting.py`).
 - [x] Browser map of caravans on the roads (`server.py`, port 7700) and terminal watcher.
 - [x] Road network exposed as JSON-safe data for other renderers.
 - [x] Lift `sim/colonysim/` into `~/ascii-colony` (vendored 2026-09-19 by the local session; caravans, wildlife, and steward trade dials live in the game).
@@ -17,6 +19,10 @@ Tasks, ideas, and work items for the AI in Rimworld project.
 - [ ] Put `~/ascii-colony` on GitHub so cloud sessions can read and change it.
 - [ ] Pawn minds: per-pawn agents with persona, memory, dialogue (the original direction, now on the sim).
 - [ ] Player character the user drives and talks through.
+
+### Parked
+
+- **Colony events and a chronicle** -- a readable log of what happened in a run (a raid, a famine averted by a caravan, a grudge formed) so a playthrough tells a story. Ryan parked this on 2026-09-19 ("let's just avoid 2 for now, keep it in the backlog") while the rest of that list went ahead.
 
 ## RimWorld mod (paused)
 
