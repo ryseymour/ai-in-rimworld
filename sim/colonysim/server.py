@@ -12,6 +12,7 @@ import argparse
 import errno
 import json
 import time
+from html import escape
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
@@ -69,6 +70,12 @@ PAGE = """<!doctype html>
   .steward .note { color: var(--dim); font-size: 12px; }
   .up { color: #e0a458; }
   .down { color: #7fb3d5; }
+  .deal { padding: 6px 0; border-top: 1px solid var(--line); }
+  .deal:first-child { border-top: 0; }
+  .deal .struck { display: flex; justify-content: space-between; gap: 10px; }
+  .deal .struck .no { color: #e06c5a; }
+  .deal .said { color: var(--dim); font-size: 12px; margin-top: 2px; }
+  .deal .said b { color: #c9cdd6; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -91,6 +98,7 @@ PAGE = """<!doctype html>
     <section><h2>Caravans</h2><div id="caravans"></div></section>
     <section><h2>Storage</h2><div id="colonies"></div></section>
     <section><h2>Stewards</h2><div id="stewards"></div></section>
+    <section><h2>At the counter</h2><div id="deals"></div></section>
   </aside>
 </main>
 <script>
@@ -202,6 +210,18 @@ function panels(state) {
                (s.note ? `<div class="note">${s.note}</div>` : "") + "</div>";
       }).join("")
     : '<div class="empty">nobody is minding the shop</div>';
+
+  // Newest first: the argument that just happened is the one worth reading.
+  const deals = document.getElementById("deals");
+  deals.innerHTML = (state.negotiations || []).length
+    ? state.negotiations.slice().reverse().map(d =>
+        `<div class="deal"><div class="struck">` +
+        `<span>day ${d.day} &middot; ${d.good}</span>` +
+        `<span class="${d.settled ? "" : "no"}">${d.outcome}</span></div>` +
+        d.said.map(s =>
+          `<div class="said"><b>${s[0]}</b> ${s[1]}</div>`).join("") +
+        `</div>`).join("")
+    : '<div class="empty">nobody has haggled yet</div>';
 
   const head = "<tr><th>colony</th><th>people</th>" +
     state.goods.map(g => `<th>${g}</th>`).join("") + "<th>coin</th></tr>";
@@ -319,6 +339,42 @@ def steward_payload(sim) -> list[dict]:
     return out
 
 
+#: Negotiations on the page. Enough to see the last few arguments without the
+#: panel becoming the whole page.
+DEALS_SHOWN = 4
+
+
+def negotiation_payload(sim, keep: int = DEALS_SHOWN) -> list[dict]:
+    """The last few arguments at a counter, oldest first.
+
+    What was said is escaped on the way out. The scripted negotiator only ever
+    says what is in `negotiation.py`, but the whole point of the seam is that
+    something else can be doing the talking, and whatever that is should not be
+    able to put markup on this page.
+    """
+    out = []
+    for haggle in list(sim.negotiations)[-keep:]:
+        out.append(
+            {
+                "day": haggle.day,
+                "good": haggle.good,
+                "settled": haggle.settled,
+                "outcome": (
+                    f"{haggle.qty:.0f} at {haggle.price:.2f} "
+                    f"to {escape(haggle.host.name)}"
+                    if haggle.settled
+                    else "no deal"
+                ),
+                "said": [
+                    [escape(haggle.seat(move.speaker).name), escape(move.line)]
+                    for move in haggle.moves
+                    if move.line
+                ],
+            }
+        )
+    return out
+
+
 def _trend(colony) -> int:
     """+1 for a colony that has grown, -1 for one that has lost people."""
     return 1 if colony.growth >= 1.0 else -1 if colony.growth <= -1.0 else 0
@@ -359,6 +415,7 @@ def state_payload(sim) -> dict:
         "people": round(sim.population()),
         "raided": sim.raids,
         "stewards": steward_payload(sim),
+        "negotiations": negotiation_payload(sim),
         "caravans": caravans,
         "colonies": [
             {

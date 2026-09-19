@@ -26,6 +26,7 @@ from dataclasses import dataclass, field
 from typing import Callable
 
 from .goods import GOOD_NAMES, GOODS
+from .negotiation import Haggle, Move, Speaker, bargain
 from .roads import RoadNetwork, Route
 from .storage import (
     MAX_MARKUP,
@@ -72,6 +73,9 @@ FOCUS_STEP = 0.45
 #: Lines of reasoning kept. Enough to see why a colony is doing what it is
 #: doing, not enough to grow without bound over a long run.
 LOG_LINES = 40
+#: Negotiations a steward remembers it was part of. Enough to put recent
+#: dealings in front of whatever decides next; not a ledger of the century.
+HAGGLES_KEPT = 8
 
 
 @dataclass(frozen=True)
@@ -186,10 +190,16 @@ class Steward:
     #: with the same shape can take its place, including something that thinks
     #: for a second and a half and charges by the token.
     decide: Callable[["Steward", NetworkView], None] | None = None
+    #: What does the talking when a caravan is at the counter. `None` is the
+    #: scripted `bargain`; the same seam as `decide`, one level down -- prices
+    #: are the stance it takes, this is how it argues a single sale.
+    negotiator: Speaker | None = None
     #: The last thing it was shown, kept so a UI (or an agent's next prompt)
     #: can ask what the steward was looking at when it decided.
     view: NetworkView | None = None
     log: list[str] = field(default_factory=list)
+    #: Recent negotiations this colony was a party to, newest last.
+    haggles: list[Haggle] = field(default_factory=list)
     reviews: int = 0
     #: A slow average of how well covered each good has been, which is what the
     #: reserve and the labour decisions are made on.
@@ -282,6 +292,26 @@ class Steward:
         self.log.append(f"day {day}: {line}")
         del self.log[:-LOG_LINES]
 
+    # ----------------------------------------------------------- haggling
+    def speak(self, haggle: Haggle, side: str) -> Move:
+        """Say the next thing at a counter, for this colony's side of it.
+
+        The whole of the negotiation seam: whatever is hung on `negotiator`
+        decides, and what it says goes through `Haggle.play`, which clamps it.
+        So a model can be wrong, or rude, or ask for a million, and the worst
+        it can do to this colony is make a bad deal.
+        """
+        return (self.negotiator or bargain)(haggle, side)
+
+    def remember(self, haggle: Haggle) -> None:
+        """Keep a closed negotiation, so the next decision can see the last."""
+        self.haggles.append(haggle)
+        del self.haggles[:-HAGGLES_KEPT]
+
+    def dealings(self) -> str:
+        """Recent negotiations in words, for a prompt or a panel."""
+        return "\n".join(haggle.summary() for haggle in self.haggles)
+
     # ------------------------------------------------------------- deciding
     def review(self, view: NetworkView) -> None:
         """One look at the network, and whatever the steward makes of it."""
@@ -346,6 +376,9 @@ class Steward:
                         f"{where.name if where else caravan.destination}, "
                         f"{caravan.days_left:.0f} days out"
                     )
+        if self.haggles:
+            lines.append("lately at the counter:")
+            lines.extend(f"  {haggle.summary()}" for haggle in self.haggles[-3:])
         return "\n".join(lines)
 
 
