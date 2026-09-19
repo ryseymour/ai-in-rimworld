@@ -13,7 +13,7 @@ from dataclasses import dataclass, field
 from .goods import GOODS
 from .money import SILVER, Purse
 from .roads import RoadNetwork, Route, travel_cost
-from .storage import MAX_MULT, Colony, MarketView
+from .storage import Colony, MarketView
 from .terrain import Terrain
 from .wildlife import Encounter
 
@@ -286,9 +286,10 @@ def do_business(caravan: Caravan, host: Colony, home: Colony, day: int = 0) -> N
         if qty <= 0:
             continue
         # Quoted before the goods land and move the price, plus whatever the
-        # road was worth, capped at what any good can fetch here.
-        ceiling = GOODS[good].base_price * MAX_MULT
-        price = min(host.price(good) * (1.0 + premium), ceiling)
+        # road was worth, capped at what any good can fetch here -- a ceiling
+        # that moves with the host's own stance, so a colony that has bid its
+        # prices up to pull in supply is not capped below what it offered.
+        price = min(host.price(good) * (1.0 + premium), host.price_ceiling(good))
         bill = qty * price
 
         caravan.cargo[good] -= qty

@@ -63,6 +63,12 @@ PAGE = """<!doctype html>
   .route { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; }
   .route span:last-child { color: var(--dim); text-align: right; }
   .empty { color: var(--dim); }
+  .steward { padding: 4px 0; border-top: 1px solid var(--line); }
+  .steward:first-child { border-top: 0; }
+  .steward .who { display: flex; justify-content: space-between; gap: 10px; }
+  .steward .note { color: var(--dim); font-size: 12px; }
+  .up { color: #e0a458; }
+  .down { color: #7fb3d5; }
 </style>
 </head>
 <body>
@@ -83,6 +89,7 @@ PAGE = """<!doctype html>
   <aside>
     <section><h2>Caravans</h2><div id="caravans"></div></section>
     <section><h2>Storage</h2><div id="colonies"></div></section>
+    <section><h2>Stewards</h2><div id="stewards"></div></section>
   </aside>
 </main>
 <script>
@@ -178,6 +185,22 @@ function panels(state) {
         `<span>${c.cargo || "empty"}</span></div>`).join("")
     : '<div class="empty">none on the road</div>';
 
+  const stewards = document.getElementById("stewards");
+  stewards.innerHTML = (state.stewards || []).length
+    ? state.stewards.map(s => {
+        const prices = s.prices.length
+          ? s.prices.map(p =>
+              `<span class="${p.at > 1 ? "up" : "down"}">${p.good} &times;${p.at.toFixed(2)}</span>`
+            ).join(", ")
+          : '<span class="empty">prices as they come</span>';
+        const note = [s.holding, s.working].filter(Boolean).join(" &middot; ");
+        return `<div class="steward"><div class="who"><span>${s.name}</span>` +
+               `<span>${prices}</span></div>` +
+               (note ? `<div class="note">${note}</div>` : "") +
+               (s.note ? `<div class="note">${s.note}</div>` : "") + "</div>";
+      }).join("")
+    : '<div class="empty">nobody is minding the shop</div>';
+
   const head = "<tr><th>colony</th>" + state.goods.map(g => `<th>${g}</th>`).join("") + "<th>coin</th></tr>";
   const rows = state.colonies.map(c =>
     `<tr class="${c.hungry ? "hungry" : ""}"><td>${c.name}</td>` +
@@ -259,6 +282,34 @@ def cargo_text(cargo: dict[str, float]) -> str:
     return ", ".join(f"{q:.0f} {g}" for q, g in carried[:3])
 
 
+def steward_payload(sim) -> list[dict]:
+    """What each steward has done to its colony, for the panel beside the map.
+
+    Only what it actually changed: a steward leaving its prices alone should
+    look like a steward leaving its prices alone, not a wall of 1.00x.
+    """
+    out = []
+    for steward in sim.stewards:
+        stance = steward.stance()
+        out.append(
+            {
+                "name": steward.name,
+                "prices": [
+                    {"good": good, "at": at} for good, at in stance["markup"].items()
+                ],
+                "holding": ", ".join(
+                    f"{good} kept {steward.colony.reserve_days(good):.0f}d"
+                    for good in stance["reserve"]
+                ),
+                "working": ", ".join(
+                    f"{good} work {at:.2f}x" for good, at in stance["focus"].items()
+                ),
+                "note": steward.log[-1] if steward.log else "",
+            }
+        )
+    return out
+
+
 def state_payload(sim) -> dict:
     hungry = set(sim.hungry_colonies())
     caravans = []
@@ -292,6 +343,7 @@ def state_payload(sim) -> dict:
         ],
         "met": sim.meetings,
         "raided": sim.raids,
+        "stewards": steward_payload(sim),
         "caravans": caravans,
         "colonies": [
             {
@@ -372,12 +424,23 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=23)
     ap.add_argument("--width", type=int, default=90)
     ap.add_argument("--height", type=int, default=45)
-    ap.add_argument("--settlements", type=int, default=6)
+    ap.add_argument("--settlements", type=int, default=3)
+    ap.add_argument(
+        "--no-stewards",
+        action="store_true",
+        help="leave every colony trading on bare scarcity",
+    )
     ap.add_argument("--speed", type=float, default=4.0, help="days per second")
     ap.add_argument("--days", type=int, default=0, help="stop after N days (0 = forever)")
     args = ap.parse_args()
 
-    sim = build_simulation(args.seed, args.settlements, args.width, args.height)
+    sim = build_simulation(
+        args.seed,
+        args.settlements,
+        args.width,
+        args.height,
+        stewards=not args.no_stewards,
+    )
     clock = Clock(sim, args.speed, args.days)
     server = serve_somewhere(args.host, args.port, make_handler(clock))
     if server is None:

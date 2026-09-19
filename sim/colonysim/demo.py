@@ -16,7 +16,7 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=23)
     ap.add_argument("--width", type=int, default=90)
     ap.add_argument("--height", type=int, default=45)
-    ap.add_argument("--settlements", type=int, default=6)
+    ap.add_argument("--settlements", type=int, default=3)
     ap.add_argument("--days", type=int, default=150)
     ap.add_argument("--journeys", type=int, default=6, help="journeys to print")
     args = ap.parse_args()
@@ -24,6 +24,11 @@ def main() -> None:
     sim = build_simulation(args.seed, args.settlements, args.width, args.height)
     control = build_simulation(args.seed, args.settlements, args.width, args.height)
     control.trade_enabled = False
+    # The same world with nobody running the colonies: prices come off the
+    # shelves and nothing else. The control case for what stewards do.
+    unled = build_simulation(
+        args.seed, args.settlements, args.width, args.height, stewards=False
+    )
     # The same world with the wolves and bears taken off it, so the cost of
     # the wild can be read straight off the difference.
     tame = build_simulation(
@@ -32,6 +37,7 @@ def main() -> None:
 
     sim.run(args.days)
     control.run(args.days)
+    unled.run(args.days)
     tame.run(args.days)
 
     print(render(sim.world, sim.network, wilds=sim.wilds))
@@ -45,14 +51,38 @@ def main() -> None:
         print(f"{colony.name:<12}{row}{colony.purse.amount:>10.0f}")
 
     print("\nprice gap between the dearest and cheapest colony:")
-    print(f"  {'good':<8}{'with trade':>12}{'without':>12}")
+    print(f"  {'good':<8}{'with trade':>12}{'without':>12}{'no steward':>12}")
     for good in GOOD_NAMES:
-        print(f"  {good:<8}{sim.price_spread(good):>12.2f}{control.price_spread(good):>12.2f}")
+        print(
+            f"  {good:<8}{sim.price_spread(good):>12.2f}"
+            f"{control.price_spread(good):>12.2f}{unled.price_spread(good):>12.2f}"
+        )
 
     hungry = sim.hungry_colonies()
     starved = control.hungry_colonies()
     print(f"\nout of food, with trade: {', '.join(hungry) or 'nobody'}")
     print(f"out of food, without:    {', '.join(starved) or 'nobody'}")
+
+    print("\n--- the stewards ---\n")
+    for steward in sim.stewards:
+        stance = steward.stance()
+        print(f"  {steward.name}")
+        asking = ", ".join(
+            f"{good} {at:.2f}x" for good, at in stance["markup"].items()
+        )
+        holding = ", ".join(
+            f"{good} {steward.colony.reserve_days(good):.0f}d" for good in stance["reserve"]
+        )
+        working = ", ".join(f"{good} {at:.2f}x" for good, at in stance["focus"].items())
+        print(f"    asking:  {asking or 'whatever the shelves say'}")
+        print(f"    holding: {holding or 'the usual buffers'}")
+        print(f"    working: {working or 'whatever the land gives'}")
+        for line in steward.log[-2:]:
+            print(f"    {line}")
+
+    print(f"\n  out of food with stewards: {', '.join(sim.hungry_colonies()) or 'nobody'}")
+    print(f"  out of food without them:  {', '.join(unled.hungry_colonies()) or 'nobody'}")
+    print(f"  journeys: {sim.journeys} with stewards, {unled.journeys} without")
 
     print(f"\n--- the wild ---\n")
     print(f"  journeys made:      {sim.journeys}  (a tame world: {tame.journeys})")

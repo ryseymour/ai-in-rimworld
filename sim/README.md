@@ -1,10 +1,11 @@
 # colonysim
 
-World generation and procedural roads for the colony simulation. Stdlib only,
-no dependencies, so it ports into the sim proper as a module.
+World generation, procedural roads and an economy for the colony simulation.
+Stdlib only, no dependencies, so it ports into the sim proper as a module.
 
 See `../wiki/design-inter-colony-trade.md` for the design this implements:
-roads, storage and prices, and traders moving goods between colonies.
+roads, storage and prices, traders moving goods between colonies, and a steward
+running each colony's side of it.
 
 ## Open it in a browser
 
@@ -14,10 +15,17 @@ python3 -m colonysim.server
 
 Then open **http://127.0.0.1:7700**. The map draws the terrain, the road
 network, every colony and the caravans moving between them, with what each one
-is carrying and every colony's shelves updating beside it. Wolf packs and bear
+is carrying and every colony's shelves updating beside it. The Stewards panel
+underneath shows what each colony has decided to do about its own prices --
+`food x1.32` is a colony bidding for supply, `wood x0.71` one discounting to
+shift a pile -- along with the last thing it changed and why. Wolf packs and bear
 territories are the coloured patches the roads have to get past; a caravan with
 a ring around it has hired guards. Pause and speed controls are on the page.
 Ctrl-C in the terminal stops it.
+
+Three colonies by default, which is small enough to follow every trade.
+`--settlements 6` gives the wider world, and `--no-stewards` takes the decision
+makers off so you can see what the same world does on bare scarcity.
 
 No dependencies and no build step — it is `http.server` and one HTML page. If
 7700 is already taken it moves to the next free port and tells you which, so it
@@ -47,6 +55,39 @@ trade switched off, and prints both so the difference is visible.
 Glyphs: `~` water, `.` plains, `"` forest, `^` rough; `:` foot path, `-` dirt
 road, `=` paved; `w` a wolf pack and `B` a bear; digits are settlements, `@` is
 a caravan.
+
+## Stewards
+
+Each colony has one: the agent that runs its side of the economy. A steward
+sees the trade network -- who it can reach, how far and how dangerous the road
+is today, and what the last caravan home reported about each market -- and
+changes three things about its own colony:
+
+* **prices**, as a markup on what scarcity alone would ask (0.6x to 1.8x). The
+  same number is what a visiting caravan is paid here and what this colony pays
+  for imports, so bidding for supply costs real coin and discounting to shift a
+  glut earns less per unit.
+* **the reserve**, how many days of a good it keeps back, which is the line
+  between what it sells and what it wants to buy.
+* **where its people work**, a lean on the land's own output, rebalanced so no
+  labour is created -- terrain still decides what a village is any good at.
+
+The scripted steward (`merchant` in `steward.py`) bids up what it is short of,
+working backwards from what a trader would need to see before making the trip;
+undercuts whoever else could supply the colony that wants what it has spare;
+and over weeks moves people toward what it keeps running out of. It is
+deliberately a thin function over the view: pass `decide=` to `Steward` and
+anything else can run a colony instead, off the same `NetworkView` and the same
+clamped setters. `Steward.brief()` writes the whole situation out as text for
+exactly that.
+
+```python
+sim = build_simulation(seed=23, settlements=3)
+steward = sim.stewards[0]
+steward.set_markup("food", 1.4, "we are short and the road is long")
+steward.set_reserve_days("wood", 20)
+print(steward.brief())
+```
 
 ## How roads are generated
 
