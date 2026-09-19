@@ -1,6 +1,7 @@
 """ASCII render of a world and its roads."""
 from __future__ import annotations
 
+from .hunting import Herds
 from .roads import RoadNetwork
 from .wildlife import Wilds
 from .world import World
@@ -19,6 +20,7 @@ def render(
     network: RoadNetwork | None = None,
     caravans: "list | None" = None,
     wilds: Wilds | None = None,
+    herds: Herds | None = None,
 ) -> str:
     terrain = world.terrain
     grid = [
@@ -29,6 +31,13 @@ def render(
     if network is not None:
         for (x, y), road in network.tiles.items():
             grid[y][x] = ROAD_GLYPH.get(road.tier, ":")
+
+    # Game first, then the dens on top: where a herd grazes under a wolf pack,
+    # the wolves are the thing anyone walking out there cares about.
+    if herds is not None:
+        for herd in herds.herds:
+            if herd.strength > 0.0:
+                grid[herd.y][herd.x] = herd.kind.glyph
 
     # Dens go on after the roads: where a road runs past a den, the den is
     # what the caravan cares about.
@@ -50,16 +59,23 @@ def render(
 
 
 def legend(
-    world: World, network: RoadNetwork | None = None, wilds: Wilds | None = None
+    world: World,
+    network: RoadNetwork | None = None,
+    wilds: Wilds | None = None,
+    herds: Herds | None = None,
 ) -> str:
     lines = [f"{s.id} {s.name} ({s.x},{s.y})" for s in world.settlements]
+    if (wilds is not None and wilds.dens) or (herds is not None and herds.herds):
+        lines.append("")
     if wilds is not None and wilds.dens:
         counts: dict[str, int] = {}
         for den in wilds.dens:
             counts[den.species] = counts.get(den.species, 0) + 1
-        lines.append("")
         tally = ", ".join(f"{n} {species}" for species, n in sorted(counts.items()))
         lines.append(f"dens: {tally}")
+    if herds is not None and herds.herds:
+        tally = ", ".join(f"{n} {species}" for species, n in herds.tally().items())
+        lines.append(f"game: {tally}")
     if network is not None:
         lines.append("")
         for (a, b), route in sorted(network.routes.items()):

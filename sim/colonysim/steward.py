@@ -28,6 +28,7 @@ from dataclasses import dataclass, field
 from typing import Callable
 
 from .goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
+from .hunting import MAX_ABUNDANCE, hunters
 from .negotiation import Haggle, Move, Speaker, bargain
 from .recipes import RECIPES, SMITHY, STATIONS
 from .reputation import describe, trades_with
@@ -74,6 +75,9 @@ MEMORY = 0.88
 SLOW_INTERVAL = 7
 #: How hard a steward leans the land toward what is scarce and what sells.
 FOCUS_STEP = 0.45
+#: The same, for the hunting party. Larger than the others because the dial has
+#: less room -- and because a hungry village reaches for the bows first.
+HUNT_STEP = 0.9
 #: The same, for the workshop: how hard it leans the bench toward what the
 #: colony is running out of and what its neighbours are paying for.
 CRAFT_STEP = 0.8
@@ -326,6 +330,19 @@ class Steward:
             self.note(f"bench on {good} at {after:.2f}x -- {why}")
         return after
 
+    def set_hunt(self, weight: float, why: str = "") -> float:
+        """How much of the village is out after deer, against the usual share.
+
+        The one dial that costs something directly: hands in the woods are
+        hands off the land, so pushing this up takes the harvest down -- see
+        `hunting.field_hands`.
+        """
+        before = self.colony.policy.hunt_share()
+        after = self.colony.policy.set_hunt(weight)
+        if abs(after - before) > 0.1 and why:
+            self.note(f"hunting party at {after:.2f}x -- {why}")
+        return after
+
     def commission(self, station: str) -> bool:
         """Decide to put up a bench. The workshop pays for it and builds it.
 
@@ -356,6 +373,7 @@ class Steward:
         self.colony.policy.reserve_mult.clear()
         self.colony.policy.focus.clear()
         self.colony.policy.craft.clear()
+        self.colony.policy.hunt = 1.0
 
     def note(self, line: str) -> None:
         day = self.view.day if self.view else 0
@@ -421,6 +439,10 @@ class Steward:
                 f"{self.days_of_stock(good):>5.0f} days  {state:<6} "
                 f"asking {self.price(good):.2f} ({self.colony.policy.markup_for(good):.2f}x)"
             )
+        lines.append(
+            f"hunting: {colony.hunting_ground:.2f}x ground, "
+            f"{hunters(colony):.0f} out of {colony.population:.0f} after game"
+        )
         shop = self.colony.workshop
         lines.append(f"workshop: {shop.describe()}")
         makeable = sorted(recipe.output for recipe in shop.recipes())
@@ -477,6 +499,7 @@ def merchant(steward: Steward, view: NetworkView) -> None:
             _reserve(steward, good)
         _labour(steward, view)
         _bench(steward, view)
+        _hunt(steward)
 
 
 def _price(steward: Steward, view: NetworkView, good: str) -> None:
@@ -655,6 +678,39 @@ def _bench(steward: Steward, view: NetworkView) -> None:
         steward.set_craft(good, current + ADJUST_RATE * (target - current), why)
 
     _smithy(steward)
+
+
+def _hunt(steward: Steward) -> None:
+    """How many people to send into the woods.
+
+    A colony hunts harder for one reason -- it is short of food -- and only
+    where the two things that make hunting work are there: game on its ground,
+    and arrows to shoot at it. Both are multipliers rather than conditions, so
+    a hungry village with an empty quiver goes back to the fields instead of
+    standing in the trees with its hands empty.
+
+    The other direction matters as much. A colony with a full granary pulls its
+    party back below the usual share, because those hands are worth more on the
+    land -- which is why a good harvest looks like the end of hunting season.
+    """
+    colony = steward.colony
+    food = steward.remembered("food")
+    if food == float("inf"):
+        return
+    scarce = 1.0 - clamp(food, 0.3, 2.0)
+    quiver = clamp(steward.remembered("arrows"), 0.0, 1.0)
+    ground = clamp(colony.hunting_ground, 0.0, MAX_ABUNDANCE)
+
+    target = 1.0 + HUNT_STEP * scarce * quiver * ground
+    current = colony.policy.hunt_share()
+    why = ""
+    if abs(target - 1.0) > 0.15:
+        why = (
+            "the granary is thin and there is game about"
+            if scarce > 0
+            else "we are fed, and the fields want the hands"
+        )
+    steward.set_hunt(current + ADJUST_RATE * (target - current), why)
 
 
 def _smithy(steward: Steward) -> None:

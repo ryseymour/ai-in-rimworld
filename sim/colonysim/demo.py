@@ -7,6 +7,7 @@ from __future__ import annotations
 import argparse
 
 from .crafting import armed_strength
+from .hunting import hunters
 from .goods import GOOD_NAMES
 from .render import legend, render
 from .reputation import describe
@@ -44,9 +45,9 @@ def main() -> None:
     unled.run(args.days)
     tame.run(args.days)
 
-    print(render(sim.world, sim.network, wilds=sim.wilds))
+    print(render(sim.world, sim.network, wilds=sim.wilds, herds=sim.herds))
     print()
-    print(legend(sim.world, sim.network, sim.wilds))
+    print(legend(sim.world, sim.network, sim.wilds, sim.herds))
 
     print(f"\n--- after {args.days} days, {sim.journeys} journeys ---\n")
     # Written off GOOD_NAMES rather than spelt out, since the crafted goods
@@ -103,8 +104,19 @@ def main() -> None:
     hunted = ", ".join(
         f"{qty:.0f} {good}" for good, qty in sorted(sim.hunted.items()) if qty >= 0.5
     )
+    game = ", ".join(
+        f"{qty:.0f} {species}" for species, qty in sorted(sim.game_taken.items())
+    )
     print(f"\n  made at the benches: {crafted or 'nothing'}")
-    print(f"  brought home hunting: {hunted or 'nothing'}")
+    print(f"  brought home hunting: {hunted or 'nothing'} ({game or 'no animals'})")
+    if sim.mauled:
+        print(f"  lost in the woods: {sim.mauled:.0f}")
+    for colony in sim.colonies:
+        spot = sim.ground(colony)
+        print(
+            f"  {colony.name:<12}{spot.describe()}, "
+            f"{hunters(colony):.0f} of {colony.population:.0f} out"
+        )
     armed = ", ".join(
         f"{colony.name} {armed_strength(colony):.0%}" for colony in sim.colonies
     )

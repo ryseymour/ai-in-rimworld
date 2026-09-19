@@ -7,7 +7,15 @@ from dataclasses import dataclass, field
 from . import people
 from .crafting import WEAR_PER_CAPITA, armed_strength, work_day
 from .goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
-from .hunting import ARROWS_PER_CAPITA, hunt
+from .hunting import (
+    ARROWS_PER_CAPITA,
+    Herds,
+    Hunt,
+    HuntingGround,
+    hunt,
+    open_country,
+)
+from .hunting import populate as populate_game
 from .money import SILVER, Purse
 from .negotiation import Haggle, Speakers
 from .reputation import Reputation, guard_discount, trade_bias
@@ -72,6 +80,8 @@ DANGER_DETOUR = 0.8
 #: Negotiations kept for anyone watching. A long run has thousands; a viewer
 #: wants the last few, and holding every one would be a leak with a plot.
 NEGOTIATIONS_KEPT = 30
+#: Hunts kept, for the same reason: every colony sends a party out every day.
+HUNTS_KEPT = 24
 
 
 def terrain_mix(world: World, x: int, y: int, radius: int = CATCHMENT) -> dict[str, float]:
@@ -167,6 +177,10 @@ class Simulation:
     #: The animals. `None` is a tame world, and the control case for every
     #: claim about what the wildlife does.
     wilds: Wilds | None = None
+    #: The game: deer and boar, on their own ground. `None` is a world with
+    #: nothing to hunt but ordinary country everywhere, which is what hunting
+    #: was before the herds were on the map.
+    herds: Herds | None = None
     #: Goods eaten or trampled by animals. Nothing else in the sim destroys
     #: goods, so conservation is checked against this.
     lost: dict[str, float] = field(default_factory=dict)
@@ -190,6 +204,13 @@ class Simulation:
     #: of `produced` -- these are kept apart so the thing can be reported on.
     crafted: dict[str, float] = field(default_factory=dict)
     hunted: dict[str, float] = field(default_factory=dict)
+    #: Animals brought down, by species, and the last few parties that went
+    #: out. The tally is the whole run; the parties are for anyone watching.
+    game_taken: dict[str, float] = field(default_factory=dict)
+    hunts: list[Hunt] = field(default_factory=list)
+    #: Hunters killed by what they were hunting, or by what was hunting them.
+    #: The only deaths in the sim that are not hunger.
+    mauled: float = 0.0
     journeys_turned_back: int = 0
     #: Caravans turned away at a gate by a colony that has had enough of them.
     #: The one number that says reputation is biting rather than just moving.
@@ -202,6 +223,9 @@ class Simulation:
     #: Encounters are the one roll of the dice in the sim. Seeded from the
     #: world, so a seed still replays exactly.
     rng: random.Random = field(default_factory=lambda: random.Random(0))
+    #: The hunt's own dice, kept apart from the road's so that adding a hunting
+    #: party to a world does not change which caravans the wolves found in it.
+    hunt_rng: random.Random = field(default_factory=lambda: random.Random(1))
     _next_caravan_id: int = 0
     #: Route hazards, worked out once a day. A road's danger moves only as its
     #: tier and the dens near it move, both of which change by the day, while
@@ -212,6 +236,10 @@ class Simulation:
     #: same question of the same graph on the same day, so they share a cache
     #: and the answers cannot disagree.
     _routes_today: dict[tuple[int, int], tuple] = field(default_factory=dict)
+    #: And the hunting ground each colony walks today, for the same reason: the
+    #: herds move once a day, and a steward and a hunting party must not be
+    #: looking at two different woods.
+    _ground_today: dict[int, HuntingGround] = field(default_factory=dict)
 
     # ---------------------------------------------------------------- totals
     def goods_in_world(self) -> dict[str, float]:
@@ -297,6 +325,7 @@ class Simulation:
         self.day += 1
         self._hazard_today.clear()
         self._routes_today.clear()
+        self._ground_today.clear()
 
         for colony in self.colonies:
             wanted = colony.consumption.get("food", 0.0)
@@ -324,6 +353,10 @@ class Simulation:
 
         if self.wilds is not None:
             self.wilds.settle_day(self.network)
+        # The game puts back what the day's parties took. Where that balances
+        # is how much hunting a colony's own ground will stand year after year.
+        if self.herds is not None:
+            self.herds.graze_day()
 
         # Stewards decide before anyone is dispatched, so a caravan leaving
         # today leaves under today's prices rather than yesterday's.
@@ -355,14 +388,58 @@ class Simulation:
         for good, qty in made.items():
             self.crafted[good] = self.crafted.get(good, 0.0) + qty
 
+    def ground(self, colony: Colony) -> HuntingGround:
+        """The country this colony's hunters work today.
+
+        Cached for the day and written back onto the colony, so the steward
+        deciding how many people to send and the party that goes are reading
+        the same woods. A world with no herds on it is ordinary country
+        everywhere, which is what hunting was before the game was on the map.
+        """
+        known = self._ground_today.get(colony.id)
+        if known is not None:
+            return known
+        if self.herds is None:
+            found = open_country()
+        else:
+            found = self.herds.ground(
+                colony.settlement.x, colony.settlement.y, self.wilds
+            )
+        self._ground_today[colony.id] = found
+        colony.hunting_ground = found.abundance
+        return found
+
     def _hunt(self, colony: Colony, arrows: float) -> None:
-        """What the hunting party brought back for the arrows it spent."""
+        """Send the day's party out and take in what it brought back.
+
+        Everything that happens to the party happens here: the meat and hides
+        go onto the shelves and into the world's production, the herds it
+        worked are thinned by what it took, and anyone it lost is taken off the
+        colony. What a predator took off them never reaches a shelf, so there
+        is nothing to subtract: it was never in the world.
+        """
+        ground = self.ground(colony)
         if arrows <= 0.0:
             return
-        bag = hunt(colony, arrows)
-        self._made(bag)
-        for good, qty in bag.items():
+        party = hunt(colony, arrows, ground, self.hunt_rng, self.day)
+        self._made(party.bag)
+        for good, qty in party.bag.items():
             self.hunted[good] = self.hunted.get(good, 0.0) + qty
+        for species, animals in party.taken.items():
+            self.game_taken[species] = self.game_taken.get(species, 0.0) + animals
+        if self.herds is not None:
+            self.herds.thin(ground, party.taken)
+        # A frozen world is frozen all the way: `population_moves=False` is the
+        # control case for people, and the woods do not get an exception.
+        if party.hurt > 0.0 and self.population_moves:
+            colony.mauled += party.hurt
+            self.mauled += party.hurt
+            colony.resize(colony.population - party.hurt)
+        if party.bag or party.mishap:
+            self.hunts.append(party)
+            del self.hunts[:-HUNTS_KEPT]
+        if party.mishap:
+            self.log.append(f"day {self.day}: {party.describe()}")
 
     # --------------------------------------------------------------- people
     def _live_people(self, colony: Colony, ration: float) -> None:
@@ -722,11 +799,16 @@ def build_simulation(
     width: int = 90,
     height: int = 45,
     wildlife: bool = True,
+    game: bool = True,
     stewards: bool = True,
     population: bool = True,
     reputation: bool = True,
 ) -> Simulation:
     """A world, its roads, its colonies, and whoever is running them.
+
+    `game=False` empties the woods -- every colony hunts ordinary country with
+    nothing living on it in particular, which is the control case for every
+    claim about what the herds do.
 
     `stewards=False` leaves every colony trading on bare scarcity, which is the
     world this sim had before anyone was in charge of one -- and so the control
@@ -750,5 +832,7 @@ def build_simulation(
         stewards=[Steward(colony) for colony in colonies] if stewards else [],
         population_moves=population,
         wilds=populate(world, seed) if wildlife else None,
+        herds=populate_game(world, seed) if game else None,
         rng=random.Random(seed ^ 0xD00D),
+        hunt_rng=random.Random(seed ^ 0x51AE),
     )

@@ -188,6 +188,39 @@ def test_the_state_carries_the_dens_so_the_map_can_show_them():
         assert sim.world.terrain.in_bounds(x, y)
 
 
+def test_the_state_carries_the_game_and_the_days_hunting():
+    """Herds travel with the state for the same reason the dens do: hunting
+    thins them and a quiet season brings them back."""
+    sim = build_simulation(seed=23)
+    sim.run(20)
+    state = state_payload(sim)
+
+    assert len(state["herds"]) == len(
+        [h for h in sim.herds.herds if h.strength > 0.0]
+    )
+    for x, y, species, strength in state["herds"]:
+        assert species in ("deer", "boar")
+        assert 0.0 < strength <= 1.0
+        assert sim.world.terrain.in_bounds(x, y)
+
+    assert state["game"] > 0, "nothing was taken all month"
+    assert state["hunts"], "no party came home with anything"
+    for colony in state["colonies"]:
+        assert colony["ground"]
+        assert colony["party"] >= 0
+
+
+def test_a_world_with_no_game_sends_no_herds():
+    sim = build_simulation(seed=23, game=False)
+    sim.run(5)
+    state = state_payload(sim)
+
+    assert state["herds"] == []
+    # Ordinary country everywhere still feeds a party, which is what the sim
+    # did before the game was on the map.
+    assert state["game"] > 0
+
+
 def test_a_world_with_no_animals_sends_no_dens():
     sim = build_simulation(seed=23, wildlife=False)
     sim.run(5)

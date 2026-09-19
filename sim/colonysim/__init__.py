@@ -1,5 +1,5 @@
 """The colony simulation: world, roads, storage, currency, trade, stewards,
-haggling, people, reputation and the wild.
+haggling, people, reputation, hunting and the wild.
 
 See `../wiki/design-inter-colony-trade.md` for the design this implements.
 """
@@ -7,7 +7,18 @@ from __future__ import annotations
 
 from .crafting import Workshop, armed_strength, armoury, work_day
 from .goods import CRAFTED_GOOD_NAMES, GOOD_NAMES, GOODS, RAW_GOOD_NAMES, Good
-from .hunting import hunt
+from .hunting import (
+    BOAR,
+    DEER,
+    Game,
+    Herd,
+    Herds,
+    Hunt,
+    HuntingGround,
+    hunt,
+    hunters,
+)
+from .hunting import populate as populate_game
 from .money import SILVER, Currency, Purse
 from .negotiation import (
     HOST,
@@ -33,7 +44,9 @@ from .world import Settlement, World, generate_world
 
 __all__ = [
     "BEARS",
+    "BOAR",
     "CRAFTED_GOOD_NAMES",
+    "DEER",
     "GOODS",
     "GOOD_NAMES",
     "HOST",
@@ -48,8 +61,13 @@ __all__ = [
     "Currency",
     "Den",
     "Encounter",
+    "Game",
     "Good",
     "Haggle",
+    "Herd",
+    "Herds",
+    "Hunt",
+    "HuntingGround",
     "Link",
     "MarketView",
     "Move",
@@ -84,10 +102,12 @@ __all__ = [
     "generate_terrain",
     "generate_world",
     "hunt",
+    "hunters",
     "merchant",
     "negotiate",
     "open_haggle",
     "populate",
+    "populate_game",
     "road_links",
     "road_overlay",
     "settle",
