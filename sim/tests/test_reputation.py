@@ -12,6 +12,7 @@ import pytest
 
 from colonysim.goods import GOOD_NAMES, GOODS
 from colonysim.money import SILVER, Purse
+from colonysim.negotiation import ACCEPT, COUNTER, Move, Speakers, other
 from colonysim.reputation import (
     DEAL_SIZE,
     EMBARGO,
@@ -67,14 +68,36 @@ def link(cid, name, standing=0.0, surplus=None, shortfall=None) -> Link:
     )
 
 
-def visit(seller: Colony, buyer: Colony, qty=50.0, hazard=0.0, day=1) -> Caravan:
+def visit(
+    seller: Colony,
+    buyer: Colony,
+    qty=50.0,
+    hazard=0.0,
+    day=1,
+    speakers: Speakers | None = None,
+) -> Caravan:
     """One caravan from `seller` to `buyer`, there and dealt with."""
     caravan = Caravan(
         id=0, home=seller.id, destination=buyer.id, legs=(), hazard=hazard
     )
     caravan.cargo["food"] = seller.storage.remove("food", qty)
-    do_business(caravan, buyer, seller, day=day)
+    do_business(caravan, buyer, seller, day=day, speakers=speakers)
     return caravan
+
+
+def hard_bargainer(haggle, side) -> Move:
+    """A trader that will not come off the most the host can possibly bear.
+
+    Since prices are argued over rather than posted, this is what gouging
+    actually looks like now: not a number the code picks, but a negotiator
+    that holds out for the top of the host's range and takes it.
+    """
+    seat = haggle.seat(side)
+    top = max(seat.aspiration, seat.limit)
+    theirs = haggle.standing(other(side))
+    if theirs is not None and theirs.price >= top - 1e-9:
+        return Move(side, ACCEPT, theirs.price, theirs.qty, "agreed, then")
+    return Move(side, COUNTER, top, seat.want, f"{top:.2f} a unit, take it or leave it")
 
 
 # ------------------------------------------------------------------ the scale
@@ -303,20 +326,44 @@ def test_being_turned_away_is_itself_remembered():
     assert seller.known[1].day == 5
 
 
+def test_holding_out_for_the_top_of_a_hosts_range_reads_as_gouging():
+    """The same goods and the same road, argued two ways. A trader that meets
+    the host somewhere in the middle is dealing fairly; one that holds out for
+    every last coin the host can bear is not, and the host knows the
+    difference because it is the difference between what it paid and what it
+    would have asked itself."""
+    fair_host = colony("Buyer", 1, food=40)
+    visit(colony("Seller", 0, food=600), fair_host, qty=80.0, hazard=1.0)
+
+    hard_host = colony("Buyer", 1, food=40)
+    visit(
+        colony("Seller", 0, food=600),
+        hard_host,
+        qty=80.0,
+        hazard=1.0,
+        speakers=Speakers(trader=hard_bargainer),
+    )
+
+    assert hard_host.reputation.of(0) < 0 < fair_host.reputation.of(0)
+
+
 def test_gouging_a_colony_for_long_enough_closes_its_gate():
-    """The whole arc in one test. A caravan on a road so dangerous it charges
-    the full premium, visit after visit, until the host stops letting it in --
-    and then, a year of quiet later, lets it in again."""
+    """The whole arc in one test. A trader that holds out for the top of a
+    dangerous road's range, visit after visit, until the host stops letting it
+    in -- and then, a year of quiet later, lets it in again."""
     seller = colony("Seller", 0, food=4000)
     buyer = colony("Buyer", 1, food=40)
+    speakers = Speakers(trader=hard_bargainer)
 
-    for day in range(1, 9):
+    for day in range(1, 13):
         buyer.storage.stock["food"] = 40.0  # the buyer eats what it bought
-        caravan = visit(seller, buyer, qty=80.0, hazard=1.0, day=day)
+        caravan = visit(
+            seller, buyer, qty=80.0, hazard=1.0, day=day, speakers=speakers
+        )
         if "turned away" in caravan.ledger[0]:
             break
     else:
-        pytest.fail("a caravan charging the full premium was never turned away")
+        pytest.fail("a caravan holding out for the top price was never turned away")
 
     assert buyer.reputation.of(0) <= EMBARGO
     assert buyer.reputation.word_for(0) == "shunned"
