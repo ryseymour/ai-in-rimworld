@@ -27,6 +27,7 @@ from typing import Callable
 
 from .goods import GOOD_NAMES, GOODS
 from .negotiation import Haggle, Move, Speaker, bargain
+from .reputation import describe, trades_with
 from .roads import RoadNetwork, Route
 from .storage import (
     MAX_MARKUP,
@@ -97,10 +98,23 @@ class Link:
     tier: float
     legs: tuple[Route, ...]
     market: MarketView
+    #: What this colony thinks of that one, from -1 to 1. Current, unlike the
+    #: market: how a neighbour has behaved is the one thing a colony does not
+    #: have to send anyone out to find out.
+    standing: float = 0.0
 
     @property
     def visited(self) -> bool:
         return self.market.day >= 0
+
+    @property
+    def welcome(self) -> bool:
+        """Whether this colony will deal with that one at all."""
+        return trades_with(self.standing)
+
+    @property
+    def regard(self) -> str:
+        return describe(self.standing)
 
     def age(self, day: int) -> int:
         """Days since anyone actually looked, or -1 for never.
@@ -142,16 +156,34 @@ class NetworkView:
         return sorted(self.links.values(), key=lambda link: (link.days, link.colony))
 
     def sellers(self, good: str) -> list[Link]:
-        """Who was last seen with some to spare, cheapest first."""
+        """Who was last seen with some to spare, cheapest first.
+
+        Colonies this one has written off are left out: bidding a price up to
+        pull in a caravan nobody here would let through the gate only means
+        overpaying whoever else turns up.
+        """
         return sorted(
-            (link for link in self.links.values() if link.surplus(good) > 0),
+            (
+                link
+                for link in self.links.values()
+                if link.surplus(good) > 0 and link.welcome
+            ),
             key=lambda link: (link.price(good), link.colony),
         )
 
     def buyers(self, good: str) -> list[Link]:
-        """Who was last seen short of it, deepest need first."""
+        """Who was last seen short of it, deepest need first.
+
+        Written-off colonies are left out here too -- a pile discounted to
+        undercut a rival, for a buyer this colony will not sell to, is a pile
+        given away for nothing.
+        """
         return sorted(
-            (link for link in self.links.values() if link.shortfall(good) > 0),
+            (
+                link
+                for link in self.links.values()
+                if link.shortfall(good) > 0 and link.welcome
+            ),
             key=lambda link: (-link.shortfall(good), link.colony),
         )
 
@@ -160,19 +192,24 @@ class NetworkView:
 
         The reason a price is a decision and not a readout: a colony with wood
         to sell and one buyer for it is bidding against whoever else has wood.
+        Everyone counts here, including colonies this one will not deal with:
+        a rival's price is a rival's price whatever we think of them.
         """
-        return [
-            link
-            for link in self.sellers(good)
-            if link.colony != buyer and link.surplus(good) > 0
-        ]
+        return sorted(
+            (
+                link
+                for link in self.links.values()
+                if link.colony != buyer and link.surplus(good) > 0
+            ),
+            key=lambda link: (link.price(good), link.colony),
+        )
 
     def cheapest(self, good: str) -> Link | None:
         sellers = self.sellers(good)
         return sellers[0] if sellers else None
 
     def dearest(self, good: str) -> Link | None:
-        buyers = [link for link in self.links.values() if link.shortfall(good) > 0]
+        buyers = self.buyers(good)
         return max(buyers, key=lambda link: (link.price(good), -link.colony), default=None)
 
 
@@ -240,6 +277,10 @@ class Steward:
 
     def remembered(self, good: str) -> float:
         return self.memory.get(good, self.cover(good))
+
+    def regard_for(self, colony_id: int) -> float:
+        """What this colony makes of another, from its own dealings."""
+        return self.colony.reputation.of(colony_id)
 
     def stance(self) -> dict[str, dict[str, float]]:
         """Everything this steward has changed about its colony."""
@@ -358,7 +399,7 @@ class Steward:
                 seen = f"seen {age}d ago" if age >= 0 else "never visited"
                 lines.append(
                     f"  {link.name:<12} {link.days:>3.0f} days, "
-                    f"hazard {link.hazard:.0%}, {seen}"
+                    f"hazard {link.hazard:.0%}, {seen}, {link.regard}"
                 )
                 for good in GOOD_NAMES:
                     if link.surplus(good) > 1 or link.shortfall(good) > 1:

@@ -19,6 +19,7 @@ from dataclasses import dataclass, field
 from .goods import GOOD_NAMES, GOODS
 from .money import SILVER, Purse
 from .people import LAND_ELASTICITY, MIN_POPULATION
+from .reputation import Reputation
 from .world import Settlement
 
 #: Price multiplier bounds. A glut must not drive a price to nothing, and a
@@ -224,6 +225,9 @@ class Colony:
     #: that came back from each. Deliberately stale: acting on old information
     #: is what produces wasted trips, which is the interesting part.
     known: dict[int, "MarketView"] = field(default_factory=dict)
+    #: What it thinks of every other colony, written by how they have behaved
+    #: at the counter. Empty means everyone is still a stranger.
+    reputation: Reputation = field(default_factory=Reputation)
 
     @property
     def id(self) -> int:

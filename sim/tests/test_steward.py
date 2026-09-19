@@ -423,8 +423,9 @@ def test_stewards_leave_fewer_colonies_with_nothing_on_the_shelf():
     Counted every day rather than on the last one. A snapshot at day 150 across
     four seeds is a handful of events either way, and anything that lifts the
     stewardless world -- haggling did, since a negotiated price is below the
-    posted one and a buyer's coin goes further -- can tie it without the claim
-    being any less true. The same worlds, counted day by day, are not close.
+    posted one and a buyer's coin goes further, and so did colonies favouring
+    the neighbours they trust -- can tie it without the claim being any less
+    true. The same worlds, counted day by day, are not close.
     """
     led = bare = 0
     for seed in SEEDS:
