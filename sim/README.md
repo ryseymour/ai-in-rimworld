@@ -6,17 +6,28 @@ no dependencies, so it ports into the sim proper as a module.
 See `../wiki/design-inter-colony-trade.md` for the design this implements:
 roads, storage and prices, and traders moving goods between colonies.
 
-## Try it
+## Watch it
+
+```
+python -m colonysim.watch --seed 23
+```
+
+Redraws the map once per day with caravans (`@`) moving along the roads, and
+under it what each one is carrying, where it is headed, and what every colony
+has on its shelves. Ctrl-C to stop. `--delay 0.4` slows it down, `--delay 0`
+runs flat out, `--seed` gives a different world.
+
+## Compare it
 
 ```
 python -m colonysim.demo --seed 23 --days 150
 ```
 
-That generates a world, runs it for 150 days with traders on the roads, and
-runs the same world again with trade switched off so the two can be compared.
+Runs the world for 150 days with traders, then runs the same world again with
+trade switched off, and prints both so the difference is visible.
 
 Glyphs: `~` water, `.` plains, `"` forest, `^` rough; `:` foot path, `-` dirt
-road, `=` paved; digits are settlements.
+road, `=` paved; digits are settlements, `@` is a caravan.
 
 ## How roads are generated
 
@@ -111,11 +122,13 @@ knobs if it should move.
 python -m pytest tests -q
 ```
 
-77 tests. Roads: every settlement reachable, generation deterministic, routes
+81 tests. Roads: every settlement reachable, generation deterministic, routes
 sharing tiles rather than running parallel, roads not ploughing through water,
 tier promotion and decay. Economy: reserves and prices, the purse refusing to
 overdraw, barter never digging into the reserve, no cargo loaded that the
 destination will not buy. And over a 150-day run on four seeds — **goods and
 coin are exactly conserved** (trade must never mint or destroy either), trade
 narrows the price gap against the no-trade control, nobody starves who would
-have starved without it, and no caravan is left stranded on the road.
+have starved without it, and no caravan is left stranded on the road. The
+viewer: a journey's tiles join into one contiguous run, and a caravan is always
+somewhere on its own road.

@@ -207,7 +207,7 @@ class Simulation:
                 host = self.colonies[caravan.destination]
                 do_business(caravan, host, self.colonies[caravan.home], self.day)
                 caravan.state = RETURNING
-                caravan.days_left = travel_days(
+                caravan.days_left = caravan.leg_days = travel_days(
                     self.world.terrain, self.network, caravan.legs
                 )
             elif caravan.state == RETURNING:
@@ -263,6 +263,7 @@ class Simulation:
                 destination=other,
                 legs=legs,
                 days_left=travel_days(self.world.terrain, self.network, legs),
+                leg_days=travel_days(self.world.terrain, self.network, legs),
                 dispatched_day=self.day,
             )
             self._next_caravan_id += 1
