@@ -11,8 +11,8 @@ SEEDS = [1, 7, 23, 99]
 DAYS = 150
 
 
-def run(seed: int, days: int = DAYS, trade: bool = True):
-    sim = build_simulation(seed=seed)
+def run(seed: int, days: int = DAYS, trade: bool = True, wildlife: bool = True):
+    sim = build_simulation(seed=seed, wildlife=wildlife)
     sim.trade_enabled = trade
     start = sim.goods_in_world()
     coin = sim.coin_in_world()
@@ -24,10 +24,32 @@ def run(seed: int, days: int = DAYS, trade: bool = True):
 def test_trade_never_creates_or_destroys_goods(seed):
     """The one defect most likely to hide in an exchange: a rounding slip that
     mints or eats goods. Everything on every shelf plus everything on the road
-    must equal what was there, plus what was made, minus what was eaten."""
+    must equal what was there, plus what was made, minus what was eaten -- by
+    people or by animals. Nothing else may touch the total."""
     sim, start, _ = run(seed)
     end = sim.goods_in_world()
 
+    for good in GOOD_NAMES:
+        expected = (
+            start[good]
+            + sim.produced.get(good, 0.0)
+            - sim.consumed.get(good, 0.0)
+            - sim.lost.get(good, 0.0)
+        )
+        assert end[good] == pytest.approx(expected, abs=1e-6), good
+
+
+@pytest.mark.parametrize("seed", SEEDS)
+def test_a_world_without_animals_loses_nothing_at_all(seed):
+    """Take the wolves off the map and the old invariant must come back
+    exactly: with nothing on the roads to eat the cargo, trade alone can
+    neither make nor destroy a single unit."""
+    sim, start, coin = run(seed, wildlife=False)
+    end = sim.goods_in_world()
+
+    assert sim.lost == {}
+    assert sim.escort_wages == 0.0
+    assert sim.coin_in_world() == pytest.approx(coin, abs=1e-6)
     for good in GOOD_NAMES:
         expected = start[good] + sim.produced.get(good, 0.0) - sim.consumed.get(good, 0.0)
         assert end[good] == pytest.approx(expected, abs=1e-6), good
@@ -35,9 +57,10 @@ def test_trade_never_creates_or_destroys_goods(seed):
 
 @pytest.mark.parametrize("seed", SEEDS)
 def test_currency_is_conserved(seed):
-    """Nothing in the world mints coin, so the total can never move."""
+    """Nothing in the world mints coin. The only coin that leaves the trading
+    economy is what guards are paid, and that is counted."""
     sim, _, coin = run(seed)
-    assert sim.coin_in_world() == pytest.approx(coin, abs=1e-6)
+    assert sim.coin_in_world() + sim.escort_wages == pytest.approx(coin, abs=1e-6)
 
 
 @pytest.mark.parametrize("seed", SEEDS)
@@ -82,10 +105,14 @@ def test_no_caravan_is_left_stranded(seed):
 
 
 def test_the_whole_simulation_is_deterministic():
+    """Encounters are the only dice in the sim, and they are seeded from the
+    world, so two runs of a seed must agree down to the last coin."""
     a, _, _ = run(23, days=90)
     b, _, _ = run(23, days=90)
 
     assert a.journeys == b.journeys
+    assert a.meetings == b.meetings
+    assert a.lost == b.lost
     assert [c.storage.stock for c in a.colonies] == [c.storage.stock for c in b.colonies]
     assert [c.purse.amount for c in a.colonies] == [c.purse.amount for c in b.colonies]
 

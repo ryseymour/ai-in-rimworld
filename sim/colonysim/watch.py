@@ -24,10 +24,10 @@ def cargo_summary(cargo: dict[str, float]) -> str:
 
 
 def frame(sim, width: int) -> str:
-    out = [render(sim.world, sim.network, sim.caravans), ""]
+    out = [render(sim.world, sim.network, sim.caravans, sim.wilds), ""]
     out.append(
         f"day {sim.day}   {len(sim.caravans)} on the road   "
-        f"{sim.journeys} journeys done"
+        f"{sim.journeys} journeys done   {sim.meetings} met in the wild"
     )
     out.append("")
 

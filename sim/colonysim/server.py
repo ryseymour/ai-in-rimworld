@@ -71,6 +71,7 @@ PAGE = """<!doctype html>
   <span class="stat">day <b id="day">-</b></span>
   <span class="stat"><b id="flight">-</b> on the road</span>
   <span class="stat"><b id="journeys">-</b> journeys</span>
+  <span class="stat"><b id="met">-</b> met in the wild</span>
   <button id="pause">pause</button>
   <span class="stat">speed
     <input id="speed" type="range" min="1" max="20" value="4">
@@ -88,6 +89,7 @@ PAGE = """<!doctype html>
 const TILE = 9;
 const COLOR = { water: "#16304d", plains: "#4a6b3c", forest: "#26492f", rough: "#5c564c" };
 const ROAD = { 1: "#6d6048", 2: "#9a8460", 3: "#c4ad84" };
+const DEN = { wolves: "#8d6b9c", bears: "#a35f4a" };
 let world = null;
 
 const canvas = document.getElementById("map");
@@ -116,6 +118,22 @@ function draw(state) {
     ctx.fillRect(x * TILE + 1, y * TILE + 1, TILE - 2, TILE - 2);
   }
 
+  // Dens under everything else: the country a road runs through, not a thing
+  // sitting on the road. Radius follows the pack's strength.
+  for (const [x, y, species, strength] of state.dens || []) {
+    const cx = x * TILE + TILE / 2, cy = y * TILE + TILE / 2;
+    ctx.beginPath();
+    ctx.arc(cx, cy, TILE * (0.6 + 1.6 * strength), 0, Math.PI * 2);
+    ctx.fillStyle = DEN[species] || DEN.wolves;
+    ctx.globalAlpha = 0.16 + 0.24 * strength;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.beginPath();
+    ctx.arc(cx, cy, TILE * 0.3, 0, Math.PI * 2);
+    ctx.fillStyle = DEN[species] || DEN.wolves;
+    ctx.fill();
+  }
+
   ctx.font = "600 11px ui-monospace, Menlo, monospace";
   ctx.textAlign = "center";
   for (const s of world.settlements) {
@@ -136,6 +154,13 @@ function draw(state) {
     ctx.arc(cx, cy, TILE * 0.5, 0, Math.PI * 2);
     ctx.fillStyle = c.outbound ? "#e0a458" : "#7fb3d5";
     ctx.fill();
+    if (c.escorted) {          // a ring of guards around the cart
+      ctx.beginPath();
+      ctx.arc(cx, cy, TILE * 0.8, 0, Math.PI * 2);
+      ctx.strokeStyle = "#e6e8ec";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
   }
 }
 
@@ -143,11 +168,13 @@ function panels(state) {
   document.getElementById("day").textContent = state.day;
   document.getElementById("flight").textContent = state.caravans.length;
   document.getElementById("journeys").textContent = state.journeys;
+  document.getElementById("met").textContent = state.met;
 
   const routes = document.getElementById("caravans");
   routes.innerHTML = state.caravans.length
     ? state.caravans.map(c =>
-        `<div class="route"><span>${c.home} ${c.outbound ? "&rarr;" : "&larr;"} ${c.destination}</span>` +
+        `<div class="route"><span>${c.home} ${c.outbound ? "&rarr;" : "&larr;"} ${c.destination}` +
+        `${c.escorted ? " (guarded)" : ""}</span>` +
         `<span>${c.cargo || "empty"}</span></div>`).join("")
     : '<div class="empty">none on the road</div>';
 
@@ -247,6 +274,7 @@ def state_payload(sim) -> dict:
                 "home": sim.colonies[caravan.home].name,
                 "destination": sim.colonies[caravan.destination].name,
                 "outbound": caravan.state == OUTBOUND,
+                "escorted": caravan.escorted,
                 "cargo": cargo_text(caravan.cargo),
             }
         )
@@ -255,6 +283,15 @@ def state_payload(sim) -> dict:
         "journeys": sim.journeys,
         "goods": list(GOOD_NAMES),
         "roads": [[x, y, tile.tier] for (x, y), tile in sim.network.tiles.items()],
+        # Dens are state, not world: packs thin where traffic passes and grow
+        # back where it does not, so the map has to keep up.
+        "dens": [
+            [den.x, den.y, den.species, round(den.strength, 2)]
+            for den in (sim.wilds.dens if sim.wilds else ())
+            if den.strength > 0.0
+        ],
+        "met": sim.meetings,
+        "raided": sim.raids,
         "caravans": caravans,
         "colonies": [
             {

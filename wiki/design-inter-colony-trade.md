@@ -3,19 +3,17 @@
 Drafted 2026-09-18 from Ryan's ask: "we have a storage building, could we feature a way to have
 traders from other colonies trade goods between them. procedural roads and pathways between villages."
 
-This is a design, not an implementation. See "Status" for why.
-
 ## Status
 
 This targets the **ascii colony sim** (`~/ascii-colony` on Ryan's Mac), which already runs several
 colonies side by side and has the storage building. As of 2026-09-18 the RimWorld mod in this
 repository is paused and the colony sim is the project.
 
-The sim has no GitHub remote yet, so a cloud thread cannot read or change it. This page is written so
-the work can start the moment `~/ascii-colony` is pushed and added to the project. Until then, treat
-the structure below as proposed against a tile-based world holding several settlements, each with a
-storage building and a population that produces and consumes goods — the specific names and modules
-will need one pass against the real code.
+That sim has no GitHub remote, so a cloud thread cannot read or change it. Milestones 1–3 and the
+wildlife half of milestone 5 are therefore **built standalone in `sim/colonysim/`** in this
+repository: stdlib only, no dependencies, so it lifts into the real sim as a module. `sim/README.md`
+describes what is there. The names below are the design's names; where the code differs, the code is
+what runs. Milestone 4 (agent-driven traders) is not started.
 
 ## The shape of the feature
 
@@ -116,6 +114,44 @@ model call per leg rather than per tick, so it is affordable, and it gives negot
 who favour colonies they like, and traders who lie about what a good is worth back home. Build the
 scripted version first and swap the decision points for agent calls; the interfaces are the same.
 
+## 4. Risk: what lives between the villages
+
+Decided 2026-09-19 with Ryan: the risk to a caravan is **wolves and bears**, not bandits. Animals are
+better than bandits here because they need no motive, no faction and no diplomacy — they are a
+property of the terrain, which is the thing the roads already have to negotiate.
+
+**Animals live in the land, not on the roads.** Wolf packs den in forest, bears in the rough country
+above it, and nothing dens within a few tiles of a village. A den makes the ground around it dangerous,
+falling off with distance. How risky a given road is is then just a sum along the tiles it happens to
+run through — nothing marks a route as safe or unsafe, and moving a village or re-carving a road
+changes the danger without anyone deciding that it should.
+
+**Roads push back.** Hazard is divided down by road tier, and caravans passing within reach of a den
+thin it while a quiet den recovers. So a trunk road wears into a safe road and a spur nobody uses stays
+wild — which closes a loop with the road wear already in milestone 1, and gives a reason to invest in a
+route beyond travel time.
+
+**An encounter** is rolled once per day on the road. It ends in the caravan driving the animals off,
+in a raid that takes part of the load — they come for the food and the cloth, not the stone — or, for a
+bear, in the caravan turning round and going home with whatever it has left. That last case is the one
+the design wanted from "simulated while travelling": arriving is not guaranteed, so a plan can fail.
+
+**A trader answers the risk four ways,** all from the same number:
+
+- **Route** — a dangerous leg costs more to consider, so the route search takes a longer, quieter chain
+  of roads. This is the "minus risk" term the dispatch section above always assumed.
+- **Load** — a caravan on a bad road goes out lighter, so there is less on the cart to lose.
+- **Price** — what it carried through wolf country it asks a premium for, on top of the host's own
+  price, capped at the usual price ceiling. A colony behind a wolf wood pays more for the same goods,
+  which is the trade consequence of where it was built.
+- **Guards** — a colony weighs what the animals are expected to take against what an escort costs per
+  day, and hires when the sums favour it. This is the piece that makes the wild a reason to want coin
+  rather than a flat tax on trading, and it is where the money system earns its keep.
+
+**Accounting.** Animals are the only thing in the sim that destroys goods, and guard wages the only
+coin that leaves it. Both are counted explicitly so that conservation is still checked to the last
+decimal rather than loosened.
+
 ## Milestones
 
 1. World graph and carved roads, rendered, deterministic. No traders.
@@ -123,16 +159,17 @@ scripted version first and swap the decision points for agent calls; the interfa
    economy math alone.
 3. Scripted traders walking the roads and exchanging goods.
 4. Agent-driven traders with negotiation dialogue.
-5. Risk and texture: bandits on the roads, weather closing routes, reputation between colonies, road
-   wear and upgrade.
+5. Risk and texture: wild animals on the roads, weather closing routes, reputation between colonies,
+   road wear and upgrade. Road wear and the animals are built; weather and reputation are not.
 
 ## How we know it works
 
 A headless multi-day run across several colonies, asserting:
 
 - every settlement is reachable from every other one on the road graph;
-- **conservation** — total goods in the world change only by production and consumption, never by trade.
-  A rounding bug in the exchange that mints or eats goods is the single most likely defect here;
+- **conservation** — total goods in the world change only by production, consumption, and what the
+  animals take, never by trade. A rounding bug in the exchange that mints or eats goods is the single
+  most likely defect here;
 - price variance for a given good across colonies falls over the run — proof that trade is doing its job;
 - no caravan is stuck: every dispatched trader either arrives, returns, or dies for a stated reason.
 
@@ -142,9 +179,10 @@ A headless multi-day run across several colonies, asserting:
   production and consumption rates? Abstracting them is much cheaper and probably invisible.
 - Does the player's colony trade through exactly the same code path? It should — one economy, no
   special case.
-- Is a caravan simulated while travelling, or resolved on arrival? Simulated is needed for road ambush
-  to mean anything.
-- Do traders carry currency, or is it pure barter? Barter is more characterful and harder to balance.
+- ~~Is a caravan simulated while travelling, or resolved on arrival?~~ Settled: travelling is simulated
+  day by day, which is what lets the animals meet a caravan on the road.
+- ~~Do traders carry currency, or is it pure barter?~~ Settled: currency, falling back to barter for
+  whatever the purse will not cover.
 
 ## Related pages
 

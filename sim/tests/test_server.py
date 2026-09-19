@@ -172,3 +172,26 @@ def test_world_payload_names_every_terrain_it_draws():
     sim = build_simulation(seed=23)
     kinds = set(world_payload(sim)["kinds"])
     assert kinds <= {"water", "plains", "forest", "rough"}
+
+
+def test_the_state_carries_the_dens_so_the_map_can_show_them():
+    """Dens travel with the state rather than the world, because packs thin
+    and recover as traffic comes and goes."""
+    sim = build_simulation(seed=23)
+    sim.run(20)
+    state = state_payload(sim)
+
+    assert len(state["dens"]) == len(sim.wilds.dens)
+    for x, y, species, strength in state["dens"]:
+        assert species in ("wolves", "bears")
+        assert 0.0 < strength <= 1.0
+        assert sim.world.terrain.in_bounds(x, y)
+
+
+def test_a_world_with_no_animals_sends_no_dens():
+    sim = build_simulation(seed=23, wildlife=False)
+    sim.run(5)
+    state = state_payload(sim)
+
+    assert state["dens"] == []
+    assert state["met"] == 0

@@ -14,8 +14,10 @@ python3 -m colonysim.server
 
 Then open **http://127.0.0.1:7700**. The map draws the terrain, the road
 network, every colony and the caravans moving between them, with what each one
-is carrying and every colony's shelves updating beside it. Pause and speed
-controls are on the page. Ctrl-C in the terminal stops it.
+is carrying and every colony's shelves updating beside it. Wolf packs and bear
+territories are the coloured patches the roads have to get past; a caravan with
+a ring around it has hired guards. Pause and speed controls are on the page.
+Ctrl-C in the terminal stops it.
 
 No dependencies and no build step — it is `http.server` and one HTML page. If
 7700 is already taken it moves to the next free port and tells you which, so it
@@ -43,7 +45,8 @@ Runs the world for 150 days with traders, then runs the same world again with
 trade switched off, and prints both so the difference is visible.
 
 Glyphs: `~` water, `.` plains, `"` forest, `^` rough; `:` foot path, `-` dirt
-road, `=` paved; digits are settlements, `@` is a caravan.
+road, `=` paved; `w` a wolf pack and `B` a bear; digits are settlements, `@` is
+a caravan.
 
 ## How roads are generated
 
@@ -70,6 +73,50 @@ Everything is seeded: the same world always regenerates the same roads.
 `apply_traffic` promotes tiles through foot path → dirt road → paved as
 caravans use them; `decay` grasses them back over when they go unused. Trade
 routes that get used become visibly better roads.
+
+## What lives out there
+
+Wolves and bears are placed in the terrain, not on the roads: wolves den in
+forest, bears in the rough country above it, and nothing dens within six tiles
+of a village. A den makes the ground around it dangerous, falling off with
+distance, so how risky a road is falls out of where it happens to run.
+
+Two things make a road safer. Its tier: a paved trunk road carries under a
+third of the hazard of the foot path beside it. And traffic: caravans passing
+within reach of a den push it back, while a quiet den grows again. So a busy
+route wears into a safe route, and a spur nobody uses stays wild.
+
+A caravan rolls once a day against the hazard of the road it is on. It can
+drive the animals off -- which thins the den -- or be raided, losing part of
+its load. Animals go for the food and the cloth; stone is not worth their
+trouble. A bear is met less often than wolves but is far worse when it is: it
+can turn a caravan around and send it home half-loaded, the trip wasted.
+
+Animals are the only thing in the sim that destroys goods, and guard wages the
+only coin that leaves it, so both are counted (`Simulation.lost` and
+`escort_wages`) and conservation is checked against them.
+
+## How traders answer the wild
+
+Four responses, all falling out of the same hazard number:
+
+* **Route.** A dangerous leg costs more to consider, so the route search takes
+  a longer, quieter chain of roads instead of the short way through the trees.
+* **Load.** A caravan on a bad road goes out lighter -- there is simply less on
+  the cart to lose.
+* **Price.** What it carried through wolf country it asks a premium for, on top
+  of the host's own price. A host short of the good wears it; nobody pays above
+  the usual price ceiling, so the premium is a thin margin, not a hold-up.
+* **Guards.** A colony compares what the animals are expected to take against
+  what an escort costs per day, and pays when the sums favour it. Guards make
+  the animals much likelier to keep their distance and cut what they get away
+  with. So the wolves are a reason to want coin, rather than a flat tax.
+
+The decision to travel is made on the same terms: expected loss comes off the
+worth of the trip, so a marginal journey down a wolf road is not made at all.
+
+`build_simulation(..., wildlife=False)` gives the same world with the animals
+taken off it, which is the control for every claim above.
 
 ## How the economy works
 
@@ -124,8 +171,18 @@ more attractive, which wears it further.
 | | with trade | without |
 |---|---|---|
 | price gap, food | 1.51 | 5.30 |
-| price gap, tools | 6.33 | 23.72 |
-| colonies out of food | nobody | Brackwater, Eastmoor |
+| price gap, tools | 5.15 | 23.66 |
+| colonies out of food | nobody | Coldhollow, Eastmoor, Fenwick |
+
+And what the animals cost that same world over 150 days:
+
+| | |
+|---|---|
+| journeys made | 65 (76 with no animals on the map) |
+| met on the road | 14 |
+| raided | 4 |
+| taken by animals | 4 food |
+| paid to guards | 246 coin |
 
 Stone often stays put: it is heavy and cheap, so a caravan of it rarely clears
 the cost of the journey. That is the economy working, not a bug — but
@@ -138,7 +195,7 @@ knobs if it should move.
 python -m pytest tests -q
 ```
 
-94 tests. Roads: every settlement reachable, generation deterministic, routes
+142 tests. Roads: every settlement reachable, generation deterministic, routes
 sharing tiles rather than running parallel, roads not ploughing through water,
 tier promotion and decay. Economy: reserves and prices, the purse refusing to
 overdraw, barter never digging into the reserve, no cargo loaded that the
@@ -149,3 +206,10 @@ have starved without it, and no caravan is left stranded on the road. The
 viewers: a journey's tiles join into one contiguous run, a caravan is always
 somewhere on its own road, and the server is exercised over real HTTP — routes,
 pause, speed, and falling back off a busy port.
+
+Wildlife: dens only on ground that suits them and never beside a village,
+danger falling off with distance, better roads and busier roads being safer,
+a raid taking exactly what leaves the cargo and never more than is on the
+cart, guards paying for themselves in goods saved, a trader taking the long
+way round a den, and — over 120 days on four seeds — the animals costing the
+roads something without starving anybody or shutting trade down.
