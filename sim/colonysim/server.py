@@ -83,6 +83,7 @@ PAGE = """<!doctype html>
   <h1>Colony trade</h1>
   <span class="stat">day <b id="day">-</b></span>
   <span class="stat"><b id="flight">-</b> on the road</span>
+  <span class="stat"><b id="people">-</b> people</span>
   <span class="stat"><b id="journeys">-</b> journeys</span>
   <span class="stat"><b id="met">-</b> met in the wild</span>
   <button id="pause">pause</button>
@@ -182,6 +183,7 @@ function draw(state) {
 function panels(state) {
   document.getElementById("day").textContent = state.day;
   document.getElementById("flight").textContent = state.caravans.length;
+  document.getElementById("people").textContent = state.people;
   document.getElementById("journeys").textContent = state.journeys;
   document.getElementById("met").textContent = state.met;
 
@@ -221,10 +223,17 @@ function panels(state) {
         `</div>`).join("")
     : '<div class="empty">nobody has haggled yet</div>';
 
-  const head = "<tr><th>colony</th>" + state.goods.map(g => `<th>${g}</th>`).join("") + "<th>coin</th></tr>";
-  const rows = state.colonies.map(c =>
-    `<tr class="${c.hungry ? "hungry" : ""}"><td>${c.name}</td>` +
-    c.stock.map(v => `<td>${v}</td>`).join("") + `<td>${c.coin}</td></tr>`).join("");
+  const head = "<tr><th>colony</th><th>people</th>" +
+    state.goods.map(g => `<th>${g}</th>`).join("") + "<th>coin</th></tr>";
+  const rows = state.colonies.map(c => {
+    // An arrow only where the colony has actually moved off its founding
+    // size, so a steady village reads as steady rather than as noise.
+    const trend = c.trend > 0 ? '<span class="up">&uarr;</span>'
+                : c.trend < 0 ? '<span class="down">&darr;</span>' : "";
+    return `<tr class="${c.hungry ? "hungry" : ""}"><td>${c.name}</td>` +
+      `<td>${c.people}${trend}</td>` +
+      c.stock.map(v => `<td>${v}</td>`).join("") + `<td>${c.coin}</td></tr>`;
+  }).join("");
   document.getElementById("colonies").innerHTML = `<table>${head}${rows}</table>`;
 }
 
@@ -366,6 +375,11 @@ def negotiation_payload(sim, keep: int = DEALS_SHOWN) -> list[dict]:
     return out
 
 
+def _trend(colony) -> int:
+    """+1 for a colony that has grown, -1 for one that has lost people."""
+    return 1 if colony.growth >= 1.0 else -1 if colony.growth <= -1.0 else 0
+
+
 def state_payload(sim) -> dict:
     hungry = set(sim.hungry_colonies())
     caravans = []
@@ -398,6 +412,7 @@ def state_payload(sim) -> dict:
             if den.strength > 0.0
         ],
         "met": sim.meetings,
+        "people": round(sim.population()),
         "raided": sim.raids,
         "stewards": steward_payload(sim),
         "negotiations": negotiation_payload(sim),
@@ -405,6 +420,11 @@ def state_payload(sim) -> dict:
         "colonies": [
             {
                 "name": c.name,
+                "people": round(c.population),
+                # Which way the colony has gone since it was founded, not which
+                # way it went today: population moves by fractions of a person
+                # a day, so a daily reading would only ever flicker.
+                "trend": _trend(c),
                 "stock": [round(c.storage.get(g)) for g in GOOD_NAMES],
                 "coin": round(c.purse.amount),
                 "hungry": c.name in hungry,

@@ -333,9 +333,14 @@ class Steward:
         is choosing from the same facts rather than a summary of them.
         """
         view = self.view
+        colony = self.colony
+        way = "growing" if colony.growth >= 1.0 else (
+            "losing people" if colony.growth <= -1.0 else "steady"
+        )
         lines = [
             f"{self.name}, day {view.day if view else 0}. "
-            f"{self.coin:.0f} coin, {self.colony.population} people."
+            f"{self.coin:.0f} coin, {colony.population:.0f} people, {way} "
+            f"({colony.nourishment:.0%} fed)."
         ]
         lines.append("what we hold:")
         for good in GOOD_NAMES:
