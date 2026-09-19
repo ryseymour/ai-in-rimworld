@@ -407,3 +407,45 @@ def route_between(
         legs.append(route)
     legs.reverse()
     return tuple(legs)
+
+
+def road_overlay(network: RoadNetwork) -> list[dict]:
+    """Every road tile as plain data, for a renderer to draw.
+
+    JSON-safe and ordered, so another UI -- a build-mode overlay, an existing
+    game's tile renderer -- can draw the roads without knowing anything about
+    this package's objects. Tile-level detail: use it where the map is drawn
+    at tile resolution.
+    """
+    return [
+        {"x": x, "y": y, "tier": tile.tier, "speed": tile.speed}
+        for (x, y), tile in sorted(network.tiles.items())
+    ]
+
+
+def road_links(network: RoadNetwork, world: World) -> list[dict]:
+    """Each route as a single line between two settlements.
+
+    For anywhere the map is drawn too small for individual tiles to read -- a
+    minimap, an overview panel -- where 120 separate road tiles are noise but
+    the shape of the network is the point. `tier` is the best grade the route
+    reaches, which is what to weight the line by.
+    """
+    links = []
+    for (a, b), route in sorted(network.routes.items()):
+        tiers = [network.tiles[t].tier for t in route.path if t in network.tiles]
+        links.append(
+            {
+                "from": a,
+                "to": b,
+                "from_name": world.settlements[a].name,
+                "to_name": world.settlements[b].name,
+                "x1": world.settlements[a].x,
+                "y1": world.settlements[a].y,
+                "x2": world.settlements[b].x,
+                "y2": world.settlements[b].y,
+                "tier": max(tiers) if tiers else 1,
+                "tiles": len(route.path),
+            }
+        )
+    return links

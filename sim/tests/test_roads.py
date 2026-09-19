@@ -158,3 +158,53 @@ def test_gabriel_graph_drops_the_edge_across_a_midpoint():
 def test_single_settlement_has_no_roads():
     world = generate_world(settlements=1, seed=3)
     assert generate_roads(world).routes == {}
+
+
+# --------------------------------------------------------- drawing elsewhere
+
+def test_the_overlay_covers_every_road_tile_as_plain_data():
+    """Another renderer should be able to draw the roads without importing
+    anything from this package."""
+    import json
+
+    from colonysim.roads import road_overlay
+
+    world = generate_world(seed=7)
+    network = generate_roads(world)
+    overlay = road_overlay(network)
+
+    assert len(overlay) == len(network.tiles)
+    assert {(t["x"], t["y"]) for t in overlay} == set(network.tiles)
+    json.dumps(overlay)  # must not raise
+
+
+def test_links_give_one_line_per_route_between_real_settlements():
+    import json
+
+    from colonysim.roads import road_links
+
+    world = generate_world(seed=7)
+    network = generate_roads(world)
+    links = road_links(network, world)
+
+    assert len(links) == len(network.routes)
+    for link in links:
+        assert (link["x1"], link["y1"]) == world.settlements[link["from"]].pos
+        assert (link["x2"], link["y2"]) == world.settlements[link["to"]].pos
+        assert link["tier"] >= 1
+    json.dumps(links)
+
+
+def test_links_report_the_grade_a_route_reaches():
+    """A minimap weights its lines by this, so it has to follow real wear."""
+    from colonysim.roads import TIER_THRESHOLD, apply_traffic, road_links
+
+    world = generate_world(seed=7)
+    network = generate_roads(world)
+    route = next(iter(network.routes.values()))
+
+    before = {(l["from"], l["to"]): l["tier"] for l in road_links(network, world)}
+    apply_traffic(network, route, TIER_THRESHOLD[3])
+    after = {(l["from"], l["to"]): l["tier"] for l in road_links(network, world)}
+
+    assert after[route.key] > before[route.key]
