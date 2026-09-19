@@ -93,12 +93,17 @@ def test_trade_keeps_colonies_fed(seed):
     Both sides run without stewards, so the only difference is the traders. A
     steward can answer a food shortage by putting people in the fields instead,
     which saves the same colony for an entirely different reason -- see
-    `test_steward.py::test_a_steward_can_feed_a_colony_trade_cannot_reach`."""
+    `test_steward.py::test_a_steward_can_feed_a_colony_trade_cannot_reach`.
+
+    Asked over the whole run rather than on the last day of it: the world has
+    seasons in it now, so the last day is somewhere in a particular season and
+    nobody at all is hungry in autumn.
+    """
     traded, _, _ = run(seed, trade=True, stewards=False)
     alone, _, _ = run(seed, trade=False, stewards=False)
 
-    assert traded.hungry_colonies() == []
-    assert alone.hungry_colonies(), "this world should starve without traders"
+    assert traded.ever_hungry() == []
+    assert alone.ever_hungry(), "this world should starve without traders"
 
 
 @pytest.mark.parametrize("seed", SEEDS)

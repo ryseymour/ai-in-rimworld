@@ -81,17 +81,34 @@ PAGE = """<!doctype html>
   .standing .note { color: var(--dim); font-size: 12px; }
   .trusts { color: #7fbf8f; }
   .distrusts { color: #e06c5a; }
+  .sky {
+    display: inline-flex; gap: 6px; align-items: baseline;
+    border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px;
+  }
+  .sky .season { font-weight: 600; }
+  .sky .what { color: var(--dim); }
+  .sky.severe { border-color: #7fb3d5; }
+  .sky.severe .what { color: #9fd0ef; }
+  .shut { color: #e06c5a; }
+  .waiting { color: #9fd0ef; }
+  .ahead { letter-spacing: .18em; color: var(--dim); }
 </style>
 </head>
 <body>
 <header>
   <h1>Colony trade</h1>
+  <span class="sky" id="sky" hidden>
+    <span class="season" id="season">-</span>
+    <span class="what" id="what">-</span>
+    <span class="ahead" id="ahead"></span>
+  </span>
   <span class="stat">day <b id="day">-</b></span>
   <span class="stat"><b id="flight">-</b> on the road</span>
   <span class="stat"><b id="people">-</b> people</span>
   <span class="stat"><b id="journeys">-</b> journeys</span>
   <span class="stat"><b id="met">-</b> met in the wild</span>
   <span class="stat"><b id="refusals">-</b> turned away</span>
+  <span class="stat shut" id="closed" hidden></span>
   <button id="pause">pause</button>
   <span class="stat">speed
     <input id="speed" type="range" min="1" max="20" value="4">
@@ -114,6 +131,22 @@ const TILE = 9;
 const COLOR = { water: "#16304d", plains: "#4a6b3c", forest: "#26492f", rough: "#5c564c" };
 const ROAD = { 1: "#6d6048", 2: "#9a8460", 3: "#c4ad84" };
 const DEN = { wolves: "#8d6b9c", bears: "#a35f4a" };
+// The land under each season. Weather is one sky over the whole map, so it is
+// a wash over everything rather than anything drawn per tile.
+const SEASON_TINT = {
+  spring: "rgba(120,190,120,0.06)",
+  summer: "rgba(230,190,90,0.07)",
+  autumn: "rgba(210,130,60,0.09)",
+  winter: "rgba(180,210,240,0.16)",
+};
+const SKY_TINT = {
+  rain: "rgba(90,130,180,0.16)",
+  mud: "rgba(120,100,70,0.16)",
+  storm: "rgba(60,80,120,0.28)",
+  snow: "rgba(225,235,250,0.22)",
+  blizzard: "rgba(235,242,255,0.38)",
+  heat: "rgba(240,200,120,0.10)",
+};
 let world = null;
 
 const canvas = document.getElementById("map");
@@ -140,6 +173,23 @@ function draw(state) {
   for (const [x, y, tier] of state.roads) {
     ctx.fillStyle = ROAD[tier] || ROAD[1];
     ctx.fillRect(x * TILE + 1, y * TILE + 1, TILE - 2, TILE - 2);
+  }
+
+  // A road that is shut today is drawn as a shut road: the line is still
+  // there, crossed through, because it comes back when the weather lifts.
+  if (state.sky && state.sky.shut.length) {
+    ctx.strokeStyle = "#e06c5a";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([4, 4]);
+    for (const [a, b] of state.sky.shut) {
+      const from = world.settlements[a], to = world.settlements[b];
+      if (!from || !to) continue;
+      ctx.beginPath();
+      ctx.moveTo(from.x * TILE + TILE / 2, from.y * TILE + TILE / 2);
+      ctx.lineTo(to.x * TILE + TILE / 2, to.y * TILE + TILE / 2);
+      ctx.stroke();
+    }
+    ctx.setLineDash([]);
   }
 
   // Dens under everything else: the country a road runs through, not a thing
@@ -176,7 +226,7 @@ function draw(state) {
     const cx = c.x * TILE + TILE / 2, cy = c.y * TILE + TILE / 2;
     ctx.beginPath();
     ctx.arc(cx, cy, TILE * 0.5, 0, Math.PI * 2);
-    ctx.fillStyle = c.outbound ? "#e0a458" : "#7fb3d5";
+    ctx.fillStyle = c.stuck ? "#e06c5a" : (c.outbound ? "#e0a458" : "#7fb3d5");
     ctx.fill();
     if (c.escorted) {          // a ring of guards around the cart
       ctx.beginPath();
@@ -186,9 +236,33 @@ function draw(state) {
       ctx.stroke();
     }
   }
+
+  // Season and sky last, as a wash over the whole map: one year, one sky.
+  if (state.sky) {
+    for (const tint of [SEASON_TINT[state.sky.season], SKY_TINT[state.sky.weather]]) {
+      if (!tint) continue;
+      ctx.fillStyle = tint;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+  }
 }
 
 function panels(state) {
+  const sky = document.getElementById("sky");
+  if (state.sky) {
+    sky.hidden = false;
+    sky.className = "sky" + (state.sky.severe ? " severe" : "");
+    document.getElementById("season").textContent = state.sky.when;
+    document.getElementById("what").textContent = state.sky.weather;
+    document.getElementById("ahead").textContent =
+      state.sky.forecast.slice(1).map(f => f.severe ? "!" : "\u00b7").join("");
+    const closed = document.getElementById("closed");
+    closed.hidden = !state.sky.shut.length;
+    closed.textContent = state.sky.shut.length
+      ? `${state.sky.shut.length} road${state.sky.shut.length > 1 ? "s" : ""} shut`
+      : "";
+  }
+
   document.getElementById("day").textContent = state.day;
   document.getElementById("flight").textContent = state.caravans.length;
   document.getElementById("people").textContent = state.people;
@@ -200,7 +274,9 @@ function panels(state) {
   routes.innerHTML = state.caravans.length
     ? state.caravans.map(c =>
         `<div class="route"><span>${c.home} ${c.outbound ? "&rarr;" : "&larr;"} ${c.destination}` +
-        `${c.escorted ? " (guarded)" : ""}</span>` +
+        `${c.escorted ? " (guarded)" : ""}` +
+        `${c.stuck ? ' <span class="shut">weathered in</span>' :
+           c.waited ? ` <span class="waiting">+${c.waited}d weather</span>` : ""}</span>` +
         `<span>${c.cargo || "empty"}</span></div>`).join("")
     : '<div class="empty">none on the road</div>';
 
@@ -428,6 +504,31 @@ def negotiation_payload(sim, keep: int = DEALS_SHOWN) -> list[dict]:
     return out
 
 
+def weather_payload(sim) -> dict:
+    """The date and the sky, for the strip across the top of the page.
+
+    `shut` is the routes closed today, as settlement id pairs, so the map can
+    grey the road out where it actually is rather than announcing it in words.
+    """
+    date = sim.date
+    weather = sim.weather
+    return {
+        "season": date.season.name,
+        "part": date.part,
+        "year": date.year,
+        "day_of_season": date.day_of_season,
+        "when": str(date),
+        "weather": weather.name,
+        "severe": not weather.is_fair,
+        "shut": [[route.a, route.b] for route in sim.shut_routes()],
+        "forecast": [
+            {"weather": w.name, "severe": not w.is_fair}
+            for w in (sim.climate.forecast(sim.day) if sim.climate else ())
+        ],
+        "waiting": sum(1 for c in sim.caravans if c.days_waited > 0),
+    }
+
+
 def _trend(colony) -> int:
     """+1 for a colony that has grown, -1 for one that has lost people."""
     return 1 if colony.growth >= 1.0 else -1 if colony.growth <= -1.0 else 0
@@ -450,11 +551,17 @@ def state_payload(sim) -> dict:
                 "outbound": caravan.state == OUTBOUND,
                 "escorted": caravan.escorted,
                 "cargo": cargo_text(caravan.cargo),
+                "waited": round(caravan.days_waited),
+                "stuck": bool(
+                    caravan.legs and sim.climate is not None
+                    and any(sim.route_shut(leg) for leg in caravan.legs)
+                ),
             }
         )
     return {
         "day": sim.day,
         "journeys": sim.journeys,
+        "sky": weather_payload(sim) if sim.climate else None,
         "goods": list(GOOD_NAMES),
         "roads": [[x, y, tile.tier] for (x, y), tile in sim.network.tiles.items()],
         # Dens are state, not world: packs thin where traffic passes and grow
@@ -566,6 +673,11 @@ def main() -> None:
         action="store_true",
         help="leave every colony trading on bare scarcity",
     )
+    ap.add_argument(
+        "--no-weather",
+        action="store_true",
+        help="an endless temperate sky: no seasons, no road ever shut",
+    )
     ap.add_argument("--speed", type=float, default=4.0, help="days per second")
     ap.add_argument("--days", type=int, default=0, help="stop after N days (0 = forever)")
     args = ap.parse_args()
@@ -576,6 +688,7 @@ def main() -> None:
         args.width,
         args.height,
         stewards=not args.no_stewards,
+        weather=not args.no_weather,
     )
     clock = Clock(sim, args.speed, args.days)
     server = serve_somewhere(args.host, args.port, make_handler(clock))

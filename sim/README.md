@@ -7,7 +7,8 @@ See `../wiki/design-inter-colony-trade.md` for the design this implements:
 roads, storage and prices, traders moving goods between colonies, a steward
 running each colony's side of it, and a population that grows or shrinks with
 what the colony has to eat. On top of that sits crafting: recipes, workshops,
-and the bows and arrows a colony hunts with.
+and the bows and arrows a colony hunts with -- and over all of it, a year of
+seasons and weather.
 
 ## Open it in a browser
 
@@ -20,7 +21,11 @@ network, every colony and the caravans moving between them, with what each one
 is carrying and every colony's shelves updating beside it -- the crafted goods
 are columns in that table like any other, and the Workshops panel says what each
 colony's bench is making, how good its hand has got, and whether it is gathering
-materials for a smithy. The Stewards panel
+materials for a smithy. The chip at the top left says where in the year you are
+and what the sky is doing, and the dots beside it are the week ahead -- each `!`
+a day of weather bad enough to be worth planning around. A road the weather has
+shut is crossed through in red, and a caravan sitting out a storm turns red
+where it stands. The Stewards panel
 underneath shows what each colony has decided to do about its own prices --
 `food x1.32` is a colony bidding for supply, `wood x0.71` one discounting to
 shift a pile -- along with the last thing it changed and why. **At the counter**
@@ -33,9 +38,10 @@ The colony table carries each village's headcount with an arrow for which way
 it has gone since it was founded, and the header counts everyone alive.
 
 Three colonies by default, which is small enough to follow every trade.
-`--settlements 6` gives the wider world, and `--no-stewards` takes the decision
-makers off so you can see what the same world does on bare scarcity. The
-Standing panel under the stewards is what each colony makes of the others --
+`--settlements 6` gives the wider world, `--no-stewards` takes the decision
+makers off so you can see what the same world does on bare scarcity, and
+`--no-weather` puts it under an endless temperate sky with no seasons at all.
+The Standing panel under the stewards is what each colony makes of the others --
 `Coldhollow -> Brackwater trusted +0.81`, with the last thing that moved it
 underneath -- and the header counts caravans turned away at a gate.
 
@@ -52,21 +58,114 @@ python -m colonysim.watch --seed 23
 
 Redraws the map once per day with caravans (`@`) moving along the roads, and
 under it what each one is carrying, where it is headed, and what every colony
-has on its shelves. Ctrl-C to stop. `--delay 0.4` slows it down, `--delay 0`
-runs flat out, `--seed` gives a different world.
+has on its shelves. The line under the map is the date, today's sky, the week
+ahead as one glyph a day, and any route the weather has shut. Ctrl-C to stop.
+`--delay 0.4` slows it down, `--delay 0` runs flat out, `--seed` gives a
+different world, `--no-weather` takes the year off it.
 
 ## Compare it
 
 ```
-python -m colonysim.demo --seed 23 --days 150
+python -m colonysim.demo --seed 23 --days 180
 ```
 
-Runs the world for 150 days with traders, then runs the same world again with
-trade switched off, and prints both so the difference is visible.
+Runs the world for 180 days -- three years -- with traders, then runs the same
+world again with trade switched off, with nobody minding the shop, with no
+animals, and under an endless temperate sky, and prints all of them so each
+difference is visible on its own. The last table is the shape of the year.
 
 Glyphs: `~` water, `.` plains, `"` forest, `^` rough; `:` foot path, `-` dirt
 road, `=` paved; `w` a wolf pack and `B` a bear; digits are settlements, `@` is
 a caravan.
+
+## The year
+
+Sixty days, four seasons of fifteen. Everything about it falls out of two
+tables in `weather.py`.
+
+**The land works to a calendar.** Each season multiplies what a colony's land
+gives it, per good. Autumn is the harvest -- nearly twice the food -- and
+winter makes almost none of anything except tools, which is indoor work and
+barely notices. The four multipliers for any one good average to exactly one,
+so a year produces what the land would have produced anyway; the seasons only
+decide *when*. Nothing else needs telling: prices in this sim are a function of
+what is on the shelves, so a harvest glut cuts the price of food and a winter
+empties the store and puts it back up.
+
+The year that comes out of that is not quite the obvious one. Food is cheapest
+in autumn and dearest in **spring** -- a colony goes into winter on a full
+granary and comes out the far side on an empty one, so the hungry gap is after
+the cold rather than during it.
+
+The seasons are on the land, not on the benches. A workshop is indoor work, so
+crafting runs at the same rate all year -- which, with tools being the one raw
+good winter does not touch, is what gives a colony something to sell when its
+fields are dead.
+
+**Weather is a property of the day**, not of a place: one sky over the whole
+map, in spells of a few days rather than flickering, drawn from the season's
+own table. Blizzards are a winter thing, mud a spring one, and autumn is storm
+season.
+
+**A road's own grade is what shelters it.** Weather slows a route in proportion
+to how poor the road is, and a few kinds shut it outright below a grade they
+name:
+
+| | slows | shuts |
+|---|---|---|
+| rain, mud, heat | a little | nothing |
+| snow | a foot path takes nearly two days to walk a day of | nothing |
+| storm | yes | a bare foot path |
+| blizzard | most | anything short of a finished dirt road |
+
+Nothing ever shuts a paved road. So **paving your trunk route is what buys you
+a winter economy**: on a young map, where every road is still a foot path, a
+storm closes the lot and everyone waits; on a worn one the trunk keeps trading
+while the spurs are shut, and the traffic that wears the trunk in is the same
+traffic the closures push onto it.
+
+A closed leg is taken *out* of the route graph rather than made expensive, so
+the search finds whatever open chain is left -- a snowed-in pass pushes a
+caravan onto the long valley road instead of stopping it. A caravan already out
+there makes no progress at all on a day its road is shut: it sits the storm out
+and arrives late, and its ledger says so (`waited out the blizzard`). The
+animals still get their roll while it waits; a camped caravan is not a safe
+one.
+
+**The forecast is exact.** Weather is generated forward and then fixed, so
+asking on day 35 what day 40 looks like gives the answer day 40 will really
+have. That is deliberate: a trader here is already wrong about markets and
+wrong about wolves, and making it wrong about the sky too would only blur what
+the seasons are doing. Traders decide on it -- a trip the coming week will drag
+out loses to one it will not -- and a steward reads it off `NetworkView`:
+
+```python
+view = sim.network_view(0)
+view.date            # early autumn, year 2
+view.weather.name    # 'storm'
+view.forecast        # the next seven days, exactly as they will happen
+view.open_links()    # who is reachable today
+view.shut()          # who the weather has cut off
+```
+
+A shut neighbour stays on the map rather than vanishing from the view: a
+steward that cannot see a snowed-in village cannot plan for the thaw.
+
+**And the stewards act on it.** Through autumn, `coming_season` says winter, so
+the scripted merchant deepens its granary for everything winter will not make.
+That does two things at once: it stops the colony selling what it is about to
+need, and -- because scarcity is measured against the reserve -- it puts the
+price up until somebody hauls more in. Autumn is when everybody buys food.
+
+The upshot is that a year of weather does not simply mean less trade. It
+usually means *more* journeys than the same world under a flat sky, moved
+around the calendar: fewer in winter, and a rush before it.
+
+Weather costs the roads time and never costs anyone goods. The animals are
+still the only thing in this sim that destroys anything, so conservation is
+checked to the last decimal with a calendar in the world exactly as it was
+without one. `build_simulation(..., weather=False)` gives the same world with
+no year in it at all, which is the control for every claim above.
 
 ## Stewards
 
@@ -457,23 +556,28 @@ more attractive, which wears it further.
 
 ## What it does
 
-`--seed 23`, 150 days, the same world with and without traders:
+`--seed 23`, 180 days -- three years -- the same world with and without traders:
 
 | | with trade | without |
 |---|---|---|
-| price gap, food | 1.51 | 5.30 |
-| price gap, tools | 5.15 | 23.66 |
-| colonies out of food | nobody | Coldhollow, Eastmoor, Fenwick |
+| price gap, food | 1.07 | 5.56 |
+| price gap, cloth | 1.33 | 3.46 |
+| price gap, spear | 0.42 | 15.07 |
+| colonies out of food | nobody | Coldhollow |
 
-And what the animals cost that same world over 150 days:
+And the shape of one of those years, summed over the three:
 
-| | |
-|---|---|
-| journeys made | 65 (76 with no animals on the map) |
-| met on the road | 14 |
-| raided | 4 |
-| taken by animals | 4 food |
-| paid to guards | 246 coin |
+| season | food made | mean food price | journeys home | days a road was shut |
+|---|---|---|---|---|
+| spring | 1788 | 1.89 | 4 | 2 |
+| summer | 2718 | 1.75 | 7 | 7 |
+| autumn | 4156 | 1.52 | 6 | 10 |
+| winter | 466 | 1.55 | 4 | 7 |
+
+Nine times as much food is grown in autumn as in winter and the price tracks
+it down and back up. Trade thins in winter rather than stopping: 41 caravan-
+days over the three years were spent sitting out weather, and 26 days of the
+180 had some road shut somewhere.
 
 Stone often stays put: it is heavy and cheap, so a caravan of it rarely clears
 the cost of the journey. That is the economy working, not a bug — but
@@ -509,7 +613,7 @@ whatever is drawing it.
 python -m pytest tests -q
 ```
 
-328 tests. Roads: every settlement reachable, generation deterministic, routes
+453 tests. Roads: every settlement reachable, generation deterministic, routes
 sharing tiles rather than running parallel, roads not ploughing through water,
 tier promotion and decay. Economy: reserves and prices, the purse refusing to
 overdraw, barter never digging into the reserve, no cargo loaded that the
@@ -535,3 +639,16 @@ a raid taking exactly what leaves the cargo and never more than is on the
 cart, guards paying for themselves in goods saved, a trader taking the long
 way round a den, and — over 120 days on four seeds — the animals costing the
 roads something without starving anybody or shutting trade down.
+
+The year: a year's growth multipliers averaging to exactly one so a calendar
+cannot quietly recalibrate the world, a season's worth of days landing in
+exactly one season, a worse road losing more to the same weather and a paved
+one never being shut at all, a shut leg being no way through rather than a dear
+one, the forecast matching what actually happens whether you ask early or walk
+to it, blizzards staying in winter over twenty years of them, and — over
+several years on four seeds — the harvest landing in autumn, food being dearest
+in the spring hungry gap, goods and coin still conserved to the last decimal
+with weather in the world, and nobody left stranded on a closed road. Plus the
+controls: `weather=False` leaves no date in a steward's view and no road ever
+shut, and a steward with no calendar keeps exactly the buffers it kept before
+there was a year.

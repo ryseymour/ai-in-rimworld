@@ -332,13 +332,24 @@ def decay(network: RoadNetwork, rate: float = 0.5) -> None:
             road.tier -= 1
 
 
-def travel_cost(terrain: Terrain, network: RoadNetwork, path: tuple[Point, ...]) -> float:
+def travel_cost(
+    terrain: Terrain,
+    network: RoadNetwork,
+    path: tuple[Point, ...],
+    slowdown: Callable[[float], float] | None = None,
+) -> float:
     """What it costs to walk a carved path today.
 
     Unlike the cost used while carving -- which discounts road tiles to make
     routes bundle -- this is real travel: terrain cost divided by the speed of
     whatever road is on the tile. So a route that wears up to paved becomes
     genuinely faster to drive a caravan down.
+
+    `slowdown` is how something the road does not know about -- weather --
+    makes the same tile dearer to cross, given that tile's own tier. Handing it
+    a weather's own slowdown is the whole of how a storm reaches the road
+    graph, and it is asked per tile rather than per route, so a paved stretch
+    shelters the caravan on it and the foot path beside it does not.
     """
     total = 0.0
     for frm, to in zip(path, path[1:]):
@@ -346,8 +357,35 @@ def travel_cost(terrain: Terrain, network: RoadNetwork, path: tuple[Point, ...])
         cost = terrain.base_cost(*to)
         cost += SLOPE_WEIGHT * abs(terrain.elev(*to) - terrain.elev(*frm))
         tile = network.tiles.get(to)
-        total += cost * diagonal / (tile.speed if tile else 1.0)
+        step = cost * diagonal / (tile.speed if tile else 1.0)
+        if slowdown is not None:
+            step *= slowdown(tile.tier if tile else 0)
+        total += step
     return total
+
+
+def path_grade(network: RoadNetwork, path: tuple[Point, ...]) -> float:
+    """Mean road tier along a run of tiles: how good the way there actually is.
+
+    The one number weather is answered with. A mean rather than the worst tile,
+    because a route is walked whole: one bad furlong on an otherwise paved
+    trunk road is a slow hour, not a closed road.
+    """
+    if not path:
+        return 0.0
+    return sum(
+        network.tiles[tile].tier if tile in network.tiles else 0 for tile in path
+    ) / len(path)
+
+
+def route_grade(network: RoadNetwork, route: Route) -> float:
+    return path_grade(network, route.path)
+
+
+def journey_grade(network: RoadNetwork, legs: tuple[Route, ...]) -> float:
+    """The same over a chain of roads, each leg weighted by how long it is."""
+    tiles = tuple(tile for leg in legs for tile in leg.path)
+    return path_grade(network, tiles)
 
 
 def route_between(
@@ -355,6 +393,7 @@ def route_between(
     a: int,
     b: int,
     surcharge: Callable[[Route], float] | None = None,
+    blocked: Callable[[Route], bool] | None = None,
 ) -> tuple[Route, ...]:
     """The cheapest chain of roads from one settlement to another.
 
@@ -367,6 +406,11 @@ def route_between(
     attractive than its length alone suggests, so the search will take a
     longer way round to avoid it. Costs are returned as carved, not surcharged,
     so travel time is unaffected by whatever the detour was chosen for.
+
+    `blocked` takes a leg out of the graph altogether, which is what a road
+    closed by weather is: not a dear way through but no way through. The search
+    then finds whatever open chain is left, so a snowed-in pass pushes trade
+    onto the long valley road rather than stopping it.
     """
     if a == b:
         return ()
@@ -388,6 +432,8 @@ def route_between(
         if cost > best.get(node, math.inf):
             continue
         for nxt, route in sorted(adjacency.get(node, []), key=lambda pair: pair[0]):
+            if blocked is not None and blocked(route):
+                continue
             through = cost + route.cost
             if surcharge is not None:
                 through += surcharge(route)

@@ -40,6 +40,7 @@ from .storage import (
     clamp,
 )
 from .trade import Caravan
+from .weather import CLEAR, Date, Season, Weather
 
 #: A colony is "short" below this much of its own buffer, and "glutted" above
 #: the other. Between them it leaves its prices alone and lets them drift back
@@ -80,6 +81,15 @@ CRAFT_STEP = 0.8
 #: Lines of reasoning kept. Enough to see why a colony is doing what it is
 #: doing, not enough to grow without bound over a long run.
 LOG_LINES = 40
+#: A season "makes little" of a good below this share of the ordinary year.
+#: Winter is under it for everything but tools, which is what makes tools the
+#: winter trade.
+LEAN_YIELD = 0.8
+#: How much deeper a granary a steward wants for a season that makes none of
+#: the good. Raising the reserve is the whole of laying in stores: it stops the
+#: colony selling what it is about to need, and -- because scarcity is measured
+#: against the reserve -- it raises the price until somebody hauls more in.
+LEAN_RESERVE = 0.8
 #: Negotiations a steward remembers it was part of. Enough to put recent
 #: dealings in front of whatever decides next; not a ledger of the century.
 HAGGLES_KEPT = 8
@@ -108,10 +118,29 @@ class Link:
     #: market: how a neighbour has behaved is the one thing a colony does not
     #: have to send anyone out to find out.
     standing: float = 0.0
+    #: False when today's weather has the way there shut. The link is still
+    #: here, because the village has not gone anywhere -- a steward that could
+    #: not see a snowed-in neighbour at all could not plan for the thaw.
+    open: bool = True
+    #: Travel in days as the forecast says it will really go: the plain road
+    #: distance walked through the week's weather, days sat out included. Equal
+    #: to `days` in fair conditions and in a world with no calendar.
+    weather_days: float = 0.0
+    #: What the sky is doing to this particular road, in words.
+    outlook: str = ""
+
+    def __post_init__(self) -> None:
+        if not self.weather_days:
+            object.__setattr__(self, "weather_days", self.days)
 
     @property
     def visited(self) -> bool:
         return self.market.day >= 0
+
+    @property
+    def delay(self) -> float:
+        """Days the weather adds to getting there, over the bare road."""
+        return max(0.0, self.weather_days - self.days)
 
     @property
     def welcome(self) -> bool:
@@ -156,10 +185,40 @@ class NetworkView:
     #: not get to see anyone else's: what other colonies are up to it learns
     #: the same way a trader does, by arriving and looking.
     caravans: tuple[Caravan, ...] = ()
+    #: Today, said the way a colony would say it. Defaults to the plain
+    #: calendar so a view built without a climate still has a date on it.
+    date: Date | None = None
+    #: Today's sky, and the week to come. A steward sees the forecast exactly
+    #: as it will happen -- see `weather.Climate` for why.
+    weather: Weather = CLEAR
+    forecast: tuple[Weather, ...] = ()
+    #: The season the colony is about to be in, which is the one worth acting
+    #: on: laying in stores is only a decision while there is still time.
+    coming_season: Season | None = None
+    #: The week ahead over the roads this colony actually uses, in one line.
+    outlook: str = ""
+
+    @property
+    def season(self) -> Season | None:
+        """The season the colony is in, or None in a world with no calendar.
+
+        A world built with `weather=False` has no seasons at all, not seasons
+        nobody mentions -- which is what makes it the control case: a steward
+        there behaves exactly as it did before there was a year.
+        """
+        return self.date.season if self.date else None
 
     def neighbours(self) -> list[Link]:
         """Everyone reachable, nearest first."""
         return sorted(self.links.values(), key=lambda link: (link.days, link.colony))
+
+    def open_links(self) -> list[Link]:
+        """Everyone reachable *today*: the shut roads taken out."""
+        return [link for link in self.neighbours() if link.open]
+
+    def shut(self) -> list[Link]:
+        """Everyone the weather has cut off today."""
+        return [link for link in self.neighbours() if not link.open]
 
     def sellers(self, good: str) -> list[Link]:
         """Who was last seen with some to spare, cheapest first.
@@ -404,14 +463,36 @@ class Steward:
         """
         view = self.view
         colony = self.colony
+        when = f"day {view.day if view else 0}"
+        if view and view.date:
+            when += f" -- {view.date}"
         way = "growing" if colony.growth >= 1.0 else (
             "losing people" if colony.growth <= -1.0 else "steady"
         )
         lines = [
-            f"{self.name}, day {view.day if view else 0}. "
+            f"{self.name}, {when}. "
             f"{self.coin:.0f} coin, {colony.population:.0f} people, {way} "
             f"({colony.nourishment:.0%} fed)."
         ]
+        if view and view.outlook:
+            lines.append(f"the sky: {view.outlook}")
+        if view and view.coming_season is not None:
+            lean = [
+                good
+                for good in GOOD_NAMES
+                if view.coming_season.yields(good) < LEAN_YIELD
+            ]
+            if lean:
+                lines.append(
+                    f"  {view.coming_season.name} is coming and it makes little "
+                    + ", ".join(lean)
+                )
+        if view:
+            shut = view.shut()
+            if shut:
+                lines.append(
+                    "  shut today: " + ", ".join(link.name for link in shut)
+                )
         lines.append("what we hold:")
         for good in GOOD_NAMES:
             cover = self.cover(good)
@@ -430,9 +511,14 @@ class Steward:
             for link in view.neighbours():
                 age = link.age(view.day)
                 seen = f"seen {age}d ago" if age >= 0 else "never visited"
+                road = "road shut" if not link.open else (
+                    f"{link.weather_days:.0f} days in this weather"
+                    if link.delay >= 1.0
+                    else "road clear"
+                )
                 lines.append(
                     f"  {link.name:<12} {link.days:>3.0f} days, "
-                    f"hazard {link.hazard:.0%}, {seen}, {link.regard}"
+                    f"hazard {link.hazard:.0%}, {road}, {seen}, {link.regard}"
                 )
                 for good in GOOD_NAMES:
                     if link.surplus(good) > 1 or link.shortfall(good) > 1:
@@ -474,7 +560,7 @@ def merchant(steward: Steward, view: NetworkView) -> None:
 
     if steward.reviews % SLOW_INTERVAL == 0:
         for good in GOOD_NAMES:
-            _reserve(steward, good)
+            _reserve(steward, view, good)
         _labour(steward, view)
         _bench(steward, view)
 
@@ -551,12 +637,17 @@ def _cut_to_sell(
     return max(MIN_MARKUP, min(glut, 1.0))
 
 
-def _reserve(steward: Steward, good: str) -> None:
-    """How much to keep back, judged on months rather than days.
+def _reserve(steward: Steward, view: NetworkView, good: str) -> None:
+    """How much to keep back, judged on months rather than days -- and on what
+    the next season is going to make.
 
     A colony that has been scraping along on a good all season wants a deeper
     granary, which also stops it selling the little it has; one that has been
     drowning in it can safely call more of it surplus and put it on the road.
+    On top of that sits the calendar: a season that makes none of a good is
+    worth a deeper store before it arrives rather than after, and because the
+    reserve is what scarcity is measured against, filling the granary is also
+    what puts the price up and pulls a caravan in. That is autumn.
     """
     remembered = steward.remembered(good)
     if remembered == float("inf"):
@@ -572,6 +663,14 @@ def _reserve(steward: Steward, good: str) -> None:
     else:
         target = 1.0
         why = ""
+
+    coming = view.coming_season
+    if coming is not None:
+        lean = max(0.0, 1.0 - coming.yields(good))
+        if lean > 0.0:
+            target *= 1.0 + LEAN_RESERVE * lean
+            if lean >= 1.0 - LEAN_YIELD:
+                why = f"{coming.name} is coming"
 
     current = steward.colony.policy.reserve_for(good)
     moved = current + ADJUST_RATE * (target - current)
