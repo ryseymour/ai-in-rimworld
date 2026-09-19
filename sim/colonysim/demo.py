@@ -144,6 +144,14 @@ def main() -> None:
     worn = ", ".join(f"{n} {names[t]}" for t, n in sorted(tiers.items()))
     print(f"\nroads: {worn}")
 
+    if sim.negotiations:
+        print("\n--- the last argument at a counter ---\n")
+        last = sim.negotiations[-1]
+        print(f"  day {last.day}, over {last.good}")
+        for line in last.transcript():
+            print(f"    {line}")
+        print(f"  {last.summary()}")
+
     if sim.log:
         print("\nlast few journeys:")
         for line in sim.log[-args.journeys :]:
