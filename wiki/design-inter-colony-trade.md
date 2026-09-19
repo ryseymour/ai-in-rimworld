@@ -10,7 +10,7 @@ colonies side by side and has the storage building. As of 2026-09-18 the RimWorl
 repository is paused and the colony sim is the project.
 
 That sim has no GitHub remote, so a cloud thread cannot read or change it. Milestones 1–3 and the
-wildlife half of milestone 5 are therefore **built standalone in `sim/colonysim/`** in this
+wildlife and weather halves of milestone 5 are therefore **built standalone in `sim/colonysim/`** in this
 repository: stdlib only, no dependencies, so it lifts into the real sim as a module. `sim/README.md`
 describes what is there. The names below are the design's names; where the code differs, the code is
 what runs. Milestone 4 (agent-driven traders) is not started.
@@ -208,6 +208,51 @@ the design wanted from "simulated while travelling": arriving is not guaranteed,
 coin that leaves it. Both are counted explicitly so that conservation is still checked to the last
 decimal rather than loosened.
 
+## The year (milestone 5, weather)
+
+Sixty days, four seasons of fifteen, in `weather.py`. The whole of it is two tables and one number.
+
+**The land works to a calendar.** Each season multiplies a colony's output per good. Autumn nearly
+doubles food; winter makes almost none of anything but tools, which is indoor work. The four
+multipliers for any good average to exactly one, so a year gives what the land would have given
+anyway and the seasons only decide when. Nothing else is told: prices here are a function of what is
+on the shelves, so the harvest cuts them and the winter puts them back up.
+
+The resulting year is not the obvious one. Food is cheapest in autumn and dearest in **spring** — a
+colony goes into the cold on a full granary and comes out the far side on an empty one, so the
+hungry gap follows winter rather than being it.
+
+**Weather is a property of the day**, not of a place: one sky over the whole map, in spells of a few
+days, drawn from the season's own table. Blizzards are a winter thing, autumn is storm season.
+
+**A road's own grade decides what the weather does to it.** Slowdown is in proportion to how poor the
+road is; storms shut a bare foot path and a blizzard shuts anything short of a finished dirt road,
+and nothing shuts a paved one. So paving the trunk route is what buys a colony a winter economy, and
+the traffic that wears the trunk in is the same traffic the closures push onto it — which closes a
+second loop with the road wear that was already there.
+
+A shut leg is removed from the route graph rather than surcharged, so the search takes whatever open
+chain is left and a snowed-in pass diverts trade rather than stopping it. A caravan already out
+makes no progress on a day its road is shut: it sits the storm out, the animals still roll against
+it, and it arrives late.
+
+**The forecast is exact on purpose.** Weather is generated forward and then fixed, so a steward asking
+about next week gets the week it will really have. A trader is already wrong about markets and wrong
+about wolves; being wrong about the sky as well would only blur what the seasons are doing. Traders
+score a trip through the forecast, and stewards read the date, today's sky, the week ahead and who is
+cut off straight off `NetworkView`.
+
+**And it gives the steward a decision with a date on it.** Through autumn, `coming_season` says
+winter, so the merchant deepens its granary for whatever winter will not make. That both stops the
+colony selling what it is about to need and — since scarcity is measured against the reserve — puts
+the price up until somebody hauls more in. Autumn is when everybody buys food, and a year of weather
+therefore tends to mean *more* journeys than a flat sky, moved around the calendar rather than
+removed from it.
+
+**Accounting.** Weather costs time and never goods. The animals remain the only thing in the sim that
+destroys anything, so conservation is still checked to the last decimal. `weather=False` gives the
+same world with no year in it, which is the control.
+
 ## Milestones
 
 1. World graph and carved roads, rendered, deterministic. No traders.
@@ -218,7 +263,7 @@ decimal rather than loosened.
    colony, with the network to read and prices, reserves and labour to set (section 3a) -- and the
    scripted steward runs on it. The model call and the dialogue are not.
 5. Risk and texture: wild animals on the roads, weather closing routes, reputation between colonies,
-   road wear and upgrade. Road wear and the animals are built; weather and reputation are not.
+   road wear and upgrade. Road wear, the animals and the year are built; reputation is not.
 
 ## How we know it works
 
@@ -241,6 +286,11 @@ A headless multi-day run across several colonies, asserting:
   day by day, which is what lets the animals meet a caravan on the road.
 - ~~Do traders carry currency, or is it pure barter?~~ Settled: currency, falling back to barter for
   whatever the purse will not cover.
+- ~~Is the forecast reliable, or does a trader have to guess at the sky?~~ Settled: exact. There is
+  already enough a trader is wrong about; uncertainty about the weather belongs on top of a working
+  calendar, not inside it.
+- Should a colony be able to *pay* to keep a road open through winter — clearing snow as a use for
+  coin and labour — rather than only benefiting from roads it has already worn in?
 
 ## Related pages
 

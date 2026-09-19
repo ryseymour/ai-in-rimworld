@@ -29,6 +29,18 @@ def frame(sim, width: int) -> str:
         f"day {sim.day}   {len(sim.caravans)} on the road   "
         f"{sim.journeys} journeys done   {sim.meetings} met in the wild"
     )
+    if sim.climate is not None:
+        shut = sim.shut_routes()
+        ahead = "".join(
+            w.glyph for w in sim.climate.forecast(sim.day)[1:]
+        )
+        line = f"{sim.date}   {sim.weather.name}   week ahead {ahead}"
+        if shut:
+            names = ", ".join(
+                f"{sim.colonies[r.a].name}-{sim.colonies[r.b].name}" for r in shut
+            )
+            line += f"   SHUT: {names}"
+        out.append(line)
     out.append("")
 
     if sim.caravans:
@@ -37,10 +49,13 @@ def frame(sim, width: int) -> str:
             home = sim.colonies[caravan.home].name
             dest = sim.colonies[caravan.destination].name
             arrow = "->" if caravan.state == OUTBOUND else "<-"
+            waited = (
+                f"  waited {caravan.days_waited:.0f}d" if caravan.days_waited else ""
+            )
             line = (
                 f"  {home:>11} {arrow} {dest:<11} "
                 f"{cargo_summary(caravan.cargo):<34} "
-                f"{caravan.purse.amount:>6.0f} coin"
+                f"{caravan.purse.amount:>6.0f} coin{waited}"
             )
             out.append(line[:width])
     else:
@@ -67,6 +82,11 @@ def main() -> None:
         action="store_true",
         help="leave every colony trading on bare scarcity",
     )
+    ap.add_argument(
+        "--no-weather",
+        action="store_true",
+        help="an endless temperate sky: no seasons, no road ever shut",
+    )
     ap.add_argument("--days", type=int, default=150)
     ap.add_argument("--delay", type=float, default=0.15, help="seconds per day")
     ap.add_argument("--frames", type=int, default=0, help="stop after N days (0 = all)")
@@ -78,6 +98,7 @@ def main() -> None:
         args.width,
         args.height,
         stewards=not args.no_stewards,
+        weather=not args.no_weather,
     )
     limit = args.frames or args.days
 

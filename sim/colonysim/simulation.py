@@ -6,7 +6,14 @@ from dataclasses import dataclass, field
 
 from .goods import GOOD_NAMES, GOODS
 from .money import SILVER, Purse
-from .roads import RoadNetwork, apply_traffic, generate_roads, route_between
+from .roads import (
+    RoadNetwork,
+    apply_traffic,
+    generate_roads,
+    journey_grade,
+    route_between,
+    route_grade,
+)
 from .steward import Link, NetworkView, Steward, route_tier
 from .storage import Colony, MarketView, Storage
 from .trade import (
@@ -25,6 +32,7 @@ from .trade import (
     trip_float,
     unload,
 )
+from .weather import CLEAR, FORECAST_DAYS, Climate, Weather
 from .wildlife import Wilds, escort_cost, expected_loss, per_day_hazard, populate, raid
 from .world import World, generate_world
 
@@ -58,6 +66,11 @@ STARTING_SILVER = 900.0
 #: to avoid. The detour is paid in travel cost, which is the same currency the
 #: road graph is already searched in.
 DANGER_DETOUR = 0.8
+
+#: Most "waited out the snow" lines one caravan's ledger keeps. A journey that
+#: sat out four storms has said what it has to say; `days_waited` carries the
+#: exact count.
+WAIT_NOTES = 3
 
 
 def terrain_mix(world: World, x: int, y: int, radius: int = CATCHMENT) -> dict[str, float]:
@@ -125,6 +138,33 @@ def calibrate(colonies: list[Colony], surplus: float = SURPLUS_FACTOR) -> None:
 
 
 @dataclass
+class SeasonTally:
+    """What one season of the year did, summed over every year of a run.
+
+    The shape of a year, in the four numbers that show it: what the land gave,
+    what it cost to keep the roads working, and whether anyone went hungry.
+    """
+
+    days: int = 0
+    journeys: int = 0
+    #: Days this season on which some road somewhere was shut.
+    shut_days: int = 0
+    #: Caravan-days lost to sitting out weather.
+    waited: float = 0.0
+    produced: dict[str, float] = field(default_factory=dict)
+    #: Running sum of every colony's price for each good, so the demo can show
+    #: a mean price per season without keeping a day-by-day history.
+    price_sum: dict[str, float] = field(default_factory=dict)
+    price_days: int = 0
+    hungry_days: int = 0
+
+    def mean_price(self, good: str) -> float:
+        if not self.price_days:
+            return 0.0
+        return self.price_sum.get(good, 0.0) / self.price_days
+
+
+@dataclass
 class Simulation:
     world: World
     network: RoadNetwork
@@ -144,6 +184,19 @@ class Simulation:
     #: The animals. `None` is a tame world, and the control case for every
     #: claim about what the wildlife does.
     wilds: Wilds | None = None
+    #: The year: the calendar, and the sky over it. `None` is a world of
+    #: endless temperate weather, and the control case for every claim about
+    #: what the seasons do.
+    climate: Climate | None = None
+    #: Caravan-days spent sitting still because a road was shut. Weather costs
+    #: the economy time, never goods -- conservation is untouched by it, which
+    #: is what makes that check still exact with seasons in the world.
+    days_waited: float = 0.0
+    #: Days on which at least one carved road was closed somewhere.
+    days_roads_shut: int = 0
+    #: What each season of the year did, accumulated over however many years
+    #: the run covers. This is the shape of the year, and what the demo prints.
+    tallies: dict[str, "SeasonTally"] = field(default_factory=dict)
     #: Goods eaten or trampled by animals. Nothing else in the sim destroys
     #: goods, so conservation is checked against this.
     lost: dict[str, float] = field(default_factory=dict)
@@ -169,6 +222,62 @@ class Simulation:
     #: same question of the same graph on the same day, so they share a cache
     #: and the answers cannot disagree.
     _routes_today: dict[tuple[int, int], tuple] = field(default_factory=dict)
+    #: The same question with the weather ignored: the road that exists even on
+    #: a day it cannot be walked. A steward still needs to see a snowed-in
+    #: neighbour, or it could not plan for the thaw.
+    _open_today: dict[tuple[int, int], tuple] = field(default_factory=dict)
+
+    # -------------------------------------------------------------- the year
+    @property
+    def date(self):
+        """Today on the calendar. Every world has one, weather or not."""
+        from .weather import date_of
+
+        return self.climate.date(self.day) if self.climate else date_of(self.day)
+
+    @property
+    def weather(self) -> Weather:
+        """Today's sky, or fair weather in a world with no climate."""
+        return self.climate.on(self.day) if self.climate else CLEAR
+
+    @property
+    def season(self):
+        return self.date.season
+
+    def growth(self) -> dict[str, float] | None:
+        """Today's multiplier on the land, or None where there is no calendar."""
+        return self.climate.growth(self.day) if self.climate else None
+
+    def route_shut(self, route) -> bool:
+        """Whether today's weather has this carved road closed.
+
+        A route is judged on its mean tier, so it is the road as a whole that
+        shuts, and a trunk worn up to a dirt road rides out the snow that
+        closes the foot path beside it.
+        """
+        if self.climate is None:
+            return False
+        return self.weather.shuts(route_grade(self.network, route))
+
+    def shut_routes(self) -> list:
+        return [r for r in self.network.routes.values() if self.route_shut(r)]
+
+    def forecast_days(self, legs: tuple) -> float:
+        """How long a journey will really take, setting out today.
+
+        The bare road distance, walked through the week the forecast says is
+        coming. This is what a trader decides on; `travel_days` alone is what
+        it then counts down.
+        """
+        plain = travel_days(self.world.terrain, self.network, legs)
+        if self.climate is None or not legs:
+            return plain
+        return self.climate.journey_days(
+            self.day, plain, journey_grade(self.network, legs)
+        )
+
+    def _tally(self) -> "SeasonTally":
+        return self.tallies.setdefault(self.season.name, SeasonTally())
 
     # ---------------------------------------------------------------- totals
     def goods_in_world(self) -> dict[str, float]:
@@ -226,13 +335,23 @@ class Simulation:
         self.day += 1
         self._hazard_today.clear()
         self._routes_today.clear()
+        self._open_today.clear()
+
+        tally = self._tally()
+        tally.days += 1
+        growth = self.growth()
 
         for colony in self.colonies:
-            made, used = colony.live_day()
+            made, used = colony.live_day(growth)
             for good, qty in made.items():
                 self.produced[good] = self.produced.get(good, 0.0) + qty
+                tally.produced[good] = tally.produced.get(good, 0.0) + qty
             for good, qty in used.items():
                 self.consumed[good] = self.consumed.get(good, 0.0) + qty
+
+        if self.shut_routes():
+            self.days_roads_shut += 1
+            tally.shut_days += 1
 
         if self.wilds is not None:
             self.wilds.settle_day(self.network)
@@ -245,9 +364,22 @@ class Simulation:
             self._advance_caravans()
             self._dispatch()
 
+        self._record_prices(tally)
+
+    def _record_prices(self, tally: SeasonTally) -> None:
+        """What the world was asking today, for the season's average."""
+        for good in GOOD_NAMES:
+            tally.price_sum[good] = tally.price_sum.get(good, 0.0) + sum(
+                colony.price(good) for colony in self.colonies
+            ) / len(self.colonies)
+        tally.price_days += 1
+        tally.hungry_days += len(self.hungry_colonies())
+
     # ------------------------------------------------------------- stewards
     def _route(self, home: int, other: int) -> tuple:
-        """Today's best way from one colony to another, danger priced in."""
+        """The way from one colony to another as the map has it: danger priced
+        in, weather ignored. The road that exists, whether or not it can be
+        walked today."""
         key = (home, other)
         legs = self._routes_today.get(key)
         if legs is None:
@@ -255,6 +387,29 @@ class Simulation:
                 self.network, home, other, surcharge=self._danger_surcharge
             )
             self._routes_today[key] = legs
+        return legs
+
+    def _open_route(self, home: int, other: int) -> tuple:
+        """The way there that can actually be walked today.
+
+        The shut legs are taken out of the graph rather than made expensive, so
+        the search finds whatever open chain is left: a snowed-in pass pushes
+        the caravan onto the long valley road instead of stopping it. Empty
+        when the weather has cut the two apart altogether.
+        """
+        if self.climate is None:
+            return self._route(home, other)
+        key = (home, other)
+        legs = self._open_today.get(key)
+        if legs is None:
+            legs = route_between(
+                self.network,
+                home,
+                other,
+                surcharge=self._danger_surcharge,
+                blocked=self.route_shut,
+            )
+            self._open_today[key] = legs
         return legs
 
     def network_view(self, colony_id: int) -> NetworkView:
@@ -269,9 +424,16 @@ class Simulation:
         for other in range(len(self.colonies)):
             if other == colony_id:
                 continue
-            legs = self._route(colony_id, other)
+            legs = self._open_route(colony_id, other)
+            walkable = bool(legs)
+            if not walkable:
+                # Shut today, but the road is still there: show it, so the
+                # steward can price for the thaw rather than forgetting the
+                # village exists.
+                legs = self._route(colony_id, other)
             if not legs:
                 continue
+            grade = journey_grade(self.network, legs)
             links[other] = Link(
                 colony=other,
                 name=self.colonies[other].name,
@@ -280,12 +442,37 @@ class Simulation:
                 tier=route_tier(self.network, legs),
                 legs=legs,
                 market=colony.known.get(other) or MarketView.unvisited(),
+                open=walkable,
+                weather_days=self.forecast_days(legs) if walkable else 0.0,
+                outlook=(
+                    self.climate.outlook(self.day, grade) if self.climate else ""
+                ),
             )
+        home_grade = (
+            sum(journey_grade(self.network, link.legs) for link in links.values())
+            / len(links)
+            if links
+            else 1.0
+        )
         return NetworkView(
             day=self.day,
             home=colony_id,
             links=links,
             caravans=tuple(c for c in self.caravans if c.home == colony_id),
+            # No climate means no calendar in the view at all: a steward in a
+            # seasonless world must behave exactly as it did before there was
+            # a year, which is what makes it the control case.
+            date=self.date if self.climate else None,
+            weather=self.weather,
+            forecast=(
+                self.climate.forecast(self.day, FORECAST_DAYS) if self.climate else ()
+            ),
+            coming_season=(
+                self.climate.coming_season(self.day) if self.climate else None
+            ),
+            outlook=(
+                self.climate.outlook(self.day, home_grade) if self.climate else ""
+            ),
         )
 
     def _review_markets(self) -> None:
@@ -346,12 +533,37 @@ class Simulation:
             )
             self.journeys_turned_back += 1
 
+    def _progress(self, caravan: Caravan) -> float:
+        """How much of a day's travel this caravan gets done today.
+
+        One in fair weather. Less in bad, by however much of it the road it is
+        on fails to keep off. Nothing at all when the road is shut: it sits the
+        storm out and arrives late rather than arriving on time in a blizzard.
+        """
+        if self.climate is None:
+            return 1.0
+        return self.climate.progress(self.day, journey_grade(self.network, caravan.legs))
+
     def _advance_caravans(self) -> None:
         for caravan in list(self.caravans):
             if caravan.state == HOME:
                 continue
+            moved = self._progress(caravan)
+            if moved <= 0.0:
+                # Stuck: the road it is on is closed today. It is still out
+                # there, still carrying what it loaded, and the animals still
+                # get their roll -- a camped caravan is not a safe one.
+                self._walk_a_day(caravan)
+                caravan.days_waited += 1.0
+                self.days_waited += 1.0
+                self._tally().waited += 1.0
+                note = f"waited out the {self.weather.name}"
+                waits = sum(1 for line in caravan.ledger if line.startswith("waited"))
+                if waits < WAIT_NOTES and (not caravan.ledger or caravan.ledger[-1] != note):
+                    caravan.ledger.append(note)
+                continue
             self._walk_a_day(caravan)
-            caravan.days_left -= 1
+            caravan.days_left -= moved
             if caravan.days_left > 0:
                 continue
 
@@ -367,6 +579,7 @@ class Simulation:
             elif caravan.state == RETURNING:
                 unload(caravan, self.colonies[caravan.home])
                 self.journeys += 1
+                self._tally().journeys += 1
                 self.log.append(
                     f"day {self.day}: caravan {caravan.id} home to "
                     f"{self.colonies[caravan.home].name} -- "
@@ -390,7 +603,10 @@ class Simulation:
             for other in range(len(self.colonies)):
                 if other == colony.id:
                     continue
-                legs = self._route(colony.id, other)
+                # Only roads that are open today. A colony does not send a
+                # caravan into a blizzard; it waits for the thaw, or takes
+                # whatever long way round is still walkable.
+                legs = self._open_route(colony.id, other)
                 if not legs:
                     continue
                 known = colony.known.get(other) or MarketView.unvisited()
@@ -404,7 +620,11 @@ class Simulation:
                     continue
                 # Round trip plus a day trading, so a short hop cannot win on
                 # the divisor alone while delivering nothing worth having.
-                days = 2 * travel_days(self.world.terrain, self.network, legs) + 1
+                # Counted through the forecast, so a trip that the coming week
+                # will drag out loses to one that it will not -- which is how
+                # the weather moves trade around the map rather than only
+                # slowing it down.
+                days = 2 * self.forecast_days(legs) + 1
                 # Both legs are exposed. What goes out is the cargo; what
                 # comes back is whatever the coin turned into, so the float
                 # counts too -- which is why a colony that sets out to buy
@@ -423,13 +643,16 @@ class Simulation:
                 continue
 
             _, _, other, legs, cargo, hazard, escorted = best
+            # Counted in fair-weather days: the sky is applied to each day of
+            # travel as it is walked, not folded into the distance.
+            plain = travel_days(self.world.terrain, self.network, legs)
             caravan = Caravan(
                 id=self._next_caravan_id,
                 home=colony.id,
                 destination=other,
                 legs=legs,
-                days_left=travel_days(self.world.terrain, self.network, legs),
-                leg_days=travel_days(self.world.terrain, self.network, legs),
+                days_left=plain,
+                leg_days=plain,
                 dispatched_day=self.day,
                 hazard=hazard,
                 escorted=escorted,
@@ -438,8 +661,9 @@ class Simulation:
             for good, qty in cargo.items():
                 caravan.cargo[good] = colony.storage.remove(good, qty)
             if escorted:
-                days = 2 * travel_days(self.world.terrain, self.network, legs) + 1
-                wage = colony.purse.withdraw(escort_cost(days))
+                # Guards are paid for the days they are actually out, weather
+                # and all -- a storm on the road is a storm on the payroll.
+                wage = colony.purse.withdraw(escort_cost(2 * self.forecast_days(legs) + 1))
                 self.escort_wages += wage
                 caravan.ledger.append(f"hired guards for {wage:.0f} coin")
             colony.purse.transfer_to(caravan.purse, trip_float(colony))
@@ -476,12 +700,15 @@ def build_simulation(
     height: int = 45,
     wildlife: bool = True,
     stewards: bool = True,
+    weather: bool = True,
 ) -> Simulation:
     """A world, its roads, its colonies, and whoever is running them.
 
     `stewards=False` leaves every colony trading on bare scarcity, which is the
     world this sim had before anyone was in charge of one -- and so the control
-    case to compare a steward-run economy against.
+    case to compare a steward-run economy against. `weather=False` gives the
+    same world under an endless temperate sky: the land gives the same every
+    day and no road ever shuts, which is the control for the seasons.
     """
     world = generate_world(width, height, settlements, seed)
     network = generate_roads(world)
@@ -496,5 +723,6 @@ def build_simulation(
         colonies=colonies,
         stewards=[Steward(colony) for colony in colonies] if stewards else [],
         wilds=populate(world, seed) if wildlife else None,
+        climate=Climate(seed) if weather else None,
         rng=random.Random(seed ^ 0xD00D),
     )
