@@ -10,7 +10,8 @@ colonies side by side and has the storage building. As of 2026-09-18 the RimWorl
 repository is paused and the colony sim is the project.
 
 That sim has no GitHub remote, so a cloud thread cannot read or change it. Milestones 1–3 and the
-wildlife half of milestone 5 are therefore **built standalone in `sim/colonysim/`** in this
+wildlife half of milestone 5, and population (milestone 6) are therefore **built standalone in
+`sim/colonysim/`** in this
 repository: stdlib only, no dependencies, so it lifts into the real sim as a module. `sim/README.md`
 describes what is there. The names below are the design's names; where the code differs, the code is
 what runs. Milestone 4 (agent-driven traders) is not started.
@@ -208,6 +209,41 @@ the design wanted from "simulated while travelling": arriving is not guaranteed,
 coin that leaves it. Both are counted explicitly so that conservation is still checked to the last
 decimal rather than loosened.
 
+## 5. Population: people follow food
+
+Decided 2026-09-19 with Ryan. Until this, a colony's population was set at founding and never moved,
+which meant nothing the economy did had any stakes: a colony the caravans could not reach simply
+went without, indefinitely, at no cost, and a colony swimming in food was no better off for it.
+Population is now a live quantity, on one rule: **people follow food.**
+
+- **A fed colony with stores to spare grows.** Being fed is not enough — the granary has to be above
+  `PLENTY` (1.15 buffers) as well, so a village living hand to mouth stays the size it is. At full
+  tilt growth is about a fifth over a 150-day run.
+- **A colony that cannot feed everyone loses people,** judged over a fortnight rather than a day, so
+  a caravan that is two days late does not kill anybody and a month of famine does.
+- **A colony whose stores are merely thin loses a trickle** to the same instinct, before anyone goes
+  hungry. Leaving is what you do before it gets bad.
+
+**Eating is per head; the land is not.** Consumption follows the population exactly. Output follows
+it only as far as `LAND_ELASTICITY` (0.7) allows, because the fields a village works do not get any
+bigger when more people are born onto them. That gap is the ceiling: a colony grows into its own
+land and then stops, and the only way past it is to buy food from somewhere with land to spare —
+which is what the roads are for. It is also why a starving colony settles at a smaller size rather
+than dying out, since shrinking improves what each remaining person gets.
+
+**Population is who can walk the roads.** A caravan is a crew and guards are more people, and a
+colony will not have more than `ROAD_SHARE` of itself away from home at once. So a colony that has
+grown can run a second caravan, or run one and guard it, and not both; one that has been starved
+down can do neither — except that it always keeps its one trip, or a colony could be locked out of
+trading by the very smallness trading would fix.
+
+**The claim this makes about trade is about people lost, not headcount.** A world that trades is not
+always the larger one, because the colony that grew the food and sold it has less left to grow on.
+What trade buys is that nobody has to die or walk out, and that is what is asserted across seeds.
+
+`build_simulation(population=False)` freezes every colony at its founding size, the same way
+`trade_enabled` and `stewards` do, and is the control case for all of the above.
+
 ## Milestones
 
 1. World graph and carved roads, rendered, deterministic. No traders.
@@ -219,6 +255,9 @@ decimal rather than loosened.
    scripted steward runs on it. The model call and the dialogue are not.
 5. Risk and texture: wild animals on the roads, weather closing routes, reputation between colonies,
    road wear and upgrade. Road wear and the animals are built; weather and reputation are not.
+6. Population following food (section 5), so the economy has stakes: colonies grow or shrink with
+   their stores, and how many people a colony has decides what it eats, what it makes, and how many
+   caravans and guards it can put on the road. Built.
 
 ## How we know it works
 
@@ -229,7 +268,13 @@ A headless multi-day run across several colonies, asserting:
   animals take, never by trade. A rounding bug in the exchange that mints or eats goods is the single
   most likely defect here;
 - price variance for a given good across colonies falls over the run — proof that trade is doing its job;
-- no caravan is stuck: every dispatched trader either arrives, returns, or dies for a stated reason.
+- no caravan is stuck: every dispatched trader either arrives, returns, or dies for a stated reason;
+- **cutting a world off from trade costs it people** — across seeds, a world with the traders taken
+  off loses more to hunger and emigration than the same world with them on. This is the assertion
+  that says the economy has stakes;
+- colonies neither explode nor collapse over 150 days under default settings: every village ends
+  recognisably like itself, and the world's population inside a band either side of what it started
+  with.
 
 ## Open questions
 

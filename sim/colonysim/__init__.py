@@ -1,5 +1,5 @@
-"""The colony simulation: world, roads, storage, currency, trade, stewards
-and the wild.
+"""The colony simulation: world, roads, storage, currency, trade, stewards,
+people and the wild.
 
 See `../wiki/design-inter-colony-trade.md` for the design this implements.
 """
@@ -9,6 +9,7 @@ from .crafting import Workshop, armed_strength, armoury, work_day
 from .goods import CRAFTED_GOOD_NAMES, GOOD_NAMES, GOODS, RAW_GOOD_NAMES, Good
 from .hunting import hunt
 from .money import SILVER, Currency, Purse
+from .people import caravans_allowed, food_cover
 from .recipes import RECIPES, STATIONS, Recipe, Station
 from .roads import RoadNetwork, Route, generate_roads, road_links, road_overlay
 from .simulation import Simulation, build_simulation
@@ -26,15 +27,8 @@ __all__ = [
     "GOOD_NAMES",
     "RAW_GOOD_NAMES",
     "RECIPES",
-    "Recipe",
-    "STATIONS",
-    "Station",
-    "Workshop",
-    "armed_strength",
-    "armoury",
-    "hunt",
-    "work_day",
     "SILVER",
+    "STATIONS",
     "WOLVES",
     "Caravan",
     "Colony",
@@ -48,23 +42,32 @@ __all__ = [
     "Payment",
     "Policy",
     "Purse",
+    "Recipe",
     "RoadNetwork",
     "Route",
     "Settlement",
     "Simulation",
     "Species",
+    "Station",
     "Steward",
     "Storage",
     "Terrain",
     "Wilds",
+    "Workshop",
     "World",
+    "armed_strength",
+    "armoury",
     "build_simulation",
+    "caravans_allowed",
+    "food_cover",
     "generate_roads",
-    "merchant",
-    "road_links",
-    "road_overlay",
     "generate_terrain",
     "generate_world",
+    "hunt",
+    "merchant",
     "populate",
+    "road_links",
+    "road_overlay",
     "settle",
+    "work_day",
 ]

@@ -64,3 +64,9 @@ uv run airim serve --publish
 - Observed: Goto and Wait_MaintainPosture jobs for arriving caravan pawns start and end on the same tick. Expected for lord-driven travel; noisy but harmless. Consider filtering same-tick pairs in M2.
 - `source` on job_start is populated (e.g. `JobGiver_GotoTravelDestination`, `JobGiver_Work`) and useful.
 - `relations` came back empty for all pawns; unverified whether the colony simply has none. Check with a pawn known to have family.
+
+### Session 2, 2026-09-18 (user's Mac, same game version)
+
+- Telemetry branch shows a fresh run: 4 pawns, day 16, quest letter, research job, chitchat interactions.
+- The mod sending was a newer local build: events carry `day` and `hour` fields and a new `thought` event (pawn, def, mood, about, about_name). Neither is in this repository's `mod/Source`; the changes live only on the Mac. Push them before touching the mod again.
+- No dropped or malformed events.

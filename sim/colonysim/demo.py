@@ -36,6 +36,8 @@ def main() -> None:
         args.seed, args.settlements, args.width, args.height, wildlife=False
     )
 
+    founded = [colony.population for colony in sim.colonies]
+
     sim.run(args.days)
     control.run(args.days)
     unled.run(args.days)
@@ -46,11 +48,16 @@ def main() -> None:
     print(legend(sim.world, sim.network, sim.wilds))
 
     print(f"\n--- after {args.days} days, {sim.journeys} journeys ---\n")
+    # Written off GOOD_NAMES rather than spelt out, since the crafted goods
+    # are columns here like any other.
     head = "".join(f"{good:>8}" for good in GOOD_NAMES)
-    print(f"{'colony':<12}{head}{'coin':>9}")
+    print(f"{'colony':<12}{'people':>7}{head}{'coin':>9}")
     for colony in sim.colonies:
         row = "".join(f"{colony.storage.get(g):>8.0f}" for g in GOOD_NAMES)
-        print(f"{colony.name:<12}{row}{colony.purse.amount:>9.0f}")
+        print(
+            f"{colony.name:<12}{colony.population:>7.0f}{row}"
+            f"{colony.purse.amount:>9.0f}"
+        )
 
     print("\nprice gap between the dearest and cheapest colony:")
     print(f"  {'good':<8}{'with trade':>12}{'without':>12}{'no steward':>12}")
@@ -101,6 +108,25 @@ def main() -> None:
         f"{colony.name} {armed_strength(colony):.0%}" for colony in sim.colonies
     )
     print(f"  armed: {armed}")
+
+    print("\n--- the people ---\n")
+    print(f"  {'colony':<12}{'founded':>9}{'now':>7}{'fed':>8}")
+    for colony, was in zip(sim.colonies, founded):
+        print(
+            f"  {colony.name:<12}{was:>9.0f}{colony.population:>7.0f}"
+            f"{colony.nourishment:>8.0%}"
+        )
+    print(f"\n  born: {sim.born:.0f}, starved: {sim.starved:.0f}, left: {sim.left:.0f}")
+    # The claim population makes about trade, and the only one worth making:
+    # not that traded worlds are bigger -- moving food around can leave the
+    # colony that grew it with less to grow on -- but that nobody has to die
+    # or walk out of one.
+    print(
+        f"  people lost with trade:  {sim.starved + sim.left:.0f}"
+        f"  (without: {control.starved + control.left:.0f})"
+    )
+    print(f"  shrinking: {', '.join(sim.shrinking_colonies()) or 'nobody'}")
+    print(f"  without trade: {', '.join(control.shrinking_colonies()) or 'nobody'}")
 
     print(f"\n--- the wild ---\n")
     print(f"  journeys made:      {sim.journeys}  (a tame world: {tame.journeys})")
