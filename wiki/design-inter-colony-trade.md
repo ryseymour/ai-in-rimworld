@@ -114,6 +114,62 @@ model call per leg rather than per tick, so it is affordable, and it gives negot
 who favour colonies they like, and traders who lie about what a good is worth back home. Build the
 scripted version first and swap the decision points for agent calls; the interfaces are the same.
 
+## 3a. Stewards: who decides
+
+Built 2026-09-19 from Ryan's ask: "give stewards access to the trade networks and be able to
+adjust prices", and "make it a real economic simulation between the three colonies".
+
+Everything above this section is mechanism. Land makes goods, scarcity makes prices, caravans move
+things between the two, and nothing in any of it decides anything. A **steward** is the agent that
+runs one colony's side of the economy. It is the object the ascii sim's own `colony/steward.py`
+plugs into, and the seam milestone 4 needs.
+
+**What a steward sees** (`NetworkView`, rebuilt fresh each day so it never holds the world):
+
+- every colony it can reach, with today's travel days, today's hazard and how worn the road is;
+- what the last caravan home reported about each market -- prices, what was spare, what was wanted
+  -- with the day it was seen, so old news is visibly old news;
+- its own caravans, and nobody else's. What other colonies are doing it learns the way a trader
+  does, by going there.
+
+**What a steward may change** (`Policy`, on the colony, clamped on the way in so an agent can ask
+for anything without the rest of the sim having to defend itself):
+
+- **markup**, 0.6x to 1.8x on what scarcity alone would ask. One price serves both sides of the
+  counter -- it is what a visiting caravan is paid here and what this colony pays for imports --
+  which is what makes it a decision rather than a readout;
+- **reserve**, 0.4x to 2.5x the good's own buffer days, which moves the line between what the
+  colony sells and what it wants to buy;
+- **focus**, 0.5x to 1.6x on the land's own output, rebalanced so the colony's total output at base
+  prices is unchanged. People move between jobs; they do not appear.
+
+**The scripted steward** (`merchant`) is three rules:
+
+- *short of something*: work backwards from the trader's own sum -- find the cheapest place known
+  to have any, add the margin a trader wants and what the road is worth, and quote that. Scarcity
+  already lifts the price on its own, so the bid only does anything when that is not enough. A
+  colony with no coin does not bid, because it would be paying in barter off the shelves it is
+  trying to fill;
+- *sitting on a pile*: discount, and if another colony could supply the buyer it wants, discount to
+  just under them. Two colonies with wood and one buyer for it is a competition;
+- *over weeks*: hold more back of whatever it keeps running down, and move people toward what it
+  keeps running out of and what the region is paying for.
+
+That last rule is what makes this an economy rather than a delivery service: a price that stays
+high long enough stops being a reason to buy and becomes a reason to make. Measured, it is the
+difference between a colony that starves when the roads are cut and one that puts people in the
+fields instead.
+
+**Stewards are on by default**, and `build_simulation(stewards=False)` is the control case, the
+same way `trade_enabled` is the control case for traders. Every claim about what stewards do is
+made against it.
+
+**Milestone 4 plugs in here.** `Steward(colony, decide=...)` replaces the scripted rules with
+anything of the same shape -- a player, a model call once a week -- reading the same view and
+writing through the same clamped setters. `Steward.brief()` renders the whole situation as text for
+exactly that, and is deliberately the same facts the scripted merchant reasons over rather than a
+summary of them.
+
 ## 4. Risk: what lives between the villages
 
 Decided 2026-09-19 with Ryan: the risk to a caravan is **wolves and bears**, not bandits. Animals are
@@ -158,7 +214,9 @@ decimal rather than loosened.
 2. Reserve, surplus and prices on storage, with no movement. A headless multi-colony run verifies the
    economy math alone.
 3. Scripted traders walking the roads and exchanging goods.
-4. Agent-driven traders with negotiation dialogue.
+4. Agent-driven traders with negotiation dialogue. The decision seam is built -- a steward per
+   colony, with the network to read and prices, reserves and labour to set (section 3a) -- and the
+   scripted steward runs on it. The model call and the dialogue are not.
 5. Risk and texture: wild animals on the roads, weather closing routes, reputation between colonies,
    road wear and upgrade. Road wear and the animals are built; weather and reputation are not.
 

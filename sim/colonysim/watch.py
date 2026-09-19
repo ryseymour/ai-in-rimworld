@@ -61,13 +61,24 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=23)
     ap.add_argument("--width", type=int, default=90)
     ap.add_argument("--height", type=int, default=32)
-    ap.add_argument("--settlements", type=int, default=6)
+    ap.add_argument("--settlements", type=int, default=3)
+    ap.add_argument(
+        "--no-stewards",
+        action="store_true",
+        help="leave every colony trading on bare scarcity",
+    )
     ap.add_argument("--days", type=int, default=150)
     ap.add_argument("--delay", type=float, default=0.15, help="seconds per day")
     ap.add_argument("--frames", type=int, default=0, help="stop after N days (0 = all)")
     args = ap.parse_args()
 
-    sim = build_simulation(args.seed, args.settlements, args.width, args.height)
+    sim = build_simulation(
+        args.seed,
+        args.settlements,
+        args.width,
+        args.height,
+        stewards=not args.no_stewards,
+    )
     limit = args.frames or args.days
 
     try:

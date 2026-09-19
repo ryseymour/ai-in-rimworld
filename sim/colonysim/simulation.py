@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 from .goods import GOOD_NAMES, GOODS
 from .money import SILVER, Purse
 from .roads import RoadNetwork, apply_traffic, generate_roads, route_between
+from .steward import Link, NetworkView, Steward, route_tier
 from .storage import Colony, MarketView, Storage
 from .trade import (
     HOME,
@@ -128,6 +129,10 @@ class Simulation:
     world: World
     network: RoadNetwork
     colonies: list[Colony]
+    #: One per colony, in colony order, or empty for a world where nobody is
+    #: minding the shop. Empty is the control case for every claim about what
+    #: stewards do to an economy.
+    stewards: list[Steward] = field(default_factory=list)
     caravans: list[Caravan] = field(default_factory=list)
     day: int = 0
     produced: dict[str, float] = field(default_factory=dict)
@@ -160,6 +165,10 @@ class Simulation:
     #: every colony asks about every route it could take -- so without this the
     #: same tiles get walked hundreds of times before breakfast.
     _hazard_today: dict[tuple[int, int], float] = field(default_factory=dict)
+    #: Ways there, worked out once a day as well. Stewards and traders ask the
+    #: same question of the same graph on the same day, so they share a cache
+    #: and the answers cannot disagree.
+    _routes_today: dict[tuple[int, int], tuple] = field(default_factory=dict)
 
     # ---------------------------------------------------------------- totals
     def goods_in_world(self) -> dict[str, float]:
@@ -216,6 +225,7 @@ class Simulation:
     def step_day(self) -> None:
         self.day += 1
         self._hazard_today.clear()
+        self._routes_today.clear()
 
         for colony in self.colonies:
             made, used = colony.live_day()
@@ -227,9 +237,60 @@ class Simulation:
         if self.wilds is not None:
             self.wilds.settle_day(self.network)
 
+        # Stewards decide before anyone is dispatched, so a caravan leaving
+        # today leaves under today's prices rather than yesterday's.
+        self._review_markets()
+
         if self.trade_enabled:
             self._advance_caravans()
             self._dispatch()
+
+    # ------------------------------------------------------------- stewards
+    def _route(self, home: int, other: int) -> tuple:
+        """Today's best way from one colony to another, danger priced in."""
+        key = (home, other)
+        legs = self._routes_today.get(key)
+        if legs is None:
+            legs = route_between(
+                self.network, home, other, surcharge=self._danger_surcharge
+            )
+            self._routes_today[key] = legs
+        return legs
+
+    def network_view(self, colony_id: int) -> NetworkView:
+        """The trade network as one colony's steward can see it.
+
+        The roads are today's -- their length, their danger, how worn they are.
+        The markets are not: each one is whatever the last caravan home from
+        there brought back, which is where a steward's mistakes come from.
+        """
+        colony = self.colonies[colony_id]
+        links: dict[int, Link] = {}
+        for other in range(len(self.colonies)):
+            if other == colony_id:
+                continue
+            legs = self._route(colony_id, other)
+            if not legs:
+                continue
+            links[other] = Link(
+                colony=other,
+                name=self.colonies[other].name,
+                days=travel_days(self.world.terrain, self.network, legs),
+                hazard=self._leg_hazard(legs),
+                tier=route_tier(self.network, legs),
+                legs=legs,
+                market=colony.known.get(other) or MarketView.unvisited(),
+            )
+        return NetworkView(
+            day=self.day,
+            home=colony_id,
+            links=links,
+            caravans=tuple(c for c in self.caravans if c.home == colony_id),
+        )
+
+    def _review_markets(self) -> None:
+        for steward in self.stewards:
+            steward.review(self.network_view(steward.colony.id))
 
     # ------------------------------------------------------------- wildlife
     def _route_hazard(self, route) -> float:
@@ -329,9 +390,7 @@ class Simulation:
             for other in range(len(self.colonies)):
                 if other == colony.id:
                     continue
-                legs = route_between(
-                    self.network, colony.id, other, surcharge=self._danger_surcharge
-                )
+                legs = self._route(colony.id, other)
                 if not legs:
                     continue
                 known = colony.known.get(other) or MarketView.unvisited()
@@ -416,7 +475,14 @@ def build_simulation(
     width: int = 90,
     height: int = 45,
     wildlife: bool = True,
+    stewards: bool = True,
 ) -> Simulation:
+    """A world, its roads, its colonies, and whoever is running them.
+
+    `stewards=False` leaves every colony trading on bare scarcity, which is the
+    world this sim had before anyone was in charge of one -- and so the control
+    case to compare a steward-run economy against.
+    """
     world = generate_world(width, height, settlements, seed)
     network = generate_roads(world)
     rng = random.Random(seed ^ 0xC0FFEE)
@@ -428,6 +494,7 @@ def build_simulation(
         world=world,
         network=network,
         colonies=colonies,
+        stewards=[Steward(colony) for colony in colonies] if stewards else [],
         wilds=populate(world, seed) if wildlife else None,
         rng=random.Random(seed ^ 0xD00D),
     )

@@ -11,8 +11,14 @@ SEEDS = [1, 7, 23, 99]
 DAYS = 150
 
 
-def run(seed: int, days: int = DAYS, trade: bool = True, wildlife: bool = True):
-    sim = build_simulation(seed=seed, wildlife=wildlife)
+def run(
+    seed: int,
+    days: int = DAYS,
+    trade: bool = True,
+    wildlife: bool = True,
+    stewards: bool = True,
+):
+    sim = build_simulation(seed=seed, wildlife=wildlife, stewards=stewards)
     sim.trade_enabled = trade
     start = sim.goods_in_world()
     coin = sim.coin_in_world()
@@ -66,9 +72,13 @@ def test_currency_is_conserved(seed):
 @pytest.mark.parametrize("seed", SEEDS)
 def test_trade_spreads_goods_more_evenly_than_no_trade(seed):
     """Everyone starts on their reserve, so the price gap between colonies
-    opens up either way. The claim is that traders keep it narrower."""
-    traded, _, _ = run(seed, trade=True)
-    alone, _, _ = run(seed, trade=False)
+    opens up either way. The claim is that traders keep it narrower.
+
+    Stewards are off on both sides: this is the claim about traders, and a
+    steward changing its colony's prices would be measuring something else.
+    What stewards do to the spread is `test_steward.py`'s business."""
+    traded, _, _ = run(seed, trade=True, stewards=False)
+    alone, _, _ = run(seed, trade=False, stewards=False)
 
     with_trade = sum(traded.price_spread(g) for g in GOOD_NAMES)
     without = sum(alone.price_spread(g) for g in GOOD_NAMES)
@@ -78,9 +88,14 @@ def test_trade_spreads_goods_more_evenly_than_no_trade(seed):
 @pytest.mark.parametrize("seed", SEEDS)
 def test_trade_keeps_colonies_fed(seed):
     """The point of the feature: a colony that cannot feed itself is supplied
-    by one that can."""
-    traded, _, _ = run(seed, trade=True)
-    alone, _, _ = run(seed, trade=False)
+    by one that can.
+
+    Both sides run without stewards, so the only difference is the traders. A
+    steward can answer a food shortage by putting people in the fields instead,
+    which saves the same colony for an entirely different reason -- see
+    `test_steward.py::test_a_steward_can_feed_a_colony_trade_cannot_reach`."""
+    traded, _, _ = run(seed, trade=True, stewards=False)
+    alone, _, _ = run(seed, trade=False, stewards=False)
 
     assert traded.hungry_colonies() == []
     assert alone.hungry_colonies(), "this world should starve without traders"
@@ -177,7 +192,9 @@ def test_a_caravan_moves_and_turns_around():
         sim.step_day()
     watched = sim.caravans[0]
 
-    outbound, returning = [], []
+    # Its position on the day it set out counts: a caravan on a two-day leg is
+    # only seen once between setting out and arriving, and it has still moved.
+    outbound, returning = [watched.position], []
     for _ in range(40):
         sim.step_day()
         if watched.state == OUTBOUND:
