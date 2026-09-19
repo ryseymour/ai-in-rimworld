@@ -6,7 +6,23 @@ no dependencies, so it ports into the sim proper as a module.
 See `../wiki/design-inter-colony-trade.md` for the design this implements:
 roads, storage and prices, and traders moving goods between colonies.
 
-## Watch it
+## Open it in a browser
+
+```
+python3 -m colonysim.server
+```
+
+Then open **http://127.0.0.1:7700**. The map draws the terrain, the road
+network, every colony and the caravans moving between them, with what each one
+is carrying and every colony's shelves updating beside it. Pause and speed
+controls are on the page. Ctrl-C in the terminal stops it.
+
+No dependencies and no build step — it is `http.server` and one HTML page. If
+7700 is already taken it moves to the next free port and tells you which, so it
+can sit alongside something else already using that number. `--seed` gives a
+different world, `--speed` sets days per second.
+
+## Watch it in the terminal
 
 ```
 python -m colonysim.watch --seed 23
@@ -122,7 +138,7 @@ knobs if it should move.
 python -m pytest tests -q
 ```
 
-81 tests. Roads: every settlement reachable, generation deterministic, routes
+94 tests. Roads: every settlement reachable, generation deterministic, routes
 sharing tiles rather than running parallel, roads not ploughing through water,
 tier promotion and decay. Economy: reserves and prices, the purse refusing to
 overdraw, barter never digging into the reserve, no cargo loaded that the
@@ -130,5 +146,6 @@ destination will not buy. And over a 150-day run on four seeds — **goods and
 coin are exactly conserved** (trade must never mint or destroy either), trade
 narrows the price gap against the no-trade control, nobody starves who would
 have starved without it, and no caravan is left stranded on the road. The
-viewer: a journey's tiles join into one contiguous run, and a caravan is always
-somewhere on its own road.
+viewers: a journey's tiles join into one contiguous run, a caravan is always
+somewhere on its own road, and the server is exercised over real HTTP — routes,
+pause, speed, and falling back off a busy port.
