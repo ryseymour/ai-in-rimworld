@@ -4,6 +4,7 @@ from __future__ import annotations
 import random
 from dataclasses import dataclass, field
 
+from . import people
 from .goods import GOOD_NAMES, GOODS
 from .money import SILVER, Purse
 from .reputation import Reputation, guard_discount, trade_bias
@@ -77,7 +78,7 @@ def terrain_mix(world: World, x: int, y: int, radius: int = CATCHMENT) -> dict[s
 
 
 def build_colony(
-    world: World, settlement, population: int, reputation: bool = True
+    world: World, settlement, population: float, reputation: bool = True
 ) -> Colony:
     """A village makes what the land around it allows.
 
@@ -154,6 +155,15 @@ class Simulation:
     #: Coin paid to guards. It leaves the trading economy, so it comes out of
     #: the conserved total the same way.
     escort_wages: float = 0.0
+    #: Whether people follow food. `False` freezes every colony at its founding
+    #: size, which is the world this sim had before population was a live
+    #: quantity, and so the control case for every claim about what it does.
+    population_moves: bool = True
+    #: People, since day one. Births, then the two ways a colony loses someone:
+    #: hunger, and walking out while there is still something to eat.
+    born: float = 0.0
+    starved: float = 0.0
+    left: float = 0.0
     #: Every meeting on the road, including the ones that came to nothing.
     meetings: int = 0
     #: Meetings where the animals got at the cargo.
@@ -234,6 +244,20 @@ class Simulation:
         ]
         return sorted(out, key=lambda row: (row[2], row[0], row[1]))
 
+    def population(self) -> float:
+        """Everyone alive in the world."""
+        return sum(colony.population for colony in self.colonies)
+
+    def shrinking_colonies(self) -> list[str]:
+        """Colonies that have lost people on the balance -- at least one of
+        them, so a village down a fraction of a person does not count.
+
+        The economy's own scoreboard: a colony only gets here by having been
+        unable to feed itself for long enough that people left or died, which
+        trade and a steward both exist to prevent.
+        """
+        return [colony.name for colony in self.colonies if colony.growth <= -1.0]
+
     def hungry_colonies(self, good: str = "food") -> list[str]:
         """Colonies with less than a day of a good left."""
         return [
@@ -249,11 +273,16 @@ class Simulation:
         self._routes_today.clear()
 
         for colony in self.colonies:
+            wanted = colony.consumption.get("food", 0.0)
             made, used = colony.live_day()
             for good, qty in made.items():
                 self.produced[good] = self.produced.get(good, 0.0) + qty
             for good, qty in used.items():
                 self.consumed[good] = self.consumed.get(good, 0.0) + qty
+            # How much of what the colony wanted to eat it actually got, read
+            # before anyone is born or buried, since both change what it wants.
+            ration = used.get("food", 0.0) / wanted if wanted > 0 else 1.0
+            self._live_people(colony, ration)
 
         # Opinions fade a little every day, whoever is or is not on the road.
         # Nothing else in the sim moves a standing back toward neutral, so
@@ -271,6 +300,16 @@ class Simulation:
         if self.trade_enabled:
             self._advance_caravans()
             self._dispatch()
+
+    # --------------------------------------------------------------- people
+    def _live_people(self, colony: Colony, ration: float) -> None:
+        """Births, hunger and departures for one colony, for one day."""
+        if not self.population_moves:
+            return
+        change = people.step(colony, ration)
+        self.born += change.born
+        self.starved += change.starved
+        self.left += change.left
 
     # ------------------------------------------------------------- stewards
     def _route(self, home: int, other: int) -> tuple:
@@ -408,14 +447,22 @@ class Simulation:
         self.caravans = [c for c in self.caravans if c.state != HOME]
 
     def _dispatch(self) -> None:
-        """Each colony runs at most one caravan at a time. It picks wherever
-        its surplus is worth most per day on the road, using the prices it saw
-        on its last visit -- which may well be out of date by now. Anywhere on
-        the road network is reachable, not just the next village along, so a
-        colony at the end of a chain can still be supplied."""
-        busy = {c.home for c in self.caravans}
+        """How many caravans a colony runs at once is a question about people:
+        a cart is a crew, and a colony will not have more than a fifth of
+        itself away from home. A village that has grown can run two; one that
+        has been starved down to nothing still gets its one trip for food.
+
+        Where it sends them is unchanged -- wherever its surplus is worth most
+        per day on the road, using the prices it saw on its last visit, which
+        may well be out of date by now. Anywhere on the road network is
+        reachable, not just the next village along, so a colony at the end of a
+        chain can still be supplied."""
+        out: dict[int, int] = {}
+        for caravan in self.caravans:
+            out[caravan.home] = out.get(caravan.home, 0) + 1
         for colony in self.colonies:
-            if colony.id in busy:
+            away = out.get(colony.id, 0)
+            if away >= people.caravans_allowed(colony.population):
                 continue
 
             best = None
@@ -456,7 +503,7 @@ class Simulation:
                     + trip_float(colony)
                 )
                 escorted, risk = self._escort_decision(
-                    colony, other, hazard, at_risk, days
+                    colony, other, hazard, at_risk, days, away + 1
                 )
                 score = (worth - risk) / days
                 if best is None or score > best[0]:
@@ -503,19 +550,30 @@ class Simulation:
         return escort_cost(days) * (1.0 - guard_discount(mutual))
 
     def _escort_decision(
-        self, colony: Colony, other: int, hazard: float, at_risk: float, days: float
+        self,
+        colony: Colony,
+        other: int,
+        hazard: float,
+        at_risk: float,
+        days: float,
+        caravans_out: int = 1,
     ) -> tuple[bool, float]:
         """Guards, or no guards, and what the risk costs either way.
 
-        A colony with coin buys its way out of the problem; a colony without
-        one takes its chances. The comparison is the plain one -- what the
-        animals are expected to take, against what the guards want -- so the
-        wolves are a reason to earn coin rather than a flat tax on trading.
-        Guards shared with a colony that trusts this one come cheaper, which
-        is the one place standing makes the road itself safer.
+        Guards cost two things, and a colony has to have both. Coin: a colony
+        with a purse buys its way out of the problem and one without takes its
+        chances, which is what makes the wolves a reason to earn rather than a
+        flat tax on trading. And people: guards are hands that are not at home,
+        so a colony pays for them out of the same allowance a second caravan
+        would come from. A big colony can do both; a small one is choosing.
+
+        What the wage comes to is `_escort_wage`, which is where two colonies
+        that trust each other share an escort and pay less for it.
         """
         bare = expected_loss(hazard, at_risk)
         if self.wilds is None or hazard <= 0.0:
+            return False, bare
+        if not people.can_escort(colony.population, caravans_out):
             return False, bare
         wage = self._escort_wage(colony, other, days)
         guarded = expected_loss(hazard, at_risk, escorted=True) + wage
@@ -535,15 +593,17 @@ def build_simulation(
     height: int = 45,
     wildlife: bool = True,
     stewards: bool = True,
+    population: bool = True,
     reputation: bool = True,
 ) -> Simulation:
     """A world, its roads, its colonies, and whoever is running them.
 
     `stewards=False` leaves every colony trading on bare scarcity, which is the
     world this sim had before anyone was in charge of one -- and so the control
-    case to compare a steward-run economy against. `reputation=False` leaves
-    every colony a stranger to every other however they behave, which is the
-    same kind of control for what keeping score does.
+    case to compare a steward-run economy against. `population=False` is the
+    same kind of thing for people: every colony stays the size it was founded,
+    whatever it has been eating, and `reputation=False` leaves every colony a
+    stranger to every other however they behave.
     """
     world = generate_world(width, height, settlements, seed)
     network = generate_roads(world)
@@ -558,6 +618,7 @@ def build_simulation(
         network=network,
         colonies=colonies,
         stewards=[Steward(colony) for colony in colonies] if stewards else [],
+        population_moves=population,
         wilds=populate(world, seed) if wildlife else None,
         rng=random.Random(seed ^ 0xD00D),
     )

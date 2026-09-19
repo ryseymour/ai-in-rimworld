@@ -209,10 +209,22 @@ class Reputation:
         change: float,
         detail: str,
     ) -> float:
-        """Move an opinion, and remember why. Returns the standing after."""
+        """Move an opinion, and remember why. Returns the standing after.
+
+        Moving further from neutral gets harder the further out it already
+        is, so the ends of the scale are earned rather than arrived at: a
+        colony that has been dealing well for a year is not made much more
+        trusted by one more good deal. Moving back toward neutral is never
+        damped, which is what stops the same rule from making a grudge
+        impossible to work off -- or a good name a shield against being
+        caught out.
+        """
         if change == 0.0 or not self.enabled:
             return self.of(about)
-        after = clamp(self.of(about) + change)
+        before = self.of(about)
+        if before * change > 0.0:
+            change *= 1.0 - abs(before)
+        after = clamp(before + change)
         moved = after - self.of(about)
         self.scores[about] = after
         self.remarks.append(
