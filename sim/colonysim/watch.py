@@ -47,11 +47,22 @@ def frame(sim, width: int) -> str:
         out.append("caravans: none on the road")
     out.append("")
 
-    out.append(f"  {'colony':<12}" + "".join(f"{g:>9}" for g in GOOD_NAMES) + f"{'coin':>9}")
+    out.append(
+        f"  {'colony':<12}{'people':>8}"
+        + "".join(f"{g:>9}" for g in GOOD_NAMES)
+        + f"{'coin':>9}"
+    )
     for colony, days in zip(sim.colonies, sim.days_of_stock("food")):
         stocks = "".join(f"{colony.storage.get(g):>9.0f}" for g in GOOD_NAMES)
+        # Which way the village has gone since it was founded, not which way it
+        # went today: people move by fractions a day, so a daily reading would
+        # only flicker.
+        way = "+" if colony.growth >= 1.0 else "-" if colony.growth <= -1.0 else " "
         flag = "  <- out of food" if days < 1 else ""
-        out.append(f"  {colony.name:<12}{stocks}{colony.purse.amount:>9.0f}{flag}")
+        out.append(
+            f"  {colony.name:<12}{colony.population:>7.0f}{way}{stocks}"
+            f"{colony.purse.amount:>9.0f}{flag}"
+        )
 
     return "\n".join(out)
 
