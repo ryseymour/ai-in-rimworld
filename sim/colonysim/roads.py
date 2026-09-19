@@ -29,8 +29,9 @@ ROAD_REUSE = 0.28
 
 #: Movement multiplier by tier: none, foot path, dirt road, paved.
 TIER_SPEED = (1.0, 1.3, 1.6, 2.0)
-#: Accumulated traffic at which a tile is promoted into each tier.
-TIER_THRESHOLD = (0.0, 4.0, 18.0, 55.0)
+#: Accumulated traffic at which a tile is promoted into each tier. Set so a
+#: busy trunk route reaches paved over a season while a quiet spur stays dirt.
+TIER_THRESHOLD = (0.0, 12.0, 70.0, 260.0)
 
 SQRT2 = math.sqrt(2.0)
 _NEIGHBOURS = (
@@ -328,3 +329,67 @@ def decay(network: RoadNetwork, rate: float = 0.5) -> None:
         road.traffic = max(0.0, road.traffic - rate)
         while road.tier > 1 and road.traffic < TIER_THRESHOLD[road.tier]:
             road.tier -= 1
+
+
+def travel_cost(terrain: Terrain, network: RoadNetwork, path: tuple[Point, ...]) -> float:
+    """What it costs to walk a carved path today.
+
+    Unlike the cost used while carving -- which discounts road tiles to make
+    routes bundle -- this is real travel: terrain cost divided by the speed of
+    whatever road is on the tile. So a route that wears up to paved becomes
+    genuinely faster to drive a caravan down.
+    """
+    total = 0.0
+    for frm, to in zip(path, path[1:]):
+        diagonal = SQRT2 if frm[0] != to[0] and frm[1] != to[1] else 1.0
+        cost = terrain.base_cost(*to)
+        cost += SLOPE_WEIGHT * abs(terrain.elev(*to) - terrain.elev(*frm))
+        tile = network.tiles.get(to)
+        total += cost * diagonal / (tile.speed if tile else 1.0)
+    return total
+
+
+def route_between(network: RoadNetwork, a: int, b: int) -> tuple[Route, ...]:
+    """The cheapest chain of roads from one settlement to another.
+
+    Direct neighbours give a single leg; anywhere else is reached by passing
+    through the villages in between. Dijkstra over the route graph, so a
+    well-connected village becomes a natural staging post for trade.
+    """
+    if a == b:
+        return ()
+
+    adjacency: dict[int, list[tuple[int, Route]]] = {}
+    for (x, y), route in network.routes.items():
+        adjacency.setdefault(x, []).append((y, route))
+        adjacency.setdefault(y, []).append((x, route))
+
+    queue: list[tuple[float, int, int]] = [(0.0, a, -1)]
+    best: dict[int, float] = {a: 0.0}
+    came: dict[int, tuple[int, Route]] = {}
+    counter = 0
+
+    while queue:
+        cost, node, _ = heapq.heappop(queue)
+        if node == b:
+            break
+        if cost > best.get(node, math.inf):
+            continue
+        for nxt, route in sorted(adjacency.get(node, []), key=lambda pair: pair[0]):
+            through = cost + route.cost
+            if through < best.get(nxt, math.inf):
+                best[nxt] = through
+                came[nxt] = (node, route)
+                counter += 1
+                heapq.heappush(queue, (through, nxt, counter))
+
+    if b not in came:
+        return ()
+
+    legs = []
+    node = b
+    while node != a:
+        node, route = came[node]
+        legs.append(route)
+    legs.reverse()
+    return tuple(legs)

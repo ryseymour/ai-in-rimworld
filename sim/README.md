@@ -3,14 +3,17 @@
 World generation and procedural roads for the colony simulation. Stdlib only,
 no dependencies, so it ports into the sim proper as a module.
 
-See `../wiki/design-inter-colony-trade.md` for the design this implements. This
-is step 1 of it: the road network. Storage, prices and traders come next.
+See `../wiki/design-inter-colony-trade.md` for the design this implements:
+roads, storage and prices, and traders moving goods between colonies.
 
 ## Try it
 
 ```
-python -m colonysim.demo --seed 7 --width 78 --height 30
+python -m colonysim.demo --seed 23 --days 150
 ```
+
+That generates a world, runs it for 150 days with traders on the roads, and
+runs the same world again with trade switched off so the two can be compared.
 
 Glyphs: `~` water, `.` plains, `"` forest, `^` rough; `:` foot path, `-` dirt
 road, `=` paved; digits are settlements.
@@ -41,12 +44,78 @@ Everything is seeded: the same world always regenerates the same roads.
 caravans use them; `decay` grasses them back over when they go unused. Trade
 routes that get used become visibly better roads.
 
+## How the economy works
+
+**What a colony makes** is its own consumption scaled by how good the land
+around it is at each good, so a village ringed by forest has wood to spare and
+buys its stone. World totals are then calibrated to cover world consumption:
+the point is to test distribution, since a world in deficit starves whatever
+the traders do.
+
+**Storage is the whole trade interface.** Per good, a colony holds back a
+reserve — its consumption times that good's buffer in days. Everything above
+the reserve is for sale; everything below it is what the colony will buy.
+Nothing else defines the market.
+
+**Price** comes from the same number: `base × 3 / (1 + 2 × stock/reserve)`,
+floored at 0.35× and capped at 3×. An empty store pays the ceiling, a store
+sitting exactly on its reserve pays the base price, and a glut tails off to the
+floor. Two colonies therefore quote different prices for the same good, and
+that gap is what a trader earns. As goods move the gap closes, so the economy
+settles itself with nothing scripting it.
+
+## How trade works
+
+A colony runs one caravan at a time. It scores every colony it can reach on the
+road network — not just its neighbours — on what a trip there would be worth
+per day of travel, then loads the best cargo it can out of its surplus and
+sends it.
+
+Two things it works from are deliberately imperfect. It plans against
+`MarketView`, its memory of what a market looked like when a caravan last came
+back, which may be weeks stale. And that memory holds what was *for sale*, not
+just the price, because a colony sitting exactly on its reserve quotes a
+perfectly ordinary price while having nothing whatever to sell.
+
+On arrival the caravan sells what the host is short of, at the host's prices,
+then spends the proceeds on what home is short of, then goes home.
+
+**Settlement is in currency, falling back to barter.** The buyer pays from its
+purse as far as the purse goes. Whatever is left it covers in goods out of its
+own surplus, valued at its own prices at the moment each parcel changes hands.
+So a colony rich in goods and poor in coin can still trade, and what it barters
+becomes the caravan's return load. Currency is its own object, so a second one
+can be added later at a rate without the trade code caring.
+
+Journeys wear the roads they use, and a worn road is faster, which makes it
+more attractive, which wears it further.
+
+## What it does
+
+`--seed 23`, 150 days, the same world with and without traders:
+
+| | with trade | without |
+|---|---|---|
+| price gap, food | 1.51 | 5.30 |
+| price gap, tools | 6.33 | 23.72 |
+| colonies out of food | nobody | Brackwater, Eastmoor |
+
+Stone often stays put: it is heavy and cheap, so a caravan of it rarely clears
+the cost of the journey. That is the economy working, not a bug — but
+`MIN_TRIP_WORTH`, and stone's `bulk` and `base_price` in `goods.py`, are the
+knobs if it should move.
+
 ## Tests
 
 ```
 python -m pytest tests -q
 ```
 
-They assert what the design calls for: every settlement reachable, generation
-deterministic, routes sharing tiles rather than running parallel, roads not
-ploughing through water, and tier promotion and decay.
+77 tests. Roads: every settlement reachable, generation deterministic, routes
+sharing tiles rather than running parallel, roads not ploughing through water,
+tier promotion and decay. Economy: reserves and prices, the purse refusing to
+overdraw, barter never digging into the reserve, no cargo loaded that the
+destination will not buy. And over a 150-day run on four seeds — **goods and
+coin are exactly conserved** (trade must never mint or destroy either), trade
+narrows the price gap against the no-trade control, nobody starves who would
+have starved without it, and no caravan is left stranded on the road.
