@@ -9,12 +9,12 @@ This targets the **ascii colony sim** (`~/ascii-colony` on Ryan's Mac), which al
 colonies side by side and has the storage building. As of 2026-09-18 the RimWorld mod in this
 repository is paused and the colony sim is the project.
 
-That sim has no GitHub remote, so a cloud thread cannot read or change it. Milestones 1–3 and the
-milestone 5 in full, and population (milestone 6) are therefore **built standalone in
-`sim/colonysim/`** in this
-repository: stdlib only, no dependencies, so it lifts into the real sim as a module. `sim/README.md`
-describes what is there. The names below are the design's names; where the code differs, the code is
-what runs. Milestone 4 (agent-driven traders) is not started.
+That sim has no GitHub remote, so a cloud thread cannot read or change it. Milestones 1–4,
+milestone 5 in full and population (milestone 6) are therefore **built standalone in
+`sim/colonysim/`** in this repository: stdlib only, no dependencies, so it lifts into
+the real sim as a module. `sim/README.md` describes what is there. The names below are the design's
+names; where the code differs, the code is
+what runs. Milestone 4 is built: stewards decide, and traders haggle in dialogue (section 3b).
 
 ## The shape of the feature
 
@@ -169,7 +169,59 @@ made against it.
 anything of the same shape -- a player, a model call once a week -- reading the same view and
 writing through the same clamped setters. `Steward.brief()` renders the whole situation as text for
 exactly that, and is deliberately the same facts the scripted merchant reasons over rather than a
-summary of them.
+summary of them. The other half of that milestone is section 3b: what a steward says when a cart is
+actually at its counter.
+
+## 3b. Haggling: how the price is actually agreed
+
+Built 2026-09-19. Section 3a gave each colony an agent and something to decide. This is the other
+half of milestone 4: the moment two of them meet.
+
+Until now a sale was arithmetic. A caravan arrived, the host's shelves said what the goods were
+worth, and that was the price -- neither party had a say in it. Now the visitor and the host argue
+it out, one good at a time, and the price is what they agree on.
+
+**Two numbers a side.** A *limit* it will not cross, and an *opening* nowhere near it.
+
+- the host's limit is its own price plus whatever the road was worth, capped at what the good can
+  fetch there -- which is exactly what the sim used to charge outright. The old take-it-or-leave-it
+  price is now the *most* a host can be talked into, and everything below it the trader got by
+  arguing;
+- the trader's limit is what the cargo was worth at home when it was loaded, recorded on the
+  caravan at dispatch. Below that it is better off carting the goods back.
+
+**Turns.** Each turn a side takes what is on the table or names a price a little closer to the
+other's. How fast it gives that ground away is the only thing that differs between two negotiators,
+and it is the whole texture of the feature: a host four days from an empty granary concedes early
+and pays for it, one merely topping up holds out and pays less -- and buys less of it, since a
+price a colony dislikes does not stop it buying, it makes it buy less. By its last turn every
+negotiator is standing on its own limit, so the exchange always ends.
+
+**A deal is struck exactly when the limits overlap**, and never outside them. When they do not, the
+goods stay on the cart and go home: a trip that did not pay, which the sim had no way to express
+before. It is rare on purpose -- a caravan only sets out when the sums looked good -- and measured
+at about one journey in two hundred.
+
+**The dialogue is recorded**, not just the outcome, because the argument is the part a reader
+learns anything from. The last thirty are on `Simulation.negotiations`, the last few on each
+`Steward`, and the browser viewer shows them under *At the counter*. Nothing is random: a seed
+replays the same argument word for word.
+
+**Where the model goes.** `bargain` is the scripted negotiator; `Steward.negotiator` replaces it,
+the same seam as `decide` one level down -- `decide` is the stance a colony takes over weeks,
+`negotiator` is how it argues a single sale. Whatever is talking gets `Haggle.brief(side)` and
+answers with one move, and `Haggle.play` clamps what comes back the way `Policy` clamps a price: an
+unknown act is an offer, a price is bounded by the table, a quantity cannot exceed the cart, and
+accepting means the terms that were actually offered. A negotiator may be wrong, rude or absurd;
+the worst it can do is make a bad deal.
+
+`colonysim/llm.py` is the worked example of a model doing it, through the official Anthropic SDK.
+Nothing imports it and nothing in it runs unless `COLONYSIM_LLM=1` is set, so the package stays
+standard library only and installs with no dependencies. It asks for one line per turn -- a
+negotiation is a handful of calls, and they only happen when a cart arrives somewhere -- and every
+failure falls back to the scripted negotiator, so the sim carries on with a worse haggler rather
+than stopping. This is the "one model call per leg rather than per tick" the traders section
+above always assumed.
 
 ## 4. Risk: what lives between the villages
 
@@ -296,11 +348,13 @@ same world with no year in it, which is the control.
 2. Reserve, surplus and prices on storage, with no movement. A headless multi-colony run verifies the
    economy math alone.
 3. Scripted traders walking the roads and exchanging goods.
-4. Agent-driven traders with negotiation dialogue. The decision seam is built -- a steward per
-   colony, with the network to read and prices, reserves and labour to set (section 3a) -- and the
-   scripted steward runs on it. The model call and the dialogue are not.
+4. Agent-driven traders with negotiation dialogue. Built. A steward per colony reads the network
+   and sets prices, reserves and labour (section 3a); when a cart arrives, the visitor and the host
+   argue the price out a good at a time (section 3b). Scripted policies run both seams by default,
+   and either can be replaced -- by a player, a rule, or a model -- without the rest of the sim
+   knowing. `colonysim/llm.py` is the worked example of the model case, off unless switched on.
 5. Risk and texture: wild animals on the roads, weather closing routes, reputation between colonies,
-   road wear and upgrade. Road wear, the animals and the weather are built; reputation is not.
+   road wear and upgrade. All four are built.
 6. Population following food (section 5), so the economy has stakes: colonies grow or shrink with
    their stores, and how many people a colony has decides what it eats, what it makes, and how many
    caravans and guards it can put on the road. Built.
@@ -317,6 +371,9 @@ A headless multi-day run across several colonies, asserting:
   most likely defect here;
 - price variance for a given good across colonies falls over the run — proof that trade is doing its job;
 - no caravan is stuck: every dispatched trader either arrives, returns, or dies for a stated reason;
+- **no negotiator is ever talked past its own limit**, and a deal is struck exactly when the two
+  limits overlap — checked over a grid of limits and temperaments, because that property is what
+  keeps a bad haggler (or a model having an off day) from wrecking a colony;
 - **cutting a world off from trade costs it people** — across seeds, a world with the traders taken
   off loses more to hunger and emigration than the same world with them on. This is the assertion
   that says the economy has stakes;

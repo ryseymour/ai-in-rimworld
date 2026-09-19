@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import pytest
 
-from colonysim.goods import GOOD_NAMES, GOODS
+from colonysim.goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
 from colonysim.money import SILVER, Purse
 from colonysim.simulation import build_simulation
 from colonysim.steward import (
@@ -361,12 +361,16 @@ def test_a_colony_that_keeps_running_a_good_down_holds_more_of_it_back():
 def test_a_steward_puts_people_on_what_the_colony_keeps_running_out_of():
     """The loop that makes this an economy rather than a delivery service: a
     price that stays high stops being a reason to buy and becomes a reason to
-    make. Terrain still decides how much good it does."""
+    make. Terrain still decides how much good it does.
+
+    Raw goods only, because this dial moves people between the fields, the
+    forest and the quarry. A colony short of arrows answers that at the bench
+    instead -- see `test_crafting.py`."""
     for seed in SEEDS:
         sim = build_simulation(seed=seed, settlements=3)
         sim.run(150)
         for colony_, steward in zip(sim.colonies, sim.stewards):
-            leanest = min(GOOD_NAMES, key=steward.remembered)
+            leanest = min(RAW_GOOD_NAMES, key=steward.remembered)
             assert colony_.policy.focus_for(leanest) > 1.0, (
                 f"{colony_.name} never put anyone on {leanest}"
             )
@@ -418,15 +422,28 @@ def test_a_steward_writes_down_why_it_did_what_it_did():
 def test_stewards_leave_fewer_colonies_with_nothing_on_the_shelf():
     """The claim worth making for the whole feature. Not that prices converge
     -- a steward bidding for supply pushes them apart on purpose -- but that
-    fewer colonies run a good down to nothing when someone is watching."""
+    fewer colonies run a good down to nothing when someone is watching.
+
+    Counted every day rather than on the last one. A snapshot at day 150 across
+    four seeds is a handful of events either way, and anything that lifts the
+    stewardless world -- haggling did, since a negotiated price is below the
+    posted one and a buyer's coin goes further, and so did colonies favouring
+    the neighbours they trust -- can tie it without the claim being any less
+    true. The same worlds, counted day by day, are not close.
+    """
     led = bare = 0
     for seed in SEEDS:
         for stewards in (True, False):
             sim = build_simulation(seed=seed, stewards=stewards)
-            sim.run(150)
-            empty = sum(
-                1 for good in GOOD_NAMES for days in sim.days_of_stock(good) if days < 1.0
-            )
+            empty = 0
+            for _ in range(150):
+                sim.step_day()
+                empty += sum(
+                    1
+                    for good in GOOD_NAMES
+                    for days in sim.days_of_stock(good)
+                    if days < 1.0
+                )
             if stewards:
                 led += empty
             else:
@@ -439,9 +456,11 @@ def test_a_steward_can_feed_a_colony_trade_cannot_reach(seed):
     """Cut the roads and a colony with no steward starves on what its land
     happens to make. One with a steward moves people into the fields.
 
-    Asked over the whole run rather than on its last day: the world has seasons
-    in it, and day 150 lands just after a harvest, when nobody anywhere is
-    hungry.
+    Counted in colony-days of hunger over the whole run, rather than who was
+    out of food on its last day. The world has seasons in it: day 150 lands
+    just after a harvest, when nobody anywhere is hungry, and over three years
+    a hard-pressed colony goes hungry at some point either way. How long it
+    went hungry for is what a steward changes.
     """
     led = build_simulation(seed=seed)
     led.trade_enabled = False
@@ -451,7 +470,7 @@ def test_a_steward_can_feed_a_colony_trade_cannot_reach(seed):
     bare.trade_enabled = False
     bare.run(150)
 
-    assert len(led.ever_hungry()) < len(bare.ever_hungry())
+    assert led.hunger() < bare.hunger()
 
 
 @pytest.mark.parametrize("seed", SEEDS)

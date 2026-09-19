@@ -12,10 +12,12 @@ import argparse
 import errno
 import json
 import time
+from html import escape
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
 from .goods import GOOD_NAMES
+from .reputation import describe
 from .simulation import build_simulation
 from .terrain import FOREST_LEVEL, ROUGH_LEVEL, WATER_LEVEL
 from .trade import OUTBOUND
@@ -69,6 +71,16 @@ PAGE = """<!doctype html>
   .steward .note { color: var(--dim); font-size: 12px; }
   .up { color: #e0a458; }
   .down { color: #7fb3d5; }
+  .deal { padding: 6px 0; border-top: 1px solid var(--line); }
+  .deal:first-child { border-top: 0; }
+  .deal .struck { display: flex; justify-content: space-between; gap: 10px; }
+  .deal .struck .no { color: #e06c5a; }
+  .deal .said { color: var(--dim); font-size: 12px; margin-top: 2px; }
+  .deal .said b { color: #c9cdd6; font-weight: 600; }
+  .standing { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; }
+  .standing .note { color: var(--dim); font-size: 12px; }
+  .trusts { color: #7fbf8f; }
+  .distrusts { color: #e06c5a; }
   .sky {
     display: inline-flex; gap: 6px; align-items: baseline;
     border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px;
@@ -95,6 +107,7 @@ PAGE = """<!doctype html>
   <span class="stat"><b id="people">-</b> people</span>
   <span class="stat"><b id="journeys">-</b> journeys</span>
   <span class="stat"><b id="met">-</b> met in the wild</span>
+  <span class="stat"><b id="refusals">-</b> turned away</span>
   <span class="stat shut" id="closed" hidden></span>
   <button id="pause">pause</button>
   <span class="stat">speed
@@ -107,7 +120,10 @@ PAGE = """<!doctype html>
   <aside>
     <section><h2>Caravans</h2><div id="caravans"></div></section>
     <section><h2>Storage</h2><div id="colonies"></div></section>
+    <section><h2>Workshops</h2><div id="workshops"></div></section>
     <section><h2>Stewards</h2><div id="stewards"></div></section>
+    <section><h2>At the counter</h2><div id="deals"></div></section>
+    <section><h2>Standing</h2><div id="standing"></div></section>
   </aside>
 </main>
 <script>
@@ -252,6 +268,7 @@ function panels(state) {
   document.getElementById("people").textContent = state.people;
   document.getElementById("journeys").textContent = state.journeys;
   document.getElementById("met").textContent = state.met;
+  document.getElementById("refusals").textContent = state.refusals;
 
   const routes = document.getElementById("caravans");
   routes.innerHTML = state.caravans.length
@@ -271,13 +288,35 @@ function panels(state) {
               `<span class="${p.at > 1 ? "up" : "down"}">${p.good} &times;${p.at.toFixed(2)}</span>`
             ).join(", ")
           : '<span class="empty">prices as they come</span>';
-        const note = [s.holding, s.working].filter(Boolean).join(" &middot; ");
+        const note = [s.holding, s.working, s.making].filter(Boolean).join(" &middot; ");
         return `<div class="steward"><div class="who"><span>${s.name}</span>` +
                `<span>${prices}</span></div>` +
                (note ? `<div class="note">${note}</div>` : "") +
                (s.note ? `<div class="note">${s.note}</div>` : "") + "</div>";
       }).join("")
     : '<div class="empty">nobody is minding the shop</div>';
+
+  // Newest first: the argument that just happened is the one worth reading.
+  const deals = document.getElementById("deals");
+  deals.innerHTML = (state.negotiations || []).length
+    ? state.negotiations.slice().reverse().map(d =>
+        `<div class="deal"><div class="struck">` +
+        `<span>day ${d.day} &middot; ${d.good}</span>` +
+        `<span class="${d.settled ? "" : "no"}">${d.outcome}</span></div>` +
+        d.said.map(s =>
+          `<div class="said"><b>${s[0]}</b> ${s[1]}</div>`).join("") +
+        `</div>`).join("")
+    : '<div class="empty">nobody has haggled yet</div>';
+
+  const standing = document.getElementById("standing");
+  standing.innerHTML = (state.standing || []).length
+    ? state.standing.map(r => {
+        const tone = r.at > 0.2 ? "trusts" : r.at < -0.2 ? "distrusts" : "";
+        return `<div class="standing"><span>${r.from} &rarr; ${r.to}</span>` +
+               `<span class="${tone}">${r.word} ${r.at > 0 ? "+" : ""}${r.at.toFixed(2)}</span></div>` +
+               (r.note ? `<div class="note">${r.note}</div>` : "");
+      }).join("")
+    : '<div class="empty">everyone is still a stranger</div>';
 
   const head = "<tr><th>colony</th><th>people</th>" +
     state.goods.map(g => `<th>${g}</th>`).join("") + "<th>coin</th></tr>";
@@ -291,6 +330,10 @@ function panels(state) {
       c.stock.map(v => `<td>${v}</td>`).join("") + `<td>${c.coin}</td></tr>`;
   }).join("");
   document.getElementById("colonies").innerHTML = `<table>${head}${rows}</table>`;
+
+  document.getElementById("workshops").innerHTML = state.colonies.map(c =>
+    `<div class="steward"><div class="who"><span>${c.name}</span></div>` +
+    `<div class="note">${c.workshop}</div></div>`).join("");
 }
 
 async function tick() {
@@ -389,7 +432,73 @@ def steward_payload(sim) -> list[dict]:
                 "working": ", ".join(
                     f"{good} work {at:.2f}x" for good, at in stance["focus"].items()
                 ),
+                "making": ", ".join(
+                    f"{good} bench {at:.2f}x" for good, at in stance["craft"].items()
+                ),
                 "note": steward.log[-1] if steward.log else "",
+            }
+        )
+    return out
+
+
+#: Rows in the standing panel. The worst-regarded pairs are the interesting
+#: ones, and a six-colony world has thirty pairs, which is a wall rather than
+#: a panel.
+STANDING_ROWS = 8
+
+
+def standing_payload(sim) -> list[dict]:
+    """What colonies make of each other, worst first.
+
+    One row per opinion anyone actually holds, with the last thing that moved
+    it -- so the panel says who is unwelcome where, and why.
+    """
+    rows = []
+    for a, b, standing in sim.standings()[:STANDING_ROWS]:
+        remarks = sim.colonies[a].reputation.about(b)
+        rows.append(
+            {
+                "from": sim.colonies[a].name,
+                "to": sim.colonies[b].name,
+                "at": round(standing, 2),
+                "word": describe(standing),
+                "note": remarks[-1].detail if remarks else "",
+            }
+        )
+    return rows
+
+
+#: Negotiations on the page. Enough to see the last few arguments without the
+#: panel becoming the whole page.
+DEALS_SHOWN = 4
+
+
+def negotiation_payload(sim, keep: int = DEALS_SHOWN) -> list[dict]:
+    """The last few arguments at a counter, oldest first.
+
+    What was said is escaped on the way out. The scripted negotiator only ever
+    says what is in `negotiation.py`, but the whole point of the seam is that
+    something else can be doing the talking, and whatever that is should not be
+    able to put markup on this page.
+    """
+    out = []
+    for haggle in list(sim.negotiations)[-keep:]:
+        out.append(
+            {
+                "day": haggle.day,
+                "good": haggle.good,
+                "settled": haggle.settled,
+                "outcome": (
+                    f"{haggle.qty:.0f} at {haggle.price:.2f} "
+                    f"to {escape(haggle.host.name)}"
+                    if haggle.settled
+                    else "no deal"
+                ),
+                "said": [
+                    [escape(haggle.seat(move.speaker).name), escape(move.line)]
+                    for move in haggle.moves
+                    if move.line
+                ],
             }
         )
     return out
@@ -466,6 +575,9 @@ def state_payload(sim) -> dict:
         "people": round(sim.population()),
         "raided": sim.raids,
         "stewards": steward_payload(sim),
+        "negotiations": negotiation_payload(sim),
+        "standing": standing_payload(sim),
+        "refusals": sim.refusals,
         "caravans": caravans,
         "colonies": [
             {
@@ -478,6 +590,10 @@ def state_payload(sim) -> dict:
                 "stock": [round(c.storage.get(g)) for g in GOOD_NAMES],
                 "coin": round(c.purse.amount),
                 "hungry": c.name in hungry,
+                # Benches, hand and what came off it today: the crafted goods
+                # are already columns in the storage table above, and this is
+                # the part of the workshop that is not a number on a shelf.
+                "workshop": c.workshop.describe(),
             }
             for c in sim.colonies
         ],

@@ -6,8 +6,10 @@ from __future__ import annotations
 
 import argparse
 
+from .crafting import armed_strength
 from .goods import GOOD_NAMES
 from .render import legend, render
+from .reputation import describe
 from .simulation import build_simulation
 from .weather import SEASONS, YEAR_DAYS
 
@@ -54,15 +56,15 @@ def main() -> None:
     print(legend(sim.world, sim.network, sim.wilds))
 
     print(f"\n--- after {args.days} days, {sim.journeys} journeys ---\n")
-    print(
-        f"{'colony':<12}{'people':>8}{'food':>9}{'wood':>9}{'stone':>9}"
-        f"{'cloth':>9}{'tools':>9}{'coin':>10}"
-    )
+    # Written off GOOD_NAMES rather than spelt out, since the crafted goods
+    # are columns here like any other.
+    head = "".join(f"{good:>8}" for good in GOOD_NAMES)
+    print(f"{'colony':<12}{'people':>7}{head}{'coin':>9}")
     for colony in sim.colonies:
-        row = "".join(f"{colony.storage.get(g):>9.0f}" for g in GOOD_NAMES)
+        row = "".join(f"{colony.storage.get(g):>8.0f}" for g in GOOD_NAMES)
         print(
-            f"{colony.name:<12}{colony.population:>8.0f}{row}"
-            f"{colony.purse.amount:>10.0f}"
+            f"{colony.name:<12}{colony.population:>7.0f}{row}"
+            f"{colony.purse.amount:>9.0f}"
         )
 
     print("\nprice gap between the dearest and cheapest colony:")
@@ -99,6 +101,22 @@ def main() -> None:
     print(f"  out of food without them:  {', '.join(unled.hungry_colonies()) or 'nobody'}")
     print(f"  journeys: {sim.journeys} with stewards, {unled.journeys} without")
 
+    print("\n--- the workshops ---\n")
+    for colony in sim.colonies:
+        print(f"  {colony.name:<12}{colony.workshop.describe()}")
+    crafted = ", ".join(
+        f"{qty:.0f} {good}" for good, qty in sorted(sim.crafted.items()) if qty >= 0.5
+    )
+    hunted = ", ".join(
+        f"{qty:.0f} {good}" for good, qty in sorted(sim.hunted.items()) if qty >= 0.5
+    )
+    print(f"\n  made at the benches: {crafted or 'nothing'}")
+    print(f"  brought home hunting: {hunted or 'nothing'}")
+    armed = ", ".join(
+        f"{colony.name} {armed_strength(colony):.0%}" for colony in sim.colonies
+    )
+    print(f"  armed: {armed}")
+
     print("\n--- the people ---\n")
     print(f"  {'colony':<12}{'founded':>9}{'now':>7}{'fed':>8}")
     for colony, was in zip(sim.colonies, founded):
@@ -117,6 +135,21 @@ def main() -> None:
     )
     print(f"  shrinking: {', '.join(sim.shrinking_colonies()) or 'nobody'}")
     print(f"  without trade: {', '.join(control.shrinking_colonies()) or 'nobody'}")
+
+    print("\n--- what they make of each other ---\n")
+    standings = sim.standings()
+    if not standings:
+        print("  nobody has dealt with anybody often enough to have a view")
+    for a, b, standing in reversed(standings):
+        colony = sim.colonies[a]
+        remarks = colony.reputation.about(b)
+        print(
+            f"  {colony.name:<12} -> {sim.colonies[b].name:<12} "
+            f"{standing:>+6.2f}  {describe(standing)}"
+        )
+        if remarks:
+            print(f"    {remarks[-1].detail}")
+    print(f"\n  caravans turned away at a gate: {sim.refusals}")
 
     print(f"\n--- the wild ---\n")
     print(f"  journeys made:      {sim.journeys}  (a tame world: {tame.journeys})")
@@ -158,6 +191,14 @@ def main() -> None:
     names = {1: "foot path", 2: "dirt road", 3: "paved"}
     worn = ", ".join(f"{n} {names[t]}" for t, n in sorted(tiers.items()))
     print(f"\nroads: {worn}")
+
+    if sim.negotiations:
+        print("\n--- the last argument at a counter ---\n")
+        last = sim.negotiations[-1]
+        print(f"  day {last.day}, over {last.good}")
+        for line in last.transcript():
+            print(f"    {line}")
+        print(f"  {last.summary()}")
 
     if sim.log:
         print("\nlast few journeys:")

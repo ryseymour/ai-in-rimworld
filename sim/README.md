@@ -5,8 +5,10 @@ Stdlib only, no dependencies, so it ports into the sim proper as a module.
 
 See `../wiki/design-inter-colony-trade.md` for the design this implements:
 roads, storage and prices, traders moving goods between colonies, a steward
-running each colony's side of it, a population that grows or shrinks with what
-the colony has to eat, and a year of seasons and weather over all of it.
+running each colony's side of it, and a population that grows or shrinks with
+what the colony has to eat. On top of that sits crafting: recipes, workshops,
+and the bows and arrows a colony hunts with -- and over all of it, a year of
+seasons and weather.
 
 ## Open it in a browser
 
@@ -16,15 +18,19 @@ python3 -m colonysim.server
 
 Then open **http://127.0.0.1:7700**. The map draws the terrain, the road
 network, every colony and the caravans moving between them, with what each one
-is carrying and every colony's shelves updating beside it. The chip at the top
-left says where in the year you are and what the sky is doing, and the dots
-beside it are the week ahead -- each `!` a day of weather bad enough to be
-worth planning around. A road the weather has shut is crossed through in red,
-and a caravan sitting out a storm turns red where it stands. The Stewards panel
+is carrying and every colony's shelves updating beside it -- the crafted goods
+are columns in that table like any other, and the Workshops panel says what each
+colony's bench is making, how good its hand has got, and whether it is gathering
+materials for a smithy. The chip at the top left says where in the year you are
+and what the sky is doing, and the dots beside it are the week ahead -- each `!`
+a day of weather bad enough to be worth planning around. A road the weather has
+shut is crossed through in red, and a caravan sitting out a storm turns red
+where it stands. The Stewards panel
 underneath shows what each colony has decided to do about its own prices --
 `food x1.32` is a colony bidding for supply, `wood x0.71` one discounting to
-shift a pile -- along with the last thing it changed and why. Wolf packs and bear
-territories are the coloured patches the roads have to get past; a caravan with
+shift a pile -- along with the last thing it changed and why. **At the counter**
+under it shows the last few arguments over a price, line by line, as caravans
+arrive and haggle. Wolf packs and bear territories are the coloured patches the roads have to get past; a caravan with
 a ring around it has hired guards. Pause and speed controls are on the page.
 Ctrl-C in the terminal stops it.
 
@@ -35,6 +41,9 @@ Three colonies by default, which is small enough to follow every trade.
 `--settlements 6` gives the wider world, `--no-stewards` takes the decision
 makers off so you can see what the same world does on bare scarcity, and
 `--no-weather` puts it under an endless temperate sky with no seasons at all.
+The Standing panel under the stewards is what each colony makes of the others --
+`Coldhollow -> Brackwater trusted +0.81`, with the last thing that moved it
+underneath -- and the header counts caravans turned away at a gate.
 
 No dependencies and no build step — it is `http.server` and one HTML page. If
 7700 is already taken it moves to the next free port and tells you which, so it
@@ -87,6 +96,11 @@ The year that comes out of that is not quite the obvious one. Food is cheapest
 in autumn and dearest in **spring** -- a colony goes into winter on a full
 granary and comes out the far side on an empty one, so the hungry gap is after
 the cold rather than during it.
+
+The seasons are on the land, not on the benches. A workshop is indoor work, so
+crafting runs at the same rate all year -- which, with tools being the one raw
+good winter does not touch, is what gives a colony something to sell when its
+fields are dead.
 
 **Weather is a property of the day**, not of a place: one sky over the whole
 map, in spells of a few days rather than flickering, drawn from the season's
@@ -186,6 +200,166 @@ steward.set_reserve_days("wood", 20)
 print(steward.brief())
 ```
 
+## Crafting
+
+Everything a colony can make is a row in `recipes.py`: what goes in, how much
+labour it takes, which bench, and the hand it needs. Adding one is adding a
+line.
+
+| | out of | labour | bench | hand |
+|---|---|---|---|---|
+| **club** | 6 wood | 0.6 | crafting spot | any |
+| **spear** | 10 wood, 2 stone | 1.0 | crafting spot | 0.10 |
+| **arrows** (10) | 4 wood, 1 stone | 0.8 | crafting spot | 0.15 |
+| **bow** | 12 wood, 2 cloth | 2.2 | crafting spot | 0.35 |
+| **knife** | 4 wood, 6 stone | 1.2 | smithy | 0.30 |
+| **tools** (2) | 6 wood, 8 stone | 2.0 | smithy | 0.45 |
+
+Crafted goods are ordinary goods. `goods.py` prices each one off its own recipe
+-- its materials plus the work in it -- and then scarcity does the rest, so a
+bow sits on the same shelf as food, is worth more where there are none, rides in
+the same caravan, and can be handed over as barter. Nothing in the trade code
+needed to know crafting exists. Tools are the exception that proves the rule:
+the land already makes them, so they keep the land's price and a smithy is a
+colony choosing to make more rather than buy them.
+
+Three things decide what actually comes off a bench:
+
+* **Materials it can spare.** Every recipe draws on surplus -- stock above the
+  reserve -- and only a share of it in a day, so a colony can never whittle its
+  own buffer into arrows, and the pile a workshop works from refills.
+* **Wanting the thing.** What gets made is what the colony is short of, plus
+  what the markets it has actually visited were short of and paying more for
+  than home, less whatever is already spare on the shelves. A village with ten
+  bows in the rack and a neighbour wanting two does not make an eleventh.
+* **The hand.** Skill rises with the labour that goes through the bench and
+  shortens the work; below a recipe's floor the colony simply cannot make the
+  thing yet. A fresh colony can cut a club and has to practise before it can
+  make a bow.
+
+A **smithy** is the one thing a colony builds. Its steward commissions one when
+it keeps wanting what a smithy makes; the workshop then gathers the stone at
+whatever pace the colony can spare it, which for a forest village means waiting
+on a caravan, and only then spends its days raising it. Stewards have a fourth
+dial for all of this (`craft`, 0x to 2.5x per good), so what the bench does is a
+decision like the prices are.
+
+## Hunting
+
+Arrows are the sim's measure of hunting effort: a colony's hunters loose a
+steady number a day, which is why arrows are the one crafted good it spends
+rather than keeps, and why fletching never finishes. What that effort brings
+home depends on what the party is carrying -- with a bow each they come back
+with meat and hides, with none the same days in the woods yield very little. So
+a colony with a forest, a fletcher and a few bows turns wood into food without
+waiting for anyone, which is the independence a weapon is for. It is a
+supplement to the fields, not a second farm: hunting runs at well under a
+quarter of what a world grows.
+
+Hides are `cloth`, the same way fleece is. What a colony hunts is deer and
+boar, not the wolves and bears of the roads -- those are predators, and meeting
+one is a different event entirely -- so nothing about hunting depends on where
+the dens are.
+
+## What weapons are worth on the road
+
+A colony's armoury is read as one number, `armed_strength` (bows count most, a
+club least, and about a third of a weighted weapon per head is fully armed). It
+buys two things, both on the road:
+
+* animals are warier of an armed party, escorted or not, and
+* the guards an armed colony hires cost up to 45% less, because they are being
+  paid to walk rather than to be equipped.
+
+So spears are a reason to trade more freely, and the wolves are a reason to make
+spears. Every default is the old number: a world with no weapons in it behaves
+exactly as it did before there were any.
+
+## Haggling
+
+A sale is not arithmetic any more. When a cart pulls up, the visitor and the
+host argue a good at a time, in `negotiation.py`, and the price is whatever
+they agree on.
+
+Each side has two numbers. A **limit** it will not cross: for the host, its own
+price plus whatever the road was worth, capped at what the good can fetch there
+-- which is exactly the price the sim used to charge outright, so the old
+take-it-or-leave-it figure is now the *most* a host can be talked into. For the
+trader, what the cargo was worth at home when it was loaded, because below that
+it is better off carting the goods back. And an **opening**, nowhere near it.
+They take turns: each turn a side either takes what is on the table or names a
+price a little closer to the other's, and by its last turn everyone is standing
+on their own limit, so it always ends.
+
+What differs between two negotiators is how fast they give that ground away.
+A host four days from an empty granary concedes early and pays for it; one
+merely topping up holds out and pays less, and buys less of it at a price it
+dislikes. A trader carrying goods that were nearly this dear at home has
+nothing to give and holds firm. So the same cargo at the same counter fetches
+different prices depending on who needs it, and you can read why in what was
+said.
+
+A deal is struck exactly when the two limits overlap, and never outside them.
+When they do not, the goods stay on the cart and go home -- a trip that did not
+pay, which the sim had no way to express before. In practice that is rare (one
+journey in a couple of hundred) because a caravan only sets out when the sums
+looked good.
+
+The browser viewer shows the last few arguments under **At the counter**, and
+`python -m colonysim.demo` prints the most recent one:
+
+```
+  day 143, over wood
+    Coldhollow: 10 wood, straight off the road. 1.31 the unit.
+    Brackwater: Say 1.01 and we will take 10 off you.
+    Coldhollow: That will do. 1.01.
+  Brackwater took 10 wood from Coldhollow at 1.01
+```
+
+Nothing here is random: the same seed replays the same argument word for word.
+
+### Letting something else do the talking
+
+`bargain` is the scripted negotiator, and `Steward.negotiator` is where you
+replace it -- the same seam as `decide`, one level down. `decide` is the stance
+a colony takes over weeks; `negotiator` is how it argues a single sale.
+
+```python
+from colonysim import Move
+
+def stubborn(haggle, side):
+    seat = haggle.seat(side)
+    return Move(side, "counter", seat.limit, seat.want, "my price or no price.")
+
+sim.stewards[0].negotiator = stubborn
+```
+
+Whatever is talking sees `Haggle.brief(side)` -- its own position, its limit,
+what has been offered and everything said so far -- and answers with one move.
+`Haggle.play` clamps whatever comes back: an unknown act becomes an offer, a
+price is bounded by the table, a quantity cannot exceed the cart, and accepting
+means the terms that were actually offered rather than terms invented while
+accepting. So a negotiator can be wrong, rude, or absurd, and the worst it can
+do is make a bad deal.
+
+`colonysim/llm.py` is the worked example of a model doing it. Nothing imports
+it, and nothing in it runs unless `COLONYSIM_LLM=1` is set, so the package
+stays standard library only and installs with no dependencies:
+
+```python
+from colonysim.llm import claude_negotiator
+
+for steward in sim.stewards:
+    steward.negotiator = claude_negotiator()   # needs `pip install anthropic`
+```
+
+It asks for one line per turn, so a negotiation is a handful of calls and they
+only happen when a cart actually arrives somewhere. Every failure -- no key, no
+package, a timeout, a reply nobody can parse -- falls back to `bargain`, so the
+sim carries on with a worse negotiator rather than stopping. `speaker_from` is
+the general form: anything that turns a prompt into a line of text is a
+negotiator, including a player's own UI or a local model.
+
 ## People
 
 A colony's population is a live number, and it follows one thing: food.
@@ -218,6 +392,48 @@ and sold it has less left to grow on. What trade buys is that nobody has to die
 or walk out. `python -m colonysim.demo` prints both sides of that, and
 `build_simulation(..., population=False)` freezes every colony at its founding
 size as the control.
+
+## Standing
+
+Every colony keeps one number about every other colony it has dealt with, from
+-1 (shunned) to +1 (trusted), and nothing sets it directly. It is written by
+conduct at the counter (`reputation.py`):
+
+* a parcel sold at the host's own price, or a bill covered in full, earns a
+  little goodwill -- most of the trust in the world is made of ordinary deals
+  done properly;
+* a trader that argues its way well above the host's own price is remembered
+  as gouging, in proportion to how far over and how big the deal was -- so
+  what the haggling seam does with the room it is given is itself conduct. A
+  modest premium for a dangerous road is not gouging: traders have to be able
+  to charge for the wolves.
+* a buyer who runs out of both coin and goods to barter and walks away owing
+  picks up a credit mark -- light on purpose, because a colony only fails to
+  cover a bill when it is broke rather than dishonest, and this sim cannot
+  tell those apart. It makes a colony a worse customer, not an outcast;
+* being turned away at a gate is remembered too, by the colony that was turned
+  away.
+
+Four things read it back, so conduct has a price:
+
+* **the counter** -- standing is what the host brings to the table before
+  anyone opens their mouth. A trusted caravan argues over a range that starts
+  above the colony's own asking price and is charged below it for what it
+  takes home; a distrusted one sits down against a range that is already
+  narrower. It does not change how either side haggles, only what there is to
+  haggle over;
+* **where caravans go** -- a colony's one caravan is steered toward the
+  partners it thinks well of, because that is where the prices are better;
+* **guards** -- two colonies that both trust each other share an escort and
+  split the wage;
+* **the gate** -- below `EMBARGO` (-0.55) a colony will not deal at all, in
+  either direction: it sends nobody there and turns their caravans away.
+
+Standing fades toward neutral by 0.3% a day, so half of a grudge is still
+there eight months later. That is the lasting part: a colony that gouged its
+way through one winter is still paying worse prices the following autumn, and
+still has a way back if it behaves. `build_simulation(reputation=False)` leaves
+every colony a permanent stranger to every other, which is the control case.
 
 ## How roads are generated
 
@@ -324,8 +540,9 @@ back, which may be weeks stale. And that memory holds what was *for sale*, not
 just the price, because a colony sitting exactly on its reserve quotes a
 perfectly ordinary price while having nothing whatever to sell.
 
-On arrival the caravan sells what the host is short of, at the host's prices,
-then spends the proceeds on what home is short of, then goes home.
+On arrival the caravan does not sell at the host's prices -- it argues about
+them (below), then spends the proceeds on what home is short of, then goes
+home.
 
 **Settlement is in currency, falling back to barter.** The buyer pays from its
 purse as far as the purse goes. Whatever is left it covers in goods out of its
@@ -343,23 +560,24 @@ more attractive, which wears it further.
 
 | | with trade | without |
 |---|---|---|
-| price gap, cloth | 4.55 | 5.99 |
-| price gap, tools | 0.45 | 0.71 |
+| price gap, food | 1.07 | 5.56 |
+| price gap, cloth | 1.33 | 3.46 |
+| price gap, spear | 0.42 | 15.07 |
 | colonies out of food | nobody | Coldhollow |
 
 And the shape of one of those years, summed over the three:
 
 | season | food made | mean food price | journeys home | days a road was shut |
 |---|---|---|---|---|
-| spring | 1826 | 2.15 | 3 | 2 |
-| summer | 2772 | 2.03 | 4 | 7 |
-| autumn | 4259 | 1.73 | 3 | 10 |
-| winter | 480 | 1.84 | 0 | 7 |
+| spring | 1788 | 1.89 | 4 | 2 |
+| summer | 2718 | 1.75 | 7 | 7 |
+| autumn | 4156 | 1.52 | 6 | 10 |
+| winter | 466 | 1.55 | 4 | 7 |
 
-Nine times as much food is grown in autumn as in winter, the price tracks it
-down and back up, and in this three-colony world -- where the roads never get
-busy enough to wear past a foot path -- winter trade stops altogether. On a
-map with six colonies the trunk roads reach dirt and the winters stay open.
+Nine times as much food is grown in autumn as in winter and the price tracks
+it down and back up. Trade thins in winter rather than stopping: 41 caravan-
+days over the three years were spent sitting out weather, and 26 days of the
+180 had some road shut somewhere.
 
 Stone often stays put: it is heavy and cheap, so a caravan of it rarely clears
 the cost of the journey. That is the economy working, not a bug — but
@@ -395,7 +613,7 @@ whatever is drawing it.
 python -m pytest tests -q
 ```
 
-298 tests. Roads: every settlement reachable, generation deterministic, routes
+453 tests. Roads: every settlement reachable, generation deterministic, routes
 sharing tiles rather than running parallel, roads not ploughing through water,
 tier promotion and decay. Economy: reserves and prices, the purse refusing to
 overdraw, barter never digging into the reserve, no cargo loaded that the
@@ -406,6 +624,14 @@ have starved without it, and no caravan is left stranded on the road. The
 viewers: a journey's tiles join into one contiguous run, a caravan is always
 somewhere on its own road, and the server is exercised over real HTTP — routes,
 pause, speed, and falling back off a busy port.
+
+Standing: the ledger itself (clamped, written down with its reason, faded by
+time alone), what each kind of conduct is worth, the counter pricing the same
+goods differently for a trusted and a distrusted caravan without minting any,
+the caravan turned away at a shut gate, a steward that stops bidding for a
+supplier it would not let in, and the whole arc end to end -- gouge a colony
+visit after visit until it closes its gate, then a year of quiet before it
+opens again. Over 250 days on four seeds an honest world turns nobody away.
 
 Wildlife: dens only on ground that suits them and never beside a village,
 danger falling off with distance, better roads and busier roads being safer,

@@ -9,6 +9,8 @@ three things about its colony.
     * what it charges -- a markup on what scarcity alone would ask, which is
       both what a visiting caravan pays here and what this colony pays for
       imports, so the decision has a real cost either way;
+    * what its workshop makes -- how keen it is on each crafted good, and
+      whether to put up a bench it does not have yet;
     * what it holds back -- the reserve, which is the line between what is for
       sale and what the colony wants to buy;
     * where its people work -- a lean on the land's own output, conserved, so
@@ -25,7 +27,10 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Callable
 
-from .goods import GOOD_NAMES, GOODS
+from .goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
+from .negotiation import Haggle, Move, Speaker, bargain
+from .recipes import RECIPES, SMITHY, STATIONS
+from .reputation import describe, trades_with
 from .roads import RoadNetwork, Route
 from .storage import (
     MAX_MARKUP,
@@ -70,6 +75,9 @@ MEMORY = 0.88
 SLOW_INTERVAL = 7
 #: How hard a steward leans the land toward what is scarce and what sells.
 FOCUS_STEP = 0.45
+#: The same, for the workshop: how hard it leans the bench toward what the
+#: colony is running out of and what its neighbours are paying for.
+CRAFT_STEP = 0.8
 #: Lines of reasoning kept. Enough to see why a colony is doing what it is
 #: doing, not enough to grow without bound over a long run.
 LOG_LINES = 40
@@ -82,6 +90,9 @@ LEAN_YIELD = 0.8
 #: colony selling what it is about to need, and -- because scarcity is measured
 #: against the reserve -- it raises the price until somebody hauls more in.
 LEAN_RESERVE = 0.8
+#: Negotiations a steward remembers it was part of. Enough to put recent
+#: dealings in front of whatever decides next; not a ledger of the century.
+HAGGLES_KEPT = 8
 
 
 @dataclass(frozen=True)
@@ -103,6 +114,10 @@ class Link:
     tier: float
     legs: tuple[Route, ...]
     market: MarketView
+    #: What this colony thinks of that one, from -1 to 1. Current, unlike the
+    #: market: how a neighbour has behaved is the one thing a colony does not
+    #: have to send anyone out to find out.
+    standing: float = 0.0
     #: False when today's weather has the way there shut. The link is still
     #: here, because the village has not gone anywhere -- a steward that could
     #: not see a snowed-in neighbour at all could not plan for the thaw.
@@ -126,6 +141,15 @@ class Link:
     def delay(self) -> float:
         """Days the weather adds to getting there, over the bare road."""
         return max(0.0, self.weather_days - self.days)
+
+    @property
+    def welcome(self) -> bool:
+        """Whether this colony will deal with that one at all."""
+        return trades_with(self.standing)
+
+    @property
+    def regard(self) -> str:
+        return describe(self.standing)
 
     def age(self, day: int) -> int:
         """Days since anyone actually looked, or -1 for never.
@@ -197,16 +221,34 @@ class NetworkView:
         return [link for link in self.neighbours() if not link.open]
 
     def sellers(self, good: str) -> list[Link]:
-        """Who was last seen with some to spare, cheapest first."""
+        """Who was last seen with some to spare, cheapest first.
+
+        Colonies this one has written off are left out: bidding a price up to
+        pull in a caravan nobody here would let through the gate only means
+        overpaying whoever else turns up.
+        """
         return sorted(
-            (link for link in self.links.values() if link.surplus(good) > 0),
+            (
+                link
+                for link in self.links.values()
+                if link.surplus(good) > 0 and link.welcome
+            ),
             key=lambda link: (link.price(good), link.colony),
         )
 
     def buyers(self, good: str) -> list[Link]:
-        """Who was last seen short of it, deepest need first."""
+        """Who was last seen short of it, deepest need first.
+
+        Written-off colonies are left out here too -- a pile discounted to
+        undercut a rival, for a buyer this colony will not sell to, is a pile
+        given away for nothing.
+        """
         return sorted(
-            (link for link in self.links.values() if link.shortfall(good) > 0),
+            (
+                link
+                for link in self.links.values()
+                if link.shortfall(good) > 0 and link.welcome
+            ),
             key=lambda link: (-link.shortfall(good), link.colony),
         )
 
@@ -215,19 +257,24 @@ class NetworkView:
 
         The reason a price is a decision and not a readout: a colony with wood
         to sell and one buyer for it is bidding against whoever else has wood.
+        Everyone counts here, including colonies this one will not deal with:
+        a rival's price is a rival's price whatever we think of them.
         """
-        return [
-            link
-            for link in self.sellers(good)
-            if link.colony != buyer and link.surplus(good) > 0
-        ]
+        return sorted(
+            (
+                link
+                for link in self.links.values()
+                if link.colony != buyer and link.surplus(good) > 0
+            ),
+            key=lambda link: (link.price(good), link.colony),
+        )
 
     def cheapest(self, good: str) -> Link | None:
         sellers = self.sellers(good)
         return sellers[0] if sellers else None
 
     def dearest(self, good: str) -> Link | None:
-        buyers = [link for link in self.links.values() if link.shortfall(good) > 0]
+        buyers = self.buyers(good)
         return max(buyers, key=lambda link: (link.price(good), -link.colony), default=None)
 
 
@@ -245,10 +292,16 @@ class Steward:
     #: with the same shape can take its place, including something that thinks
     #: for a second and a half and charges by the token.
     decide: Callable[["Steward", NetworkView], None] | None = None
+    #: What does the talking when a caravan is at the counter. `None` is the
+    #: scripted `bargain`; the same seam as `decide`, one level down -- prices
+    #: are the stance it takes, this is how it argues a single sale.
+    negotiator: Speaker | None = None
     #: The last thing it was shown, kept so a UI (or an agent's next prompt)
     #: can ask what the steward was looking at when it decided.
     view: NetworkView | None = None
     log: list[str] = field(default_factory=list)
+    #: Recent negotiations this colony was a party to, newest last.
+    haggles: list[Haggle] = field(default_factory=list)
     reviews: int = 0
     #: A slow average of how well covered each good has been, which is what the
     #: reserve and the labour decisions are made on.
@@ -290,6 +343,10 @@ class Steward:
     def remembered(self, good: str) -> float:
         return self.memory.get(good, self.cover(good))
 
+    def regard_for(self, colony_id: int) -> float:
+        """What this colony makes of another, from its own dealings."""
+        return self.colony.reputation.of(colony_id)
+
     def stance(self) -> dict[str, dict[str, float]]:
         """Everything this steward has changed about its colony."""
         return self.colony.policy.adjustments()
@@ -320,6 +377,28 @@ class Steward:
             self.note(f"holding {after:.0f} days of {good} -- {why}")
         return after
 
+    def set_craft(self, good: str, weight: float, why: str = "") -> float:
+        """How keen the workshop is on making this. Zero stops it entirely."""
+        before = self.colony.policy.craft_for(good)
+        after = self.colony.policy.set_craft(good, weight)
+        if abs(after - before) > 0.1 and why:
+            self.note(f"bench on {good} at {after:.2f}x -- {why}")
+        return after
+
+    def commission(self, station: str) -> bool:
+        """Decide to put up a bench. The workshop pays for it and builds it.
+
+        Materials are gathered as the colony can spare them, so commissioning
+        something it has no stone for costs it nothing today and arrives when
+        the stone does -- see `crafting.raise_station`.
+        """
+        shop = self.colony.workshop
+        if station not in STATIONS or station in shop.stations or shop.raising:
+            return False
+        shop.raising = station
+        self.note(f"raising a {station}")
+        return True
+
     def set_focus(self, good: str, weight: float) -> None:
         """Lean the colony's work toward or away from a good.
 
@@ -335,11 +414,32 @@ class Steward:
         self.colony.policy.markup.clear()
         self.colony.policy.reserve_mult.clear()
         self.colony.policy.focus.clear()
+        self.colony.policy.craft.clear()
 
     def note(self, line: str) -> None:
         day = self.view.day if self.view else 0
         self.log.append(f"day {day}: {line}")
         del self.log[:-LOG_LINES]
+
+    # ----------------------------------------------------------- haggling
+    def speak(self, haggle: Haggle, side: str) -> Move:
+        """Say the next thing at a counter, for this colony's side of it.
+
+        The whole of the negotiation seam: whatever is hung on `negotiator`
+        decides, and what it says goes through `Haggle.play`, which clamps it.
+        So a model can be wrong, or rude, or ask for a million, and the worst
+        it can do to this colony is make a bad deal.
+        """
+        return (self.negotiator or bargain)(haggle, side)
+
+    def remember(self, haggle: Haggle) -> None:
+        """Keep a closed negotiation, so the next decision can see the last."""
+        self.haggles.append(haggle)
+        del self.haggles[:-HAGGLES_KEPT]
+
+    def dealings(self) -> str:
+        """Recent negotiations in words, for a prompt or a panel."""
+        return "\n".join(haggle.summary() for haggle in self.haggles)
 
     # ------------------------------------------------------------- deciding
     def review(self, view: NetworkView) -> None:
@@ -402,6 +502,10 @@ class Steward:
                 f"{self.days_of_stock(good):>5.0f} days  {state:<6} "
                 f"asking {self.price(good):.2f} ({self.colony.policy.markup_for(good):.2f}x)"
             )
+        shop = self.colony.workshop
+        lines.append(f"workshop: {shop.describe()}")
+        makeable = sorted(recipe.output for recipe in shop.recipes())
+        lines.append("  can make: " + (", ".join(makeable) or "nothing yet"))
         if view:
             lines.append("who we can reach:")
             for link in view.neighbours():
@@ -414,7 +518,7 @@ class Steward:
                 )
                 lines.append(
                     f"  {link.name:<12} {link.days:>3.0f} days, "
-                    f"hazard {link.hazard:.0%}, {road}, {seen}"
+                    f"hazard {link.hazard:.0%}, {road}, {seen}, {link.regard}"
                 )
                 for good in GOOD_NAMES:
                     if link.surplus(good) > 1 or link.shortfall(good) > 1:
@@ -432,6 +536,9 @@ class Steward:
                         f"{where.name if where else caravan.destination}, "
                         f"{caravan.days_left:.0f} days out"
                     )
+        if self.haggles:
+            lines.append("lately at the counter:")
+            lines.extend(f"  {haggle.summary()}" for haggle in self.haggles[-3:])
         return "\n".join(lines)
 
 
@@ -455,6 +562,7 @@ def merchant(steward: Steward, view: NetworkView) -> None:
         for good in GOOD_NAMES:
             _reserve(steward, view, good)
         _labour(steward, view)
+        _bench(steward, view)
 
 
 def _price(steward: Steward, view: NetworkView, good: str) -> None:
@@ -582,7 +690,9 @@ def _labour(steward: Steward, view: NetworkView) -> None:
     if sum(shares.values()) <= 0:
         return
 
-    for good in GOOD_NAMES:
+    # Only the raw goods: this dial moves people between fields, forests and
+    # quarries. What the workshop does with what they bring back is `_bench`.
+    for good in RAW_GOOD_NAMES:
         remembered = steward.remembered(good)
         if remembered == float("inf"):
             continue
@@ -603,7 +713,7 @@ def _labour(steward: Steward, view: NetworkView) -> None:
 
     leaning = {
         good: round(colony.policy.focus_for(good), 2)
-        for good in GOOD_NAMES
+        for good in RAW_GOOD_NAMES
         if abs(colony.policy.focus_for(good) - 1.0) > 0.05
     }
     if leaning:
@@ -611,6 +721,61 @@ def _labour(steward: Steward, view: NetworkView) -> None:
             "work moved: "
             + ", ".join(f"{good} {weight:.2f}x" for good, weight in sorted(leaning.items()))
         )
+
+
+def _bench(steward: Steward, view: NetworkView) -> None:
+    """What the workshop turns to, and whether to build somewhere better.
+
+    Same shape as the labour decision, for the same reason: a good the colony
+    keeps running out of, or that a neighbour is paying over the odds for, is
+    worth making. The difference is that the bench's day is not conserved --
+    keenness decides the order of work and what is worth bothering with, and
+    the materials it can spare decide the rest.
+    """
+    colony = steward.colony
+    for good, recipe in sorted(RECIPES.items()):
+        remembered = steward.remembered(good)
+        if remembered == float("inf"):
+            continue
+        scarce = 1.0 - clamp(remembered, 0.3, 2.0)
+
+        abroad = [
+            link.price(good) / GOODS[good].base_price
+            for link in view.links.values()
+            if link.shortfall(good) > 0
+        ]
+        demand = max(abroad) - 1.0 if abroad else 0.0
+
+        target = 1.0 + CRAFT_STEP * (scarce + 0.5 * demand)
+        current = colony.policy.craft_for(good)
+        why = ""
+        if target > 1.2 and colony.workshop.can_make(recipe):
+            why = "we keep running short" if scarce > 0 else "the neighbours are paying"
+        steward.set_craft(good, current + ADJUST_RATE * (target - current), why)
+
+    _smithy(steward)
+
+
+def _smithy(steward: Steward) -> None:
+    """Put up a smithy when the colony keeps wanting what one makes.
+
+    The only thing a colony builds, and the only decision in the sim that costs
+    materials up front for something that pays back later.
+    """
+    shop = steward.colony.workshop
+    if SMITHY.name in shop.stations or shop.raising:
+        return
+    wanted = [
+        recipe.output
+        for recipe in RECIPES.values()
+        if recipe.station == SMITHY.name and steward.remembered(recipe.output) < 1.0
+    ]
+    if not wanted:
+        return
+    # Deciding to build it and being able to afford it are separate things: the
+    # workshop takes the stone the first day the colony can spare it, which for
+    # a village with no stone of its own may be after a caravan has been.
+    steward.commission(SMITHY.name)
 
 
 def route_tier(network: RoadNetwork, legs: tuple[Route, ...]) -> float:
