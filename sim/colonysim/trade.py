@@ -19,6 +19,7 @@ what decides who is welcome here next season.
 from __future__ import annotations
 
 import math
+from collections.abc import Callable
 from dataclasses import dataclass, field
 
 from .goods import GOODS
@@ -101,6 +102,9 @@ class Caravan:
     encounters: list[Encounter] = field(default_factory=list)
     #: The day it set out, so a caravan that never gets home is detectable.
     dispatched_day: int = 0
+    #: Days spent sitting still because the road was shut. Weather never
+    #: destroys anything, so this is the whole of what it costs a journey.
+    days_waited: float = 0.0
     #: Filled in on arrival, so the thread can show what actually happened.
     ledger: list[str] = field(default_factory=list)
 
@@ -156,14 +160,25 @@ def journey_path(legs: tuple[Route, ...], start: int) -> tuple[tuple[int, int], 
 
 
 def travel_days(
-    terrain: Terrain, network: RoadNetwork, legs: tuple[Route, ...]
+    terrain: Terrain,
+    network: RoadNetwork,
+    legs: tuple[Route, ...],
+    slowdown: Callable[[float], float] | None = None,
 ) -> float:
     """How long a journey takes, given the roads as they stand today.
 
     Road tier feeds straight into this, so a route that gets used becomes a
     faster route, which makes it more attractive, which wears it further.
+
+    Weather is deliberately *not* in here. This is the journey in fair
+    conditions, which is the number a caravan's remaining distance is counted
+    in; the sky is applied day by day as the caravan walks, so a trader that
+    sets out in sunshine and meets a storm is genuinely delayed rather than
+    having known all along. `slowdown` is for asking the other question -- what
+    a named weather would do to this journey -- and nothing in the day loop
+    passes it.
     """
-    cost = sum(travel_cost(terrain, network, leg.path) for leg in legs)
+    cost = sum(travel_cost(terrain, network, leg.path, slowdown) for leg in legs)
     return max(1.0, math.ceil(cost / TRAVEL_PER_DAY))
 
 

@@ -15,6 +15,10 @@ else here follows from that:
 * **Hunting thins the herds it works.** A party that takes more than the ground
   grows back walks further every season for less, until it stops. That is what
   stops hunting being a second farm with no ceiling.
+* **The year decides when.** Autumn is the hunt of the year and spring is
+  lean, averaging out to an ordinary year's hunting, the way `weather.py`
+  treats the land. Winter is the one that matters: ordinary hunting against
+  fields that have all but stopped, which is a colony's reason to keep bows.
 * **The wild is out there too.** Hunters are off the roads by definition, so
   the danger field in `wildlife.py` reaches them at its full strength, with no
   road tier to divide it down and no guards to hire. A colony's own weapons are
@@ -140,6 +144,18 @@ MAX_ABUNDANCE = 1.4
 THINNING = 0.18
 HERD_REGROWTH = 0.02
 
+#: What each season does to the hunting, on the same herds. The four average
+#: to 1.0 exactly, the way `weather.Season.growth` does: a year's hunting is a
+#: year's hunting, and the seasons only decide when it happens. Autumn is the
+#: hunt of the year, spring is lean -- and winter, which is ordinary hunting,
+#: is worth far more than ordinary because the fields give almost nothing.
+SEASON_GAME = {
+    "spring": 0.75,
+    "summer": 0.95,
+    "autumn": 1.40,
+    "winter": 0.90,
+}
+
 #: How much of the danger field a party out in it all day actually runs into.
 #: A caravan crosses a tile; hunters spend the day in the tile, off any road.
 PARTY_EXPOSURE = 8.0
@@ -210,7 +226,16 @@ class HuntingGround:
         return out
 
 
-def open_country() -> HuntingGround:
+def in_season(season: str | None) -> float:
+    """What the time of year is worth to a hunting party.
+
+    `None` is a world with no calendar in it, where every day is an ordinary
+    one -- the same control case the seasons have everywhere else.
+    """
+    return SEASON_GAME.get(season, 1.0) if season else 1.0
+
+
+def open_country(season: str | None = None) -> HuntingGround:
     """The ground a colony hunts when nobody has said where it is.
 
     Ordinary country, deer and boar on it, nothing else about. It is what a
@@ -219,7 +244,7 @@ def open_country() -> HuntingGround:
     than a broken one.
     """
     return HuntingGround(
-        abundance=1.0,
+        abundance=in_season(season),
         mix={DEER.name: 0.6, BOAR.name: 0.4},
         danger=0.0,
     )
@@ -280,9 +305,20 @@ class Herds:
         return total
 
     def ground(
-        self, x: int, y: int, wilds: Wilds | None = None, radius: float = HUNT_RANGE
+        self,
+        x: int,
+        y: int,
+        wilds: Wilds | None = None,
+        season: str | None = None,
+        radius: float = HUNT_RANGE,
     ) -> HuntingGround:
-        """What a party setting out from here has to work with today."""
+        """What a party setting out from here has to work with today.
+
+        The herds are a stock and the season is not: what the time of year
+        changes is how much of the herd a party can find and get near, so it
+        multiplies the ground rather than the animals. Shoot out a wood in
+        autumn and it is still shot out come spring.
+        """
         reachable = self.near(x, y, radius)
         if not reachable:
             return HuntingGround(abundance=0.0, mix={}, danger=0.0)
@@ -310,7 +346,9 @@ class Herds:
             return HuntingGround(abundance=0.0, mix={}, danger=0.0)
 
         return HuntingGround(
-            abundance=min(MAX_ABUNDANCE, weight / TYPICAL_GROUND),
+            abundance=min(
+                MAX_ABUNDANCE, in_season(season) * weight / TYPICAL_GROUND
+            ),
             mix={species: share / weight for species, share in shares.items()},
             danger=min(MAX_HUNT_DANGER, PARTY_EXPOSURE * danger / weight),
             predator=predator,

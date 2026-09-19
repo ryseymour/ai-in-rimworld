@@ -399,9 +399,13 @@ class Colony:
             self.consumption[good] *= ratio
         self.population = population
 
-    def output(self, good: str) -> float:
-        """What the colony makes in a day: the land's rate, times where its
-        steward has put the people, less whoever is out hunting.
+    def output(self, good: str, season: dict[str, float] | None = None) -> float:
+        """What the colony makes in a day.
+
+        The land's rate, times where its steward has put the people, times what
+        the season allows, less whoever is out hunting. `season` is a season's
+        own `growth` table, or None for a world with no calendar in it -- which
+        is the control case for every claim about what the seasons do.
 
         The hunting term is the only one that can take the total down rather
         than move it about: `focus` is rebalanced so nobody is created by being
@@ -410,6 +414,7 @@ class Colony:
         return (
             self.production.get(good, 0.0)
             * self.policy.focus_for(good)
+            * (season.get(good, 1.0) if season else 1.0)
             * field_hands(self)
         )
 
@@ -443,16 +448,20 @@ class Colony:
             day=day,
         )
 
-    def live_day(self) -> tuple[dict[str, float], dict[str, float]]:
+    def live_day(
+        self, season: dict[str, float] | None = None
+    ) -> tuple[dict[str, float], dict[str, float]]:
         """Produce and consume one day. Returns what was made and what was used.
 
         Consumption is capped at what is on the shelves, so a colony that runs
-        out simply goes without rather than driving stock negative.
+        out simply goes without rather than driving stock negative. Production
+        is not: the season decides it, and a winter that makes nothing is the
+        whole point of having one.
         """
         made: dict[str, float] = {}
         used: dict[str, float] = {}
         for good in self.production:
-            rate = self.output(good)
+            rate = self.output(good, season)
             if rate:
                 self.storage.add(good, rate)
                 made[good] = rate

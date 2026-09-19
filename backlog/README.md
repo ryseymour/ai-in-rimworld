@@ -14,7 +14,7 @@ Tasks, ideas, and work items for the AI in Rimworld project.
 - [x] Hunting: deer and boar herds on the terrain, hunting parties, meat and hides into the economy (`hunting.py`).
 - [x] Browser map of caravans on the roads (`server.py`, port 7700) and terminal watcher.
 - [x] Road network exposed as JSON-safe data for other renderers.
-- [ ] Lift `sim/colonysim/` into `~/ascii-colony` as a module (needs a session on the Mac).
+- [x] Lift `sim/colonysim/` into `~/ascii-colony` (vendored 2026-09-19 by the local session; caravans, wildlife, and steward trade dials live in the game).
 - [ ] Milestone 4 of the trade design: agent-driven traders with memory and negotiation.
 - [ ] Put `~/ascii-colony` on GitHub so cloud sessions can read and change it.
 - [ ] Pawn minds: per-pawn agents with persona, memory, dialogue (the original direction, now on the sim).

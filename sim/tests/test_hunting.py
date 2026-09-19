@@ -8,6 +8,7 @@ import pytest
 from colonysim.crafting import armed_strength
 from colonysim.hunting import (
     ARROWS_PER_CAPITA,
+    SEASON_GAME,
     BOAR,
     BOWLESS_TAKE,
     DEER,
@@ -333,6 +334,63 @@ def test_a_ground_hunted_flat_out_settles_thinner_than_one_left_alone():
         quiet.graze_day()
 
     assert worked.herds[0].strength < 0.5 * quiet.herds[0].strength
+
+
+# ------------------------------------------------------------------ the year
+
+def test_the_four_seasons_of_hunting_average_to_an_ordinary_year():
+    """The same bargain the land gets in `weather.py`: a year's hunting is a
+    year's hunting, and the seasons only decide when it happens."""
+    assert sum(SEASON_GAME.values()) / len(SEASON_GAME) == pytest.approx(1.0)
+    assert set(SEASON_GAME) == {"spring", "summer", "autumn", "winter"}
+
+
+def test_autumn_is_the_hunt_of_the_year_and_spring_is_lean():
+    country = herds((DEER.name, 5, 5), (BOAR.name, 6, 5))
+    autumn = country.ground(5, 5, None, "autumn").abundance
+    spring = country.ground(5, 5, None, "spring").abundance
+    plain = country.ground(5, 5).abundance
+
+    assert spring < plain < autumn
+
+
+def test_a_season_finds_more_of_the_herd_rather_than_making_more_of_it():
+    """Shoot a wood out in autumn and it is still shot out come spring."""
+    country = herds((DEER.name, 5, 5))
+    country.thin(country.ground(5, 5), {DEER.name: 2.0})
+    thinned = country.herds[0].strength
+
+    country.ground(5, 5, None, "autumn")
+    assert country.herds[0].strength == thinned
+
+
+def test_a_world_with_no_calendar_hunts_the_same_woods_all_year():
+    """The control case: `weather=False` is a year with no seasons in it, so
+    the only thing that moves a colony's ground is the hunting it has done."""
+    tame = build_simulation(seed=7, weather=False)
+    assert tame.climate is None
+    mean = _ground_by_season(tame)
+    # Spring comes first and autumn third, so with no season on the hunting the
+    # ground can only have gone down between them.
+    assert mean["autumn"] <= mean["spring"]
+
+
+@pytest.mark.parametrize("seed", SEEDS)
+def test_a_year_of_hunting_has_a_shape_to_it(seed):
+    """What a colony sees in its own woods over a year, which is what its
+    steward decides how many people to send on."""
+    mean = _ground_by_season(build_simulation(seed=seed))
+    assert mean["autumn"] > mean["spring"]
+
+
+def _ground_by_season(sim, days: int = 180) -> dict[str, float]:
+    """Mean hunting ground across the colonies, by season, over a run."""
+    seen: dict[str, list[float]] = {}
+    for _ in range(days):
+        sim.step_day()
+        ground = [c.hunting_ground for c in sim.colonies]
+        seen.setdefault(sim.season.name, []).append(sum(ground) / len(ground))
+    return {season: sum(v) / len(v) for season, v in seen.items()}
 
 
 # ------------------------------------------------------------------ the wild
