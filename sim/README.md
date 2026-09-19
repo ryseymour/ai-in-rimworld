@@ -5,8 +5,8 @@ Stdlib only, no dependencies, so it ports into the sim proper as a module.
 
 See `../wiki/design-inter-colony-trade.md` for the design this implements:
 roads, storage and prices, traders moving goods between colonies, a steward
-running each colony's side of it, and a year of seasons and weather over the
-whole thing.
+running each colony's side of it, a population that grows or shrinks with what
+the colony has to eat, and a year of seasons and weather over all of it.
 
 ## Open it in a browser
 
@@ -27,6 +27,9 @@ shift a pile -- along with the last thing it changed and why. Wolf packs and bea
 territories are the coloured patches the roads have to get past; a caravan with
 a ring around it has hired guards. Pause and speed controls are on the page.
 Ctrl-C in the terminal stops it.
+
+The colony table carries each village's headcount with an arrow for which way
+it has gone since it was founded, and the header counts everyone alive.
 
 Three colonies by default, which is small enough to follow every trade.
 `--settlements 6` gives the wider world, `--no-stewards` takes the decision
@@ -183,6 +186,39 @@ steward.set_reserve_days("wood", 20)
 print(steward.brief())
 ```
 
+## People
+
+A colony's population is a live number, and it follows one thing: food.
+
+* **Fed, with stores to spare** — it grows, slowly. Being fed is not enough;
+  the granary has to be above 1.15 buffers as well, so a village living hand to
+  mouth stays the size it is. At full tilt that is about a fifth over 150 days.
+* **Unable to feed everyone** — it loses people, judged over a fortnight rather
+  than a day, so a caravan two days late kills nobody and a month of famine
+  does.
+* **Stores merely thin** — a trickle leaves before anyone goes hungry.
+
+**Eating is per head; the land is not.** Twice the people eat twice as much and
+do not harvest twice as much, because the fields did not get any bigger
+(`LAND_ELASTICITY` in `people.py`). That gap is the ceiling a colony grows into
+— past it, the only way to feed more people is to buy food from somewhere with
+land to spare, which is what the roads are for. It is also why a starving
+colony settles at a smaller size instead of dying out.
+
+**Population is also who can walk the roads.** A caravan is a crew, guards are
+more people, and a colony will not have more than a fifth of itself away from
+home at once. So a village that has grown can run a second caravan, or run one
+and guard it, and not both; a village that has been starved down can do neither
+— except that it always keeps its one trip, or a colony could be locked out of
+trading by the very smallness trading would fix.
+
+The claim this makes about trade is about people lost, not headcount: a world
+that trades is not always the larger one, since the colony that grew the food
+and sold it has less left to grow on. What trade buys is that nobody has to die
+or walk out. `python -m colonysim.demo` prints both sides of that, and
+`build_simulation(..., population=False)` freezes every colony at its founding
+size as the control.
+
 ## How roads are generated
 
 1. **Candidate connections** — the Gabriel graph over settlement positions,
@@ -259,7 +295,8 @@ taken off it, which is the control for every claim above.
 around it is at each good, so a village ringed by forest has wood to spare and
 buys its stone. World totals are then calibrated to cover world consumption:
 the point is to test distribution, since a world in deficit starves whatever
-the traders do.
+the traders do. Both sides of that move with the population afterwards — see
+**People** above for how far each one follows it.
 
 **Storage is the whole trade interface.** Per good, a colony holds back a
 reserve — its consumption times that good's buffer in days. Everything above
@@ -275,7 +312,8 @@ settles itself with nothing scripting it.
 
 ## How trade works
 
-A colony runs one caravan at a time. It scores every colony it can reach on the
+A colony runs as many caravans at once as it has people to crew — usually one,
+two once it has grown. It scores every colony it can reach on the
 road network — not just its neighbours — on what a trip there would be worth
 per day of travel, then loads the best cargo it can out of its surplus and
 sends it.
@@ -305,18 +343,18 @@ more attractive, which wears it further.
 
 | | with trade | without |
 |---|---|---|
-| price gap, food | 2.74 | 5.58 |
-| price gap, cloth | 4.95 | 10.26 |
+| price gap, cloth | 4.55 | 5.99 |
+| price gap, tools | 0.45 | 0.71 |
 | colonies out of food | nobody | Coldhollow |
 
 And the shape of one of those years, summed over the three:
 
 | season | food made | mean food price | journeys home | days a road was shut |
 |---|---|---|---|---|
-| spring | 1733 | 1.93 | 3 | 2 |
-| summer | 2620 | 1.72 | 5 | 7 |
-| autumn | 3947 | 1.42 | 4 | 10 |
-| winter | 435 | 1.46 | 0 | 7 |
+| spring | 1826 | 2.15 | 3 | 2 |
+| summer | 2772 | 2.03 | 4 | 7 |
+| autumn | 4259 | 1.73 | 3 | 10 |
+| winter | 480 | 1.84 | 0 | 7 |
 
 Nine times as much food is grown in autumn as in winter, the price tracks it
 down and back up, and in this three-colony world -- where the roads never get
@@ -357,7 +395,7 @@ whatever is drawing it.
 python -m pytest tests -q
 ```
 
-265 tests. Roads: every settlement reachable, generation deterministic, routes
+298 tests. Roads: every settlement reachable, generation deterministic, routes
 sharing tiles rather than running parallel, roads not ploughing through water,
 tier promotion and decay. Economy: reserves and prices, the purse refusing to
 overdraw, barter never digging into the reserve, no cargo loaded that the

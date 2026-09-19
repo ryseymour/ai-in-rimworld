@@ -362,12 +362,17 @@ class Steward:
         is choosing from the same facts rather than a summary of them.
         """
         view = self.view
+        colony = self.colony
         when = f"day {view.day if view else 0}"
         if view and view.date:
             when += f" -- {view.date}"
+        way = "growing" if colony.growth >= 1.0 else (
+            "losing people" if colony.growth <= -1.0 else "steady"
+        )
         lines = [
             f"{self.name}, {when}. "
-            f"{self.coin:.0f} coin, {self.colony.population} people."
+            f"{self.coin:.0f} coin, {colony.population:.0f} people, {way} "
+            f"({colony.nourishment:.0%} fed)."
         ]
         if view and view.outlook:
             lines.append(f"the sky: {view.outlook}")

@@ -1,5 +1,5 @@
 """The colony simulation: world, roads, storage, currency, trade, stewards,
-the wild, and the year over all of it.
+people, the wild, and the year over all of it.
 
 See `../wiki/design-inter-colony-trade.md` for the design this implements.
 """
@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from .goods import GOODS, Good
 from .money import SILVER, Currency, Purse
+from .people import caravans_allowed, food_cover
 from .roads import (
     RoadNetwork,
     Route,
@@ -71,7 +72,9 @@ __all__ = [
     "World",
     "YEAR_DAYS",
     "build_simulation",
+    "caravans_allowed",
     "date_of",
+    "food_cover",
     "generate_roads",
     "generate_terrain",
     "generate_world",

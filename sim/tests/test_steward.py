@@ -437,7 +437,12 @@ def test_stewards_leave_fewer_colonies_with_nothing_on_the_shelf():
 @pytest.mark.parametrize("seed", SEEDS)
 def test_a_steward_can_feed_a_colony_trade_cannot_reach(seed):
     """Cut the roads and a colony with no steward starves on what its land
-    happens to make. One with a steward moves people into the fields."""
+    happens to make. One with a steward moves people into the fields.
+
+    Asked over the whole run rather than on its last day: the world has seasons
+    in it, and day 150 lands just after a harvest, when nobody anywhere is
+    hungry.
+    """
     led = build_simulation(seed=seed)
     led.trade_enabled = False
     led.run(150)
@@ -446,7 +451,7 @@ def test_a_steward_can_feed_a_colony_trade_cannot_reach(seed):
     bare.trade_enabled = False
     bare.run(150)
 
-    assert len(led.hungry_colonies()) < len(bare.hungry_colonies())
+    assert len(led.ever_hungry()) < len(bare.ever_hungry())
 
 
 @pytest.mark.parametrize("seed", SEEDS)

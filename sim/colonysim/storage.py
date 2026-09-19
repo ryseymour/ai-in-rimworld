@@ -18,6 +18,7 @@ from dataclasses import dataclass, field
 
 from .goods import GOOD_NAMES, GOODS
 from .money import SILVER, Purse
+from .people import LAND_ELASTICITY, MIN_POPULATION
 from .world import Settlement
 
 #: Price multiplier bounds. A glut must not drive a price to nothing, and a
@@ -197,11 +198,25 @@ class Colony:
     """A settlement with people, a storage building, and a purse."""
 
     settlement: Settlement
-    population: int
+    #: How many people live here. A live quantity: `people.step` moves it every
+    #: day on how well the colony has been eating, and `resize` carries the
+    #: change through into what the colony makes and eats. Kept as a float so a
+    #: village of twenty can lose a fifth of a person a day and mean it; round
+    #: it for display.
+    population: float
     production: dict[str, float]
     consumption: dict[str, float]
     storage: Storage = field(default_factory=Storage)
     purse: Purse = field(default_factory=lambda: Purse(SILVER))
+    #: The share of its food demand the colony has been meeting lately, smoothed
+    #: over about a fortnight. 1.0 is everyone fed.
+    nourishment: float = 1.0
+    #: Who has arrived and who has gone, since founding. For the viewer, and so
+    #: a run can be asked what actually happened to a colony rather than only
+    #: where it ended up.
+    born: float = 0.0
+    starved: float = 0.0
+    left: float = 0.0
     #: The stance its steward has taken. Empty means the colony trades on
     #: scarcity alone, exactly as it did before stewards existed.
     policy: Policy = field(default_factory=Policy)
@@ -279,6 +294,46 @@ class Colony:
         prices up is not then capped below what it said it would pay.
         """
         return GOODS[good].base_price * MAX_MULT * self.policy.markup_for(good)
+
+    @property
+    def growth(self) -> float:
+        """Net people gained since founding: everyone born, less everyone lost.
+
+        Not the same as today's population minus its founding size -- it is,
+        but this says so in the terms that produced it, and it is the number a
+        colony is actually judged on.
+        """
+        return self.born - self.starved - self.left
+
+    def resize(self, population: float) -> None:
+        """Change how many people live here, and everything that follows.
+
+        Eating is per head, so consumption moves with the population exactly.
+        Making things is not: the land the village works does not get any
+        bigger when more people are born onto it, so output follows the
+        population only as far as `LAND_ELASTICITY` allows. That gap is the
+        ceiling a colony grows into -- and the reason a colony that has grown
+        past its own fields has to buy food from one that has not.
+
+        Applied as a ratio rather than from a remembered founding size, so it
+        composes with `calibrate` and with anything else that has scaled these
+        rates, and a run of small daily changes multiplies out to the same
+        thing as one large one.
+        """
+        population = max(MIN_POPULATION, population)
+        if self.population <= 0:
+            self.population = population
+            return
+        ratio = population / self.population
+        if ratio == 1.0:
+            self.population = population
+            return
+        land = ratio**LAND_ELASTICITY
+        for good in self.production:
+            self.production[good] *= land
+        for good in self.consumption:
+            self.consumption[good] *= ratio
+        self.population = population
 
     def output(self, good: str, season: dict[str, float] | None = None) -> float:
         """What the colony makes in a day.
