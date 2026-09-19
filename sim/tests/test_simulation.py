@@ -134,3 +134,70 @@ def test_a_world_with_one_colony_still_runs():
     sim = build_simulation(seed=5, settlements=1)
     sim.run(30)
     assert sim.journeys == 0
+
+
+# ------------------------------------------------------------------- viewer
+
+def test_a_journey_path_is_one_contiguous_run_of_tiles():
+    """Legs are stored lowest-settlement-first, so one travelled the other way
+    has to be reversed before it is joined on. If that is wrong the path jumps
+    across the map."""
+    from colonysim.roads import route_between
+    from colonysim.trade import journey_path
+
+    sim = build_simulation(seed=23)
+    for home in range(len(sim.colonies)):
+        for dest in range(len(sim.colonies)):
+            legs = route_between(sim.network, home, dest)
+            if len(legs) < 2:
+                continue
+            path = journey_path(legs, home)
+            assert path[0] == sim.world.settlements[home].pos
+            assert path[-1] == sim.world.settlements[dest].pos
+            for (x1, y1), (x2, y2) in zip(path, path[1:]):
+                assert max(abs(x1 - x2), abs(y1 - y2)) == 1
+
+
+def test_a_caravan_is_somewhere_on_its_own_road():
+    sim = build_simulation(seed=23)
+    while not sim.caravans:
+        sim.step_day()
+
+    for _ in range(40):
+        sim.step_day()
+        for caravan in sim.caravans:
+            assert caravan.position in caravan.path
+
+
+def test_a_caravan_moves_and_turns_around():
+    from colonysim.trade import OUTBOUND, RETURNING
+
+    sim = build_simulation(seed=23)
+    while not sim.caravans:
+        sim.step_day()
+    watched = sim.caravans[0]
+
+    outbound, returning = [], []
+    for _ in range(40):
+        sim.step_day()
+        if watched.state == OUTBOUND:
+            outbound.append(watched.position)
+        elif watched.state == RETURNING:
+            returning.append(watched.position)
+        if watched not in sim.caravans:
+            break
+
+    assert len(set(outbound)) > 1, "the caravan never moved"
+    assert returning, "the caravan never turned for home"
+
+
+def test_the_map_shows_caravans_on_it():
+    from colonysim.render import CARAVAN_GLYPH, render
+
+    sim = build_simulation(seed=23)
+    while not sim.caravans:
+        sim.step_day()
+    sim.step_day()
+
+    assert CARAVAN_GLYPH in render(sim.world, sim.network, sim.caravans)
+    assert CARAVAN_GLYPH not in render(sim.world, sim.network)

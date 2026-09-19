@@ -10,8 +10,15 @@ TERRAIN_GLYPH = {"water": "~", "plains": ".", "forest": '"', "rough": "^"}
 ROAD_GLYPH = {1: ":", 2: "-", 3: "="}
 
 
+#: A caravan on the road.
+CARAVAN_GLYPH = "@"
+
+
 def render(
-    world: World, network: RoadNetwork | None = None, wilds: Wilds | None = None
+    world: World,
+    network: RoadNetwork | None = None,
+    caravans: "list | None" = None,
+    wilds: Wilds | None = None,
 ) -> str:
     terrain = world.terrain
     grid = [
@@ -32,6 +39,12 @@ def render(
 
     for s in world.settlements:
         grid[s.y][s.x] = str(s.id) if s.id < 10 else "#"
+
+    # Caravans last, so a trader is never hidden under the road it is on.
+    for caravan in caravans or ():
+        spot = caravan.position
+        if spot is not None and terrain.in_bounds(*spot):
+            grid[spot[1]][spot[0]] = CARAVAN_GLYPH
 
     return "\n".join("".join(row) for row in grid)
 

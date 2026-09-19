@@ -155,6 +155,11 @@ class Simulation:
     #: world, so a seed still replays exactly.
     rng: random.Random = field(default_factory=lambda: random.Random(0))
     _next_caravan_id: int = 0
+    #: Route hazards, worked out once a day. A road's danger moves only as its
+    #: tier and the dens near it move, both of which change by the day, while
+    #: every colony asks about every route it could take -- so without this the
+    #: same tiles get walked hundreds of times before breakfast.
+    _hazard_today: dict[tuple[int, int], float] = field(default_factory=dict)
 
     # ---------------------------------------------------------------- totals
     def goods_in_world(self) -> dict[str, float]:
@@ -210,6 +215,7 @@ class Simulation:
     # ------------------------------------------------------------------ loop
     def step_day(self) -> None:
         self.day += 1
+        self._hazard_today.clear()
 
         for colony in self.colonies:
             made, used = colony.live_day()
@@ -226,19 +232,28 @@ class Simulation:
             self._dispatch()
 
     # ------------------------------------------------------------- wildlife
-    def _leg_hazard(self, legs: tuple) -> float:
-        """Chance of meeting something over one leg of a journey."""
+    def _route_hazard(self, route) -> float:
+        """Today's danger on one carved road, worked out at most once."""
         if self.wilds is None:
             return 0.0
-        return self.wilds.journey_hazard(self.network, legs)
+        hazard = self._hazard_today.get(route.key)
+        if hazard is None:
+            hazard = self.wilds.route_hazard(self.network, route)
+            self._hazard_today[route.key] = hazard
+        return hazard
+
+    def _leg_hazard(self, legs: tuple) -> float:
+        """Chance of meeting something over one leg of a journey."""
+        safe = 1.0
+        for leg in legs:
+            safe *= 1.0 - self._route_hazard(leg)
+        return 1.0 - safe
 
     def _danger_surcharge(self, route) -> float:
         """What a leg's danger is worth in extra travel cost when choosing a
         way there. This is the whole of routing around the animals: a wolf
         valley simply costs more to walk through, so Dijkstra goes round."""
-        if self.wilds is None:
-            return 0.0
-        return route.cost * DANGER_DETOUR * self.wilds.route_hazard(self.network, route)
+        return route.cost * DANGER_DETOUR * self._route_hazard(route)
 
     def _walk_a_day(self, caravan: Caravan) -> None:
         """Roll for one day on the road, and deal with what turns up."""
@@ -262,9 +277,10 @@ class Simulation:
         if encounter.outcome != "drove off":
             self.raids += 1
         if encounter.outcome == "routed" and caravan.state == OUTBOUND:
-            # It never gets where it was going. Whatever is left goes home.
+            # It never gets where it was going. Whatever is left goes home,
+            # from wherever on the road it turned around.
             caravan.state = RETURNING
-            caravan.days_left = travel_days(
+            caravan.days_left = caravan.leg_days = travel_days(
                 self.world.terrain, self.network, caravan.legs
             )
             self.journeys_turned_back += 1
@@ -284,7 +300,7 @@ class Simulation:
                 host = self.colonies[caravan.destination]
                 do_business(caravan, host, self.colonies[caravan.home], self.day)
                 caravan.state = RETURNING
-                caravan.days_left = travel_days(
+                caravan.days_left = caravan.leg_days = travel_days(
                     self.world.terrain, self.network, caravan.legs
                 )
             elif caravan.state == RETURNING:
@@ -354,6 +370,7 @@ class Simulation:
                 destination=other,
                 legs=legs,
                 days_left=travel_days(self.world.terrain, self.network, legs),
+                leg_days=travel_days(self.world.terrain, self.network, legs),
                 dispatched_day=self.day,
                 hazard=hazard,
                 escorted=escorted,

@@ -6,17 +6,47 @@ no dependencies, so it ports into the sim proper as a module.
 See `../wiki/design-inter-colony-trade.md` for the design this implements:
 roads, storage and prices, and traders moving goods between colonies.
 
-## Try it
+## Open it in a browser
+
+```
+python3 -m colonysim.server
+```
+
+Then open **http://127.0.0.1:7700**. The map draws the terrain, the road
+network, every colony and the caravans moving between them, with what each one
+is carrying and every colony's shelves updating beside it. Wolf packs and bear
+territories are the coloured patches the roads have to get past; a caravan with
+a ring around it has hired guards. Pause and speed controls are on the page.
+Ctrl-C in the terminal stops it.
+
+No dependencies and no build step — it is `http.server` and one HTML page. If
+7700 is already taken it moves to the next free port and tells you which, so it
+can sit alongside something else already using that number. `--seed` gives a
+different world, `--speed` sets days per second.
+
+## Watch it in the terminal
+
+```
+python -m colonysim.watch --seed 23
+```
+
+Redraws the map once per day with caravans (`@`) moving along the roads, and
+under it what each one is carrying, where it is headed, and what every colony
+has on its shelves. Ctrl-C to stop. `--delay 0.4` slows it down, `--delay 0`
+runs flat out, `--seed` gives a different world.
+
+## Compare it
 
 ```
 python -m colonysim.demo --seed 23 --days 150
 ```
 
-That generates a world, runs it for 150 days with traders on the roads, and
-runs the same world again with trade switched off so the two can be compared.
+Runs the world for 150 days with traders, then runs the same world again with
+trade switched off, and prints both so the difference is visible.
 
 Glyphs: `~` water, `.` plains, `"` forest, `^` rough; `:` foot path, `-` dirt
-road, `=` paved; `w` a wolf pack and `B` a bear; digits are settlements.
+road, `=` paved; `w` a wolf pack and `B` a bear; digits are settlements, `@` is
+a caravan.
 
 ## How roads are generated
 
@@ -165,18 +195,21 @@ knobs if it should move.
 python -m pytest tests -q
 ```
 
-123 tests. Roads: every settlement reachable, generation deterministic, routes
+142 tests. Roads: every settlement reachable, generation deterministic, routes
 sharing tiles rather than running parallel, roads not ploughing through water,
 tier promotion and decay. Economy: reserves and prices, the purse refusing to
 overdraw, barter never digging into the reserve, no cargo loaded that the
 destination will not buy. And over a 150-day run on four seeds — **goods and
 coin are exactly conserved** (trade must never mint or destroy either), trade
 narrows the price gap against the no-trade control, nobody starves who would
-have starved without it, and no caravan is left stranded on the road.
+have starved without it, and no caravan is left stranded on the road. The
+viewers: a journey's tiles join into one contiguous run, a caravan is always
+somewhere on its own road, and the server is exercised over real HTTP — routes,
+pause, speed, and falling back off a busy port.
 
 Wildlife: dens only on ground that suits them and never beside a village,
 danger falling off with distance, better roads and busier roads being safer,
 a raid taking exactly what leaves the cargo and never more than is on the
 cart, guards paying for themselves in goods saved, a trader taking the long
-way round a den, and -- over 120 days on four seeds -- the animals costing the
+way round a den, and — over 120 days on four seeds — the animals costing the
 roads something without starving anybody or shutting trade down.

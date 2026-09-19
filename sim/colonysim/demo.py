@@ -34,7 +34,7 @@ def main() -> None:
     control.run(args.days)
     tame.run(args.days)
 
-    print(render(sim.world, sim.network, sim.wilds))
+    print(render(sim.world, sim.network, wilds=sim.wilds))
     print()
     print(legend(sim.world, sim.network, sim.wilds))
 
