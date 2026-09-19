@@ -9,6 +9,8 @@ three things about its colony.
     * what it charges -- a markup on what scarcity alone would ask, which is
       both what a visiting caravan pays here and what this colony pays for
       imports, so the decision has a real cost either way;
+    * what its workshop makes -- how keen it is on each crafted good, and
+      whether to put up a bench it does not have yet;
     * what it holds back -- the reserve, which is the line between what is for
       sale and what the colony wants to buy;
     * where its people work -- a lean on the land's own output, conserved, so
@@ -25,8 +27,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Callable
 
-from .goods import GOOD_NAMES, GOODS
+from .goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
 from .negotiation import Haggle, Move, Speaker, bargain
+from .recipes import RECIPES, SMITHY, STATIONS
 from .reputation import describe, trades_with
 from .roads import RoadNetwork, Route
 from .storage import (
@@ -71,6 +74,9 @@ MEMORY = 0.88
 SLOW_INTERVAL = 7
 #: How hard a steward leans the land toward what is scarce and what sells.
 FOCUS_STEP = 0.45
+#: The same, for the workshop: how hard it leans the bench toward what the
+#: colony is running out of and what its neighbours are paying for.
+CRAFT_STEP = 0.8
 #: Lines of reasoning kept. Enough to see why a colony is doing what it is
 #: doing, not enough to grow without bound over a long run.
 LOG_LINES = 40
@@ -312,6 +318,28 @@ class Steward:
             self.note(f"holding {after:.0f} days of {good} -- {why}")
         return after
 
+    def set_craft(self, good: str, weight: float, why: str = "") -> float:
+        """How keen the workshop is on making this. Zero stops it entirely."""
+        before = self.colony.policy.craft_for(good)
+        after = self.colony.policy.set_craft(good, weight)
+        if abs(after - before) > 0.1 and why:
+            self.note(f"bench on {good} at {after:.2f}x -- {why}")
+        return after
+
+    def commission(self, station: str) -> bool:
+        """Decide to put up a bench. The workshop pays for it and builds it.
+
+        Materials are gathered as the colony can spare them, so commissioning
+        something it has no stone for costs it nothing today and arrives when
+        the stone does -- see `crafting.raise_station`.
+        """
+        shop = self.colony.workshop
+        if station not in STATIONS or station in shop.stations or shop.raising:
+            return False
+        shop.raising = station
+        self.note(f"raising a {station}")
+        return True
+
     def set_focus(self, good: str, weight: float) -> None:
         """Lean the colony's work toward or away from a good.
 
@@ -327,6 +355,7 @@ class Steward:
         self.colony.policy.markup.clear()
         self.colony.policy.reserve_mult.clear()
         self.colony.policy.focus.clear()
+        self.colony.policy.craft.clear()
 
     def note(self, line: str) -> None:
         day = self.view.day if self.view else 0
@@ -392,6 +421,10 @@ class Steward:
                 f"{self.days_of_stock(good):>5.0f} days  {state:<6} "
                 f"asking {self.price(good):.2f} ({self.colony.policy.markup_for(good):.2f}x)"
             )
+        shop = self.colony.workshop
+        lines.append(f"workshop: {shop.describe()}")
+        makeable = sorted(recipe.output for recipe in shop.recipes())
+        lines.append("  can make: " + (", ".join(makeable) or "nothing yet"))
         if view:
             lines.append("who we can reach:")
             for link in view.neighbours():
@@ -443,6 +476,7 @@ def merchant(steward: Steward, view: NetworkView) -> None:
         for good in GOOD_NAMES:
             _reserve(steward, good)
         _labour(steward, view)
+        _bench(steward, view)
 
 
 def _price(steward: Steward, view: NetworkView, good: str) -> None:
@@ -557,7 +591,9 @@ def _labour(steward: Steward, view: NetworkView) -> None:
     if sum(shares.values()) <= 0:
         return
 
-    for good in GOOD_NAMES:
+    # Only the raw goods: this dial moves people between fields, forests and
+    # quarries. What the workshop does with what they bring back is `_bench`.
+    for good in RAW_GOOD_NAMES:
         remembered = steward.remembered(good)
         if remembered == float("inf"):
             continue
@@ -578,7 +614,7 @@ def _labour(steward: Steward, view: NetworkView) -> None:
 
     leaning = {
         good: round(colony.policy.focus_for(good), 2)
-        for good in GOOD_NAMES
+        for good in RAW_GOOD_NAMES
         if abs(colony.policy.focus_for(good) - 1.0) > 0.05
     }
     if leaning:
@@ -586,6 +622,61 @@ def _labour(steward: Steward, view: NetworkView) -> None:
             "work moved: "
             + ", ".join(f"{good} {weight:.2f}x" for good, weight in sorted(leaning.items()))
         )
+
+
+def _bench(steward: Steward, view: NetworkView) -> None:
+    """What the workshop turns to, and whether to build somewhere better.
+
+    Same shape as the labour decision, for the same reason: a good the colony
+    keeps running out of, or that a neighbour is paying over the odds for, is
+    worth making. The difference is that the bench's day is not conserved --
+    keenness decides the order of work and what is worth bothering with, and
+    the materials it can spare decide the rest.
+    """
+    colony = steward.colony
+    for good, recipe in sorted(RECIPES.items()):
+        remembered = steward.remembered(good)
+        if remembered == float("inf"):
+            continue
+        scarce = 1.0 - clamp(remembered, 0.3, 2.0)
+
+        abroad = [
+            link.price(good) / GOODS[good].base_price
+            for link in view.links.values()
+            if link.shortfall(good) > 0
+        ]
+        demand = max(abroad) - 1.0 if abroad else 0.0
+
+        target = 1.0 + CRAFT_STEP * (scarce + 0.5 * demand)
+        current = colony.policy.craft_for(good)
+        why = ""
+        if target > 1.2 and colony.workshop.can_make(recipe):
+            why = "we keep running short" if scarce > 0 else "the neighbours are paying"
+        steward.set_craft(good, current + ADJUST_RATE * (target - current), why)
+
+    _smithy(steward)
+
+
+def _smithy(steward: Steward) -> None:
+    """Put up a smithy when the colony keeps wanting what one makes.
+
+    The only thing a colony builds, and the only decision in the sim that costs
+    materials up front for something that pays back later.
+    """
+    shop = steward.colony.workshop
+    if SMITHY.name in shop.stations or shop.raising:
+        return
+    wanted = [
+        recipe.output
+        for recipe in RECIPES.values()
+        if recipe.station == SMITHY.name and steward.remembered(recipe.output) < 1.0
+    ]
+    if not wanted:
+        return
+    # Deciding to build it and being able to afford it are separate things: the
+    # workshop takes the stone the first day the colony can spare it, which for
+    # a village with no stone of its own may be after a caravan has been.
+    steward.commission(SMITHY.name)
 
 
 def route_tier(network: RoadNetwork, legs: tuple[Route, ...]) -> float:

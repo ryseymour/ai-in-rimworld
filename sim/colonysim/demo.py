@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import argparse
 
+from .crafting import armed_strength
 from .goods import GOOD_NAMES
 from .render import legend, render
 from .reputation import describe
@@ -48,15 +49,15 @@ def main() -> None:
     print(legend(sim.world, sim.network, sim.wilds))
 
     print(f"\n--- after {args.days} days, {sim.journeys} journeys ---\n")
-    print(
-        f"{'colony':<12}{'people':>8}{'food':>9}{'wood':>9}{'stone':>9}"
-        f"{'cloth':>9}{'tools':>9}{'coin':>10}"
-    )
+    # Written off GOOD_NAMES rather than spelt out, since the crafted goods
+    # are columns here like any other.
+    head = "".join(f"{good:>8}" for good in GOOD_NAMES)
+    print(f"{'colony':<12}{'people':>7}{head}{'coin':>9}")
     for colony in sim.colonies:
-        row = "".join(f"{colony.storage.get(g):>9.0f}" for g in GOOD_NAMES)
+        row = "".join(f"{colony.storage.get(g):>8.0f}" for g in GOOD_NAMES)
         print(
-            f"{colony.name:<12}{colony.population:>8.0f}{row}"
-            f"{colony.purse.amount:>10.0f}"
+            f"{colony.name:<12}{colony.population:>7.0f}{row}"
+            f"{colony.purse.amount:>9.0f}"
         )
 
     print("\nprice gap between the dearest and cheapest colony:")
@@ -92,6 +93,22 @@ def main() -> None:
     print(f"\n  out of food with stewards: {', '.join(sim.hungry_colonies()) or 'nobody'}")
     print(f"  out of food without them:  {', '.join(unled.hungry_colonies()) or 'nobody'}")
     print(f"  journeys: {sim.journeys} with stewards, {unled.journeys} without")
+
+    print("\n--- the workshops ---\n")
+    for colony in sim.colonies:
+        print(f"  {colony.name:<12}{colony.workshop.describe()}")
+    crafted = ", ".join(
+        f"{qty:.0f} {good}" for good, qty in sorted(sim.crafted.items()) if qty >= 0.5
+    )
+    hunted = ", ".join(
+        f"{qty:.0f} {good}" for good, qty in sorted(sim.hunted.items()) if qty >= 0.5
+    )
+    print(f"\n  made at the benches: {crafted or 'nothing'}")
+    print(f"  brought home hunting: {hunted or 'nothing'}")
+    armed = ", ".join(
+        f"{colony.name} {armed_strength(colony):.0%}" for colony in sim.colonies
+    )
+    print(f"  armed: {armed}")
 
     print("\n--- the people ---\n")
     print(f"  {'colony':<12}{'founded':>9}{'now':>7}{'fed':>8}")

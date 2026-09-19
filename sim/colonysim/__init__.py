@@ -5,7 +5,9 @@ See `../wiki/design-inter-colony-trade.md` for the design this implements.
 """
 from __future__ import annotations
 
-from .goods import GOODS, Good
+from .crafting import Workshop, armed_strength, armoury, work_day
+from .goods import CRAFTED_GOOD_NAMES, GOOD_NAMES, GOODS, RAW_GOOD_NAMES, Good
+from .hunting import hunt
 from .money import SILVER, Currency, Purse
 from .negotiation import (
     HOST,
@@ -18,6 +20,7 @@ from .negotiation import (
     negotiate,
 )
 from .people import caravans_allowed, food_cover
+from .recipes import RECIPES, STATIONS, Recipe, Station
 from .reputation import Remark, Reputation
 from .roads import RoadNetwork, Route, generate_roads, road_links, road_overlay
 from .simulation import Simulation, build_simulation
@@ -30,8 +33,15 @@ from .world import Settlement, World, generate_world
 
 __all__ = [
     "BEARS",
+    "CRAFTED_GOOD_NAMES",
     "GOODS",
+    "GOOD_NAMES",
+    "HOST",
+    "RAW_GOOD_NAMES",
+    "RECIPES",
     "SILVER",
+    "STATIONS",
+    "TRADER",
     "WOLVES",
     "Caravan",
     "Colony",
@@ -39,7 +49,6 @@ __all__ = [
     "Den",
     "Encounter",
     "Good",
-    "HOST",
     "Haggle",
     "Link",
     "MarketView",
@@ -48,6 +57,7 @@ __all__ = [
     "Payment",
     "Policy",
     "Purse",
+    "Recipe",
     "Remark",
     "Reputation",
     "RoadNetwork",
@@ -57,24 +67,30 @@ __all__ = [
     "Simulation",
     "Speakers",
     "Species",
+    "Station",
     "Steward",
     "Storage",
-    "TRADER",
     "Terrain",
     "Wilds",
+    "Workshop",
     "World",
+    "armed_strength",
+    "armoury",
     "bargain",
     "build_simulation",
     "caravans_allowed",
     "food_cover",
     "generate_roads",
+    "generate_terrain",
+    "generate_world",
+    "hunt",
     "merchant",
     "negotiate",
     "open_haggle",
+    "populate",
     "road_links",
     "road_overlay",
-    "generate_terrain",
-    "generate_world",
-    "populate",
     "settle",
+    "work_day",
 ]
+

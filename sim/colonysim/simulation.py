@@ -5,7 +5,9 @@ import random
 from dataclasses import dataclass, field
 
 from . import people
-from .goods import GOOD_NAMES, GOODS
+from .crafting import WEAR_PER_CAPITA, armed_strength, work_day
+from .goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
+from .hunting import ARROWS_PER_CAPITA, hunt
 from .money import SILVER, Purse
 from .negotiation import Haggle, Speakers
 from .reputation import Reputation, guard_discount, trade_bias
@@ -31,13 +33,18 @@ from .trade import (
 from .wildlife import Wilds, escort_cost, expected_loss, per_day_hazard, populate, raid
 from .world import World, generate_world
 
-#: Per head, per day.
+#: Per head, per day. The raw goods are eaten, burnt and worn out; the crafted
+#: ones break (`crafting.WEAR_PER_CAPITA`) or are shot away hunting
+#: (`hunting.ARROWS_PER_CAPITA`). All of it is the same number to the rest of
+#: the sim: what a colony uses is what sets its reserve, and so its prices.
 CONSUMPTION_PER_CAPITA = {
     "food": 0.55,
     "wood": 0.18,
     "stone": 0.06,
     "cloth": 0.03,
     "tools": 0.012,
+    "arrows": ARROWS_PER_CAPITA,
+    **WEAR_PER_CAPITA,
 }
 #: How good each terrain is at each good, relative to average land. A village
 #: ringed by forest makes three times the wood and a quarter of the stone.
@@ -95,10 +102,11 @@ def build_colony(
     consumption = {
         good: rate * population for good, rate in CONSUMPTION_PER_CAPITA.items()
     }
+    # Only the raw goods: everything else on the shelves was made by somebody.
     production = {
         good: consumption[good]
         * sum(fraction * AFFINITY[good][kind] for kind, fraction in mix.items())
-        for good in GOOD_NAMES
+        for good in RAW_GOOD_NAMES
     }
 
     colony = Colony(
@@ -111,7 +119,10 @@ def build_colony(
         reputation=Reputation(enabled=reputation),
     )
     # Everyone starts on their reserve, so day one is balanced and any
-    # imbalance that appears later was produced by the simulation itself.
+    # imbalance that appears later was produced by the simulation itself. That
+    # includes the crafted goods: a village that has been there a while has its
+    # axes and its quiver, and the workshop's job is to keep up with what wears
+    # out rather than to arm the place from nothing.
     for good in GOOD_NAMES:
         colony.storage.add(good, colony.reserve(good))
     return colony
@@ -122,9 +133,11 @@ def calibrate(colonies: list[Colony], surplus: float = SURPLUS_FACTOR) -> None:
 
     Terrain decides who makes what; this only decides how much the world makes
     in total. Each colony keeps its own share, so specialisation -- and the
-    imbalance between colonies -- survives untouched.
+    imbalance between colonies -- survives untouched. Crafted goods are not in
+    here: what a workshop makes is decided day by day, out of materials this
+    has already scaled.
     """
-    for good in GOOD_NAMES:
+    for good in RAW_GOOD_NAMES:
         made = sum(c.production[good] for c in colonies)
         eaten = sum(c.consumption[good] for c in colonies)
         if made <= 0 or eaten <= 0:
@@ -173,6 +186,10 @@ class Simulation:
     meetings: int = 0
     #: Meetings where the animals got at the cargo.
     raids: int = 0
+    #: What the workshops made and what the hunters brought home. Both are part
+    #: of `produced` -- these are kept apart so the thing can be reported on.
+    crafted: dict[str, float] = field(default_factory=dict)
+    hunted: dict[str, float] = field(default_factory=dict)
     journeys_turned_back: int = 0
     #: Caravans turned away at a gate by a colony that has had enough of them.
     #: The one number that says reputation is biting rather than just moving.
@@ -284,12 +301,18 @@ class Simulation:
         for colony in self.colonies:
             wanted = colony.consumption.get("food", 0.0)
             made, used = colony.live_day()
-            for good, qty in made.items():
-                self.produced[good] = self.produced.get(good, 0.0) + qty
-            for good, qty in used.items():
-                self.consumed[good] = self.consumed.get(good, 0.0) + qty
+            self._made(made)
+            self._used(used)
+            # The arrows the day's consumption just took off the shelves are the
+            # hunt: a colony with a full quiver comes home with meat and hides,
+            # one with none comes home with nothing.
+            self._hunt(colony, used.get("arrows", 0.0))
+            # Then the benches, on whatever the colony can spare.
+            self._craft(colony)
             # How much of what the colony wanted to eat it actually got, read
             # before anyone is born or buried, since both change what it wants.
+            # What the hunters brought back today is on the shelves for
+            # tomorrow: the party comes home at dusk, after dinner.
             ration = used.get("food", 0.0) / wanted if wanted > 0 else 1.0
             self._live_people(colony, ration)
 
@@ -309,6 +332,37 @@ class Simulation:
         if self.trade_enabled:
             self._advance_caravans()
             self._dispatch()
+
+    # ------------------------------------------------- production and the wild
+    def _made(self, made: dict[str, float]) -> None:
+        for good, qty in made.items():
+            self.produced[good] = self.produced.get(good, 0.0) + qty
+
+    def _used(self, used: dict[str, float]) -> None:
+        for good, qty in used.items():
+            self.consumed[good] = self.consumed.get(good, 0.0) + qty
+
+    def _craft(self, colony: Colony) -> None:
+        """A day at the colony's benches.
+
+        Crafting is production and consumption like any other: the materials go
+        into `consumed` and what came off the bench into `produced`, so the
+        conservation check in `goods_in_world` still accounts for every unit.
+        """
+        made, used = work_day(colony)
+        self._made(made)
+        self._used(used)
+        for good, qty in made.items():
+            self.crafted[good] = self.crafted.get(good, 0.0) + qty
+
+    def _hunt(self, colony: Colony, arrows: float) -> None:
+        """What the hunting party brought back for the arrows it spent."""
+        if arrows <= 0.0:
+            return
+        bag = hunt(colony, arrows)
+        self._made(bag)
+        for good, qty in bag.items():
+            self.hunted[good] = self.hunted.get(good, 0.0) + qty
 
     # --------------------------------------------------------------- people
     def _live_people(self, colony: Colony, ration: float) -> None:
@@ -438,7 +492,9 @@ class Simulation:
         if den is None:
             return
 
-        encounter = raid(self.rng, den, caravan.cargo, caravan.escorted, self.day)
+        encounter = raid(
+            self.rng, den, caravan.cargo, caravan.escorted, self.day, caravan.arms
+        )
         caravan.encounters.append(encounter)
         self.meetings += 1
         caravan.ledger.append(encounter.describe())
@@ -554,7 +610,13 @@ class Simulation:
                     + trip_float(colony)
                 )
                 escorted, risk = self._escort_decision(
-                    colony, other, hazard, at_risk, days, away + 1
+                    colony,
+                    other,
+                    hazard,
+                    at_risk,
+                    days,
+                    away + 1,
+                    armed_strength(colony),
                 )
                 score = (worth - risk) / days
                 if best is None or score > best[0]:
@@ -564,6 +626,7 @@ class Simulation:
                 continue
 
             _, _, other, legs, cargo, hazard, escorted = best
+            arms = armed_strength(colony)
             caravan = Caravan(
                 id=self._next_caravan_id,
                 home=colony.id,
@@ -574,6 +637,7 @@ class Simulation:
                 dispatched_day=self.day,
                 hazard=hazard,
                 escorted=escorted,
+                arms=arms,
             )
             self._next_caravan_id += 1
             for good, qty in cargo.items():
@@ -584,25 +648,30 @@ class Simulation:
                 caravan.cargo[good] = colony.storage.remove(good, qty)
             if escorted:
                 days = 2 * travel_days(self.world.terrain, self.network, legs) + 1
-                wage = colony.purse.withdraw(self._escort_wage(colony, other, days))
+                wage = colony.purse.withdraw(
+                    self._escort_wage(colony, other, days, arms)
+                )
                 self.escort_wages += wage
                 caravan.ledger.append(f"hired guards for {wage:.0f} coin")
             colony.purse.transfer_to(caravan.purse, trip_float(colony))
             self.caravans.append(caravan)
 
-    def _escort_wage(self, colony: Colony, other: int, days: float) -> float:
+    def _escort_wage(
+        self, colony: Colony, other: int, days: float, arms: float = 0.0
+    ) -> float:
         """What guards cost on the road between these two colonies.
 
         Two colonies that think well of each other put their escorts on the
         road together and split the wage, so the road they both use gets safer
         for both of them at less cost to either. It takes goodwill at both
         ends, so the discount is set by whichever of the two thinks less of
-        the other.
+        the other. A colony that has armed its own people pays less again,
+        because the guards are being paid to walk rather than to be equipped.
         """
         mutual = min(
             colony.reputation.of(other), self.colonies[other].reputation.of(colony.id)
         )
-        return escort_cost(days) * (1.0 - guard_discount(mutual))
+        return escort_cost(days, arms) * (1.0 - guard_discount(mutual))
 
     def _escort_decision(
         self,
@@ -612,6 +681,7 @@ class Simulation:
         at_risk: float,
         days: float,
         caravans_out: int = 1,
+        arms: float = 0.0,
     ) -> tuple[bool, float]:
         """Guards, or no guards, and what the risk costs either way.
 
@@ -622,16 +692,21 @@ class Simulation:
         so a colony pays for them out of the same allowance a second caravan
         would come from. A big colony can do both; a small one is choosing.
 
-        What the wage comes to is `_escort_wage`, which is where two colonies
-        that trust each other share an escort and pay less for it.
+        Weapons come in on both sides of that sum: an armed party loses less
+        whether or not it hires anyone, and the guards it does hire come
+        cheaper, so a colony that crafts spears trades more freely than one
+        that does not.
+
+        What the wage comes to is `_escort_wage`, which is where the arms and
+        the goodwill between two colonies that share an escort both come in.
         """
-        bare = expected_loss(hazard, at_risk)
+        bare = expected_loss(hazard, at_risk, arms=arms)
         if self.wilds is None or hazard <= 0.0:
             return False, bare
         if not people.can_escort(colony.population, caravans_out):
             return False, bare
-        wage = self._escort_wage(colony, other, days)
-        guarded = expected_loss(hazard, at_risk, escorted=True) + wage
+        wage = self._escort_wage(colony, other, days, arms)
+        guarded = expected_loss(hazard, at_risk, escorted=True, arms=arms) + wage
         if guarded < bare and colony.purse.amount >= wage + MIN_TRIP_COIN:
             return True, guarded
         return False, bare

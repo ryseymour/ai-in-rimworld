@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import pytest
 
-from colonysim.goods import GOOD_NAMES, GOODS
+from colonysim.goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
 from colonysim.money import SILVER, Purse
 from colonysim.simulation import build_simulation
 from colonysim.steward import (
@@ -361,12 +361,16 @@ def test_a_colony_that_keeps_running_a_good_down_holds_more_of_it_back():
 def test_a_steward_puts_people_on_what_the_colony_keeps_running_out_of():
     """The loop that makes this an economy rather than a delivery service: a
     price that stays high stops being a reason to buy and becomes a reason to
-    make. Terrain still decides how much good it does."""
+    make. Terrain still decides how much good it does.
+
+    Raw goods only, because this dial moves people between the fields, the
+    forest and the quarry. A colony short of arrows answers that at the bench
+    instead -- see `test_crafting.py`."""
     for seed in SEEDS:
         sim = build_simulation(seed=seed, settlements=3)
         sim.run(150)
         for colony_, steward in zip(sim.colonies, sim.stewards):
-            leanest = min(GOOD_NAMES, key=steward.remembered)
+            leanest = min(RAW_GOOD_NAMES, key=steward.remembered)
             assert colony_.policy.focus_for(leanest) > 1.0, (
                 f"{colony_.name} never put anyone on {leanest}"
             )

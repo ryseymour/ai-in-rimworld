@@ -6,7 +6,8 @@ Stdlib only, no dependencies, so it ports into the sim proper as a module.
 See `../wiki/design-inter-colony-trade.md` for the design this implements:
 roads, storage and prices, traders moving goods between colonies, a steward
 running each colony's side of it, and a population that grows or shrinks with
-what the colony has to eat.
+what the colony has to eat. On top of that sits crafting: recipes, workshops,
+and the bows and arrows a colony hunts with.
 
 ## Open it in a browser
 
@@ -16,7 +17,10 @@ python3 -m colonysim.server
 
 Then open **http://127.0.0.1:7700**. The map draws the terrain, the road
 network, every colony and the caravans moving between them, with what each one
-is carrying and every colony's shelves updating beside it. The Stewards panel
+is carrying and every colony's shelves updating beside it -- the crafted goods
+are columns in that table like any other, and the Workshops panel says what each
+colony's bench is making, how good its hand has got, and whether it is gathering
+materials for a smithy. The Stewards panel
 underneath shows what each colony has decided to do about its own prices --
 `food x1.32` is a colony bidding for supply, `wood x0.71` one discounting to
 shift a pile -- along with the last thing it changed and why. **At the counter**
@@ -96,6 +100,81 @@ steward.set_markup("food", 1.4, "we are short and the road is long")
 steward.set_reserve_days("wood", 20)
 print(steward.brief())
 ```
+
+## Crafting
+
+Everything a colony can make is a row in `recipes.py`: what goes in, how much
+labour it takes, which bench, and the hand it needs. Adding one is adding a
+line.
+
+| | out of | labour | bench | hand |
+|---|---|---|---|---|
+| **club** | 6 wood | 0.6 | crafting spot | any |
+| **spear** | 10 wood, 2 stone | 1.0 | crafting spot | 0.10 |
+| **arrows** (10) | 4 wood, 1 stone | 0.8 | crafting spot | 0.15 |
+| **bow** | 12 wood, 2 cloth | 2.2 | crafting spot | 0.35 |
+| **knife** | 4 wood, 6 stone | 1.2 | smithy | 0.30 |
+| **tools** (2) | 6 wood, 8 stone | 2.0 | smithy | 0.45 |
+
+Crafted goods are ordinary goods. `goods.py` prices each one off its own recipe
+-- its materials plus the work in it -- and then scarcity does the rest, so a
+bow sits on the same shelf as food, is worth more where there are none, rides in
+the same caravan, and can be handed over as barter. Nothing in the trade code
+needed to know crafting exists. Tools are the exception that proves the rule:
+the land already makes them, so they keep the land's price and a smithy is a
+colony choosing to make more rather than buy them.
+
+Three things decide what actually comes off a bench:
+
+* **Materials it can spare.** Every recipe draws on surplus -- stock above the
+  reserve -- and only a share of it in a day, so a colony can never whittle its
+  own buffer into arrows, and the pile a workshop works from refills.
+* **Wanting the thing.** What gets made is what the colony is short of, plus
+  what the markets it has actually visited were short of and paying more for
+  than home, less whatever is already spare on the shelves. A village with ten
+  bows in the rack and a neighbour wanting two does not make an eleventh.
+* **The hand.** Skill rises with the labour that goes through the bench and
+  shortens the work; below a recipe's floor the colony simply cannot make the
+  thing yet. A fresh colony can cut a club and has to practise before it can
+  make a bow.
+
+A **smithy** is the one thing a colony builds. Its steward commissions one when
+it keeps wanting what a smithy makes; the workshop then gathers the stone at
+whatever pace the colony can spare it, which for a forest village means waiting
+on a caravan, and only then spends its days raising it. Stewards have a fourth
+dial for all of this (`craft`, 0x to 2.5x per good), so what the bench does is a
+decision like the prices are.
+
+## Hunting
+
+Arrows are the sim's measure of hunting effort: a colony's hunters loose a
+steady number a day, which is why arrows are the one crafted good it spends
+rather than keeps, and why fletching never finishes. What that effort brings
+home depends on what the party is carrying -- with a bow each they come back
+with meat and hides, with none the same days in the woods yield very little. So
+a colony with a forest, a fletcher and a few bows turns wood into food without
+waiting for anyone, which is the independence a weapon is for. It is a
+supplement to the fields, not a second farm: hunting runs at well under a
+quarter of what a world grows.
+
+Hides are `cloth`, the same way fleece is. What a colony hunts is deer and
+boar, not the wolves and bears of the roads -- those are predators, and meeting
+one is a different event entirely -- so nothing about hunting depends on where
+the dens are.
+
+## What weapons are worth on the road
+
+A colony's armoury is read as one number, `armed_strength` (bows count most, a
+club least, and about a third of a weighted weapon per head is fully armed). It
+buys two things, both on the road:
+
+* animals are warier of an armed party, escorted or not, and
+* the guards an armed colony hires cost up to 45% less, because they are being
+  paid to walk rather than to be equipped.
+
+So spears are a reason to trade more freely, and the wolves are a reason to make
+spears. Every default is the old number: a world with no weapons in it behaves
+exactly as it did before there were any.
 
 ## Haggling
 

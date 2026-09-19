@@ -445,22 +445,38 @@ def test_traders_pick_their_way_around_the_worst_of_it():
     assert sum(chosen) / len(chosen) < max(available)
 
 
-def test_the_wild_slows_trade_down_without_stopping_it():
-    """The layer has to bite without breaking the economy underneath it: fewer
-    journeys overall, but no colony left cut off."""
-    wild_total = tame_total = 0
+def test_the_wild_costs_the_roads_without_stopping_them():
+    """The layer has to bite without breaking the economy underneath it: a real
+    cost on every seed, and no colony left cut off.
+
+    This used to count journeys, on the reasoning that the animals deter enough
+    marginal trips to show up as a smaller number. Crafting took that away: a
+    caravan carrying bows and knives is worth a road that a cartload of stone
+    was not, and a raided colony is a colony that is short and sends someone --
+    so a wild world now runs about as many journeys as a tame one (179 against
+    174 over these four seeds, where it was 132 against 150 before there was
+    anything to craft). What the animals cost is unchanged, so the bite is
+    measured where it is actually paid: goods they destroy, and coin that
+    leaves the economy as wages. Nothing else in the sim does either."""
+    lost = wages = 0.0
     for seed in SEEDS:
         wild = build_simulation(seed=seed)
         tame = build_simulation(seed=seed, wildlife=False)
         wild.run(120)
         tame.run(120)
-        wild_total += wild.journeys
-        tame_total += tame.journeys
+        lost += wild.goods_lost()
+        wages += wild.escort_wages
 
+        assert wild.goods_lost() > 0.0, f"seed {seed}: the animals took nothing"
+        # Wages are the only coin that leaves, so a wild world ends poorer --
+        # to within the rounding of a hundred trades.
+        assert wild.coin_in_world() <= tame.coin_in_world() + 1e-6, (
+            f"seed {seed}: the guards worked for nothing"
+        )
         assert wild.journeys > tame.journeys / 2, f"seed {seed}: trade was crushed"
         assert wild.hungry_colonies() == [], f"seed {seed}: the animals starved someone"
 
-    assert wild_total < tame_total, "the animals cost the roads nothing at all"
+    assert lost > 0.0 and wages > 0.0, "the animals cost the roads nothing at all"
 
 
 def test_a_caravan_turned_back_by_a_bear_still_gets_home():

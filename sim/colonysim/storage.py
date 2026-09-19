@@ -7,7 +7,8 @@ colony actually produces and eats.
 
 On top of that sits a `Policy`: the handful of settings a colony's steward
 actually controls -- what it adds to or takes off its own prices, how much it
-insists on keeping back, and where it puts its people. Scarcity still sets the
+insists on keeping back, where it puts its people, and what its workshop
+spends the day making. Scarcity still sets the
 shape of every price; the policy is the colony's own stance on top of it. A
 colony with a default policy behaves exactly as it did before there were
 stewards, which is the control case for every claim about what they do.
@@ -16,7 +17,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from .goods import GOOD_NAMES, GOODS
+from .crafting import Workshop
+from .goods import GOOD_NAMES, GOODS, RAW_GOOD_NAMES
 from .money import SILVER, Purse
 from .people import LAND_ELASTICITY, MIN_POPULATION
 from .reputation import Reputation
@@ -37,6 +39,10 @@ MAX_MARKUP = 1.8
 #: weeks of it, and no further either way.
 MIN_RESERVE = 0.4
 MAX_RESERVE = 2.5
+#: How keen a steward may be on making one thing. Zero is a colony that has
+#: stopped making it at all; the ceiling is a workshop given over to it.
+MIN_CRAFT = 0.0
+MAX_CRAFT = 2.5
 #: How far the land's own output can be pushed toward or away from one good.
 #: Terrain still decides what a village is good at; this is only how hard it
 #: leans on what it has.
@@ -95,6 +101,10 @@ class Policy:
     #: On the land's own output. Rebalanced so the colony's total output at
     #: base prices is unchanged: people move between jobs, they do not appear.
     focus: dict[str, float] = field(default_factory=dict)
+    #: On how much of the workshop's day goes to a crafted good. Unlike focus
+    #: this is not conserved: the bench's day is what the bench's day is, and
+    #: this only decides the order it works in and what it bothers with.
+    craft: dict[str, float] = field(default_factory=dict)
 
     def markup_for(self, good: str) -> float:
         return clamp(self.markup.get(good, 1.0), MIN_MARKUP, MAX_MARKUP)
@@ -104,6 +114,9 @@ class Policy:
 
     def focus_for(self, good: str) -> float:
         return clamp(self.focus.get(good, 1.0), MIN_FOCUS, MAX_FOCUS)
+
+    def craft_for(self, good: str) -> float:
+        return clamp(self.craft.get(good, 1.0), MIN_CRAFT, MAX_CRAFT)
 
     def set_markup(self, good: str, value: float) -> float:
         self.markup[good] = clamp(value, MIN_MARKUP, MAX_MARKUP)
@@ -116,6 +129,10 @@ class Policy:
     def set_focus(self, good: str, value: float) -> float:
         self.focus[good] = clamp(value, MIN_FOCUS, MAX_FOCUS)
         return self.focus[good]
+
+    def set_craft(self, good: str, value: float) -> float:
+        self.craft[good] = clamp(value, MIN_CRAFT, MAX_CRAFT)
+        return self.craft[good]
 
     def rebalance_focus(self, shares: dict[str, float]) -> None:
         """Scale the focus weights so no labour is created by reassigning it.
@@ -161,6 +178,11 @@ class Policy:
                 g: round(self.focus_for(g), 3)
                 for g in sorted(self.focus)
                 if abs(self.focus_for(g) - 1.0) > 0.01
+            },
+            "craft": {
+                g: round(self.craft_for(g), 3)
+                for g in sorted(self.craft)
+                if abs(self.craft_for(g) - 1.0) > 0.01
             },
         }
 
@@ -208,6 +230,10 @@ class Colony:
     production: dict[str, float]
     consumption: dict[str, float]
     storage: Storage = field(default_factory=Storage)
+    #: The benches, and the hand at them. Crafting draws on surplus only, so
+    #: nothing the workshop does can leave the colony short -- see
+    #: `crafting.work_day`.
+    workshop: Workshop = field(default_factory=Workshop)
     purse: Purse = field(default_factory=lambda: Purse(SILVER))
     #: The share of its food demand the colony has been meeting lately, smoothed
     #: over about a fortnight. 1.0 is everyone fed.
@@ -348,11 +374,13 @@ class Colony:
         """What each good's baseline output is worth at ordinary prices.
 
         The nearest thing this sim has to how many people work on what, and so
-        the weights a focus change has to conserve.
+        the weights a focus change has to conserve. Raw goods only: nobody is
+        assigned to making bows by moving them out of the fields, because the
+        workshop has its own day -- see `crafting.CRAFT_LABOUR_PER_CAPITA`.
         """
         return {
             good: self.production.get(good, 0.0) * GOODS[good].base_price
-            for good in GOOD_NAMES
+            for good in RAW_GOOD_NAMES
         }
 
     def prices(self) -> dict[str, float]:

@@ -103,6 +103,7 @@ PAGE = """<!doctype html>
   <aside>
     <section><h2>Caravans</h2><div id="caravans"></div></section>
     <section><h2>Storage</h2><div id="colonies"></div></section>
+    <section><h2>Workshops</h2><div id="workshops"></div></section>
     <section><h2>Stewards</h2><div id="stewards"></div></section>
     <section><h2>At the counter</h2><div id="deals"></div></section>
     <section><h2>Standing</h2><div id="standing"></div></section>
@@ -211,7 +212,7 @@ function panels(state) {
               `<span class="${p.at > 1 ? "up" : "down"}">${p.good} &times;${p.at.toFixed(2)}</span>`
             ).join(", ")
           : '<span class="empty">prices as they come</span>';
-        const note = [s.holding, s.working].filter(Boolean).join(" &middot; ");
+        const note = [s.holding, s.working, s.making].filter(Boolean).join(" &middot; ");
         return `<div class="steward"><div class="who"><span>${s.name}</span>` +
                `<span>${prices}</span></div>` +
                (note ? `<div class="note">${note}</div>` : "") +
@@ -253,6 +254,10 @@ function panels(state) {
       c.stock.map(v => `<td>${v}</td>`).join("") + `<td>${c.coin}</td></tr>`;
   }).join("");
   document.getElementById("colonies").innerHTML = `<table>${head}${rows}</table>`;
+
+  document.getElementById("workshops").innerHTML = state.colonies.map(c =>
+    `<div class="steward"><div class="who"><span>${c.name}</span></div>` +
+    `<div class="note">${c.workshop}</div></div>`).join("");
 }
 
 async function tick() {
@@ -350,6 +355,9 @@ def steward_payload(sim) -> list[dict]:
                 ),
                 "working": ", ".join(
                     f"{good} work {at:.2f}x" for good, at in stance["focus"].items()
+                ),
+                "making": ", ".join(
+                    f"{good} bench {at:.2f}x" for good, at in stance["craft"].items()
                 ),
                 "note": steward.log[-1] if steward.log else "",
             }
@@ -475,6 +483,10 @@ def state_payload(sim) -> dict:
                 "stock": [round(c.storage.get(g)) for g in GOOD_NAMES],
                 "coin": round(c.purse.amount),
                 "hungry": c.name in hungry,
+                # Benches, hand and what came off it today: the crafted goods
+                # are already columns in the storage table above, and this is
+                # the part of the workshop that is not a number on a shelf.
+                "workshop": c.workshop.describe(),
             }
             for c in sim.colonies
         ],
