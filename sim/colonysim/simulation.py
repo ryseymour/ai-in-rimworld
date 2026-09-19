@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 
 from .goods import GOOD_NAMES, GOODS
 from .money import SILVER, Purse
+from .reputation import Reputation, guard_discount, trade_bias
 from .roads import RoadNetwork, apply_traffic, generate_roads, route_between
 from .steward import Link, NetworkView, Steward, route_tier
 from .storage import Colony, MarketView, Storage
@@ -75,7 +76,9 @@ def terrain_mix(world: World, x: int, y: int, radius: int = CATCHMENT) -> dict[s
     return {kind: n / total for kind, n in counts.items()} if total else {}
 
 
-def build_colony(world: World, settlement, population: int) -> Colony:
+def build_colony(
+    world: World, settlement, population: int, reputation: bool = True
+) -> Colony:
     """A village makes what the land around it allows.
 
     Production is its own consumption, scaled by how good the surrounding land
@@ -99,6 +102,7 @@ def build_colony(world: World, settlement, population: int) -> Colony:
         consumption=consumption,
         storage=Storage(),
         purse=Purse(SILVER, STARTING_SILVER),
+        reputation=Reputation(enabled=reputation),
     )
     # Everyone starts on their reserve, so day one is balanced and any
     # imbalance that appears later was produced by the simulation itself.
@@ -155,6 +159,9 @@ class Simulation:
     #: Meetings where the animals got at the cargo.
     raids: int = 0
     journeys_turned_back: int = 0
+    #: Caravans turned away at a gate by a colony that has had enough of them.
+    #: The one number that says reputation is biting rather than just moving.
+    refusals: int = 0
     log: list[str] = field(default_factory=list)
     #: Encounters are the one roll of the dice in the sim. Seeded from the
     #: world, so a seed still replays exactly.
@@ -213,6 +220,20 @@ class Simulation:
             out.append(colony.storage.get(good) / rate if rate else float("inf"))
         return out
 
+    def standings(self) -> list[tuple[int, int, float]]:
+        """Every opinion anyone actually holds, worst first.
+
+        A pair missing from this is a pair with nothing to say about each
+        other, which is most of them on day one and none of them by the time
+        the roads have been busy for a season.
+        """
+        out = [
+            (colony.id, other, standing)
+            for colony in self.colonies
+            for other, standing in colony.reputation.known().items()
+        ]
+        return sorted(out, key=lambda row: (row[2], row[0], row[1]))
+
     def hungry_colonies(self, good: str = "food") -> list[str]:
         """Colonies with less than a day of a good left."""
         return [
@@ -233,6 +254,12 @@ class Simulation:
                 self.produced[good] = self.produced.get(good, 0.0) + qty
             for good, qty in used.items():
                 self.consumed[good] = self.consumed.get(good, 0.0) + qty
+
+        # Opinions fade a little every day, whoever is or is not on the road.
+        # Nothing else in the sim moves a standing back toward neutral, so
+        # this is the whole of how a colony lives a grudge down.
+        for colony in self.colonies:
+            colony.reputation.decay()
 
         if self.wilds is not None:
             self.wilds.settle_day(self.network)
@@ -280,6 +307,7 @@ class Simulation:
                 tier=route_tier(self.network, legs),
                 legs=legs,
                 market=colony.known.get(other) or MarketView.unvisited(),
+                standing=colony.reputation.of(other),
             )
         return NetworkView(
             day=self.day,
@@ -359,6 +387,10 @@ class Simulation:
                 apply_traffic(self.network, leg)
             if caravan.state == OUTBOUND:
                 host = self.colonies[caravan.destination]
+                # Asked before the visit rather than reported back from it, so
+                # `do_business` stays the one place that decides who is let in.
+                if not host.reputation.trades_with(caravan.home):
+                    self.refusals += 1
                 do_business(caravan, host, self.colonies[caravan.home], self.day)
                 caravan.state = RETURNING
                 caravan.days_left = caravan.leg_days = travel_days(
@@ -390,6 +422,11 @@ class Simulation:
             for other in range(len(self.colonies)):
                 if other == colony.id:
                     continue
+                # Nobody sends a caravan somewhere they have written off. The
+                # other colony's opinion is not knowable from here -- being
+                # turned away at the gate is how that is found out.
+                if not colony.reputation.trades_with(other):
+                    continue
                 legs = self._route(colony.id, other)
                 if not legs:
                     continue
@@ -402,6 +439,10 @@ class Simulation:
                     worth += expected_relief(colony, known)
                 if not cargo and colony.purse.amount < MIN_TRIP_COIN:
                     continue
+                # A partner it thinks well of really does price the counter
+                # better, so the trip really is worth more. This is the trader
+                # expecting that, not a bonus for being friendly.
+                worth *= trade_bias(colony.reputation.of(other))
                 # Round trip plus a day trading, so a short hop cannot win on
                 # the divisor alone while delivering nothing worth having.
                 days = 2 * travel_days(self.world.terrain, self.network, legs) + 1
@@ -414,7 +455,9 @@ class Simulation:
                     + sum(qty * colony.price(good) for good, qty in cargo.items())
                     + trip_float(colony)
                 )
-                escorted, risk = self._escort_decision(colony, hazard, at_risk, days)
+                escorted, risk = self._escort_decision(
+                    colony, other, hazard, at_risk, days
+                )
                 score = (worth - risk) / days
                 if best is None or score > best[0]:
                     best = (score, worth - risk, other, legs, cargo, hazard, escorted)
@@ -439,14 +482,28 @@ class Simulation:
                 caravan.cargo[good] = colony.storage.remove(good, qty)
             if escorted:
                 days = 2 * travel_days(self.world.terrain, self.network, legs) + 1
-                wage = colony.purse.withdraw(escort_cost(days))
+                wage = colony.purse.withdraw(self._escort_wage(colony, other, days))
                 self.escort_wages += wage
                 caravan.ledger.append(f"hired guards for {wage:.0f} coin")
             colony.purse.transfer_to(caravan.purse, trip_float(colony))
             self.caravans.append(caravan)
 
+    def _escort_wage(self, colony: Colony, other: int, days: float) -> float:
+        """What guards cost on the road between these two colonies.
+
+        Two colonies that think well of each other put their escorts on the
+        road together and split the wage, so the road they both use gets safer
+        for both of them at less cost to either. It takes goodwill at both
+        ends, so the discount is set by whichever of the two thinks less of
+        the other.
+        """
+        mutual = min(
+            colony.reputation.of(other), self.colonies[other].reputation.of(colony.id)
+        )
+        return escort_cost(days) * (1.0 - guard_discount(mutual))
+
     def _escort_decision(
-        self, colony: Colony, hazard: float, at_risk: float, days: float
+        self, colony: Colony, other: int, hazard: float, at_risk: float, days: float
     ) -> tuple[bool, float]:
         """Guards, or no guards, and what the risk costs either way.
 
@@ -454,11 +511,13 @@ class Simulation:
         one takes its chances. The comparison is the plain one -- what the
         animals are expected to take, against what the guards want -- so the
         wolves are a reason to earn coin rather than a flat tax on trading.
+        Guards shared with a colony that trusts this one come cheaper, which
+        is the one place standing makes the road itself safer.
         """
         bare = expected_loss(hazard, at_risk)
         if self.wilds is None or hazard <= 0.0:
             return False, bare
-        wage = escort_cost(days)
+        wage = self._escort_wage(colony, other, days)
         guarded = expected_loss(hazard, at_risk, escorted=True) + wage
         if guarded < bare and colony.purse.amount >= wage + MIN_TRIP_COIN:
             return True, guarded
@@ -476,18 +535,22 @@ def build_simulation(
     height: int = 45,
     wildlife: bool = True,
     stewards: bool = True,
+    reputation: bool = True,
 ) -> Simulation:
     """A world, its roads, its colonies, and whoever is running them.
 
     `stewards=False` leaves every colony trading on bare scarcity, which is the
     world this sim had before anyone was in charge of one -- and so the control
-    case to compare a steward-run economy against.
+    case to compare a steward-run economy against. `reputation=False` leaves
+    every colony a stranger to every other however they behave, which is the
+    same kind of control for what keeping score does.
     """
     world = generate_world(width, height, settlements, seed)
     network = generate_roads(world)
     rng = random.Random(seed ^ 0xC0FFEE)
     colonies = [
-        build_colony(world, s, population=rng.randint(14, 30)) for s in world.settlements
+        build_colony(world, s, population=rng.randint(14, 30), reputation=reputation)
+        for s in world.settlements
     ]
     calibrate(colonies)
     return Simulation(

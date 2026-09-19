@@ -16,6 +16,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
 from .goods import GOOD_NAMES
+from .reputation import describe
 from .simulation import build_simulation
 from .terrain import FOREST_LEVEL, ROUGH_LEVEL, WATER_LEVEL
 from .trade import OUTBOUND
@@ -69,6 +70,10 @@ PAGE = """<!doctype html>
   .steward .note { color: var(--dim); font-size: 12px; }
   .up { color: #e0a458; }
   .down { color: #7fb3d5; }
+  .standing { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; }
+  .standing .note { color: var(--dim); font-size: 12px; }
+  .trusts { color: #7fbf8f; }
+  .distrusts { color: #e06c5a; }
 </style>
 </head>
 <body>
@@ -78,6 +83,7 @@ PAGE = """<!doctype html>
   <span class="stat"><b id="flight">-</b> on the road</span>
   <span class="stat"><b id="journeys">-</b> journeys</span>
   <span class="stat"><b id="met">-</b> met in the wild</span>
+  <span class="stat"><b id="refusals">-</b> turned away</span>
   <button id="pause">pause</button>
   <span class="stat">speed
     <input id="speed" type="range" min="1" max="20" value="4">
@@ -90,6 +96,7 @@ PAGE = """<!doctype html>
     <section><h2>Caravans</h2><div id="caravans"></div></section>
     <section><h2>Storage</h2><div id="colonies"></div></section>
     <section><h2>Stewards</h2><div id="stewards"></div></section>
+    <section><h2>Standing</h2><div id="standing"></div></section>
   </aside>
 </main>
 <script>
@@ -176,6 +183,7 @@ function panels(state) {
   document.getElementById("flight").textContent = state.caravans.length;
   document.getElementById("journeys").textContent = state.journeys;
   document.getElementById("met").textContent = state.met;
+  document.getElementById("refusals").textContent = state.refusals;
 
   const routes = document.getElementById("caravans");
   routes.innerHTML = state.caravans.length
@@ -200,6 +208,16 @@ function panels(state) {
                (s.note ? `<div class="note">${s.note}</div>` : "") + "</div>";
       }).join("")
     : '<div class="empty">nobody is minding the shop</div>';
+
+  const standing = document.getElementById("standing");
+  standing.innerHTML = (state.standing || []).length
+    ? state.standing.map(r => {
+        const tone = r.at > 0.2 ? "trusts" : r.at < -0.2 ? "distrusts" : "";
+        return `<div class="standing"><span>${r.from} &rarr; ${r.to}</span>` +
+               `<span class="${tone}">${r.word} ${r.at > 0 ? "+" : ""}${r.at.toFixed(2)}</span></div>` +
+               (r.note ? `<div class="note">${r.note}</div>` : "");
+      }).join("")
+    : '<div class="empty">everyone is still a stranger</div>';
 
   const head = "<tr><th>colony</th>" + state.goods.map(g => `<th>${g}</th>`).join("") + "<th>coin</th></tr>";
   const rows = state.colonies.map(c =>
@@ -310,6 +328,33 @@ def steward_payload(sim) -> list[dict]:
     return out
 
 
+#: Rows in the standing panel. The worst-regarded pairs are the interesting
+#: ones, and a six-colony world has thirty pairs, which is a wall rather than
+#: a panel.
+STANDING_ROWS = 8
+
+
+def standing_payload(sim) -> list[dict]:
+    """What colonies make of each other, worst first.
+
+    One row per opinion anyone actually holds, with the last thing that moved
+    it -- so the panel says who is unwelcome where, and why.
+    """
+    rows = []
+    for a, b, standing in sim.standings()[:STANDING_ROWS]:
+        remarks = sim.colonies[a].reputation.about(b)
+        rows.append(
+            {
+                "from": sim.colonies[a].name,
+                "to": sim.colonies[b].name,
+                "at": round(standing, 2),
+                "word": describe(standing),
+                "note": remarks[-1].detail if remarks else "",
+            }
+        )
+    return rows
+
+
 def state_payload(sim) -> dict:
     hungry = set(sim.hungry_colonies())
     caravans = []
@@ -344,6 +389,8 @@ def state_payload(sim) -> dict:
         "met": sim.meetings,
         "raided": sim.raids,
         "stewards": steward_payload(sim),
+        "standing": standing_payload(sim),
+        "refusals": sim.refusals,
         "caravans": caravans,
         "colonies": [
             {

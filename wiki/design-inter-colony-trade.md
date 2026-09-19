@@ -10,7 +10,7 @@ colonies side by side and has the storage building. As of 2026-09-18 the RimWorl
 repository is paused and the colony sim is the project.
 
 That sim has no GitHub remote, so a cloud thread cannot read or change it. Milestones 1–3 and the
-wildlife half of milestone 5 are therefore **built standalone in `sim/colonysim/`** in this
+wildlife and reputation parts of milestone 5 are therefore **built standalone in `sim/colonysim/`** in this
 repository: stdlib only, no dependencies, so it lifts into the real sim as a module. `sim/README.md`
 describes what is there. The names below are the design's names; where the code differs, the code is
 what runs. Milestone 4 (agent-driven traders) is not started.
@@ -218,7 +218,7 @@ decimal rather than loosened.
    colony, with the network to read and prices, reserves and labour to set (section 3a) -- and the
    scripted steward runs on it. The model call and the dialogue are not.
 5. Risk and texture: wild animals on the roads, weather closing routes, reputation between colonies,
-   road wear and upgrade. Road wear and the animals are built; weather and reputation are not.
+   road wear and upgrade. Road wear, the animals and reputation are built; weather is not.
 
 ## How we know it works
 
