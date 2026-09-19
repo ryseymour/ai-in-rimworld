@@ -104,9 +104,27 @@ ESCORT_DETERRENCE = 0.6
 ESCORT_SALVAGE = 0.55
 #: Coin a guard detail costs per day on the road.
 ESCORT_WAGE = 1.5
+#: What the caravan's own weapons are worth against animals, and what a colony
+#: that armed its people takes off a guard's wage. Bows and spears are most of
+#: what a guard detail is for, so a colony that crafts them is paying for
+#: bodies rather than for equipment -- see `crafting.armed_strength`.
+ARMS_DETERRENCE = 0.5
+ARMS_DISCOUNT = 0.45
 
 #: Cap on any single tile's contribution, so a den cannot make a tile certain.
 MAX_TILE_HAZARD = 0.35
+
+
+def deterrence(escorted: bool, arms: float = 0.0) -> float:
+    """How likely the animals are to be waved off, 0 to 1.
+
+    Two things do it and they compound rather than add: hired guards, and
+    whether the caravan's own people are carrying anything. `arms=0` is the
+    world before there were weapons to carry, which is why every default here
+    leaves the old numbers exactly as they were.
+    """
+    base = ESCORT_DETERRENCE if escorted else 0.0
+    return base + (1.0 - base) * ARMS_DETERRENCE * max(0.0, min(1.0, arms))
 
 
 @dataclass
@@ -325,7 +343,9 @@ def populate(world: World, seed: int, density: float = DEN_DENSITY) -> Wilds:
 TYPICAL_LOSS = 0.25
 
 
-def expected_loss(hazard: float, cargo_value: float, escorted: bool = False) -> float:
+def expected_loss(
+    hazard: float, cargo_value: float, escorted: bool = False, arms: float = 0.0
+) -> float:
     """What a trader should expect a dangerous road to cost it.
 
     Deliberately an estimate and not the truth: it averages the species, so a
@@ -334,12 +354,18 @@ def expected_loss(hazard: float, cargo_value: float, escorted: bool = False) -> 
     code already plans against.
     """
     loss = TYPICAL_LOSS * (ESCORT_SALVAGE if escorted else 1.0)
-    deterred = hazard * (1.0 - ESCORT_DETERRENCE) if escorted else hazard
+    deterred = hazard * (1.0 - deterrence(escorted, arms))
     return deterred * cargo_value * loss
 
 
-def escort_cost(days: float) -> float:
-    return ESCORT_WAGE * days
+def escort_cost(days: float, arms: float = 0.0) -> float:
+    """What a guard detail asks for the trip.
+
+    Less from a colony that arms its own people: the guards are being paid to
+    walk, not to be equipped. This is the cheaper half of what weapons buy a
+    colony on the road; `deterrence` is the better half.
+    """
+    return ESCORT_WAGE * days * (1.0 - ARMS_DISCOUNT * max(0.0, min(1.0, arms)))
 
 
 def per_day_hazard(journey_hazard: float, days: float) -> float:
@@ -355,6 +381,7 @@ def raid(
     cargo: dict[str, float],
     escorted: bool,
     day: int,
+    arms: float = 0.0,
 ) -> Encounter:
     """Resolve one meeting on the road, taking goods out of `cargo` in place.
 
@@ -363,7 +390,7 @@ def raid(
     home. An escort makes the first much likelier and the last two cheaper.
     """
     kind = den.kind
-    guard = ESCORT_DETERRENCE if escorted else 0.0
+    guard = deterrence(escorted, arms)
     drive_off = kind.timidity + (1.0 - kind.timidity) * guard
     if rng.random() < drive_off:
         den.strength = max(0.0, den.strength - REPULSE)

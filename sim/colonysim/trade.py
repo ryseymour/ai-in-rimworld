@@ -68,6 +68,9 @@ class Caravan:
     #: and whether it took guards.
     hazard: float = 0.0
     escorted: bool = False
+    #: How well armed the people walking with it are, 0 to 1, read off its home
+    #: colony's armoury at dispatch. Animals think twice about an armed party.
+    arms: float = 0.0
     #: Everything that happened to it on the road.
     encounters: list[Encounter] = field(default_factory=list)
     #: The day it set out, so a caravan that never gets home is detectable.

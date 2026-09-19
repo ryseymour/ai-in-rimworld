@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import argparse
 
+from .crafting import armed_strength
 from .goods import GOOD_NAMES
 from .render import legend, render
 from .simulation import build_simulation
@@ -45,10 +46,11 @@ def main() -> None:
     print(legend(sim.world, sim.network, sim.wilds))
 
     print(f"\n--- after {args.days} days, {sim.journeys} journeys ---\n")
-    print(f"{'colony':<12}{'food':>9}{'wood':>9}{'stone':>9}{'cloth':>9}{'tools':>9}{'coin':>10}")
+    head = "".join(f"{good:>8}" for good in GOOD_NAMES)
+    print(f"{'colony':<12}{head}{'coin':>9}")
     for colony in sim.colonies:
-        row = "".join(f"{colony.storage.get(g):>9.0f}" for g in GOOD_NAMES)
-        print(f"{colony.name:<12}{row}{colony.purse.amount:>10.0f}")
+        row = "".join(f"{colony.storage.get(g):>8.0f}" for g in GOOD_NAMES)
+        print(f"{colony.name:<12}{row}{colony.purse.amount:>9.0f}")
 
     print("\nprice gap between the dearest and cheapest colony:")
     print(f"  {'good':<8}{'with trade':>12}{'without':>12}{'no steward':>12}")
@@ -83,6 +85,22 @@ def main() -> None:
     print(f"\n  out of food with stewards: {', '.join(sim.hungry_colonies()) or 'nobody'}")
     print(f"  out of food without them:  {', '.join(unled.hungry_colonies()) or 'nobody'}")
     print(f"  journeys: {sim.journeys} with stewards, {unled.journeys} without")
+
+    print("\n--- the workshops ---\n")
+    for colony in sim.colonies:
+        print(f"  {colony.name:<12}{colony.workshop.describe()}")
+    crafted = ", ".join(
+        f"{qty:.0f} {good}" for good, qty in sorted(sim.crafted.items()) if qty >= 0.5
+    )
+    hunted = ", ".join(
+        f"{qty:.0f} {good}" for good, qty in sorted(sim.hunted.items()) if qty >= 0.5
+    )
+    print(f"\n  made at the benches: {crafted or 'nothing'}")
+    print(f"  brought home hunting: {hunted or 'nothing'}")
+    armed = ", ".join(
+        f"{colony.name} {armed_strength(colony):.0%}" for colony in sim.colonies
+    )
+    print(f"  armed: {armed}")
 
     print(f"\n--- the wild ---\n")
     print(f"  journeys made:      {sim.journeys}  (a tame world: {tame.journeys})")
