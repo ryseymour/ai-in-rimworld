@@ -418,15 +418,26 @@ def test_a_steward_writes_down_why_it_did_what_it_did():
 def test_stewards_leave_fewer_colonies_with_nothing_on_the_shelf():
     """The claim worth making for the whole feature. Not that prices converge
     -- a steward bidding for supply pushes them apart on purpose -- but that
-    fewer colonies run a good down to nothing when someone is watching."""
+    fewer colonies run a good down to nothing when someone is watching.
+
+    Counted over the whole run rather than on the last day: an empty shelf is
+    something a colony lives through and recovers from, and a world kind
+    enough that nobody is empty on day 150 would otherwise make this claim
+    unmeasurable rather than false.
+    """
     led = bare = 0
     for seed in SEEDS:
         for stewards in (True, False):
             sim = build_simulation(seed=seed, stewards=stewards)
-            sim.run(150)
-            empty = sum(
-                1 for good in GOOD_NAMES for days in sim.days_of_stock(good) if days < 1.0
-            )
+            empty = 0
+            for _ in range(150):
+                sim.step_day()
+                empty += sum(
+                    1
+                    for good in GOOD_NAMES
+                    for days in sim.days_of_stock(good)
+                    if days < 1.0
+                )
             if stewards:
                 led += empty
             else:
