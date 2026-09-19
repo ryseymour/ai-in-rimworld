@@ -51,6 +51,9 @@ class Caravan:
     purse: Purse = field(default_factory=lambda: Purse(SILVER))
     state: str = OUTBOUND
     days_left: float = 0.0
+    #: Days the current leg was expected to take, so progress along it -- and
+    #: so the caravan's position on the map -- can be worked out.
+    leg_days: float = 1.0
     #: The day it set out, so a caravan that never gets home is detectable.
     dispatched_day: int = 0
     #: Filled in on arrival, so the thread can show what actually happened.
@@ -59,6 +62,42 @@ class Caravan:
     @property
     def load(self) -> float:
         return sum(qty * GOODS[good].bulk for good, qty in self.cargo.items())
+
+    @property
+    def path(self) -> tuple[tuple[int, int], ...]:
+        """Every tile from home to destination, legs stitched end to end."""
+        return journey_path(self.legs, self.home)
+
+    @property
+    def position(self) -> tuple[int, int] | None:
+        """Where the caravan is today.
+
+        Travel is counted in days, not tiles, so this interpolates along the
+        route -- near enough to watch it move, and it always lands on a real
+        road tile.
+        """
+        path = self.path
+        if not path:
+            return None
+        done = max(0.0, min(1.0, 1.0 - self.days_left / max(self.leg_days, 1.0)))
+        if self.state == RETURNING:
+            done = 1.0 - done
+        return path[round(done * (len(path) - 1))]
+
+
+def journey_path(legs: tuple[Route, ...], start: int) -> tuple[tuple[int, int], ...]:
+    """Stitch a chain of routes into one ordered run of tiles.
+
+    A route's own path runs from its lower settlement id to its higher one, so
+    a leg travelled the other way has to be reversed before it is joined on.
+    """
+    tiles: list[tuple[int, int]] = []
+    node = start
+    for leg in legs:
+        path = leg.path if leg.a == node else tuple(reversed(leg.path))
+        node = leg.b if leg.a == node else leg.a
+        tiles.extend(path[1:] if tiles else path)
+    return tuple(tiles)
 
 
 def travel_days(
