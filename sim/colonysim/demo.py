@@ -9,6 +9,7 @@ import argparse
 from .crafting import armed_strength
 from .goods import GOOD_NAMES
 from .render import legend, render
+from .reputation import describe
 from .simulation import build_simulation
 
 
@@ -127,6 +128,21 @@ def main() -> None:
     )
     print(f"  shrinking: {', '.join(sim.shrinking_colonies()) or 'nobody'}")
     print(f"  without trade: {', '.join(control.shrinking_colonies()) or 'nobody'}")
+
+    print("\n--- what they make of each other ---\n")
+    standings = sim.standings()
+    if not standings:
+        print("  nobody has dealt with anybody often enough to have a view")
+    for a, b, standing in reversed(standings):
+        colony = sim.colonies[a]
+        remarks = colony.reputation.about(b)
+        print(
+            f"  {colony.name:<12} -> {sim.colonies[b].name:<12} "
+            f"{standing:>+6.2f}  {describe(standing)}"
+        )
+        if remarks:
+            print(f"    {remarks[-1].detail}")
+    print(f"\n  caravans turned away at a gate: {sim.refusals}")
 
     print(f"\n--- the wild ---\n")
     print(f"  journeys made:      {sim.journeys}  (a tame world: {tame.journeys})")

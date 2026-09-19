@@ -34,7 +34,10 @@ it has gone since it was founded, and the header counts everyone alive.
 
 Three colonies by default, which is small enough to follow every trade.
 `--settlements 6` gives the wider world, and `--no-stewards` takes the decision
-makers off so you can see what the same world does on bare scarcity.
+makers off so you can see what the same world does on bare scarcity. The
+Standing panel under the stewards is what each colony makes of the others --
+`Coldhollow -> Brackwater trusted +0.81`, with the last thing that moved it
+underneath -- and the header counts caravans turned away at a gate.
 
 No dependencies and no build step — it is `http.server` and one HTML page. If
 7700 is already taken it moves to the next free port and tells you which, so it
@@ -291,6 +294,48 @@ or walk out. `python -m colonysim.demo` prints both sides of that, and
 `build_simulation(..., population=False)` freezes every colony at its founding
 size as the control.
 
+## Standing
+
+Every colony keeps one number about every other colony it has dealt with, from
+-1 (shunned) to +1 (trusted), and nothing sets it directly. It is written by
+conduct at the counter (`reputation.py`):
+
+* a parcel sold at the host's own price, or a bill covered in full, earns a
+  little goodwill -- most of the trust in the world is made of ordinary deals
+  done properly;
+* a trader that argues its way well above the host's own price is remembered
+  as gouging, in proportion to how far over and how big the deal was -- so
+  what the haggling seam does with the room it is given is itself conduct. A
+  modest premium for a dangerous road is not gouging: traders have to be able
+  to charge for the wolves.
+* a buyer who runs out of both coin and goods to barter and walks away owing
+  picks up a credit mark -- light on purpose, because a colony only fails to
+  cover a bill when it is broke rather than dishonest, and this sim cannot
+  tell those apart. It makes a colony a worse customer, not an outcast;
+* being turned away at a gate is remembered too, by the colony that was turned
+  away.
+
+Four things read it back, so conduct has a price:
+
+* **the counter** -- standing is what the host brings to the table before
+  anyone opens their mouth. A trusted caravan argues over a range that starts
+  above the colony's own asking price and is charged below it for what it
+  takes home; a distrusted one sits down against a range that is already
+  narrower. It does not change how either side haggles, only what there is to
+  haggle over;
+* **where caravans go** -- a colony's one caravan is steered toward the
+  partners it thinks well of, because that is where the prices are better;
+* **guards** -- two colonies that both trust each other share an escort and
+  split the wage;
+* **the gate** -- below `EMBARGO` (-0.55) a colony will not deal at all, in
+  either direction: it sends nobody there and turns their caravans away.
+
+Standing fades toward neutral by 0.3% a day, so half of a grudge is still
+there eight months later. That is the lasting part: a colony that gouged its
+way through one winter is still paying worse prices the following autumn, and
+still has a way back if it behaves. `build_simulation(reputation=False)` leaves
+every colony a permanent stranger to every other, which is the control case.
+
 ## How roads are generated
 
 1. **Candidate connections** — the Gabriel graph over settlement positions,
@@ -464,7 +509,7 @@ whatever is drawing it.
 python -m pytest tests -q
 ```
 
-142 tests. Roads: every settlement reachable, generation deterministic, routes
+328 tests. Roads: every settlement reachable, generation deterministic, routes
 sharing tiles rather than running parallel, roads not ploughing through water,
 tier promotion and decay. Economy: reserves and prices, the purse refusing to
 overdraw, barter never digging into the reserve, no cargo loaded that the
@@ -475,6 +520,14 @@ have starved without it, and no caravan is left stranded on the road. The
 viewers: a journey's tiles join into one contiguous run, a caravan is always
 somewhere on its own road, and the server is exercised over real HTTP — routes,
 pause, speed, and falling back off a busy port.
+
+Standing: the ledger itself (clamped, written down with its reason, faded by
+time alone), what each kind of conduct is worth, the counter pricing the same
+goods differently for a trusted and a distrusted caravan without minting any,
+the caravan turned away at a shut gate, a steward that stops bidding for a
+supplier it would not let in, and the whole arc end to end -- gouge a colony
+visit after visit until it closes its gate, then a year of quiet before it
+opens again. Over 250 days on four seeds an honest world turns nobody away.
 
 Wildlife: dens only on ground that suits them and never beside a village,
 danger falling off with distance, better roads and busier roads being safer,

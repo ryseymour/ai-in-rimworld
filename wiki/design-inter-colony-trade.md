@@ -10,9 +10,10 @@ colonies side by side and has the storage building. As of 2026-09-18 the RimWorl
 repository is paused and the colony sim is the project.
 
 That sim has no GitHub remote, so a cloud thread cannot read or change it. Milestones 1–4, the
-wildlife half of milestone 5 and population (milestone 6) are therefore **built standalone in
-`sim/colonysim/`** in this repository: stdlib only, no dependencies, so it lifts into the real sim
-as a module. `sim/README.md` describes what is there. The names below are the design's names; where the code differs, the code is
+wildlife and reputation parts of milestone 5 and population (milestone 6) are therefore **built
+standalone in `sim/colonysim/`** in this repository: stdlib only, no dependencies, so it lifts into
+the real sim as a module. `sim/README.md` describes what is there. The names below are the design's
+names; where the code differs, the code is
 what runs. Milestone 4 is built: stewards decide, and traders haggle in dialogue (section 3b).
 
 ## The shape of the feature
@@ -307,7 +308,7 @@ What trade buys is that nobody has to die or walk out, and that is what is asser
    and either can be replaced -- by a player, a rule, or a model -- without the rest of the sim
    knowing. `colonysim/llm.py` is the worked example of the model case, off unless switched on.
 5. Risk and texture: wild animals on the roads, weather closing routes, reputation between colonies,
-   road wear and upgrade. Road wear and the animals are built; weather and reputation are not.
+   road wear and upgrade. Road wear, the animals and reputation are built; weather is not.
 6. Population following food (section 5), so the economy has stakes: colonies grow or shrink with
    their stores, and how many people a colony has decides what it eats, what it makes, and how many
    caravans and guards it can put on the road. Built.

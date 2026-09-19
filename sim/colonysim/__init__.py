@@ -1,5 +1,5 @@
 """The colony simulation: world, roads, storage, currency, trade, stewards,
-haggling, people and the wild.
+haggling, people, reputation and the wild.
 
 See `../wiki/design-inter-colony-trade.md` for the design this implements.
 """
@@ -21,6 +21,7 @@ from .negotiation import (
 )
 from .people import caravans_allowed, food_cover
 from .recipes import RECIPES, STATIONS, Recipe, Station
+from .reputation import Remark, Reputation
 from .roads import RoadNetwork, Route, generate_roads, road_links, road_overlay
 from .simulation import Simulation, build_simulation
 from .steward import Link, NetworkView, Steward, merchant
@@ -57,6 +58,8 @@ __all__ = [
     "Policy",
     "Purse",
     "Recipe",
+    "Remark",
+    "Reputation",
     "RoadNetwork",
     "Route",
     "Seat",

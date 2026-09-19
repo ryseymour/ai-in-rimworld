@@ -10,6 +10,11 @@ about it, a good at a time, in `negotiation`. Only the sale is haggled over.
 Buying, the caravan is a customer at a counter and pays what the host asks --
 it is the one with something to shift, and the host's price is already its
 steward's decision.
+
+Every deal is also conduct. What the host will pay at all moves with what it
+thinks of whoever sent the caravan, it judges the bargain it just struck, and
+it remembers -- see `reputation.py` -- so the same code that moves the goods is
+what decides who is welcome here next season.
 """
 from __future__ import annotations
 
@@ -308,6 +313,7 @@ def open_haggle(
     qty: float,
     day: int = 0,
     trader_name: str = "",
+    favour: float = 1.0,
 ) -> Haggle:
     """Set the table for one good: what each side wants and what it will bear.
 
@@ -319,9 +325,14 @@ def open_haggle(
     The trader's limit is what the cargo was worth at home when it was loaded.
     Below that it is better off carting the goods back, which is the one thing
     that can make a journey come to nothing.
+
+    `favour` is what the host makes of whoever sent the caravan: above 1 it
+    will go higher than its own asking price for someone it trusts, below 1 it
+    sits down already unwilling. Standing does not change how either side
+    argues -- it changes what there is to argue over.
     """
     premium = caravan.risk_premium
-    quote = host.price(good)
+    quote = host.price(good) * favour
     cap = min(quote * (1.0 + premium), host.price_ceiling(good))
     basis = caravan.basis.get(good)
 
@@ -368,8 +379,21 @@ def do_business(
     `speakers` is who does the talking on each side -- the scripted negotiator
     unless a steward (or whatever is driving one) has been put in its place.
     `record`, if given, collects every negotiation so a viewer can show them.
+
+    What the host will pay, and what it charges for what the caravan takes
+    home, both move with what it thinks of where the caravan came from. A
+    colony it has had enough of does not get through the gate at all.
     """
+    if not host.reputation.trades_with(caravan.home):
+        caravan.ledger.append(f"turned away at {host.name}")
+        home.reputation.refused(day, host.id, host.name)
+        home.known[host.id] = host.market_view(day)
+        return
+
     sold_value = 0.0
+    # One number for the whole visit, read before any of it changes it, so a
+    # caravan is not repriced good by good on the strength of its own deals.
+    favour = host.reputation.favour(caravan.home)
     for good in sorted(caravan.cargo):
         want = min(caravan.cargo[good], host.shortfall(good))
         if want <= 0:
@@ -378,7 +402,9 @@ def do_business(
         # Struck before the goods land and move the price, so both sides are
         # arguing about the market as it stands when the cart pulls up.
         haggle = negotiate(
-            open_haggle(caravan, host, good, want, day, trader_name=home.name),
+            open_haggle(
+                caravan, host, good, want, day, trader_name=home.name, favour=favour
+            ),
             speakers,
         )
         if record is not None:
@@ -404,6 +430,15 @@ def do_business(
 
         payment = settle(bill, host, caravan.purse, caravan.cargo)
         sold_value += payment.total
+        # Both sides come away with an opinion: the host about what it was
+        # talked into, against what it would have asked itself, and the
+        # caravan's home about whether the bill was covered. A trader that
+        # argues its way to the top of what the host can bear is gouging it,
+        # however politely it was done.
+        host.reputation.judge_deal(
+            day, caravan.home, home.name, bill, qty * haggle.host.quote
+        )
+        home.reputation.judge_payment(day, host.id, host.name, bill, payment.shortfall)
         note = f"sold {qty:.0f} {good} at {price:.2f} for {payment.coin:.0f} coin"
         if payment.goods:
             note += " and " + ", ".join(
@@ -416,7 +451,9 @@ def do_business(
         spare = host.surplus(good)
         if want <= 0 or spare <= 0:
             continue
-        price = host.price(good)
+        # The same standing, the other way round: a welcome caravan buys here
+        # for less than the colony asks of anyone else.
+        price = host.price(good) / favour
         affordable = caravan.purse.amount / price if price > 0 else 0.0
         # Coming home is the same road, so the same caution applies to the
         # return load as to the outbound one.
@@ -427,12 +464,19 @@ def do_business(
             continue
         qty = host.storage.remove(good, qty)
         caravan.cargo[good] = caravan.cargo.get(good, 0.0) + qty
-        caravan.purse.transfer_to(host.purse, qty * price)
-        caravan.ledger.append(f"bought {qty:.0f} {good} for {qty * price:.0f} coin")
+        spent = caravan.purse.transfer_to(host.purse, qty * price)
+        # Ordinary custom, and both sides remember it: the host has a paying
+        # customer, the caravan's home has somewhere that supplied it.
+        host.reputation.judge_purchase(day, caravan.home, home.name, spent)
+        home.reputation.judge_purchase(day, host.id, host.name, spent)
+        caravan.ledger.append(f"bought {qty:.0f} {good} for {spent:.0f} coin")
 
     # The trip is also how the home colony learns what this market looks like.
     home.known[host.id] = host.market_view(day)
-    caravan.ledger.append(f"turnover {sold_value:.0f} coin at {host.name}")
+    standing = host.reputation.word_for(caravan.home)
+    caravan.ledger.append(
+        f"turnover {sold_value:.0f} coin at {host.name} ({standing} there)"
+    )
 
 
 def unload(caravan: Caravan, home: Colony) -> None:
